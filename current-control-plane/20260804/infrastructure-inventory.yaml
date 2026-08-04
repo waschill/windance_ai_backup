@@ -72,6 +72,7 @@ hosts:
     notes:
       shutdown_authority: sudo /sbin/shutdown is available non-interactively for graceful shutdown workflows
       hermes_agent_version: Hermes Agent v0.20.0 (2026.8.3), synchronized with upstream on 2026-08-04
+      nightly_core_maintenance: Local-first Forge maintenance detector runs nightly at 1:30 AM Mountain through com.windance.nightly-core-maintenance. It is silent when current; a newly detected update creates one durable Forge task requiring a sanitized GitHub backup push before upgrade and verification. Forge blockers automatically escalate to Vega.
       hermes_local_skill_windance_libreoffice: Installed 2026-07-27 at /Users/herald/.hermes/skills/windance-libreoffice; guides safe document work through HAL LibreOffice 25.8.7.2 via existing key-only HERALD-to-HAL SSH. The catalog community LibreOffice package was not installed because its required Python package was unavailable.
       hal_desktop_cua_bridge: Hermes MCP server hal-desktop-cua reaches HAL's interactive CUA Driver over existing key-only Herald-to-HAL SSH; it exposes only 24 selected desktop-inspection/control tools, has no HTTP listener, and was read-only-call tested 2026-07-27. Hermes records MCP actions in its local session/audit logs. A separately forced SSH identity was prepared but requires a one-time Windows administrator-authorized-keys update before it can replace the existing dedicated SSH identity.
       hermes_dashboard_url_lan: http://192.168.36.21:9120
