@@ -15,6 +15,11 @@
         "SHA256":  "EBE23B613E2F181B672F0E30C1C74929F2F66D4C77661B5C8735D87C5E664B04"
     },
     {
+        "Path":  "current-control-plane/20260804/com.windance.nightly-core-maintenance.plist",
+        "Bytes":  742,
+        "SHA256":  "44BD2198DF8F1977EBC8AAD0A9558FA74C7BEE5804ABC5476D5E2F1E5D00BE63"
+    },
+    {
         "Path":  "current-control-plane/20260804/com.windance.weekly-stack-maintenance.plist",
         "Bytes":  780,
         "SHA256":  "D44AE4E81036805971EA572C27384AC356A4E9DF4A43A4F2C3F0CC98890C9954"
@@ -33,6 +38,11 @@
         "Path":  "current-control-plane/20260804/infrastructure-inventory.yaml",
         "Bytes":  39579,
         "SHA256":  "C89A73DDBDDEE937BE02AB4E2156F60FC291AF60D9D61219A3ACAE4DDE952B85"
+    },
+    {
+        "Path":  "current-control-plane/20260804/nightly_core_maintenance.py",
+        "Bytes":  5042,
+        "SHA256":  "055754DA53FDC5CB7561E32DFB36F5D53044674C60A0887C1B39A5202CE81F76"
     },
     {
         "Path":  "current-control-plane/20260804/weekly_stack_maintenance.py",
