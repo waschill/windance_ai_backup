@@ -1,0 +1,632 @@
+[
+    {
+        "Name":  "AdobeARMservice",
+        "DisplayName":  "Adobe Acrobat Update Service",
+        "Status":  4
+    },
+    {
+        "Name":  "AdobeUpdateService",
+        "DisplayName":  "AdobeUpdateService",
+        "Status":  4
+    },
+    {
+        "Name":  "Appinfo",
+        "DisplayName":  "Application Information",
+        "Status":  4
+    },
+    {
+        "Name":  "AudioEndpointBuilder",
+        "DisplayName":  "Windows Audio Endpoint Builder",
+        "Status":  4
+    },
+    {
+        "Name":  "Audiosrv",
+        "DisplayName":  "Windows Audio",
+        "Status":  4
+    },
+    {
+        "Name":  "BFE",
+        "DisplayName":  "Base Filtering Engine",
+        "Status":  4
+    },
+    {
+        "Name":  "BrokerInfrastructure",
+        "DisplayName":  "Background Tasks Infrastructure Service",
+        "Status":  4
+    },
+    {
+        "Name":  "BTAGService",
+        "DisplayName":  "Bluetooth Audio Gateway Service",
+        "Status":  4
+    },
+    {
+        "Name":  "BthAvctpSvc",
+        "DisplayName":  "AVCTP service",
+        "Status":  4
+    },
+    {
+        "Name":  "bthserv",
+        "DisplayName":  "Bluetooth Support Service",
+        "Status":  4
+    },
+    {
+        "Name":  "camsvc",
+        "DisplayName":  "Capability Access Manager Service",
+        "Status":  4
+    },
+    {
+        "Name":  "cbdhsvc_882a268",
+        "DisplayName":  "Clipboard User Service_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "CDPSvc",
+        "DisplayName":  "Connected Devices Platform Service",
+        "Status":  4
+    },
+    {
+        "Name":  "CDPUserSvc_882a268",
+        "DisplayName":  "Connected Devices Platform User Service_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "cfbackd",
+        "DisplayName":  "DiskDrill Watcher",
+        "Status":  4
+    },
+    {
+        "Name":  "CoreMessagingRegistrar",
+        "DisplayName":  "CoreMessaging",
+        "Status":  4
+    },
+    {
+        "Name":  "CryptSvc",
+        "DisplayName":  "Cryptographic Services",
+        "Status":  4
+    },
+    {
+        "Name":  "DcomLaunch",
+        "DisplayName":  "DCOM Server Process Launcher",
+        "Status":  4
+    },
+    {
+        "Name":  "DeviceAssociationService",
+        "DisplayName":  "Device Association Service",
+        "Status":  4
+    },
+    {
+        "Name":  "DevicesFlowUserSvc_882a268",
+        "DisplayName":  "DevicesFlow_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "Dhcp",
+        "DisplayName":  "DHCP Client",
+        "Status":  4
+    },
+    {
+        "Name":  "DiagTrack",
+        "DisplayName":  "Connected User Experiences and Telemetry",
+        "Status":  4
+    },
+    {
+        "Name":  "DispBrokerDesktopSvc",
+        "DisplayName":  "Display Policy Service",
+        "Status":  4
+    },
+    {
+        "Name":  "DisplayEnhancementService",
+        "DisplayName":  "Display Enhancement Service",
+        "Status":  4
+    },
+    {
+        "Name":  "Dnscache",
+        "DisplayName":  "DNS Client",
+        "Status":  4
+    },
+    {
+        "Name":  "DoSvc",
+        "DisplayName":  "Delivery Optimization",
+        "Status":  4
+    },
+    {
+        "Name":  "DPS",
+        "DisplayName":  "Diagnostic Policy Service",
+        "Status":  4
+    },
+    {
+        "Name":  "DrivePoolService",
+        "DisplayName":  "StableBit DrivePool Service",
+        "Status":  4
+    },
+    {
+        "Name":  "DrivePoolServiceNative",
+        "DisplayName":  "StableBit DrivePool Shutdown Service",
+        "Status":  4
+    },
+    {
+        "Name":  "DsSvc",
+        "DisplayName":  "Data Sharing Service",
+        "Status":  4
+    },
+    {
+        "Name":  "DusmSvc",
+        "DisplayName":  "Data Usage",
+        "Status":  4
+    },
+    {
+        "Name":  "EventLog",
+        "DisplayName":  "Windows Event Log",
+        "Status":  4
+    },
+    {
+        "Name":  "EventSystem",
+        "DisplayName":  "COM+ Event System",
+        "Status":  4
+    },
+    {
+        "Name":  "fdPHost",
+        "DisplayName":  "Function Discovery Provider Host",
+        "Status":  4
+    },
+    {
+        "Name":  "FDResPub",
+        "DisplayName":  "Function Discovery Resource Publication",
+        "Status":  4
+    },
+    {
+        "Name":  "FontCache",
+        "DisplayName":  "Windows Font Cache Service",
+        "Status":  4
+    },
+    {
+        "Name":  "gpsvc",
+        "DisplayName":  "Group Policy Client",
+        "Status":  4
+    },
+    {
+        "Name":  "hidserv",
+        "DisplayName":  "Human Interface Device Service",
+        "Status":  4
+    },
+    {
+        "Name":  "HPPrintScanDoctorService",
+        "DisplayName":  "HP Print Scan Doctor Service",
+        "Status":  4
+    },
+    {
+        "Name":  "HPPSAService",
+        "DisplayName":  "HPPSAService",
+        "Status":  4
+    },
+    {
+        "Name":  "HPPSASmartPrinting",
+        "DisplayName":  "HP PSA Smart Printing",
+        "Status":  4
+    },
+    {
+        "Name":  "HvHost",
+        "DisplayName":  "HV Host Service",
+        "Status":  4
+    },
+    {
+        "Name":  "InstallService",
+        "DisplayName":  "Microsoft Store Install Service",
+        "Status":  4
+    },
+    {
+        "Name":  "InventorySvc",
+        "DisplayName":  "Inventory and Compatibility Appraisal service",
+        "Status":  4
+    },
+    {
+        "Name":  "iphlpsvc",
+        "DisplayName":  "IP Helper",
+        "Status":  4
+    },
+    {
+        "Name":  "jhi_service",
+        "DisplayName":  "Intel(R) Dynamic Application Loader Host Interface Service",
+        "Status":  4
+    },
+    {
+        "Name":  "KeyIso",
+        "DisplayName":  "CNG Key Isolation",
+        "Status":  4
+    },
+    {
+        "Name":  "LanmanServer",
+        "DisplayName":  "Server",
+        "Status":  4
+    },
+    {
+        "Name":  "LanmanWorkstation",
+        "DisplayName":  "Workstation",
+        "Status":  4
+    },
+    {
+        "Name":  "lfsvc",
+        "DisplayName":  "Geolocation Service",
+        "Status":  4
+    },
+    {
+        "Name":  "LicenseManager",
+        "DisplayName":  "Windows License Manager Service",
+        "Status":  4
+    },
+    {
+        "Name":  "lmhosts",
+        "DisplayName":  "TCP/IP NetBIOS Helper",
+        "Status":  4
+    },
+    {
+        "Name":  "LSM",
+        "DisplayName":  "Local Session Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "MDCoreSvc",
+        "DisplayName":  "Microsoft Defender Core Service",
+        "Status":  4
+    },
+    {
+        "Name":  "mpssvc",
+        "DisplayName":  "Windows Defender Firewall",
+        "Status":  4
+    },
+    {
+        "Name":  "NcbService",
+        "DisplayName":  "Network Connection Broker",
+        "Status":  4
+    },
+    {
+        "Name":  "NcdAutoSetup",
+        "DisplayName":  "Network Connected Devices Auto-Setup",
+        "Status":  4
+    },
+    {
+        "Name":  "Netman",
+        "DisplayName":  "Network Connections",
+        "Status":  4
+    },
+    {
+        "Name":  "netprofm",
+        "DisplayName":  "Network List Service",
+        "Status":  4
+    },
+    {
+        "Name":  "NetSetupSvc",
+        "DisplayName":  "Network Setup Service",
+        "Status":  4
+    },
+    {
+        "Name":  "NgcCtnrSvc",
+        "DisplayName":  "Microsoft Passport Container",
+        "Status":  4
+    },
+    {
+        "Name":  "NgcSvc",
+        "DisplayName":  "Microsoft Passport",
+        "Status":  4
+    },
+    {
+        "Name":  "NPSMSvc_882a268",
+        "DisplayName":  "Now Playing Session Manager Service_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "nsi",
+        "DisplayName":  "Network Store Interface Service",
+        "Status":  4
+    },
+    {
+        "Name":  "NVDisplay.ContainerLocalSystem",
+        "DisplayName":  "NVIDIA Display Container LS",
+        "Status":  4
+    },
+    {
+        "Name":  "PcaSvc",
+        "DisplayName":  "Program Compatibility Assistant Service",
+        "Status":  4
+    },
+    {
+        "Name":  "PhoneSvc",
+        "DisplayName":  "Phone Service",
+        "Status":  4
+    },
+    {
+        "Name":  "PimIndexMaintenanceSvc_882a268",
+        "DisplayName":  "Contact Data_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "PlugPlay",
+        "DisplayName":  "Plug and Play",
+        "Status":  4
+    },
+    {
+        "Name":  "PolicyAgent",
+        "DisplayName":  "IPsec Policy Agent",
+        "Status":  4
+    },
+    {
+        "Name":  "Power",
+        "DisplayName":  "Power",
+        "Status":  4
+    },
+    {
+        "Name":  "PrintWorkflowUserSvc_882a268",
+        "DisplayName":  "PrintWorkflow_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "ProfSvc",
+        "DisplayName":  "User Profile Service",
+        "Status":  4
+    },
+    {
+        "Name":  "QWAVE",
+        "DisplayName":  "Quality Windows Audio Video Experience",
+        "Status":  4
+    },
+    {
+        "Name":  "RasMan",
+        "DisplayName":  "Remote Access Connection Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "RmSvc",
+        "DisplayName":  "Radio Management Service",
+        "Status":  4
+    },
+    {
+        "Name":  "RpcEptMapper",
+        "DisplayName":  "RPC Endpoint Mapper",
+        "Status":  4
+    },
+    {
+        "Name":  "RpcSs",
+        "DisplayName":  "Remote Procedure Call (RPC)",
+        "Status":  4
+    },
+    {
+        "Name":  "RtkAudioUniversalService",
+        "DisplayName":  "Realtek Audio Universal Service",
+        "Status":  4
+    },
+    {
+        "Name":  "rvncserver",
+        "DisplayName":  "RealVNC Connect Inbound",
+        "Status":  4
+    },
+    {
+        "Name":  "SamSs",
+        "DisplayName":  "Security Accounts Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "Schedule",
+        "DisplayName":  "Task Scheduler",
+        "Status":  4
+    },
+    {
+        "Name":  "seclogon",
+        "DisplayName":  "Secondary Logon",
+        "Status":  4
+    },
+    {
+        "Name":  "SecurityHealthService",
+        "DisplayName":  "Windows Security Service",
+        "Status":  4
+    },
+    {
+        "Name":  "SENS",
+        "DisplayName":  "System Event Notification Service",
+        "Status":  4
+    },
+    {
+        "Name":  "ShellHWDetection",
+        "DisplayName":  "Shell Hardware Detection",
+        "Status":  4
+    },
+    {
+        "Name":  "Spooler",
+        "DisplayName":  "Print Spooler",
+        "Status":  4
+    },
+    {
+        "Name":  "SSDPSRV",
+        "DisplayName":  "SSDP Discovery",
+        "Status":  4
+    },
+    {
+        "Name":  "sshd",
+        "DisplayName":  "OpenSSH SSH Server",
+        "Status":  4
+    },
+    {
+        "Name":  "SstpSvc",
+        "DisplayName":  "Secure Socket Tunneling Protocol Service",
+        "Status":  4
+    },
+    {
+        "Name":  "StateRepository",
+        "DisplayName":  "State Repository Service",
+        "Status":  4
+    },
+    {
+        "Name":  "StiSvc",
+        "DisplayName":  "Windows Image Acquisition (WIA)",
+        "Status":  4
+    },
+    {
+        "Name":  "StorSvc",
+        "DisplayName":  "Storage Service",
+        "Status":  4
+    },
+    {
+        "Name":  "SysMain",
+        "DisplayName":  "SysMain",
+        "Status":  4
+    },
+    {
+        "Name":  "SystemEventsBroker",
+        "DisplayName":  "System Events Broker",
+        "Status":  4
+    },
+    {
+        "Name":  "TextInputManagementService",
+        "DisplayName":  "Text Input Management Service",
+        "Status":  4
+    },
+    {
+        "Name":  "Themes",
+        "DisplayName":  "Themes",
+        "Status":  4
+    },
+    {
+        "Name":  "TimeBrokerSvc",
+        "DisplayName":  "Time Broker",
+        "Status":  4
+    },
+    {
+        "Name":  "TokenBroker",
+        "DisplayName":  "Web Account Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "TrkWks",
+        "DisplayName":  "Distributed Link Tracking Client",
+        "Status":  4
+    },
+    {
+        "Name":  "TrustedInstaller",
+        "DisplayName":  "Windows Modules Installer",
+        "Status":  4
+    },
+    {
+        "Name":  "tvnserver",
+        "DisplayName":  "TightVNC Server",
+        "Status":  4
+    },
+    {
+        "Name":  "UdkUserSvc_882a268",
+        "DisplayName":  "Udk User Service_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "UnistoreSvc_882a268",
+        "DisplayName":  "User Data Storage_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "UserDataSvc_882a268",
+        "DisplayName":  "User Data Access_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "UserManager",
+        "DisplayName":  "User Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "UsoSvc",
+        "DisplayName":  "Update Orchestrator Service",
+        "Status":  4
+    },
+    {
+        "Name":  "VaultSvc",
+        "DisplayName":  "Credential Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "vds",
+        "DisplayName":  "Virtual Disk",
+        "Status":  4
+    },
+    {
+        "Name":  "VTUN",
+        "DisplayName":  "TerraMaster TNAS.online VTUN Daemon",
+        "Status":  4
+    },
+    {
+        "Name":  "Wcmsvc",
+        "DisplayName":  "Windows Connection Manager",
+        "Status":  4
+    },
+    {
+        "Name":  "WdNisSvc",
+        "DisplayName":  "Microsoft Defender Antivirus Network Inspection Service",
+        "Status":  4
+    },
+    {
+        "Name":  "webthreatdefsvc",
+        "DisplayName":  "Web Threat Defense Service",
+        "Status":  4
+    },
+    {
+        "Name":  "webthreatdefusersvc_882a268",
+        "DisplayName":  "Web Threat Defense User Service_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "whesvc",
+        "DisplayName":  "Windows Health and Optimized Experiences",
+        "Status":  4
+    },
+    {
+        "Name":  "WinDefend",
+        "DisplayName":  "Microsoft Defender Antivirus Service",
+        "Status":  4
+    },
+    {
+        "Name":  "WinHttpAutoProxySvc",
+        "DisplayName":  "WinHTTP Web Proxy Auto-Discovery Service",
+        "Status":  4
+    },
+    {
+        "Name":  "Winmgmt",
+        "DisplayName":  "Windows Management Instrumentation",
+        "Status":  4
+    },
+    {
+        "Name":  "WlanSvc",
+        "DisplayName":  "WLAN AutoConfig",
+        "Status":  4
+    },
+    {
+        "Name":  "WMIRegistrationService",
+        "DisplayName":  "Intel(R) Management Engine WMI Provider Registration",
+        "Status":  4
+    },
+    {
+        "Name":  "WpnService",
+        "DisplayName":  "Windows Push Notifications System Service",
+        "Status":  4
+    },
+    {
+        "Name":  "WpnUserService_882a268",
+        "DisplayName":  "Windows Push Notifications User Service_882a268",
+        "Status":  4
+    },
+    {
+        "Name":  "WSAIFabricSvc",
+        "DisplayName":  "WSAIFabricSvc",
+        "Status":  4
+    },
+    {
+        "Name":  "wscsvc",
+        "DisplayName":  "Security Center",
+        "Status":  4
+    },
+    {
+        "Name":  "WSearch",
+        "DisplayName":  "Windows Search",
+        "Status":  4
+    },
+    {
+        "Name":  "wuqisvc",
+        "DisplayName":  "Microsoft Usage and Quality Insights",
+        "Status":  4
+    }
+]

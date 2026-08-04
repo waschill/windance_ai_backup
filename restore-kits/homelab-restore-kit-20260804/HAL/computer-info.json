@@ -1,0 +1,28 @@
+{
+    "CsName":  "HAL",
+    "WindowsProductName":  "Windows 10 Home",
+    "WindowsVersion":  "2009",
+    "OsHardwareAbstractionLayer":  "10.0.26100.1",
+    "CsProcessors":  [
+                         {
+                             "Name":  "13th Gen Intel(R) Core(TM) i5-13400F",
+                             "Manufacturer":  "GenuineIntel",
+                             "Description":  "Intel64 Family 6 Model 183 Stepping 1",
+                             "Architecture":  9,
+                             "AddressWidth":  64,
+                             "DataWidth":  64,
+                             "MaxClockSpeed":  2500,
+                             "CurrentClockSpeed":  2500,
+                             "NumberOfCores":  10,
+                             "NumberOfLogicalProcessors":  16,
+                             "ProcessorID":  "BFEBFBFF000B0671",
+                             "SocketDesignation":  "CPUSocket",
+                             "ProcessorType":  3,
+                             "Role":  "CPU",
+                             "Status":  "OK",
+                             "CpuStatus":  1,
+                             "Availability":  3
+                         }
+                     ],
+    "CsTotalPhysicalMemory":  68415504384
+}

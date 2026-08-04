@@ -1,0 +1,53 @@
+Host SAL
+    HostName 192.168.36.22
+    User zuzu
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host AL
+    HostName 192.168.36.20
+    User waschilladmin
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host HERALD
+    HostName 192.168.36.21
+    User herald
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host REFWeb
+    HostName 64.251.177.195
+    User waschill
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host Odyssey
+    HostName 192.168.36.31
+    User William
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host TMA-1
+    HostName 192.168.36.131
+    User William
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host TMA-2
+    HostName 192.168.36.133
+    User William
+    IdentityFile C:/Users/wasch/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host SAM
+    HostName 192.168.36.230
+    User williamschilling
+    IdentityFile ~/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes
+
+Host SAM-WIFI
+    HostName 192.168.36.29
+    User williamschilling
+    IdentityFile ~/.ssh/id_ed25519_homelab
+    IdentitiesOnly yes

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Windance Training Schedule</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="screen">
+    <section class="header">
+      <h1>Training Schedule</h1>
+      <div class="date-row">Today’s Date: <span id="scheduleDate">Loading…</span></div>
+      <div class="meta-row">
+        <span id="statusText">Starting SAM…</span>
+        <span id="commitText"></span>
+      </div>
+    </section>
+
+    <section class="table-shell">
+      <div class="table-pair">
+        <table class="schedule-table" id="leftTable">
+          <thead><tr><th>Horse</th><th>Training</th><th>Farrier</th><th>Vet</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <table class="schedule-table" id="rightTable">
+          <thead><tr><th>Horse</th><th>Training</th><th>Farrier</th><th>Vet</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="updateBtn" class="primary">Update</button>
+      <button id="commitBtn" class="primary">Commit</button>
+    </section>
+
+    <section class="filter-row">
+      <select id="trainerFilter">
+        <option value="">All Trainers</option>
+      </select>
+      <a class="admin-link" href="/admin">Admin</a>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

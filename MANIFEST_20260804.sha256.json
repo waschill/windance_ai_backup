@@ -1,0 +1,287 @@
+﻿[
+    {
+        "Path":  "BACKUP_MANIFEST_20260804.md",
+        "Bytes":  765,
+        "SHA256":  "8DE1938EB18C0B0654DCC98181BBAFF16B25941BC57882DA0DACD7B68700D8A2"
+    },
+    {
+        "Path":  "README.md",
+        "Bytes":  1931,
+        "SHA256":  "B37EE5B383DF8A1B627AACB5AC67F286FB85A80B26D384FA5AB787A8A789FA0B"
+    },
+    {
+        "Path":  "current-control-plane/20260804/AGENTS.md",
+        "Bytes":  3293,
+        "SHA256":  "EBE23B613E2F181B672F0E30C1C74929F2F66D4C77661B5C8735D87C5E664B04"
+    },
+    {
+        "Path":  "current-control-plane/20260804/com.windance.weekly-stack-maintenance.plist",
+        "Bytes":  780,
+        "SHA256":  "D44AE4E81036805971EA572C27384AC356A4E9DF4A43A4F2C3F0CC98890C9954"
+    },
+    {
+        "Path":  "current-control-plane/20260804/forge-local.cmd",
+        "Bytes":  262,
+        "SHA256":  "FC61CCEB9B9F852DC748CF55FE31E99188F17488CE6225A97BDF1EFE70E690C4"
+    },
+    {
+        "Path":  "current-control-plane/20260804/forge_local_worker.py",
+        "Bytes":  8897,
+        "SHA256":  "909FBCA15B0C656E0FE1996CA5BD40B908766160D91D67E21F71357E6392A458"
+    },
+    {
+        "Path":  "current-control-plane/20260804/infrastructure-inventory.yaml",
+        "Bytes":  39579,
+        "SHA256":  "C89A73DDBDDEE937BE02AB4E2156F60FC291AF60D9D61219A3ACAE4DDE952B85"
+    },
+    {
+        "Path":  "current-control-plane/20260804/weekly_stack_maintenance.py",
+        "Bytes":  2171,
+        "SHA256":  "CB70F7CE94DD5668614F606F7FE45E541E885A7EA63B1B573BB7C61D97F9F43D"
+    },
+    {
+        "Path":  "current-control-plane/20260804/WindanceForgeLocalWorker.xml",
+        "Bytes":  1082,
+        "SHA256":  "2275D7084D6D33952B52EB69EBA4D825EDE6E275C2F3FBF1F6021D5BC49436CA"
+    },
+    {
+        "Path":  "current-control-plane/20260804/WINDANCE_NETWORK_RUNBOOK.md",
+        "Bytes":  39714,
+        "SHA256":  "83D20F5B96D2EB021FD0248BEE2B13A0034101916EFBA089A1679141CB3513B2"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/MANIFEST.sha256.json",
+        "Bytes":  7866,
+        "SHA256":  "B719EC6B9C5C9BE6BAD06F682E5E80F8E69DB610238B1826083E94220A4684D9"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/RESTORE_GUIDE.md",
+        "Bytes":  2765,
+        "SHA256":  "F981F7F130E6F0D9A2BF4993F04D1704C76B365A07CB633C641AD81E3DCD9544"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/AL/al-restore-safe.tgz",
+        "Bytes":  1620,
+        "SHA256":  "B43D05DFB05EAC551830A4FCC67D0DE299972E887B5FA2ECA8A644FFE1D27B94"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/backup_scripts/linux_light_backup.sh",
+        "Bytes":  1167,
+        "SHA256":  "F3A58D82044F5CF20F4BC6EE9FB2059977870E77D008BF60718DB31261483291"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/backup_scripts/sal_backup.sh",
+        "Bytes":  1614,
+        "SHA256":  "7EB1889788A0BD0A8772E27F2B0702E5575C35E6E8C284CB6D6BDCC07406E3E9"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/docs/AGENTS.md",
+        "Bytes":  2460,
+        "SHA256":  "86E17FA9D03F17D86C74D7214538C80673CB4F3AE60F890F72684EC29289DFFF"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/docs/HERALD_OPERATING_BRIEF.md",
+        "Bytes":  7580,
+        "SHA256":  "E1CDB95BBB89F0B41234F2DB1F510D544F3FFD2DCBB93F36FA9D8D6333FAAC0E"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/docs/infrastructure-inventory.yaml",
+        "Bytes":  27414,
+        "SHA256":  "EB9545D71DBFABA39DBE17A2E61382E7E75C97C2926DAE71741A3ADE2A8E4D22"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/docs/WINDANCE_NETWORK_RUNBOOK.md",
+        "Bytes":  20356,
+        "SHA256":  "A81FC1C21DA798933D27A60533636395AEDC95E02EA6A2D191A48CD7564601DB"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/agent_harness_latest_from_HERALD.py",
+        "Bytes":  232651,
+        "SHA256":  "F024E20F65CAA64D846701E7BEB47D221C42B3866A5DAD156A2EA750572F3788"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/computer-info.json",
+        "Bytes":  1285,
+        "SHA256":  "87D7BDA88450231B88F40FCF74E474B85DAA38401A00BE2E12767B71EB5FF0D6"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/ollama-list.txt",
+        "Bytes":  1501,
+        "SHA256":  "DD8961618D8D27F0CDE3228DECF24A5D7A2294A1093D8EA310028056921150DD"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/running-services.json",
+        "Bytes":  15616,
+        "SHA256":  "7F81262E25F87017AD82A60DB63854FA7C698AFC6BE21C175AEB8A75B378CEEE"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/scheduled-tasks-windance.json",
+        "Bytes":  93,
+        "SHA256":  "09474E36BB14F5B8221C5DE2DAFBD6EAB318DAD3BD757C417A1ED92F252FAE40"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/ssh-config-no-private-keys.txt",
+        "Bytes":  1215,
+        "SHA256":  "C10B9E563AA7D2209308791F3DF0AA3E503797598125F14B325ABC1FB382F3D7"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/level8-config-no-secrets/LEVEL8_EXECUTE_DISABLED.flag",
+        "Bytes":  135,
+        "SHA256":  "9A464DF1DF7112F7CCF9B017390544B74F2815B0B8DEBB2C82089E71FE8D5F90"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/level8-config-no-secrets/vega-level8-executor.ps1",
+        "Bytes":  6827,
+        "SHA256":  "BD0800B07172D8EE528E9D4E766C098212407B90DA4268C06B91B07878427BB0"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/level8-config-no-secrets/vega-level8-start.cmd",
+        "Bytes":  423,
+        "SHA256":  "5494A697DF04AB6459E03A03194CECD619DB92E7218410BD5DEB2F9FC39FA8A4"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/app.py",
+        "Bytes":  12850,
+        "SHA256":  "99C6E91F958E0BD9E1CDC8DF2DD178A88903E5E3FBAB75141D1A3C83B17D5182"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/com.windance.sam-schedule.service",
+        "Bytes":  595,
+        "SHA256":  "66E96C857192DA17965C26976FCD42A0E9416F28EC722623EB490E9E289E1A3B"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/README.md",
+        "Bytes":  1234,
+        "SHA256":  "6E10F19E78AEBA8A38EADE01CBE192048B54BA88CF7B8F990DDC6CF069FC4CAD"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/sam-kiosk.desktop",
+        "Bytes":  204,
+        "SHA256":  "9B907D61ADFFC8F69840157D1932EEEEF05DA6A6FB21DABFE199555AE1DD5E16"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/sam-schedule.service",
+        "Bytes":  495,
+        "SHA256":  "8643177962CEDBD726A10D8CB95FE283AA0C902E558E75935BBDD097D9094414"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/sam_schedule.py",
+        "Bytes":  66801,
+        "SHA256":  "4AC955E8350B2BF4B8B7EEE1E31C707C775225D9412602086BC6D76BD1D99910"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/sam_schedule_server.py",
+        "Bytes":  25840,
+        "SHA256":  "60FBE23FD6805E9E83EC58B5C1CF223A8661FF996D00D9C214A43D78F2E66A00"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/windance-sam-schedule.service",
+        "Bytes":  566,
+        "SHA256":  "833E8FC6CB2D066447D74C23FC21C539B7CDA6D9BC02ABEC97714D058389D4FF"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/static/admin.html",
+        "Bytes":  1331,
+        "SHA256":  "3BB0228B3DD31526AB18D568A0A9CD9F0F92CD11931F9D11B378A246194A1F3D"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/static/admin.js",
+        "Bytes":  2709,
+        "SHA256":  "B375B8224D8DF181E2237115B40143CAA8A7D68496FAFD26D61B323F1756E3E1"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/static/app.js",
+        "Bytes":  6291,
+        "SHA256":  "8F6DDF3ED90CE1EF77BB6EF2C0EC191C619FA2F32C13461B36D5D668AEEF5D20"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/static/index.html",
+        "Bytes":  1327,
+        "SHA256":  "796BFADE7C919DB64FA333FD07AF0EEAD796A145E8F46B78AB2178EB1AFA1147"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/static/style.css",
+        "Bytes":  3868,
+        "SHA256":  "08B2F29D808726E073F53BDDC245540B3036B8C6524BE2D2A50D238459E8F580"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/static/styles.css",
+        "Bytes":  4297,
+        "SHA256":  "75F61E5173BB17A17EA8DF12DF71C43B4509EDA2C977278C9E0256974FD7C32B"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/templates/admin.html",
+        "Bytes":  1114,
+        "SHA256":  "E85D9627C39EAD6D812CC90E93983F277995FFB01E5EA52EADD0CCD56A5E7961"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/templates/index.html",
+        "Bytes":  1551,
+        "SHA256":  "F7DAB0842E0CF2081E8878F4BEAA67B3EBB2326F99EFDF1B002219AC92EA0C9C"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/__pycache__/app.cpython-311.pyc",
+        "Bytes":  23554,
+        "SHA256":  "409A32BC264247854C5C7C41F3435CA40F9E19791D105157522CA03BDB0E3FEB"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/__pycache__/sam_schedule.cpython-311.pyc",
+        "Bytes":  93163,
+        "SHA256":  "1A7591D0F766C187084EBA9EB7E7967680BF59D33ED0E350F14B2750FE5DBB19"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HAL/sam_schedule_app/__pycache__/sam_schedule_server.cpython-311.pyc",
+        "Bytes":  41172,
+        "SHA256":  "498EB8B238CED6205759C41840A4518F2013C1D70676E0EE4F650C26FC320A75"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HERALD/herald-restore-safe.tgz",
+        "Bytes":  3722446,
+        "SHA256":  "4ACC14E6CABFAD7BA9BAC140C7640ACFEFF0021184C836222C3234FAE77FDFFC"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/HERALD/vega-runner/vega_task_runner.py",
+        "Bytes":  6293,
+        "SHA256":  "C02C5DA44A4128595E050B25CFAF88511D27C6B0A01F51640850AF681B5E2EBE"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/Odyssey/Odyssey-restore-safe.tgz",
+        "Bytes":  4650,
+        "SHA256":  "B8CAEA23ED3B1C779D29F6B80AB4CBF4401BCF0828B0913E2F3B6ABB589E9A62"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/REFWeb/REFWeb-restore-safe.tgz",
+        "Bytes":  39277,
+        "SHA256":  "F77F01A43C6CDE97A232929D91DF15B753A74969595199BE4B46447EE1DD2F98"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/SAL/sal-restore-safe.tgz",
+        "Bytes":  603126,
+        "SHA256":  "5B545579AB39893F87DE674CE05A9947DBF80D67FE7A9F8C6DDAF0AACFCCDA64"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/SAL/youtube-briefing/com.windance.youtube-briefing.plist",
+        "Bytes":  1051,
+        "SHA256":  "DB7A93754B469FF46DE3A276B5C41A48922944BC4A38DF2A6C7CB5E7E41120BC"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/SAL/youtube-briefing/windance_youtube_briefing.py",
+        "Bytes":  8946,
+        "SHA256":  "B1376E8B3D0891298E708869431E46EF07EA85C71757947BD1845130906FC561"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/SAM/sam-restore-safe.tgz",
+        "Bytes":  696672,
+        "SHA256":  "43601B22C707E91FD066A17449F8E6E92F4CA8C8497397B57CBC7E23675630FD"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/TMA-1/TMA-1-restore-safe.tgz",
+        "Bytes":  53270,
+        "SHA256":  "AFBBB12B3AD121FBFA8DE7ED1158E0FBB9AEA57FBA5E52AE4D349CDAEE105FD8"
+    },
+    {
+        "Path":  "restore-kits/homelab-restore-kit-20260804/TMA-2/TMA-2-restore-safe.tgz",
+        "Bytes":  52934,
+        "SHA256":  "9BE3A1205489857B14DA9A789B7A63E54229A18B27CC338C0E313C65C36D1FEE"
+    }
+]

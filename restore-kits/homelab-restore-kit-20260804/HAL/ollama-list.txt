@@ -1,0 +1,16 @@
+NAME                                              ID              SIZE      MODIFIED     
+gpt-oss:20b                                       17052f91a42e    13 GB     3 weeks ago     
+gemma4:latest                                     c6eb396dbd59    9.6 GB    4 weeks ago     
+dolphin3:latest                                   d5ab9ae8e1f2    4.9 GB    4 weeks ago     
+llama3.1:8b-instruct-q8_0                         b158ded76fa0    8.5 GB    6 weeks ago     
+gemma3:12b                                        f4031aab637d    8.1 GB    6 weeks ago     
+llama3-chatqa:8b                                  b37a98d204b2    4.7 GB    2 months ago    
+llama3.2:3b                                       a80c4f17acd5    2.0 GB    2 months ago    
+Flux_AI/Flux_AI:latest                            a80c4f17acd5    2.0 GB    3 months ago    
+brxce/stable-diffusion-prompt-generator:latest    474a09318a2e    4.1 GB    3 months ago    
+nomic-embed-text:latest                           0a109f422b47    274 MB    3 months ago    
+ALIENTELLIGENCE/holybible:latest                  dbcf419529c4    4.7 GB    3 months ago    
+llama3.1:8b                                       46e0c10c039e    4.9 GB    3 months ago    
+qwen3:4b                                          359d7dd4bcda    2.5 GB    3 months ago    
+qwen3:8b                                          500a1f067a9f    5.2 GB    3 months ago    
+qwen3-vl:8b                                       901cae732162    6.1 GB    3 months ago    

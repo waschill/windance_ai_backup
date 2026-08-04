@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>SAM Trainer Admin</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page admin-page">
+    <header class="header">
+      <a class="admin-link" href="/">← Schedule</a>
+      <div>
+        <h1>Trainer Admin</h1>
+        <div class="date-line">Manage dropdown trainers used by SAM.</div>
+      </div>
+      <span></span>
+    </header>
+
+    <section class="panel">
+      <h2>Add / Update Trainer</h2>
+      <form id="trainerForm" class="trainer-form">
+        <label>Code <input id="code" maxlength="4" placeholder="S"></label>
+        <label>Name <input id="name" placeholder="Shawn"></label>
+        <label>Sort <input id="sort" type="number" value="100"></label>
+        <label class="check"><input id="active" type="checkbox" checked> Active</label>
+        <button class="primary" type="submit">Save Trainer</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Current Trainers</h2>
+      <div id="trainerList" class="trainer-list"></div>
+    </section>
+
+    <section class="statusbar">
+      <span id="adminStatus">Loading…</span>
+    </section>
+  </main>
+  <script src="/admin.js"></script>
+</body>
+</html>

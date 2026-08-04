@@ -1,0 +1,212 @@
+﻿[
+    {
+        "path":  "AL\\al-restore-safe.tgz",
+        "bytes":  1620,
+        "sha256":  "B43D05DFB05EAC551830A4FCC67D0DE299972E887B5FA2ECA8A644FFE1D27B94"
+    },
+    {
+        "path":  "backup_scripts\\linux_light_backup.sh",
+        "bytes":  1167,
+        "sha256":  "F3A58D82044F5CF20F4BC6EE9FB2059977870E77D008BF60718DB31261483291"
+    },
+    {
+        "path":  "backup_scripts\\sal_backup.sh",
+        "bytes":  1614,
+        "sha256":  "7EB1889788A0BD0A8772E27F2B0702E5575C35E6E8C284CB6D6BDCC07406E3E9"
+    },
+    {
+        "path":  "docs\\AGENTS.md",
+        "bytes":  2460,
+        "sha256":  "86E17FA9D03F17D86C74D7214538C80673CB4F3AE60F890F72684EC29289DFFF"
+    },
+    {
+        "path":  "docs\\infrastructure-inventory.yaml",
+        "bytes":  26212,
+        "sha256":  "A97B0ACA6F02DBD69FFCA7E715A4A5C97F58F6520975F369857FF3CC2707FF6C"
+    },
+    {
+        "path":  "docs\\WINDANCE_NETWORK_RUNBOOK.md",
+        "bytes":  17550,
+        "sha256":  "C52FD1EF93A5100EB7EFFD3C1325F22D482E7577F4BE0C0ACB5AB382AE9BD9BF"
+    },
+    {
+        "path":  "HAL\\agent_harness_latest_from_HERALD.py",
+        "bytes":  228382,
+        "sha256":  "689EEF7280C513F584B002C521E9055D1BED64DD5B6235D83607EF07F6CD1250"
+    },
+    {
+        "path":  "HAL\\computer-info.json",
+        "bytes":  1285,
+        "sha256":  "87D7BDA88450231B88F40FCF74E474B85DAA38401A00BE2E12767B71EB5FF0D6"
+    },
+    {
+        "path":  "HAL\\level8-config-no-secrets\\LEVEL8_EXECUTE_DISABLED.flag",
+        "bytes":  135,
+        "sha256":  "9A464DF1DF7112F7CCF9B017390544B74F2815B0B8DEBB2C82089E71FE8D5F90"
+    },
+    {
+        "path":  "HAL\\level8-config-no-secrets\\vega-level8-executor.ps1",
+        "bytes":  6827,
+        "sha256":  "BD0800B07172D8EE528E9D4E766C098212407B90DA4268C06B91B07878427BB0"
+    },
+    {
+        "path":  "HAL\\level8-config-no-secrets\\vega-level8-start.cmd",
+        "bytes":  423,
+        "sha256":  "5494A697DF04AB6459E03A03194CECD619DB92E7218410BD5DEB2F9FC39FA8A4"
+    },
+    {
+        "path":  "HAL\\ollama-list.txt",
+        "bytes":  1501,
+        "sha256":  "DD8961618D8D27F0CDE3228DECF24A5D7A2294A1093D8EA310028056921150DD"
+    },
+    {
+        "path":  "HAL\\running-services.json",
+        "bytes":  15616,
+        "sha256":  "7F81262E25F87017AD82A60DB63854FA7C698AFC6BE21C175AEB8A75B378CEEE"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\__pycache__\\app.cpython-311.pyc",
+        "bytes":  23554,
+        "sha256":  "409A32BC264247854C5C7C41F3435CA40F9E19791D105157522CA03BDB0E3FEB"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\__pycache__\\sam_schedule.cpython-311.pyc",
+        "bytes":  93163,
+        "sha256":  "1A7591D0F766C187084EBA9EB7E7967680BF59D33ED0E350F14B2750FE5DBB19"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\__pycache__\\sam_schedule_server.cpython-311.pyc",
+        "bytes":  41172,
+        "sha256":  "498EB8B238CED6205759C41840A4518F2013C1D70676E0EE4F650C26FC320A75"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\app.py",
+        "bytes":  12850,
+        "sha256":  "99C6E91F958E0BD9E1CDC8DF2DD178A88903E5E3FBAB75141D1A3C83B17D5182"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\com.windance.sam-schedule.service",
+        "bytes":  595,
+        "sha256":  "66E96C857192DA17965C26976FCD42A0E9416F28EC722623EB490E9E289E1A3B"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\README.md",
+        "bytes":  1234,
+        "sha256":  "6E10F19E78AEBA8A38EADE01CBE192048B54BA88CF7B8F990DDC6CF069FC4CAD"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\sam_schedule.py",
+        "bytes":  66801,
+        "sha256":  "4AC955E8350B2BF4B8B7EEE1E31C707C775225D9412602086BC6D76BD1D99910"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\sam_schedule_server.py",
+        "bytes":  25840,
+        "sha256":  "60FBE23FD6805E9E83EC58B5C1CF223A8661FF996D00D9C214A43D78F2E66A00"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\sam-kiosk.desktop",
+        "bytes":  204,
+        "sha256":  "9B907D61ADFFC8F69840157D1932EEEEF05DA6A6FB21DABFE199555AE1DD5E16"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\sam-schedule.service",
+        "bytes":  495,
+        "sha256":  "8643177962CEDBD726A10D8CB95FE283AA0C902E558E75935BBDD097D9094414"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\static\\admin.html",
+        "bytes":  1331,
+        "sha256":  "3BB0228B3DD31526AB18D568A0A9CD9F0F92CD11931F9D11B378A246194A1F3D"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\static\\admin.js",
+        "bytes":  2709,
+        "sha256":  "B375B8224D8DF181E2237115B40143CAA8A7D68496FAFD26D61B323F1756E3E1"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\static\\app.js",
+        "bytes":  6291,
+        "sha256":  "8F6DDF3ED90CE1EF77BB6EF2C0EC191C619FA2F32C13461B36D5D668AEEF5D20"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\static\\index.html",
+        "bytes":  1327,
+        "sha256":  "796BFADE7C919DB64FA333FD07AF0EEAD796A145E8F46B78AB2178EB1AFA1147"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\static\\style.css",
+        "bytes":  3868,
+        "sha256":  "08B2F29D808726E073F53BDDC245540B3036B8C6524BE2D2A50D238459E8F580"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\static\\styles.css",
+        "bytes":  4297,
+        "sha256":  "75F61E5173BB17A17EA8DF12DF71C43B4509EDA2C977278C9E0256974FD7C32B"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\templates\\admin.html",
+        "bytes":  1114,
+        "sha256":  "E85D9627C39EAD6D812CC90E93983F277995FFB01E5EA52EADD0CCD56A5E7961"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\templates\\index.html",
+        "bytes":  1551,
+        "sha256":  "F7DAB0842E0CF2081E8878F4BEAA67B3EBB2326F99EFDF1B002219AC92EA0C9C"
+    },
+    {
+        "path":  "HAL\\sam_schedule_app\\windance-sam-schedule.service",
+        "bytes":  566,
+        "sha256":  "833E8FC6CB2D066447D74C23FC21C539B7CDA6D9BC02ABEC97714D058389D4FF"
+    },
+    {
+        "path":  "HAL\\scheduled-tasks-windance.json",
+        "bytes":  93,
+        "sha256":  "09474E36BB14F5B8221C5DE2DAFBD6EAB318DAD3BD757C417A1ED92F252FAE40"
+    },
+    {
+        "path":  "HAL\\ssh-config-no-private-keys.txt",
+        "bytes":  1215,
+        "sha256":  "C10B9E563AA7D2209308791F3DF0AA3E503797598125F14B325ABC1FB382F3D7"
+    },
+    {
+        "path":  "HERALD\\herald-restore-safe.tgz",
+        "bytes":  3722446,
+        "sha256":  "4ACC14E6CABFAD7BA9BAC140C7640ACFEFF0021184C836222C3234FAE77FDFFC"
+    },
+    {
+        "path":  "Odyssey\\Odyssey-restore-safe.tgz",
+        "bytes":  4650,
+        "sha256":  "B8CAEA23ED3B1C779D29F6B80AB4CBF4401BCF0828B0913E2F3B6ABB589E9A62"
+    },
+    {
+        "path":  "REFWeb\\REFWeb-restore-safe.tgz",
+        "bytes":  39277,
+        "sha256":  "F77F01A43C6CDE97A232929D91DF15B753A74969595199BE4B46447EE1DD2F98"
+    },
+    {
+        "path":  "RESTORE_GUIDE.md",
+        "bytes":  2765,
+        "sha256":  "F981F7F130E6F0D9A2BF4993F04D1704C76B365A07CB633C641AD81E3DCD9544"
+    },
+    {
+        "path":  "SAL\\sal-restore-safe.tgz",
+        "bytes":  603126,
+        "sha256":  "5B545579AB39893F87DE674CE05A9947DBF80D67FE7A9F8C6DDAF0AACFCCDA64"
+    },
+    {
+        "path":  "SAM\\sam-restore-safe.tgz",
+        "bytes":  696672,
+        "sha256":  "43601B22C707E91FD066A17449F8E6E92F4CA8C8497397B57CBC7E23675630FD"
+    },
+    {
+        "path":  "TMA-1\\TMA-1-restore-safe.tgz",
+        "bytes":  53270,
+        "sha256":  "AFBBB12B3AD121FBFA8DE7ED1158E0FBB9AEA57FBA5E52AE4D349CDAEE105FD8"
+    },
+    {
+        "path":  "TMA-2\\TMA-2-restore-safe.tgz",
+        "bytes":  52934,
+        "sha256":  "9BE3A1205489857B14DA9A789B7A63E54229A18B27CC338C0E313C65C36D1FEE"
+    }
+]

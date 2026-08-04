@@ -1,0 +1,226 @@
+:root {
+  --ink: #101010;
+  --paper: #f7f7f2;
+  --line: #333;
+  --blue: #0500ff;
+  --done: #c9c9c9;
+  --warn: #fff3bf;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #202020;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.screen {
+  width: min(100vw, 56.25vh);
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 2.2vh 1.8vh 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vh;
+}
+
+.header { text-align: center; }
+.header h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vh, 48px);
+  letter-spacing: .02em;
+}
+.date-row { font-size: clamp(14px, 1.9vh, 24px); }
+.meta-row {
+  min-height: 2.8vh;
+  margin-top: .5vh;
+  font-size: clamp(12px, 1.45vh, 18px);
+  color: #444;
+  display: flex;
+  justify-content: center;
+  gap: 1.2vh;
+  flex-wrap: wrap;
+}
+
+.table-shell {
+  border: 1px solid #bbb;
+  background: #fff;
+  padding: .5vh;
+  flex: 1;
+  min-height: 0;
+}
+
+.table-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .45vh;
+  height: 100%;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: clamp(10px, 1.45vh, 17px);
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid var(--line);
+  padding: .35vh .35vh;
+  height: 3.15vh;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.schedule-table th {
+  font-weight: 700;
+  text-align: center;
+  background: #fafafa;
+}
+
+.schedule-table th:nth-child(1), .schedule-table td:nth-child(1) { width: 34%; }
+.schedule-table th:nth-child(2), .schedule-table td:nth-child(2) { width: 30%; }
+.schedule-table th:nth-child(3), .schedule-table td:nth-child(3) { width: 18%; }
+.schedule-table th:nth-child(4), .schedule-table td:nth-child(4) { width: 18%; }
+
+td.horse { font-weight: 700; }
+td.action-cell {
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+td.action-cell.empty {
+  cursor: default;
+  background: #fbfbfb;
+}
+td.action-cell.needed {
+  background: #fff;
+}
+td.action-cell.done {
+  background: var(--done);
+  color: #444;
+  text-decoration: line-through;
+}
+td.action-cell.farrier-needed,
+td.action-cell.vet-needed {
+  background: var(--warn);
+}
+td.action-cell.done.farrier-needed,
+td.action-cell.done.vet-needed {
+  background: var(--done);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.6vh 0;
+}
+
+button.primary {
+  background: var(--blue);
+  color: white;
+  border: 2px solid #000;
+  border-radius: .8vh;
+  font-size: clamp(24px, 3.5vh, 44px);
+  line-height: 1;
+  padding: .55vh 3.6vh .75vh;
+  min-width: 16vh;
+  box-shadow: 0 .25vh 0 #000;
+}
+
+button:active { transform: translateY(.15vh); }
+button:disabled { opacity: .5; }
+
+.filter-row {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+  align-items: center;
+  padding-bottom: 1vh;
+}
+
+#trainerFilter {
+  width: 78%;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3.1vh, 40px);
+  padding: .35vh 1vh;
+  text-align: center;
+}
+
+.admin-link {
+  color: #111;
+  font-size: clamp(12px, 1.6vh, 18px);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 3vh;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 1vh 1.5vh;
+  border-radius: .8vh;
+  font-size: 18px;
+  max-width: 90vw;
+  z-index: 10;
+}
+
+.admin-screen {
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 24px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trainer-form {
+  display: grid;
+  grid-template-columns: 1fr 120px 120px auto auto;
+  gap: 12px;
+  align-items: end;
+  margin: 24px 0;
+}
+
+.trainer-form label { display: grid; gap: 4px; font-weight: 700; }
+.trainer-form input {
+  font-size: 20px;
+  padding: 8px;
+}
+.check-line {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center;
+}
+
+.trainer-card {
+  border: 1px solid #999;
+  background: #fff;
+  margin: 10px 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+}
+.trainer-card.inactive { opacity: .55; }
+.trainer-card button { font-size: 16px; padding: 6px 10px; }
+
+@media (max-width: 700px) {
+  .trainer-form { grid-template-columns: 1fr; }
+}

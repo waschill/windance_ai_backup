@@ -1,0 +1,21 @@
+[Unit]
+Description=Windance SAM Schedule Display
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=williamschilling
+Group=williamschilling
+WorkingDirectory=/opt/windance/sam-schedule
+Environment=SAM_SCHEDULE_HOST=0.0.0.0
+Environment=SAM_SCHEDULE_PORT=8088
+Environment=SAM_SCHEDULE_DB=/var/lib/windance-sam-schedule/sam_schedule_v2.db
+Environment=HERALD_BASE_URL=http://192.168.36.21:8791
+Environment=TZ=America/Denver
+ExecStart=/usr/bin/python3 /opt/windance/sam-schedule/sam_schedule_server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAM Trainer Admin</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="admin-screen">
+    <header class="admin-header">
+      <h1>Trainer Admin</h1>
+      <a href="/">← Schedule</a>
+    </header>
+
+    <form id="trainerForm" class="trainer-form">
+      <input type="hidden" id="trainerId">
+      <label>
+        Name
+        <input id="trainerName" autocomplete="off" required>
+      </label>
+      <label>
+        Sort
+        <input id="trainerSort" type="number" value="100">
+      </label>
+      <label class="check-line">
+        <input id="trainerActive" type="checkbox" checked>
+        Active
+      </label>
+      <button type="submit" class="primary">Save Trainer</button>
+      <button type="button" id="clearBtn">Clear</button>
+    </form>
+
+    <section class="trainer-list" id="trainerList"></section>
+    <div id="toast" class="toast" hidden></div>
+  </main>
+  <script src="/static/admin.js"></script>
+</body>
+</html>

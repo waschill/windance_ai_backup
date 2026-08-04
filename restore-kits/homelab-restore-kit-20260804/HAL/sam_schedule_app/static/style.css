@@ -1,0 +1,255 @@
+:root {
+  --ink: #101010;
+  --paper: #f7f5ef;
+  --line: #3a3a3a;
+  --muted: #666;
+  --blue: #082eea;
+  --done: #b9b9b9;
+  --warn: #ffe6a3;
+  --good: #daf1d1;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--ink);
+  background: #202020;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: min(100vw, 760px);
+  min-height: 100vh;
+  background: var(--paper);
+  padding: 18px 18px 28px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger {
+  font-size: 28px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1;
+  margin: 8px 0 4px;
+  font-weight: 800;
+}
+
+.date-line {
+  text-align: center;
+  font-size: clamp(15px, 2.5vw, 20px);
+}
+
+.admin-link {
+  color: #111;
+  border: 2px solid #111;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  background: #fff;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: end;
+  margin: 20px 0 10px;
+}
+
+.primary {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 10px;
+  min-height: 56px;
+  font-size: clamp(24px, 4.5vw, 34px);
+  font-family: Georgia, 'Times New Roman', serif;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #000;
+}
+
+.primary:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.filter {
+  grid-column: 1 / -1;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(22px, 4vw, 32px);
+  text-align: center;
+}
+
+select,
+input {
+  width: 100%;
+  min-height: 48px;
+  border: 3px solid #111;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  padding: 4px 12px;
+}
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0 12px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 2px solid var(--line);
+  background: #fff;
+}
+
+.half-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.half-table + .half-table {
+  border-top: 3px solid #222;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 7px 5px;
+  min-height: 38px;
+  font-size: clamp(14px, 2.1vw, 18px);
+  vertical-align: middle;
+}
+
+th {
+  background: #fff;
+  font-weight: 800;
+  text-align: center;
+}
+
+td.horse {
+  width: 28%;
+  font-weight: 700;
+}
+
+td.action-cell {
+  width: 24%;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+td.action-cell.empty {
+  background: #fafafa;
+  color: #bbb;
+  cursor: default;
+}
+
+td.action-cell.done {
+  background: var(--done);
+  color: #333;
+  text-decoration: line-through;
+}
+
+td.action-cell:not(.empty):active {
+  outline: 4px solid #ffcc00;
+}
+
+.legend {
+  display: grid;
+  gap: 4px;
+  margin-top: 14px;
+  color: #444;
+  font-size: 14px;
+}
+
+.panel {
+  background: #fff;
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 18px 0;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+}
+
+.trainer-form {
+  display: grid;
+  gap: 12px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check input {
+  width: 24px;
+  min-height: 24px;
+}
+
+.trainer-card {
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.trainer-card.inactive {
+  color: #777;
+  background: #eee;
+}
+
+.trainer-card button {
+  min-height: 42px;
+  font-size: 18px;
+}
+
+@media (min-width: 720px) {
+  .schedule-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .half-table + .half-table {
+    border-top: 0;
+    border-left: 3px solid #222;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 720px) {
+  .page {
+    width: 100vw;
+    padding: 10px;
+  }
+  th, td {
+    font-size: 13px;
+    padding: 6px 3px;
+  }
+}

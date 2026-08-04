@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Windance Training Schedule</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="hamburger" aria-hidden="true">☰</div>
+      <div>
+        <h1>Training Schedule</h1>
+        <div class="date-line">Today’s Date: <span id="dateLabel">Loading…</span></div>
+      </div>
+      <a class="admin-link" href="/admin">Admin</a>
+    </header>
+
+    <section class="toolbar">
+      <button id="updateButton" class="primary">Update</button>
+      <button id="commitButton" class="primary">Commit</button>
+      <label class="filter">
+        Trainer
+        <select id="trainerFilter"></select>
+      </label>
+    </section>
+
+    <section class="statusbar">
+      <span id="statusText">Starting…</span>
+      <span id="updatedText"></span>
+    </section>
+
+    <section id="scheduleGrid" class="schedule-grid" aria-live="polite"></section>
+
+    <footer class="legend">
+      <span><b>Tap</b> a Training, Farrier, or Vet cell to mark done.</span>
+      <span>Tap a grey cell again to undo after confirmation.</span>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
