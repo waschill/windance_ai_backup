@@ -1,0 +1,11 @@
+{
+  "name": "windance-mission-control",
+  "label": "Mission Control",
+  "description": "Protected, read-only operational projection of Herald Harness staff work.",
+  "icon": "Activity",
+  "version": "1.0.0",
+  "tab": { "path": "/mission-control", "position": "after:logs" },
+  "entry": "dist/index.js",
+  "css": "dist/style.css",
+  "api": "plugin_api.py"
+}
