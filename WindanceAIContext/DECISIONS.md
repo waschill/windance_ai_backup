@@ -19,6 +19,7 @@
 ## Reporting and scheduling
 
 - Scheduled messages must have a real scheduler, an authorized durable destination, delivery evidence, and explicit failure logging.
+- Kefa and his recurring daily Bible-study delivery were retired on 2026-08-29 at William's direction. Do not recreate or reschedule Kefa unless William explicitly requests it in a future turn.
 - Training Schedule commits are historical records. They must remain queryable by horse and date.
 - SAM's daily schedule must commit the prior day, load the current day, preserve carry-over semantics, and run without an operator present.
 - User-facing summaries should be concise, chronological, and delivered in natural reading order.

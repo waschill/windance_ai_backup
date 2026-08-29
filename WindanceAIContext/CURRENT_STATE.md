@@ -16,8 +16,13 @@ Last curated: 2026-08-29. Confirm live before acting.
 - Scout: research.
 - Archivist: durable history and memory.
 - Athena: QA/internal audit with veto power but no production authority.
-- Kefa: Bible study agent.
 - Jim: private counselor agent with an isolated memory boundary.
+
+Kefa was retired on 2026-08-29 at William's direction. His Herald profile,
+daily-study service, logs, and LaunchAgent were moved to the recoverable archive
+`/Users/herald/.Trash/Kefa-removed-20260829-120100`; the schedule was unloaded,
+the shared Hermes gateway was restarted without Kefa, and the Kefa-only
+`ALIENTELLIGENCE/holybible:latest` Ollama model was removed from HAL.
 
 ## Production routing
 
