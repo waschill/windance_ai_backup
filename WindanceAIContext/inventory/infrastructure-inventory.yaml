@@ -1,0 +1,303 @@
+hosts:
+  HAL:
+    platform: Clone Windows 11
+    ip: 192.168.36.10
+    role: William's main daily driver and AI server
+    services:
+      - Ollama
+      - Codex
+      - Hermes Desktop GUI (native Electron app)
+    access:
+      ssh: local host
+    notes:
+      latest_restore_kit: P:/Business/Networksetup/homelab-restore-kit-20260719-105636 created 2026-07-19; safe restore-focused backup excluding private keys, OAuth tokens, API keys, .env files, Node-RED credential store, SyncThing config/data, and bulk NAS data
+      level8_shutdown_executor: Vega/HAL owns real Level 8 shutdown execution via C:/Users/wasch/.config/windance/level8/vega-level8-executor.ps1
+      level8_shutdown_status: DISABLED after unintended shutdown incident on 2026-07-11; do not re-enable or rebuild without William's explicit approval in that turn
+      level8_shutdown_launcher: Windows scheduled task WindanceLevel8VegaDryRun exists only as a disabled/no-trigger dry-run task; WindanceLevel8VegaExecute has been removed
+      level8_shutdown_global_disable: C:/Users/wasch/.config/windance/level8/LEVEL8_EXECUTE_DISABLED.flag blocks real execution before SSH or host checks
+      level8_shutdown_log: C:/Users/wasch/logs/level8-shutdown/vega-level8-shutdown.log
+      level8_shutdown_order: AL, REFWeb, TMA-2, TMA-1, Odyssey, SAL, HERALD, then HAL last
+      hermes_desktop: Built and launched 2026-07-27 from C:/Users/wasch/AppData/Local/hermes/hermes-agent/apps/desktop/release/win-unpacked/Hermes.exe. Remote gateway is configured for Herald at http://192.168.36.21:9120 using Herald Dashboard authentication; it requires the existing Herald Dashboard sign-in and must not weaken or bypass that protection.
+      cua_driver: Installed and validated 2026-07-27 in HAL\\wasch interactive desktop session 1. CUA Driver v0.12.6 runs as the cua-driver-serve interactive-logon task; Hermes doctor passed UIAutomation and Windows Graphics Capture checks.
+      router_wan_metrics: As of 2026-08-26, WindanceHALMetricsBridge reads aggregate ASUS RT-AX3000 WAN counters through LAN-only, key-only SSH and posts download/upload Mbps every 10 seconds to SAL Node-RED. It is read-only; the bridge source is hal-metrics-bridge/hal_metrics_bridge.py.
+
+  AL:
+    platform: Dell Ubuntu
+    ip: 192.168.36.20
+    role: Web-based services and Syncthing controller
+    services:
+      - Open WebUI
+      - Syncthing
+    access:
+      ssh: AL
+      auth: dedicated homelab SSH key
+    notes:
+      shutdown_authority: sudo /usr/sbin/shutdown and sudo /usr/bin/systemctl are available non-interactively for graceful shutdown workflows
+
+  SAL:
+    platform: Mac mini macOS
+    ip: 192.168.36.22
+    role: Node-RED and Cloudflare connection
+    services:
+      - Node-RED
+      - Cloudflared
+    access:
+      ssh: SAL
+      auth: dedicated homelab SSH key
+    notes:
+      node_red_version: Node-RED 5.0.4 deployed from SAL user-owned runtime on 2026-08-04; existing flows/settings were backed up before the launcher change
+      shutdown_authority: sudo /sbin/shutdown is available non-interactively for graceful shutdown workflows
+      cloudflared_status: Homebrew cloudflared upgraded on 2026-07-17 from 2026.5.0 to 2026.7.2 and root LaunchDaemon com.cloudflare.cloudflared restarted successfully
+      hal_emergency_access: As of 2026-07-26, SAL can reach HAL through the verified SAL -> HERALD -> HAL key-only SSH path using ~/bin/windance-hal. Direct SAL -> HAL access remains pending a one-time Windows administrator-key installation when a visible UAC prompt can be approved.
+      router_wan_dashboard: As of 2026-08-26, the Operations dashboard contains a Network Traffic group with whole-network WAN Download and WAN Upload gauges from HAL's read-only ASUS counter bridge. Flow backup is stored beside flows.json as flows.json.before-router-wan-gauge-20260826-214045.bak.
+
+  HERALD:
+    platform: iMac 2019 Intel macOS Tahoe
+    ip: 192.168.36.21
+    role: General Manager / main assistant point of contact, memory node, Hermes dashboard, and assistant harness
+    identity:
+      apple_id: wdf.herald@icloud.com
+    services:
+      - Hermes Dashboard on port 9120
+      - Herald bridge / OpenAI-compatible Ollama shim on port 8790
+      - Herald Agent Harness on port 8791
+      - Windance scheduled email checker via launchd
+      - Windance keep-awake launch agent
+      - Odoo SaaS connector scaffold in Agent Harness
+      - Uses HAL Ollama at http://192.168.36.10:11434
+      - Default routine chat model gemma4:latest via Herald bridge to HAL Ollama
+      - Google Workspace MCP integration
+    access:
+      ssh: HERALD
+      user: herald
+      auth: dedicated homelab SSH key
+    notes:
+      shutdown_authority: sudo /sbin/shutdown is available non-interactively for graceful shutdown workflows
+      hermes_agent_version: Hermes Agent v0.20.0 (2026.8.3), synchronized with upstream on 2026-08-04
+      nightly_core_maintenance: Local-first Forge maintenance detector runs nightly at 1:30 AM Mountain through com.windance.nightly-core-maintenance. It is silent when current; a newly detected update creates one durable Forge task requiring a sanitized GitHub backup push before upgrade and verification. Forge blockers automatically escalate to Vega.
+      hermes_local_skill_windance_libreoffice: Installed 2026-07-27 at /Users/herald/.hermes/skills/windance-libreoffice; guides safe document work through HAL LibreOffice 25.8.7.2 via existing key-only HERALD-to-HAL SSH. The catalog community LibreOffice package was not installed because its required Python package was unavailable.
+      hal_desktop_cua_bridge: Hermes MCP server hal-desktop-cua reaches HAL's interactive CUA Driver over existing key-only Herald-to-HAL SSH; it exposes only 24 selected desktop-inspection/control tools, has no HTTP listener, and was read-only-call tested 2026-07-27. Hermes records MCP actions in its local session/audit logs. A separately forced SSH identity was prepared but requires a one-time Windows administrator-authorized-keys update before it can replace the existing dedicated SSH identity.
+      hermes_dashboard_url_lan: http://192.168.36.21:9120
+      hermes_staff_tasks_page: http://192.168.36.21:9120/staff
+      hermes_staff_tasks_api_proxy: http://192.168.36.21:9120/api/staff/tasks
+      hermes_staff_tasks_page_behavior: /staff is server-rendered from Agent Harness staff_tasks and auto-refreshes every 30 seconds to avoid fragile browser-side API fetch errors
+      herald_direct_chat_public: https://herald.reflectsody.com/chat
+      herald_direct_chat_origin: Hermes dashboard port 9120 serves /chat and proxies /api/herald-direct/message to Agent Harness /message
+      herald_dashboard_front_door: Normal Dashboard /sessions navigation redirects to /chat so William reaches Herald rather than the raw Hermes PTY; explicit Hermes administration is at /hermes-admin or /sessions?admin=1
+      herald_direct_chat_context: Agent Harness includes recent same-channel conversation context and direct last-response recall
+      herald_voice_status_lan: http://192.168.36.21:9120/api/voice/status
+      herald_voice_ask_public: https://herald.reflectsody.com/api/voice/ask
+      herald_walkie_web_public: https://herald.reflectsody.com/walkie
+      herald_walkie_audio_public: https://herald.reflectsody.com/api/voice/walkie
+      herald_walkie_text_public: https://herald.reflectsody.com/api/walkie/text
+      herald_walkie_audio_lan: http://192.168.36.21:8791/voice/walkie
+      herald_walkie_text_lan: http://192.168.36.21:8791/walkie/text
+      herald_walkie_behavior: Web walkie page is protected by Dashboard/Cloudflare login and uses browser microphone plus browser text-to-speech with a selectable/preferred natural local voice; Shortcut walkie endpoint uses the dedicated voice bearer token. All walkie requests now enter Herald first; Herald delegates implementation/repair/build/setup work internally to Vega/Forge and reports the result back through the same conversation. Dashboard-to-harness walkie proxies inject the internal bearer token as of 2026-07-20 after browser walkie calls were blocked by the harness auth guard. As of 2026-07-20 the web button is true tap-to-start/tap-to-send, rejects too-short/empty blobs client-side with visible errors, and Agent Harness normalizes AIFF/CAF/WAV audio to m4a before OpenAI transcription to avoid unsupported-audio failures.
+      herald_bridge_lounge: As of 2026-07-27, say “Herald, open the Bridge Lounge” in Walkie or Chat to enter a persistent conversational-only staff meeting. Address Herald, Vega, Athena, Max, Iris, Ledger, Scout, Archivist, Sentinel, or Forge by name; “all staff” gives a voiced roll call. The Lounge is global for William until “close Bridge Lounge,” and refuses operational work, task creation, approvals, service changes, and external actions. Walkie sequentially speaks structured staff segments with per-agent preferred browser voices and device-local fallbacks.
+      herald_draw_page_public: https://herald.reflectsody.com/draw
+      herald_image_studio_public: https://herald.reflectsody.com/images
+      herald_image_studio_plugin: /Users/herald/.hermes/plugins/herald_image_studio/dashboard
+      herald_image_studio_storage: /Users/herald/Documents/Windance/ImageStudio/images
+      herald_image_studio_behavior: As of 2026-07-21, the protected Hermes Dashboard Image Studio tab creates 2D images and 3D-rendered stills, stores a durable private gallery/job record on Herald, and exports PNG/JPEG/WebP/TIFF with selected 72-300 PPI metadata. Hermes direct image_generate is routed through the user plugin herald-image-provider to the same gallery. Default provider is OpenAI gpt-image-2-low; use higher quality intentionally because it incurs API cost. Actual rotatable 3D mesh/GLB generation is a later local ComfyUI/Hunyuan phase, not represented as ready.
+      herald_image_studio_instructions: /Users/herald/knowledge/HERALD_IMAGE_STUDIO.md
+      herald_memory_graph_public: https://herald.reflectsody.com/memory/graph
+      herald_excalidraw_storage: /Users/herald/Documents/Windance/Excalidraw
+      herald_excalidraw_behavior: Herald can create local .excalidraw JSON diagram files from chat prompts such as "create an Excalidraw diagram of the Windance AI stack"; Dashboard /draw lists and downloads files for import into excalidraw.com or a future self-hosted editor; no paid Excalidraw account required.
+      herald_voice_auth: dedicated bearer token stored on HERALD at /Users/herald/.config/agent-harness/voice-shortcut-token; do not print or commit
+      herald_voice_transcription: OpenAI gpt-4o-mini-transcribe through Agent Harness voice endpoints; Hermes dashboard proxies /api/voice/ask for iPhone Shortcut use and /api/voice/walkie for low-latency walkie use; both default to Herald, who keeps ownership of the conversation and delegates technical work internally. Explicit target=vega remains an admin/technical escape hatch.
+      hermes_config_base_url: http://127.0.0.1:8790/v1
+      agent_harness_health: http://192.168.36.21:8791/health
+      agent_harness_message: http://192.168.36.21:8791/message
+      agent_harness_host_diagnostics: http://192.168.36.21:8791/system/diagnostics
+      agent_harness_diagnostics_scope: read-only macOS host diagnostics; allowlisted commands only; no arbitrary shell, sudo, repair, restart, delete, or data-change authority
+      agent_harness_diagnostics_chat_trigger: phrases like "host diagnostics", "system diag", "macOS status", "diagnose Herald", or "check Herald" return deterministic host diagnostics through /message
+      agent_harness_team: http://192.168.36.21:8791/team
+      agent_harness_path: /Users/herald/services/agent-harness/agent_harness.py
+      agent_harness_memory: /Users/herald/.local/share/agent-harness/harness.db
+      herald_general_manager_bootstrap: /Users/herald/knowledge/HERALD_GENERAL_MANAGER_BOOTSTRAP.md
+      herald_trust_leadership_doctrine: /Users/herald/knowledge/HERALD_TRUST_AND_LEADERSHIP_DOCTRINE.md
+      herald_first_operating_model: As of 2026-08-08, Vega/Codex is William's default user-facing Executive VP and capable operations front door. Max/iMessage, Dashboard Chat, voice, and Walkie route ordinary messages directly to the private Codex App Server bridge on Herald; the old Codex: prefix remains optional compatibility only. Herald Agent Harness remains the local tool, memory, Odoo, Google approval, research, staff-task, and automation layer behind Vega.
+      herald_staff_dispatch_policy: Herald must create real staff_tasks rows for delegated work and must not claim delegated work is complete until a real task result is posted
+      william_profile: /Users/herald/knowledge/WILLIAM_PROFILE.md, approved v1.0; memory pointer user_profile/william_profile_v1_installed
+      agent_harness_ops_ledger: SQLite tables ops_items and ops_events support General Manager status tracking
+      agent_harness_staff_bridge: SQLite table staff_tasks plus /staff/tasks endpoints support real Herald-to-staff work orders; "ask Forge" creates a pending Forge/Codex-worker task instead of role-playing delegation
+      agent_harness_staff_task_parser: Herald/Harold/Max prefixes plus create staff task, ask/tell/have/get staff phrases deterministically create staff_tasks rows; multi-staff create task phrasing creates one row per assignee; department names resolve to responsible agents, e.g. IT/Technology/Engineering -> Forge and Vega, Communications -> Max and Iris, Network -> Sentinel, Business/Odoo/Accounting -> Ledger, Research -> Scout, History/Memory/Archives -> Archivist, QA/Quality/Audit -> Athena, Operations -> Herald
+      staff_runner: /Users/herald/services/staff-runner/staff_task_runner.py polls non-Forge pending staff_tasks every 60 seconds via com.windance.staff-runner LaunchAgent; executes Sentinel, Iris, Ledger, Scout, Archivist, Athena, Max, and Herald bounded tool-backed tasks
+      staff_runner_notifications: completed, blocked, and failed staff task results notify William; tries HERALD local Messages first, then SAL /codex/send-imessage via Max/iMessage
+      staff_runner_logs: /Users/herald/logs/staff-runner/staff-runner.log plus LaunchAgent stdout/stderr in /Users/herald/logs/staff-runner
+      urgent_monitor: /Users/herald/services/urgent-monitor/urgent_monitor.py runs every 30 seconds via com.windance.urgent-monitor LaunchAgent; verifies urgent checks across two monitor cycles before alerting; uses curl-based HTTP probes and ping probes
+      urgent_alert_policy: urgent means immediate attention; SAL host, SAL Node-RED, HERALD Agent Harness, and HAL host page William after repeated verification; important checks such as dashboard/Ollama are logged but do not page by default
+      urgent_alert_paths: tries HERALD local Messages first, then SAL Max/iMessage when appropriate, then Gmail fallback to william@reflectsody.com for urgent alerts when message paths fail or SAL is the failing system
+      urgent_monitor_logs: /Users/herald/logs/urgent-monitor/urgent-monitor.log plus LaunchAgent stdout/stderr in /Users/herald/logs/urgent-monitor
+      level8_shutdown_role: DISABLED; HERALD must refuse Level 8 confirmations while disarmed/dry-run and must not relay execution to Vega/HAL unless the whole Level 8 system is deliberately rebuilt with William's explicit approval
+      level8_shutdown_config: /Users/herald/.config/agent-harness/level8-shutdown.json stores the private confirmation code and Vega handoff metadata; do not print or commit
+      level8_shutdown_handoff: DISABLED; active Herald code returns disabled for Level 8 handoff and contains no active schtasks /Run launch command
+      agent_harness_project_workflow: "create a project" messages deterministically create an ops_items project plus Forge, Athena, and Archivist staff_tasks
+      forge_codex_worker_on_herald: Codex CLI 0.142.5 installed and authenticated on HERALD; com.windance.forge-runner polls staff_tasks every 120 seconds and runs Codex exec in /Users/herald/forge-workspace
+      codex_remote_ssh_ready: As of 2026-07-21, /Users/herald/.zshenv adds ~/.local/bin to zsh PATH so Codex remote SSH startup can find /Users/herald/.local/bin/codex in noninteractive/login-shell contexts
+      vega_task_bridge: As of 2026-07-21, Herald owns the silent Vega/Forge cage-rattle bridge via LaunchAgent /Users/herald/Library/LaunchAgents/com.windance.vega-task-bridge.plist and script /Users/herald/services/vega-task-bridge/vega_task_bridge.py. It polls local staff_tasks every 120 seconds, writes /Users/herald/knowledge/VEGA_TASK_INBOX.md, and sends Max/iMessage notices for new Vega/Forge task events. The older HAL Windows Scheduled Task WindanceVegaTaskBridge is disabled to avoid PowerShell focus-stealing popups.
+      production_scheduler: SAL Node-RED tab "09 - Windance Assistant Reports" is the production scheduler and iMessage sender for training, briefing, and read-only mail reports
+      disabled_unsafe_mail_paths: AL mail-assistant.service is disabled; SAL old "07 - Mail Assistant" tab and /triage/run scheduled injects are disabled; HERALD com.windance.email-check is disabled
+      agent_harness_vector_memory: SQLite table vector_memory with local Ollama nomic-embed-text semantic recall; endpoints /memory/vector, /memory/vector/graph, and /memory/vector/reindex; Dashboard /memory/graph shows a read-only interactive graph of recent vector memories grouped by source type with embedding-similarity links; graph supports zoom in/out/reset, wheel/trackpad zoom, empty-space pan, node drag, filtering, and node details
+      second_brain: HAL maintains the source-backed Production document index at C:/Users/wasch/services/second-brain/data/second_brain.sqlite. WindanceSecondBrainIndex scans permitted text-bearing P:/Business documents every two hours using local nomic-embed-text, excludes backup/archive branches and media, and writes a consistent copy to P:/Business/Networksetup/SecondBrain/second_brain.sqlite. Herald queries it read-only over existing key-only HERALD-to-HAL SSH for natural document/record questions; results retain exact P:/Business citations. Odoo remains the authenticated live read-only system of record for current business data. SyncThing is not involved or modified by this pipeline.
+      agent_harness_remember_bridge: As of 2026-07-20, phrases like "Herald remember this:", "remember this", "save this to memory", and "commit this to memory" write to Agent Harness durable memory, vector-index the memory for recall, and mirror a concise non-secret copy into Hermes native /journey memory at /Users/herald/.hermes/memories/MEMORY.md. Secret-like text is refused.
+      agent_harness_reflection: /reflection/daily creates durable daily_reflection memory and vector-indexes it
+      agent_harness_team_roster: William CEO/master plug; Shawn Executive VP (AI staff reports to William, not Shawn); Herald VP of Operations/General Manager is the single user-facing coordinator; Vega/Codex VP of Technology reports functionally to Herald for technical work; Athena VP Quality Assurance reports to William with veto/no production authority; Sentinel and Forge report functionally to Vega for technical/network work; Max Comms Manager routes through Herald with Iris Gmail/Calendar; Ledger Business Manager, Scout Research Manager, and Archivist Historian support Herald's operating picture
+      herald_first_operating_brief: /Users/herald/knowledge/HERALD_OPERATING_BRIEF.md installed 2026-07-16 and seeded into durable memory
+      agent_harness_main_contact_doctrine: /Users/herald/knowledge/HERALD_MAIN_CONTACT_OPERATING_DOCTRINE.md and durable memory system_identity/herald_main_contact_doctrine_v1
+      agent_harness_trust_doctrine: As of 2026-07-20 Herald has deterministic trust-repair routing; correction/failure/high-stakes/duplicate-contract prompts return the Trust and Leadership Doctrine instead of generic chat or unrelated tool capability routes
+      agent_harness_front_door_task_routing: Practical "check/fix/build/setup/test" and recurring/scheduled-task requests involving hosts, services, Node-RED, network, Gmail, Calendar, Odoo, browser/search, memory, or staff tasks create real staff_tasks instead of falling through to generic chat; Herald must not pretend delegated work is complete until a task result is posted
+      agent_harness_front_door_writing_gate: As of 2026-08-06, explicit writing-transform requests (rewrite, reword, rework, soften, polish, edit, draft, compose, or similar) take precedence over Odoo, SAM-history, Calendar, Gmail, and web keyword routes. The supplied prose is treated as content to revise; Herald uses the local-first model to produce copy and performs no external lookup or change.
+      agent_harness_front_door_calendar_gate: As of 2026-08-06, ordinary requests to add/create/make/schedule a Calendar event, appointment, or meeting are routed to Iris's approval-backed Calendar draft path before the generic Forge implementation planner. Natural language is extracted locally into a proposed event; missing details prompt one concise question, and no event is written until William approves. Voice-friendly explicit phrases such as "approve that calendar event" (only one fresh pending Calendar draft) or "approve the Goose appointment" (name-matched draft) are accepted; a bare "yes" is never used for Calendar approval because it remains reserved for the Gmail cleanup batch.
+      agent_harness_research_package: As of 2026-08-06, explicit "use Agent Reach" requests are routed to a read-only Harness research package instead of being mistaken for a generic Action Gateway request. Brave remains the general web index; Agent Reach adds its locally installed YouTube backend (yt-dlp) and public web reader (Jina Reader). Synthesis uses the configured local-first model. No browser-login, posting, account mutation, paid Exa call, or new external credential is enabled by this package.
+      agent_harness_operational_trace: Disabled for user-facing replies as of 2026-07-24. Route, department, tool, and change evidence remains in the internal audit log, action plans, and staff-task records.
+      agent_harness_action_gateway: As of 2026-07-22, Herald uses a typed plan/execute/verify Action Gateway with 12 registered actions and 10 registered homelab hosts; mutating actions require exact one-time or permanent permission, stale approvals fail closed, and execution evidence is recorded in action_plans/action_steps
+      agent_harness_action_gateway_path: /Users/herald/services/agent-harness/windance_action_gateway.py
+      agent_harness_action_gateway_runbook: /Users/herald/knowledge/HERALD_ACTION_GATEWAY_RUNBOOK.md
+      agent_harness_action_gateway_safety: No arbitrary-shell model tool; SyncThing and Level 8/shutdown/reboot/destructive disk actions are denied by the general gateway
+      agent_harness_action_gateway_hal_access: Herald-to-HAL SSH was verified 2026-07-24 using the dedicated key through Windows OpenSSH administrator authorized_keys; `hostname` returned Hal. Typed Action Gateway operations remain allowlisted and approval-backed where applicable.
+      agent_harness_model_credit_behavior: Ollama gemma4:latest is the configured routine lead; OpenRouter openai/gpt-5.6-terra is the first cloud fallback and Gemini is the second cloud fallback. Credit/quota failures cool the affected cloud provider for one hour and continue down the ordered fallback chain without pretending the failed model answered.
+      agent_harness_registered_nodered_restart: SAL/com.zuzu.nodered restart is typed, exact-target, approval-backed, and independently verified; no permanent permission is currently recorded
+      agent_harness_agent_staffing_policy: William allows scoped helper-agent spawning as needed; spawned agents should have narrow tasks, report back, and remain approval-limited for risky/destructive work
+      agent_harness_launch_agent: ~/Library/LaunchAgents/com.windance.agent-harness.plist
+      agent_harness_probation: true
+      assistant_primary_route: Vega/Codex is the default user-facing assistant; Dashboard /chat, normal /sessions, direct chat, Walkie/voice, and SAL Node-RED iMessage enter Agent Harness port 8791 then immediately route to the private Windance Codex bridge on port 8793. The bridge runs GPT-5.6 Terra with Vega's operating guide, full local execution scope, durable task records, Harness vector-memory mirroring, and read-only Second Brain retrieval. Existing Gmail and Calendar approval controls, the SyncThing no-change guardrail, and disabled Level 8 guardrail remain in force.
+      herald_provider_policy: Agent Harness uses deterministic/local tools first for routine work, then Ollama gemma4:latest as the lead reasoning model, OpenRouter openai/gpt-5.6-terra as the first fallback, and Gemini as the final fallback. Voice transcription remains the only routine OpenAI transcription path; model/provider failures must be surfaced honestly and fail over rather than inventing a result.
+      herald_network_access: Herald SSH aliases tested OK for HAL, AL, SAL, REFWeb, Odyssey, TMA-1, and TMA-2. HAL was verified 2026-07-24 after its Windows OpenSSH administrator authorized_keys installation.
+      nodered_dashboard_monitor: SAL Node-RED monitors HERALD harness health every 3 minutes and shows HERALD in Device Status
+      nodered_dashboard_status_cards: Patched 2026-07-11 so each Device Status card ignores messages for other devices and fetches last-known status from /windance/device-status on page load; browser refresh should show immediate last-known state unless Node-RED itself was just restarted
+      nodered_cpu_monitor: SAL Node-RED monitors HERALD CPU via Agent Harness /system/cpu every 10 seconds and shows gauge in System Metrics
+      nodered_network_report: 7 AM Network Report runs /Users/zuzu/bin/windance_morning_status_report.py on SAL and sends a compact SYSTEM STATUS checklist via Node-RED /codex/send-imessage; live-checks Internet, Cloudflare, hosts, Node-RED, Open WebUI, Ollama, and Gmail Pipeline
+      windance_email_schedule: SAL Node-RED read-only mail report at 7:30 AM, 12:00 PM, 5:00 PM; asks HERALD /message for unread summary and sends via local iMessage
+      windance_youtube_briefing_schedule: SAL LaunchAgent com.windance.youtube-briefing runs /Users/zuzu/bin/windance_youtube_briefing.py at 8:00 AM, 12:00 PM, and 4:00 PM local; sends William an AI/OpenAI-focused YouTube watch report plus latest Yee Yee, Captain Steeeve, and NetworkChuck videos via Node-RED /codex/send-imessage; uses public YouTube RSS/search and only includes AI search results with minute/hour/today ages to respect the under-24-hours rule; user Chrome was not signed into YouTube on 2026-07-19, so personal watch-history tuning is pending until William signs into YouTube in Chrome
+      windance_daily_briefing_schedule: SAL Node-RED daily briefing at 7:15 AM; asks HERALD /briefing and sends via local iMessage; /briefing appends the deterministic numbered Gmail / Inbox Actions report verbatim so the LLM cannot omit the actionable email list
+      windance_morning_news_briefing_schedule: SAL LaunchAgent com.windance.morning-news-briefing runs /Users/zuzu/bin/windance_morning_news_briefing.py every day at 9:00 AM Mountain time; queries Herald/Brave for Frontier AI, social-media marketing, and horse-care news; sends summary plus source-linked details through Node-RED/Max iMessage; empty sections explicitly say no material news found
+      windance_daily_training_schedule: SAL Node-RED training report at 7:00 AM; asks HERALD /training/today and sends the live schedule to Shawn at +16054403400 using the Messages SMS service explicitly; HERALD decodes Odoo schedule cell codes before reporting (last letter is person S Shawn, W William, K Skye, T Teagahn, L Lynda; activity codes R Ride, L Lunge, G Ground Work, D Drive, T Trailride, F Freewalk, MT Mane and Tail; standalone F means Freewalk; cells with a time are treated as lessons with the non-time text as the client/name); SAL Node-RED saves the official dated daily_training_schedule/YYYY_MM_DD memory snapshot at 9:00 PM so same-day Odoo changes are captured before Archivist treats it as history
+      windance_daily_reflection_schedule: 9:30 PM via /Users/herald/services/agent-harness/daily_reflection.py; writes daily_reflection/YYYY_MM_DD durable memory and vector-indexes it
+      windance_email_checker_status: disabled on HERALD as of 2026-07-02; production email reports are SAL-scheduled and read-only
+      keepawake_service: com.windance.keepawake uses caffeinate -s -m -i so Herald can black out the display while staying awake
+      odoo_connector_status: connected read-only to reflectsody-llc Odoo SaaS as william@reflectsody.com
+      odoo_connector_config: /Users/herald/.config/agent-harness/odoo.json
+      odoo_connector_endpoint: http://192.168.36.21:8791/odoo/status
+      agent_harness_primary_model: local Ollama through Herald bridge at http://127.0.0.1:8790/v1 using gemma4:latest for routine Herald conversation and web synthesis; set explicitly in com.windance.agent-harness LaunchAgent on 2026-07-16 to reduce surprise OpenAI API credit burn
+      agent_harness_ollama_route: Agent Harness calls Herald bridge locally for Ollama instead of routing the launchd process directly to HAL; this avoids intermittent launchd "No route to host" failures while keeping HAL Ollama as the actual model backend
+      nodered_vega_message_compatibility: SAL /vega/message remains as a backward-compatible HTTP endpoint but forwards to HERALD Agent Harness /message, not the old Vega orchestrator task service
+      nodered_old_odoo_experiment_status: old SAL Node-RED Odoo experiment disabled and embedded credential removed from that function body; Odoo access should go through Herald Agent Harness
+      openai_status: OpenAI API key exists on HERALD but is reserved for voice transcription and explicit Vega/Codex/technical escalation; no longer the primary routine Herald chat provider as of 2026-07-16
+      gemini_status: configured but not reliable as primary until quota/billing is resolved; gemini-2.5-flash returned free-tier quota exhaustion during 2026-07-16 smoke test
+      brave_search_status: configured and active; BRAVE_SEARCH_API_KEY is set in /Users/herald/.hermes/.env
+      brave_search_endpoint: http://192.168.36.21:8791/search/status
+      brave_llm_context_status: configured and tested; Agent Harness supports /search/context plus Max research/read web/ingest prefixes, auto-routes obvious web intent, and can research+remember into web_research memory
+      browser_automation_status: Hermes browser toolset enabled; browser-browser-use plugin enabled; agent-browser Chromium installed and tested on Herald
+      browser_automation_auth: BROWSER_USE_API_KEY is set in /Users/herald/.hermes/.env
+      google_workspace_status: Gmail full mailbox scope and Calendar events read/write authorized; Iris/Max can read Gmail directly and prepare Gmail write/mutation approvals; no Gmail write executes until William approves
+      gmail_approval_policy: Gmail mark-read, archive, trash, create-draft, and send are approval-backed through Herald Agent Harness; normal numbered-summary cleanup batches use YES/NO approval for the most recent fresh pending batch; actual Gmail send actions require William's short private authorization word, stored/checked by hash only; exception added 2026-07-19: William-created sender rules from numbered summaries may auto-trash future Gmail from that sender without additional approval; stale "Gmail hard read-only" wording was removed on 2026-07-16
+      gmail_numbered_reply_workflow: Gmail reports number actionable messages and store recent number-to-message mappings; William can reply "always delete 2" to save the sender address and silently auto-trash future matches, "notify delete 3" to save the sender address and auto-trash future matches while reporting that it happened, "delete 2,4" for one-time approval-backed trash, "save 3,7", "reply 6", or "draft reply to 4 saying ..." Normal delete/archive/draft batches require YES/NO approval; always-delete and notify-delete sender rules execute immediately and do not require later approval.
+      gmail_sender_rule_sweeper: com.windance.gmail-sender-rule-sweep on HERALD runs every 10 minutes and calls Agent Harness /gmail/sender-rules/sweep to enforce William-created always_delete/notify_delete sender rules between scheduled reports; Gmail trash now removes UNREAD before moving to Trash so deleted messages do not remain in global unread views; notify_delete hits send a compact Max/iMessage notice through SAL Node-RED
+      approval_actions: calendar.create, calendar.delete, gmail.mark_read, gmail.archive, gmail.create_draft, gmail.send, gmail.delete
+      google_workspace_mcp: google-workspace enabled in ~/.hermes/config.yaml
+      google_workspace_credentials: ~/.config/google-workspace on HERALD, copied from AL mail-assistant OAuth setup
+      openai_api_key_status: placeholder on HERALD as of 2026-06-27; install real key before using OpenAI as primary brain
+      public_hostname_pending: hermes.reflectsody.com currently resolves to Odoo, not Herald
+
+  SAM:
+    platform: Raspberry Pi 5 / Raspberry Pi OS
+    ip: 192.168.36.29
+    network: Wi-Fi only; no wired LAN connection
+    former_wired_ip: 192.168.36.230 (not active while SAM is Wi-Fi-only)
+    role: Scheduling server node and 9x16 touch display for daily barn schedule
+    services:
+      - Windance schedule display kiosk
+      - Training/Farrier/Vet completion capture
+      - Archivist commit client
+    access:
+      ssh: SAM-WIFI
+      ssh_legacy_wired: SAM (not currently reachable)
+      user: williamschilling
+      auth: dedicated homelab SSH key
+    hardware:
+      storage: 128GB microSD card mounted as root filesystem; the former 1TB NVMe was intentionally removed to reduce heat
+      display: planned portrait 9x16 touch screen
+    notes:
+      storage_status: Verified 2026-08-15 booted normally from the microSD card with approximately 119GB available device capacity; absence of the NVMe is intentional and is not a fault
+      remote_access_status: SSH via SAM-WIFI is the supported administration path; Raspberry Pi Connect/WayVNC is optional and not required for Windance operations
+      setup_status: SSH key access from HAL and HERALD configured and verified 2026-07-17
+      codex_approval_policy: William granted standing operational authorization on 2026-07-18 for Codex/Vega to use SAM SSH and make requested SAM changes without extra per-node approval; still verify after changes and avoid unrelated risky work
+      os: Raspberry Pi OS / Debian, aarch64
+      python: Python 3.13 available
+      browser: Chromium available for kiosk mode
+      sudo_status: sudo -n true succeeds for williamschilling
+      schedule_app_status: Working v1 installed 2026-07-17 as systemd service sam-schedule.service, bound to 0.0.0.0:8088
+      schedule_app_urls: http://192.168.36.29:8088 over Wi-Fi; admin page at /admin
+      schedule_app_path: /home/williamschilling/services/sam-schedule/sam_schedule.py
+      committed_history: As of 2026-08-01, committed daily Training/Farrier/Vet rows remain in SAM SQLite and are available read-only to Herald through SAM /api/history. Herald recognizes date-ranged historical questions such as “farrier work this week” and “Kiowa’s training for the last week in July.”
+      schedule_app_assets: /home/williamschilling/services/sam-schedule/assets includes horse.png title ornament copied from P:/Business/Windance Farms/Branding/HORSE.png
+      schedule_app_database: /home/williamschilling/.local/share/sam-schedule/sam_schedule.db
+      schedule_app_kiosk: As of 2026-07-21, verified boot-to-kiosk path uses LightDM autologin to rpd-labwc and Labwc user autostart /home/williamschilling/.config/labwc/autostart to launch /home/williamschilling/bin/sam-schedule-kiosk.sh. The launcher waits for http://127.0.0.1:8088/ and opens Chromium in Wayland kiosk mode with dedicated profile /home/williamschilling/.config/chromium-sam-kiosk. Chromium launches with --password-store=basic so desktop keyring auth does not block unattended kiosk startup. Logs are in /home/williamschilling/logs/sam-kiosk/kiosk.log. Old XDG .desktop autostart was moved under /home/williamschilling/.config/autostart/disabled/ to prevent duplicate launches. Reboot verification passed 2026-07-21.
+      schedule_app_tests: Health, wired URL, WiFi URL, Herald/Odoo update, cell complete/undo, manual commit to Archivist memory, trainer admin save/disable, guarded Odoo write dry-run, unfinished-training rollover dry-run, and smaller-screen vertical scrolling tested 2026-07-18
+      schedule_app_scope: local portrait touch UI showing Horse, Training, Farrier, and Vet columns; Training displays the raw Odoo schedule code exactly as entered rather than a decoded label; page uses full screen width with large touch-friendly rows and vertical scrolling on smaller/landscape screens; schedule tables remain opaque white for readability while surrounding page/header uses Windance.farm-inspired royal blue background, white text, purple accent styling, mirrored horse title ornaments, and mm/dd/yyyy display date; Training cells are color-coded by trainer (Shawn blue, William purple, Skye red, Teaghan green, Lynda teal); Update preserves Odoo blank schedule rows so Shawn's visual spacing is retained; Update refreshes live schedule from Herald/Odoo; Commit sends completed cells back to Archivist for dated memory/history; Training/Farrier/Vet cells grey out when tapped; trainer dropdown filters horses by trainer; bottom weather-alert strip displays only when SAM's cached NWS alert check finds a relevant active severe/weather alert for the Custer, SD point
+      schedule_app_odoo_proxy_note: Herald /odoo/search cap raised from 50 to 1000 and now supports offset/order on 2026-07-17 because SAM's full schedule exceeded 50 rows; SAM preserves returned Odoo row order for display rather than relying only on x_studio_sequence
+      schedule_app_architecture: Web app hosted on SAM so it can run locally in Chromium kiosk mode on the barn display and also be reached remotely by William for viewing/adjustments. Admin page remains available only by manually opening /admin; the visible Admin button is removed from the schedule page. Admin page supports adding, editing, disabling, and real deletion of trainers used by the schedule filter/dropdown.
+      schedule_sync_policy: SAM initiates schedule data flow. SAM automatically requests the new daily schedule from Herald/Odoo at 5:00 AM local time. Update button manually pulls latest schedule from Herald/Odoo. Commit button pushes completed Training/Farrier/Vet state back to Archivist. During commit, unfinished training with an Odoo schedule row is recorded in SAM's missed_training ledger and rolled to the next day's Odoo schedule cell only if tomorrow's cell is blank; same-code existing values are treated as already present; different existing values are recorded as conflicts and are not overwritten. Odoo stores only the plain training code; SAM locally renders carried missed training with a yellow/gold standout warning chip on the target day. If the target day already has a different scheduled training code, SAM displays a split Training cell with the normal trainer-colored chip plus the yellow/gold carried-missed chip instead of overwriting Odoo. As of 2026-07-21, split Training cells render those chips side-by-side as equal-width touch targets and only wrap for three or more chips. Carried-missed chips can be marked complete independently. If the day has not been committed, SAM automatically commits at 11:55 PM local time.
+      schedule_daily_reliability: As of 2026-07-27, the 5:00 AM systemd refresh timer was manually executed and verified to fetch 56 current Odoo rows successfully. The kiosk now reloads the live schedule every 60 seconds and when it becomes visible, fixing the stale-date behavior caused by a Chromium page remaining open while the display slept. A separate persistent systemd timer sam-schedule-nightly.timer provides an independent 11:55 PM commit recovery path; it commits only the just-ended day if SAM was offline, never a historical backlog. The primary in-process commit is idempotent, so the two paths cannot create a duplicate memory/history commit.
+      schedule_reports: SAM exposes /api/reports/missed-training?month=YYYY-MM for month-end missed-training reports grouped by trainer using commit-time missed_training records.
+      schedule_cell_toggle_policy: Training/Farrier/Vet cells track completion independently. First tap marks the cell complete and greys it out. Tapping a completed cell again uses a centered touch-friendly in-page confirmation dialog before undoing completion.
+      schedule_weather_alerts: As of 2026-07-21, SAM polls https://api.weather.gov/alerts/active for point 43.7667,-103.5988 every 5 minutes by default, using SAM_WEATHER_ALERT_LAT/LON and SAM_WEATHER_ALERT_POLL_SECONDS as overrides. Results are cached in SQLite table weather_alert_state and exposed at /api/weather-alerts; the schedule page polls SAM locally once per minute and displays a compact red alert strip for relevant thunderstorm, tornado, high wind, hail, winter storm/blizzard, flood, red flag/fire weather, severe, extreme, or moderate-plus urgent alerts.
+      schedule_training_code_parser: Training schedule Odoo cell codes use first letter as trainer except single F; S=Shawn, K=Skye, W=William, L=Lynda, T=Teaghan. Work codes include F=Freewalk, R=Ride, G=Ground Work, D=Drive, Bit=Bit, L=Lunge, T=Trailride. Example KLBit means Skye should Lunge and Bit the horse. Parser also supports legacy activity+trainer codes such as RK, RS, TK, and LS while current Odoo data is migrated.
+      schedule_farrier_vet_source: Farrier/Vet needs come from the Odoo Horses model. Vet flag field x_studio_needs_vet; vet detail field x_studio_vet_needs. Farrier flag field x_studio_needs_farrier; farrier detail field x_studio_farrier_needs.
+
+  Odyssey:
+    platform: TerraMaster D4-424 NAS
+    ip: 192.168.36.31
+    role: Primary backup NAS
+    services:
+      - TerraMaster NOS
+      - Rsync
+    access:
+      ssh: Odyssey
+      user: William
+      auth: dedicated homelab SSH key
+    notes:
+      shutdown_authority: sudo /usr/sbin/shutdown is available non-interactively for graceful shutdown workflows
+
+  TMA-1:
+    platform: TerraMaster D4-210 NAS
+    ip: 192.168.36.131
+    role: Backup of Odyssey
+    services:
+      - TerraMaster NOS
+      - Rsync
+    access:
+      ssh: TMA-1
+      user: William
+      auth: dedicated homelab SSH key
+    notes:
+      shutdown_authority: sudo /sbin/poweroff is available non-interactively for graceful shutdown workflows
+
+  TMA-2:
+    platform: TerraMaster D4-210 NAS
+    ip: 192.168.36.133
+    role: Off-site backup of TMA-1
+    services:
+      - TerraMaster NOS
+      - Rsync
+    access:
+      ssh: TMA-2
+      user: William
+      auth: dedicated homelab SSH key
+    notes:
+      shutdown_authority: sudo /sbin/poweroff is available non-interactively for graceful shutdown workflows
+
+  REFWeb:
+    platform: Raspberry Pi 5
+    ip: 64.251.177.195
+    role: Serves horse images for windance.farm
+    services:
+      - Apache
+    access:
+      ssh: REFWeb
+      user: waschill
+      auth: dedicated homelab SSH key
+    notes:
+      os: Raspbian / Raspberry Pi OS
+      shutdown_authority: sudo systemctl is available non-interactively for graceful shutdown workflows
