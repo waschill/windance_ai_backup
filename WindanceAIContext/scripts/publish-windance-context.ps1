@@ -30,7 +30,11 @@ if ($PushGit) {
         Write-Host 'No Git changes to push.'
     } else {
         git -C $repo commit -m "Update centralized Windance operating context"
+        if ($LASTEXITCODE -ne 0) { throw 'Git commit failed.' }
+        git -C $repo pull --rebase origin main
+        if ($LASTEXITCODE -ne 0) { throw 'Git pull/rebase failed; mirrors were updated but GitHub was not.' }
         git -C $repo push origin HEAD
+        if ($LASTEXITCODE -ne 0) { throw 'Git push failed; do not treat the GitHub backup as current.' }
     }
 }
 
