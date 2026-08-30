@@ -45,3 +45,25 @@ Example: `KLBit` = Skye: Lunge + Bit.
 systemd service:
 
 `/etc/systemd/system/windance-sam-schedule.service`
+
+## Odoo lesson-package foundation
+
+As of 2026-08-29, the production Odoo Studio `Lesson Tracker` app has a
+`Lesson Bundles` menu backed by custom model `x_lesons`. The bundle form now
+includes Student, Package Product, Source Invoice, Source Invoice Line, Sales
+Order, Lessons Purchased, Lessons Used, and Lessons Remaining. The existing
+service products `Lessons 10-Pack` and `Lessons 4 Pack` are configured with
+`Creates Lesson Tracker` enabled and 10 / 4 lessons included respectively.
+
+Odoo automation `Create Lesson Bundle when Invoice Enters In Payment` is
+active on customer invoices. It watches Payment Status and invoice Type, then
+creates one bundle for each qualifying lesson-package invoice line when the
+invoice enters `In Payment`. The action links the exact invoice line and checks
+for that link before creation, making retries duplicate-safe. Historical
+invoices were not backfilled because prior lesson usage must be reconciled
+before assigning opening balances.
+
+The bundle form exposes its existing one-to-many child table as the future
+Lesson Usage ledger. The next implementation phase is to add SAM event fields
+to that child model and create the narrowly guarded Herald/SAM posting route;
+SAM does not yet decrement Odoo lesson balances.
