@@ -63,8 +63,10 @@ def needs_update(name: str, item: dict) -> bool:
 
 
 def make_backup() -> dict:
-    cmd = "ssh -o BatchMode=yes HAL powershell.exe -NoProfile -ExecutionPolicy Bypass -File " + BACKUP + " -Reason weekly-managed-software"
-    return run(cmd, 900)
+    # HAL creates the restore point locally at 01:00. Herald only validates it,
+    # avoiding a fragile HERALD -> HAL -> HERALD recursive SSH path.
+    cmd = "ssh -o BatchMode=yes HAL powershell.exe -NoProfile -ExecutionPolicy Bypass -File " + BACKUP + " -ValidateOnly"
+    return run(cmd, 120)
 
 
 def apply_updates(found: dict) -> dict:

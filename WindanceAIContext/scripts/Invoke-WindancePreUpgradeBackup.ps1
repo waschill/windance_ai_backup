@@ -1,5 +1,6 @@
 param(
-    [string]$Reason = "scheduled-managed-software-upgrade"
+    [string]$Reason = "scheduled-managed-software-upgrade",
+    [switch]$ValidateOnly
 )
 
 $ErrorActionPreference = "Stop"
@@ -10,6 +11,18 @@ $snapshot = Join-Path $repo "current-control-plane\$stamp-pre-managed-upgrade"
 
 git -C $repo pull --ff-only
 if ($LASTEXITCODE -ne 0) { throw "Backup repository could not be fast-forwarded." }
+if ($ValidateOnly) {
+    $head = (git -C $repo rev-parse HEAD).Trim()
+    $remote = (git -C $repo ls-remote origin refs/heads/main).Split("`t")[0]
+    $subject = (git -C $repo log -1 --format=%s).Trim()
+    $ageSeconds = [int](git -C $repo log -1 --format=%ct)
+    $nowSeconds = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
+    if ($head -ne $remote) { throw "Latest local backup commit is not confirmed on GitHub." }
+    if ($subject -notlike "backup: pre-upgrade restore point*") { throw "Latest GitHub commit is not a restore point." }
+    if (($nowSeconds - $ageSeconds) -gt 7200) { throw "Latest GitHub restore point is older than two hours." }
+    Write-Output $head
+    exit 0
+}
 if (git -C $repo status --porcelain) { throw "Backup repository is not clean before snapshot." }
 
 New-Item -ItemType Directory -Force -Path (Join-Path $snapshot "hermes") | Out-Null
