@@ -33,6 +33,8 @@ hosts:
       auth: dedicated homelab SSH key
     notes:
       shutdown_authority: sudo /usr/sbin/shutdown and sudo /usr/bin/systemctl are available non-interactively for graceful shutdown workflows
+      package_maintenance_authority: As of 2026-09-01, waschilladmin may run only /usr/local/sbin/windance-package-maintenance as root without a password. The root-owned no-argument wrapper performs apt-get update, upgrade, and full-upgrade; it does not autoremove, edit repositories, accept arbitrary commands, or touch Syncthing configuration/data.
+      software_maintenance_state: 65 Ubuntu/Docker/security packages upgraded on 2026-09-01 after GitHub restore point d7e34f3. Open WebUI, Portainer, Syncthing, Docker, and SSH passed live checks afterward. Two Ubuntu phased updates remained intentionally deferred and a routine reboot remained pending for the new kernel.
 
   SAL:
     platform: Mac mini macOS

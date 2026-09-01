@@ -1,0 +1,6 @@
+[Unit]
+Description=Install narrow Windance unattended package-maintenance permission
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh /tmp/windance-install-maintenance-permission.sh

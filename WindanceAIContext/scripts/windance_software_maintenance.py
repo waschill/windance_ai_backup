@@ -86,7 +86,7 @@ def apply_updates(found: dict) -> dict:
     if "sam-apt" in found:
         results["sam-apt"] = run("ssh SAM-WIFI 'sudo -n apt-get update && sudo -n DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'", 3600)
     if "al-apt" in found:
-        results["al-apt"] = run("ssh AL 'sudo -n apt-get update && sudo -n DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'", 3600)
+        results["al-apt"] = run("ssh AL 'sudo -n /usr/local/sbin/windance-package-maintenance'", 3600)
     if "al-containers" in found:
         # SyncThing software may update, but its exact mounts (configuration/data
         # bindings) must remain unchanged across the container replacement.
