@@ -26,7 +26,8 @@ scp -q -r "$source\*" "HERALD:$remote/"
 if ($PushGit) {
     $repo = Split-Path -Parent $source
     git -C $repo add WindanceAIContext
-    if (git -C $repo diff --cached --quiet) {
+    git -C $repo diff --cached --quiet
+    if ($LASTEXITCODE -eq 0) {
         Write-Host 'No Git changes to push.'
     } else {
         git -C $repo commit -m "Update centralized Windance operating context"
