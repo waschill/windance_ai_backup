@@ -101,8 +101,11 @@ def apply_updates(found: dict) -> dict:
             for line in table[table.index(header) + 2:]:
                 package_id = line[id_start:version_start].strip() if len(line) > version_start else ""
                 if "." in package_id: package_ids.append(package_id)
-        commands = [f'winget upgrade --id {pid} --exact --silent --accept-package-agreements --accept-source-agreements --disable-interactivity' for pid in package_ids]
-        results["hal-winget"] = run("ssh HAL \"" + " & ".join(commands) + "\"", 7200) if commands else {"code": 0, "output": "No eligible Winget packages."}
+        package_results = []
+        for package_id in package_ids:
+            result = run(f"ssh HAL 'winget upgrade --id {package_id} --exact --silent --accept-package-agreements --accept-source-agreements --disable-interactivity'", 600)
+            package_results.append(f"[{package_id}] EXIT {result['code']}\n{result['output']}")
+        results["hal-winget"] = {"code": max([0] + [1 for text in package_results if "EXIT 0" not in text]), "output": "\n\n".join(package_results) or "No eligible Winget packages."}
     if "hal-ollama-models" in found:
         names = []
         model_lines = found["hal-ollama-models"]["output"].splitlines()
@@ -114,8 +117,8 @@ def apply_updates(found: dict) -> dict:
         results["hal-ollama-models"] = run("ssh HAL \"" + " & ".join(commands) + "\"", 7200) if commands else {"code": 0, "output": "No Ollama models installed."}
     for target in ("herald-macos", "sal-macos"):
         if target in found:
-            host = "" if target.startswith("herald") else "ssh SAL "
-            results[target] = run(host + "'sudo -n softwareupdate -ia'", 7200)
+            command = "sudo -n softwareupdate -ia" if target.startswith("herald") else "ssh SAL 'sudo -n softwareupdate -ia'"
+            results[target] = run(command, 7200)
     return results
 
 
