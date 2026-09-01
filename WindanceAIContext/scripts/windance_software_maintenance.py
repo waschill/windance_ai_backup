@@ -17,7 +17,7 @@ import sys
 HOME = Path.home()
 REPORT = HOME / "knowledge" / "WINDANCE_SOFTWARE_MAINTENANCE.md"
 STATE = HOME / ".local" / "share" / "agent-harness" / "software-maintenance.json"
-BACKUP = r"C:\Users\wasch\Documents\Codex\2026-06-19\i-need-you-to-go-through\windance_ai_backup_repo\WindanceAIContext\scripts\Invoke-WindancePreUpgradeBackup.ps1"
+BACKUP = "C:/Users/wasch/Documents/Codex/2026-06-19/i-need-you-to-go-through/windance_ai_backup_repo/WindanceAIContext/scripts/Invoke-WindancePreUpgradeBackup.ps1"
 
 
 def run(command: str, timeout: int = 300) -> dict:
