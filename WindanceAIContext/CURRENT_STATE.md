@@ -51,3 +51,4 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - Explain uncertainty, verify high-cost/high-risk conclusions, and report observable evidence.
 - William prefers concise natural-language results and does not want “How I worked” appended to routine messages.
 - Approval workflows must be voice/driving friendly and never expose secret approval material in prompts or logs.
+- Software maintenance is backup-gated and SOP-aware: routine compatible upgrades apply automatically; only fundamental operating-procedure changes require William's pre-upgrade approval.

@@ -14,13 +14,16 @@ if ($LASTEXITCODE -ne 0) { throw "Backup repository could not be fast-forwarded.
 if ($ValidateOnly) {
     $head = (git -C $repo rev-parse HEAD).Trim()
     $remote = (git -C $repo ls-remote origin refs/heads/main).Split("`t")[0]
-    $subject = (git -C $repo log -1 --format=%s).Trim()
-    $ageSeconds = [int](git -C $repo log -1 --format=%ct)
+    $backupRecord = (git -C $repo log -1 --format="%H|%ct" --grep="^backup: pre-upgrade restore point").Trim().Split("|")
+    if ($backupRecord.Count -ne 2) { throw "No GitHub restore-point commit was found." }
+    $backupHash = $backupRecord[0]
+    $ageSeconds = [int64]$backupRecord[1]
     $nowSeconds = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
     if ($head -ne $remote) { throw "Latest local backup commit is not confirmed on GitHub." }
-    if ($subject -notlike "backup: pre-upgrade restore point*") { throw "Latest GitHub commit is not a restore point." }
+    git -C $repo merge-base --is-ancestor $backupHash $remote
+    if ($LASTEXITCODE -ne 0) { throw "Restore-point commit is not present in GitHub main history." }
     if (($nowSeconds - $ageSeconds) -gt 7200) { throw "Latest GitHub restore point is older than two hours." }
-    Write-Output $head
+    Write-Output $backupHash
     exit 0
 }
 if (git -C $repo status --porcelain) { throw "Backup repository is not clean before snapshot." }

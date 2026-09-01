@@ -47,7 +47,7 @@ hosts:
     notes:
       node_red_version: Node-RED 5.0.4 deployed from SAL user-owned runtime on 2026-08-04; existing flows/settings were backed up before the launcher change
       shutdown_authority: sudo /sbin/shutdown is available non-interactively for graceful shutdown workflows
-      cloudflared_status: Homebrew cloudflared upgraded on 2026-07-17 from 2026.5.0 to 2026.7.2 and root LaunchDaemon com.cloudflare.cloudflared restarted successfully
+      cloudflared_status: Homebrew cloudflared upgraded on 2026-09-01 to 2026.8.3 as part of the backup-gated managed-software cycle
       hal_emergency_access: As of 2026-07-26, SAL can reach HAL through the verified SAL -> HERALD -> HAL key-only SSH path using ~/bin/windance-hal. Direct SAL -> HAL access remains pending a one-time Windows administrator-key installation when a visible UAC prompt can be approved.
       router_wan_dashboard: As of 2026-08-26, the Operations dashboard contains a Network Traffic group with whole-network WAN Download and WAN Upload gauges from HAL's read-only ASUS counter bridge. Flow backup is stored beside flows.json as flows.json.before-router-wan-gauge-20260826-214045.bak.
 
@@ -73,8 +73,8 @@ hosts:
       auth: dedicated homelab SSH key
     notes:
       shutdown_authority: sudo /sbin/shutdown is available non-interactively for graceful shutdown workflows
-      hermes_agent_version: Hermes Agent v0.20.0 (2026.8.3), synchronized with upstream on 2026-08-04
-      nightly_core_maintenance: Local-first Forge maintenance detector runs nightly at 1:30 AM Mountain through com.windance.nightly-core-maintenance. It is silent when current; a newly detected update creates one durable Forge task requiring a sanitized GitHub backup push before upgrade and verification. Forge blockers automatically escalate to Vega.
+      hermes_agent_version: Hermes Agent v0.21.0 (2026.8.31), upgraded on 2026-09-01 after GitHub restore point d7e34f3; dashboard and Agent Harness health endpoints passed after upgrade
+      managed_software_maintenance: HAL scheduled task WindancePreUpgradeGitHubBackup creates and confirms the append-only sanitized GitHub restore point Mondays at 1:00 AM Mountain. Herald LaunchAgent com.windance.software-maintenance runs Mondays at 1:30 AM, audits managed software across HAL/HERALD/SAL/AL/SAM, automatically applies compatible upgrades, records failures as blockers, and stops for William's approval only when implementation analysis finds a fundamental SOP change. Legacy com.windance.nightly-core-maintenance and com.windance.weekly-stack-maintenance jobs are unloaded.
       hermes_local_skill_windance_libreoffice: Installed 2026-07-27 at /Users/herald/.hermes/skills/windance-libreoffice; guides safe document work through HAL LibreOffice 25.8.7.2 via existing key-only HERALD-to-HAL SSH. The catalog community LibreOffice package was not installed because its required Python package was unavailable.
       hal_desktop_cua_bridge: Hermes MCP server hal-desktop-cua reaches HAL's interactive CUA Driver over existing key-only Herald-to-HAL SSH; it exposes only 24 selected desktop-inspection/control tools, has no HTTP listener, and was read-only-call tested 2026-07-27. Hermes records MCP actions in its local session/audit logs. A separately forced SSH identity was prepared but requires a one-time Windows administrator-authorized-keys update before it can replace the existing dedicated SSH identity.
       hermes_dashboard_url_lan: http://192.168.36.21:9120

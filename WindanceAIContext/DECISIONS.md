@@ -27,6 +27,9 @@
 ## Engineering culture
 
 - Prefer solutions that scale, are maintainable, and are dependable.
+- Managed software upgrades proceed without approval when release notes and implementation analysis show that existing SOPs, capabilities, authorization boundaries, workflows, data meaning, and routing remain intact. A fundamental operating-procedure change must be explained to William and approved before the upgrade. Semantic version numbers alone do not decide approval.
+- Every managed upgrade requires a sanitized, dated, GitHub-confirmed restore point first. Backup history is append-only: never force-push, rewrite, prune, or delete it.
+- SyncThing software may be upgraded, but its schedules, folders, device configuration, database, bind mounts, synchronized data, and operational behavior must remain unchanged during routine maintenance; secrets and synchronized data never belong in GitHub.
 - When the cost of error is high, slow down and verify.
 - Never convert tool errors into prose that implies success.
 - Command issued is not result verified.

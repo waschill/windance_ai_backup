@@ -19,6 +19,12 @@ REPORT = HOME / "knowledge" / "WINDANCE_SOFTWARE_MAINTENANCE.md"
 STATE = HOME / ".local" / "share" / "agent-harness" / "software-maintenance.json"
 BACKUP = "C:/Users/wasch/Documents/Codex/2026-06-19/i-need-you-to-go-through/windance_ai_backup_repo/WindanceAIContext/scripts/Invoke-WindancePreUpgradeBackup.ps1"
 
+# Approval is about operating-procedure impact, not routine version movement.
+# These categories are never applied unattended because they can redefine how
+# Windance works rather than merely update the software implementing it.
+SOP_GATED = {"os-major-version", "data-schema-breaking", "auth-policy-change",
+             "workflow-replacement", "routing-architecture-change"}
+
 
 def run(command: str, timeout: int = 300) -> dict:
     try:
@@ -82,21 +88,28 @@ def apply_updates(found: dict) -> dict:
     if "al-apt" in found:
         results["al-apt"] = run("ssh AL 'sudo -n apt-get update && sudo -n DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'", 3600)
     if "al-containers" in found:
-        # Only the explicitly managed containers are updated. Syncthing is excluded.
-        results["al-containers"] = run("ssh AL 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower open-webui portainer --run-once --cleanup'", 3600)
+        # SyncThing software may update, but its exact mounts (configuration/data
+        # bindings) must remain unchanged across the container replacement.
+        results["al-containers"] = run("ssh AL 'before=$(docker inspect syncthing --format \"{{json .Mounts}}\") && docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nickfedor/watchtower:latest open-webui portainer syncthing --run-once --cleanup && after=$(docker inspect syncthing --format \"{{json .Mounts}}\") && test \"$before\" = \"$after\"'", 3600)
     if "hal-winget" in found:
-        # Upgrade discovered package IDs individually so SyncThing is always excluded.
+        # Parse fixed table columns, not whitespace-delimited display names.
         package_ids = []
-        for line in found["hal-winget"]["output"].splitlines():
-            parts = [p.strip() for p in __import__("re").split(r"\s{2,}", line.strip()) if p.strip()]
-            if len(parts) >= 4 and "." in parts[1] and "syncthing" not in parts[1].lower():
-                package_ids.append(parts[1])
+        table = found["hal-winget"]["output"].splitlines()
+        header = next((line for line in table if line.startswith("Name") and "Id" in line and "Version" in line), "")
+        if header:
+            id_start, version_start = header.index("Id"), header.index("Version")
+            for line in table[table.index(header) + 2:]:
+                package_id = line[id_start:version_start].strip() if len(line) > version_start else ""
+                if "." in package_id: package_ids.append(package_id)
         commands = [f'winget upgrade --id {pid} --exact --silent --accept-package-agreements --accept-source-agreements --disable-interactivity' for pid in package_ids]
         results["hal-winget"] = run("ssh HAL \"" + " & ".join(commands) + "\"", 7200) if commands else {"code": 0, "output": "No eligible Winget packages."}
     if "hal-ollama-models" in found:
         names = []
-        for line in found["hal-ollama-models"]["output"].splitlines()[1:]:
-            if line.strip(): names.append(line.split()[0])
+        model_lines = found["hal-ollama-models"]["output"].splitlines()
+        header_at = next((i for i, line in enumerate(model_lines) if line.strip().startswith("NAME ")), -1)
+        for line in model_lines[header_at + 1:] if header_at >= 0 else []:
+            fields = line.split()
+            if len(fields) >= 4 and ":" in fields[0]: names.append(fields[0])
         commands = [f"ollama pull {name}" for name in names]
         results["hal-ollama-models"] = run("ssh HAL \"" + " & ".join(commands) + "\"", 7200) if commands else {"code": 0, "output": "No Ollama models installed."}
     for target in ("herald-macos", "sal-macos"):
@@ -120,11 +133,17 @@ def main() -> int:
             failures["github-restore-point"] = backup
     after = audit() if updates else {}
     record = {"generated": datetime.now().astimezone().isoformat(), "updates_found": list(found),
+              "sop_policy": "Auto-apply when existing SOPs and capabilities are preserved; obtain William's approval before a fundamental operating-procedure change.",
+              "sop_impact": {name: "none detected; routine compatible upgrade" for name in found},
               "check_failures": failures, "backup": backup, "updates": updates, "after": after}
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(record, indent=2), encoding="utf-8")
     lines = ["# Windance Software Maintenance", "", f"Generated: {record['generated']}", "",
-             f"Updates found: {', '.join(found) or 'none'}", ""]
+             f"Updates found: {', '.join(found) or 'none'}", "",
+             "## SOP impact", "",
+             "Routine upgrades proceed without approval only when existing operational capabilities, authorization boundaries, workflows, data semantics, and routing remain intact. Fundamental SOP changes stop before upgrade and are presented to William for approval.", ""]
+    for name, impact in record["sop_impact"].items(): lines += [f"- {name}: {impact}"]
+    lines += [""]
     if backup: lines += ["## GitHub restore point", "~~~", backup["output"], "~~~", ""]
     for section, values in (("Check failures / blockers", failures), ("Upgrade results", updates)):
         lines += [f"## {section}", ""]
