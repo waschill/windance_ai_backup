@@ -1,0 +1,1 @@
+zuzu ALL=(root) NOPASSWD: /usr/local/sbin/windance-macos-maintenance install-all, /usr/local/sbin/windance-macos-maintenance reboot

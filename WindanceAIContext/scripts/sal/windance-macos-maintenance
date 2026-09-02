@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+case "${1-}" in
+  install-all)
+    test "$#" -eq 1
+    exec /usr/sbin/softwareupdate --install --all --agree-to-license
+    ;;
+  reboot)
+    test "$#" -eq 1
+    exec /sbin/shutdown -r now
+    ;;
+  *)
+    echo "usage: windance-macos-maintenance {install-all|reboot}" >&2
+    exit 64
+    ;;
+esac
