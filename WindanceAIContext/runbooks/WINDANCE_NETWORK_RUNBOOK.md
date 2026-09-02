@@ -303,6 +303,23 @@ SAL compatibility note:
 - `/vega/message` on SAL is retained for old callers, but it forwards to HERALD `/message`.
 - Do not point new ordinary interaction paths at the old Vega orchestrator service.
 - The old SAL Node-RED Odoo experiment is disabled; Odoo access belongs in Herald Agent Harness.
+- On 2026-09-01, a Homebrew Node replacement plus a SAL LAN outage left the
+  launchd-hosted Node-RED process unable to read `~/Library/Messages/chat.db`
+  and unable to reach LAN peers, although the same operations succeeded through
+  SAL's authorized SSH session. The Node-RED iMessage polling inject
+  `2a94bc23a3894b2d` is disabled to prevent duplicate replies.
+- The active inbound bridge is `/Users/zuzu/bin/imessage_herald_bridge.py`.
+  It polls only approved inbound senders, posts to Herald `/message`, calls the
+  existing safe iMessage sender, and advances the durable cursor at
+  `~/.local/state/windance/imessage-herald-rowid` only after successful reply
+  delivery. Its operational log omits message bodies.
+- The worker was started through SAL's privacy-authorized SSH session and is
+  recorded in `~/.imessage-herald-bridge.pid`. It survives SSH disconnects but
+  not a SAL reboot. Before a planned reboot, grant Full Disk Access to the
+  Python executable used by the worker and install it as a LaunchAgent, or
+  explicitly re-establish it through an authorized session after boot.
+- Git restore point `318ee97` contains the secret-sanitized pre-repair flow
+  and bridge components. SyncThing configuration and schedules were not changed.
 
 Herald network access status:
 
