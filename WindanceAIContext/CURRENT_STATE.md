@@ -47,7 +47,10 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 
 ## Odoo lesson bundles
 
-- The Daily Show Fee product template (Odoo ID 557; variant ID 567) is not a lesson package. As verified 2026-09-02, `Lessons Included` is 0 and `Creates Lesson Tracker` is disabled. The earlier erroneous eight-lesson tracker record from invoice 2026/000119 was not deleted by this correction.
+- As verified 2026-09-02, the only products configured to create lesson bundles are Lessons 4 Pack (4 lessons) and Lessons 10-Pack (10 lessons).
+- A full active-and-archived product audit found and corrected accidental lesson settings on Breeding Charge - Silver Down, Breeding Charge -Silver, Show Fees, and Daily Show Fee. Health:Excede was checked and was already correctly set to 0/disabled.
+- The root cause was company-wide Odoo Studio defaults of 4 lessons and `Creates Lesson Tracker = true` on all newly created products. Those defaults are now 0 and false, so future non-lesson products do not inherit lesson behavior.
+- The earlier erroneous eight-lesson tracker record from invoice 2026/000119 was removed manually by William after the Daily Show Fee correction.
 
 ## Memory
 
