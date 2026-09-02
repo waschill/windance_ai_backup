@@ -473,9 +473,9 @@ As of 2026-07-16, Herald/Iris/Max use Google Workspace with full Gmail mailbox s
 
 Daily briefing note:
 
-- SAL sends the daily briefing at 7:15 AM via Herald `/briefing`.
+- SAL sends the daily briefing at 7:20 AM via Herald `/briefing`; the current-day Training Schedule goes to Shawn at 7:10 AM, and the prior-day Training Completion Check runs at 7:35 AM.
 - `/briefing` must append the deterministic numbered Gmail / Inbox Actions report verbatim. Do not rely on the LLM to summarize or include email, because it can omit the actionable list.
-- The standalone 7:30 AM mail report may still run, but the first morning briefing should already contain the actionable email numbers.
+- Standalone read-only mail reviews run at 12:10 PM and 5:00 PM; the first morning briefing already contains the actionable email numbers.
 - Outbound SAL reports use `com.windance.imessage-outbox`, a signed Python.app LaunchAgent. Producers enqueue a request through `/Users/zuzu/bin/send_imessage_payload.py` and must receive the daemon's result before reporting success. A Node-RED HTTP 200 without an outbox receipt and a new Messages row is not delivery evidence.
 - After Node.js, macOS, Command Line Tools, or Messages changes, run one delivery canary and verify all three layers: outbox `delivered` receipt, a new outbound row in SAL's Messages database, and the intended recipient's confirmation when practical. The 2026-09-02 incident was caused by macOS denying AppleEvents to the upgraded Node 26.8.1 binary while the old Node 26.0.0 grant remained stale.
 
