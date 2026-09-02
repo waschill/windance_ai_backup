@@ -45,6 +45,10 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - Every numbered Shawn mail command resolves against her most recently generated report without requiring the words `email` or `message`: `Always Delete`, `Notify Delete`, `Delete`, `Archive`, `Save`/`Keep`, `Mark Read`, and `Reply`/`Draft Reply`. Mutations are still staged until Shawn replies `YES`. Always Delete and Notify Delete create durable sender rules; Notify Delete matches are identified in the next report, while Always Delete matches are silent.
 - Node-RED 5 HTTP Request nodes must not have a fixed URL when routing by `msg.url`. The shared Herald/Shawn request node is deliberately configured with a blank URL, while the scheduled Shawn report node is fixed to `http://192.168.36.21:8795/report`.
 
+## Odoo lesson bundles
+
+- The Daily Show Fee product template (Odoo ID 557; variant ID 567) is not a lesson package. As verified 2026-09-02, `Lessons Included` is 0 and `Creates Lesson Tracker` is disabled. The earlier erroneous eight-lesson tracker record from invoice 2026/000119 was not deleted by this correction.
+
 ## Memory
 
 - Curated operating context: this package.
