@@ -48,6 +48,8 @@ hosts:
       auth: dedicated homelab SSH key
     notes:
       node_red_version: Node-RED 5.0.4 deployed from SAL user-owned runtime on 2026-08-04; existing flows/settings were backed up before the launcher change
+      macos_version: macOS 26.6.2 build 25G83, installed 2026-09-01 after GitHub restore point 16c794a
+      imessage_outbox: As of 2026-09-02, com.windance.imessage-outbox runs under the signed Command Line Tools Python.app and is the single owner of outbound Messages delivery. Node-RED and scheduled scripts enqueue requests and wait for a real delivery receipt. This replaced direct Node-to-Messages automation after macOS denied AppleEvents to the upgraded Node 26.8.1 binary. Node-RED HTTP success now follows the sender receipt instead of acknowledging before delivery.
       shutdown_authority: sudo /sbin/shutdown is available non-interactively for graceful shutdown workflows
       cloudflared_status: Homebrew cloudflared upgraded on 2026-09-01 to 2026.8.3 as part of the backup-gated managed-software cycle
       hal_emergency_access: As of 2026-07-26, SAL can reach HAL through the verified SAL -> HERALD -> HAL key-only SSH path using ~/bin/windance-hal. Direct SAL -> HAL access remains pending a one-time Windows administrator-key installation when a visible UAC prompt can be approved.
