@@ -1,0 +1,5 @@
+SAL iMessage bridge restore point before production repair
+Captured: 2026-09-01 21:54 America/Denver
+Live flow SHA256: 628dbb2369a98fcfe4a2b830cbbdb8ef8824f8d54e8c2c81443796d1fd1ef883
+flows.sanitized.json excludes embedded secret values; restore secrets from the approved local secret store.
+Syncthing configuration and schedules were neither captured nor changed.
