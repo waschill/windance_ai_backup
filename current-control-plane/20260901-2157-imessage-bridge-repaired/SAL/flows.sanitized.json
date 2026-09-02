@@ -1,0 +1,6891 @@
+[
+  {
+    "id": "d3d898c93e3f44b7",
+    "type": "tab",
+    "label": "Morning Monitoring",
+    "disabled": false,
+    "info": "Clean replacement flow set generated from backup. Import into empty Node-RED or disable old flows first.",
+    "env": []
+  },
+  {
+    "id": "ba1a94d5d49d41a0",
+    "type": "tab",
+    "label": "01 - Device Monitor + Kasa",
+    "disabled": false,
+    "info": "Unified device monitor, dashboard status, SMS alerts, and HS300 Kasa reboot actions.",
+    "env": []
+  },
+  {
+    "id": "db9bcd536dea4df2",
+    "type": "tab",
+    "label": "02 - System Metrics",
+    "disabled": false,
+    "info": "SAL local metrics and HAL remote CPU/GPU metrics.",
+    "env": []
+  },
+  {
+    "id": "3d53fe4f17c644fb",
+    "type": "tab",
+    "label": "03 - Storage + Syncthing",
+    "disabled": false,
+    "info": "NAS disk checks and Syncthing folder health.",
+    "env": []
+  },
+  {
+    "id": "951be7684ff54f69",
+    "type": "tab",
+    "label": "04 - Weather + Route SMS",
+    "disabled": false,
+    "info": "Daily weather and route weather by manual inject or incoming iMessage command.",
+    "env": []
+  },
+  {
+    "id": "be942a70f5f14ca4",
+    "type": "tab",
+    "label": "05 - Max + iMessage",
+    "disabled": false,
+    "info": "iMessage polling, optional Brave search, and Open WebUI Max conversation.",
+    "env": []
+  },
+  {
+    "id": "036a959d05ba4e43",
+    "type": "tab",
+    "label": "06 - Odoo Test",
+    "disabled": false,
+    "info": "Basic Odoo XML-RPC login and partner query test.",
+    "env": []
+  },
+  {
+    "id": "6a0a47c5df3bab82",
+    "type": "tab",
+    "label": "LLM Update",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "c45af7ff9af9e00e",
+    "type": "tab",
+    "label": "LLM Model Scout",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "e10a0010cafe0001",
+    "type": "tab",
+    "label": "07 - Mail Assistant",
+    "disabled": true,
+    "info": "Read-only Gmail triage and iMessage review commands.\nDISABLED 2026-07-02: old AL mail assistant /triage/run path could mutate Gmail."
+  },
+  {
+    "id": "e20a0010cafe0001",
+    "type": "tab",
+    "label": "08 - HERALD Bridge",
+    "disabled": false,
+    "info": "Node-RED to HERALD bridge endpoints and tests."
+  },
+  {
+    "id": "windance_reports_001",
+    "type": "tab",
+    "label": "09 - Windance Assistant Reports",
+    "disabled": false,
+    "info": "SAL-owned scheduler and iMessage delivery for Herald-generated read-only reports."
+  },
+  {
+    "id": "5a5317d5dbfc4496",
+    "type": "ui-base",
+    "name": "My Dashboard",
+    "path": "/dashboard",
+    "appIcon": "",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-notification",
+      "ui-control"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "page",
+    "navigationStyle": "default",
+    "titleBarStyle": "default",
+    "showReconnectNotification": true,
+    "notificationDisplayTime": 1,
+    "showDisconnectNotification": true,
+    "allowInstall": false
+  },
+  {
+    "id": "9a0f88a3768a4f6b",
+    "type": "ui-theme",
+    "name": "Clean Theme",
+    "colors": {
+      "surface": "#ffffff",
+      "primary": "#0094CE",
+      "bgPage": "#eeeeee",
+      "groupBg": "#ffffff",
+      "groupOutline": "#cccccc"
+    },
+    "sizes": {
+      "density": "default",
+      "pagePadding": "12px",
+      "groupGap": "12px",
+      "groupBorderRadius": "4px",
+      "widgetGap": "12px"
+    }
+  },
+  {
+    "id": "e76c9f7dfc9b4b0a",
+    "type": "ui-page",
+    "name": "Operations",
+    "ui": "5a5317d5dbfc4496",
+    "path": "/page1",
+    "icon": "home",
+    "layout": "grid",
+    "theme": "9a0f88a3768a4f6b",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Small Desktop",
+        "px": "768",
+        "cols": "9"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "order": 1,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "5d6d834c9d91400c",
+    "type": "ui-group",
+    "name": "Device Status",
+    "page": "e76c9f7dfc9b4b0a",
+    "width": 12,
+    "height": 1,
+    "order": 1,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default"
+  },
+  {
+    "id": "44eb64b95bf04142",
+    "type": "ui-group",
+    "name": "System Metrics",
+    "page": "e76c9f7dfc9b4b0a",
+    "width": 12,
+    "height": 2,
+    "order": 2,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default"
+  },
+  {
+    "id": "730cdb34a1c047da",
+    "type": "ui-group",
+    "name": "Storage",
+    "page": "e76c9f7dfc9b4b0a",
+    "width": 12,
+    "height": 2,
+    "order": 4,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default"
+  },
+  {
+    "id": "bdab9e0775ca4430",
+    "type": "ui-group",
+    "name": "Syncthing",
+    "page": "e76c9f7dfc9b4b0a",
+    "width": 12,
+    "height": 2,
+    "order": 5,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default"
+  },
+  {
+    "id": "90640b83f6fd9c86",
+    "type": "inject",
+    "z": "d3d898c93e3f44b7",
+    "name": "Network condition",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "00 07 * * *",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 420,
+    "wires": [
+      [
+        "a466235bd2fd94fd"
+      ]
+    ]
+  },
+  {
+    "id": "a466235bd2fd94fd",
+    "type": "function",
+    "z": "d3d898c93e3f44b7",
+    "name": "Build Compact Morning Status Report",
+    "func": "// Windance compact morning status report.\n// The script performs live checks and sends the SMS through Node-RED's /codex/send-imessage endpoint.\nmsg.payload = \"/usr/bin/python3 /Users/zuzu/bin/windance_morning_status_report.py\";\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 420,
+    "wires": [
+      [
+        "7b0c293763284c52",
+        "64084812b75e3228"
+      ]
+    ]
+  },
+  {
+    "id": "7b0c293763284c52",
+    "type": "exec",
+    "z": "d3d898c93e3f44b7",
+    "command": "",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 730,
+    "y": 420,
+    "wires": [
+      [
+        "f54cd6f5feb31d38"
+      ],
+      [
+        "e5fbb9e629768202"
+      ],
+      [
+        "b0352008485bb468"
+      ]
+    ]
+  },
+  {
+    "id": "f54cd6f5feb31d38",
+    "type": "debug",
+    "z": "d3d898c93e3f44b7",
+    "name": "stdout",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1010,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "e5fbb9e629768202",
+    "type": "debug",
+    "z": "d3d898c93e3f44b7",
+    "name": "stderr",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1010,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "b0352008485bb468",
+    "type": "debug",
+    "z": "d3d898c93e3f44b7",
+    "name": "return code",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1030,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "64084812b75e3228",
+    "type": "debug",
+    "z": "d3d898c93e3f44b7",
+    "name": "Network Report",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 680,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "windance_device_status_http_in",
+    "type": "http in",
+    "z": "d3d898c93e3f44b7",
+    "name": "Windance Device Status Cache In",
+    "url": "/windance/device-status",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [
+        "windance_device_status_cache_fn"
+      ]
+    ]
+  },
+  {
+    "id": "windance_device_status_cache_fn",
+    "type": "function",
+    "z": "d3d898c93e3f44b7",
+    "name": "Windance Device Status Cache",
+    "func": "const allowed = [\"AL\", \"HAL\", \"SAL\", \"Herald\", \"HERALD\", \"Odyssey\", \"TMA-1\", \"TMA-2\", \"ResWEB\"];\nconst raw = String((msg.req && msg.req.query && msg.req.query.device) || \"\").trim();\nlet device = raw;\nif (device.toUpperCase() === \"HERALD\") device = \"Herald\";\nif (!allowed.includes(device)) {\n    msg.statusCode = 400;\n    msg.payload = {ok:false, error:\"Unknown device\"};\n    return msg;\n}\nconst status = global.get(`device_${device}_status`) || \"Waiting...\";\nmsg.payload = {ok:true, device, status};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [
+        "windance_device_status_http_response"
+      ]
+    ]
+  },
+  {
+    "id": "windance_device_status_http_response",
+    "type": "http response",
+    "z": "d3d898c93e3f44b7",
+    "name": "Windance Device Status Cache Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 0,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "43230e5d427d4eb7",
+    "type": "comment",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Unified monitoring",
+    "info": "All devices are normalized through one function. Odyssey, TMA-1, and AL may reboot by Kasa HS300. HAL, TMA-2, and ResWEB only alert/update dashboard.",
+    "x": 420,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "3ac595dd032a4b6a",
+    "type": "exec",
+    "z": "ba1a94d5d49d41a0",
+    "command": "",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Run Kasa Reboot",
+    "x": 1840,
+    "y": 150,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "4b9290aee4fd48da",
+    "type": "exec",
+    "z": "ba1a94d5d49d41a0",
+    "command": "",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send SMS",
+    "x": 1840,
+    "y": 250,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "a23d275c0bea422f",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "AL",
+    "order": 1,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>AL:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'AL' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'AL') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7efa612051474fa0",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "AL",
+    "host": "192.168.36.20",
+    "timer": "30",
+    "inputs": 0,
+    "x": 110,
+    "y": 120,
+    "wires": [
+      [
+        "f859b9867d574070"
+      ]
+    ]
+  },
+  {
+    "id": "f859b9867d574070",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag AL",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "AL",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.20",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "AL",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "true",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 310,
+    "y": 120,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "c152cd9af3d542f0",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "HAL",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>HAL:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'HAL' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'HAL') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e1b271e3646d453f",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "HAL",
+    "host": "192.168.36.10",
+    "timer": "30",
+    "inputs": 0,
+    "x": 110,
+    "y": 200,
+    "wires": [
+      [
+        "05827365d7044304"
+      ]
+    ]
+  },
+  {
+    "id": "05827365d7044304",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag HAL",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "HAL",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.10",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "false",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 310,
+    "y": 200,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "1242196270d44090",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "Odyssey",
+    "order": 3,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>Odyssey:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'Odyssey' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'Odyssey') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6f8b9683b3804d3c",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "Odyssey",
+    "host": "192.168.36.31",
+    "timer": "30",
+    "inputs": 0,
+    "x": 110,
+    "y": 280,
+    "wires": [
+      [
+        "17935a78cf3a47bb"
+      ]
+    ]
+  },
+  {
+    "id": "17935a78cf3a47bb",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag Odyssey",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "Odyssey",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.31",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "Odyssey",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "true",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 310,
+    "y": 280,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "50e549b27e63444c",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "TMA-1",
+    "order": 4,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>TMA-1:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'TMA-1' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'TMA-1') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4e483641e967413f",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "TMA-1",
+    "host": "192.168.36.131",
+    "timer": "180",
+    "inputs": 0,
+    "x": 110,
+    "y": 360,
+    "wires": [
+      [
+        "7c5b8420c0734034"
+      ]
+    ]
+  },
+  {
+    "id": "7c5b8420c0734034",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag TMA-1",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "TMA-1",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.131",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "TMA-1",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "true",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 310,
+    "y": 360,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "e9b2ac86c36243e8",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "TMA-2",
+    "order": 5,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>TMA-2:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'TMA-2' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'TMA-2') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 440,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4f20b4bfc06d4156",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "TMA-2",
+    "host": "192.168.36.133",
+    "timer": "180",
+    "inputs": 0,
+    "x": 110,
+    "y": 440,
+    "wires": [
+      [
+        "77199fb54fa2485c"
+      ]
+    ]
+  },
+  {
+    "id": "77199fb54fa2485c",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag TMA-2",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "TMA-2",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.133",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "false",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 310,
+    "y": 440,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "2c3a24eebf0249b3",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "ResWEB",
+    "order": 6,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>ResWEB:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'ResWEB' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'ResWEB') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 520,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5b86bea736c941c3",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "ResWEB",
+    "host": "64.251.177.195",
+    "timer": "30",
+    "inputs": 0,
+    "x": 110,
+    "y": 520,
+    "wires": [
+      [
+        "8c341c7cfb47428a"
+      ]
+    ]
+  },
+  {
+    "id": "8c341c7cfb47428a",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag ResWEB",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "ResWEB",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "64.251.177.195",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "ResWeb",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "true",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 310,
+    "y": 520,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "f90b11c5a479410f",
+    "type": "debug",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Kasa Command",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1840,
+    "y": 90,
+    "wires": []
+  },
+  {
+    "id": "c3b86a4f792144a4",
+    "type": "debug",
+    "z": "ba1a94d5d49d41a0",
+    "name": "SMS Command",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1840,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "3e992f55de2f4cab",
+    "type": "function",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Normalize Status",
+    "func": "const isDown = msg.payload === false;\nmsg.status = isDown ? \"down\" : \"up\";\nmsg.pingMs = isDown ? null : Number(msg.payload);\nmsg.topic = msg.device;\nmsg.payload = isDown ? \"Is Offline\" : \"Is UP\";\nglobal.set(`device_${msg.device}_status`, msg.payload);\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 590,
+    "y": 340,
+    "wires": [
+      [
+        "7f2d0f9b6dc54ef2",
+        "a23d275c0bea422f",
+        "c152cd9af3d542f0",
+        "1242196270d44090",
+        "50e549b27e63444c",
+        "e9b2ac86c36243e8",
+        "2c3a24eebf0249b3",
+        "5118ae83a70b73b1",
+        "sal_status_card_0001"
+      ]
+    ]
+  },
+  {
+    "id": "b9467c0fecb6456b",
+    "type": "switch",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Down or Up?",
+    "property": "status",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "down",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "up",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1070,
+    "y": 320,
+    "wires": [
+      [
+        "dd3c8c0fa67948a3"
+      ],
+      [
+        "069b93ba234445aa"
+      ]
+    ]
+  },
+  {
+    "id": "dd3c8c0fa67948a3",
+    "type": "rbe",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Only First DOWN",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 1340,
+    "y": 260,
+    "wires": [
+      [
+        "0cda2bffb9a04f5b"
+      ]
+    ]
+  },
+  {
+    "id": "069b93ba234445aa",
+    "type": "rbe",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Only First UP",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 1330,
+    "y": 380,
+    "wires": [
+      [
+        "d9063a46186c4fdf"
+      ]
+    ]
+  },
+  {
+    "id": "0cda2bffb9a04f5b",
+    "type": "function",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Alert + Reboot Decision",
+    "func": "const kasa = \"~/Library/Python/3.9/bin/kasa\";\nconst host = \"192.168.36.4\";\nconst phone = \"+16054401255\";\nconst offSeconds = 25;\n\nconst safeDevice = String(msg.device || \"Unknown\").replace(/\"/g, '\\\\\"');\n\nlet smsText;\nlet kasaMsg = null;\n\nif (msg.rebootAllowed && msg.kasaPlugName) {\n    const rebootKey = `rebooting_${msg.device}`;\n    if (flow.get(rebootKey)) {\n        node.status({fill:\"yellow\", shape:\"ring\", text:`${msg.device} reboot already in progress`});\n        return [null, null];\n    }\n    flow.set(rebootKey, true);\n    flow.set(`pending_back_up_${msg.device}`, true);\n    flow.set(`last_reboot_${msg.device}`, new Date().toISOString());\n\n    const plug = String(msg.kasaPlugName).replace(/\"/g, '\\\\\"');\n    kasaMsg = {\n        payload: `${kasa} --host ${host} off --name \"${plug}\"; sleep ${offSeconds}; ${kasa} --host ${host} on --name \"${plug}\"`,\n        topic: msg.device,\n        device: msg.device\n    };\n    smsText = `${safeDevice} is DOWN. Power cycling Kasa plug \"${plug}\" now.`;\n} else {\n    smsText = `${safeDevice} is DOWN. No automatic Kasa reboot is configured for this device.`;\n}\n\nreturn [kasaMsg, sms(smsText)];\n\nfunction sms(text) {\n    const safe = String(text).replace(/\"/g, '\\\\\"');\n    return {\n        payload: `osascript -e 'tell application \"Messages\" to send \"${safe}\" to buddy \"${phone}\"'`,\n        topic: msg.device,\n        device: msg.device\n    };\n}",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1580,
+    "y": 260,
+    "wires": [
+      [
+        "3ac595dd032a4b6a",
+        "f90b11c5a479410f"
+      ],
+      [
+        "4b9290aee4fd48da",
+        "c3b86a4f792144a4"
+      ]
+    ]
+  },
+  {
+    "id": "d9063a46186c4fdf",
+    "type": "function",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Back Up SMS If Pending",
+    "func": "const phone = \"+16054401255\";\nconst pendingKey = `pending_back_up_${msg.device}`;\nconst rebootKey = `rebooting_${msg.device}`;\n\nif (!flow.get(pendingKey)) return null;\n\nflow.set(pendingKey, false);\nflow.set(rebootKey, false);\n\nconst pingText = Number.isFinite(msg.pingMs) ? ` Ping: ${msg.pingMs} ms.` : \"\";\nconst text = `${msg.device} is back UP after Kasa reboot.${pingText}`;\nconst safe = text.replace(/\"/g, '\\\\\"');\n\nmsg.payload = `osascript -e 'tell application \"Messages\" to send \"${safe}\" to buddy \"${phone}\"'`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1570,
+    "y": 380,
+    "wires": [
+      [
+        "4b9290aee4fd48da"
+      ]
+    ]
+  },
+  {
+    "id": "38a0dcf044c643c8",
+    "type": "inject",
+    "z": "ba1a94d5d49d41a0",
+    "name": "TEST AL Down",
+    "props": [
+      {
+        "p": "payload",
+        "v": "false",
+        "vt": "bool"
+      },
+      {
+        "p": "device",
+        "v": "AL",
+        "vt": "str"
+      },
+      {
+        "p": "deviceIp",
+        "v": "192.168.36.20",
+        "vt": "str"
+      },
+      {
+        "p": "kasaPlugName",
+        "v": "AL",
+        "vt": "str"
+      },
+      {
+        "p": "rebootAllowed",
+        "v": "true",
+        "vt": "bool"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 120,
+    "y": 860,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "7da4c26ab10b4b7c",
+    "type": "inject",
+    "z": "ba1a94d5d49d41a0",
+    "name": "TEST AL Up",
+    "props": [
+      {
+        "p": "payload",
+        "v": "10",
+        "vt": "num"
+      },
+      {
+        "p": "device",
+        "v": "AL",
+        "vt": "str"
+      },
+      {
+        "p": "deviceIp",
+        "v": "192.168.36.20",
+        "vt": "str"
+      },
+      {
+        "p": "kasaPlugName",
+        "v": "AL",
+        "vt": "str"
+      },
+      {
+        "p": "rebootAllowed",
+        "v": "true",
+        "vt": "bool"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 130,
+    "y": 800,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "7f2d0f9b6dc54ef2",
+    "type": "function",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Require 3 Failed Pings",
+    "func": "if (msg.device !== \"ResWEB\") return msg;\n\nconst key = \"consecutive_down_ResWEB\";\nif (msg.status === \"down\") {\n    const count = Number(flow.get(key) || 0) + 1;\n    flow.set(key, count);\n    msg.downCount = count;\n    if (count < 3) {\n        node.status({fill:\"yellow\", shape:\"ring\", text:`ResWEB: failure ${count}/3`});\n        return null;\n    }\n    node.status({fill:\"red\", shape:\"dot\", text:`ResWEB: confirmed down (${count}/3)`});\n} else {\n    flow.set(key, 0);\n    node.status({fill:\"green\", shape:\"dot\", text:\"ResWEB: counter reset\"});\n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 840,
+    "y": 320,
+    "wires": [
+      [
+        "b9467c0fecb6456b"
+      ]
+    ]
+  },
+  {
+    "id": "7fd49873cacf6411",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "Herald",
+    "host": "192.168.36.21",
+    "timer": "30",
+    "inputs": 0,
+    "x": 90,
+    "y": 600,
+    "wires": [
+      [
+        "d7b3d5cebc6f9278"
+      ]
+    ]
+  },
+  {
+    "id": "d7b3d5cebc6f9278",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag Herald",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "Herald",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.21",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "Herald",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "false",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 300,
+    "y": 600,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "5118ae83a70b73b1",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "Herald",
+    "order": 6,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>Herald:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'Herald' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'Herald') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 830,
+    "y": 560,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "sal_status_card_0001",
+    "type": "ui-template",
+    "z": "ba1a94d5d49d41a0",
+    "group": "5d6d834c9d91400c",
+    "page": "",
+    "ui": "",
+    "name": "SAL",
+    "order": 9,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>SAL:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...', deviceName: 'SAL' }\n  },\n  async mounted() {\n    const key = `windance_device_status_${this.deviceName}`;\n    try {\n      const cached = window.localStorage.getItem(key);\n      if (cached) this.statusText = cached;\n    } catch (e) {}\n    try {\n      const res = await fetch(`/windance/device-status?device=${encodeURIComponent(this.deviceName)}`, { cache: 'no-store' });\n      if (res.ok) {\n        const data = await res.json();\n        if (data && data.status) {\n          this.statusText = data.status;\n          try { window.localStorage.setItem(key, data.status); } catch (e) {}\n        }\n      }\n    } catch (e) {}\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        if (!newMsg || newMsg.device !== 'SAL') return;\n        this.statusText = newMsg.payload;\n        try { window.localStorage.setItem(`windance_device_status_${this.deviceName}`, this.statusText); } catch (e) {}\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 830,
+    "y": 620,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "sal_ping_0001",
+    "type": "ping",
+    "z": "ba1a94d5d49d41a0",
+    "protocol": "Automatic",
+    "mode": "timed",
+    "name": "SAL",
+    "host": "192.168.36.22",
+    "timer": "30",
+    "inputs": 0,
+    "x": 90,
+    "y": 680,
+    "wires": [
+      [
+        "sal_tag_0001"
+      ]
+    ]
+  },
+  {
+    "id": "sal_tag_0001",
+    "type": "change",
+    "z": "ba1a94d5d49d41a0",
+    "name": "Tag SAL",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "SAL",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "deviceIp",
+        "pt": "msg",
+        "to": "192.168.36.22",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "kasaPlugName",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "rebootAllowed",
+        "pt": "msg",
+        "to": "false",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 300,
+    "y": 680,
+    "wires": [
+      [
+        "3e992f55de2f4cab"
+      ]
+    ]
+  },
+  {
+    "id": "107ace365fe14ab7",
+    "type": "comment",
+    "z": "db9bcd536dea4df2",
+    "name": "Metrics",
+    "info": "SAL CPU/RAM and HAL CPU/GPU/VRAM/temperature. Existing SSH paths are preserved.",
+    "x": 400,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "6a5c4b81dc0c4876",
+    "type": "inject",
+    "z": "db9bcd536dea4df2",
+    "name": "SAL CPU every 5s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 120,
+    "wires": [
+      [
+        "6227dadf6b474fe1"
+      ]
+    ]
+  },
+  {
+    "id": "6227dadf6b474fe1",
+    "type": "cpu",
+    "z": "db9bcd536dea4df2",
+    "name": "",
+    "msgCore": false,
+    "msgOverall": true,
+    "msgArray": false,
+    "msgTemp": false,
+    "x": 350,
+    "y": 120,
+    "wires": [
+      [
+        "778e1798d0e84d31"
+      ]
+    ]
+  },
+  {
+    "id": "778e1798d0e84d31",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Round CPU",
+    "func": "msg.payload = Math.round(Number(msg.payload) * 10) / 10;\nglobal.set(\"sal_cpu\", msg.payload + \"%\");\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 550,
+    "y": 120,
+    "wires": [
+      [
+        "a7ee143ac797481e"
+      ]
+    ]
+  },
+  {
+    "id": "a7ee143ac797481e",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "SAL CPU",
+    "group": "44eb64b95bf04142",
+    "order": 1,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "SAL CPU",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "70",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "90",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 770,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c329704e2a1d4b41",
+    "type": "exec",
+    "z": "db9bcd536dea4df2",
+    "command": "memory_pressure | grep \"System-wide memory free percentage\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "SAL RAM command",
+    "x": 360,
+    "y": 200,
+    "wires": [
+      [
+        "a848486fd2ab43fd"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ecc9590638284046",
+    "type": "inject",
+    "z": "db9bcd536dea4df2",
+    "name": "SAL RAM every 30s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "30",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 200,
+    "wires": [
+      [
+        "c329704e2a1d4b41"
+      ]
+    ]
+  },
+  {
+    "id": "a848486fd2ab43fd",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse RAM Used",
+    "func": "let match = String(msg.payload || \"\").match(/(\\d+)%/);\nif (!match) return null;\nlet free = parseInt(match[1]);\nmsg.payload = 100 - free;\n\nglobal.set(\"sal_ram\", msg.payload + \"%\");\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 570,
+    "y": 200,
+    "wires": [
+      [
+        "667b44c3cb134cd0"
+      ]
+    ]
+  },
+  {
+    "id": "667b44c3cb134cd0",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "SAL RAM",
+    "group": "44eb64b95bf04142",
+    "order": 2,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "SAL RAM",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent Used",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "60",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "80",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 780,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "26eca6d1696e4351",
+    "type": "exec",
+    "z": "db9bcd536dea4df2",
+    "command": "ssh -i ~/.ssh/id_ed25519 wasch@192.168.36.10 \"powershell -NoProfile -Command \\\"(Get-Counter '\\Processor(_Total)\\% Processor Time').CounterSamples.CookedValue\\\"\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "HAL CPU command",
+    "x": 360,
+    "y": 300,
+    "wires": [
+      [
+        "67f5b8385ae543fd"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "0dab7dd7cbc94de8",
+    "type": "inject",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL legacy CPU poll disabled",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "67f5b8385ae543fd",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse HAL CPU",
+    "func": "let cpu = parseFloat(msg.payload);\nif (!Number.isFinite(cpu)) return null;\n\nmsg.payload = Number(cpu.toFixed(1));\n\nglobal.set(\"hal_cpu\", msg.payload + \"%\");\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 590,
+    "y": 300,
+    "wires": [
+      [
+        "4839a37cee204498"
+      ]
+    ]
+  },
+  {
+    "id": "4839a37cee204498",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL CPU",
+    "group": "44eb64b95bf04142",
+    "order": 3,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "HAL CPU",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "60",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "85",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 800,
+    "y": 300,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7f474c8d7d434808",
+    "type": "exec",
+    "z": "db9bcd536dea4df2",
+    "command": "ssh -i ~/.ssh/id_ed25519 wasch@192.168.36.10 \"nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu --format=csv,noheader,nounits\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "HAL GPU command",
+    "x": 360,
+    "y": 400,
+    "wires": [
+      [
+        "ed0d7c9bb4a741f3"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ed2229ee9a7448cd",
+    "type": "inject",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL legacy GPU poll disabled",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "ed0d7c9bb4a741f3",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse HAL GPU",
+    "func": "let parts = String(msg.payload || \"\").trim().split(\",\").map(x => x.trim());\n\nif (parts.length < 4) return null;\n\nlet gpu = Number(parts[0]);\nlet vramUsed = Number(parts[1]);\nlet vramTotal = Number(parts[2]);\nlet temp = Number(parts[3]);\n\nlet vramPct = Math.round((vramUsed / vramTotal) * 100);\n\nglobal.set(\"hal_gpu\", gpu + \"%\");\nglobal.set(\"hal_vram\", vramPct + \"%\");\nglobal.set(\"hal_gpu_temp\", temp + \"?C\");\n\nreturn [\n    { payload: gpu },\n    { payload: vramPct },\n    { payload: temp }\n];",
+    "outputs": 3,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 590,
+    "y": 400,
+    "wires": [
+      [
+        "42b8e8a6f2434e07"
+      ],
+      [
+        "f07fe23126dc48b9"
+      ],
+      [
+        "e1dc09e93e7a4116"
+      ]
+    ]
+  },
+  {
+    "id": "42b8e8a6f2434e07",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL GPU",
+    "group": "44eb64b95bf04142",
+    "order": 4,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "HAL GPU",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "65",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "85",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 810,
+    "y": 360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f07fe23126dc48b9",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL VRAM",
+    "group": "44eb64b95bf04142",
+    "order": 5,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "HAL VRAM",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "65",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "85",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 810,
+    "y": 440,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e1dc09e93e7a4116",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL GPU Temp",
+    "group": "44eb64b95bf04142",
+    "order": 6,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "HAL GPU Temp",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "C",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "65",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "85",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 810,
+    "y": 520,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "heraldcpu0000001",
+    "type": "inject",
+    "z": "db9bcd536dea4df2",
+    "name": "HERALD CPU every 10s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "7",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 480,
+    "wires": [
+      [
+        "heraldcpu0000002"
+      ]
+    ]
+  },
+  {
+    "id": "heraldcpu0000002",
+    "type": "http request",
+    "z": "db9bcd536dea4df2",
+    "name": "HERALD CPU /system/cpu",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/system/cpu",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 400,
+    "y": 480,
+    "wires": [
+      [
+        "heraldcpu0000003"
+      ]
+    ]
+  },
+  {
+    "id": "heraldcpu0000003",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse HERALD CPU",
+    "func": "const p = msg.payload || {};\nlet cpu = Number(p.cpu_percent);\nif (!Number.isFinite(cpu)) return null;\n\ncpu = Math.max(0, Math.min(100, Number(cpu.toFixed(1))));\nmsg.payload = cpu;\nglobal.set(\"herald_cpu\", cpu + \"%\");\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 600,
+    "y": 540,
+    "wires": [
+      [
+        "766734f06ea8c3ca"
+      ]
+    ]
+  },
+  {
+    "id": "766734f06ea8c3ca",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "Herald CPU",
+    "group": "44eb64b95bf04142",
+    "order": 3,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "Herald CPU",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "60",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "85",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 830,
+    "y": 600,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d68fcf1668704eda",
+    "type": "comment",
+    "z": "3d53fe4f17c644fb",
+    "name": "Storage and backup status",
+    "info": "Disk checks are normalized into one parser. Syncthing checks are normalized into one parser. Error notifications go by SMS.",
+    "x": 480,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "5ca0aabab9604b53",
+    "type": "exec",
+    "z": "3d53fe4f17c644fb",
+    "command": "",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send SMS",
+    "x": 2110,
+    "y": 440,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "c4f15767acae4600",
+    "type": "exec",
+    "z": "3d53fe4f17c644fb",
+    "command": "ssh William@192.168.36.31 \"df -h /\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Odyssey df -h",
+    "x": 370,
+    "y": 120,
+    "wires": [
+      [
+        "b467b425b37f4d42"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "362cb9320b534851",
+    "type": "inject",
+    "z": "3d53fe4f17c644fb",
+    "name": "Check Odyssey disk",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "300",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "Odyssey",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 120,
+    "wires": [
+      [
+        "c4f15767acae4600"
+      ]
+    ]
+  },
+  {
+    "id": "b467b425b37f4d42",
+    "type": "change",
+    "z": "3d53fe4f17c644fb",
+    "name": "Tag Odyssey",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "Odyssey",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 560,
+    "y": 120,
+    "wires": [
+      [
+        "d6b0e763bf3f4e57"
+      ]
+    ]
+  },
+  {
+    "id": "cb6f77bd673a40dd",
+    "type": "ui-gauge",
+    "z": "3d53fe4f17c644fb",
+    "name": "Odyssey Disk",
+    "group": "730cdb34a1c047da",
+    "order": 1,
+    "value": "payload.usedNumber",
+    "valueType": "msg",
+    "width": 3,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "Odyssey Disk",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent Used",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "75",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "90",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 1230,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "68d1b00fac3d4feb",
+    "type": "exec",
+    "z": "3d53fe4f17c644fb",
+    "command": "ssh William@192.168.36.131 \"df -h /\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "TMA-1 df -h",
+    "x": 370,
+    "y": 200,
+    "wires": [
+      [
+        "b2b1f8044d124777"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "868bc0aa34cf406f",
+    "type": "inject",
+    "z": "3d53fe4f17c644fb",
+    "name": "Check TMA-1 disk",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "300",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "TMA-1",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 200,
+    "wires": [
+      [
+        "68d1b00fac3d4feb"
+      ]
+    ]
+  },
+  {
+    "id": "b2b1f8044d124777",
+    "type": "change",
+    "z": "3d53fe4f17c644fb",
+    "name": "Tag TMA-1",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "TMA-1",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 560,
+    "y": 200,
+    "wires": [
+      [
+        "d6b0e763bf3f4e57"
+      ]
+    ]
+  },
+  {
+    "id": "ae9c458e52be4f9b",
+    "type": "ui-gauge",
+    "z": "3d53fe4f17c644fb",
+    "name": "TMA-1 Disk",
+    "group": "730cdb34a1c047da",
+    "order": 2,
+    "value": "payload.usedNumber",
+    "valueType": "msg",
+    "width": 3,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "TMA-1 Disk",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent Used",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "75",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "90",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 1230,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "80b0863814f34dd8",
+    "type": "exec",
+    "z": "3d53fe4f17c644fb",
+    "command": "ssh William@192.168.36.133 \"df -h /\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "TMA-2 df -h",
+    "x": 370,
+    "y": 280,
+    "wires": [
+      [
+        "ea0f70c892044ad4"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "9f5d1a66a7d6478c",
+    "type": "inject",
+    "z": "3d53fe4f17c644fb",
+    "name": "Check TMA-2 disk",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "300",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "TMA-2",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 280,
+    "wires": [
+      [
+        "80b0863814f34dd8"
+      ]
+    ]
+  },
+  {
+    "id": "ea0f70c892044ad4",
+    "type": "change",
+    "z": "3d53fe4f17c644fb",
+    "name": "Tag TMA-2",
+    "rules": [
+      {
+        "t": "set",
+        "p": "device",
+        "pt": "msg",
+        "to": "TMA-2",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 560,
+    "y": 280,
+    "wires": [
+      [
+        "d6b0e763bf3f4e57"
+      ]
+    ]
+  },
+  {
+    "id": "1d943814afe04ec4",
+    "type": "ui-gauge",
+    "z": "3d53fe4f17c644fb",
+    "name": "TMA-2 Disk",
+    "group": "730cdb34a1c047da",
+    "order": 3,
+    "value": "payload.usedNumber",
+    "valueType": "msg",
+    "width": 3,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "TMA-2 Disk",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Percent Used",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "75",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "90",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 1230,
+    "y": 240,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d6b0e763bf3f4e57",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "Parse Disk",
+    "func": "const lines = String(msg.payload || \"\").trim().split(\"\\n\");\nif (lines.length < 2) return null;\nconst parts = lines[1].split(/\\s+/);\nconst usedPercent = parts[4] || \"0%\";\nconst usedNumber = parseInt(usedPercent.replace(\"%\",\"\"));\nmsg.payload = {\n    device: msg.device,\n    usedPercent,\n    usedNumber,\n    filesystem: parts[0],\n    size: parts[1],\n    used: parts[2],\n    available: parts[3]\n};\nmsg.topic = msg.device;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 750,
+    "y": 200,
+    "wires": [
+      [
+        "ee37b25f7e9646f2",
+        "fea23886c249483f"
+      ]
+    ]
+  },
+  {
+    "id": "ee37b25f7e9646f2",
+    "type": "switch",
+    "z": "3d53fe4f17c644fb",
+    "name": "Route Disk Gauge",
+    "property": "topic",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "Odyssey",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "TMA-1",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "TMA-2",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 990,
+    "y": 80,
+    "wires": [
+      [
+        "cb6f77bd673a40dd"
+      ],
+      [
+        "ae9c458e52be4f9b"
+      ],
+      [
+        "1d943814afe04ec4"
+      ]
+    ]
+  },
+  {
+    "id": "fea23886c249483f",
+    "type": "switch",
+    "z": "3d53fe4f17c644fb",
+    "name": "Disk > 75%?",
+    "property": "payload.usedNumber",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "gte",
+        "v": "75",
+        "vt": "num"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 970,
+    "y": 360,
+    "wires": [
+      [
+        "31189efca1244963"
+      ]
+    ]
+  },
+  {
+    "id": "31189efca1244963",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "Disk SMS",
+    "func": "const phone = \"+16054401255\";\nconst p = msg.payload || {};\nconst text = `${p.device} disk usage is ${p.usedPercent} (${p.used} used of ${p.size}).`;\nconst safe = text.replace(/\"/g, '\\\\\"');\nmsg.payload = `osascript -e 'tell application \"Messages\" to send \"${safe}\" to buddy \"${phone}\"'`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1190,
+    "y": 360,
+    "wires": [
+      [
+        "5ca0aabab9604b53"
+      ]
+    ]
+  },
+  {
+    "id": "137dab912ac44816",
+    "type": "ui-template",
+    "z": "3d53fe4f17c644fb",
+    "group": "bdab9e0775ca4430",
+    "page": "",
+    "ui": "",
+    "name": "Business",
+    "order": 1,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>Business:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...' }\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        this.statusText = newMsg.payload;\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1660,
+    "y": 600,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8ab7134f70c940b3",
+    "type": "inject",
+    "z": "3d53fe4f17c644fb",
+    "name": "Check Syncthing Business",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "folderName",
+        "v": "Business",
+        "vt": "str"
+      }
+    ],
+    "repeat": "300",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 420,
+    "wires": [
+      [
+        "cb911acd425e4c10"
+      ]
+    ]
+  },
+  {
+    "id": "cb911acd425e4c10",
+    "type": "change",
+    "z": "3d53fe4f17c644fb",
+    "name": "Set Business URL",
+    "rules": [
+      {
+        "t": "set",
+        "p": "folderName",
+        "pt": "msg",
+        "to": "Business",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "url",
+        "pt": "msg",
+        "to": "http://192.168.36.20:8384/rest/db/status?folder=3dplu-gpm4k",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 430,
+    "y": 420,
+    "wires": [
+      [
+        "00810e619ef9aa7c"
+      ]
+    ]
+  },
+  {
+    "id": "482d52bd5e2146ee",
+    "type": "http request",
+    "z": "3d53fe4f17c644fb",
+    "name": "Syncthing Business",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 870,
+    "y": 420,
+    "wires": [
+      [
+        "03e66040b9a84a1d",
+        "329d4db80c33339a"
+      ]
+    ]
+  },
+  {
+    "id": "b93a56ef36664052",
+    "type": "ui-template",
+    "z": "3d53fe4f17c644fb",
+    "group": "bdab9e0775ca4430",
+    "page": "",
+    "ui": "",
+    "name": "Videos",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>Videos:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...' }\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        this.statusText = newMsg.payload;\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1660,
+    "y": 640,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2d35abe09ada4648",
+    "type": "inject",
+    "z": "3d53fe4f17c644fb",
+    "name": "Check Syncthing Videos",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "folderName",
+        "v": "Videos",
+        "vt": "str"
+      }
+    ],
+    "repeat": "300",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 500,
+    "wires": [
+      [
+        "caa8418d6abc74a9"
+      ]
+    ]
+  },
+  {
+    "id": "6a1df31729394b22",
+    "type": "http request",
+    "z": "3d53fe4f17c644fb",
+    "name": "Syncthing Videos",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 870,
+    "y": 500,
+    "wires": [
+      [
+        "03e66040b9a84a1d",
+        "3611d2cb6d6471fb"
+      ]
+    ]
+  },
+  {
+    "id": "5a88c89da4d94787",
+    "type": "ui-template",
+    "z": "3d53fe4f17c644fb",
+    "group": "bdab9e0775ca4430",
+    "page": "",
+    "ui": "",
+    "name": "Photos",
+    "order": 3,
+    "width": "2",
+    "height": "1",
+    "head": "",
+    "format": "<template>\n  <div class=\"status-card\" :class=\"statusClass\">\n    <strong>Photos:</strong> {{ statusText }}\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { statusText: 'Waiting...' }\n  },\n  computed: {\n    statusClass() {\n      const s = String(this.statusText).toLowerCase();\n      if (s.includes('up') || s.includes('online') || s.includes('ok')) return 'ok';\n      if (s.includes('waiting')) return 'wait';\n      return 'down';\n    }\n  },\n  watch: {\n    msg: {\n      handler(newMsg) {\n        this.statusText = newMsg.payload;\n      },\n      deep: true\n    }\n  }\n}\n</script>\n\n<style>\n.status-card {\n  padding: 12px;\n  border-radius: 8px;\n  font-weight: bold;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n}\n.ok { background-color: #2e7d32; }\n.down { background-color: #c62828; }\n.wait { background-color: #616161; }\n</style>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1660,
+    "y": 720,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ed76d3ca4b7a4074",
+    "type": "inject",
+    "z": "3d53fe4f17c644fb",
+    "name": "Check Syncthing Photos",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "folderName",
+        "v": "Photos",
+        "vt": "str"
+      }
+    ],
+    "repeat": "300",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 580,
+    "wires": [
+      [
+        "6f3e6cd004a1d7ae"
+      ]
+    ]
+  },
+  {
+    "id": "2f836414584f40ef",
+    "type": "http request",
+    "z": "3d53fe4f17c644fb",
+    "name": "Syncthing Photos",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 870,
+    "y": 580,
+    "wires": [
+      [
+        "03e66040b9a84a1d",
+        "84b81a024e41bd34"
+      ]
+    ]
+  },
+  {
+    "id": "03e66040b9a84a1d",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "Normalize Syncthing",
+    "func": "const s = msg.payload || {};\nconst error = String(s.error || s.invalid || s.watchError || \"\").trim();\nconst needItems = Number(s.needTotalItems || 0);\nconst needBytes = Number(s.needBytes || 0);\nconst receiveOnly = Number(s.receiveOnlyTotalItems || 0);\nlet status = \"UNKNOWN\";\n\nif (error) {\n    status = `ERROR: ${error}`;\n} else if (s.state === \"syncing\") {\n    status = `Syncing (${needItems} items)`;\n} else if (s.state === \"scanning\") {\n    status = \"Scanning\";\n} else if (needItems > 0) {\n    const mib = Math.round(needBytes / 1048576);\n    status = `Out of Sync (${needItems} items, ${mib} MiB)`;\n} else if (receiveOnly > 0) {\n    status = `Receive-only changes (${receiveOnly} items)`;\n} else if (s.state === \"idle\") {\n    status = \"Up to Date\";\n} else {\n    status = s.state || \"UNKNOWN\";\n}\n\nmsg.payload = status;\nmsg.folder = msg.folderName;\nmsg.topic = msg.folderName;\nmsg.status = status;\nglobal.set(`syncthing_${msg.folderName}_status`, status);\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1140,
+    "y": 500,
+    "wires": [
+      [
+        "aaa642282931465e",
+        "786a0087e78e47a0",
+        "27f2c1bd8d5f50f0"
+      ]
+    ]
+  },
+  {
+    "id": "aaa642282931465e",
+    "type": "switch",
+    "z": "3d53fe4f17c644fb",
+    "name": "Route Folder Card",
+    "property": "topic",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "Business",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "Videos",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "Photos",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 1470,
+    "y": 620,
+    "wires": [
+      [
+        "137dab912ac44816"
+      ],
+      [
+        "b93a56ef36664052"
+      ],
+      [
+        "5a88c89da4d94787"
+      ]
+    ]
+  },
+  {
+    "id": "786a0087e78e47a0",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "Syncthing Problem Alert",
+    "outputs": 1,
+    "x": 1440,
+    "y": 480,
+    "wires": [
+      [
+        "96f9117269484e68"
+      ]
+    ],
+    "func": "const status = String(msg.status || msg.payload || \"\");\nif (status === \"Up to Date\" || status === \"Scanning\" || status.startsWith(\"Syncing\")) return null;\nconst key = `syncthing_alert_${msg.folder || \"unknown\"}`;\nconst last = global.get(key) || {};\nconst now = Date.now();\nif (last.status === status && (now - last.at) < 3600000) return null;\nglobal.set(key, { status, at: now });\nreturn msg;"
+  },
+  {
+    "id": "96f9117269484e68",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "Syncthing SMS",
+    "func": "const phone = \"+16054401255\";\nconst text = `Syncthing: ${msg.folder} status is ${msg.status}.`;\nconst safe = text.replace(/\"/g, '\\\\\"');\nmsg.payload = `osascript -e 'tell application \"Messages\" to send \"${safe}\" to buddy \"${phone}\"'`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 480,
+    "wires": [
+      [
+        "5ca0aabab9604b53"
+      ]
+    ]
+  },
+  {
+    "id": "27f2c1bd8d5f50f0",
+    "type": "debug",
+    "z": "3d53fe4f17c644fb",
+    "name": "Normalize SyncThing",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1460,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "329d4db80c33339a",
+    "type": "debug",
+    "z": "3d53fe4f17c644fb",
+    "name": "SyncT Business",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1120,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "00810e619ef9aa7c",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "SyncThing API",
+    "func": "msg.headers = {\n    \"X-API-Key\": \"WWZ7MQVvLtPLcQGYp74cnhCqaLurGFtA\"\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 420,
+    "wires": [
+      [
+        "482d52bd5e2146ee"
+      ]
+    ]
+  },
+  {
+    "id": "a7f402930c0a0779",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "SyncThing API",
+    "func": "msg.headers = {\n    \"X-API-Key\": \"WWZ7MQVvLtPLcQGYp74cnhCqaLurGFtA\"\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 500,
+    "wires": [
+      [
+        "6a1df31729394b22"
+      ]
+    ]
+  },
+  {
+    "id": "a8f358a050ad2b82",
+    "type": "function",
+    "z": "3d53fe4f17c644fb",
+    "name": "SyncThing API",
+    "func": "msg.headers = {\n    \"X-API-Key\": \"WWZ7MQVvLtPLcQGYp74cnhCqaLurGFtA\"\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 580,
+    "wires": [
+      [
+        "2f836414584f40ef"
+      ]
+    ]
+  },
+  {
+    "id": "caa8418d6abc74a9",
+    "type": "change",
+    "z": "3d53fe4f17c644fb",
+    "name": "Set Videos URL",
+    "rules": [
+      {
+        "t": "set",
+        "p": "folderName",
+        "pt": "msg",
+        "to": "Videos",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "url",
+        "pt": "msg",
+        "to": "http://192.168.36.20:8384/rest/db/status?folder=reuak-caxcx",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 420,
+    "y": 500,
+    "wires": [
+      [
+        "a7f402930c0a0779"
+      ]
+    ]
+  },
+  {
+    "id": "6f3e6cd004a1d7ae",
+    "type": "change",
+    "z": "3d53fe4f17c644fb",
+    "name": "Set Photos URL",
+    "rules": [
+      {
+        "t": "set",
+        "p": "folderName",
+        "pt": "msg",
+        "to": "Photos",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "url",
+        "pt": "msg",
+        "to": "http://192.168.36.20:8384/rest/db/status?folder=fdrc7-pmsiu",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 420,
+    "y": 580,
+    "wires": [
+      [
+        "a8f358a050ad2b82"
+      ]
+    ]
+  },
+  {
+    "id": "3611d2cb6d6471fb",
+    "type": "debug",
+    "z": "3d53fe4f17c644fb",
+    "name": "Videos",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1150,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "84b81a024e41bd34",
+    "type": "debug",
+    "z": "3d53fe4f17c644fb",
+    "name": "Photos",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1140,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "f772e9e5ae984d2a",
+    "type": "comment",
+    "z": "951be7684ff54f69",
+    "name": "Weather",
+    "info": "Daily Custer weather plus route forecasts. SMS output replaces Telegram.",
+    "x": 400,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "38c63c8855684eed",
+    "type": "exec",
+    "z": "951be7684ff54f69",
+    "command": "",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send SMS",
+    "x": 1510,
+    "y": 480,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ad36601c55ea4b4a",
+    "type": "inject",
+    "z": "951be7684ff54f69",
+    "name": "DISABLED - 9 AM Custer Weather",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 120,
+    "wires": [
+      []
+    ],
+    "info": "Disabled by reliable reports hardening: daily weather text is low priority during probation lockdown\nDisabled 2026-07-02: Daily weather push paused; William said this is least important."
+  },
+  {
+    "id": "1199c1ad01ea4d76",
+    "type": "http request",
+    "z": "951be7684ff54f69",
+    "name": "Get Custer Weather",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "https://api.open-meteo.com/v1/forecast?latitude=43.7667&longitude=-103.5988&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_gusts_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDenver&forecast_days=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 400,
+    "y": 120,
+    "wires": [
+      [
+        "f870e9e21dd74d3f"
+      ]
+    ]
+  },
+  {
+    "id": "f870e9e21dd74d3f",
+    "type": "function",
+    "z": "951be7684ff54f69",
+    "name": "Format Custer Weather",
+    "func": "const w = msg.payload;\nconst codes = {\n  0:\"Clear\",1:\"Mainly clear\",2:\"Partly cloudy\",3:\"Overcast\",45:\"Fog\",48:\"Freezing fog\",\n  51:\"Light drizzle\",53:\"Drizzle\",55:\"Heavy drizzle\",61:\"Light rain\",63:\"Rain\",65:\"Heavy rain\",\n  71:\"Light snow\",73:\"Snow\",75:\"Heavy snow\",80:\"Rain showers\",85:\"Snow showers\",95:\"Thunderstorm\"\n};\nconst c = w.current || {};\nconst d = w.daily || {};\nconst text =\n`Custer weather:\nNow: ${Math.round(c.temperature_2m)}?F, feels ${Math.round(c.apparent_temperature)}?F, ${codes[c.weather_code] || \"Unknown\"}\nHumidity: ${c.relative_humidity_2m}%\nWind: ${Math.round(c.wind_speed_10m)} mph, gusts ${Math.round(c.wind_gusts_10m)} mph\nToday: ${Math.round(d.temperature_2m_min?.[0])}?F-${Math.round(d.temperature_2m_max?.[0])}?F\nRain chance: ${d.precipitation_probability_max?.[0]}%\nMax wind/gust: ${Math.round(d.wind_speed_10m_max?.[0])}/${Math.round(d.wind_gusts_10m_max?.[0])} mph`;\nmsg.payload = text;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 670,
+    "y": 120,
+    "wires": [
+      [
+        "8751e090f4b84008",
+        "8563845da011450f"
+      ]
+    ]
+  },
+  {
+    "id": "8563845da011450f",
+    "type": "debug",
+    "z": "951be7684ff54f69",
+    "name": "Weather Text",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 930,
+    "y": 170,
+    "wires": []
+  },
+  {
+    "id": "8751e090f4b84008",
+    "type": "function",
+    "z": "951be7684ff54f69",
+    "name": "Build SMS",
+    "func": "const phone = \"+16054401255\";\nconst safe = String(msg.payload || \"\").replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\");\nmsg.payload = `osascript -e 'tell application \"Messages\" to send \"${safe}\" to buddy \"${phone}\"'`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 910,
+    "y": 120,
+    "wires": [
+      [
+        "38c63c8855684eed"
+      ]
+    ]
+  },
+  {
+    "id": "5b358b6a6ff4404c",
+    "type": "inject",
+    "z": "951be7684ff54f69",
+    "name": "Route Weather Now - Outbound",
+    "props": [
+      {
+        "p": "route",
+        "v": "outbound",
+        "vt": "str"
+      },
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 190,
+    "y": 280,
+    "wires": [
+      [
+        "1ecf729f30e84ebd"
+      ]
+    ]
+  },
+  {
+    "id": "4a46e06ed99f459e",
+    "type": "inject",
+    "z": "951be7684ff54f69",
+    "name": "Route Weather Now - Return",
+    "props": [
+      {
+        "p": "route",
+        "v": "return",
+        "vt": "str"
+      },
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 180,
+    "y": 340,
+    "wires": [
+      [
+        "1ecf729f30e84ebd"
+      ]
+    ]
+  },
+  {
+    "id": "1ecf729f30e84ebd",
+    "type": "function",
+    "z": "951be7684ff54f69",
+    "name": "Build Route Stops",
+    "func": "const route = msg.route || \"outbound\";\nmsg.departureTime = msg.departureTime || new Date();\nmsg.truck = route === \"return\"\n  ? { loaded: true, grossWeight: 116000, maxSafeWind: 30, maxSafeGust: 45 }\n  : { loaded: false, grossWeight: 41000, maxSafeWind: 40, maxSafeGust: 55 };\n\nconst outbound = [\n  { order:1, name:\"Custer\", lat:43.7667, lon:-103.5988, etaHours:0 },\n  { order:2, name:\"Orange Junction\", lat:43.274, lon:-104.191, etaHours:2.5 },\n  { order:3, name:\"Casper\", lat:42.8501, lon:-106.3252, etaHours:4.0 },\n  { order:4, name:\"Rawlins\", lat:41.7911, lon:-107.2387, etaHours:6.5 },\n  { order:5, name:\"Ogden\", lat:41.223, lon:-111.9738, etaHours:10.0 }\n];\n\nconst ret = [\n  { order:1, name:\"Ogden\", lat:41.223, lon:-111.9738, etaHours:0 },\n  { order:2, name:\"Rawlins\", lat:41.7911, lon:-107.2387, etaHours:3.5 },\n  { order:3, name:\"Casper\", lat:42.8501, lon:-106.3252, etaHours:6.0 }\n];\n\nmsg.route = route;\nmsg.payload = route === \"return\" ? ret : outbound;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 470,
+    "y": 310,
+    "wires": [
+      [
+        "345bf8a936cb485c"
+      ]
+    ]
+  },
+  {
+    "id": "345bf8a936cb485c",
+    "type": "split",
+    "z": "951be7684ff54f69",
+    "name": "Split Stops",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "property": "payload",
+    "x": 670,
+    "y": 310,
+    "wires": [
+      [
+        "c281130f626d40a0"
+      ]
+    ]
+  },
+  {
+    "id": "c281130f626d40a0",
+    "type": "function",
+    "z": "951be7684ff54f69",
+    "name": "Build Stop Weather URL",
+    "func": "let p = msg.payload;\nmsg.locationName = p.name;\nmsg.order = p.order;\nmsg.etaHours = p.etaHours;\n\nlet eta = new Date(msg.departureTime.getTime() + p.etaHours * 60 * 60 * 1000);\nmsg.eta = eta;\nlet start = eta.toISOString().slice(0, 10);\n\nmsg.url = `https://api.open-meteo.com/v1/forecast?latitude=${p.lat}&longitude=${p.lon}&hourly=temperature_2m,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDenver&start_date=${start}&end_date=${start}`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 900,
+    "y": 310,
+    "wires": [
+      [
+        "a26566010237413c"
+      ]
+    ]
+  },
+  {
+    "id": "a26566010237413c",
+    "type": "http request",
+    "z": "951be7684ff54f69",
+    "name": "Get Stop Weather",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1130,
+    "y": 310,
+    "wires": [
+      [
+        "ec792ca2ae0c4b9e"
+      ]
+    ]
+  },
+  {
+    "id": "ec792ca2ae0c4b9e",
+    "type": "function",
+    "z": "951be7684ff54f69",
+    "name": "Format Stop Weather",
+    "func": "const codes = {\n  0:\"Clear\",1:\"Mainly clear\",2:\"Partly cloudy\",3:\"Overcast\",45:\"Fog\",48:\"Freezing fog\",\n  51:\"Light drizzle\",53:\"Drizzle\",55:\"Heavy drizzle\",61:\"Light rain\",63:\"Rain\",65:\"Heavy rain\",\n  71:\"Light snow\",73:\"Snow\",75:\"Heavy snow\",80:\"Rain showers\",85:\"Snow showers\",95:\"Thunderstorm\"\n};\nlet h = msg.payload.hourly || {};\nlet etaKey = msg.eta.toISOString().slice(0,13);\nlet index = (h.time || []).findIndex(t => t.slice(0,13) === etaKey);\nif (index < 0) index = 0;\n\nlet temp = Math.round(h.temperature_2m?.[index] ?? 0);\nlet wind = Math.round(h.wind_speed_10m?.[index] ?? 0);\nlet gust = Math.round(h.wind_gusts_10m?.[index] ?? 0);\nlet pop = Math.round(h.precipitation_probability?.[index] ?? 0);\nlet code = h.weather_code?.[index];\n\nlet risk = \"GO\";\nif (wind >= msg.truck.maxSafeWind || gust >= msg.truck.maxSafeGust) risk = \"NO-GO\";\nelse if (wind >= msg.truck.maxSafeWind - 5 || gust >= msg.truck.maxSafeGust - 5 || pop >= 50) risk = \"CAUTION\";\n\nmsg.payload = {\n  order: msg.order,\n  risk,\n  text: `${msg.locationName}: ${risk} - ${temp}?F, ${codes[code] || \"Unknown\"}, wind/gust ${wind}/${gust} mph, precip ${pop}%`\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1350,
+    "y": 310,
+    "wires": [
+      [
+        "1ec9a05fa88d4ddb"
+      ]
+    ]
+  },
+  {
+    "id": "1ec9a05fa88d4ddb",
+    "type": "join",
+    "z": "951be7684ff54f69",
+    "name": "Join Stops",
+    "mode": "auto",
+    "build": "array",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "accumulate": false,
+    "timeout": "",
+    "count": "",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 1150,
+    "y": 420,
+    "wires": [
+      [
+        "8079d83f898941a5"
+      ]
+    ]
+  },
+  {
+    "id": "8079d83f898941a5",
+    "type": "function",
+    "z": "951be7684ff54f69",
+    "name": "Route SMS",
+    "func": "let items = msg.payload.sort((a,b) => a.order - b.order);\nlet rows = items.map(i => i.text).join(\"\\n\");\nlet worst = items.some(i => i.risk === \"NO-GO\") ? \"NO-GO\" :\n            items.some(i => i.risk === \"CAUTION\") ? \"CAUTION\" : \"GO\";\nlet text = `Route weather: ${worst}\\n${rows}`;\nconst phone = \"+16054401255\";\nconst safe = text.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\");\nmsg.payload = `osascript -e 'tell application \"Messages\" to send \"${safe}\" to buddy \"${phone}\"'`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1340,
+    "y": 420,
+    "wires": [
+      [
+        "38c63c8855684eed"
+      ]
+    ]
+  },
+  {
+    "id": "7c84371557124c96",
+    "type": "comment",
+    "z": "be942a70f5f14ca4",
+    "name": "iMessage front door",
+    "info": "Polls the Mac Messages database. !search uses Brave; special lookups still use their helpers; ordinary approved traffic routes to HERALD Agent Harness on 192.168.36.21:8791. Replies are sent by iMessage/SMS.",
+    "x": 690,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "e02b6e71975144d1",
+    "type": "exec",
+    "z": "be942a70f5f14ca4",
+    "command": "sqlite3 \"$HOME/Library/Messages/chat.db\" \"SELECT message.ROWID, message.text, handle.id FROM message JOIN handle ON message.handle_id = handle.ROWID WHERE message.is_from_me = 0 AND message.text IS NOT NULL AND length(trim(message.text)) > 0 ORDER BY message.ROWID DESC LIMIT 1;\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Query iMessage DB",
+    "x": 420,
+    "y": 120,
+    "wires": [
+      [
+        "f2f464f5754a242f",
+        "b56760ca0e576701"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "f7296630590f48ce",
+    "type": "exec",
+    "z": "be942a70f5f14ca4",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send Reply via iMessage",
+    "x": 2340,
+    "y": 620,
+    "wires": [
+      [
+        "1b6b5a2a5a4047ce"
+      ],
+      [
+        "1b6b5a2a5a4047ce"
+      ],
+      [
+        "1b6b5a2a5a4047ce"
+      ]
+    ]
+  },
+  {
+    "id": "2a94bc23a3894b2d",
+    "type": "inject",
+    "z": "be942a70f5f14ca4",
+    "name": "Poll every 2s (disabled; reliable worker owns bridge)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 120,
+    "wires": [
+      [
+        "e02b6e71975144d1"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "127d4b52bfe042a9",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Parse SQLite Result",
+    "func": "const result = msg.payload ? msg.payload.trim() : \"\";\nif (!result || result.startsWith(\"Error:\")) return null;\n\nconst parts = result.split('|');\nif (parts.length < 2) return null;\n\nmsg.payload = parts.slice(0, -1).join('|').trim();\nmsg.sender = parts[parts.length - 1].trim();\nif (!msg.payload || !msg.sender) return null;\n\nconst normalized = msg.sender.replace(/[^0-9]/g, \"\");\nconst contacts = {\n    \"16054401255\": { name: \"William\", phone: \"+16054401255\" },\n    \"16054403400\": { name: \"Shawn\", phone: \"+16054403400\" }\n};\nconst contact = contacts[normalized] || { name: \"Unknown sender\", phone: msg.sender };\nmsg.person = contact;\nmsg.senderName = contact.name;\nmsg.contactKey = normalized || msg.sender;\nmsg.replyTo = contact.phone || msg.sender;\nmsg.topic = String(msg.imessageRowid || Date.now());\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 480,
+    "y": 440,
+    "wires": [
+      [
+        "7cad4f9130ea49ad"
+      ]
+    ]
+  },
+  {
+    "id": "7cad4f9130ea49ad",
+    "type": "rbe",
+    "z": "be942a70f5f14ca4",
+    "name": "Only New Messages",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": false,
+    "property": "topic",
+    "topi": "topic",
+    "x": 350,
+    "y": 720,
+    "wires": [
+      [
+        "ab11c278f9734f0e"
+      ]
+    ]
+  },
+  {
+    "id": "ab11c278f9734f0e",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Route Search or Herald",
+    "func": "const ALLOWED_CONTACTS = new Set([\"16054401255\", \"16054403400\"]);\nlet text = String(msg.payload || \"\").trim();\nif (!text) return null;\nconst senderKey = String(msg.contactKey || msg.sender || \"\").replace(/[^0-9]/g, \"\");\nif (!ALLOWED_CONTACTS.has(senderKey)) {\n    node.warn(\"Ignored iMessage command from an unapproved sender\");\n    return null;\n}\nmsg.userText = text;\nconst lower = text.toLowerCase();\n// Herald is now the central iMessage manager.  Previous Vega-prefixed\n// messages should route to Herald too, rather than the old local Vega chat.\nconst isVega = false;\nconst isBillLookup = lower.startsWith(\"!bos\") || lower.startsWith(\"!bill\") || lower.includes(\"bill of sale\") || lower.includes(\"bills of sale\");\nconst isBusinessLookup = lower.startsWith(\"!biz\") || lower.startsWith(\"!business\") || lower.startsWith(\"!rag\") || lower.includes(\"business folder\") || lower.includes(\"in business\") || lower.includes(\"from business\");\nconst isMailReview = lower === \"mail\" || lower === \"mail review\" || lower === \"mail status\";\nif (lower.startsWith(\"!search\")) return [msg, null, null, null, null, null];\nif (isBillLookup) return [null, msg, null, null, null, null];\nif (isBusinessLookup) return [null, null, msg, null, null, null];\nif (isMailReview) return [null, null, null, null, msg, null];\nreturn [null, null, null, null, msg, null];",
+    "outputs": 6,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 580,
+    "y": 720,
+    "wires": [
+      [
+        "5b2d1604a3c64c9e"
+      ],
+      [
+        "73f5e9733254d576"
+      ],
+      [
+        "09233dfdf73cca52"
+      ],
+      [
+        "265a9ab6a5379e7e"
+      ],
+      [
+        "b25322bfeda8468f"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "1b6b5a2a5a4047ce",
+    "type": "debug",
+    "z": "be942a70f5f14ca4",
+    "name": "Outgoing iMessage",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2310,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "5b2d1604a3c64c9e",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Build Brave Search",
+    "func": "const cleanQuery = String(msg.userText || msg.payload || \"\").replace(/^!search\\s+/i, \"\").trim();\nmsg.url = \"https://api.search.brave.com/res/v1/web/search?q=\" + encodeURIComponent(cleanQuery);\nmsg.headers = {\n    \"Accept\": \"application/json\",\n    \"X-Subscription-Token\": \"${BRAVE_API_KEY}\"\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1130,
+    "y": 580,
+    "wires": [
+      [
+        "4eab2a56a4644298"
+      ]
+    ]
+  },
+  {
+    "id": "4eab2a56a4644298",
+    "type": "http request",
+    "z": "be942a70f5f14ca4",
+    "name": "Brave Search",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1350,
+    "y": 580,
+    "wires": [
+      [
+        "597d34fbd45f47cf"
+      ]
+    ]
+  },
+  {
+    "id": "597d34fbd45f47cf",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Summarize Search Results",
+    "func": "function cleanText(text) {\n    return String(text || \"\").replace(/<[^>]*>/g, \"\").replace(/&#x27;/g, \"'\").replace(/&quot;/g, '\"').replace(/&amp;/g, \"&\");\n}\nconst results = msg.payload?.web?.results || [];\nif (!results.length) {\n    msg.payload = \"I searched, but did not find useful results.\";\n    return msg;\n}\nmsg.payload = results.slice(0, 3).map((r, i) =>\n    `${i+1}. ${cleanText(r.title)}\\n${cleanText(r.description || r.snippet || \"\")}\\n${r.url || \"\"}`\n).join(\"\\n\\n\");\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1600,
+    "y": 580,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ]
+    ]
+  },
+  {
+    "id": "b25322bfeda8468f",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Build Herald Agent Harness Request",
+    "func": "const userText = String(msg.userText || msg.payload || \"\").trim();\nif (!userText) return null;\n\nconst requestMsg = {...msg};\nrequestMsg.url = \"http://192.168.36.21:8791/message\";\nrequestMsg.method = \"POST\";\nrequestMsg.headers = { \"Content-Type\": \"application/json\" };\nrequestMsg.payload = {\n    message: userText,\n    user: msg.senderName || \"william\",\n    channel: \"max-imessage\"\n};\n\n// No immediate \"working on it\" acknowledgement here.  Herald is the central\n// manager now, so the iMessage reply should be Herald's actual answer.\nreturn [null, requestMsg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1130,
+    "y": 680,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ],
+      [
+        "263dc581f289476a"
+      ]
+    ]
+  },
+  {
+    "id": "263dc581f289476a",
+    "type": "http request",
+    "z": "be942a70f5f14ca4",
+    "name": "HERALD Agent Harness /message",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/message",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 1360,
+    "y": 680,
+    "wires": [
+      [
+        "ea7502927eae4320"
+      ]
+    ]
+  },
+  {
+    "id": "ea7502927eae4320",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Parse Herald Agent Harness Response",
+    "func": "if (msg.error) {\n    const detail = msg.error.message || String(msg.error);\n    msg.payload = `Herald: I hit a routing error inside Max/Node-RED: ${detail}. No action was confirmed.`;\n    return msg;\n}\n\nconst res = msg.payload || {};\nlet answer =\n    res.reply ||\n    res.result?.summary ||\n    res.result?.reply ||\n    res.answer ||\n    res.message?.content ||\n    res.choices?.[0]?.message?.content ||\n    \"\";\n\nif (!answer && res.status === \"blocked\" && res.reason) {\n    answer = `Blocked by policy: ${res.reason}`;\n} else if (!answer && (res.status === \"failed\" || (Array.isArray(res.errors) && res.errors.length))) {\n    const detail = Array.isArray(res.errors) && res.errors[0] ? (res.errors[0].message || JSON.stringify(res.errors[0])) : \"unknown error\";\n    answer = `I hit an error and logged it: ${detail}.`;\n} else if (!answer) {\n    answer = \"I got a response but could not parse it. I logged the bad response for repair.\";\n}\n\nanswer = String(answer).trim();\nif (!/^(herald|max|iris|ledger|scout|archivist|athena|forge):/i.test(answer)) {\n    answer = \"Herald: \" + answer;\n}\nmsg.payload = answer;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1600,
+    "y": 680,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ]
+    ]
+  },
+  {
+    "id": "3723ce5a3f384534",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Format Outbound iMessage",
+    "func": "const raw = String(msg.payload || \"\").trim();\nconst recipient = String(msg.replyTo || msg.person?.phone || msg.sender || \"\").trim();\nif (!raw || !recipient) {\n    node.warn(\"Cannot send iMessage reply; raw=\" + Boolean(raw) + \", recipient=\" + (recipient || \"(missing)\"));\n    return null;\n}\n\n// A single sender process owns every part, so Messages sends them in order.\nconst maxLen = 3500;\nconst chunks = [];\nlet remaining = raw;\nwhile (remaining.length > maxLen) {\n    let cut = remaining.lastIndexOf(\"\\n\", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\". \", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\" \", maxLen);\n    if (cut < 1200) cut = maxLen;\n    chunks.push(remaining.slice(0, cut).trim());\n    remaining = remaining.slice(cut).trim();\n}\nif (remaining) chunks.push(remaining);\nfor (let i = 0; i < chunks.length; i++) {\n    if (chunks.length > 1) chunks[i] = \"(\" + (i + 1) + \"/\" + chunks.length + \") \" + chunks[i];\n}\nmsg.payload = Buffer.from(JSON.stringify({to: recipient, chunks}), \"utf8\").toString(\"base64\");\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1960,
+    "y": 620,
+    "wires": [
+      [
+        "f7296630590f48ce",
+        "1b6b5a2a5a4047ce"
+      ]
+    ]
+  },
+  {
+    "id": "f2f464f5754a242f",
+    "type": "debug",
+    "z": "be942a70f5f14ca4",
+    "name": "debug 1",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 620,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "1985b68874c9253f",
+    "type": "comment",
+    "z": "be942a70f5f14ca4",
+    "name": "Bills of Sale SMS lookup",
+    "info": "Bills of Sale texts are forwarded to the local helper on 192.168.36.10:5055, which can read P:\\Business and query Ollama, then this flow replies to the original iMessage sender.",
+    "x": 1170,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "73f5e9733254d576",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Build Bills helper request",
+    "func": "msg.url = \"http://192.168.36.10:5055/bills-of-sale\";\nmsg.headers = {\"Content-Type\": \"application/json\"};\nmsg.payload = {\n    sender: msg.sender || \"\",\n    message: msg.userText || msg.payload || \"\"\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1150,
+    "y": 380,
+    "wires": [
+      [
+        "e12b6532c9fa01b5"
+      ]
+    ]
+  },
+  {
+    "id": "e12b6532c9fa01b5",
+    "type": "http request",
+    "z": "be942a70f5f14ca4",
+    "name": "Bills helper lookup",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1410,
+    "y": 380,
+    "wires": [
+      [
+        "4c27aae16fd38cb1"
+      ]
+    ]
+  },
+  {
+    "id": "4c27aae16fd38cb1",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Parse Bills helper reply",
+    "func": "const res = msg.payload || {};\nmsg.payload = res.reply || res.error || \"I could not complete the Bills of Sale lookup.\";\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 380,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ]
+    ]
+  },
+  {
+    "id": "ea8dbb43d678450d",
+    "type": "comment",
+    "z": "be942a70f5f14ca4",
+    "name": "Business folder SMS lookup",
+    "info": "Text !biz, !business, !rag, or mention business folder. Node-RED asks the local Business RAG helper on 192.168.36.10:5056 and replies to the original iMessage sender.",
+    "x": 1170,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "09233dfdf73cca52",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Build Business RAG request",
+    "func": "let text = String(msg.userText || msg.payload || \"\").trim();\ntext = text\n    .replace(/^!(biz|business|rag)\\b/i, \"\")\n    .replace(/^\\s+/, \"\");\nmsg.url = \"http://192.168.36.10:5056/query\";\nmsg.headers = {\"Content-Type\": \"application/json\"};\nmsg.payload = {\n    question: text || msg.userText || msg.payload,\n    top_k: 8\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1160,
+    "y": 820,
+    "wires": [
+      [
+        "394cb7dd0d714c1f"
+      ]
+    ]
+  },
+  {
+    "id": "394cb7dd0d714c1f",
+    "type": "http request",
+    "z": "be942a70f5f14ca4",
+    "name": "Business RAG lookup",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1420,
+    "y": 820,
+    "wires": [
+      [
+        "927d2566f1b5ec21"
+      ]
+    ]
+  },
+  {
+    "id": "927d2566f1b5ec21",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Parse Business RAG reply",
+    "func": "const res = msg.payload || {};\nif (res.answer) {\n    const sources = Array.isArray(res.sources) ? res.sources.slice(0, 3).map(s => s.file).filter(Boolean) : [];\n    msg.payload = sources.length ? res.answer + \"\\n\\nSources: \" + sources.join(\"; \") : res.answer;\n} else {\n    msg.payload = res.error || \"I could not answer from the Business folder index.\";\n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1670,
+    "y": 820,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ]
+    ]
+  },
+  {
+    "id": "d41ea305cb5e08a5",
+    "type": "comment",
+    "z": "be942a70f5f14ca4",
+    "name": "Codex iMessage sender",
+    "info": "POST JSON to /codex/send-imessage with {to, message}. If to is omitted, it sends to William. Message text is automatically prefixed with Codex:.",
+    "x": 1150,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "22ee65dbed10a2be",
+    "type": "http in",
+    "z": "be942a70f5f14ca4",
+    "name": "Codex Send HTTP In",
+    "url": "/codex/send-imessage",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 1130,
+    "y": 960,
+    "wires": [
+      [
+        "2ec5db817312c13c"
+      ]
+    ]
+  },
+  {
+    "id": "2ec5db817312c13c",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Format Codex iMessage",
+    "func": "const body = msg.payload || {};\nconst to = String(body.to || body.recipient || \"+16054401255\").trim();\nlet text = String(body.message || body.text || \"\").trim();\nif (!text) {\n    msg.statusCode = 400;\n    msg.payload = {ok:false, error:\"Missing message\"};\n    return [null, msg];\n}\nif (!text.toLowerCase().startsWith(\"codex:\") && !text.toLowerCase().startsWith(\"max:\")) {\n    text = \"Max: \" + text;\n}\n\n// One sender process owns the entire delivery, preserving chronological order.\nconst maxLen = 3500;\nconst chunks = [];\nlet remaining = text;\nwhile (remaining.length > maxLen) {\n    let cut = remaining.lastIndexOf(\"\\n\", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\". \", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\" \", maxLen);\n    if (cut < 1200) cut = maxLen;\n    chunks.push(remaining.slice(0, cut).trim());\n    remaining = remaining.slice(cut).trim();\n}\nif (remaining) chunks.push(remaining);\nfor (let i = 0; i < chunks.length; i++) {\n    if (chunks.length > 1) chunks[i] = \"(\" + (i + 1) + \"/\" + chunks.length + \") \" + chunks[i];\n}\nconst encoded = Buffer.from(JSON.stringify({to, chunks}), \"utf8\").toString(\"base64\");\nnode.send([{payload: encoded}, null]);\nmsg.payload = {ok:true, to, chunks:chunks.length, message:text};\nreturn [null, msg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1390,
+    "y": 960,
+    "wires": [
+      [
+        "0073bf5b0c6d575f"
+      ],
+      [
+        "b5da46015588ed8d"
+      ]
+    ]
+  },
+  {
+    "id": "0073bf5b0c6d575f",
+    "type": "exec",
+    "z": "be942a70f5f14ca4",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send Codex iMessage",
+    "x": 1660,
+    "y": 940,
+    "wires": [
+      [
+        "78e46fb8d10c14f6"
+      ],
+      [
+        "78e46fb8d10c14f6"
+      ],
+      [
+        "78e46fb8d10c14f6"
+      ]
+    ]
+  },
+  {
+    "id": "78e46fb8d10c14f6",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Codex Send Response",
+    "func": "msg.payload = msg.codexResponse || {ok:true};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1910,
+    "y": 940,
+    "wires": [
+      [
+        "0f2e87fe5d86a065"
+      ]
+    ]
+  },
+  {
+    "id": "0f2e87fe5d86a065",
+    "type": "http response",
+    "z": "be942a70f5f14ca4",
+    "name": "Codex Send HTTP Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 2210,
+    "y": 940,
+    "wires": []
+  },
+  {
+    "id": "b5da46015588ed8d",
+    "type": "http response",
+    "z": "be942a70f5f14ca4",
+    "name": "Codex Send HTTP Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 1670,
+    "y": 1020,
+    "wires": []
+  },
+  {
+    "id": "1756b864d2ad4289",
+    "type": "comment",
+    "z": "be942a70f5f14ca4",
+    "name": "Legacy Vega iMessage chat disabled - routes now go to Herald",
+    "info": "Start an iMessage with Vega, Vega: or Hey Vega to chat with the local Ollama persona. Replies are sent back through the existing iMessage sender.",
+    "x": 1150,
+    "y": 1100,
+    "wires": []
+  },
+  {
+    "id": "265a9ab6a5379e7e",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Legacy Vega chat request disabled",
+    "func": "let text = String(msg.userText || msg.payload || \"\").trim();\ntext = text\n    .replace(/^hey\\s+vega[,:]?\\s*/i, \"\")\n    .replace(/^hi\\s+vega[,:]?\\s*/i, \"\")\n    .replace(/^vega[,:]?\\s*/i, \"\")\n    .trim();\nif (!text) text = \"Hello.\";\n\nconst sender = String(msg.sender || \"default\");\nconst key = \"vega_history_\" + sender.replace(/[^a-zA-Z0-9_+-]/g, \"_\");\nlet history = global.get(key) || [];\nhistory.push({ role: \"user\", content: text });\nhistory = history.slice(-12);\nglobal.set(key, history);\n\nmsg.vegaHistoryKey = key;\nmsg.url = \"http://192.168.36.10:11434/api/chat\";\nmsg.headers = {\"Content-Type\": \"application/json\"};\nmsg.payload = {\n    model: \"gemma4\",\n    stream: false,\n    messages: [\n        {\n            role: \"system\",\n            content: \"You are Vega, William's local assistant reached through iMessage. Be warm, direct, practical, and concise. If you need Business-folder facts, tell William to ask with !biz or mention business folder. Do not claim to be Codex; you are Vega running locally through Max/Node-RED/Ollama.\"\n        },\n        ...history\n    ]\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1150,
+    "y": 1140,
+    "wires": [
+      [
+        "0fb4be8ce3f08b11"
+      ]
+    ]
+  },
+  {
+    "id": "0fb4be8ce3f08b11",
+    "type": "http request",
+    "z": "be942a70f5f14ca4",
+    "name": "Ollama Vega chat",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1410,
+    "y": 1140,
+    "wires": [
+      [
+        "5f6b2971cda3f4fe"
+      ]
+    ]
+  },
+  {
+    "id": "5f6b2971cda3f4fe",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Parse Vega reply",
+    "func": "const res = msg.payload || {};\nlet answer =\n    res?.message?.content ||\n    res?.response ||\n    res?.choices?.[0]?.message?.content ||\n    \"Vega: I got a response, but could not parse it.\";\nanswer = String(answer).replace(/<channel\\|?>/g, \"\").trim();\nif (!answer.toLowerCase().startsWith(\"vega:\")) {\n    answer = \"Vega: \" + answer;\n}\n\nconst key = msg.vegaHistoryKey;\nif (key) {\n    let history = global.get(key) || [];\n    history.push({ role: \"assistant\", content: answer.replace(/^Vega:\\s*/i, \"\") });\n    global.set(key, history.slice(-12));\n}\n\nmsg.payload = answer;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1640,
+    "y": 1140,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ]
+    ]
+  },
+  {
+    "id": "b56760ca0e576701",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Ignore Old iMessages",
+    "func": "const raw = String(msg.payload || \"\").trim();\nif (!raw) return null;\n\n// Expected format:\n// ROWID|message text|sender\nconst parts = raw.split(\"|\");\nif (parts.length < 3) return null;\n\nconst rowid = Number(parts.shift());\nconst sender = parts.pop();\nconst text = parts.join(\"|\").trim();\n\nif (!Number.isFinite(rowid) || !text) return null;\n\nconst lastKey = \"last_imessage_rowid\";\nconst lastSeen = Number(global.get(lastKey) || 0);\n\n// First run after deploy: learn the newest message, but do not process it.\nif (!lastSeen) {\n    global.set(lastKey, rowid);\n    node.status({ fill: \"blue\", shape: \"ring\", text: `primed at ROWID ${rowid}` });\n    return null;\n}\n\n// Ignore anything already seen.\nif (rowid <= lastSeen) {\n    return null;\n}\n\n// Save newest seen message.\nglobal.set(lastKey, rowid);\n\nmsg.imessageRowid = rowid;\nmsg.topic = String(rowid);\n\n// Keep Parse SQLite Result happy\nmsg.payload = `${text}|${sender}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 720,
+    "y": 140,
+    "wires": [
+      [
+        "127d4b52bfe042a9"
+      ]
+    ]
+  },
+  {
+    "id": "vega_sim_http_in",
+    "type": "http in",
+    "z": "be942a70f5f14ca4",
+    "name": "POST /vega/simulate-imessage",
+    "url": "/vega/simulate-imessage",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 820,
+    "wires": [
+      [
+        "vega_sim_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "vega_sim_prepare",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Prepare simulated iMessage",
+    "func": "let body = msg.payload || {};\nif (typeof body === \"string\") {\n    try { body = JSON.parse(body); } catch (e) { body = {}; }\n}\nconst text = String(body.message || body.prompt || \"\").trim();\nif (!text) {\n    msg.statusCode = 400;\n    msg.payload = { ok: false, error: \"message is required\" };\n    return [null, msg];\n}\nconst sender = String(body.sender || body.to || \"+16054401255\").trim();\nconst normalized = sender.replace(/[^0-9]/g, \"\");\nconst contacts = {\n    \"16054401255\": { name: \"William\", phone: \"+16054401255\" },\n    \"16054403400\": { name: \"Shawn\", phone: \"+16054403400\" }\n};\nconst contact = contacts[normalized] || { name: \"Unknown sender\", phone: sender };\nconst routeMsg = {...msg};\nrouteMsg.payload = text;\nrouteMsg.userText = text;\nrouteMsg.sender = contact.phone;\nrouteMsg.replyTo = contact.phone;\nrouteMsg.senderName = contact.name;\nrouteMsg.person = contact;\nrouteMsg.contactKey = normalized || sender;\nrouteMsg.topic = \"sim-\" + Date.now();\nrouteMsg._simulated = true;\n\nconst responseMsg = {...msg};\nresponseMsg.statusCode = 202;\nresponseMsg.payload = { ok: true, routed: true, message: text, sender: contact.phone };\nreturn [routeMsg, responseMsg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 820,
+    "wires": [
+      [
+        "ab11c278f9734f0e"
+      ],
+      [
+        "vega_sim_http_response"
+      ]
+    ]
+  },
+  {
+    "id": "vega_sim_http_response",
+    "type": "http response",
+    "z": "be942a70f5f14ca4",
+    "name": "Return simulate response",
+    "statusCode": "",
+    "headers": {},
+    "x": 720,
+    "y": 860,
+    "wires": []
+  },
+  {
+    "id": "vega_frontdoor_catch",
+    "type": "catch",
+    "z": "be942a70f5f14ca4",
+    "name": "Vega front-door errors",
+    "scope": [
+      "263dc581f289476a",
+      "ea7502927eae4320"
+    ],
+    "uncaught": false,
+    "x": 1350,
+    "y": 780,
+    "wires": [
+      [
+        "vega_frontdoor_error_format"
+      ]
+    ]
+  },
+  {
+    "id": "vega_frontdoor_error_format",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Format Herald front-door error",
+    "func": "const detail = msg.error && msg.error.message ? msg.error.message : \"unknown request error\";\n// Say only what the transport proved.  Do not imply recovery, execution, or\n// a change to Gmail when Herald never answered the request.\nmsg.payload = \"Herald: I could not process this request because I could not reach the harness: \" + detail + \". No action was confirmed. Please resend it once the service is back.\";\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1600,
+    "y": 780,
+    "wires": [
+      [
+        "3723ce5a3f384534"
+      ]
+    ]
+  },
+  {
+    "id": "3b2dc8f6f66a4558",
+    "type": "comment",
+    "z": "036a959d05ba4e43",
+    "name": "Odoo",
+    "info": "Basic XML-RPC test preserved from your backup. The inject is manual so it will not run automatically.",
+    "x": 400,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "182cf87bf92d4755",
+    "type": "debug",
+    "z": "036a959d05ba4e43",
+    "name": "Odoo Response",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1120,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "f195a2e920714ba9",
+    "type": "inject",
+    "z": "036a959d05ba4e43",
+    "name": "Test Odoo partner search",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 140,
+    "wires": [
+      [
+        "74d4a24269ae48f9"
+      ]
+    ]
+  },
+  {
+    "id": "74d4a24269ae48f9",
+    "type": "function",
+    "z": "036a959d05ba4e43",
+    "name": "DISABLED old Odoo experiment - no embedded credential",
+    "func": "node.warn(\"Old Node-RED Odoo experiment is disabled. Odoo access is handled by Herald Agent Harness. No credential is stored in this flow.\");\nreturn null;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 140,
+    "wires": [
+      [
+        "26fc6c6d53594294"
+      ]
+    ]
+  },
+  {
+    "id": "26fc6c6d53594294",
+    "type": "http request",
+    "z": "036a959d05ba4e43",
+    "name": "Odoo common/authenticate",
+    "method": "POST",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https:/reflectsody-llc.odoo.com/xmlrpc/2/common",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 700,
+    "y": 140,
+    "wires": [
+      [
+        "7e561ecad161477b"
+      ]
+    ]
+  },
+  {
+    "id": "7e561ecad161477b",
+    "type": "function",
+    "z": "036a959d05ba4e43",
+    "name": "Build Partner Search",
+    "func": "let match = String(msg.payload || \"\").match(/<int>(\\d+)<\\/int>/);\nif (!match) {\n    node.error(\"Odoo login failed. Check db, username, API key/password.\", msg);\n    return null;\n}\nmsg.odoo.uid = parseInt(match[1]);\n\nmsg.headers = { \"Content-Type\": \"text/xml\" };\nmsg.payload = `<?xml version=\"1.0\"?>\n<methodCall>\n  <methodName>execute_kw</methodName>\n  <params>\n    <param><value><string>${msg.odoo.db}</string></value></param>\n    <param><value><int>${msg.odoo.uid}</int></value></param>\n    <param><value><string>${msg.odoo.apiKey}</string></value></param>\n    <param><value><string>res.partner</string></value></param>\n    <param><value><string>search_read</string></value></param>\n    <param><value><array><data>\n      <value><array><data></data></array></value>\n    </data></array></value></param>\n    <param><value><struct>\n      <member><name>fields</name><value><array><data>\n        <value><string>name</string></value>\n        <value><string>email</string></value>\n      </data></array></value></member>\n      <member><name>limit</name><value><int>5</int></value></member>\n    </struct></value></param>\n  </params>\n</methodCall>`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 950,
+    "y": 140,
+    "wires": [
+      [
+        "56535eea0598462f"
+      ]
+    ]
+  },
+  {
+    "id": "56535eea0598462f",
+    "type": "http request",
+    "z": "036a959d05ba4e43",
+    "name": "Odoo object call",
+    "method": "POST",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https:/reflectsody-llc.odoo.com/xmlrpc/2/object",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 700,
+    "y": 240,
+    "wires": [
+      [
+        "182cf87bf92d4755"
+      ]
+    ]
+  },
+  {
+    "id": "484efacf881567d2",
+    "type": "inject",
+    "z": "6a0a47c5df3bab82",
+    "name": "Update Gemma",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 240,
+    "wires": [
+      [
+        "adefb394de96fa0d"
+      ]
+    ]
+  },
+  {
+    "id": "adefb394de96fa0d",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "ssh wasch@192.168.36.10 \"ollama pull gemma4:latest && echo --- RUNNING --- && ollama ps\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 610,
+    "y": 240,
+    "wires": [
+      [
+        "02db495ee5b81232"
+      ],
+      [
+        "78d46f7c9a6fd9fe"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "80d71c2fd7f6f8b3",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Update Gemma",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1480,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "02db495ee5b81232",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Format Gemma Report",
+    "func": "let output = msg.payload || \"\";\n\nmsg.payload =\n`Gemma update check complete.\n\nModel: gemma4:latest\nStatus: pulled successfully\n\nHAL Ollama output:\n${output}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1190,
+    "y": 160,
+    "wires": [
+      [
+        "80d71c2fd7f6f8b3"
+      ]
+    ]
+  },
+  {
+    "id": "2179f1968f66b41a",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "ssh wasch@192.168.36.10 \"ollama list\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 500,
+    "y": 640,
+    "wires": [
+      [
+        "625c7903e7a61fd0"
+      ],
+      [
+        "4719a4eb9978df6a"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "625c7903e7a61fd0",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "LLm Inventory",
+    "func": "let lines = msg.payload.split('\\n');\n\nlet models = [];\n\nfor (let line of lines) {\n    if (\n        line.includes('gemma') ||\n        line.includes('llama') ||\n        line.includes('qwen') ||\n        line.includes('dolphin')\n    ) {\n        models.push(line.trim());\n    }\n}\n\nmsg.payload =\n`HAL Model Inventory\n\n${models.join('\\n')}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 820,
+    "y": 560,
+    "wires": [
+      [
+        "ed85324a2a6bfe86"
+      ]
+    ]
+  },
+  {
+    "id": "c498cce30a60c233",
+    "type": "inject",
+    "z": "6a0a47c5df3bab82",
+    "name": "Model Inventory",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 180,
+    "y": 640,
+    "wires": [
+      [
+        "2179f1968f66b41a"
+      ]
+    ]
+  },
+  {
+    "id": "ed85324a2a6bfe86",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Model Inventory",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1360,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "07c87cc3bf1d5296",
+    "type": "inject",
+    "z": "6a0a47c5df3bab82",
+    "name": "Running Model Status",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 220,
+    "y": 1000,
+    "wires": [
+      [
+        "6894f0f555d4dca4"
+      ]
+    ]
+  },
+  {
+    "id": "6894f0f555d4dca4",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "ssh wasch@192.168.36.10 \"ollama ps\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 550,
+    "y": 1000,
+    "wires": [
+      [
+        "16cb95d7aea67608"
+      ],
+      [
+        "f49911f640dc40f7"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "16cb95d7aea67608",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "HAL's Current LLM",
+    "func": "let output = msg.payload || \"\";\n\nmsg.payload =\n`HAL Running Model Status\n\n${output.trim() || \"No models currently running.\"}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 960,
+    "wires": [
+      [
+        "c0226fbab0db7a43"
+      ]
+    ]
+  },
+  {
+    "id": "c0226fbab0db7a43",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Current LLM Status",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1390,
+    "y": 960,
+    "wires": []
+  },
+  {
+    "id": "78d46f7c9a6fd9fe",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Format HAL Error",
+    "func": "let err = msg.payload;\n\nif (err === undefined || err === null) return null;\n\nif (Buffer.isBuffer(err)) {\n    err = err.toString(\"utf8\");\n}\n\nif (typeof err !== \"string\") {\n    err = JSON.stringify(err, null, 2);\n}\n\n// Ignore Ollama pull progress/spinner noise\nif (\n    err.includes(\"pulling manifest\") ||\n    err.includes(\"pulling\") ||\n    err.includes(\"verifying sha256\") ||\n    err.includes(\"writing manifest\") ||\n    err.includes(\"success\")\n) {\n    return null;\n}\n\nif (!err.trim()) return null;\n\nmsg.payload =\n`HAL command error\n\n${err}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1170,
+    "y": 240,
+    "wires": [
+      [
+        "cb946310545c5991"
+      ]
+    ]
+  },
+  {
+    "id": "4719a4eb9978df6a",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Format HAL Error",
+    "func": "let err = msg.payload;\n\nif (err === undefined || err === null) return null;\n\nif (Buffer.isBuffer(err)) {\n    err = err.toString(\"utf8\");\n}\n\nif (typeof err !== \"string\") {\n    err = JSON.stringify(err, null, 2);\n}\n\n// Ignore Ollama pull progress/spinner noise\nif (\n    err.includes(\"pulling manifest\") ||\n    err.includes(\"pulling\") ||\n    err.includes(\"verifying sha256\") ||\n    err.includes(\"writing manifest\") ||\n    err.includes(\"success\")\n) {\n    return null;\n}\n\nif (!err.trim()) return null;\n\nmsg.payload =\n`HAL command error\n\n${err}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 830,
+    "y": 640,
+    "wires": [
+      [
+        "abc8ab0099ca9509"
+      ]
+    ]
+  },
+  {
+    "id": "f49911f640dc40f7",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Format HAL Error",
+    "func": "let err = msg.payload;\n\nif (err === undefined || err === null) return null;\n\nif (Buffer.isBuffer(err)) {\n    err = err.toString(\"utf8\");\n}\n\nif (typeof err !== \"string\") {\n    err = JSON.stringify(err, null, 2);\n}\n\n// Ignore Ollama pull progress/spinner noise\nif (\n    err.includes(\"pulling manifest\") ||\n    err.includes(\"pulling\") ||\n    err.includes(\"verifying sha256\") ||\n    err.includes(\"writing manifest\") ||\n    err.includes(\"success\")\n) {\n    return null;\n}\n\nif (!err.trim()) return null;\n\nmsg.payload =\n`HAL command error\n\n${err}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1030,
+    "y": 1020,
+    "wires": [
+      [
+        "2ba507e2482edd85"
+      ]
+    ]
+  },
+  {
+    "id": "2ba507e2482edd85",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "LLM Status Debug",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1390,
+    "y": 1020,
+    "wires": []
+  },
+  {
+    "id": "abc8ab0099ca9509",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Model Inventory Error",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1400,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "cb946310545c5991",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Update Gemma Error",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1460,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "924aa42529e9103c",
+    "type": "inject",
+    "z": "6a0a47c5df3bab82",
+    "name": "LLM Details",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 230,
+    "y": 1200,
+    "wires": [
+      [
+        "03ab065ff001304b"
+      ]
+    ]
+  },
+  {
+    "id": "93defbdd387c7108",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "LLM Details",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1410,
+    "y": 1200,
+    "wires": []
+  },
+  {
+    "id": "7f841220a9087b40",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "LLM Details",
+    "func": "msg.payload =\n`Gemma4 Details\n\n${msg.payload}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 950,
+    "y": 1200,
+    "wires": [
+      [
+        "93defbdd387c7108"
+      ]
+    ]
+  },
+  {
+    "id": "03ab065ff001304b",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "ssh wasch@192.168.36.10 \"ollama show gemma4:latest\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 590,
+    "y": 1200,
+    "wires": [
+      [
+        "7f841220a9087b40"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "a3668944ec462e94",
+    "type": "inject",
+    "z": "6a0a47c5df3bab82",
+    "name": "Update Dolphin",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 220,
+    "y": 1480,
+    "wires": [
+      [
+        "174cb09194e3597c"
+      ]
+    ]
+  },
+  {
+    "id": "174cb09194e3597c",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "ssh wasch@192.168.36.10 \"ollama pull dolphin3:latest && ollama show dolphin3:latest\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 660,
+    "y": 1480,
+    "wires": [
+      [
+        "48933703af2b6faf"
+      ],
+      [
+        "cd30e58c5ba7b186"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "55f3de580348e082",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Update Dolphin",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1560,
+    "y": 1400,
+    "wires": []
+  },
+  {
+    "id": "48933703af2b6faf",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Format Dophin Report",
+    "func": "let output = msg.payload || \"\";\n\nmsg.payload =\n`Dolphin update check complete.\n\nModel: dolphin3:latest\nStatus: pulled successfully\n\nHAL Ollama output:\n${output}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1260,
+    "y": 1400,
+    "wires": [
+      [
+        "55f3de580348e082"
+      ]
+    ]
+  },
+  {
+    "id": "cd30e58c5ba7b186",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Format HAL Error",
+    "func": "let err = msg.payload;\n\nif (err === undefined || err === null) return null;\n\nif (Buffer.isBuffer(err)) {\n    err = err.toString(\"utf8\");\n}\n\nif (typeof err !== \"string\") {\n    err = JSON.stringify(err, null, 2);\n}\n\n// Ignore Ollama pull progress/spinner noise\nif (\n    err.includes(\"pulling manifest\") ||\n    err.includes(\"pulling\") ||\n    err.includes(\"verifying sha256\") ||\n    err.includes(\"writing manifest\") ||\n    err.includes(\"success\")\n) {\n    return null;\n}\n\nif (!err.trim()) return null;\n\nmsg.payload =\n`HAL command error\n\n${err}`;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1250,
+    "y": 1480,
+    "wires": [
+      [
+        "eeb42d60ef788bf2"
+      ]
+    ]
+  },
+  {
+    "id": "eeb42d60ef788bf2",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Update Dolphin Error",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1540,
+    "y": 1480,
+    "wires": []
+  },
+  {
+    "id": "eae07c9cf54e8eeb",
+    "type": "inject",
+    "z": "6a0a47c5df3bab82",
+    "name": "Check LLM Updates",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": "15",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 230,
+    "y": 1880,
+    "wires": [
+      [
+        "41bf9640fffb146f"
+      ]
+    ]
+  },
+  {
+    "id": "72e59c1b14f8187c",
+    "type": "function",
+    "z": "6a0a47c5df3bab82",
+    "name": "Build LLM Report",
+    "func": "const phone = \"+16054401255\";\nconst halOutput = String(msg.payload || \"\").trim();\n\nlet recommendation = \"Test qwen2.5-coder:7b next.\";\nlet reason = \"It is a better fit for Node-RED, scripting, config work, and Max system building.\";\n\nif (halOutput.includes(\"qwen2.5-coder:7b\")) {\n    recommendation = \"No new install needed right now.\";\n    reason = \"qwen2.5-coder:7b already appears to be installed on HAL.\";\n}\n\nlet lines = [];\nlines.push(\"LLM Model Scout\");\nlines.push(\"\");\nlines.push(\"HAL Status:\");\nlines.push(halOutput || \"No HAL output returned.\");\nlines.push(\"\");\nlines.push(\"Recommendation:\");\nlines.push(recommendation);\nlines.push(\"\");\nlines.push(\"Why:\");\nlines.push(reason);\nlines.push(\"\");\nlines.push(\"Reply:\");\nlines.push(\"YES CODER to install qwen2.5-coder:7b\");\nlines.push(\"YES QWEN3 to install qwen3:8b\");\nlines.push(\"YES DOLPHIN to refresh dolphin3\");\nlines.push(\"NO to ignore\");\n\nconst text = lines.join(\"\\n\")\n    .replace(/\\\\/g, \"\\\\\\\\\")\n    .replace(/\"/g, '\\\\\"');\n\nmsg.payload = `-e 'tell application \"Messages\" to send \"${text}\" to buddy \"${phone}\"'`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1030,
+    "y": 1880,
+    "wires": [
+      [
+        "79e77484cd62f0e2",
+        "3499308deac60c57"
+      ]
+    ]
+  },
+  {
+    "id": "79e77484cd62f0e2",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "/usr/bin/osascript",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send SMS iMessage",
+    "x": 1360,
+    "y": 1880,
+    "wires": [
+      [
+        "ff38900717dd9126"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ff38900717dd9126",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Exec Out 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1570,
+    "y": 1860,
+    "wires": []
+  },
+  {
+    "id": "3499308deac60c57",
+    "type": "debug",
+    "z": "6a0a47c5df3bab82",
+    "name": "Build LLM Report",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1230,
+    "y": 1800,
+    "wires": []
+  },
+  {
+    "id": "41bf9640fffb146f",
+    "type": "exec",
+    "z": "6a0a47c5df3bab82",
+    "command": "ssh wasch@192.168.36.10 \"ollama list && echo ---RUNNING--- && ollama ps\"",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Get LLM Inventory and Running",
+    "x": 570,
+    "y": 1880,
+    "wires": [
+      [
+        "72e59c1b14f8187c"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "e10a0010cafe0002",
+    "type": "inject",
+    "z": "e10a0010cafe0001",
+    "name": "DISABLED - 7:30 AM Mail Review",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 100,
+    "wires": [
+      []
+    ],
+    "info": "Disabled by reliable reports hardening: old AL mail assistant triage path is not probation-safe\nDisabled 2026-07-02: Old AL mail triage path retired; SAL Windance Assistant Reports owns read-only mail reports."
+  },
+  {
+    "id": "e10a0010cafe0003",
+    "type": "inject",
+    "z": "e10a0010cafe0001",
+    "name": "DISABLED - Noon Mail Review",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 140,
+    "wires": [
+      []
+    ],
+    "info": "Disabled by reliable reports hardening: old AL mail assistant triage path is not probation-safe\nDisabled 2026-07-02: Old AL mail triage path retired; SAL Windance Assistant Reports owns read-only mail reports."
+  },
+  {
+    "id": "e10a0010cafe0004",
+    "type": "inject",
+    "z": "e10a0010cafe0001",
+    "name": "DISABLED - 5 PM Mail Review",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 180,
+    "wires": [
+      []
+    ],
+    "info": "Disabled by reliable reports hardening: old AL mail assistant triage path is not probation-safe\nDisabled 2026-07-02: Old AL mail triage path retired; SAL Windance Assistant Reports owns read-only mail reports."
+  },
+  {
+    "id": "e10a0010cafe0005",
+    "type": "function",
+    "z": "e10a0010cafe0001",
+    "name": "DISABLED old AL mail triage",
+    "func": "node.warn(\"Old AL mail triage disabled. Use Herald read-only mail report on tab 09.\"); return null;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e10a0010cafe0006",
+    "type": "http request",
+    "z": "e10a0010cafe0001",
+    "name": "DISABLED old mail request",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 610,
+    "y": 140,
+    "wires": [
+      [
+        "e10a0010cafe0007"
+      ]
+    ]
+  },
+  {
+    "id": "e10a0010cafe0007",
+    "type": "function",
+    "z": "e10a0010cafe0001",
+    "name": "Format Mail iMessage",
+    "func": "const result = msg.payload || {};\nif (Number(msg.statusCode || 200) >= 400) {\n    msg.payload = \"Mail Assistant report\\n\\nAssistant activity\\n. The read-only inbox review could not be completed.\\n. No messages were changed.\\n\\nWaiting for your action\\n. Check the Node-RED Mail Assistant error log.\";\n    return msg;\n}\n\nconst summary = result.summary || {};\nconst urgent = result.urgent || [];\nconst needsReply = result.needs_reply || [];\nconst lines = [\n    \"Mail Assistant report\",\n    \"\",\n    \"Assistant activity\",\n    \". Completed a read-only inbox review.\",\n    \". Scanned \" + (result.messages_seen || 0) + \" messages.\",\n    \". No email was sent, moved, archived, deleted, or otherwise changed.\",\n    \"\"\n];\n\nif (urgent.length) {\n    lines.push(\"?? URGENT ACTION REQUIRED (\" + urgent.length + \")\");\n    urgent.slice(0, 3).forEach(function (item) {\n        lines.push(\"?? \" + (item.sender || \"Unknown sender\") + \": \" + (item.subject || \"(no subject)\"));\n    });\n    lines.push(\"\");\n}\n\nif (needsReply.length) {\n    lines.push(\"Waiting for your reply (\" + needsReply.length + \")\");\n    needsReply.slice(0, 3).forEach(function (item) {\n        lines.push(\". \" + (item.sender || \"Unknown sender\") + \": \" + (item.subject || \"(no subject)\"));\n    });\n    lines.push(\"\");\n} else if (!urgent.length) {\n    lines.push(\"Waiting for your action\");\n    lines.push(\". No urgent messages or replies were identified.\");\n    lines.push(\"\");\n}\n\nlines.push(\"Other mail: \" + (summary.review || 0) + \" to review, \" + (summary.fyi || 0) + \" FYI.\");\nlines.push(\"Reply MAIL REVIEW to refresh this report.\");\nmsg.payload = lines.join(\"\\n\");\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 850,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e10a0010cafe0008",
+    "type": "debug",
+    "z": "e10a0010cafe0001",
+    "name": "Mail Assistant Request Error",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 850,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "e20a0010cafe0002",
+    "type": "comment",
+    "z": "e20a0010cafe0001",
+    "name": "HERALD harness on 192.168.36.21:8791",
+    "info": "POST /herald/message forwards to HERALD /message. HERALD uses Ollama on HAL.",
+    "x": 230,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "e20a0010cafe0003",
+    "type": "http in",
+    "z": "e20a0010cafe0001",
+    "name": "GET /herald/ping",
+    "url": "/herald/ping",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 130,
+    "y": 100,
+    "wires": [
+      [
+        "e20a0010cafe0004"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0004",
+    "type": "function",
+    "z": "e20a0010cafe0001",
+    "name": "Ping response",
+    "func": "msg.payload = { status: \"ok\", route: \"/herald/ping\", time: new Date().toISOString() }; return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 100,
+    "wires": [
+      [
+        "e20a0010cafe0005"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0005",
+    "type": "http response",
+    "z": "e20a0010cafe0001",
+    "name": "Return HTTP response",
+    "statusCode": "",
+    "headers": {},
+    "x": 620,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "e20a0010cafe0006",
+    "type": "http in",
+    "z": "e20a0010cafe0001",
+    "name": "POST /vega/message compatibility -> Herald",
+    "url": "/vega/message",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 150,
+    "y": 180,
+    "wires": [
+      [
+        "e20a0010cafe0007"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0007",
+    "type": "function",
+    "z": "e20a0010cafe0001",
+    "name": "Prepare Herald /message request",
+    "func": "let body = msg.payload || {};\nif (typeof body === \"string\") {\n    try { body = JSON.parse(body); } catch (e) { body = {}; }\n}\nconst text = body.message || body.prompt || body.request;\nif (!text) {\n    msg.statusCode = 400;\n    msg.payload = { detail: \"message, prompt, or request is required\", seenPayloadType: typeof msg.payload };\n    return [null, msg];\n}\nmsg.url = \"http://192.168.36.21:8791/message\";\nmsg.method = \"POST\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    message: String(text),\n    user: body.user || \"william\",\n    channel: body.channel || body.source || \"nodered-compat-vega-message\"\n};\nreturn [msg, null];",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 180,
+    "wires": [
+      [
+        "e20a0010cafe0008"
+      ],
+      [
+        "e20a0010cafe0005"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0008",
+    "type": "http request",
+    "z": "e20a0010cafe0001",
+    "name": "HERALD Agent Harness /message",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/message",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 640,
+    "y": 160,
+    "wires": [
+      [
+        "e20a0010cafe0005"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0009",
+    "type": "inject",
+    "z": "e20a0010cafe0001",
+    "name": "Test HERALD health",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 280,
+    "wires": [
+      [
+        "e20a0010cafe0010"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0010",
+    "type": "http request",
+    "z": "e20a0010cafe0001",
+    "name": "HERALD harness /health",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/health",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 390,
+    "y": 280,
+    "wires": [
+      [
+        "e20a0010cafe0012"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0011",
+    "type": "inject",
+    "z": "e20a0010cafe0001",
+    "name": "Test HERALD message",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "{ \"message\": \"Reply with exactly NODE_RED_TO_HERALD_OK\" }",
+    "payloadType": "json",
+    "x": 160,
+    "y": 340,
+    "wires": [
+      [
+        "e20a0010cafe0008"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0012",
+    "type": "debug",
+    "z": "e20a0010cafe0001",
+    "name": "HERALD debug",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 640,
+    "y": 310,
+    "wires": []
+  },
+  {
+    "id": "e20a0010cafe0013",
+    "type": "catch",
+    "z": "e20a0010cafe0001",
+    "name": "HERALD flow errors",
+    "scope": [
+      "e20a0010cafe0007",
+      "e20a0010cafe0008"
+    ],
+    "uncaught": false,
+    "x": 150,
+    "y": 420,
+    "wires": [
+      [
+        "e20a0010cafe0014"
+      ]
+    ]
+  },
+  {
+    "id": "e20a0010cafe0014",
+    "type": "function",
+    "z": "e20a0010cafe0001",
+    "name": "Return flow error",
+    "func": "msg.statusCode = 500; msg.payload = { status: \"error\", detail: msg.error && msg.error.message ? msg.error.message : String(msg.error) }; return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 400,
+    "y": 420,
+    "wires": [
+      [
+        "e20a0010cafe0005"
+      ]
+    ]
+  },
+  {
+    "id": "wr_comment",
+    "type": "comment",
+    "z": "windance_reports_001",
+    "name": "SAL schedules and sends. Herald generates. Email is read-only.",
+    "info": "Do not call AL mail-assistant /triage/run from here.",
+    "x": 300,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "wr_train_inject",
+    "type": "inject",
+    "z": "windance_reports_001",
+    "name": "7:00 AM Training to Shawn",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "00 07 * * *",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 120,
+    "wires": [
+      [
+        "wr_train_get"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_get",
+    "type": "http request",
+    "z": "windance_reports_001",
+    "name": "HERALD /training/today",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/training/today",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 420,
+    "y": 120,
+    "wires": [
+      [
+        "wr_train_format"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_format",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Format training to Shawn",
+    "func": "const res = msg.payload || {};\nconst reply = String(res.reply || \"No training schedule returned from Herald.\").trim();\nmsg.payload = `Windance daily training report:\n\n${reply}`;\nmsg.recipient = \"+16054403400\";\nreturn msg;",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 680,
+    "y": 120,
+    "wires": [
+      [
+        "wr_train_send"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "wr_train_send",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Send scheduled iMessage chunks",
+    "func": "const recipient = String(msg.recipient || msg.to || \"+16054401255\").trim();\nlet text = String(msg.payload || \"\").trim();\nif (!text || !recipient) return null;\n\n// iMessage can comfortably carry a few thousand characters.  Keep ordinary\n// reports together; if one really must split, send all parts through one\n// sender process so Messages cannot reorder them.\nconst maxLen = 3500;\nconst chunks = [];\nlet remaining = text;\nwhile (remaining.length > maxLen) {\n    let cut = remaining.lastIndexOf(\"\\n\", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\". \", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\" \", maxLen);\n    if (cut < 1200) cut = maxLen;\n    chunks.push(remaining.slice(0, cut).trim());\n    remaining = remaining.slice(cut).trim();\n}\nif (remaining) chunks.push(remaining);\nfor (let i = 0; i < chunks.length; i++) {\n    if (chunks.length > 1) chunks[i] = \"(\" + (i + 1) + \"/\" + chunks.length + \") \" + chunks[i];\n}\nconst encoded = Buffer.from(JSON.stringify({\n    to: recipient,\n    chunks,\n    sms: recipient.replace(/[^0-9]/g, \"\") === \"16054403400\"\n}), \"utf8\").toString(\"base64\");\nmsg.payload = encoded;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 980,
+    "y": 100,
+    "wires": [
+      [
+        "wr_train_exec",
+        "wr_debug_send"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_exec",
+    "type": "exec",
+    "z": "windance_reports_001",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send training iMessage",
+    "x": 1260,
+    "y": 100,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "wr_train_memory",
+    "type": "http request",
+    "z": "windance_reports_001",
+    "name": "Save training memory (disabled - moved to 9 PM)",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/memory",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 960,
+    "y": 160,
+    "wires": [
+      [
+        "wr_train_memory_debug"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_memory_debug",
+    "type": "debug",
+    "z": "windance_reports_001",
+    "name": "Training memory save",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1240,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "wr_brief_inject",
+    "type": "inject",
+    "z": "windance_reports_001",
+    "name": "7:15 AM Daily Briefing",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "15 07 * * *",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 260,
+    "wires": [
+      [
+        "wr_brief_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "wr_brief_prepare",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Prepare briefing request",
+    "func": "msg.method=\"POST\"; msg.url=\"http://192.168.36.21:8791/briefing\"; msg.headers={\"Content-Type\":\"application/json\"}; msg.payload=JSON.stringify({days:2,email_limit:10}); return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 420,
+    "y": 260,
+    "wires": [
+      [
+        "wr_brief_post"
+      ]
+    ]
+  },
+  {
+    "id": "wr_brief_post",
+    "type": "http request",
+    "z": "windance_reports_001",
+    "name": "HERALD /briefing",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/briefing",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 650,
+    "y": 260,
+    "wires": [
+      [
+        "wr_brief_format"
+      ]
+    ]
+  },
+  {
+    "id": "wr_brief_format",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Format daily briefing",
+    "func": "const res=msg.payload||{}; const reply=String(res.reply||\"No daily briefing returned from Herald.\").trim(); msg.payload=`Daily briefing:\\n\\n${reply}`; msg.recipient=\"+16054401255\"; return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 880,
+    "y": 260,
+    "wires": [
+      [
+        "wr_brief_send"
+      ]
+    ]
+  },
+  {
+    "id": "wr_brief_send",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Send scheduled iMessage chunks",
+    "func": "const recipient = String(msg.recipient || msg.to || \"+16054401255\").trim();\nlet text = String(msg.payload || \"\").trim();\nif (!text || !recipient) return null;\n\n// iMessage can comfortably carry a few thousand characters.  Keep ordinary\n// reports together; if one really must split, send all parts through one\n// sender process so Messages cannot reorder them.\nconst maxLen = 3500;\nconst chunks = [];\nlet remaining = text;\nwhile (remaining.length > maxLen) {\n    let cut = remaining.lastIndexOf(\"\\n\", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\". \", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\" \", maxLen);\n    if (cut < 1200) cut = maxLen;\n    chunks.push(remaining.slice(0, cut).trim());\n    remaining = remaining.slice(cut).trim();\n}\nif (remaining) chunks.push(remaining);\nfor (let i = 0; i < chunks.length; i++) {\n    if (chunks.length > 1) chunks[i] = \"(\" + (i + 1) + \"/\" + chunks.length + \") \" + chunks[i];\n}\nconst encoded = Buffer.from(JSON.stringify({\n    to: recipient,\n    chunks,\n    sms: false\n}), \"utf8\").toString(\"base64\");\nmsg.payload = encoded;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1130,
+    "y": 260,
+    "wires": [
+      [
+        "wr_brief_exec",
+        "wr_debug_send"
+      ]
+    ]
+  },
+  {
+    "id": "wr_brief_exec",
+    "type": "exec",
+    "z": "windance_reports_001",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send briefing iMessage",
+    "x": 1400,
+    "y": 260,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "wr_mail_0730",
+    "type": "inject",
+    "z": "windance_reports_001",
+    "name": "DISABLED - duplicate 7:30 AM Mail (included in 7:15 briefing)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 400,
+    "wires": [
+      [
+        "wr_mail_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_1200",
+    "type": "inject",
+    "z": "windance_reports_001",
+    "name": "Noon Read-only Mail",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "00 12 * * *",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 440,
+    "wires": [
+      [
+        "wr_mail_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_1700",
+    "type": "inject",
+    "z": "windance_reports_001",
+    "name": "5 PM Read-only Mail",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "00 17 * * *",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 480,
+    "wires": [
+      [
+        "wr_mail_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_prepare",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Prepare read-only mail request",
+    "func": "msg.method=\"POST\"; msg.url=\"http://192.168.36.21:8791/message\"; msg.headers={\"Content-Type\":\"application/json\"}; msg.payload=JSON.stringify({message:\"email check unread inbox summary\",user:\"william\",channel:\"sal-readonly-mail-report\"}); return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 440,
+    "wires": [
+      [
+        "wr_mail_post"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_post",
+    "type": "http request",
+    "z": "windance_reports_001",
+    "name": "HERALD /message mail summary",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/message",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 700,
+    "y": 440,
+    "wires": [
+      [
+        "wr_mail_format"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_format",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Format read-only mail report",
+    "func": "const res=msg.payload||{}; const reply=String(res.reply||\"No read-only mail summary returned from Herald.\").trim(); msg.payload=`Read-only mail report:\\n\\n${reply}`; msg.recipient=\"+16054401255\"; return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 980,
+    "y": 440,
+    "wires": [
+      [
+        "wr_mail_send"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_send",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Send scheduled iMessage chunks",
+    "func": "const recipient = String(msg.recipient || msg.to || \"+16054401255\").trim();\nlet text = String(msg.payload || \"\").trim();\nif (!text || !recipient) return null;\n\n// iMessage can comfortably carry a few thousand characters.  Keep ordinary\n// reports together; if one really must split, send all parts through one\n// sender process so Messages cannot reorder them.\nconst maxLen = 3500;\nconst chunks = [];\nlet remaining = text;\nwhile (remaining.length > maxLen) {\n    let cut = remaining.lastIndexOf(\"\\n\", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\". \", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\" \", maxLen);\n    if (cut < 1200) cut = maxLen;\n    chunks.push(remaining.slice(0, cut).trim());\n    remaining = remaining.slice(cut).trim();\n}\nif (remaining) chunks.push(remaining);\nfor (let i = 0; i < chunks.length; i++) {\n    if (chunks.length > 1) chunks[i] = \"(\" + (i + 1) + \"/\" + chunks.length + \") \" + chunks[i];\n}\nconst encoded = Buffer.from(JSON.stringify({\n    to: recipient,\n    chunks,\n    sms: false\n}), \"utf8\").toString(\"base64\");\nmsg.payload = encoded;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1250,
+    "y": 440,
+    "wires": [
+      [
+        "wr_mail_exec",
+        "wr_debug_send"
+      ]
+    ]
+  },
+  {
+    "id": "wr_mail_exec",
+    "type": "exec",
+    "z": "windance_reports_001",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send mail report iMessage",
+    "x": 1530,
+    "y": 440,
+    "wires": [
+      [],
+      [],
+      [
+        "wr_mail_delivery_error"
+      ]
+    ]
+  },
+  {
+    "id": "wr_debug_send",
+    "type": "debug",
+    "z": "windance_reports_001",
+    "name": "Scheduled iMessage command",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1530,
+    "y": 560,
+    "wires": []
+  },
+  {
+    "id": "wr_catch",
+    "type": "catch",
+    "z": "windance_reports_001",
+    "name": "Report flow errors",
+    "scope": [
+      "wr_train_get",
+      "wr_train_format",
+      "wr_train_memory",
+      "wr_brief_post",
+      "wr_mail_post"
+    ],
+    "uncaught": false,
+    "x": 180,
+    "y": 620,
+    "wires": [
+      [
+        "wr_error_format"
+      ]
+    ]
+  },
+  {
+    "id": "wr_error_format",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Format report error",
+    "func": "const detail = msg.error && msg.error.message ? msg.error.message : JSON.stringify(msg.error || msg.payload || \"unknown error\");\nmsg.payload = `Assistant report delivery problem:\\n${detail}`;\nmsg.recipient = \"+16054401255\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 620,
+    "wires": [
+      [
+        "wr_error_send"
+      ]
+    ]
+  },
+  {
+    "id": "wr_error_send",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Send error iMessage chunks",
+    "func": "const recipient = String(msg.recipient || msg.to || \"+16054401255\").trim();\nlet text = String(msg.payload || \"\").trim();\nif (!text || !recipient) return null;\n\n// iMessage can comfortably carry a few thousand characters.  Keep ordinary\n// reports together; if one really must split, send all parts through one\n// sender process so Messages cannot reorder them.\nconst maxLen = 3500;\nconst chunks = [];\nlet remaining = text;\nwhile (remaining.length > maxLen) {\n    let cut = remaining.lastIndexOf(\"\\n\", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\". \", maxLen);\n    if (cut < 1200) cut = remaining.lastIndexOf(\" \", maxLen);\n    if (cut < 1200) cut = maxLen;\n    chunks.push(remaining.slice(0, cut).trim());\n    remaining = remaining.slice(cut).trim();\n}\nif (remaining) chunks.push(remaining);\nfor (let i = 0; i < chunks.length; i++) {\n    if (chunks.length > 1) chunks[i] = \"(\" + (i + 1) + \"/\" + chunks.length + \") \" + chunks[i];\n}\nconst encoded = Buffer.from(JSON.stringify({\n    to: recipient,\n    chunks,\n    sms: false\n}), \"utf8\").toString(\"base64\");\nmsg.payload = encoded;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 620,
+    "wires": [
+      [
+        "wr_error_exec"
+      ]
+    ]
+  },
+  {
+    "id": "wr_error_exec",
+    "type": "exec",
+    "z": "windance_reports_001",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send report error iMessage",
+    "x": 980,
+    "y": 620,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "wr_train_eod_inject",
+    "type": "inject",
+    "z": "windance_reports_001",
+    "name": "9:00 PM Training memory snapshot",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "00 21 * * *",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 460,
+    "wires": [
+      [
+        "wr_train_eod_get"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_eod_get",
+    "type": "http request",
+    "z": "windance_reports_001",
+    "name": "HERALD /training/today final snapshot",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/training/today",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 410,
+    "y": 460,
+    "wires": [
+      [
+        "wr_train_eod_memory_format"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_eod_memory_format",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Format final training memory",
+    "func": "const res = msg.payload || {};\nconst reply = String(res.reply || \"No training schedule returned from Herald.\").trim();\nconst today = new Date();\nconst yyyy = today.getFullYear();\nconst mm = String(today.getMonth() + 1).padStart(2, \"0\");\nconst dd = String(today.getDate()).padStart(2, \"0\");\nconst iso = `${yyyy}-${mm}-${dd}`;\nconst key = `${yyyy}_${mm}_${dd}`;\nconst memValue = `Windance daily training schedule final snapshot for ${iso}.\n\n${reply}\n\nThis is the end-of-day historical snapshot saved after the workday, so use this record for later questions about what the training schedule was on this date rather than re-reading the current Odoo work schedule.`;\nmsg.method = \"POST\";\nmsg.url = \"http://192.168.36.21:8791/memory\";\nmsg.headers = {\"Content-Type\":\"application/json\"};\nmsg.payload = JSON.stringify({kind:\"daily_training_schedule\", key, value:memValue, confidence:0.98, source:\"SAL Node-RED 9 PM final training snapshot\"});\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 670,
+    "y": 460,
+    "wires": [
+      [
+        "wr_train_eod_memory"
+      ]
+    ]
+  },
+  {
+    "id": "wr_train_eod_memory",
+    "type": "http request",
+    "z": "windance_reports_001",
+    "name": "Save final training memory",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.21:8791/memory",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 930,
+    "y": 460,
+    "wires": [
+      [
+        "wr_train_memory_debug"
+      ]
+    ]
+  },
+  {
+    "id": "herald_image_imessage_http_in",
+    "type": "http in",
+    "z": "be942a70f5f14ca4",
+    "name": "Herald Image iMessage In",
+    "url": "/codex/send-image",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 300,
+    "y": 1180,
+    "wires": [
+      [
+        "herald_image_imessage_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "herald_image_imessage_prepare",
+    "type": "function",
+    "z": "be942a70f5f14ca4",
+    "name": "Prepare Herald Image iMessage",
+    "func": "const body = msg.payload || {};\nconst to = String(body.to || body.recipient || \"+16054401255\").trim();\nconst text = String(body.message || body.text || \"\").trim();\nlet image = String(body.image_base64 || \"\").trim();\nconst filename = String(body.filename || \"herald-image.jpg\").replace(/[^A-Za-z0-9._-]/g, \"_\");\nif (image.startsWith(\"data:\")) image = image.split(\",\", 2)[1] || \"\";\nif (!text || !image) {\n    msg.statusCode = 400;\n    msg.payload = {ok:false, error:\"message and image_base64 are required\"};\n    return [null, msg];\n}\nif (!text.toLowerCase().startsWith(\"max:\") && !text.toLowerCase().startsWith(\"herald:\")) {\n    msg.payload = {to, text: \"Max: \" + text, image_base64: image, filename};\n} else {\n    msg.payload = {to, text, image_base64: image, filename};\n}\nconst encoded = Buffer.from(JSON.stringify(msg.payload), \"utf8\").toString(\"base64\");\nconst send = {payload: encoded};\nmsg.statusCode = 202;\nmsg.payload = {ok:true, accepted:true, transport:\"SAL Messages\", filename};\nreturn [send, msg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 510,
+    "y": 1180,
+    "wires": [
+      [
+        "herald_image_imessage_exec"
+      ],
+      [
+        "herald_image_imessage_response"
+      ]
+    ]
+  },
+  {
+    "id": "herald_image_imessage_exec",
+    "type": "exec",
+    "z": "be942a70f5f14ca4",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_imessage_image_payload.py",
+    "addpay": "payload",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "Send Herald Image via iMessage",
+    "x": 760,
+    "y": 1180,
+    "wires": [
+      [
+        "herald_image_imessage_debug"
+      ],
+      [
+        "herald_image_imessage_debug"
+      ],
+      [
+        "herald_image_imessage_debug"
+      ]
+    ]
+  },
+  {
+    "id": "herald_image_imessage_response",
+    "type": "http response",
+    "z": "be942a70f5f14ca4",
+    "name": "Herald Image iMessage Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 750,
+    "y": 1240,
+    "wires": []
+  },
+  {
+    "id": "herald_image_imessage_debug",
+    "type": "debug",
+    "z": "be942a70f5f14ca4",
+    "name": "Herald Image iMessage Result",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1010,
+    "y": 1180,
+    "wires": []
+  },
+  {
+    "id": "wr_mail_delivery_error",
+    "type": "function",
+    "z": "windance_reports_001",
+    "name": "Log noon mail delivery failure",
+    "func": "const detail = String(msg.payload || msg.error || 'unknown iMessage sender failure').slice(0, 700); node.error('Noon mail report delivery failed: ' + detail, msg); return null;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1780,
+    "y": 480,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "samtemp00000001",
+    "type": "inject",
+    "z": "db9bcd536dea4df2",
+    "name": "SAM CPU Temp every 30s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "30",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "4",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 640,
+    "wires": [
+      [
+        "samtemp00000002"
+      ]
+    ]
+  },
+  {
+    "id": "samtemp00000002",
+    "type": "http request",
+    "z": "db9bcd536dea4df2",
+    "name": "SAM CPU Temp /api/health",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://192.168.36.28:8088/api/health",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 410,
+    "y": 640,
+    "wires": [
+      [
+        "samtemp00000003"
+      ]
+    ]
+  },
+  {
+    "id": "samtemp00000003",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse SAM CPU Temp + Alarm",
+    "func": "const temp = Number(msg.payload && msg.payload.cpu_temp_c);\nif (!Number.isFinite(temp)) return null;\n\nconst gaugeMsg = {...msg, payload: Number(temp.toFixed(1))};\nglobal.set('sam_cpu_temp', gaugeMsg.payload + ' C');\n\n// Pi 5 begins thermal throttling near 80 C.  Require two samples (one minute)\n// to avoid alerting on a single transient reading; recover below 72 C.\nconst stateKey = 'sam_cpu_thermal_alarm';\nconst state = global.get(stateKey) || {highCount: 0, active: false};\nlet alertMsg = null;\n\nif (gaugeMsg.payload >= 80) {\n    state.highCount = Number(state.highCount || 0) + 1;\n    if (!state.active && state.highCount >= 2) {\n        state.active = true;\n        const text = `Max: URGENT - SAM CPU is ${gaugeMsg.payload.toFixed(1)} C. It is at the Raspberry Pi thermal-throttling limit. Check the fan, airflow, and enclosure immediately.`;\n        alertMsg = {...msg, payload: Buffer.from(JSON.stringify({to:'+16054401255', text}), 'utf8').toString('base64')};\n    }\n} else {\n    state.highCount = 0;\n    if (state.active && gaugeMsg.payload <= 72) {\n        state.active = false;\n        const text = `Max: SAM CPU temperature recovered to ${gaugeMsg.payload.toFixed(1)} C; the thermal alert is clear.`;\n        alertMsg = {...msg, payload: Buffer.from(JSON.stringify({to:'+16054401255', text}), 'utf8').toString('base64')};\n    }\n}\n\nglobal.set(stateKey, state);\nreturn [gaugeMsg, alertMsg];",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 620,
+    "y": 640,
+    "wires": [
+      [
+        "samtemp00000004"
+      ],
+      [
+        "f7296630590f48ce"
+      ]
+    ]
+  },
+  {
+    "id": "samtemp00000004",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "SAM CPU Temp",
+    "group": "44eb64b95bf04142",
+    "order": 8,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 2,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "SAM CPU Temp",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "C",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "65",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "80",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "100",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 850,
+    "y": 640,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "samtemp00000005",
+    "type": "comment",
+    "z": "db9bcd536dea4df2",
+    "name": "SAM thermal: alert at 80 C after 2 samples; clear below 72 C",
+    "info": "Sends one urgent iMessage on thermal alarm and one recovery notice.",
+    "x": 880,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "halmetrics000001",
+    "type": "http in",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL metrics push",
+    "url": "/hal-metrics",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 410,
+    "y": 320,
+    "wires": [
+      [
+        "halmetrics000002"
+      ]
+    ]
+  },
+  {
+    "id": "halmetrics000002",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse HAL local metrics",
+    "func": "const p = msg.payload || {};\nconst cpu = Number(p.cpu_percent);\nconst gpu = Number(p.gpu_percent);\nconst used = Number(p.vram_used_mb);\nconst total = Number(p.vram_total_mb);\nconst temp = Number(p.gpu_temp_c);\nif (![cpu, gpu, used, total, temp].every(Number.isFinite) || total <= 0) return null;\n\nconst vram = Number((used * 100 / total).toFixed(1));\nglobal.set('hal_cpu', cpu.toFixed(1) + '%');\nglobal.set('hal_gpu', gpu.toFixed(1) + '%');\nglobal.set('hal_vram', vram.toFixed(1) + '%');\nglobal.set('hal_gpu_temp', temp.toFixed(1) + ' C');\nreturn [\n  {...msg, payload: Number(cpu.toFixed(1))},\n  {...msg, payload: Number(gpu.toFixed(1))},\n  {...msg, payload: vram},\n  {...msg, payload: Number(temp.toFixed(1))},\n  {...msg, statusCode: 204, payload: ''},\n];",
+    "outputs": 5,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 320,
+    "wires": [
+      [
+        "4839a37cee204498"
+      ],
+      [
+        "42b8e8a6f2434e07"
+      ],
+      [
+        "f07fe23126dc48b9"
+      ],
+      [
+        "e1dc09e93e7a4116"
+      ],
+      [
+        "halmetrics000003"
+      ]
+    ]
+  },
+  {
+    "id": "halmetrics000003",
+    "type": "http response",
+    "z": "db9bcd536dea4df2",
+    "name": "HAL metrics acknowledgement",
+    "statusCode": "",
+    "headers": {},
+    "x": 900,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "wantraffic000001",
+    "type": "ui-group",
+    "name": "Network Traffic",
+    "page": "e76c9f7dfc9b4b0a",
+    "width": 12,
+    "height": 2,
+    "order": 3,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default"
+  },
+  {
+    "id": "wantraffic000002",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "WAN Download",
+    "group": "wantraffic000001",
+    "order": 1,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 3,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "WAN Download",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Mbps",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "500",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "850",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "1000",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 920,
+    "y": 660,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "wantraffic000003",
+    "type": "ui-gauge",
+    "z": "db9bcd536dea4df2",
+    "name": "WAN Upload",
+    "group": "wantraffic000001",
+    "order": 2,
+    "value": "payload",
+    "valueType": "msg",
+    "width": 3,
+    "height": 2,
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "WAN Upload",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "units": "Mbps",
+    "icon": "",
+    "prefix": "",
+    "suffix": "",
+    "segments": [
+      {
+        "from": "0",
+        "color": "#5cd65c",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "500",
+        "color": "#ffc800",
+        "text": "",
+        "textType": "label"
+      },
+      {
+        "from": "850",
+        "color": "#ea5353",
+        "text": "",
+        "textType": "label"
+      }
+    ],
+    "min": 0,
+    "max": "1000",
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "styleRounded": true,
+    "styleGlow": false,
+    "className": "",
+    "x": 1060,
+    "y": 660,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "wantraffic000004",
+    "type": "http in",
+    "z": "db9bcd536dea4df2",
+    "name": "Router WAN metrics push",
+    "url": "/router-wan-metrics",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 420,
+    "y": 660,
+    "wires": [
+      [
+        "wantraffic000005"
+      ]
+    ]
+  },
+  {
+    "id": "wantraffic000005",
+    "type": "function",
+    "z": "db9bcd536dea4df2",
+    "name": "Parse ASUS WAN metrics",
+    "func": "const p = msg.payload || {};\nconst download = Number(p.wan_download_mbps);\nconst upload = Number(p.wan_upload_mbps);\nconst response = {...msg, statusCode: 204, payload: ''};\nif (!Number.isFinite(download) || !Number.isFinite(upload)) return [null, null, response];\n\nglobal.set('wan_download', download.toFixed(2) + ' Mbps');\nglobal.set('wan_upload', upload.toFixed(2) + ' Mbps');\nreturn [\n  {...msg, payload: download},\n  {...msg, payload: upload},\n  response,\n];",
+    "outputs": 3,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 660,
+    "wires": [
+      [
+        "wantraffic000002"
+      ],
+      [
+        "wantraffic000003"
+      ],
+      [
+        "wantraffic000006"
+      ]
+    ]
+  },
+  {
+    "id": "wantraffic000006",
+    "type": "http response",
+    "z": "db9bcd536dea4df2",
+    "name": "Router WAN metrics acknowledgement",
+    "statusCode": "",
+    "headers": {},
+    "x": 920,
+    "y": 720,
+    "wires": []
+  }
+]
