@@ -69,10 +69,15 @@ def needs_update(name: str, item: dict) -> bool:
 
 
 def make_backup() -> dict:
-    # HAL creates the restore point locally at 01:00. Herald only validates it,
-    # avoiding a fragile HERALD -> HAL -> HERALD recursive SSH path.
-    cmd = "ssh -o BatchMode=yes HAL powershell.exe -NoProfile -ExecutionPolicy Bypass -File " + BACKUP + " -ValidateOnly"
-    return run(cmd, 120)
+    # Herald owns the complete transaction. When updates exist it asks HAL to
+    # create and push a fresh restore point immediately; it does not depend on
+    # a separate interactive Windows task having run earlier.
+    cmd = (
+        "ssh -o BatchMode=yes HAL powershell.exe -NoProfile "
+        "-ExecutionPolicy Bypass -File " + BACKUP +
+        " -Reason daily-deterministic-managed-software"
+    )
+    return run(cmd, 900)
 
 
 def apply_updates(found: dict) -> dict:
@@ -117,8 +122,23 @@ def apply_updates(found: dict) -> dict:
         results["hal-ollama-models"] = run("ssh HAL \"" + " & ".join(commands) + "\"", 7200) if commands else {"code": 0, "output": "No Ollama models installed."}
     for target in ("herald-macos", "sal-macos"):
         if target in found:
-            command = "sudo -n softwareupdate -ia" if target.startswith("herald") else "ssh SAL 'sudo -n softwareupdate -ia'"
+            command = (
+                "sudo -n /usr/local/sbin/windance-macos-maintenance install-all"
+                if target.startswith("herald")
+                else "ssh SAL 'sudo -n /usr/local/sbin/windance-macos-maintenance install-all'"
+            )
             results[target] = run(command, 7200)
+    if any(name.startswith("sal-") for name in results):
+        results["sal-postflight"] = run(
+            "ssh SAL 'set -e; "
+            "curl -fsS http://127.0.0.1:1880/ >/dev/null; "
+            "curl -fsS http://192.168.36.21:8791/health >/dev/null; "
+            "uid=$(id -u); "
+            "launchctl print gui/$uid/com.windance.imessage-herald-bridge "
+            "| grep -q \"state = running\"; "
+            "test -s /Users/zuzu/.local/state/windance/imessage-herald-rowid; "
+            "pgrep -f /Library/RealVNC/rvncserver >/dev/null'"
+        )
     return results
 
 
