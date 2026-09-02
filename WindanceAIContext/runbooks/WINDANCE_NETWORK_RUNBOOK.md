@@ -320,6 +320,9 @@ SAL compatibility note:
   `/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python`.
   Do not change it back to the `/usr/bin/python3` shim: macOS evaluates that
   path under a different TCC identity and denies Messages database access.
+- macOS Automation access is approved for `com.apple.python3` to control
+  `com.apple.MobileSMS` (Messages), allowing the persistent worker to hand
+  replies to the existing safe iMessage sender after login or reboot.
 - Git restore point `318ee97` contains the secret-sanitized pre-repair flow
   and bridge components. SyncThing configuration and schedules were not changed.
 
