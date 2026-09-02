@@ -33,3 +33,9 @@
 - When the cost of error is high, slow down and verify.
 - Never convert tool errors into prose that implies success.
 - Command issued is not result verified.
+# 2026-09-02 — Shawn mailbox isolation and approval boundary
+
+- Shawn's mailbox uses its own OAuth token, durable reference map, pending-action state, and audit trail; it must not share William's numbered-message references.
+- Scheduled reports are delivered only to Shawn. Commands are accepted only from Shawn's recognized sender identity.
+- Mailbox mutations are never executed from the first request. The service stages the requested batch and requires Shawn's sender-bound `YES`; `NO` cancels. Draft creation is allowed only through the same approval gate and never sends the draft.
+- The Node-RED transport remains the communications layer; the Shawn mail service is the source of truth for references, approval state, and Gmail action results.

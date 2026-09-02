@@ -12,10 +12,13 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 | 7:20 AM | Combined daily briefing | William | Includes deterministic numbered email review |
 | 7:35 AM | Prior-day Training Completion Check | William | Sends only when suspicious rapid completions exist |
 | 7:45 AM | Prior-day attendance IP exceptions | William | Sends only when an exception exists |
+| 7:50 AM | Shawn email review and management report | Shawn | Numbered unread inbox review; sender-bound YES/NO approval for changes |
 | 8:10 AM | Ledger unpaid-invoice report | Shawn | Daily Odoo operational report |
 | 9:00 AM | Morning news briefing | William | Frontier AI and social-media marketing |
 | 12:10 PM | Read-only email review | William | Daily midday inbox review |
+| 12:30 PM | Shawn email review and management report | Shawn | Numbered unread inbox review; changes require Shawn's approval |
 | 5:00 PM | Read-only email review | William | Daily end-of-day inbox review |
+| 5:10 PM | Shawn email review and management report | Shawn | Numbered unread inbox review; changes require Shawn's approval |
 | 7:00 PM | Capture Inbox reminder | William | Sends only when active captures await review |
 
 ## Monday through Thursday
@@ -53,4 +56,4 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 
 ## Spacing policy
 
-Morning reports that share Herald, Node-RED, or SAL Messages are staggered by at least ten minutes where practical. Noon YouTube, email, and conditional veterinary processing run at 12:00, 12:10, and 12:20. Different-recipient jobs are still staggered when they share the same content or messaging infrastructure.
+Morning reports that share Herald, Node-RED, or SAL Messages are staggered by at least ten minutes where practical. Noon YouTube, William email, conditional veterinary processing, and Shawn email run at 12:00, 12:10, 12:20, and 12:30. Different-recipient jobs are still staggered when they share the same content or messaging infrastructure.
