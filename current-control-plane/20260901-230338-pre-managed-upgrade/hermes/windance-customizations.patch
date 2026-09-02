@@ -1,0 +1,553 @@
+diff --git a/hermes_cli/web_server.py b/hermes_cli/web_server.py
+index d5ad2e9ab..6cddf51f0 100644
+--- a/hermes_cli/web_server.py
++++ b/hermes_cli/web_server.py
+@@ -36,6 +36,7 @@ import re
+ import secrets
+ import shlex
+ import shutil
++import sqlite3
+ import stat
+ import subprocess
+ import sys
+@@ -3766,8 +3767,51 @@ def _merge_profile_gateway_platforms(
+                 continue
+             merged.setdefault(namespaced, _public_platform_entry(value))
+     return merged
++def _mission_control_tasks(limit: int = 50) -> dict[str, Any]:
++    """Read the Harness staff queue without allowing dashboard writes."""
++    db_path = Path.home() / ".local" / "share" / "agent-harness" / "harness.db"
++    if not db_path.is_file():
++        return {"tasks": [], "source_available": False}
++    with sqlite3.connect(str(db_path), timeout=2.0) as conn:
++        conn.row_factory = sqlite3.Row
++        rows = conn.execute(
++            """
++            SELECT id, assignee, title, status, result, source, updated_at
++            FROM staff_tasks
++            WHERE lower(status) IN ('pending','accepted','active','dispatching','in_progress','running','working','blocked','complete','completed','failed','succeeded')
++            ORDER BY CASE WHEN lower(status) IN ('pending','accepted','active','dispatching','in_progress','running','working') THEN 0 ELSE 1 END, updated_at DESC
++            LIMIT ?
++            """,
++            (max(1, min(int(limit), 100)),),
++        ).fetchall()
++    tasks = []
++    for row in rows:
++        status = str(row["status"] or "unknown").lower()
++        text = str(row["result"] or "").strip()
++        tasks.append({
++            "id": str(row["id"]),
++            "title": str(row["title"] or "Untitled task")[:240],
++            "assignee": str(row["assignee"] or "Unassigned")[:80],
++            "target_host": None,
++            "status": status,
++            "is_complete": status in {"complete", "completed", "succeeded"},
++            "last_progress": text[:500] or None,
++            "verification_evidence": text[:700] or None,
++            "blocker": text[:700] if status in {"blocked", "failed", "cancelled"} else None,
++            "is_escalation": str(row["source"] or "").startswith("forge-escalation:"),
++            "updated_at": str(row["updated_at"] or ""),
++        })
++    return {"tasks": tasks, "source_available": True}
+ 
+ 
++@app.get("/api/mission-control/tasks")
++async def get_mission_control_tasks(request: Request, limit: int = 50):
++    _require_token(request)
++    try:
++        return await run_in_threadpool(_mission_control_tasks, limit)
++    except sqlite3.Error as exc:
++        _log.warning("Mission Control task read failed: %s", exc)
++        raise HTTPException(status_code=503, detail="Harness staff-task data is unavailable")
+ @app.get("/api/status")
+ async def get_status(profile: Optional[str] = None):
+     status_scope = None
+@@ -19211,6 +19255,360 @@ _mount_plugin_api_routes()
+ from hermes_cli.dashboard_auth.routes import router as _dashboard_auth_router  # noqa: E402
+ app.include_router(_dashboard_auth_router)
+ 
++
++# windance_frontdoor_compat_v1
++def _windance_harness_headers(content_type: str) -> dict[str, str]:
++    token_path = Path.home() / ".config" / "agent-harness" / "voice-shortcut-token"
++    try: token = token_path.read_text(encoding="utf-8").strip()
++    except Exception: token = ""
++    headers = {"Content-Type": content_type}
++    if token: headers["Authorization"] = f"Bearer {token}"
++    return headers
++def _windance_external_voice_allowed(request: Request) -> bool:
++    token_path = Path.home() / ".config" / "agent-harness" / "voice-shortcut-token"
++    try: expected = token_path.read_text(encoding="utf-8").strip()
++    except Exception: expected = ""
++    auth = request.headers.get("authorization", "")
++    parts = auth.split(None, 1)
++    supplied = parts[1].strip() if len(parts) == 2 and parts[0].lower() == "bearer" else request.headers.get("x-herald-voice-token", "").strip()
++    return bool(expected and supplied and secrets.compare_digest(expected, supplied))
++async def _windance_proxy_json(path: str, body: bytes, content_type: str, timeout: int = 300):
++    req = urllib.request.Request("http://127.0.0.1:8791" + path, data=body, headers=_windance_harness_headers(content_type), method="POST")
++    try:
++        with urllib.request.urlopen(req, timeout=timeout) as response: return JSONResponse(json.loads(response.read().decode("utf-8")))
++    except urllib.error.HTTPError as exc: return JSONResponse({"detail": exc.read().decode("utf-8", "replace")[:2000]}, status_code=exc.code)
++    except Exception as exc: return JSONResponse({"detail": str(exc)[:1000]}, status_code=502)
++@app.get("/sessions")
++async def windance_sessions_frontdoor(request: Request):
++    if request.query_params.get("admin", "").lower() in {"1", "true", "yes"}: return _serve_index(_normalise_prefix(request.headers.get("x-forwarded-prefix")))
++    return Response(status_code=307, headers={"Location": "/chat"})
++@app.get("/hermes-admin")
++async def windance_hermes_admin(): return Response(status_code=307, headers={"Location": "/sessions?admin=1"})
++@app.get("/chat")
++async def windance_chat_page():
++    return HTMLResponse("""<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Herald</title><style>body{margin:0;background:#07111f;color:#e6eefb;font:16px system-ui}main{max-width:900px;margin:auto;padding:18px}.card{background:#122238;border-radius:15px;padding:14px;margin:10px 0}textarea{width:100%;height:120px;background:#06101d;color:white;border:1px solid #50739a;border-radius:10px;padding:10px;font:inherit}button{background:#2169e8;color:#fff;border:0;border-radius:10px;padding:11px 16px;font-weight:700}nav a{color:#9ecbff;margin-right:15px}.label{font-weight:800;color:#8ce5dc}.reply{white-space:pre-wrap;line-height:1.45}</style><main><h1>Chat with Herald</h1><nav><a href="/walkie">Walkie</a><a href="/staff">Staff Tasks</a><a href="/hermes-admin">Hermes Admin</a></nav><div id="log"></div><div class="card"><textarea id="q" placeholder="Ask Herald..."></textarea><p><button id="send">Send to Herald</button></p></div></main><script>const q=document.querySelector('#q'),log=document.querySelector('#log');function add(w,t){let d=document.createElement('div');d.className='card reply';d.innerHTML='<span class=label>'+w+'</span>\\n';d.append(document.createTextNode(t));log.append(d);d.scrollIntoView()}async function send(){let t=q.value.trim();if(!t)return;q.value='';add('YOU',t);add('HERALD','Working...');let wait=log.lastChild;try{let r=await fetch('/api/herald-direct/message',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:t,channel:'herald-direct-web',user:'william'})});let d=await r.json();wait.remove();add('HERALD',d.reply||d.detail||JSON.stringify(d))}catch(e){wait.remove();add('ERROR',String(e))}}document.querySelector('#send').onclick=send;q.onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}}</script>""",headers={"Cache-Control":"no-store"})
++@app.get("/codex")
++async def windance_codex_page():
++    return HTMLResponse("""<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Codex | Windance</title><style>body{margin:0;background:#07111f;color:#e6eefb;font:16px system-ui}main{max-width:1000px;margin:auto;padding:18px}.card{background:#122238;border-radius:15px;padding:14px;margin:10px 0}textarea{width:100%;height:120px;background:#06101d;color:white;border:1px solid #50739a;border-radius:10px;padding:10px;font:inherit;box-sizing:border-box}button{background:#2169e8;color:#fff;border:0;border-radius:10px;padding:11px 16px;font-weight:700}nav a{color:#9ecbff;margin-right:15px}.label{font-weight:800;color:#8ce5dc}.reply{white-space:pre-wrap;line-height:1.45}.note{color:#a9bdd5}</style><main><h1>Chat with Codex</h1><p class="note">Technical work and implementation through the authenticated Windance Codex bridge.</p><nav><a href="/chat">Herald Chat</a><a href="/walkie">Walkie</a><a href="/staff">Staff Tasks</a></nav><div id="log"></div><div class="card"><textarea id="q" placeholder="Ask Codex..."></textarea><p><button id="send">Send to Codex</button></p></div></main><script>const q=document.querySelector('#q'),log=document.querySelector('#log');function add(w,t){let d=document.createElement('div');d.className='card reply';d.innerHTML='<span class=label>'+w+'</span>\\n';d.append(document.createTextNode(t));log.append(d);d.scrollIntoView()}async function send(){let t=q.value.trim();if(!t)return;q.value='';add('YOU',t);add('CODEX','Working...');let wait=log.lastChild;try{let r=await fetch('/api/herald-direct/message',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'Codex: '+t,channel:'hermes-desktop-codex',user:'william'})});let d=await r.json();wait.remove();add('CODEX',d.reply||d.detail||JSON.stringify(d))}catch(e){wait.remove();add('ERROR',String(e))}}document.querySelector('#send').onclick=send;q.onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}}</script>""",headers={"Cache-Control":"no-store"})
++
++@app.post("/api/herald-direct/message")
++async def windance_chat_message(request: Request): return await _windance_proxy_json("/message", await request.body(), request.headers.get("content-type", "application/json"))
++@app.get("/walkie")
++async def windance_walkie_page():
++    return HTMLResponse("""<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Herald Walkie</title><style>body{margin:0;background:#07111f;color:#e6eefb;font:17px system-ui}main{max-width:760px;margin:auto;padding:20px}.card{background:#122238;border-radius:16px;padding:16px;margin:12px 0}textarea{width:100%;height:100px;background:#06101d;color:white;border:1px solid #50739a;border-radius:10px;padding:10px;font:inherit}button{background:#2169e8;color:#fff;border:0;border-radius:11px;padding:12px 16px;font-weight:800;margin:4px}.record{background:#b91c1c}.reply{white-space:pre-wrap;line-height:1.45}</style><main><h1>Herald Walkie</h1><p><a href="/chat" style="color:#9ecbff">Chat</a> · <a href="/staff" style="color:#9ecbff">Staff Tasks</a></p><div class=card><button id=rec class=record>Hold to Talk</button><button id=send>Send Text</button><p id=status>Ready.</p><textarea id=q placeholder="Type instead, if you prefer..."></textarea></div><div id=out class="card reply"></div></main><script>let recorder,chunks=[],active=false;const out=document.querySelector('#out'),status=document.querySelector('#status'),q=document.querySelector('#q');function speak(t){if(!('speechSynthesis'in window))return;speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(t))}async function post(path,body,type){status.textContent='Herald is working...';let r=await fetch(path,{method:'POST',headers:{'Content-Type':type},body});let d=await r.json();let t=d.reply||d.response||d.detail||JSON.stringify(d);out.textContent=t;status.textContent=r.ok?'Ready.':'Error.';if(r.ok)speak(t)}async function stop(){if(recorder&&active){active=false;recorder.stop();document.querySelector('#rec').textContent='Hold to Talk'}}document.querySelector('#send').onclick=()=>{let t=q.value.trim();if(t){q.value='';post('/api/walkie/text-browser',JSON.stringify({message:t,channel:'walkie-web',user:'william'}),'application/json')}};document.querySelector('#rec').onpointerdown=async()=>{try{let s=await navigator.mediaDevices.getUserMedia({audio:true});chunks=[];recorder=new MediaRecorder(s);active=true;recorder.ondataavailable=e=>chunks.push(e.data);recorder.onstop=()=>{s.getTracks().forEach(t=>t.stop());post('/api/voice/walkie-browser',new Blob(chunks,{type:recorder.mimeType||'audio/webm'}),recorder.mimeType||'audio/webm')};recorder.start();status.textContent='Listening... release when finished.';document.querySelector('#rec').textContent='Release to Send'}catch(e){status.textContent='Microphone error: '+e.message}};document.querySelector('#rec').onpointerup=stop;document.querySelector('#rec').onpointercancel=stop;</script>""",headers={"Cache-Control":"no-store"})
++@app.post("/api/walkie/text-browser")
++async def windance_walkie_text_browser(request: Request): return await _windance_proxy_json("/walkie/text", await request.body(), request.headers.get("content-type","application/json"))
++@app.post("/api/voice/walkie-browser")
++async def windance_walkie_voice_browser(request: Request): return await _windance_proxy_json("/voice/walkie"+(("?"+request.url.query) if request.url.query else ""),await request.body(),request.headers.get("content-type","application/octet-stream"))
++@app.post("/api/walkie/text")
++async def windance_walkie_text_shortcut(request: Request):
++    if not _windance_external_voice_allowed(request): return JSONResponse({"detail":"Unauthorized"},status_code=401)
++    return await _windance_proxy_json("/walkie/text",await request.body(),request.headers.get("content-type","application/json"))
++@app.post("/api/voice/walkie")
++async def windance_walkie_voice_shortcut(request: Request):
++    if not _windance_external_voice_allowed(request): return JSONResponse({"detail":"Unauthorized"},status_code=401)
++    return await _windance_proxy_json("/voice/walkie"+(("?"+request.url.query) if request.url.query else ""),await request.body(),request.headers.get("content-type","application/octet-stream"))
++@app.post("/api/voice/ask")
++async def windance_voice_ask_shortcut(request: Request):
++    if not _windance_external_voice_allowed(request): return JSONResponse({"detail":"Unauthorized"},status_code=401)
++    return await _windance_proxy_json("/voice/ask"+(("?"+request.url.query) if request.url.query else ""),await request.body(),request.headers.get("content-type","application/octet-stream"))
++@app.get("/staff")
++async def windance_staff_page():
++    return HTMLResponse("""<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Herald Staff Tasks</title><style>body{margin:0;background:#07111f;color:#e6eefb;font:16px system-ui}main{max-width:1100px;margin:auto;padding:18px}.task{background:#122238;border-radius:14px;padding:14px;margin:10px 0;white-space:pre-wrap}a{color:#9ecbff}.meta{color:#a9bdd5;font-size:.9em}</style><main><h1>Herald Staff Tasks</h1><p><a href="/chat">Chat</a> · <a href="/walkie">Walkie</a></p><div id=tasks>Loading...</div></main><script>async function load(){let r=await fetch('/api/staff/tasks?limit=50');let d=await r.json();let list=d.tasks||[];document.querySelector('#tasks').innerHTML=list.length?list.map(t=>'<article class=task><b>'+t.assignee+'</b> · '+t.status+'<br><span class=meta>'+t.id+' · '+t.updated_at+'</span><br><br>'+t.request+(t.result?'<br><br><b>Result</b><br>'+t.result:'')+'</article>').join(''):'No staff tasks.'}load();setInterval(load,30000)</script>""",headers={"Cache-Control":"no-store"})
++
++@app.get("/memory/graph")
++async def herald_memory_graph_page(request: Request):
++    html_doc = """<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>Herald Memory Graph</title>
++  <style>
++:root { color-scheme: dark; --bg:#030712; --panel:rgba(15,23,42,.78); --line:rgba(148,163,184,.22); --text:#f8fafc; --muted:#a6b4c8; --blue:#38bdf8; --gold:#fbbf24; }
++* { box-sizing:border-box; }
++body { margin:0; min-height:100vh; overflow:hidden; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--text); background:radial-gradient(circle at 20% 10%, rgba(37,99,235,.45), transparent 28rem), radial-gradient(circle at 75% 18%, rgba(124,58,237,.32), transparent 24rem), linear-gradient(180deg,#06102a,#020617 72%); }
++canvas { position:fixed; inset:0; width:100vw; height:100vh; display:block; }
++.chrome { position:fixed; inset:18px; pointer-events:none; display:grid; grid-template-columns:minmax(280px, 390px) 1fr minmax(260px, 360px); gap:14px; }
++.panel { pointer-events:auto; background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:16px; box-shadow:0 24px 80px rgba(0,0,0,.28); backdrop-filter: blur(16px); }
++h1 { margin:0; font-size:clamp(1.9rem,5vw,3.4rem); letter-spacing:-.06em; }
++h2 { margin:0 0 10px; font-size:1.05rem; color:#dbeafe; }
++.sub, .muted { color:var(--muted); }
++.nav { margin-top:10px; font-size:.92rem; }
++a { color:#bfdbfe; }
++.statgrid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:12px; }
++.stat { border:1px solid var(--line); border-radius:16px; padding:10px; background:rgba(2,6,23,.48); }
++.big { font-size:1.7rem; font-weight:950; line-height:1; }
++label { display:block; margin:10px 0 6px; color:#dbeafe; font-weight:800; }
++input, select, button { width:100%; border-radius:14px; border:1px solid var(--line); padding:10px 12px; background:#020617; color:var(--text); font:inherit; }
++button { margin-top:10px; border:0; font-weight:950; cursor:pointer; background:linear-gradient(135deg,#2563eb,#7c3aed); }
++.zoomControls { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:10px; }
++.zoomControls button { margin-top:0; padding:10px 8px; background:rgba(37,99,235,.82); border:1px solid rgba(191,219,254,.18); }
++.hint { margin-top:8px; color:var(--muted); font-size:.84rem; line-height:1.35; }
++.legend { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
++.chip { border:1px solid var(--line); border-radius:999px; padding:6px 9px; background:rgba(2,6,23,.5); font-size:.82rem; }
++.dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:-1px; }
++.detail { max-height:54vh; overflow:auto; white-space:normal; }
++.title { font-weight:950; font-size:1.05rem; margin-bottom:8px; overflow-wrap:anywhere; }
++.excerpt { color:#d1d5db; line-height:1.45; overflow-wrap:anywhere; }
++.footer { position:fixed; left:18px; bottom:12px; color:rgba(226,232,240,.75); font-size:.82rem; }
++/* Phone layout: leave the graph as the primary surface and turn the two
++   desktop side panels into compact, touch-friendly overlays. */
++@media (max-width:900px) {
++  body { overflow:hidden; }
++  canvas { position:fixed; inset:0; width:100vw; height:100dvh; touch-action:none; }
++  .chrome { position:fixed; inset:8px; min-height:0; padding:0; display:block; pointer-events:none; }
++  .panel { pointer-events:auto; margin:0; padding:12px; border-radius:18px; box-shadow:0 12px 42px rgba(0,0,0,.35); }
++  .chrome > section:first-child { position:absolute; top:0; left:0; right:0; max-height:39dvh; overflow:auto; }
++  .chrome > div { display:none; }
++  .chrome > section.detail { position:absolute; left:0; right:0; bottom:calc(8px + env(safe-area-inset-bottom)); max-height:27dvh; overflow:auto; }
++  h1 { font-size:1.6rem; letter-spacing:-.045em; }
++  h2 { font-size:.98rem; margin-bottom:6px; }
++  .sub { font-size:.84rem; line-height:1.3; }
++  .nav { margin-top:7px; font-size:.82rem; }
++  .statgrid { margin-top:9px; gap:6px; }
++  .stat { border-radius:12px; padding:7px; }
++  .big { font-size:1.28rem; }
++  label { margin:8px 0 4px; font-size:.86rem; }
++  input, select, button { min-height:42px; padding:8px 10px; border-radius:12px; }
++  .zoomControls { margin-top:8px; gap:6px; }
++  .zoomControls button { min-height:42px; }
++  .hint { font-size:.76rem; margin-top:6px; }
++  #reload { margin-top:8px; }
++  .legend { margin-top:8px; gap:5px; }
++  .chip { padding:4px 7px; font-size:.72rem; }
++  .detail { font-size:.9rem; }
++  .title { font-size:.98rem; margin-bottom:5px; }
++  .excerpt { margin:8px 0 0; font-size:.88rem; line-height:1.36; }
++  .footer { display:none; }
++}
++  </style>
++</head>
++<body>
++  <canvas id="graph"></canvas>
++  <div class="chrome">
++<section class="panel">
++  <h1>Herald Memory Graph</h1>
++  <div class="sub">A live map of Herald's vector memory: recent memories grouped by source, with similarity links from stored embeddings.</div>
++  <div class="nav"><a href="/chat">Chat</a> · <a href="/walkie">Walkie</a> · <a href="/draw">Draw</a> · <a href="/staff">Staff</a></div>
++  <div class="statgrid">
++    <div class="stat"><div class="big" id="total">—</div><div class="muted">total memories</div></div>
++    <div class="stat"><div class="big" id="embedded">—</div><div class="muted">embedded</div></div>
++    <div class="stat"><div class="big" id="shown">—</div><div class="muted">nodes shown</div></div>
++    <div class="stat"><div class="big" id="links">—</div><div class="muted">links</div></div>
++  </div>
++  <label for="sourceFilter">Source filter</label>
++  <select id="sourceFilter"><option value="">All memory</option></select>
++  <label for="limit">Recent memory nodes</label>
++  <input id="limit" type="number" min="20" max="300" value="160" />
++  <div class="zoomControls">
++    <button id="zoomOut" type="button">−</button>
++    <button id="zoomReset" type="button">Reset</button>
++    <button id="zoomIn" type="button">+</button>
++  </div>
++  <div class="hint">Wheel/trackpad zooms. Drag empty space to pan. Drag a node to move it.</div>
++  <button id="reload">Reload Memory Graph</button>
++  <div class="legend" id="legend"></div>
++</section>
++<div></div>
++<section class="panel detail">
++  <h2>Selected Memory</h2>
++  <div id="details" class="muted">Tap/click a node. Drag nodes around. Hubs are memory source types; smaller nodes are actual vector memories.</div>
++</section>
++  </div>
++  <div class="footer">Similarity links are approximate and read-only. This page does not modify Herald's memory.</div>
++  <script>
++const canvas = document.getElementById('graph');
++const ctx = canvas.getContext('2d');
++const sourceFilter = document.getElementById('sourceFilter');
++const limitInput = document.getElementById('limit');
++const details = document.getElementById('details');
++const legend = document.getElementById('legend');
++const colorMap = {
++  conversation:'#38bdf8', memory:'#a78bfa', staff_task:'#fbbf24', ops_item:'#fb7185',
++  web_research:'#2dd4bf', daily_reflection:'#22c55e', source_hub:'#f8fafc'
++};
++let raw = null, nodes = [], links = [], dragging = null, panning = false, selected = null, pointer = {x:0,y:0};
++let camera = {x:0, y:0, scale:1};
++function colorFor(type) { return colorMap[type] || ['#60a5fa','#f472b6','#34d399','#facc15','#fb923c'][Math.abs([...type].reduce((a,c)=>a+c.charCodeAt(0),0)) % 5]; }
++function resize() { canvas.width = innerWidth * devicePixelRatio; canvas.height = innerHeight * devicePixelRatio; ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0); }
++addEventListener('resize', resize); resize();
++function screenToWorld(x,y) { return {x:(x - camera.x) / camera.scale, y:(y - camera.y) / camera.scale}; }
++function worldToScreen(x,y) { return {x:x * camera.scale + camera.x, y:y * camera.scale + camera.y}; }
++function clampZoom(value) { return Math.max(0.25, Math.min(4, value)); }
++function setZoom(nextScale, anchorX = innerWidth / 2, anchorY = innerHeight / 2) {
++  const before = screenToWorld(anchorX, anchorY);
++  camera.scale = clampZoom(nextScale);
++  camera.x = anchorX - before.x * camera.scale;
++  camera.y = anchorY - before.y * camera.scale;
++}
++function resetView() { camera = {x:0, y:0, scale:1}; }
++function initPositions() {
++  const w = innerWidth, h = innerHeight, cx = w/2, cy = h/2;
++  nodes.forEach((n,i) => {
++    if (n.x == null) {
++      const angle = (i / Math.max(1,nodes.length)) * Math.PI * 2;
++      const r = n.hub ? Math.min(w,h)*0.22 : Math.min(w,h)*(0.18 + Math.random()*0.28);
++      n.x = cx + Math.cos(angle)*r + (Math.random()-.5)*80;
++      n.y = cy + Math.sin(angle)*r + (Math.random()-.5)*80;
++      n.vx = 0; n.vy = 0;
++    }
++  });
++}
++function applyFilter() {
++  if (!raw) return;
++  const f = sourceFilter.value;
++  const allowed = new Set();
++  raw.nodes.forEach(n => { if (!f || n.source_type === f || n.id === 'source:'+f || n.source_type === 'source_hub') allowed.add(n.id); });
++  nodes = raw.nodes.filter(n => allowed.has(n.id)).map(n => ({...n}));
++  const nodeIds = new Set(nodes.map(n => n.id));
++  links = raw.links.filter(l => nodeIds.has(l.source) && nodeIds.has(l.target));
++  initPositions();
++  document.getElementById('shown').textContent = nodes.length;
++  document.getElementById('links').textContent = links.length;
++}
++async function loadGraph() {
++  const limit = encodeURIComponent(limitInput.value || '160');
++  const res = await fetch('/api/memory/graph-browser?limit=' + limit);
++  const data = await res.json().catch(() => ({detail:'Non-JSON response'}));
++  if (!res.ok) throw new Error(data.detail || 'HTTP ' + res.status);
++  raw = data;
++  document.getElementById('total').textContent = data.stats.total;
++  document.getElementById('embedded').textContent = data.stats.embedded;
++  const types = [...new Set(data.nodes.filter(n => !n.hub).map(n => n.source_type))].sort();
++  sourceFilter.innerHTML = '<option value="">All memory</option>' + types.map(t => `<option value="${t}">${t.replaceAll('_',' ')}</option>`).join('');
++  legend.innerHTML = types.map(t => `<span class="chip"><span class="dot" style="background:${colorFor(t)}"></span>${t.replaceAll('_',' ')}</span>`).join('');
++  selected = null;
++  details.textContent = 'Tap/click a node. Drag nodes around. Hubs are memory source types; smaller nodes are actual vector memories.';
++  applyFilter();
++}
++function step() {
++  const w = innerWidth, h = innerHeight, center = screenToWorld(w/2, h/2), cx = center.x, cy = center.y;
++  const byId = Object.fromEntries(nodes.map(n => [n.id,n]));
++  const largeGraph = nodes.length > 350;
++  links.forEach(l => {
++    const a = byId[l.source], b = byId[l.target]; if (!a || !b) return;
++    const dx = b.x-a.x, dy = b.y-a.y, dist = Math.sqrt(dx*dx+dy*dy) || 1;
++    const target = l.kind === 'source' ? 130 : 95;
++    const force = (dist-target) * (l.kind === 'source' ? .0009 : .0018);
++    const fx = dx/dist*force, fy = dy/dist*force;
++    if (!a.fixed) { a.vx += fx; a.vy += fy; }
++    if (!b.fixed) { b.vx -= fx; b.vy -= fy; }
++  });
++  // A full pairwise physics simulation is pleasant for a few hundred nodes,
++  // but becomes a browser-side million-pair loop for the complete library.
++  // Large views remain fully interactive; they simply use the source links
++  // for layout rather than repelling every dot from every other dot.
++  if (!largeGraph) for (let i=0;i<nodes.length;i++) for (let j=i+1;j<nodes.length;j++) {
++    const a=nodes[i], b=nodes[j], dx=b.x-a.x, dy=b.y-a.y, d2=dx*dx+dy*dy || 1;
++    const f = Math.min(1.8, 900/d2);
++    if (!a.fixed) { a.vx -= dx*f*.006; a.vy -= dy*f*.006; }
++    if (!b.fixed) { b.vx += dx*f*.006; b.vy += dy*f*.006; }
++  }
++  nodes.forEach(n => {
++    if (!n.fixed) {
++      n.vx += (cx-n.x) * (n.hub ? .0008 : .00025);
++      n.vy += (cy-n.y) * (n.hub ? .0008 : .00025);
++      n.vx *= .89; n.vy *= .89; n.x += n.vx; n.y += n.vy;
++    }
++  });
++}
++function draw() {
++  ctx.clearRect(0,0,innerWidth,innerHeight);
++  ctx.save();
++  ctx.translate(camera.x, camera.y);
++  ctx.scale(camera.scale, camera.scale);
++  const byId = Object.fromEntries(nodes.map(n => [n.id,n]));
++  links.forEach(l => {
++    const a=byId[l.source], b=byId[l.target]; if (!a||!b) return;
++    ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y);
++    ctx.strokeStyle = l.kind === 'similarity' ? `rgba(251,191,36,${Math.max(.1,(l.score-.70)*1.8)})` : 'rgba(148,163,184,.16)';
++    ctx.lineWidth = l.kind === 'similarity' ? 1.2 : .8; ctx.stroke();
++  });
++  nodes.forEach(n => {
++    const c = colorFor(n.source_type);
++    const r = n.radius || 9;
++    const g = ctx.createRadialGradient(n.x,n.y,1,n.x,n.y,r*3.2);
++    g.addColorStop(0,c); g.addColorStop(.38,c+'cc'); g.addColorStop(1,'rgba(2,6,23,0)');
++    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(n.x,n.y,r*3.2,0,Math.PI*2); ctx.fill();
++    ctx.fillStyle = c; ctx.beginPath(); ctx.arc(n.x,n.y,r,0,Math.PI*2); ctx.fill();
++    ctx.strokeStyle = selected && selected.id === n.id ? '#fff' : 'rgba(255,255,255,.65)';
++    ctx.lineWidth = selected && selected.id === n.id ? 3 : 1; ctx.stroke();
++    if (n.hub || r > 12) {
++      ctx.fillStyle = 'rgba(248,250,252,.88)'; ctx.font = n.hub ? '700 13px system-ui' : '600 11px system-ui';
++      ctx.fillText((n.title || '').slice(0,28), n.x + r + 5, n.y + 4);
++    }
++  });
++  ctx.restore();
++  ctx.fillStyle = 'rgba(226,232,240,.78)';
++  ctx.font = '700 12px system-ui';
++  ctx.fillText(`Zoom ${Math.round(camera.scale * 100)}%`, 18, innerHeight - 34);
++}
++function animate() { for (let i=0;i<2;i++) step(); draw(); requestAnimationFrame(animate); }
++function hit(x,y) {
++  const p = screenToWorld(x,y);
++  return [...nodes].reverse().find(n => Math.hypot(n.x-p.x,n.y-p.y) <= ((n.radius || 9) + 8) / Math.sqrt(camera.scale));
++}
++function show(n) {
++  selected = n;
++  details.innerHTML = `<div class="title">${(n.title||n.id).replace(/[<>&]/g, s => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[s]))}</div>
++    <div class="muted">${n.source_type || ''}${n.updated_at ? ' · ' + n.updated_at : ''}${n.count ? ' · ' + n.count + ' items' : ''}</div>
++    <p class="excerpt">${(n.excerpt||'No excerpt.').replace(/[<>&]/g, s => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[s]))}</p>`;
++}
++canvas.addEventListener('pointerdown', e => {
++  pointer={x:e.clientX,y:e.clientY};
++  const n=hit(pointer.x,pointer.y);
++  canvas.setPointerCapture?.(e.pointerId);
++  if(n){ dragging=n; n.fixed=true; show(n); }
++  else { panning = true; }
++});
++canvas.addEventListener('pointermove', e => {
++  const prev = pointer;
++  pointer={x:e.clientX,y:e.clientY};
++  if(dragging){
++    const p = screenToWorld(pointer.x,pointer.y);
++    dragging.x=p.x; dragging.y=p.y; dragging.vx=0; dragging.vy=0;
++  } else if (panning) {
++    camera.x += pointer.x - prev.x;
++    camera.y += pointer.y - prev.y;
++  }
++});
++canvas.addEventListener('wheel', e => {
++  e.preventDefault();
++  const factor = Math.exp(-e.deltaY * 0.0012);
++  setZoom(camera.scale * factor, e.clientX, e.clientY);
++}, {passive:false});
++addEventListener('pointerup', e => {
++  if(dragging){ dragging.fixed=false; dragging=null; }
++  panning = false;
++  canvas.releasePointerCapture?.(e.pointerId);
++});
++sourceFilter.addEventListener('change', applyFilter);
++document.getElementById('zoomOut').addEventListener('click', () => setZoom(camera.scale / 1.25));
++document.getElementById('zoomIn').addEventListener('click', () => setZoom(camera.scale * 1.25));
++document.getElementById('zoomReset').addEventListener('click', resetView);
++document.getElementById('reload').addEventListener('click', () => loadGraph().catch(err => details.textContent='Error: '+err.message));
++loadGraph().catch(err => details.textContent='Error: '+err.message);
++animate();
++  </script>
++</body>
++</html>"""
++    return HTMLResponse(html_doc, headers={"Cache-Control": "no-store"})
++
++@app.get("/api/memory/graph-browser")
++async def herald_memory_graph_browser(request: Request):
++    query = request.url.query
++    target = "http://127.0.0.1:8791/memory/vector/graph" + (f"?{query}" if query else "")
++    req = urllib.request.Request(target, method="GET")
++    try:
++        with urllib.request.urlopen(req, timeout=30) as resp:
++            return JSONResponse(json.loads(resp.read().decode("utf-8")))
++    except urllib.error.HTTPError as exc:
++        detail = exc.read().decode("utf-8", "replace")[:2000]
++        return JSONResponse({"detail": detail}, status_code=exc.code)
++    except Exception as exc:
++        return JSONResponse({"detail": str(exc)[:1000]}, status_code=502)
++
+ mount_spa(app)
+ 
+ 
+diff --git a/tests/tools/test_lazy_deps.py b/tests/tools/test_lazy_deps.py
+index 74838a69a..ec59a9427 100644
+--- a/tests/tools/test_lazy_deps.py
++++ b/tests/tools/test_lazy_deps.py
+@@ -173,6 +173,12 @@ class TestIsAvailable:
+         assert ld.is_available("test.miss") is False
+ 
+ 
++def test_wake_onnxruntime_pin_uses_available_intel_macos_wheel():
++    assert ld._wake_onnxruntime_spec("darwin", "x86_64") == "onnxruntime==1.23.2"
++    assert ld._wake_onnxruntime_spec("darwin", "amd64") == "onnxruntime==1.23.2"
++    assert ld._wake_onnxruntime_spec("linux", "x86_64") == "onnxruntime==1.27.0"
++
++
+ # ---------------------------------------------------------------------------
+ # Version-aware _is_satisfied (Piece B — "stale pin" detection)
+ #
+diff --git a/tools/lazy_deps.py b/tools/lazy_deps.py
+index 64d4f2ec3..473d2d831 100644
+--- a/tools/lazy_deps.py
++++ b/tools/lazy_deps.py
+@@ -69,6 +69,7 @@ from __future__ import annotations
+ 
+ import logging
+ import os
++import platform
+ import re
+ import shutil
+ import site
+@@ -94,6 +95,22 @@ logger = logging.getLogger(__name__)
+ # =============================================================================
+ 
+ 
++def _wake_onnxruntime_spec(
++    system: str = sys.platform,
++    machine: str = platform.machine(),
++) -> str:
++    """Return the newest ONNX Runtime pin available for this platform.
++
++    ONNX Runtime 1.27 has no macOS x86_64 wheel. Requiring it made Hermes
++    repeatedly attempt an impossible lazy install on Intel Macs even when the
++    compatible 1.23.2 runtime was already installed. Keep the current pin on
++    supported platforms and use the final Intel-macOS wheel only there.
++    """
++    if system == "darwin" and machine.lower() in {"x86_64", "amd64"}:
++        return "onnxruntime==1.23.2"
++    return "onnxruntime==1.27.0"
++
++
+ LAZY_DEPS: dict[str, tuple[str, ...]] = {
+     # ─── Inference providers ───────────────────────────────────────────────
+     # Native Anthropic SDK — needed when provider=anthropic (not via
+@@ -167,7 +184,7 @@ LAZY_DEPS: dict[str, tuple[str, ...]] = {
+     ),
+     "wake.openwakeword": (
+         "openwakeword==0.6.0",
+-        "onnxruntime==1.27.0",
++        _wake_onnxruntime_spec(),
+         "sounddevice==0.5.5",
+         "numpy==2.4.3",
+     ),
+diff --git a/web/src/App.tsx b/web/src/App.tsx
+index bb79cb6a6..d49f3acb6 100644
+--- a/web/src/App.tsx
++++ b/web/src/App.tsx
+@@ -96,6 +96,7 @@ const ChannelsPage = lazy(() => import("@/pages/ChannelsPage"));
+ const WebhooksPage = lazy(() => import("@/pages/WebhooksPage"));
+ const SystemPage = lazy(() => import("@/pages/SystemPage"));
+ const ChatPage = lazy(() => import("@/pages/ChatPage"));
++const MissionControlPage = lazy(() => import("@/pages/MissionControlPage"));
+ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+ import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+ import { useI18n } from "@/i18n";
+@@ -158,6 +159,7 @@ const BUILTIN_ROUTES_CORE: Record<string, ComponentType> = {
+   "/sessions": SessionsPage,
+   "/files": FilesPage,
+   "/analytics": AnalyticsPage,
++  "/mission-control": MissionControlPage,
+   "/models": ModelsPage,
+   "/logs": LogsPage,
+   "/cron": CronPage,
+@@ -197,6 +199,7 @@ const BUILTIN_NAV_REST: NavItem[] = [
+     label: "Analytics",
+     icon: BarChart3,
+   },
++  { path: "/mission-control", label: "Mission Control", icon: ShieldCheck },
+   {
+     path: "/models",
+     labelKey: "models",
+diff --git a/web/src/lib/api.ts b/web/src/lib/api.ts
+index f02841275..35da23433 100644
+--- a/web/src/lib/api.ts
++++ b/web/src/lib/api.ts
+@@ -341,6 +341,8 @@ function appendSessionFilters(url: string, options: SessionQueryOptions): string
+ export const api = {
+   buildWsUrl,
+   getStatus: () => fetchJSON<StatusResponse>("/api/status"),
++  getMissionControlTasks: () =>
++    fetchJSON<MissionControlTasksResponse>("/api/mission-control/tasks"),
+   /**
+    * Identity probe for the dashboard auth gate (Phase 7).
+    *
+@@ -1861,6 +1863,25 @@ export interface PlatformStatus {
+   updated_at: string;
+ }
+ 
++export interface MissionControlTask {
++  id: string;
++  title: string;
++  assignee: string;
++  target_host?: string | null;
++  status: string;
++  is_complete: boolean;
++  last_progress?: string | null;
++  verification_evidence?: string | null;
++  blocker?: string | null;
++  is_escalation: boolean;
++  updated_at: string;
++}
++
++export interface MissionControlTasksResponse {
++  tasks: MissionControlTask[];
++  source_available: boolean;
++}
++
+ export interface StatusResponse {
+   active_sessions: number;
+   /** Phase 7: ``true`` when the dashboard's OAuth gate is engaged

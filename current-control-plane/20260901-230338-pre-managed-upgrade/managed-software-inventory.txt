@@ -1,0 +1,72 @@
+Created: 2026-09-01T23:03:49.7125675-06:00
+Reason: immediate-deterministic-maintenance-and-SAL-26.6.2
+
+HAL winget upgrades:
+Name                                                         Id                                Version             Available           Source
+---------------------------------------------------------------------------------------------------------------------------------------------
+LibreOffice 25.8.4.2                                         TheDocumentFoundation.LibreOffice 25.8.4.2            26.8.0.3            winget
+Microsoft Teams                                              Microsoft.Teams                   24257.205.3165.2029 26198.304.4946.9672 winget
+Microsoft Visual C++ v14 Redistributable (x64) - 14.50.35719 Microsoft.VCRedist.2015+.x64      14.50.35719.0       14.51.36247.0       winget
+Microsoft Visual C++ v14 Redistributable (x86) - 14.50.35719 Microsoft.VCRedist.2015+.x86      14.50.35719.0       14.51.36247.0       winget
+4 upgrades available.
+2 package(s) have version numbers that cannot be determined. Use --include-unknown to see all results.
+
+HAL Ollama:
+ollama version is 0.33.2
+NAME                                 ID              SIZE      MODIFIED     
+nomic-embed-text:latest              0a109f422b47    274 MB    11 hours ago    
+gemma4:latest                        c6eb396dbd59    9.6 GB    11 hours ago    
+windance-jim-mindwell:latest         9a1ec8304ce1    9.3 GB    3 days ago      
+vortex/helpingai-9b:latest           3f4f7f75b3c6    5.0 GB    4 days ago      
+ALIENTELLIGENCE/mindwell:latest      c5b3abcbf36c    9.3 GB    4 days ago      
+windance-jim-qwen:latest             7740fb223b49    9.3 GB    4 days ago      
+qwen3:14b                            bdbd181c33f2    9.3 GB    4 days ago      
+ministral-3:latest                   1922accd5827    6.0 GB    8 days ago      
+samantha-mistral:7b                  f7c8c9be1da0    4.1 GB    10 days ago     
+windance-iris-phi-backup:latest      fd0850a750cd    9.1 GB    2 weeks ago     
+windance-athena-phi-backup:latest    610146938003    9.1 GB    2 weeks ago     
+windance-iris:latest                 7addff58dac9    9.6 GB    2 weeks ago     
+windance-athena:latest               2c55df7b4671    9.6 GB    2 weeks ago     
+windance-sandbox:latest              f6055c0241b7    6.6 GB    2 weeks ago     
+qwen3.5:9b                           6488c96fa5fa    6.6 GB    2 weeks ago     
+windance-herald:latest               4ea8f89a0853    9.6 GB    2 weeks ago     
+windance-sentinel:latest             25e92f4aa3c2    9.6 GB    2 weeks ago     
+windance-ledger:latest               15aef872bfee    9.6 GB    2 weeks ago     
+windance-max:latest                  7c86b3e4c692    9.6 GB    2 weeks ago     
+windance-scout:latest                543d415597f6    9.6 GB    2 weeks ago     
+windance-archivist:latest            508ad80fc6b1    9.6 GB    2 weeks ago     
+windance-forge:latest                7737c873397f    9.6 GB    2 weeks ago     
+windance-jean:latest                 e78a38eadba1    9.6 GB    2 weeks ago     
+granite4:tiny-h                      566b725534ea    4.2 GB    2 weeks ago     
+phi4:14b                             ac896e5b8b34    9.1 GB    2 weeks ago     
+
+HERALD:
+Hermes Agent v0.21.0 (2026.8.31) · upstream 00b2e03c
+Install directory: /Users/herald/.hermes/hermes-agent
+Install method: git
+Python: 3.11.15
+OpenAI SDK: 2.24.0
+Update available: 97 commits behind — run 'hermes update'
+ProductName:		macOS
+ProductVersion:		26.5.2
+BuildVersion:		25F84
+
+SAL:
+==> Downloading Homebrew API data
+✔︎ JSON API packages.arm64_tahoe.jws.json
+Node-RED v5.0.4
+Node.js v26.8.1
+Darwin 25.5.0 arm64 LE
+cloudflared version 2026.8.3 (built 2026-08-31T09:48:10Z)
+
+AL:
+Listing...
+python3-software-properties/resolute-updates 0.120.1 all [upgradable from: 0.120]
+software-properties-common/resolute-updates 0.120.1 all [upgradable from: 0.120]
+open-webui ghcr.io/open-webui/open-webui:main Up 11 hours (healthy)
+portainer portainer/portainer-ce:latest Up 11 hours
+syncthing lscr.io/linuxserver/syncthing:latest Up 11 hours
+
+SAM:
+Listing...
+active
