@@ -38,4 +38,5 @@
 - Shawn's mailbox uses its own OAuth token, durable reference map, pending-action state, and audit trail; it must not share William's numbered-message references.
 - Scheduled reports are delivered only to Shawn. Commands are accepted only from Shawn's recognized sender identity.
 - Mailbox mutations are never executed from the first request. The service stages the requested batch and requires Shawn's sender-bound `YES`; `NO` cancels. Draft creation is allowed only through the same approval gate and never sends the draft.
+- In Shawn's numbered email workflow, every supported action followed by numbers refers to the most recently generated Shawn report; she is not required to add the word `emails`. This applies to Always Delete, Notify Delete, Delete, Archive, Save/Keep, Mark Read, and Reply/Draft Reply. Approval creates durable sender rules where requested and executes the approved current-message actions; future rule matches are enforced before subsequent reports.
 - The Node-RED transport remains the communications layer; the Shawn mail service is the source of truth for references, approval state, and Gmail action results.
