@@ -313,11 +313,13 @@ SAL compatibility note:
   existing safe iMessage sender, and advances the durable cursor at
   `~/.local/state/windance/imessage-herald-rowid` only after successful reply
   delivery. Its operational log omits message bodies.
-- The worker was started through SAL's privacy-authorized SSH session and is
-  recorded in `~/.imessage-herald-bridge.pid`. It survives SSH disconnects but
-  not a SAL reboot. Before a planned reboot, grant Full Disk Access to the
-  Python executable used by the worker and install it as a LaunchAgent, or
-  explicitly re-establish it through an authorized session after boot.
+- The worker is persistent under user LaunchAgent
+  `com.windance.imessage-herald-bridge`. Full Disk Access is granted to signed
+  bundle ID `com.apple.python3`; the LaunchAgent must invoke the Python.app
+  executable directly at
+  `/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python`.
+  Do not change it back to the `/usr/bin/python3` shim: macOS evaluates that
+  path under a different TCC identity and denies Messages database access.
 - Git restore point `318ee97` contains the secret-sanitized pre-repair flow
   and bridge components. SyncThing configuration and schedules were not changed.
 
