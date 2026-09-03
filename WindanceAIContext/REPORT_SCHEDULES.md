@@ -6,34 +6,34 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 
 | Time | Report | Recipient | Delivery behavior |
 |---|---|---|---|
-| 6:50 AM | Sentinel router security review | William | Daily router review |
-| 7:00 AM | Network and systems status | William | Daily; concise all-clear or exceptions |
+| 6:50 AM | Sentinel router security review | William | Routine all-clear through Telegram; suspicious, blocked, or urgent findings through Max/iMessage |
+| 7:00 AM | Network and systems status | William | Routine all-clear through Telegram; attention/outage report through Max/iMessage |
 | 7:10 AM | Current-day Training Schedule | Shawn | Daily operational schedule |
 | 7:20 AM | Combined daily briefing | William | Includes deterministic numbered email review |
 | 7:35 AM | Prior-day Training Completion Check | William | Sends only when suspicious rapid completions exist |
 | 7:45 AM | Prior-day attendance IP exceptions | William | Sends only when an exception exists |
 | 7:50 AM | Shawn email review and management report | Shawn | Numbered unread inbox review; sender-bound YES/NO approval for changes |
 | 8:10 AM | Ledger unpaid-invoice report | Shawn | Daily Odoo operational report |
-| 9:00 AM | Morning news briefing | William | Frontier AI and social-media marketing |
+| 9:00 AM | Morning news briefing | William | Telegram; Frontier AI and social-media marketing |
 | 12:10 PM | Read-only email review | William | Daily midday inbox review |
 | 12:30 PM | Shawn email review and management report | Shawn | Numbered unread inbox review; changes require Shawn's approval |
 | 5:00 PM | Read-only email review | William | Daily end-of-day inbox review |
 | 5:10 PM | Shawn email review and management report | Shawn | Numbered unread inbox review; changes require Shawn's approval |
-| 7:00 PM | Capture Inbox reminder | William | Sends only when active captures await review |
+| 7:00 PM | Capture Inbox reminder | William | Telegram; sends only when active captures await review |
 
 ## Monday through Thursday
 
 | Time | Report | Recipient |
 |---|---|---|
-| 8:00 AM | YouTube watch briefing (12-hour window) | William |
-| 12:00 PM | YouTube watch briefing (4-hour window) | William |
-| 4:00 PM | YouTube watch briefing (4-hour window) | William |
+| 8:00 AM | YouTube watch briefing (12-hour window) | William through Telegram |
+| 12:00 PM | YouTube watch briefing (4-hour window) | William through Telegram |
+| 4:00 PM | YouTube watch briefing (4-hour window) | William through Telegram |
 
 ## Weekly reports
 
 | Time | Report | Recipient / destination |
 |---|---|---|
-| Tuesday 10:30 AM | Weekly Windance software and AI-stack review | SAL schedules exact-ID local Hermes profile work for Scout, Forge, Vega, Athena, and Archivist; a QA-approved recommendation is delivered to William through Max/iMessage with delivery evidence |
+| Tuesday 10:30 AM | Weekly Windance software and AI-stack review | SAL schedules exact-ID local Hermes profile work; Telegram receives only each feature, concise named-agent arguments, and team consensus after Athena's QA gate |
 
 The SAL LaunchAgent `com.windance.weekly-stack-review` owns this recurring local-first review as of 2026-09-03. It gathers structured official release evidence, creates durable staff rows, and invokes Herald's isolated Hermes profiles only by exact task ID; it cannot sweep the legacy pending queue. Codex is a fallback, not the scheduler or default reviewer. William requested the special review immediately on 2026-09-03; the manual production run completed its staff and Athena gates and Max accepted the two-part iMessage with `ok: true`. The unused 2026-09-04 one-shot was then unloaded and moved to SAL's recoverable Trash to prevent duplicate delivery. Delivery validation now examines structured sender fields rather than report prose.
 
