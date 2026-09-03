@@ -33,9 +33,9 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 
 | Time | Report | Recipient / destination |
 |---|---|---|
-| Tuesday 10:30 AM | Weekly Windance software and AI-stack review | Codex heartbeat coordinates Scout research, Forge/Vega fit analysis, Athena QA, Archivist record, and William approval report; Max/iMessage is used only when delivery is verified |
+| Tuesday 10:30 AM | Weekly Windance software and AI-stack review | SAL schedules exact-ID local Hermes profile work for Scout, Forge, Vega, Athena, and Archivist; a QA-approved recommendation is delivered to William through Max/iMessage with delivery evidence |
 
-The Codex heartbeat `weekly-windance-software-review` owns this recurring review as of 2026-09-03. The defective SAL LaunchAgent `com.windance.weekly-stack-review` was unloaded after it repeatedly created an orphaned Scout task and failed before the remaining staff stages. A one-time special run was requested for Friday 2026-09-04 at 10:30 AM Mountain through an anchored Codex automation card.
+The SAL LaunchAgent `com.windance.weekly-stack-review` owns this recurring local-first review as of 2026-09-03. It gathers structured official release evidence, creates durable staff rows, and invokes Herald's isolated Hermes profiles only by exact task ID; it cannot sweep the legacy pending queue. Codex is a fallback, not the scheduler or default reviewer. A date-anchored SAL LaunchAgent `com.windance.weekly-stack-review-special-20260904` provides the one-time Friday 2026-09-04 10:30 AM Mountain run.
 
 ## Conditional business report processing
 

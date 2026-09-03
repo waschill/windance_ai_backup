@@ -384,6 +384,7 @@ Weekly stack review skill as of 2026-07-21:
 - Purpose: guide weekly review of Hermes Agent/Hermes harness, Herald Agent Harness impact, and HAL Ollama `gemma4:latest` releases/docs/features.
 - Trigger examples: "run the weekly Hermes/Gemma stack review", "check new Hermes Agent features", "create recommendations for Hermes/Gemma upgrades".
 - The skill is an operating procedure, not an automatic scheduler. Use it to research, coordinate Scout/Forge/Athena/Archivist/Vega roles, and produce implement/test/defer/ignore recommendations. Do not change production unless William separately approves implementation.
+- As of 2026-09-03, SAL LaunchAgent `com.windance.weekly-stack-review` runs this review Tuesdays at 10:30 AM Mountain. It gathers structured official release records and dispatches only the newly created exact task IDs through `/Users/herald/services/profile-staff-runner/profile_staff_runner.py`; the runner does not sweep the old pending queue. Scout, Forge, Vega, Athena, and Archivist use isolated Hermes profiles. Max/iMessage delivery occurs only after Athena's pass/ready gate and must include sender evidence. Codex is fallback-only.
 - Herald Agent Harness was patched on 2026-07-21 so long Brave LLM Context queries are compacted before calling Brave. This prevents HTTP 422 "query too long" failures from dictated paragraphs.
 - Herald Agent Harness was also patched so "create/build/update a skill" routes to real Vega/Forge work orders instead of generic Scout/Brave research.
 

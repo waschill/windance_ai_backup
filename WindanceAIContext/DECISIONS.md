@@ -19,7 +19,7 @@
 ## Reporting and scheduling
 
 - Scheduled messages must have a real scheduler, an authorized durable destination, delivery evidence, and explicit failure logging.
-- The weekly Windance software and AI-stack review is owned by the Codex heartbeat `weekly-windance-software-review`, scheduled Tuesdays at 10:30 AM Mountain. It is recommendation-only and follows Scout research, Forge/Vega fit analysis, Athena QA/veto, Archivist recording, and William approval. Max/iMessage delivery may be used only with verified delivery evidence. The former SAL `com.windance.weekly-stack-review` job is unloaded because its task-response handling failed and left orphaned staff rows.
+- The weekly Windance software and AI-stack review is local-first and owned by SAL LaunchAgent `com.windance.weekly-stack-review`, scheduled Tuesdays at 10:30 AM Mountain. SAL gathers structured official release evidence and dispatches exact durable task IDs to isolated Herald Hermes profiles for Scout research, Forge/Vega fit analysis, Athena QA/veto, and Archivist recording. The runner may not sweep unrelated pending work. A QA-approved report is delivered to William through Max/iMessage only with verified delivery evidence. Codex is a fallback for work the local stack cannot perform reliably, not the scheduler or default reviewer.
 - Kefa and his recurring daily Bible-study delivery were retired on 2026-08-29 at William's direction. Do not recreate or reschedule Kefa unless William explicitly requests it in a future turn.
 - Training Schedule commits are historical records. They must remain queryable by horse and date.
 - SAM's daily schedule must commit the prior day, load the current day, preserve carry-over semantics, and run without an operator present.
