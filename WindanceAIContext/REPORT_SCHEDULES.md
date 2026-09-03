@@ -33,8 +33,9 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 
 | Time | Report | Recipient / destination |
 |---|---|---|
-| Monday 3:00 AM | Weekly Windance software review | Current Codex thread; release-note/SOP review |
-| Tuesday 10:30 AM | AI stack review | William through Max/iMessage when results require delivery |
+| Tuesday 10:30 AM | Weekly Windance software and AI-stack review | Codex heartbeat coordinates Scout research, Forge/Vega fit analysis, Athena QA, Archivist record, and William approval report; Max/iMessage is used only when delivery is verified |
+
+The Codex heartbeat `weekly-windance-software-review` owns this recurring review as of 2026-09-03. The defective SAL LaunchAgent `com.windance.weekly-stack-review` was unloaded after it repeatedly created an orphaned Scout task and failed before the remaining staff stages. A one-time special run was requested for Friday 2026-09-04 at 10:30 AM Mountain through an anchored Codex automation card.
 
 ## Conditional business report processing
 
