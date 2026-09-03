@@ -35,7 +35,7 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 |---|---|---|
 | Tuesday 10:30 AM | Weekly Windance software and AI-stack review | SAL schedules exact-ID local Hermes profile work for Scout, Forge, Vega, Athena, and Archivist; a QA-approved recommendation is delivered to William through Max/iMessage with delivery evidence |
 
-The SAL LaunchAgent `com.windance.weekly-stack-review` owns this recurring local-first review as of 2026-09-03. It gathers structured official release evidence, creates durable staff rows, and invokes Herald's isolated Hermes profiles only by exact task ID; it cannot sweep the legacy pending queue. Codex is a fallback, not the scheduler or default reviewer. A date-anchored SAL LaunchAgent `com.windance.weekly-stack-review-special-20260904` provides the one-time Friday 2026-09-04 10:30 AM Mountain run.
+The SAL LaunchAgent `com.windance.weekly-stack-review` owns this recurring local-first review as of 2026-09-03. It gathers structured official release evidence, creates durable staff rows, and invokes Herald's isolated Hermes profiles only by exact task ID; it cannot sweep the legacy pending queue. Codex is a fallback, not the scheduler or default reviewer. William requested the special review immediately on 2026-09-03; the manual production run completed its staff and Athena gates and Max accepted the two-part iMessage with `ok: true`. The unused 2026-09-04 one-shot was then unloaded and moved to SAL's recoverable Trash to prevent duplicate delivery. Delivery validation now examines structured sender fields rather than report prose.
 
 ## Conditional business report processing
 
