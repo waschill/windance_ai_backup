@@ -19,6 +19,7 @@ hosts:
       level8_shutdown_order: AL, REFWeb, TMA-2, TMA-1, Odyssey, SAL, HERALD, then HAL last
       hermes_desktop: Built and launched 2026-07-27 from C:/Users/wasch/AppData/Local/hermes/hermes-agent/apps/desktop/release/win-unpacked/Hermes.exe. Remote gateway is configured for Herald at http://192.168.36.21:9120 using Herald Dashboard authentication; it requires the existing Herald Dashboard sign-in and must not weaken or bypass that protection.
       cua_driver: Installed and validated 2026-07-27 in HAL\\wasch interactive desktop session 1. CUA Driver v0.12.6 runs as the cua-driver-serve interactive-logon task; Hermes doctor passed UIAutomation and Windows Graphics Capture checks.
+      metrics_window_flash_fix: As of 2026-09-05, the active logon collector at C:/Users/wasch/services/hal-metrics-bridge/hal_metrics_bridge.py and the legacy scheduled-task source both use subprocess.CREATE_NO_WINDOW for GPU/helper commands. The active uv Python 3.11 pythonw collector was restarted and live CPU/GPU metrics verified; preserve the flag to prevent desktop console flashes.
       router_wan_metrics: As of 2026-08-26, WindanceHALMetricsBridge reads aggregate ASUS RT-AX3000 WAN counters through LAN-only, key-only SSH and posts download/upload Mbps every 10 seconds to SAL Node-RED. It is read-only; the bridge source is hal-metrics-bridge/hal_metrics_bridge.py.
 
   AL:
