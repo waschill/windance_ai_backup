@@ -1,6 +1,6 @@
 # Windance Scheduled Reports
 
-Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live scheduler state after future maintenance.
+Live schedule reconciled and delivery-tested 2026-09-05. Times are Mountain Time. Verify live scheduler state after future maintenance.
 
 ## Daily delivered reports
 
@@ -10,8 +10,8 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 | 7:00 AM | Network and systems status | William | Routine all-clear through Telegram; attention/outage report through Max/iMessage |
 | 7:10 AM | Current-day Training Schedule | Shawn | Daily operational schedule |
 | 7:20 AM | Combined daily briefing | William | Telegram; includes deterministic numbered email review |
-| 7:35 AM | Prior-day Training Completion Check | William | Sends only when suspicious rapid completions exist |
-| 7:45 AM | Prior-day attendance IP exceptions | William | Sends only when an exception exists |
+| 7:35 AM | Prior-day Training Completion Check | William | Telegram; sends only when suspicious rapid completions exist |
+| 7:45 AM | Prior-day attendance IP exceptions | William | Telegram; sends only when an exception exists |
 | 7:50 AM | Shawn email review and management report | Shawn | Numbered unread inbox review; sender-bound YES/NO approval for changes |
 | 8:10 AM | Ledger unpaid-invoice report | Shawn | Daily Odoo operational report |
 | 9:00 AM | Morning news briefing | William | Telegram; Frontier AI and social-media marketing |
@@ -20,6 +20,10 @@ Live schedule reconciled 2026-09-02. Times are Mountain Time. Verify live schedu
 | 5:00 PM | Read-only email review | William | Telegram; daily end-of-day inbox review |
 | 5:10 PM | Shawn email review and management report | Shawn | Numbered unread inbox review; changes require Shawn's approval |
 | 7:00 PM | Capture Inbox reminder | William | Telegram; sends only when active captures await review |
+
+William's 7:20 AM combined briefing and 12:10/5:00 PM numbered Gmail reports use deterministic Harness report endpoints and SAL's Telegram bridge. Shawn's Training Schedule, email reviews, unpaid-invoice report, and conditional veterinary report remain on iMessage because Shawn does not use Telegram.
+
+William and Shawn can use case-insensitive `ALD` as the short form of `Always Delete` and `NOD` as the short form of `Notify Delete`; the full phrases remain supported. Shawn's changes still require her sender-bound `YES` confirmation. William's existing approval policy remains unchanged.
 
 ## Monday through Thursday
 
