@@ -111,3 +111,6 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - The signer's final-validation name/email remain the actual signer's information. The participant Text field does not replace signer identification. Replacement shared-link installation, if a new template was created, has not been verified.
 
 - Future alternative proposed by William: keep a separate plain Text field for Participant Name, and use Odoo Sign's built-in Name field labeled Participant or Legal Guardian for the actual signer, assigned to the same signer role as the signature. This preserves the distinction between the participant and a parent/guardian signing for them. Recorded as a future design option, not a change implemented or tested in the current template.
+
+- Final user confirmation on 2026-09-05: after guidance to replace the new template Share link on the Harvest Hoedown event page and in Event: Horse Show Confirmation, and update the printable attachment, William reported that everything works. Record the waiver workflow as user-verified complete. Waiver Complete remains manual; automatic waiver matching was deferred. No separate scheduler execution log was inspected.
+
