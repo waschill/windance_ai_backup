@@ -79,6 +79,30 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - Approval workflows must be voice/driving friendly and never expose secret approval material in prompts or logs.
 - Software maintenance is backup-gated and SOP-aware: routine compatible upgrades apply automatically; only fundamental operating-procedure changes require William's pre-upgrade approval.
 
+## SAM training completion popup — 2026-09-05
+
+- SAM production now opens the approved detail popup before completing supported
+  Training cells: category, applicable subcategory, optional 280-character note,
+  and one-to-five-star rating.
+- OK saves the detail and completion in one SQLite transaction; Cancel makes no
+  change. The next matching record for that horse is prefilled from prior detail.
+- Riding=`R`, Driving=`D`/`T`, Ground Work=`G`/`L`; timed lesson cells use a
+  generic Lesson category. Freewalk and unmapped codes retain one-tap completion.
+- The deployment was syntax-checked, tested against an isolated copy of the SAM
+  database through the real HTTP endpoints, installed with code/database backups,
+  and verified healthy on port 8088. The kiosk browser was restarted onto the new
+  page. No Odoo data was changed by this feature.
+
+## SAM Vet completion audit — 2026-09-05
+
+- Read-only evidence shows the August 4 Vet commit created five Odoo history rows
+  but predates the service-need clearing deployment, so it has no local clearing
+  receipts. Already-committed days return before newer clearing logic runs.
+- Current code clears only the `Needs Vet` boolean. It does not clear `Vet Needs`;
+  Herald's guarded writer currently denies that text field. Some affected live
+  Odoo records have since received different information, so no repair or data
+  change was made during this audit.
+
 ## HAL metrics collector window-flash fix — 2026-09-05
 
 - The active logon collector is `C:\Users\wasch\services\hal-metrics-bridge\hal_metrics_bridge.py`, launched by `Start_HAL_Metrics_Bridge.vbs` using uv Python 3.11 `pythonw.exe`. This active copy differs from the older scheduled-task source under the June 19 Codex directory; do not replace one with the other wholesale.
