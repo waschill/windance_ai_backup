@@ -66,6 +66,12 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   tool discovery returned all ten configured Gmail/Calendar tools. Mutating tools
   remain approval-gated through the Agent Harness. No mailbox mutation was used
   to verify this repair.
+- Herald's `SOUL.md` requires the separate one-tool approval bridge named
+  `windance_gmail_harness`. Its server remained present at
+  `/Users/herald/services/windance-gmail-mcp/server.py`, but its MCP registration
+  had disappeared from the active Hermes configuration. The `windance-gmail`
+  registration was restored on 2026-09-07, the gateway was restarted, and an
+  independent `tools/list` handshake verified the exact required tool name.
 
 ## Odoo lesson bundles
 
