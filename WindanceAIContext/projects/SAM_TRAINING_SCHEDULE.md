@@ -47,7 +47,9 @@ Example: `KLBit` = Skye: Lunge + Bit.
 Production deployment was verified on 2026-09-05. Supported type prefixes are
 `R` (Riding), `D` or `T` (Driving), and `G` or `L` (Ground Work). Schedule cells
 containing a time use the generic Lesson form. Freewalk and unmapped codes keep
-the original one-tap completion behavior. Detail records are stored locally in
+the original one-tap completion behavior. As of 2026-09-06, rows whose displayed
+name begins with `Feed` are also exempt from the popup and retain one-tap
+completion. Detail records are stored locally in
 SAM SQLite table `training_completion_details` and are exposed with committed
 history through `/api/history`; this feature does not post to Odoo or decrement
 Odoo lesson bundles.

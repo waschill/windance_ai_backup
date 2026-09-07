@@ -87,7 +87,8 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - OK saves the detail and completion in one SQLite transaction; Cancel makes no
   change. The next matching record for that horse is prefilled from prior detail.
 - Riding=`R`, Driving=`D`/`T`, Ground Work=`G`/`L`; timed lesson cells use a
-  generic Lesson category. Freewalk and unmapped codes retain one-tap completion.
+  generic Lesson category. Freewalk, unmapped codes, and `Feed` rows retain
+  one-tap completion; the Feed-row exception was deployed 2026-09-06.
 - The deployment was syntax-checked, tested against an isolated copy of the SAM
   database through the real HTTP endpoints, installed with code/database backups,
   and verified healthy on port 8088. The kiosk browser was restarted onto the new
