@@ -1,6 +1,6 @@
 # Current Operating State
 
-Last curated: 2026-09-05. Confirm live before acting.
+Last curated: 2026-09-07. Confirm live before acting.
 
 ## Roles
 
@@ -52,6 +52,20 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - Shawn's reports remain on iMessage.
 - SAL Node-RED now sends William's combined briefing and numbered Gmail reviews through `/Users/zuzu/bin/send_telegram_payload.py`, which relays to Herald's established Telegram sender.
 - William's noon and evening mail flows call the deterministic Agent Harness endpoint `POST /gmail/report`; they do not depend on the general conversational/LLM router.
+
+## Hermes Google Workspace MCP — 2026-09-07
+
+- The shared Hermes gateway's Gmail/Calendar tool outage was caused by an MCP
+  dependency split: Hermes' main Python environment contains MCP 2.x, while the
+  Google Workspace connector imports the MCP 1.x `FastMCP` interface.
+- Hermes now launches `/Users/herald/services/google-workspace-mcp/google_workspace_mcp.py`
+  with the connector's isolated `.venv`. That environment keeps MCP 1.9.4 and
+  reads the already-installed Google client libraries from Hermes' site-packages
+  through a `.pth` file; do not repoint it to the main Hermes interpreter.
+- After restarting `ai.hermes.gateway`, live MCP initialization and independent
+  tool discovery returned all ten configured Gmail/Calendar tools. Mutating tools
+  remain approval-gated through the Agent Harness. No mailbox mutation was used
+  to verify this repair.
 
 ## Odoo lesson bundles
 
