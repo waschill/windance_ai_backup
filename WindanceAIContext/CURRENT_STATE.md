@@ -75,6 +75,17 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   an independent `tools/list` handshake verified the exact required tool name,
   and Herald's pre-repair Telegram session was ended so its next message receives
   a newly materialized tool inventory.
+- A 2026-09-07 manual CLI test exposed a reference-integrity defect: the bridge
+  timed out, Herald emitted a fallback numbered list that did not create Harness
+  references, and later ALD commands were interpreted against an older report.
+  The mailbox was reconciled to William's original instruction (six intended ALD
+  messages/rules; Adobe restored, marked read, and its mistaken rule removed).
+- The bridge now routes report requests directly to the deterministic
+  `/gmail/report` endpoint and reserves `/message` for action instructions.
+  Herald is forbidden to emit an actionable fallback numbered list, and Harness
+  report maps become single-use after an action instruction so stale numbers
+  cannot be reused. A clean MCP report and Telegram delivery were verified after
+  deployment.
 
 ## Odoo lesson bundles
 
