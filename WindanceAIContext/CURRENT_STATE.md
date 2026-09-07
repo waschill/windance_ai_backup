@@ -70,8 +70,11 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   `windance_gmail_harness`. Its server remained present at
   `/Users/herald/services/windance-gmail-mcp/server.py`, but its MCP registration
   had disappeared from the active Hermes configuration. The `windance-gmail`
-  registration was restored on 2026-09-07, the gateway was restarted, and an
-  independent `tools/list` handshake verified the exact required tool name.
+  registration was restored in both the root multiplex configuration and
+  Herald's profile-level configuration on 2026-09-07. The gateway was restarted,
+  an independent `tools/list` handshake verified the exact required tool name,
+  and Herald's pre-repair Telegram session was ended so its next message receives
+  a newly materialized tool inventory.
 
 ## Odoo lesson bundles
 
