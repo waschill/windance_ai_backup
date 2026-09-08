@@ -173,3 +173,32 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 
 - Final user confirmation on 2026-09-05: after guidance to replace the new template Share link on the Harvest Hoedown event page and in Event: Horse Show Confirmation, and update the printable attachment, William reported that everything works. Record the waiver workflow as user-verified complete. Waiver Complete remains manual; automatic waiver matching was deferred. No separate scheduler execution log was inspected.
 
+
+## Hermes Desktop bot-route repair — 2026-09-08
+
+William reported that Hermes Desktop could not wake bots while conversations
+continued to work, and authorized repairs. Live UI showed a session-load failure
+and a timeout opening Herald's history. The working desktop boot used
+http://192.168.36.21:9120 from Roaming/Hermes/connection.json, but the primary
+entry in Roaming/Hermes/connections.json still used https://herald.reflectsody.com.
+Herald's auth audit showed public-route refresh failures about every 5.5 seconds,
+while the LAN connection successfully minted authenticated WebSocket tickets.
+
+Aligned the registry primary entry to the existing authenticated LAN URL and
+renamed its display label to Herald (LAN). Preserved the connection ID
+herald-reflectsody-com, OAuth mode, local entry, and credential store. The prior
+registry is recoverable beside the live file as
+connections.json.before-bot-route-20260908.bak. Gracefully closed and reopened
+only HAL's Hermes Desktop; no Herald service restart or software update occurred.
+
+Verified opening Herald, switching to Sentinel, and switching back to Herald.
+Both histories loaded and the message composer was available; the settled Herald
+view had neither the session-load error nor the timeout notification. Auth audit
+showed successful LAN WebSocket tickets and no further public-route refresh
+failures after restart. No test message was sent. A brief stale error appeared
+in immediate post-click snapshots but cleared when each requested chat loaded.
+
+For future troubleshooting, compare both desktop connection files: a working
+legacy boot connection does not prove that the registry used by bot navigation
+points to the same URL. Keep authentication enabled. The app's update-server
+warning was separately observed and was not investigated or repaired in this task.
