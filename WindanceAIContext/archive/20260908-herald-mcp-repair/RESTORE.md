@@ -1,0 +1,1 @@
+Before repair: root Hermes config mcp_servers.herald-staff.command was /Users/herald/.hermes/hermes-agent/venv/bin/python. Restore only that command to reverse the interpreter selection. Gmail bridge before repair is preserved here; copy it back to /Users/herald/services/windance-gmail-mcp/server.py to reverse protocol changes. No credentials or full config files are included.
