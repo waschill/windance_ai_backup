@@ -96,3 +96,12 @@ The bundle form exposes its existing one-to-many child table as the future
 Lesson Usage ledger. The next implementation phase is to add SAM event fields
 to that child model and create the narrowly guarded Herald/SAM posting route;
 SAM does not yet decrement Odoo lesson balances.
+
+## Requested reboot — 2026-09-08
+
+Rebooted SAM through the configured SAM-WIFI SSH alias at William's request.
+Verified a changed Linux boot ID, restored SSH access, active sam-schedule and
+LightDM services, HTTP 200 from the schedule homepage, and Chromium running
+with the schedule kiosk URL. No failed systemd units were reported. The older
+documented /api/status URL returned 404; the homepage was used for this check.
+
