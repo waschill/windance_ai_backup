@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HardResourceLimits</key>
+	<dict>
+		<key>NumberOfFiles</key>
+		<integer>8192</integer>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.windance.hermes-dashboard</string>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+		<string>Background</string>
+	</array>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/herald/.local/bin/hermes</string>
+		<string>dashboard</string>
+		<string>--host</string>
+		<string>0.0.0.0</string>
+		<string>--port</string>
+		<string>9120</string>
+		<string>--no-open</string>
+		<string>--skip-build</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>SoftResourceLimits</key>
+	<dict>
+		<key>NumberOfFiles</key>
+		<integer>8192</integer>
+	</dict>
+	<key>StandardErrorPath</key>
+	<string>/Users/herald/logs/hermes-dashboard.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/herald/logs/hermes-dashboard.out.log</string>
+	<key>WorkingDirectory</key>
+	<string>/Users/herald</string>
+</dict>
+</plist>

@@ -202,3 +202,40 @@ For future troubleshooting, compare both desktop connection files: a working
 legacy boot connection does not prove that the registry used by bot navigation
 points to the same URL. Keep authentication enabled. The app's update-server
 warning was separately observed and was not investigated or repaired in this task.
+
+## Herald Hermes connector and service repair — 2026-09-08
+
+William authorized repairing Hermes on Herald. Live version reports 0.21.1.
+- Gmail MCP bridge now responds to the standard ping request. Previously it
+  returned Unsupported method: ping and was repeatedly parked by Hermes.
+- Root Hermes config herald-staff MCP command now uses the existing isolated
+  Google Workspace MCP 1.x interpreter. Removed postponed annotations from the
+  staff bridge because MCP 1.9.4 tool discovery requires resolved parameter
+  classes. Its old main Hermes interpreter had MCP 2.x without FastMCP.
+- Both connectors passed real MCP initialization, tool discovery, ping, and a
+  second ping after 26 seconds. The staff read-only list tool also succeeded.
+  No Gmail/Calendar mutation, report, delivery, or new staff task was invoked.
+- Suspended the retired Kefa routing session using SessionStore.suspend_session;
+  history was retained. This stops the every-five-second missing-profile poll.
+- Restarted ai.hermes.gateway in launchd user/501. Herald Telegram connected.
+- Replaced the unmanaged dashboard process with com.windance.hermes-dashboard
+  in launchd user/501. Added LimitLoadToSessionType Aqua/Background to its plist;
+  the old GUI-only registration had repeatedly failed with occupied port 9120.
+  Dashboard and Agent Harness returned HTTP 200; dashboard auth remains required.
+- Live dashboard logs registered all four MCP servers (46 tools including MCP
+  resource/prompt utility wrappers). No new Gmail ping/staff connector failures
+  or recurring Kefa missing-profile warnings appeared after restart.
+
+Authentication issue discovered during desktop reconnection: dashboard basic
+  auth has neither a configured signing secret nor its secret environment
+  variable, so Hermes generates a new per-process key at every dashboard start.
+  Consequently both the saved desktop access token and refresh token were
+  rejected after restart. No credentials were exposed. Persistent signing-key
+  storage requires an explicit exception to William's no-secret-storage rule;
+  approval was requested and remained pending when this note was written.
+  A fresh user sign-in is required after the final auth configuration is settled.
+
+Restore point before repairs: Git 93458e3. Before/after connector sources and
+sanitized service definition are archived under archive/20260908-herald-mcp-repair.
+The optional spoken wake-word feature has a separate onnxruntime wheel mismatch
+on Intel macOS; it is not the bot-session wake mechanism and was not changed.
