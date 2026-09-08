@@ -239,3 +239,22 @@ Restore point before repairs: Git 93458e3. Before/after connector sources and
 sanitized service definition are archived under archive/20260908-herald-mcp-repair.
 The optional spoken wake-word feature has a separate onnxruntime wheel mismatch
 on Intel macOS; it is not the bot-session wake mechanism and was not changed.
+
+### Persistent Hermes dashboard signing key — approved and installed 2026-09-08
+
+William explicitly approved saving the persistent login-signing key on Herald.
+A random 256-bit key is now stored only in Herald's existing protected .env as
+HERMES_DASHBOARD_BASIC_AUTH_SECRET (mode 0600). It was not printed, copied to
+HAL, included in logs, backed up, or committed. This is a narrow authorized
+exception to the no-secret-storage rule; it does not authorize other storage.
+
+Restarted only com.windance.hermes-dashboard in launchd user/501. Independent
+Hermes auth-provider initialization before and after restart resolved the same
+key, compared in memory without exposing the key or its fingerprint. Dashboard
+/api/status returned HTTP 200 with auth_required=true. Existing sign-ins had
+already been invalidated by the prior temporary-key restart; William must sign
+in once again. Subsequent dashboard restarts should preserve those new sign-ins
+subject to normal token expiration. End-to-end user sign-in is not yet verified.
+
+The .env must remain excluded from sanitized backups, Git, and context mirrors.
+Never rotate or overwrite the signing key during routine maintenance.
