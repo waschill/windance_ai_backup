@@ -258,3 +258,13 @@ subject to normal token expiration. End-to-end user sign-in is not yet verified.
 
 The .env must remain excluded from sanitized backups, Git, and context mirrors.
 Never rotate or overwrite the signing key during routine maintenance.
+
+## 2026-09-08 — HAL Hermes Desktop updated and verified
+- William explicitly requested updating Hermes Desktop on HAL. Pre-update restore point published to GitHub in a6c2d87; see archive/20260908-hal-desktop-update/RESTORE.md.
+- Installed official tagged v2026.9.7 (Hermes 0.21.1), source commit 2237be355906fbe6065ce1815711eee52b2d646e, via its Windows install.ps1 with IncludeDesktop, SkipSetup, SkipComputerUse, NonInteractive. Build and packaging passed; installer exited 0. Source tracked state clean afterward.
+- Packaged app remains at %LOCALAPPDATA%\hermes\hermes-agent\apps\desktop\release\win-unpacked\Hermes.exe; Start Menu and Desktop shortcuts refreshed. Runtime Python 3.11.16, Electron 40.10.2. Existing config and .env retained.
+- App UI verified client 0.21.1 and backend 0.21.1, Gateway ready, 16 bots listed Ready. Herald server log confirmed accepted WebSocket from HAL 192.168.36.10 at 15:54:15. Saved Jean session opened with message history and generated-image controls, active composer. No new messages sent for testing.
+- Primary connection remains herald-reflectsody-com / Herald (LAN) at http://192.168.36.21:9120 using saved OAuth. No sign-in prompt during restart. Herald API status: gateway_running=true, auth_required=true, version0.21.1.
+- Bot selection opened fresh draft views for Herald/Sentinel; prior conversations remain accessible through Sessions. Do not interpret a fresh bot draft as deleted history.
+- Installer used documented PyPI fallback when locked sync reported stale lockfile. Initial browser/TUI npm wrapper emitted blank-exit-code warnings, but subsequent desktop workspace install and full production build succeeded. npm reported 11 upstream dependency advisories; no forced dependency changes applied outside the release.
+- Rollback app is preserved outside the installer-managed directories at %LOCALAPPDATA%\hermes-rollback\20260908\win-unpacked. No secrets archived.
