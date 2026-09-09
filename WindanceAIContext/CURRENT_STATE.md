@@ -144,6 +144,18 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   Odoo records have since received different information, so no repair or data
   change was made during this audit.
 
+## SAM visit-date refresh hardening — 2026-09-09
+
+- SAM reads `Next Farrier Visit` and `Next Vet Visit` from Odoo Work Schedule
+  record 22 and only displays the corresponding horse needs on the exact visit
+  date. On September 9, Odoo correctly reported the rescheduled vet visit as
+  September 15 and a manual `/api/update` cleared all vet rows from September 9.
+- The on-screen Update path is correctly wired to `/api/update` and reloads the
+  schedule afterward. To prevent Odoo edits made after the former 5:00 AM-only
+  refresh from remaining stale, `sam-schedule-refresh.timer` now refreshes every
+  15 minutes. The timer is active; the prior timer file is backed up on SAM as
+  `/etc/systemd/system/sam-schedule-refresh.timer.bak-20260909-vet-stale`.
+
 ## HAL metrics collector window-flash fix — 2026-09-05
 
 - The active logon collector is `C:\Users\wasch\services\hal-metrics-bridge\hal_metrics_bridge.py`, launched by `Start_HAL_Metrics_Bridge.vbs` using uv Python 3.11 `pythonw.exe`. This active copy differs from the older scheduled-task source under the June 19 Codex directory; do not replace one with the other wholesale.
