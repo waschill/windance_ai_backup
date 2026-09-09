@@ -1,0 +1,12 @@
+{
+  "status": "done",
+  "turns_used": 4,
+  "max_turns": 4,
+  "seconds": 24.49,
+  "source_count": 3,
+  "local_only": true,
+  "no_tools": true,
+  "state_persistence_verified": true,
+  "validation_exit": 0,
+  "budget_was_not_reset": true
+}

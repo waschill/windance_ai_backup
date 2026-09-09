@@ -1,0 +1,222 @@
+--- agent_harness.py.before
++++ agent_harness.py
+@@ -605,7 +605,8 @@
+     for path in (CONFIG_DIR, DATA_DIR, LOG_DIR, EXCALIDRAW_DIR):
+         path.mkdir(parents=True, exist_ok=True)
+         try:
+-            os.chmod(path, 0o700)
++            if path.stat().st_mode & 0o777 != 0o700:
++                os.chmod(path, 0o700)
+         except OSError:
+             pass
+ 
+@@ -614,7 +615,8 @@
+     ensure_dirs()
+     conn = sqlite3.connect(DB_FILE)
+     try:
+-        os.chmod(DB_FILE, 0o600)
++        if DB_FILE.stat().st_mode & 0o777 != 0o600:
++            os.chmod(DB_FILE, 0o600)
+     except OSError:
+         pass
+     conn.row_factory = sqlite3.Row
+@@ -699,6 +701,15 @@
+             completed_at TEXT,
+             completed_by TEXT
+         );
++        CREATE TABLE IF NOT EXISTS staff_task_notes (
++            id INTEGER PRIMARY KEY AUTOINCREMENT,
++            task_id TEXT NOT NULL REFERENCES staff_tasks(id),
++            note TEXT NOT NULL,
++            author TEXT NOT NULL,
++            channel TEXT NOT NULL,
++            created_at TEXT NOT NULL
++        );
++        CREATE INDEX IF NOT EXISTS staff_task_notes_task ON staff_task_notes(task_id, id);
+         CREATE TABLE IF NOT EXISTS captures (
+             id TEXT PRIMARY KEY,
+             original_text TEXT NOT NULL,
+@@ -5119,7 +5130,7 @@
+             """,
+             (*params, max(1, min(limit, 100))),
+         ).fetchall()
+-    return [dict(r) for r in rows]
++    return [task_handoff(dict(r)) for r in rows]
+ 
+ 
+ def find_staff_task(short_id: str) -> dict[str, Any] | None:
+@@ -5142,6 +5153,116 @@
+     return None
+ 
+ 
++def task_handoff(task: dict[str, Any]) -> dict[str, Any]:
++    """A current record, not vector-retrieved or channel-local conversation prose."""
++    with db() as conn:
++        notes = conn.execute(
++            "SELECT id, note, author, channel, created_at FROM staff_task_notes WHERE task_id=? ORDER BY id",
++            (task["id"],),
++        ).fetchall()
++    return {**task, "handoff_notes": [dict(row) for row in notes]}
++
++
++def resolve_task_reference(reference: str, requester: str = "William") -> dict[str, Any] | None:
++    ref = reference.strip().strip('"').lstrip("#")
++    if re.fullmatch(r"[a-fA-F0-9-]{4,36}|VEGA-[A-Z0-9-]+", ref, re.I):
++        task = find_staff_task(ref)
++        return task_handoff(task) if task and task["requester"].casefold() == requester.casefold() else None
++    # Exact titles are voice-friendly. Never guess among duplicates or SQL wildcards.
++    with db() as conn:
++        rows = conn.execute(
++            "SELECT * FROM staff_tasks WHERE lower(title)=lower(?) AND lower(requester)=lower(?) LIMIT 2",
++            (ref, requester),
++        ).fetchall()
++    return task_handoff(dict(rows[0])) if len(rows) == 1 else None
++
++
++def append_task_note(task_id: str, note: str, author: str = "William", channel: str = "api") -> dict[str, Any]:
++    task = resolve_task_reference(task_id, author)
++    if not task:
++        raise HTTPException(status_code=404, detail="No unique task for this requester; use its task ID.")
++    clean = note.strip()
++    if not clean or len(clean) > 4000 or memory_looks_secret(clean):
++        raise HTTPException(status_code=422, detail="Use a nonempty handoff note of at most 4000 characters without secrets.")
++    with db() as conn:
++        conn.execute("INSERT INTO staff_task_notes (task_id,note,author,channel,created_at) VALUES (?,?,?,?,?)",
++                     (task["id"], clean, author, channel, now()))
++        conn.execute("UPDATE staff_tasks SET updated_at=? WHERE id=?", (now(), task["id"]))
++        conn.commit()
++    audit("staff_task_note_added", {"task_id": task["id"], "author": author, "channel": channel})
++    return task_handoff(find_staff_task(task["id"]))
++
++
++def render_task_handoff(task: dict[str, Any]) -> str:
++    lines = [f"{task['title']} — #{task['id'][:8]}", f"Owner: {task['assignee']}. Status: {task['status']}.",
++             f"Updated: {task['updated_at']}", f"Request: {task['request']}",
++             f"Latest worker record: {task.get('result') or 'No worker result yet.'}"]
++    notes = task.get("handoff_notes") or []
++    if notes:
++        lines.append("Handoff notes (latest five; full history is on the task record):")
++        lines.extend(f"- {n['created_at']}: {n['note']}" for n in notes[-5:])
++    return "\n".join(lines)
++
++
++def task_continuity_reply(text: str, user: str, channel: str) -> dict[str, Any] | None:
++    # Shared operational commands are limited to William; mailbox/persona boundaries stay separate.
++    if user.casefold() != "william":
++        return None
++    clean = re.sub(r"^\s*(?:vega|codex|herald|harold|max)[,:]?\s+", "", text, flags=re.I).strip()
++    note = re.fullmatch(r"(?:update|note for|add a note to)\s+task\s+(.+?)\s*:\s*(.+)", clean, re.I | re.S)
++    lookup = re.fullmatch(r"(?:show\s+task|task|(?:what is|what's)\s+the\s+status\s+of\s+task|status\s+(?:of\s+)?task)\s+(.+?)\s*[?.!]*", clean, re.I)
++    listing = re.fullmatch(r"(?:show\s+(?:my\s+)?work|my\s+work|staff\s+tasks|show\s+(?:my\s+)?tasks)\s*[?.!]*", clean, re.I)
++    if not (note or lookup or listing):
++        return None
++    if listing:
++        # Filter before limiting so other requesters cannot crowd out William's work.
++        with db() as conn:
++            rows = conn.execute("SELECT * FROM staff_tasks WHERE lower(requester)='william' ORDER BY CASE status WHEN 'running' THEN 0 WHEN 'partial' THEN 1 WHEN 'blocked' THEN 2 WHEN 'pending' THEN 3 ELSE 4 END, updated_at DESC LIMIT 20").fetchall()
++        tasks = [dict(row) for row in rows]
++        reply = "Your work (up to 20 tasks):\n" + "\n".join(f"- {t['title']} — #{t['id'][:8]} — {t['assignee']}: {t['status']}" for t in tasks) if tasks else "No recorded work was found."
++        return {"reply": reply, "tasks": tasks, "provider": "task-ledger", "model": "none", "agent": "Vega"}
++    reference = (note or lookup).group(1)
++    task = resolve_task_reference(reference)
++    if not task:
++        return {"reply": "I could not resolve exactly one of your tasks. Say 'show my work', then use its exact title or task ID.", "provider": "task-ledger", "model": "none", "agent": "Vega"}
++    if note:
++        task = append_task_note(task["id"], note.group(2), "William", channel)
++        reply = f"Saved a handoff note on {task['title']} (#{task['id'][:8]}). It will be included when the task is next dispatched. This does not restart a worker or authorize an external action."
++    else:
++        reply = render_task_handoff(task)
++    return {"id": task["id"], "reply": reply, "task": task, "provider": "task-ledger", "model": "none", "agent": "Vega"}
++
++
++class StaffTaskNoteIn(BaseModel):
++    note: str
++    author: str = "William"
++    channel: str = "api"
++
++
++@app.get("/staff/tasks/board", response_class=Response)
++def staff_work_board(task: str = "", authorization: str | None = Header(default=None)):
++    require_token(authorization)
++    selected = resolve_task_reference(task) if task else None
++    if task and not selected:
++        raise HTTPException(status_code=404, detail="Task not found or ambiguous")
++    if selected:
++        content = '<a href="/staff/tasks/board">All work</a><pre>' + html.escape(render_task_handoff(selected)) + '</pre>'
++    else:
++        packet = task_continuity_reply('show my work', 'william', 'board')
++        content = '<table><thead><tr><th>Task</th><th>Owner</th><th>Status</th><th>Updated</th></tr></thead><tbody>'
++        for row in packet['tasks']:
++            content += '<tr><td><a href="?task=' + urllib.parse.quote(row['id'], safe='') + '">' + html.escape(row['title']) + '</a></td><td>' + html.escape(row['assignee']) + '</td><td>' + html.escape(row['status']) + '</td><td>' + html.escape(row['updated_at']) + '</td></tr>'
++        content += '</tbody></table>'
++    body = '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Windance Work</title><style>body{font:17px system-ui;max-width:1100px;margin:32px auto;padding:0 20px;color:#172b42;background:#f7f9fc}h1{color:#163a71}table{width:100%;border-collapse:collapse;background:white}th,td{text-align:left;padding:14px;border-bottom:1px solid #dbe2ec}a{color:#184f94}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.6;background:white;padding:24px;border-radius:12px}p{color:#53647a}</style><h1>Windance Work</h1><p>Live staff ledger · Refresh for updates · Partial means unfinished</p>' + content + '</html>'
++    return Response(body, media_type='text/html', headers={'Cache-Control':'no-store', 'Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'"})
++
++
++@app.post("/staff/tasks/{task_id}/notes")
++def post_staff_task_note(task_id: str, payload: StaffTaskNoteIn, authorization: str | None = Header(default=None)):
++    require_token(authorization)
++    return {"task": append_task_note(task_id, payload.note, payload.author, payload.channel)}
++
++
+ def complete_staff_task(task_id: str, result: str, status: str = "completed", completed_by: str = "Forge") -> dict[str, Any]:
+     # A syntactically valid UUID is not proof that the task exists.  The old
+     # fallback attempted an UPDATE for any 36-character id and then crashed
+@@ -5151,8 +5272,14 @@
+     if not task:
+         raise HTTPException(status_code=404, detail="staff task not found or short id was ambiguous")
+     final_status = status.strip().lower() or "completed"
+-    if final_status not in {"completed", "blocked", "failed", "cancelled"}:
+-        final_status = "completed"
++    if final_status not in {"completed", "partial", "blocked", "failed", "cancelled"}:
++        raise HTTPException(status_code=422, detail="Invalid staff task outcome")
++    # Fail closed even when a caller mistakenly labels a partial/failed result completed.
++    prefix = re.match(r"(?:\*\*|__|#{1,6}\s*)?(PARTIAL|BLOCKED|FAILED|FAIL)\b", result.lstrip(), re.I)
++    if final_status == "completed" and prefix:
++        final_status = {"PARTIAL": "partial", "BLOCKED": "blocked", "FAIL": "failed", "FAILED": "failed"}[prefix.group(1).upper()]
++    if final_status == "completed" and not result.strip():
++        raise HTTPException(status_code=422, detail="Completion requires a recorded result")
+     ts = now()
+     with db() as conn:
+         conn.execute(
+@@ -5161,7 +5288,7 @@
+             SET status=?, result=?, updated_at=?, completed_at=?, completed_by=?
+             WHERE id=?
+             """,
+-            (final_status, result.strip(), ts, ts, completed_by, task["id"]),
++            (final_status, result.strip(), ts, None if final_status == "partial" else ts, completed_by, task["id"]),
+         )
+         conn.commit()
+         row = conn.execute(
+@@ -6523,10 +6650,10 @@
+     if not plan_id:
+         return
+     task_status = str(task.get("status") or "").lower()
+-    if task_status not in {"completed", "blocked", "failed", "cancelled"}:
++    if task_status not in {"completed", "partial", "blocked", "failed", "cancelled"}:
+         return
+     step_status = "succeeded" if task_status == "completed" else "failed"
+-    plan_status = "succeeded" if task_status == "completed" else task_status
++    plan_status = "succeeded" if task_status == "completed" else ("blocked" if task_status == "partial" else task_status)
+     finished = now()
+     evidence = {
+         "task_id": task.get("id"),
+@@ -8504,6 +8631,9 @@
+             "provider": "capture-core", "model": "none", "agent": "Vega", "work_trace": "",
+             "capture": captured,
+         }
++    task_reply = task_continuity_reply(intent_text, payload.user, payload.channel)
++    if task_reply is not None and not approval_control_command:
++        return task_reply
+     codex_shadow_match = re.match(r"^\s*codex\s*[:,]\s*(.+)$", intent_text, flags=re.I | re.S)
+     codex_request = codex_shadow_match.group(1).strip() if codex_shadow_match else intent_text
+     if codex_request and not approval_control_command:
+@@ -9335,7 +9465,7 @@
+     task = find_staff_task(task_id)
+     if not task:
+         raise HTTPException(status_code=404, detail="staff task not found or short id was ambiguous")
+-    return {"task": task}
++    return {"task": task_handoff(task)}
+ 
+ 
+ @app.post("/staff/tasks/{task_id}/start")

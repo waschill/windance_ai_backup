@@ -1,0 +1,14 @@
+{
+  "task_id": "490bc438-52aa-4a1b-bd3b-258a4ca19690",
+  "chat": true,
+  "walkie_text_backend": true,
+  "direct_api": true,
+  "board": true,
+  "legacy_mcp_list_includes_notes": true,
+  "partial_rejected_as_completed": true,
+  "historical_partial_corrections": [
+    "3ef8a9db-6ff0-40c3-87da-822ba85d1dd3"
+  ],
+  "final_status": "completed",
+  "physical_audio_tested": false
+}

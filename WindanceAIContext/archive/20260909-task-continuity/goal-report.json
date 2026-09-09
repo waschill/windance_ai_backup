@@ -1,0 +1,20 @@
+[
+  {
+    "source": "goals",
+    "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/goals",
+    "capability": "Allows setting a standing objective that persists across multiple turns, automatically prompting the agent to continue working until a judge model confirms the goal is met.",
+    "limitation": "The `/goal` mechanism is single-session and cannot manage multiple, independent tasks with dependencies; for that, the Kanban feature must be used."
+  },
+  {
+    "source": "kanban",
+    "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban",
+    "capability": "Provides a durable, shared task board backed by SQLite for coordinating multiple, independent agents.",
+    "limitation": "The final completion of a task requires explicit verification of a 'task contract' and cannot be automatically triggered by a simple commit or diff."
+  },
+  {
+    "source": "memory",
+    "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory/",
+    "capability": "Maintains persistent, curated memory across sessions via dedicated files (MEMORY.md and USER.md), allowing the agent to recall user preferences and environment facts.",
+    "limitation": "Memory has strict, non-auto-compact character limits (e.g., 2,200 chars for MEMORY.md), and writing an entry that exceeds this limit results in an explicit error requiring manual consolidation."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "model": "gemma4:latest",
+  "task_id": "490bc438-52aa-4a1b-bd3b-258a4ca19690",
+  "exclusion_preserved": true,
+  "prompt_tokens": 549,
+  "output_tokens": 78
+}

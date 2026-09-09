@@ -29,3 +29,12 @@ were established. Revalidate before implementation:
   correctness and total latency. Preserve Gmail references and approval validation.
 - Tool Search Auto, scoped staff tools and loop hard stops are already configured;
   do not present them as missing. Continuous micro-compaction remains off.
+
+
+## Follow-through from video reviews — 2026-09-09
+
+- Resolved the September 7 PARTIAL/completed bug and forced-40-turn override; live role-limit checks and isolated tests passed. Native 40-turn ceiling remains a maximum, not a daily capacity or spend cap.
+- Added deterministic task continuity and append-only handoff notes; a bounded native-goal pilot completed with evidence. See projects/TASK_CONTINUITY_AND_GOALS_2026-09-09.md.
+- Physical voice/microphone testing and general open-ended autonomous execution remain unverified. Goal/board engines still have separate lifecycles; old queue sweeping remains disabled.
+- William explicitly deferred any business watch until he identifies what to watch. Do not create one as follow-up to this work.
+- Per-task financial/provider reconciliation from the efficiency review remains separate unfinished work; no savings claim is established.
