@@ -42,3 +42,12 @@ were established. Revalidate before implementation:
 ## Second Brain recording follow-through — 2026-09-09
 
 Completed central publication of William's every-change recording rule. The publisher now immediately refreshes/verifies the context index. Herald retrieval of the rule and today's task-continuity guide passed. The earlier permission/publication blocker is resolved; no pending business-watch work was created.
+
+
+## Phone work-board access — September 9, 2026
+
+William reported the internal port-8791 board rejecting his phone. The existing enabled windance-vega-desktop Hermes dashboard plugin now supplies the Work tab at https://herald.reflectsody.com/work. The normal dashboard login protects the page and its /api/plugins/windance-vega-desktop/work HTML endpoint. The backend reads only the fixed localhost harness board, accepts optional validated task IDs, preserves escaped ledger text, rewrites All work navigation, disables caching, and permits same-origin embedding. Small-screen styling keeps task/owner/status visible and wraps task details. Existing Vega message and health routes remain in place; harness trust rules and credentials were not changed.
+
+Verification: public Work URL reached login with next=/work; unauthenticated API returned 401. Isolated FastAPI route tests against the live harness passed list/detail, All work navigation, cache/CSP headers, malformed ID rejection, missing-task 404, write-method 405, and existing health behavior. Dashboard restarted and listened on 9120. The current browser has no signed-in Herald session, so the final signed-in phone screen still needs William's normal login; no claim of physical-phone verification is made.
+
+Recovery: original plugin_api.py and manifest.json are in /Users/herald/services/work-board-backup-20260909. Sanitized deployed sources and verification script are archived under archive/20260909-phone-work-board in this context package. Restore those two original plugin files and restart the dashboard to undo this change. Business watch remains excluded.

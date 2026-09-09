@@ -1,0 +1,8 @@
+{
+  "name": "windance-vega-desktop",
+  "label": "Work",
+  "description": "Signed-in staff work board and Vega Desktop bridge",
+  "tab": {"path": "/work", "position": "after:skills"},
+  "entry": "dist/index.js",
+  "api": "plugin_api.py"
+}

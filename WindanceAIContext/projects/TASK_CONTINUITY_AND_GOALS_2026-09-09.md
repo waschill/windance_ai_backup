@@ -14,7 +14,7 @@ For work recorded in the staff ledger, these commands now retrieve the saved rec
 - **“Show task Goal mode pilot September 9.”** Shows the completed trial, its result and handoff notes. Substitute another exact task title or ID.
 - **“Update task Schedule documentation review: Compare the revised document instead of the older one.”** Saves a durable correction on that existing task. A name that matches more than one task requires its ID.
 
-The [work board](http://192.168.36.21:8791/staff/tasks/board) reads the same ledger. It is a read-only view on trusted Windance workstations; use chat/Walkie when away. Refresh the page to see updates. It does not start work or act as another dispatcher.
+Open the [Work page in Herald](https://herald.reflectsody.com/work) on your phone or computer and sign in with your usual Herald dashboard account. It reads the same staff ledger. Tap a task for its result and handoff notes, then All work to return. Refresh for updates. The page is read-only and does not dispatch jobs. The old direct address on port 8791 is restricted to trusted internal clients and is not the phone link.
 
 A handoff note is saved immediately but is included when a task is next dispatched. It does **not** interrupt an already-running worker, restart a completed task, or approve an external action. For immediate changes, explicitly ask Vega to stop or redirect the current job. Existing authorization rules still apply.
 
@@ -53,3 +53,12 @@ The controlled goal trial used the installed Hermes GoalManager and local Gemma 
 This validates bounded continuation, evidence checks and persisted state for a controlled read-only task. It is not proof that every open-ended production task can run unattended or that a PASS label alone establishes correctness.
 
 Trial record: **Goal mode pilot September 9**, ID `490bc438-52aa-4a1b-bd3b-258a4ca19690`.
+
+
+## Phone work-board access — September 9, 2026
+
+William reported the internal port-8791 board rejecting his phone. The existing enabled windance-vega-desktop Hermes dashboard plugin now supplies the Work tab at https://herald.reflectsody.com/work. The normal dashboard login protects the page and its /api/plugins/windance-vega-desktop/work HTML endpoint. The backend reads only the fixed localhost harness board, accepts optional validated task IDs, preserves escaped ledger text, rewrites All work navigation, disables caching, and permits same-origin embedding. Small-screen styling keeps task/owner/status visible and wraps task details. Existing Vega message and health routes remain in place; harness trust rules and credentials were not changed.
+
+Verification: public Work URL reached login with next=/work; unauthenticated API returned 401. Isolated FastAPI route tests against the live harness passed list/detail, All work navigation, cache/CSP headers, malformed ID rejection, missing-task 404, write-method 405, and existing health behavior. Dashboard restarted and listened on 9120. The current browser has no signed-in Herald session, so the final signed-in phone screen still needs William's normal login; no claim of physical-phone verification is made.
+
+Recovery: original plugin_api.py and manifest.json are in /Users/herald/services/work-board-backup-20260909. Sanitized deployed sources and verification script are archived under archive/20260909-phone-work-board in this context package. Restore those two original plugin files and restart the dashboard to undo this change. Business watch remains excluded.
