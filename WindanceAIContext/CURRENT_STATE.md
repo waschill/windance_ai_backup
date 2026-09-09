@@ -127,6 +127,12 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   database through the real HTTP endpoints, installed with code/database backups,
   and verified healthy on port 8088. The kiosk browser was restarted onto the new
   page. No Odoo data was changed by this feature.
+- As of 2026-09-08, focusing the popup's Short Note field on SAM's local kiosk
+  shows the installed Squeekboard virtual keyboard through its D-Bus interface.
+  A visible `Show Keyboard` button provides a touch fallback, and closing/saving
+  the popup hides the keyboard. Keyboard control is restricted to loopback, so a
+  remote browser cannot open SAM's keyboard. The endpoint and D-Bus visible/hidden
+  states were tested, and the production Chromium kiosk was refreshed.
 
 ## SAM Vet completion audit — 2026-09-05
 
