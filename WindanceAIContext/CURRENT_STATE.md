@@ -133,6 +133,16 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   the popup hides the keyboard. Keyboard control is restricted to loopback, so a
   remote browser cannot open SAM's keyboard. The endpoint and D-Bus visible/hidden
   states were tested, and the production Chromium kiosk was refreshed.
+- On 2026-09-09, live display testing showed Squeekboard accepting `SetVisible`
+  and reporting `Visible=true` without drawing a keyboard under SAM's Wayland
+  compositor. Production now uses a self-contained QWERTY touch keyboard inside
+  the completion popup instead of depending on the OS keyboard. Focusing Short
+  Note or pressing Show Keyboard opens it; it includes letters, space, period,
+  comma, backspace, and Done, enforces the existing 280-character limit, and is
+  hidden when the popup closes. The deployed Python and extracted production
+  JavaScript passed syntax checks, the service health check passed, and the kiosk
+  Chromium process was restarted onto the new page. Backup:
+  `/home/williamschilling/services/sam-schedule/sam_schedule.py.bak-20260909-inline-keyboard`.
 
 ## SAM Vet completion audit — 2026-09-05
 
