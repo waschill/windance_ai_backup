@@ -165,6 +165,15 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   refresh from remaining stale, `sam-schedule-refresh.timer` now refreshes every
   15 minutes. The timer is active; the prior timer file is backed up on SAM as
   `/etc/systemd/system/sam-schedule-refresh.timer.bak-20260909-vet-stale`.
+- Vet needs must remain exclusively in each horse's `Needs Vet` and `Vet Needs`
+  fields and appear on SAM only through the date-gated Vet column. Do not copy
+  them into weekly Training fields. Seven duplicated September 9 Wednesday
+  Training values (Ally, Amore, Dream, Mariah, Belami, Celeste, and Aurora) were
+  cleared from their schedule-line records after William explicitly approved
+  that narrow cleanup; no horse need flag or note was changed. Live verification
+  found zero Vet rows and blank Training values for those records on September 9,
+  while an isolated September 15 schedule fetch produced all seven retained horse
+  notes in the Vet column because `Next Vet Visit` is September 15.
 
 ## HAL metrics collector window-flash fix — 2026-09-05
 
