@@ -298,3 +298,13 @@ William authorized fixing truthful completion and role budgets, shared task cont
 - Nine isolated runner/ledger/HTTP tests and three native goal-control tests passed. Live chat, Walkie text backend, API, board and MCP shared the same task/note; a local model preserved the exclusion. Physical audio remains untested.
 
 See projects/TASK_CONTINUITY_AND_GOALS_2026-09-09.md for usage and limits. Trial task: 490bc438-52aa-4a1b-bd3b-258a4ca19690. Sanitized pre-change Git restore point: 3ff954a. Full host-only source/DB backup: /Users/herald/services/task-continuity-backup-20260909. Test evidence: /Users/herald/services/task-continuity-staging-20260909. Sanitized changes/tests: archive/20260909-task-continuity.
+
+## Every-change Second Brain publication — 2026-09-09
+
+William's standing requirement now covers every AI-stack change, including minor changes, plus important decisions. SECOND_BRAIN_CHANGE_RECORDING.md defines the record, privacy boundaries and verification requirement; START_HERE.md, AGENTS.md and DECISIONS.md reference it.
+
+The canonical publisher now checks Herald copy failures, immediately refreshes the published context in the existing HAL Second Brain index, verifies source hashes/text chunks/embeddings and policy retrieval, and refreshes the shared SQLite backup. It fails visibly if any step fails. The helper preserves unrelated records, uses P:\Business as the catalog root, and rolls back a document update if embedding fails. The existing two-hour scheduler and SyncThing are unchanged.
+
+Verification: 16 context documents verified, 7 refreshed on the first run. Both SECOND_BRAIN_CHANGE_RECORDING.md and TASK_CONTINUITY_AND_GOALS_2026-09-09.md were retrieved through Herald's live /second-brain/search endpoint and its normal SSH-to-HAL path. Isolated tests verified changed/unchanged handling, preservation of unrelated records and rollback on embedding failure. Latest machine receipt: C:\Users\wasch\services\second-brain\logs\context-publication-latest.json. Shared index backup: P:\Business\Networksetup\SecondBrain\second_brain.sqlite.
+
+Recovery: restore the previous publisher from archive/20260909-second-brain-publication/publish-before.ps1 if needed; the ordinary scheduled indexer remains available. Existing source documents and indexed business records are retained. Do not call a source-folder copy completed indexing. Full policy/implementation first published in Git 4690cbd; no service restart was needed.

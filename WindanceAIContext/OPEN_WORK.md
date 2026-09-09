@@ -38,3 +38,7 @@ were established. Revalidate before implementation:
 - Physical voice/microphone testing and general open-ended autonomous execution remain unverified. Goal/board engines still have separate lifecycles; old queue sweeping remains disabled.
 - William explicitly deferred any business watch until he identifies what to watch. Do not create one as follow-up to this work.
 - Per-task financial/provider reconciliation from the efficiency review remains separate unfinished work; no savings claim is established.
+
+## Second Brain recording follow-through — 2026-09-09
+
+Completed central publication of William's every-change recording rule. The publisher now immediately refreshes/verifies the context index. Herald retrieval of the rule and today's task-continuity guide passed. The earlier permission/publication blocker is resolved; no pending business-watch work was created.
