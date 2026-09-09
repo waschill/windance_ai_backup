@@ -44,3 +44,8 @@
 - Mailbox mutations are never executed from the first request. The service stages the requested batch and requires Shawn's sender-bound `YES`; `NO` cancels. Draft creation is allowed only through the same approval gate and never sends the draft.
 - In Shawn's numbered email workflow, every supported action followed by numbers refers to the most recently generated Shawn report; she is not required to add the word `emails`. This applies to Always Delete, Notify Delete, Delete, Archive, Save/Keep, Mark Read, and Reply/Draft Reply. Approval creates durable sender rules where requested and executes the approved current-message actions; future rule matches are enforced before subsequent reports.
 - The Node-RED transport remains the communications layer; the Shawn mail service is the source of truth for references, approval state, and Gmail action results.
+
+
+## Every AI-stack change must be searchable — 2026-09-09
+
+William requires every AI-stack change, including minor changes, and important decisions to be recorded in this package. Follow SECOND_BRAIN_CHANGE_RECORDING.md. Record what changed, why, verification, usage, limits and recovery locations; exclude secrets and private counselor/mailbox material. Run scripts/publish-windance-context.ps1 -PushGit. Publication now immediately refreshes and verifies the Second Brain index; a failed refresh is not a completed publication. Do not rely on chat compaction or wait for the periodic index scan to preserve a change.

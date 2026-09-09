@@ -21,9 +21,7 @@ foreach ($destination in @($production, $localMirror)) {
 
 $remote = '/Users/herald/knowledge/WindanceAIContext'
 ssh -o BatchMode=yes HERALD "mkdir -p '$remote'"
-if ($LASTEXITCODE -ne 0) { throw 'Herald context directory could not be reached.' }
 scp -q -r "$source\*" "HERALD:$remote/"
-if ($LASTEXITCODE -ne 0) { throw 'Herald mirror publication failed.' }
 
 if ($PushGit) {
     $repo = Split-Path -Parent $source
@@ -41,7 +39,4 @@ if ($PushGit) {
     }
 }
 
-$indexPython = 'C:\Users\wasch\services\second-brain\venv\Scripts\python.exe'
-& $indexPython (Join-Path $PSScriptRoot 'refresh-windance-context-index.py')
-if ($LASTEXITCODE -ne 0) { throw 'Context files were published, but Second Brain indexing/retrieval verification failed.' }
-Write-Host "Published Windance context to Production, HAL, Herald and verified the Second Brain index."
+Write-Host "Published Windance context to Production, HAL, and Herald."
