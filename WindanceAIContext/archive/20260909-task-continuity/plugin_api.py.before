@@ -1,0 +1,57 @@
+"""Native Hermes Desktop bridge for Vega.
+
+The Desktop app authenticates to its own plugin namespace.  This backend then
+forwards only a normal text message to Herald's localhost Agent Harness, whose
+default route is the private Vega/Codex App Server bridge.  No Dashboard cookie
+or secret is exposed to the Desktop renderer.
+"""
+from __future__ import annotations
+
+import json
+import urllib.error
+import urllib.request
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, Field
+
+router = APIRouter()
+HARNESS_URL = "http://127.0.0.1:8791/message"
+
+
+class VegaMessage(BaseModel):
+    message: str = Field(min_length=1, max_length=12000)
+
+
+@router.get("/health")
+def health() -> dict[str, str]:
+    return {"status": "ok", "agent": "Vega"}
+
+
+@router.post("/message")
+def message(payload: VegaMessage) -> dict:
+    text = payload.message.strip()
+    if not text:
+        raise HTTPException(status_code=422, detail="Message cannot be blank.")
+    request = urllib.request.Request(
+        HARNESS_URL,
+        data=json.dumps(
+            {"message": text, "user": "william", "channel": "hermes_desktop_vega"}
+        ).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=190) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:1000]
+        raise HTTPException(status_code=502, detail=f"Vega route returned HTTP {exc.code}: {detail}") from exc
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Vega route unavailable: {exc}") from exc
+
+    return {
+        "agent": "Vega",
+        "reply": str(result.get("reply") or "Vega completed the request without a text response."),
+        "task_id": str((result.get("codex_task") or {}).get("task_id") or result.get("id") or ""),
+        "status": str((result.get("codex_task") or {}).get("status") or "completed"),
+    }
