@@ -175,6 +175,19 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
   while an isolated September 15 schedule fetch produced all seven retained horse
   notes in the Vet column because `Next Vet Visit` is September 15.
 
+## SAM dashboard false-offline repair — 2026-09-09
+
+- SAM remained online at its Wi-Fi-only address `192.168.36.29`: ICMP, SSH,
+  schedule port 8088, `/api/health`, `sam-schedule.service`, and the Chromium
+  kiosk all verified healthy. Its physical display normally powers off at 9 PM
+  while the Pi and services remain running.
+- SAL Node-RED's SAM CPU-temperature/health poll still targeted the obsolete
+  secondary address `192.168.36.28`, causing a false offline/no-data indication.
+  The single monitor URL now targets `http://192.168.36.29:8088/api/health`.
+  Node-RED was restarted and verified running, and SAL successfully reached the
+  live SAM health endpoint. Backup:
+  `/Users/zuzu/.node-red/flows.backup-before-sam-wifi-monitor-20260909.json`.
+
 ## HAL metrics collector window-flash fix — 2026-09-05
 
 - The active logon collector is `C:\Users\wasch\services\hal-metrics-bridge\hal_metrics_bridge.py`, launched by `Start_HAL_Metrics_Bridge.vbs` using uv Python 3.11 `pythonw.exe`. This active copy differs from the older scheduled-task source under the June 19 Codex directory; do not replace one with the other wholesale.
