@@ -18,7 +18,7 @@ This file is the quick operator briefing for future Codex sessions. Read `AGENTS
 - AL — Ubuntu services host, `192.168.36.20`, SSH alias `AL`.
 - SAL — macOS Node-RED/Cloudflare/iMessage host, `192.168.36.22`, SSH alias `SAL`.
 - HERALD — macOS agent host, `192.168.36.21`, SSH alias `HERALD`.
-- SAM — Raspberry Pi 5 scheduling/display node, `192.168.36.230`, SSH alias `SAM`.
+- SAM — Raspberry Pi 5 scheduling/display node, Wi-Fi-only at `192.168.36.29`, SSH alias `SAM-WIFI` (`SAM`/`192.168.36.230` is a retired wired path).
 - Odyssey — primary NAS, `192.168.36.31`, SSH alias `Odyssey`.
 - TMA-1 — backup NAS, `192.168.36.131`, SSH alias `TMA-1`.
 - TMA-2 — off-site/backup NAS, `192.168.36.133`, SSH alias `TMA-2`.
@@ -52,13 +52,13 @@ Do not print the Cloudflared tunnel token. Process listings must redact `--token
 
 SAM is the Raspberry Pi 5 scheduling server/display node for the barn schedule project.
 
-Current state as of 2026-07-17:
+Current state as of 2026-09-11:
 
-- SSH alias: `SAM`
-- WiFi SSH alias: `SAM-WIFI`
+- Supported SSH alias: `SAM-WIFI`
+- Retired wired SSH alias: `SAM` (not currently reachable)
 - User: `williamschilling`
-- Wired IP: `192.168.36.230`
 - WiFi IP: `192.168.36.29`
+- Former wired IP: `192.168.36.230` (inactive; SAM is Wi-Fi-only)
 - OS: Raspberry Pi OS / Debian aarch64
 - Storage: 1TB NVMe mounted as root filesystem
 - Python 3.13 available
@@ -68,11 +68,11 @@ Current state as of 2026-07-17:
 - App path: `/home/williamschilling/services/sam-schedule/sam_schedule.py`
 - App assets: `/home/williamschilling/services/sam-schedule/assets`; `horse.png` title ornament was copied from `P:/Business/Windance Farms/Branding/HORSE.png`.
 - Local database: `/home/williamschilling/.local/share/sam-schedule/sam_schedule.db`
-- Wired URL: `http://192.168.36.230:8088`
 - WiFi URL: `http://192.168.36.29:8088`
 - Admin page: `/admin`; the visible Admin button is intentionally removed from the schedule screen, so access is by manually opening `/admin`.
 - Kiosk boot path as of 2026-07-21: LightDM autologin uses `williamschilling` with `rpd-labwc`; Labwc user autostart `/home/williamschilling/.config/labwc/autostart` launches `/home/williamschilling/bin/sam-schedule-kiosk.sh`, which waits for `http://127.0.0.1:8088/` and opens Chromium in Wayland kiosk mode with a dedicated profile at `/home/williamschilling/.config/chromium-sam-kiosk`.
 - Chromium kiosk launch includes `--password-store=basic` as of 2026-07-21 so SAM does not prompt for the desktop keyring password after auto-login.
+- As of 2026-09-11, the Time Clock button opens the secured Odoo Attendance kiosk directly. The legacy `wdftime.com` BizLand frame presented a `*.bizland.com` certificate that did not cover `wdftime.com`, causing Chromium's valid privacy warning; SAM no longer traverses that wrapper.
 - Kiosk logs: `/home/williamschilling/logs/sam-kiosk/kiosk.log`.
 - The old XDG `.desktop` kiosk autostart was moved under `/home/williamschilling/.config/autostart/disabled/` to prevent duplicate launches; Labwc autostart is the production path.
 - Reboot verification passed on 2026-07-21: `sam-schedule.service` returned active and Chromium was running with `--kiosk http://127.0.0.1:8088/`.

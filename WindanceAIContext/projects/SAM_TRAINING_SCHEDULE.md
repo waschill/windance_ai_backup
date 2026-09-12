@@ -20,10 +20,11 @@ SAM is the Raspberry Pi 5 barn schedule node.
 
 ## URLs
 
-- Schedule: `http://192.168.36.230:8088/`
-- Wi-Fi Schedule: `http://192.168.36.29:8088/`
-- Admin: `http://192.168.36.230:8088/admin`
-- Health/status: `http://192.168.36.230:8088/api/status`
+- Schedule (Wi-Fi): `http://192.168.36.29:8088/`
+- Admin: `http://192.168.36.29:8088/admin`
+- Health/status: `http://192.168.36.29:8088/api/status`
+- SAM is Wi-Fi-only; the former `192.168.36.230` wired route is inactive.
+- The Time Clock button opens the Odoo Attendance kiosk directly as of 2026-09-11. The legacy `wdftime.com` frame is bypassed because its BizLand host serves a certificate for `*.bizland.com`, not `wdftime.com`.
 
 ## Training code parser
 
