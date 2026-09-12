@@ -111,6 +111,7 @@ hosts:
       herald_voice_auth: dedicated bearer token stored on HERALD at /Users/herald/.config/agent-harness/voice-shortcut-token; do not print or commit
       herald_voice_transcription: OpenAI gpt-4o-mini-transcribe through Agent Harness voice endpoints; Hermes dashboard proxies /api/voice/ask for iPhone Shortcut use and /api/voice/walkie for low-latency walkie use; both default to Herald, who keeps ownership of the conversation and delegates technical work internally. Explicit target=vega remains an admin/technical escape hatch.
       hermes_config_base_url: http://127.0.0.1:8790/v1
+      windance_model_context: As of 2026-09-11 all 15 HAL Ollama models named windance-* have num_ctx 65536; every Herald Hermes profile using a windance-* primary model explicitly sets context_length and ollama_num_ctx to 65536
       agent_harness_health: http://192.168.36.21:8791/health
       agent_harness_message: http://192.168.36.21:8791/message
       agent_harness_host_diagnostics: http://192.168.36.21:8791/system/diagnostics

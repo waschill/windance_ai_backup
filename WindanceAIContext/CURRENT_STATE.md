@@ -9,6 +9,7 @@ Last curated: 2026-09-07. Confirm live before acting.
 - Vega/Codex: executive technical authority and implementation/verification lead.
 - Herald: VP of Operations and conversational coordinator.
 - Forge: bounded technical implementation, tests, snapshots, routine upgrades, and Git worker assigned by Herald; escalates architecture or high-risk recovery to Vega.
+- All HAL Ollama models named `windance-*` and all Hermes profiles that use them are explicitly configured for a 65,536-token context window as of 2026-09-11.
 - Sentinel: network monitoring.
 - Max: communications and message delivery.
 - Iris: Gmail and Calendar workflows.
