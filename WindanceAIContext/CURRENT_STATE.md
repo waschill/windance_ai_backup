@@ -10,6 +10,7 @@ Last curated: 2026-09-07. Confirm live before acting.
 - Herald: VP of Operations and conversational coordinator.
 - Forge: bounded technical implementation, tests, snapshots, routine upgrades, and Git worker assigned by Herald; escalates architecture or high-risk recovery to Vega.
 - All HAL Ollama models named `windance-*` and all Hermes profiles that use them are explicitly configured for a 65,536-token context window as of 2026-09-11.
+- Hermes on Herald is verified at v0.21.2 (upstream `1021a032`) with profiles, plugins, Harness data, and current web build intact. Vega's redundant Telegram listener is disabled because the healthy default multiplex gateway owns that shared credential.
 - Sentinel: network monitoring.
 - Max: communications and message delivery.
 - Iris: Gmail and Calendar workflows.
