@@ -8,7 +8,7 @@ Last curated: 2026-09-07. Confirm live before acting.
 - Shawn: Executive VP and operational user of scheduling/reporting tools.
 - Vega/Codex: executive technical authority and implementation/verification lead.
 - Herald: VP of Operations and conversational coordinator.
-- Forge: technical build worker under Vega oversight.
+- Forge: bounded technical implementation, tests, snapshots, routine upgrades, and Git worker assigned by Herald; escalates architecture or high-risk recovery to Vega.
 - Sentinel: network monitoring.
 - Max: communications and message delivery.
 - Iris: Gmail and Calendar workflows.

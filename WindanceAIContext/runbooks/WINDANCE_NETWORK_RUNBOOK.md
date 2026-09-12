@@ -349,7 +349,7 @@ Key behavior:
 - A new subnet device is not automatically trusted. Add it to the inventory and typed registry first.
 - SAL Node-RED restart is available as an exact `service.restart` target with approval and post-restart HTTP verification. No permanent grant is installed by default.
 
-As of 2026-07-19, practical front-door requests such as "check/fix/build/setup/test Herald/SAL/Node-RED/the network" should either execute through a deterministic existing local tool or create a real `staff_tasks` row for Forge/Vega/Sentinel/etc. Herald should report the task id and not claim delegated work is done until a task result is posted. If there is no task id, tool result, approval id, or deterministic endpoint result, Herald should treat the work as not yet done and escalate to Vega rather than role-playing success.
+As of 2026-09-11, practical front-door requests such as "check/fix/build/setup/test Herald/SAL/Node-RED/the network" either execute through a deterministic existing local tool or create a real exact-ID `staff_tasks` job for Forge/Sentinel/the responsible specialist. Herald owns orchestration and must not claim delegated work is done until that profile posts a result. Vega is reserved for architecture, difficult cross-system work, and high-risk escalation rather than serving as the default worker.
 
 ### Natural-language implementation routing
 
