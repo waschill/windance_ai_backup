@@ -46,3 +46,8 @@ William confirmed live two-way Discord voice conversation works. Earlier ignored
 At William's request for a slightly deeper, calmer voice, changed only Herald profile speech settings: tts.provider=edge, tts.edge.voice=en-US-AndrewNeural, tts.edge.speed=0.90. Andrew is advertised by the live Edge voice catalog as warm and confident; the slower pace is intended to make delivery calmer. Perceived depth and preference still require William's listening feedback. Previous Edge voice was en-US-GuyNeural with default speed. OpenAI echo setting remains preserved but is not the selected provider.
 
 Verified effective profile config through Hermes' TTS loader and generated a 30,096-byte MP3 with its actual Edge generator. No gateway restart was issued; TTS config is loaded at synthesis time. Private backup: /Users/herald/services/discord-voice/config-before-calm-voice-20260913-161620.yaml. To revert, restore the prior affected TTS keys only, preserving subsequent changes. Sample: /Users/herald/services/discord-voice/calm-voice-check.mp3. This applies to Herald's profile speech output, including other channels using that profile, not just Discord. No other profiles or messaging permissions changed.
+
+## Voice pace adjustment — 2026-09-13
+
+William requested 5% slower instead of 10% slower. Updated Herald profile tts.edge.speed from 0.90 to 0.95, retaining en-US-AndrewNeural. Verified the saved YAML values. Applies on subsequent speech synthesis without a gateway restart. To undo this adjustment, set speed back to 0.90; the original voice backup remains recorded above.
+
