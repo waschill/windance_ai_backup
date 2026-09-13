@@ -51,3 +51,8 @@ Verified effective profile config through Hermes' TTS loader and generated a 30,
 
 William requested 5% slower instead of 10% slower. Updated Herald profile tts.edge.speed from 0.90 to 0.95, retaining en-US-AndrewNeural. Verified the saved YAML values. Applies on subsequent speech synthesis without a gateway restart. To undo this adjustment, set speed back to 0.90; the original voice backup remains recorded above.
 
+
+## Andrew at normal speed — 2026-09-13
+
+William preferred Andrew's natural pace after listening. Set Herald profile tts.edge.speed from 0.95 to 1.0 (normal), retaining en-US-AndrewNeural. Verified saved YAML. Subsequent synthesis loads the setting without a gateway restart. This supersedes the slower settings above. To revert this adjustment, set speed to 0.95.
+
