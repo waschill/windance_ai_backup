@@ -55,3 +55,7 @@ Recovery: original plugin_api.py and manifest.json are in /Users/herald/services
 ## Herald Gmail tool selection repaired — 2026-09-09
 
 Herald's base, Telegram and CLI tool selections now include the existing windance-gmail approval bridge. The MCP server was healthy but excluded by the profile tool lists. Live discovery and actual Hermes tool assembly reproduced the omission and verified its repair, including a recheck after access was restored. The gateway restarted and Herald Telegram reconnected. No mailbox actions were executed or old numbered instructions replayed. Ask for a fresh email review before using new report numbers. Details, limits and recovery: projects/GMAIL_TOOL_ROUTE_REPAIR_2026-09-09.md. The earlier canonical-write blocker is resolved; normal publication verifies indexing. End-to-end mail-action confirmation remains dependent on William's next normal request and approval.
+
+## Hermex public connection — 2026-09-13
+
+Herald backend deployed and chat-tested. Pending William: choose password through `ssh -t HERALD /Users/herald/services/hermex/set-password`; configure `hermex.reflectsody.com` on SAL's Cloudflare tunnel with HTTP origin `192.168.36.21:8787`; connect and test Hermex on iPhone. Login is locked until the password is chosen. Details: `projects/HERMEX_IPHONE_BACKEND_2026-09-13.md`.
