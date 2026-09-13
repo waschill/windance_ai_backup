@@ -1,6 +1,6 @@
 # AT&T Wi-Fi Calling router audit — 2026-09-12
 
-William requested inspection against an AT&T screenshot and authorized useful router changes. Read-only live inspection found no demonstrated router configuration defect; no router settings, firmware, DNS overrides, or port forwards were changed.
+William requested inspection against an AT&T screenshot and authorized useful router changes. He subsequently confirmed Wi-Fi Calling is not connecting. Read-only live inspection found no demonstrated router configuration defect; no router settings, firmware, DNS overrides, or port forwards were changed. Registration failure remains unresolved pending identification of his current phone connection and a coordinated test.
 
 ## Verified router state
 
@@ -18,6 +18,7 @@ William requested inspection against an AT&T screenshot and authorized useful ro
 - sentitlement2.mobile.att.net and vvm.mobile.att.net resolved through the router, Google DNS and Cloudflare DNS.
 - epdg.epc.att.net returned NXDOMAIN through all three. An independent HTTPS query to Google Public DNS also returned status 3 with CNAME epdg.epc.att-idns.net and att-idns.net authority. This establishes that the observed lookup failure is not confined to the router's DNS handling; it does not establish an AT&T-wide outage or which hostname a particular phone currently uses. No hardcoded IP or DNS change was applied.
 - Wi-Fi Calling registration, actual calls, Wi-Fi coverage at the phone and ISP handling of an active IPSec tunnel remain unverified. Ask whether William is on Windance Wi-Fi and whether symptoms are failure to register, dropped calls, or a preventive concern. If on site, test a normal call with airplane mode enabled and Wi-Fi re-enabled, then restore airplane mode off.
+- Follow-up Google and Cloudflare DNS-over-HTTPS queries reproduced NXDOMAIN; Google AAAA and an A query with the WAN public IP supplied as EDNS client subnet also failed. No tcpdump executable was found in the checked router paths. HAL cannot passively observe another switched/Wi-Fi client's unicast traffic without an appropriate capture point. Phone IP and the airplane-mode/Wi-Fi registration test were requested from William.
 
 ## Sources and recovery
 
