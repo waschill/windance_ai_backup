@@ -379,3 +379,7 @@ Telemetry display order is HAL, AL, SAL, HERALD, SAM, REFWeb, followed by the th
 ## Hermex iPhone backend — 2026-09-13
 
 A dedicated password-protected Hermes WebUI service is running on Herald at `http://192.168.36.21:8787`, managed by `com.windance.hermex`. It is pinned to Herald's profile with isolated-profile mode; SAL can reach it and a real streaming chat passed. The intended public hostname is `https://hermex.reflectsody.com`. William must still set the private login password and add the Cloudflare hostname route; public/iPhone testing is pending. The existing Hermes Dashboard on 9120 and Agent Harness on 8791 were not replaced. See `projects/HERMEX_IPHONE_BACKEND_2026-09-13.md` for setup, evidence, limitations and recovery.
+
+## Discord voice experiment preparation — 2026-09-13
+
+Herald's Discord profile settings now restrict access to William (931352301342457897) for bot 1548809827227144332 on his private Windance Farms server. Isolated FFmpeg and reused Opus passed audio encoding tests. Private token entry is ready at `ssh -t HERALD /Users/herald/services/discord-voice/set-token`. No bot token, gateway restart or live Discord connection was present at preparation verification. Follow `projects/DISCORD_VOICE_SETUP_2026-09-13.md` for remaining setup, checks and recovery. Hermex remains Herald-only.
