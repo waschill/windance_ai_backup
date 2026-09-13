@@ -26,3 +26,15 @@ Existing Hermes profile tool restrictions and business approval workflows remain
 ## Recovery
 
 Private local backup of Herald config.yaml and .env: /Users/herald/services/discord-voice/backup-20260913-154717. Do not publish backup contents. New helper source is set_token.py plus set-token in the discord-voice service directory. Restore only the changed Discord/audio keys from backup to undo preparation while preserving later unrelated changes. The isolated packages and links can be retained unused. Shared Hermes dependencies were not upgraded.
+
+## Connected and permissions verified — 2026-09-13
+
+William entered the token through the private helper. Authenticated Discord API verification returned bot ID 1548809827227144332, username Herald, bot=true, and membership in Windance Farms (guild 1548809103835537549). The configured numeric allowlist matches William.
+
+Available channels verified through Discord's API: text #general (1548809106314367108), voice General (1548809106314367109). Effective bot permissions include View, Send, Connect and Speak after channel overwrites. No Discord messages were sent during these checks.
+
+The existing gateway is registered under launchd **user/501/ai.hermes.gateway**, not gui/501. After connecting, its Opus loader warned that the profile-local library environment was not being applied during adapter startup. Added DYLD_LIBRARY_PATH=/Users/herald/services/discord-voice/lib and FFMPEG_PATH=/Users/herald/services/discord-voice/bin/ffmpeg to the existing gateway plist EnvironmentVariables, preserving other settings. Backup: /Users/herald/services/discord-voice/gateway-plist-before-audio-20260913-155452.plist. Booted out and bootstrapped the same user-domain service to apply the plist, then kickstarted it.
+
+At 15:55:14 Mountain the gateway logged Discord connected for Herald. Default, Herald and Jim Telegram connections reconnected; the Harness health endpoint returned 200. The gateway retained PID 98150, runs=1, with no exit since this final reload. No Opus warning recurred after the startup-path fix. William observed Vega up/down notices during the two intentional gateway restarts; the later live checks showed stability, not continuing gateway restarts. Alerting configuration was not changed.
+
+Discord native slash commands are synchronized incrementally at 4.5 seconds per mutation; 16 commands were registered during the early check, before /voice appeared. Do not restart just to refresh this menu. User can join General voice and issue the documented /voice join command in #general (mention Herald if sending it as ordinary text). End-to-end microphone transcription and audible replies still require William's live test. Phone/background audio behavior is not yet verified.

@@ -383,3 +383,7 @@ A dedicated password-protected Hermes WebUI service is running on Herald at `htt
 ## Discord voice experiment preparation — 2026-09-13
 
 Herald's Discord profile settings now restrict access to William (931352301342457897) for bot 1548809827227144332 on his private Windance Farms server. Isolated FFmpeg and reused Opus passed audio encoding tests. Private token entry is ready at `ssh -t HERALD /Users/herald/services/discord-voice/set-token`. No bot token, gateway restart or live Discord connection was present at preparation verification. Follow `projects/DISCORD_VOICE_SETUP_2026-09-13.md` for remaining setup, checks and recovery. Hermex remains Herald-only.
+
+### Discord connection verified — 2026-09-13
+
+William privately entered Herald's token; API verification confirmed the correct bot in Windance Farms. Herald's Discord adapter is connected through the existing user-domain multiplex gateway. Startup audio paths are now set on that gateway's LaunchAgent; the prior Opus warning did not recur. Discord confirms access to #general and the General voice channel with Connect/Speak permissions. Gateway and existing Telegram connections recovered after setup reloads; the Harness remains healthy. Native command registration is paced and can take several minutes. William's live /voice join and microphone/reply test is still pending. See the dated Discord setup project record for channel IDs, verification and recovery.
