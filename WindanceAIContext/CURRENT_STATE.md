@@ -18,6 +18,15 @@ Last curated: 2026-09-07. Confirm live before acting.
 - Explicit requests to return a William-originated report to Shawn use a separate configured-recipient wrapper on Herald/SAL. Recipient data remains in SAL's existing configuration and is not copied into code or context.
 - At William's direction, the stranded horse-anxiety child report was not resent and the parent was not re-run. William will submit a fresh end-to-end test.
 
+### Athena release gate for Scout research
+
+- Substantive Scout research now receives an independent Athena QA review before the Agent Harness task is completed or delivered.
+- Athena checks the original request, source authority, direct citation traceability, claim-to-source fit, conflicts, fact-versus-inference labeling, practical usefulness, and safety.
+- If Athena rejects the first draft, Scout receives Athena's actionable findings and one bounded correction pass. Athena reviews the replacement once more.
+- Only a Scout draft that passes the deterministic citation gate and receives Athena `APPROVED` may remain `PASS`; otherwise the task is returned as `PARTIAL` with Athena's reasons.
+- The deterministic gate requires at least three direct URLs and at least two primary/institutional source URLs for substantive research reports, and rejects malformed or untraceable references such as “general knowledge.”
+- Scout's profile rules now explicitly prevent vendor, clinic, pharmacy, blog, supplement-seller, or snippet evidence from establishing efficacy, safety, dosage, diagnosis, or a PASS conclusion.
+
 ## Windance Truth Engine pilot — 2026-09-14
 
 An isolated, LAN-only Open WebUI laboratory is healthy on AL port 3001 with a separate volume, pinned image, HAL Ollama, local Ollama embeddings, no OpenAI connection, and offline/telemetry controls. Scout now applies the Windance Truth Mode evidence protocol automatically to genuine research tasks; William does not need a new command or endpoint. The third-party executable filters were not imported. The fully isolated document Extractor lane and remaining load/failure tests are still release-gated. See `projects/TRUTH_ENGINE_PILOT_2026-09-14.md`.
