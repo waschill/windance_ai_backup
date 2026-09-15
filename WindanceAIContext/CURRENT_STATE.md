@@ -7,8 +7,16 @@ Last curated: 2026-09-07. Confirm live before acting.
 - Root cause of the missing Scout Truth Mode report was in the Herald Agent Harness completion path: the profile runner saved the result to `staff_tasks`, but no return-delivery function was called.
 - `complete_staff_task()` now returns only William-originated iMessage-front-door staff results through the established `windance_report_send.py` -> SAL iMessage outbox route.
 - Added durable `staff_task_deliveries` receipts. A completion retry skips a task already confirmed delivered, preventing duplicate reports. Internal canaries, dashboard tasks, and maintenance channels remain ledger-only.
-- The profile runner allows 120 seconds for completion plus delivery confirmation.
+- The profile runner allows 210 seconds for completion plus sequential William/Shawn delivery confirmation when both are explicitly requested.
 - Scout task `fc5d6e13-151c-4162-b319-45987bf77ebf` was reprocessed once; the SAL outbox confirmed delivery. No new research run was created.
+
+### Nested Scout Kanban regression corrected
+
+- A later horse-anxiety request exposed a second lifecycle defect: the assigned Scout profile created Hermes Kanban child `t_21572f82`, returned its `ready` acknowledgement as the parent result, and closed the Agent Harness task before the child finished.
+- The profile runner now invokes Scout with only `web,browser,file` toolsets. Kanban is unavailable inside an already-durable Harness assignment, so Scout must perform the research directly and return the finished report in the original task.
+- Scout's runner contract now requires primary research, veterinary schools/universities, government sources, or established veterinary organizations; direct source URLs are required, and weak sourcing must be labeled `PARTIAL`.
+- Explicit requests to return a William-originated report to Shawn use a separate configured-recipient wrapper on Herald/SAL. Recipient data remains in SAL's existing configuration and is not copied into code or context.
+- At William's direction, the stranded horse-anxiety child report was not resent and the parent was not re-run. William will submit a fresh end-to-end test.
 
 ## Windance Truth Engine pilot — 2026-09-14
 
