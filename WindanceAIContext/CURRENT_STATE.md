@@ -2,6 +2,14 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## William-facing staff result delivery repaired — 2026-09-14
+
+- Root cause of the missing Scout Truth Mode report was in the Herald Agent Harness completion path: the profile runner saved the result to `staff_tasks`, but no return-delivery function was called.
+- `complete_staff_task()` now returns only William-originated iMessage-front-door staff results through the established `windance_report_send.py` -> SAL iMessage outbox route.
+- Added durable `staff_task_deliveries` receipts. A completion retry skips a task already confirmed delivered, preventing duplicate reports. Internal canaries, dashboard tasks, and maintenance channels remain ledger-only.
+- The profile runner allows 120 seconds for completion plus delivery confirmation.
+- Scout task `fc5d6e13-151c-4162-b319-45987bf77ebf` was reprocessed once; the SAL outbox confirmed delivery. No new research run was created.
+
 ## Windance Truth Engine pilot — 2026-09-14
 
 An isolated, LAN-only Open WebUI laboratory is healthy on AL port 3001 with a separate volume, pinned image, HAL Ollama, local Ollama embeddings, no OpenAI connection, and offline/telemetry controls. Scout now applies the Windance Truth Mode evidence protocol automatically to genuine research tasks; William does not need a new command or endpoint. The third-party executable filters were not imported. The fully isolated document Extractor lane and remaining load/failure tests are still release-gated. See `projects/TRUTH_ENGINE_PILOT_2026-09-14.md`.
