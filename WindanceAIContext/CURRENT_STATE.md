@@ -2,6 +2,10 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## Windance Truth Engine pilot — 2026-09-14
+
+An isolated, LAN-only Open WebUI laboratory is healthy on AL port 3001 with a separate volume, pinned image, HAL Ollama, local Ollama embeddings, no OpenAI connection, and offline/telemetry controls. Scout now applies the Windance Truth Mode evidence protocol automatically to genuine research tasks; William does not need a new command or endpoint. The third-party executable filters were not imported. The fully isolated document Extractor lane and remaining load/failure tests are still release-gated. See `projects/TRUTH_ENGINE_PILOT_2026-09-14.md`.
+
 ## Roles
 
 - William: President/CEO and holder of the master plug. All staff report to William.
