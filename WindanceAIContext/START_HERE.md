@@ -49,3 +49,7 @@ The raw historic chat is not copied here because it contains credentials shared 
 ## Every AI-stack change must be searchable — 2026-09-09
 
 William requires every AI-stack change, including minor changes, and important decisions to be recorded in this package. Follow SECOND_BRAIN_CHANGE_RECORDING.md. Record what changed, why, verification, usage, limits and recovery locations; exclude secrets and private counselor/mailbox material. Run scripts/publish-windance-context.ps1 -PushGit. Publication now immediately refreshes and verifies the Second Brain index; a failed refresh is not a completed publication. Do not rely on chat compaction or wait for the periodic index scan to preserve a change.
+
+## Mandatory Claude review — William's standing instruction, 2026-09-17
+
+Before code changes or stack work requiring code, read `policies/CLAUDE_MANDATORY_REVIEW.md`. Vega must obtain Claude's review before executing changed code (including tests/canaries) or deploying it, including delegated execution. Only William can waive review. Vega may ask for an exception but must wait for William's decision; no self-exemptions or emergency carve-outs. Claude remains advisory; Vega retains technical decisions under William.

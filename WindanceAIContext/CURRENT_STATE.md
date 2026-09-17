@@ -455,3 +455,9 @@ William privately entered Herald's token; API verification confirmed the correct
 SearXNG is installed and canary-tested on AL at http://192.168.36.20:8888/ (LAN/Wi-Fi only), with pinned SearXNG/Valkey containers and no paid search API. Scout's fresh profile processes now use it for web_search; existing Tavily page extraction remains separate and can still consume credits. The isolated Open WebUI lab on port 3001 is connected; production port 3000 is unchanged. Browser, JSON, actual Scout tool, actual lab provider, small concurrent load, failure and restart canaries passed within the limits documented in projects/SEARXNG_DEPLOYMENT_2026-09-16.md. DuckDuckGo was excluded after CAPTCHA failures. Unrelated results on nonsense queries must not be treated as evidence. Pre-existing interactive gateway sessions may require reload; no full LLM report or phone test is claimed.
 
 
+
+## Mandatory pre-execution Claude review — 2026-09-17
+
+William requires Vega to obtain Claude's review before execution or deployment of all code changes and stack changes requiring code, including delegated execution. Only William can exempt a task; general permission/full access is not a waiver. Review applies to the actual manifested revision, and covered work stops if review is unavailable. Claude advises; Vega decides after considering findings. Installed in HAL/HERALD global AGENTS.md and linked from START_HERE. Full policy: `policies/CLAUDE_MANDATORY_REVIEW.md`.
+
+Claude reviewed the draft in session `20260917_142614_48303c`. Vega incorporated manifest/completeness checks, delegated-work coverage and disclosure of high-severity disagreement. Vega declined the suggested automatic rollback exemption because William alone controls exemptions. This is persistent instruction enforcement, not a runtime deployment interlock. No service or executable code changed to install this policy.
