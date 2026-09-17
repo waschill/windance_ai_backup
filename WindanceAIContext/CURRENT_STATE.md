@@ -2,6 +2,13 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## Herald direct Gmail domain rules — 2026-09-17
+
+- William's explicit plain-language instruction `always delete all emails from example.com` now routes directly to the production Agent Harness Gmail rule handler. It no longer becomes a Forge/staff task and does not require a second approval or an internal task ID.
+- Domain rules are stored as `@domain` entries in `max_email_sender_rules`; exact-address rules still work and take precedence. The ten-minute sender-rule sweep matches any sender at the saved domain.
+- The first verified domain rule is `@artstorefronts.com` with action `always_delete`. Deployment verification saved the rule, moved five current matching inbox messages to Trash, returned the deterministic success receipt, and left the Harness healthy.
+- Root cause of the failed attempts was incompatible task identity: Agent Harness created UUID staff-task IDs while Forge tried to open them in Hermes Kanban, which recognizes `t_...` IDs. Email sender/domain rules are bounded Gmail operations and must not be delegated through that task path.
+
 ## Herald reversible email-autonomy pilot — 2026-09-16
 
 - William's Gmail report now uses a three-level authority ladder through the production Herald Agent Harness.
