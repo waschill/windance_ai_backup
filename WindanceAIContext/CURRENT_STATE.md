@@ -2,6 +2,13 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## Staff watchlist recovery — 2026-09-17
+
+- Applied: removed shared bridge instruction reversal that turned "do not create Kanban tasks" into a task-creation demand; added same-service native search recovery and scoped watchlist checks.
+- Verified: 30 regression tests, healthy services, real production search recovery, zero Kanban calls and zero outbound canary delivery receipts.
+- Still unfinished: live watchlist returned PARTIAL. Metadata/QA-boundary follow-up is staged and unexecuted because mandatory Claude review became unavailable. William's decision on reviewer restoration or a narrow exception is pending.
+- Details and recovery: `projects/STAFF_WATCHLIST_RECOVERY_2026-09-17.md`.
+
 ## Claude private reviewer and Forge operational handoff — 2026-09-17
 
 - Vega means William's Codex collaborator and retains final implementation decisions. The former Hermes Vega profile is now Claude, a direct-access advisory reviewer reporting to Vega, using verified `anthropic/claude-opus-5` through OpenRouter with no fallback.
