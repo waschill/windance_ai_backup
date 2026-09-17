@@ -4,10 +4,10 @@ Last curated: 2026-09-07. Confirm live before acting.
 
 ## Staff watchlist recovery — 2026-09-17
 
-- Applied: removed shared bridge instruction reversal that turned "do not create Kanban tasks" into a task-creation demand; added same-service native search recovery and scoped watchlist checks.
-- Verified: 30 regression tests, healthy services, real production search recovery, zero Kanban calls and zero outbound canary delivery receipts.
-- Still unfinished: live watchlist returned PARTIAL. Metadata/QA-boundary follow-up is staged and unexecuted because mandatory Claude review became unavailable. William's decision on reviewer restoration or a narrow exception is pending.
-- Details and recovery: `projects/STAFF_WATCHLIST_RECOVERY_2026-09-17.md`.
+- Fixed shared bridge instruction reversal, same-service search recovery, watchlist metadata verification and Scout/Athena draft boundaries. Fresh staff assignments use the changes automatically.
+- Verified: 35 checks passed; a real production Scout task returned three supported video links and completed with Athena APPROVED. No Kanban calls or unintended delivery; both services healthy.
+- William explicitly waived this task's remaining Claude review while Claude was unavailable. This is task-specific, not a standing exception.
+- Details, limits and recovery: `projects/STAFF_WATCHLIST_RECOVERY_2026-09-17.md`.
 
 ## Claude private reviewer and Forge operational handoff — 2026-09-17
 
