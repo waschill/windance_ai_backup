@@ -12,11 +12,11 @@ Last curated: 2026-09-07. Confirm live before acting.
 ## Herald reversible email-autonomy pilot — 2026-09-16
 
 - William's Gmail report now uses a three-level authority ladder through the production Herald Agent Harness.
-- `automatic`: routine confirmations, completed-transaction receipts, newsletters, obvious junk, low-value notifications, and ordinary vendor chatter are archived. The pilot never permanently deletes these messages.
+- `automatic`: routine confirmations, completed-transaction receipts, newsletters, obvious junk, low-value notifications, and ordinary vendor chatter are moved to Gmail Trash. They remain recoverable and are never permanently deleted. Archive is reserved for William's explicit archive instruction.
 - `draft`: routine customer questions, scheduling coordination, and basic follow-ups may receive a professionally composed Gmail draft. Drafts remain unsent; autonomous sending is deliberately disabled during the trust-building phase.
 - `escalate`: money disputes, contracts, angry/formal complaints, legal/security issues, unusual requests, sensitive information, ambiguity, commitments, and irreversible actions remain untouched for William.
 - A deterministic protected-risk filter overrides the local classifier for legal, money-dispute/collection, complaint, security/account-control, and unusual/irreversible language.
-- Every run returns a numbered decision report with the reason for each action. `undo email N` reverses an item from the latest report by restoring an archived message to Inbox or deleting an unsent draft. Escalated items have no mailbox mutation to reverse.
+- Every run returns a numbered decision report with the reason for each action. `undo email N` reverses an item from the latest report by restoring an automatically trashed message to Inbox, restoring a legacy archived action, or deleting an unsent draft. Escalated items have no mailbox mutation to reverse.
 - Action and reversal receipts are stored in `email_autonomy_actions`; a message is handled only once, preventing repeated drafts or repeated archive decisions.
 - Existing explicit William-created ALD/NOD sender rules remain authoritative and separate. No live Gmail report was run as part of deployment; validation used synthetic messages only.
 
