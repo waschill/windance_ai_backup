@@ -1,0 +1,19 @@
+{
+  "task": {
+    "id": "4dd83d6a-66ea-43bc-9841-6220da1bbe91",
+    "assignee": "Scout",
+    "title": "Canary: look up latest Hermes version",
+    "request": "Look up the latest stable Hermes Agent version from Nous Research. Give the release date and official release link.",
+    "requester": "Vega canary",
+    "channel": "internal-canary",
+    "priority": "normal",
+    "status": "completed",
+    "result": "PASS\n\nThe latest stable Hermes Agent version is **v0.21.3 (v2026.9.14)**.\n\nThe release details are:\n*   **Version:** v0.21.3 (v2026.9.14)\n*   **Release Date:** September 14, 2026, 16:04 UTC\n*   **Official Release Link:** https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14\n\n***\n\n**Evidence Core:**\nThe information is derived from the official GitHub API endpoint for the latest release of the NousResearch/hermes-agent repository.\n\n**Source Link:**\n*   NousResearch / hermes-agent releases (via API Endpoint): https://api.github.com/repos/NousResearch/hermes-agent/releases/latest\n*   Specific Tag Confirmation: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14\n\nQA: APPROVED by Athena.",
+    "source": "scout-lookup-canary:2026-09-17",
+    "created_at": "2026-09-17T19:42:57.352942+00:00",
+    "updated_at": "2026-09-17T19:43:35.488097+00:00",
+    "completed_at": "2026-09-17T19:43:35.488097+00:00",
+    "completed_by": "Hermes profile scout",
+    "handoff_notes": []
+  }
+}

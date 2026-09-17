@@ -1,0 +1,21 @@
+{
+  "publisher_repository": "NousResearch/hermes-agent",
+  "name": "Hermes Agent v0.21.3 (v2026.9.14)",
+  "tag": "v2026.9.14",
+  "published_at": "2026-09-14T16:04:14Z",
+  "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14",
+  "lookup_url": "https://github.com/NousResearch/hermes-agent/releases/latest",
+  "github_latest": true,
+  "retrieval_method": "direct_release_page",
+  "checked_at": "2026-09-17T19:40:07.042841+00:00",
+  "attempts": [
+    {
+      "url": "https://api.github.com/repos/NousResearch/hermes-agent/releases/latest",
+      "outcome": "ConnectionError"
+    },
+    {
+      "url": "https://github.com/NousResearch/hermes-agent/releases/latest",
+      "outcome": "retrieved"
+    }
+  ]
+}

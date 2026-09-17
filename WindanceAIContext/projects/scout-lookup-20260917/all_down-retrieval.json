@@ -1,0 +1,14 @@
+{
+  "publisher_repository": "NousResearch/hermes-agent",
+  "unverified": true,
+  "attempts": [
+    {
+      "url": "https://api.github.com/repos/NousResearch/hermes-agent/releases/latest",
+      "outcome": "ConnectionError"
+    },
+    {
+      "url": "https://github.com/NousResearch/hermes-agent/releases/latest",
+      "outcome": "ConnectionError"
+    }
+  ]
+}

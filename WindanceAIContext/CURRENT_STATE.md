@@ -2,6 +2,14 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## Scout software-version lookup repair — 2026-09-17
+
+- Scout now checks official release sources first. For Hermes Agent and Ollama software version lookups, the profile runner obtains a current GitHub Latest API receipt and falls back to direct public release-page retrieval if the API fails. This path does not depend on search or cached extraction results.
+- Every Scout assignment receives Athena review, including “look up the latest version.” A narrow software lookup can pass with one authoritative publisher record; broad and high-stakes evidence requirements remain intact. The runner validates the reported version against its fetched record and accepts Athena's established first-line verdict format.
+- Scout instructions now require authorized alternate retrieval routes after search failure and distinguish unverified claims from a single failed tool. Unresolved tasks retain one consistent status instead of mixed PARTIAL/BLOCKED report text.
+- Nineteen regression tests passed. Live normal and forced API/search-failure canaries both returned Hermes Agent v0.21.3 with Athena approval; a complete retrieval outage returned BLOCKED without inventing a version. A fresh production-ledger canary completed with Athena approval, Harness health remained ok, and no canary messages were sent.
+- Details, exact test receipts, limitations, and rollback: `projects/SCOUT_SOURCE_FIRST_LOOKUP_2026-09-17.md`. No Hermes upgrade was performed by this repair.
+
 ## Herald direct Gmail domain rules — 2026-09-17
 
 - William's explicit plain-language instruction `always delete all emails from example.com` now routes directly to the production Agent Harness Gmail rule handler. It no longer becomes a Forge/staff task and does not require a second approval or an internal task ID.
@@ -438,3 +446,4 @@ William privately entered Herald's token; API verification confirmed the correct
 ## Windance Search / SearXNG — 2026-09-16
 
 SearXNG is installed and canary-tested on AL at http://192.168.36.20:8888/ (LAN/Wi-Fi only), with pinned SearXNG/Valkey containers and no paid search API. Scout's fresh profile processes now use it for web_search; existing Tavily page extraction remains separate and can still consume credits. The isolated Open WebUI lab on port 3001 is connected; production port 3000 is unchanged. Browser, JSON, actual Scout tool, actual lab provider, small concurrent load, failure and restart canaries passed within the limits documented in projects/SEARXNG_DEPLOYMENT_2026-09-16.md. DuckDuckGo was excluded after CAPTCHA failures. Unrelated results on nonsense queries must not be treated as evidence. Pre-existing interactive gateway sessions may require reload; no full LLM report or phone test is claimed.
+
