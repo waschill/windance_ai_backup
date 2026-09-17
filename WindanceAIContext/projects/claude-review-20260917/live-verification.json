@@ -1,0 +1,29 @@
+{
+  "tasks": {
+    "guards": 2,
+    "nonterminal_private_rows": 0,
+    "live_private_insert_rejected_forge_insert_allowed_and_rolled_back": true
+  },
+  "staff_tasks": {
+    "guards": 2,
+    "nonterminal_private_rows": 0,
+    "live_private_insert_rejected_forge_insert_allowed_and_rolled_back": true
+  },
+  "model": {
+    "provider": "openrouter",
+    "default": "anthropic/claude-opus-5",
+    "base_url": "https://openrouter.ai/api/v1"
+  },
+  "toolsets": [
+    "claude-review"
+  ],
+  "fallbacks_disabled": true,
+  "gateway_renamed_profile_loaded": true,
+  "api_private_assignees_rejected_400": [
+    "Claude",
+    "Vega",
+    "Codex"
+  ],
+  "deterministic_redirect_canaries_passed": 2,
+  "harness_health": "ok"
+}

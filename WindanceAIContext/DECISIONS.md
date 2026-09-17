@@ -1,5 +1,12 @@
 # Durable Decisions
 
+## Claude private reviewer and Forge operational handoff — 2026-09-17
+
+- Vega means William's Codex collaborator and retains final implementation decisions. The former Hermes Vega profile is now Claude, a direct-access advisory reviewer reporting to Vega, using verified `anthropic/claude-opus-5` through OpenRouter with no fallback.
+- Forge inherits operational technical leadership under Herald. Claude receives no staff-queue jobs, automatic Forge escalations, or scheduled weekly work. Both queue ledgers reject Claude/Vega/Codex operational assignments; three older blocked/triage tasks moved to Forge without being replayed.
+- Claude has only read-only submitted-packet tools. Live review caught three planted bugs and independently reviewed the real deployment; Vega executed tests, resolved findings and accepted the change. Six boundary tests, real-database-copy migrations, live API/database guards, natural-language redirects, and gateway profile refresh passed. Harness is healthy.
+- Direct review wrapper: `/Users/herald/services/claude-review/claude_review.py --query-file PATH [--resume SESSION_ID]`. Full usage, authority, evidence and rollback: `projects/CLAUDE_INDEPENDENT_REVIEWER_2026-09-17.md`.
+
 ## Architecture
 
 - Codex/Vega is the trusted technical pivot. Herald coordinates operations and delegates only through machine-verifiable durable tasks.
@@ -49,3 +56,4 @@
 ## Every AI-stack change must be searchable — 2026-09-09
 
 William requires every AI-stack change, including minor changes, and important decisions to be recorded in this package. Follow SECOND_BRAIN_CHANGE_RECORDING.md. Record what changed, why, verification, usage, limits and recovery locations; exclude secrets and private counselor/mailbox material. Run scripts/publish-windance-context.ps1 -PushGit. Publication now immediately refreshes and verifies the Second Brain index; a failed refresh is not a completed publication. Do not rely on chat compaction or wait for the periodic index scan to preserve a change.
+

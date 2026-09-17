@@ -1,0 +1,53 @@
+{
+  "executed_by": "Vega / Codex",
+  "results": [
+    {
+      "case": "sibling prefix escape",
+      "original_failed_requirement": true,
+      "fixed_passed": true
+    },
+    {
+      "case": "expiry boundary and neighbors",
+      "original_failed_requirement": true,
+      "fixed_passed": true
+    },
+    {
+      "case": "exact cents ['1.15'] (count=1)",
+      "original": 114,
+      "expected": 115,
+      "fixed_passed": true
+    },
+    {
+      "case": "exact cents ['4.35'] (count=1)",
+      "original": 434,
+      "expected": 435,
+      "fixed_passed": true
+    },
+    {
+      "case": "exact cents ['0.07', '0.07'] (count=1000)",
+      "original": 6999,
+      "expected": 7000,
+      "fixed_passed": true
+    },
+    {
+      "case": "exact cents [] (count=0)",
+      "original": 0,
+      "expected": 0,
+      "fixed_passed": true
+    },
+    {
+      "case": "exact cents ['-1.15'] (count=1)",
+      "original": -114,
+      "expected": -115,
+      "fixed_passed": true
+    }
+  ],
+  "nonfinite_and_subcent_rejected": [
+    "0.001",
+    "NaN",
+    "Infinity",
+    "bad",
+    "27-digit integer with .001"
+  ],
+  "fixed_sha256": "9e36e5a0398abc21a8c7fd885e3a39cb9e8469e546ae72226fd322b7899bfb35"
+}

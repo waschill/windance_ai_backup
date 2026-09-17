@@ -1,0 +1,26 @@
+[
+  {
+    "ledger": "tasks",
+    "reassigned_without_replay": [
+      {
+        "id": "t_4a712290",
+        "status": "blocked"
+      },
+      {
+        "id": "t_af427022",
+        "status": "triage"
+      }
+    ],
+    "private_assignment_guards": "installed"
+  },
+  {
+    "ledger": "staff_tasks",
+    "reassigned_without_replay": [
+      {
+        "id": "1b0c15e3-dd1c-49ba-ad21-6b13413aa631",
+        "status": "blocked"
+      }
+    ],
+    "private_assignment_guards": "installed"
+  }
+]

@@ -2,6 +2,13 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## Claude private reviewer and Forge operational handoff — 2026-09-17
+
+- Vega means William's Codex collaborator and retains final implementation decisions. The former Hermes Vega profile is now Claude, a direct-access advisory reviewer reporting to Vega, using verified `anthropic/claude-opus-5` through OpenRouter with no fallback.
+- Forge inherits operational technical leadership under Herald. Claude receives no staff-queue jobs, automatic Forge escalations, or scheduled weekly work. Both queue ledgers reject Claude/Vega/Codex operational assignments; three older blocked/triage tasks moved to Forge without being replayed.
+- Claude has only read-only submitted-packet tools. Live review caught three planted bugs and independently reviewed the real deployment; Vega executed tests, resolved findings and accepted the change. Six boundary tests, real-database-copy migrations, live API/database guards, natural-language redirects, and gateway profile refresh passed. Harness is healthy.
+- Direct review wrapper: `/Users/herald/services/claude-review/claude_review.py --query-file PATH [--resume SESSION_ID]`. Full usage, authority, evidence and rollback: `projects/CLAUDE_INDEPENDENT_REVIEWER_2026-09-17.md`.
+
 ## Scout software-version lookup repair — 2026-09-17
 
 - Scout now checks official release sources first. For Hermes Agent and Ollama software version lookups, the profile runner obtains a current GitHub Latest API receipt and falls back to direct public release-page retrieval if the API fails. This path does not depend on search or cached extraction results.
@@ -446,4 +453,5 @@ William privately entered Herald's token; API verification confirmed the correct
 ## Windance Search / SearXNG — 2026-09-16
 
 SearXNG is installed and canary-tested on AL at http://192.168.36.20:8888/ (LAN/Wi-Fi only), with pinned SearXNG/Valkey containers and no paid search API. Scout's fresh profile processes now use it for web_search; existing Tavily page extraction remains separate and can still consume credits. The isolated Open WebUI lab on port 3001 is connected; production port 3000 is unchanged. Browser, JSON, actual Scout tool, actual lab provider, small concurrent load, failure and restart canaries passed within the limits documented in projects/SEARXNG_DEPLOYMENT_2026-09-16.md. DuckDuckGo was excluded after CAPTCHA failures. Unrelated results on nonsense queries must not be treated as evidence. Pre-existing interactive gateway sessions may require reload; no full LLM report or phone test is claimed.
+
 
