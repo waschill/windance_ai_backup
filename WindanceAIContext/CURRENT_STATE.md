@@ -468,3 +468,14 @@ SearXNG is installed and canary-tested on AL at http://192.168.36.20:8888/ (LAN/
 William requires Vega to obtain Claude's review before execution or deployment of all code changes and stack changes requiring code, including delegated execution. Only William can exempt a task; general permission/full access is not a waiver. Review applies to the actual manifested revision, and covered work stops if review is unavailable. Claude advises; Vega decides after considering findings. Installed in HAL/HERALD global AGENTS.md and linked from START_HERE. Full policy: `policies/CLAUDE_MANDATORY_REVIEW.md`.
 
 Claude reviewed the draft in session `20260917_142614_48303c`. Vega incorporated manifest/completeness checks, delegated-work coverage and disclosure of high-severity disagreement. Vega declined the suggested automatic rollback exemption because William alone controls exemptions. This is persistent instruction enforcement, not a runtime deployment interlock. No service or executable code changed to install this policy.
+
+### Review suspension and SAM service repair — 2026-09-18
+
+William explicitly suspended all review requirements until further notice.
+Using that exception, Vega repaired Odoo action 1983 so it no longer copies
+Farrier/Vet notes into weekday Training cells, removed 14 exact copied Farrier
+phrases from active schedule 22, preserved legitimate training codes and all
+horse needs, refreshed SAM, and verified service notes are hidden today because
+the next Farrier/Vet dates are 2026-09-22 and 2026-10-26. SAM and Herald health
+checks passed. Recovery snapshot:
+`/Users/herald/backups/odoo-service-date-gate/before-20260918-153658.json`.

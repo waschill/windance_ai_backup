@@ -63,3 +63,11 @@ William requires every AI-stack change, including minor changes, and important d
 William requires Vega to obtain Claude's review before execution or deployment of all code changes and stack changes requiring code, including delegated execution. Only William can exempt a task; general permission/full access is not a waiver. Review applies to the actual manifested revision, and covered work stops if review is unavailable. Claude advises; Vega decides after considering findings. Installed in HAL/HERALD global AGENTS.md and linked from START_HERE. Full policy: `policies/CLAUDE_MANDATORY_REVIEW.md`.
 
 Claude reviewed the draft in session `20260917_142614_48303c`. Vega incorporated manifest/completeness checks, delegated-work coverage and disclosure of high-severity disagreement. Vega declined the suggested automatic rollback exemption because William alone controls exemptions. This is persistent instruction enforcement, not a runtime deployment interlock. No service or executable code changed to install this policy.
+
+## Claude review requirement suspended — 2026-09-18
+
+William explicitly directed Vega to bypass all reviews until further notice. The
+mandatory Claude review gate is suspended across all tasks until William
+explicitly reinstates it. Reviews remain optional advisory tools. Existing
+authorization, backup, verification, privacy, SyncThing, and Level 8 boundaries
+are unchanged.

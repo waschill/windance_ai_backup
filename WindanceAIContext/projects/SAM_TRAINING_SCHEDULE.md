@@ -106,3 +106,24 @@ LightDM services, HTTP 200 from the schedule homepage, and Chromium running
 with the schedule kiosk URL. No failed systemd units were reported. The older
 documented /api/status URL returned 404; the homepage was used for this check.
 
+## Farrier/Vet date-gating source repair — 2026-09-18
+
+Odoo automation 1983 (`Populate Horses`) was incorrectly appending current
+Farrier/Vet need text into ordinary weekday Training fields whenever a service
+visit fell in that week. It never removed those copied phrases when the visit
+date changed. The automation now only ensures Training-status horses have
+worksheet rows; it no longer reads, writes, or cleans service notes in Training
+fields. SAM remains the sole display path for service needs: it reads every
+horse directly and shows Farrier/Vet text only when today's date exactly equals
+the corresponding Work Schedule visit date.
+
+Fourteen confirmed Farrier phrases were removed from the active Friday Training
+cells while preserving legitimate codes (`F`, `RS`, `DW`, `FBit`). Every removed
+phrase matched the horse's current Farrier need. Horse need flags and note text
+were not changed. Six older matching rows are orphaned from every Work Schedule
+and cannot display, so they were deliberately left untouched. After refresh,
+SAM reported Farrier due false, Vet due false, empty service columns, and no
+copied service phrases in active Training cells. Next dates remained Farrier
+2026-09-22 and Vet 2026-10-26. Backup:
+`/Users/herald/backups/odoo-service-date-gate/before-20260918-153658.json`.
+
