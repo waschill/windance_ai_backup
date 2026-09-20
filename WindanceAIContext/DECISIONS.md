@@ -71,3 +71,12 @@ mandatory Claude review gate is suspended across all tasks until William
 explicitly reinstates it. Reviews remain optional advisory tools. Existing
 authorization, backup, verification, privacy, SyncThing, and Level 8 boundaries
 are unchanged.
+
+
+## Idea Board, SOP library and review decisions — 2026-09-19
+
+William selected the SOP-library and decision-log proposals and requested a non-executing Idea Board. The existing Capture Inbox now backs the Idea Board, with recoverable archived/discussion states, required triage reasons and private/discarded exclusion. `Idea: ...` and `Add to the Idea Board: ...` are deterministic Harness capture commands; Herald's staff connector exposes capture_idea/list_ideas/review_idea. The protected Work page includes the Idea Board. Friday 4 PM Mountain digest runs in this Codex thread via automation weekly-idea-board-and-decision-follow-through; it recommends at most three priorities and publishes dated digests/decision copies. Future projects are not authorized by an idea or recommendation.
+
+Shared process and usage: operations/README.md. SOP templates/index/intake are in operations/sops. Operational profile instructions require submission and real Archivist/Forge acceptance receipts. This is documentation acceptance, not reinstatement of suspended Claude reviews. The SAL weekly stack-review script now validates structured decisions, requires Athena/Herald/Archivist receipts, saves decision_log memory and verifies read-back before successful completion/delivery. New decision logs are available at /decision-logs and imported into the canonical library by the weekly digest.
+
+Verification and recovery: projects/KNOWLEDGE_WORKFLOW_2026-09-19.md. Health-dashboard proposal #2 was not implemented.

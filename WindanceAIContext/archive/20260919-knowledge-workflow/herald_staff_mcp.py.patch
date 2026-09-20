@@ -1,0 +1,23 @@
+--- before/herald_staff_mcp.py
++++ after/herald_staff_mcp.py
+@@ -82,5 +82,20 @@
+                     {"note": note, "author": "William", "channel": "hermes-desktop"})
+ 
+ 
++@mcp.tool(description="Save William's idea or random thought for later consideration. This never creates or starts a project. Use for Idea Board requests instead of Kanban tasks. No secrets or private counselor material.")
++def capture_idea(text: str) -> dict[str, Any]:
++    return _request("/ideas", "POST", {"text": text, "channel": "hermes-idea-board", "user": "William"})
++
++
++@mcp.tool(description="Read the Idea Board with review reasons. Includes active, hold, discussion and archived ideas; excludes private/discarded captures. Paginate by offset in steps of limit until empty.")
++def list_ideas(state: str = "", limit: int = 50, offset: int = 0) -> dict[str, Any]:
++    return _request("/ideas?" + urllib.parse.urlencode({"state": state, "limit": limit, "offset": offset}))
++
++
++@mcp.tool(description="Triage a saved idea with a required reason: active, hold, discussion, archived. Archive is recoverable and retains original text. Never use discard. This grants no implementation authority and starts no task.")
++def review_idea(idea_id: str, state: str, reason: str) -> dict[str, Any]:
++    return _request(f"/ideas/{urllib.parse.quote(idea_id, safe='')}/review", "POST", {"state": state, "reason": reason, "actor": "Herald/staff"})
++
++
+ if __name__ == "__main__":
+     mcp.run()

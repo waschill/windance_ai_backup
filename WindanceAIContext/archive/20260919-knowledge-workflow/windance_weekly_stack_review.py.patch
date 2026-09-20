@@ -1,0 +1,102 @@
+--- before/windance_weekly_stack_review.py
++++ after/windance_weekly_stack_review.py
+@@ -17,7 +17,9 @@
+ import time
+ import urllib.error
+ import urllib.request
++import urllib.parse
+ from typing import Any
++from decision_records import parse_decisions, make_record
+ 
+ 
+ HARNESS = os.environ.get("HERALD_HARNESS_URL", "http://192.168.36.21:8791").rstrip("/")
+@@ -353,13 +355,26 @@
+         Every recommendation must include source/version evidence, expected benefit, compatibility/risk,
+         rollback or deferral posture, and whether William must approve a later implementation. Explicitly preserve
+         SyncThing protections and disabled Level 8. Do not change files, services, accounts, DNS/firewall,
+-        purchases, shutdown/reboot, or production data. Return: recommend / monitor / reject with short reasons.
++        purchases, shutdown/reboot, or production data.
++        End with DECISION_LOG_JSON: followed by a JSON object with a decisions array.
++        Each decision must contain topic, disposition (recommend/test_first/defer/archive/no_action), reason,
++        owner (one named Windance staff member), next_step, success_measure, revisit_on (YYYY-MM-DD),
++        and evidence (nonempty list of source URLs or exact evidence references).
++        Choose a concrete review date within the next month. A next step is a proposal, never implementation
++        authorization. Include one no_action decision with an owner and next review date if nothing merits action.
+         """
+     ).strip()
+     forge = create_task("Forge", f"{title_stem}: Forge viability", assessment_input, source)
+ 
+     remaining_wait = max(max_wait_minutes * 60 - 15 * 60, 15 * 60)
+     forge_done = run_local_profile_task(forge, timeout_seconds=remaining_wait)
++
++    try:
++        if forge_done.get("status") != "completed":
++            raise ValueError("Forge assessment is unfinished")
++        decisions = parse_decisions(str(forge_done.get("result") or ""))
++    except (ValueError, TypeError, KeyError) as exc:
++        return f"Review incomplete: decision log validation failed ({exc}). No report sent."
+ 
+     report = synthesize_report(source, [scout_done, forge_done])
+ 
+@@ -367,9 +382,13 @@
+         f"""
+         QA the weekly Windance AI stack review for William readability and obvious hallucination risk.
+         Confirm whether the report is understandable, non-destructive, and clear about uncertainty.
+-        Start your result with exactly one of:
+-        READY_TO_SEND: yes
+-        READY_TO_SEND: no
++        If accepted, start with PASS on its own line, then READY_TO_SEND: yes on the next line.
++        If not accepted, start with PARTIAL on its own line, then READY_TO_SEND: no on the next line.
++
++        Also check the decision log below: each proposal needs a sensible owner, evidence, a measurable
++        next step and review date. Recommendations must not claim implementation authorization.
++        Decision log:
++        {json.dumps(decisions, ensure_ascii=False)}
+ 
+         Final report:
+         {compact(report, 14000)}
+@@ -379,19 +398,44 @@
+     athena = create_task("Athena", f"{title_stem}: Athena readability QA", athena_request, source)
+     athena_done = run_local_profile_task(athena, timeout_seconds=10 * 60)
+ 
++    herald = create_task("Herald", f"{title_stem}: decision-log sign-off",
++        "Read-only coordination sign-off. Do not create tasks or execute proposals. Check that this decision log "
++        "has clear owners, measurable next steps, review dates and evidence. If accepted start with PASS on "
++        "its own line then SIGNOFF: yes on the next line. Otherwise start with PARTIAL then SIGNOFF: no on "
++        "the next line and explain gaps. These remain proposals for William.\n" + json.dumps(decisions) +
++        "\nAthena result:\n" + str(athena_done.get("result") or ""), source)
++    herald_done = run_local_profile_task(herald, timeout_seconds=10 * 60)
++
+     archive_request = textwrap.dedent(
+         f"""
+         Archive the completed weekly Windance AI stack review staff results, Athena QA decision, and final report.
++        Return PASS on its own first line only when the complete supplied decision record is preserved in
++        your durable task result. Do not create nested Kanban work. Otherwise return PARTIAL with the gap.
+ 
+         Final report:
+         {compact(report, 14000)}
+ 
+         Athena QA:
+         {compact(athena_done.get('result'), 4000)}
++
++        Structured decision log (preserve in your task result; do not claim deployment):
++        {json.dumps(decisions, ensure_ascii=False)}
++        Herald sign-off:
++        {compact(herald_done.get('result'), 4000)}
+         """
+     ).strip()
+     archivist = create_task("Archivist", f"{title_stem}: Archivist archive", archive_request, source)
+     archivist_done = run_local_profile_task(archivist, timeout_seconds=10 * 60)
++
++    try:
++        record = make_record(source, decisions, forge_done, athena_done, herald_done, archivist_done)
++        post_json(f"{HARNESS}/memory", {"kind": "decision_log", "key": source,
++            "value": json.dumps(record, ensure_ascii=False), "confidence": 1.0, "source": source})
++        saved = get_json(f"{HARNESS}/decision-logs?key=" + urllib.parse.quote(source, safe=""))
++        if saved.get("items") != [record]:
++            raise ValueError("Decision log read-back did not match")
++    except Exception as exc:
++        return f"Review incomplete: decision log was not verified ({type(exc).__name__}: {exc}). No report sent."
+ 
+     outbound = compact(report, 14000)
+     if not athena_ready(athena_done):

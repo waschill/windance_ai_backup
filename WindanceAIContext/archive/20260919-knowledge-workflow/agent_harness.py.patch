@@ -1,0 +1,126 @@
+--- before/agent_harness.py
++++ after/agent_harness.py
+@@ -8901,6 +8901,18 @@
+     # Herald owns the front door.  Explicit Vega/Codex requests may still use
+     # the Codex bridge; ordinary requests continue into Herald's deterministic
+     # tools and staff orchestration below.
++    # Explicit idea capture precedes all task/deployment routing.
++    idea_match = re.fullmatch(r"(?:#?idea|(?:add|save)(?: this)? to (?:my |the )?idea board)\s*:\s*(.+)", intent_text, flags=re.I | re.S)
++    if idea_match and not approval_control_command:
++        try:
++            captured = create_idea(idea_match.group(1), payload.channel, payload.user)
++        except ValueError as exc:
++            return {"reply": str(exc), "provider": "idea-board", "model": "none"}
++        return {"id": captured["id"], "reply": f"Saved to the Idea Board as {captured['id']}. It will be considered in the weekly digest; no project was started.", "provider": "idea-board", "model": "none", "capture": captured}
++    if re.fullmatch(r"(?:show (?:my |the )?)?idea board[?.!]*", intent_text, flags=re.I):
++        items = list_ideas("active", 50, 0)
++        reply = "Idea Board — Inbox\n" + ("\n".join(f"{x['id']}: {x['original_text']}" for x in items) or "No new ideas.")
++        return {"reply": reply, "provider": "idea-board", "model": "none"}
+     capture_review_match = re.match(r"^\s*(?:#?capture\s+(?:inbox|review)|(?:show|review)\s+(?:my\s+)?captures)\s*[?.!]*$", intent_text, flags=re.I)
+     capture_transition_match = re.match(r"^\s*(?:#?capture\s+)?(active|private|hold|discard)\s+(CAP-\d{8}-[A-Z0-9]{6})\s*[!.]*$", intent_text, flags=re.I)
+     capture_match = re.match(r"^\s*(?:#?capture|#?private|#?hold)\s*[:,-]\s*(.+)$", intent_text, flags=re.I | re.S)
+@@ -10033,7 +10045,7 @@
+     return {"model": model_name, "fields": fields}
+ 
+ 
+-CAPTURE_STATES = {"active", "private", "hold", "discarded"}
++CAPTURE_STATES = {"active", "private", "hold", "discarded", "discussion", "archived"}
+ 
+ 
+ def create_capture(original_text: str, channel: str, user: str, state: str = "active") -> dict[str, Any]:
+@@ -10108,6 +10120,77 @@
+     return {"id": capture_id, "state": target, "updated_at": changed}
+ 
+ 
++IDEA_STATES = {"active", "hold", "discussion", "archived"}
++
++
++def create_idea(text: str, channel: str, user: str) -> dict[str, Any]:
++    if memory_looks_secret(text):
++        raise ValueError("Remove secret or credential material before saving this idea.")
++    return create_capture(text, channel, user, "active")
++
++
++def list_ideas(state: str = "", limit: int = 50, offset: int = 0) -> list[dict[str, Any]]:
++    if state and state not in IDEA_STATES:
++        raise ValueError("Use active, hold, discussion, or archived")
++    query = "SELECT id, original_text, state, created_at, updated_at FROM captures WHERE state IN ('active','hold','discussion','archived')"
++    args = []
++    if state:
++        query += " AND state=?"
++        args.append(state)
++    query += " ORDER BY created_at, id LIMIT ? OFFSET ?"
++    args.extend([max(1, min(int(limit), 100)), max(0, int(offset))])
++    with db() as conn:
++        rows = [dict(row) for row in conn.execute(query, args).fetchall()]
++        for row in rows:
++            row["history"] = [dict(x) for x in conn.execute("SELECT event_type,actor,note,created_at FROM capture_events WHERE capture_id=? ORDER BY id", (row["id"],))]
++        return rows
++
++
++def review_idea(capture_id: str, state: str, reason: str, actor: str) -> dict[str, Any]:
++    if state not in IDEA_STATES or not reason.strip() or len(reason) > 4000:
++        raise ValueError("A valid idea state and a reason of 1–4000 characters are required")
++    if memory_looks_secret(reason):
++        raise ValueError("Do not store secret material in a review")
++    changed = now()
++    with db() as conn:
++        row = conn.execute("SELECT state FROM captures WHERE id=?", (capture_id,)).fetchone()
++        if row is None or row["state"] not in IDEA_STATES:
++            raise KeyError("Idea not found")
++        conn.execute("UPDATE captures SET state=?,updated_at=? WHERE id=?", (state, changed, capture_id))
++        conn.execute("INSERT INTO capture_events(capture_id,event_type,actor,note,created_at) VALUES(?,?,?,?,?)", (capture_id, "idea_review", actor, f"{row['state']} -> {state}: {reason.strip()}", changed))
++        conn.commit()
++    return {"id": capture_id, "state": state, "updated_at": changed, "reason": reason.strip()}
++
++
++@app.post("/ideas")
++def post_idea(payload: dict[str, Any], authorization: str | None = Header(default=None)):
++    require_token(authorization)
++    try:
++        return create_idea(str(payload.get("text", "")), str(payload.get("channel", "api")), str(payload.get("user", "William")))
++    except ValueError as exc:
++        raise HTTPException(400, str(exc)) from exc
++
++
++@app.get("/ideas")
++def get_ideas(state: str = "", limit: int = 50, offset: int = 0, authorization: str | None = Header(default=None)):
++    require_token(authorization)
++    try:
++        return {"items": list_ideas(state, limit, offset)}
++    except ValueError as exc:
++        raise HTTPException(400, str(exc)) from exc
++
++
++@app.post("/ideas/{capture_id}/review")
++def post_idea_review(capture_id: str, payload: dict[str, Any], authorization: str | None = Header(default=None)):
++    require_token(authorization)
++    try:
++        return review_idea(capture_id, str(payload.get("state", "")), str(payload.get("reason", "")), str(payload.get("actor", "Vega")))
++    except ValueError as exc:
++        raise HTTPException(400, str(exc)) from exc
++    except KeyError as exc:
++        raise HTTPException(404, "Idea not found") from exc
++
++
+ @app.post("/captures")
+ async def post_capture(payload: dict[str, Any], authorization: str | None = Header(default=None)) -> dict[str, Any]:
+     require_token(authorization)
+@@ -10166,6 +10249,17 @@
+     return {"items": [dict(r) for r in rows]}
+ 
+ 
++@app.get("/decision-logs")
++def get_decision_logs(key: str = "", authorization: str | None = Header(default=None)):
++    require_token(authorization)
++    with db() as conn:
++        if key:
++            rows = conn.execute("SELECT value FROM memories WHERE kind='decision_log' AND key=?", (key,)).fetchall()
++        else:
++            rows = conn.execute("SELECT value FROM memories WHERE kind='decision_log' ORDER BY updated_at DESC LIMIT 100").fetchall()
++    return {"items": [json.loads(row['value']) for row in rows]}
++
++
+ @app.get("/memory/vector")
+ def get_vector_memory(q: str = "", limit: int = 8, authorization: str | None = Header(default=None)) -> dict[str, Any]:
+     require_token(authorization)

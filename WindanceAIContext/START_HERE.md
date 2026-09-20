@@ -53,3 +53,6 @@ William requires every AI-stack change, including minor changes, and important d
 ## Claude review — suspended by William, 2026-09-18
 
 William explicitly instructed Vega to bypass all reviews until further notice. Read `policies/CLAUDE_MANDATORY_REVIEW.md` for the historical policy and current suspension. Claude review is optional while suspended and is not a gate to testing, execution, or deployment. All other safety, authorization, backup, verification, privacy, SyncThing, and Level 8 requirements remain active.
+
+
+For idea capture, SOP submissions and review follow-through, read `operations/README.md`.

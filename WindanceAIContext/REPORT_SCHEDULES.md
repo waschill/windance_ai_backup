@@ -62,3 +62,8 @@ The SAL LaunchAgent `com.windance.weekly-stack-review` owns this recurring local
 ## Spacing policy
 
 Morning reports that share Herald, Node-RED, or SAL Messages are staggered by at least ten minutes where practical. Noon YouTube, William email, conditional veterinary processing, and Shawn email run at 12:00, 12:10, 12:20, and 12:30. Different-recipient jobs are still staggered when they share the same content or messaging infrastructure.
+
+
+## Idea Board digest — added 2026-09-19
+
+Friday 4 PM America/Denver: Codex thread heartbeat `weekly-idea-board-and-decision-follow-through`, active and created with an app receipt. Captures are saved immediately to Herald; the digest assesses ideas, recommends up to three next steps and imports new decision logs into canonical Git/indexed context. Results return to the originating Codex thread, not Telegram. Existing 7 PM capture reminder is unchanged. First scheduled digest: 2026-09-25. A future heartbeat run has not yet occurred.
