@@ -127,3 +127,40 @@ copied service phrases in active Training cells. Next dates remained Farrier
 2026-09-22 and Vet 2026-10-26. Backup:
 `/Users/herald/backups/odoo-service-date-gate/before-20260918-153658.json`.
 
+## Human-only Odoo schedule ownership — 2026-09-20
+
+William confirmed that only human operators may change the root Odoo Work
+Schedule. AI staff and SAM may read it to build the display, but may not write
+weekday Training cells or alter its row structure.
+
+Live audit found historical machine writes to weekday cells through the Herald
+Odoo bridge, including old unfinished-training rollover batches, plus the
+September 18 guarded Farrier cleanup. Those operations used William's shared
+Odoo integration identity, so Odoo's `write_uid` could misleadingly look human.
+The last Harness-audited schedule-line write was September 9; the September 18
+repair was a separate direct maintenance operation.
+
+The boundary is now enforced at both layers:
+
+- Odoo automation 24, `Populate Horese`, is inactive and can no longer add rows
+  when the schedule is saved.
+- Herald's guarded `/odoo/write` route denies the
+  `x_work_schedule_line_a873e` model entirely; all seven weekday Training fields
+  therefore have no AI/SAM write path.
+- SAM continues reading schedule 22 and all horse needs. Its only retained Odoo
+  mutation authority is to create completed Farrier/Veterinarian history and
+  clear the matching horse-level boolean need flag after confirmed history.
+- SAM completion details, checkmarks, and local carryovers remain in SAM's local
+  SQLite/display layer and do not update Odoo Training cells.
+
+Verification: a dry-run schedule-line write returned HTTP 403; the permitted
+horse-level need-clear dry-run returned HTTP 200; SAM update and health both
+returned `ok`. Automation disable was read back as `active: false`.
+
+Recovery material is private on Herald at
+`/Users/herald/backups/training-schedule-readonly-20260920/`, including the
+pre-change Harness and Odoo automation/action snapshot. There is not yet a
+separate Odoo maintenance identity. Exceptional schedule repairs remain blocked
+unless William explicitly authorizes a maintenance operation; do not silently
+use a human identity for them.
+

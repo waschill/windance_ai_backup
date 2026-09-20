@@ -2,6 +2,20 @@
 
 Last curated: 2026-09-07. Confirm live before acting.
 
+## Odoo Training Schedule is human-write-only — 2026-09-20
+
+Only human operators may edit the root Odoo Work Schedule. Odoo automation 24
+(`Populate Horese`) is disabled, and Herald's guarded Odoo writer now rejects
+the Work Schedule line model and every weekday Training field. SAM continues to
+read the schedule and maintain its display/local completion state. Its retained
+Odoo writes are limited to completed Farrier/Veterinarian history and clearing
+the corresponding horse-level boolean need flag after durable history exists.
+Live verification returned 403 for a schedule-line dry-run, 200 for the narrow
+horse-flag dry-run, and healthy SAM update/health responses. No separate Odoo
+maintenance identity exists yet; exceptional root-schedule repair remains
+blocked pending William's explicit authorization. Details and recovery:
+`projects/SAM_TRAINING_SCHEDULE.md`.
+
 ## Staff watchlist recovery — 2026-09-17
 
 - Fixed shared bridge instruction reversal, same-service search recovery, watchlist metadata verification and Scout/Athena draft boundaries. Fresh staff assignments use the changes automatically.

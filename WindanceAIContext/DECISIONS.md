@@ -33,6 +33,13 @@
 - Kefa and his recurring daily Bible-study delivery were retired on 2026-08-29 at William's direction. Do not recreate or reschedule Kefa unless William explicitly requests it in a future turn.
 - Training Schedule commits are historical records. They must remain queryable by horse and date.
 - SAM's daily schedule must commit the prior day, load the current day, preserve carry-over semantics, and run without an operator present.
+- The root Odoo Work Schedule is human-write-only. AI staff and SAM may read it
+  but may not alter weekday Training cells or row structure. SAM display state,
+  completion details and carryovers stay local. The only permitted SAM Odoo
+  mutations are durable completed-service history and clearing the matching
+  horse-level Farrier/Vet boolean after that history exists. Exceptional root
+  schedule maintenance requires William's explicit authorization and must not
+  silently impersonate a human editor.
 - User-facing summaries should be concise, chronological, and delivered in natural reading order.
 
 ## Engineering culture
