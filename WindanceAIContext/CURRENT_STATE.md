@@ -24,6 +24,19 @@ horse exactly once, has no relationship/name mismatches, and retained every
 weekday code unchanged. Details and rollback location are recorded in
 `projects/SAM_TRAINING_SCHEDULE.md`.
 
+The first repaired Studio view briefly showed both the relationship and legacy
+label, making rows look doubled; a second validation also found both distinct
+Odoo horses named Cosmo displayed. The label is now hidden on linked horse rows,
+the live Training-status Cosmo owns the schedule row, and the blank duplicate
+row is detached. Final audit: 60 active rows, no duplicate horse IDs or display
+names, and SAM refreshed successfully with 60 rows.
+
+Odoo Studio view 10094 was the source defect: it mislabeled an editable legacy
+text field as Horse and hid the actual horse relationship. The view now shows
+the real **Horse Record** selector and makes the legacy display label explicitly
+read-only. Odoo compiled the repaired view successfully; the automatic horse
+population rule remains disabled.
+
 ## Staff watchlist recovery — 2026-09-17
 
 - Fixed shared bridge instruction reversal, same-service search recovery, watchlist metadata verification and Scout/Athena draft boundaries. Fresh staff assignments use the changes automatically.

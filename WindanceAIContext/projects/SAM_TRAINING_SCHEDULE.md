@@ -174,13 +174,13 @@ compounded the problem by treating the legacy `x_name` label as authoritative
 and resolving a horse by text instead of using `x_studio_horse`.
 
 The live schedule was privately snapshotted and repaired without changing any
-weekday Training code. Named legacy rows for Mazy, Aurora, Frost, and the older
-Cosmo were linked to their actual horse records; Feed AM/PM were detached from
+weekday Training code. Named legacy rows for Mazy, Aurora, Frost, and Cosmo
+were linked to their actual horse records; Feed AM/PM were detached from
 incorrect horse relationships; displaced blank rows were safely reassigned to
 Arti, Hondo, and Ruby; and one new correctly linked Kaleesi row was added. All
 linked row labels were normalized to the horse's barn name.
 
-Post-repair verification found 61 active rows, 54 horse-linked rows, no duplicate
+Final verification found 60 active rows, 53 horse-linked rows, no duplicate
 horse relationships, no missing active Training-status horses, no linked-name
 mismatches, and zero weekday-code changes. SAM now treats `x_studio_horse` as
 the authoritative identity and uses the legacy text label only for intentionally
@@ -191,4 +191,29 @@ returns HTTP 403, and the old Odoo population automation remains disabled.
 
 Private rollback snapshot:
 `/Users/herald/backups/training-schedule-relationship-repair-20260920/before-20260920-230946.json`.
+
+An initial view revision exposed both the corrected Horse Record and the legacy
+label side by side, which made every row appear duplicated, and the two distinct
+Odoo horse records sharing barn name Cosmo left two visible Cosmo rows. This was
+corrected immediately: the active schedule row now points to Training-status
+Cosmo (horse 121), the blank duplicate line 487 is detached from the schedule,
+and the legacy label is shown only for intentionally unlinked task rows. Final
+audit found zero duplicate horse IDs and zero duplicate displayed names. Backup:
+`/Users/herald/backups/training-schedule-relationship-repair-20260920/before-cosmo-and-view-correction-20260920-231733.json`.
+
+The underlying Odoo Studio defect was also corrected. View 10094 exposed the
+legacy text field `x_name` as an editable column named **Horse**, while the real
+many-to-one relationship `x_studio_horse` was completely hidden. Reworking a
+schedule therefore changed only a horse-looking text label and silently left the
+old horse ID attached. The former population automation compared those hidden
+IDs, so it skipped some horses and appended apparent duplicates for others.
+
+The effective Work Schedule form now exposes `x_studio_horse` as **Horse
+Record**, limits it to existing horse records, and presents `x_name` explicitly
+as a read-only display label. Odoo successfully compiled the resulting form
+view. The separate, obsolete `New Lines` one-to-many model remains outside the
+active Studio table and is not a SAM data source. The manual **Add Separator**
+button remains valid: it deliberately creates an unlinked separator row. The
+automatic `Populate Horese` automation remains disabled. View rollback:
+`/Users/herald/backups/training-schedule-relationship-repair-20260920/odoo-view-10094-before-20260920-231624.json`.
 
