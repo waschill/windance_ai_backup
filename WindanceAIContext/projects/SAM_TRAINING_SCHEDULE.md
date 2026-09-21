@@ -264,6 +264,25 @@ view, the technical Type and Horse Record columns are hidden and the single
 visible label column is **Horse / Name**; the hidden fields remain authoritative
 for synchronization and SAM.
 
+## Event-driven roster synchronization — 2026-09-21
+
+Automation 33, **Sync Work Schedule Horse Roster**, is active on the Horses
+model. It runs only when a human saves a change to Active, Stage, or Status and
+executes server action 2188. It applies the same active + Status `Training` +
+allowed-Stage rule as the manual button. It reconciles only rows explicitly
+typed Horse; it does not alter Tasks, Separators, untyped manual layout rows,
+existing eligible-horse order, or any weekday field. Newly eligible horses are
+appended so Shawn can drag them into place.
+
+A no-business-change Mazy Status write exercised the real trigger. The roster
+matched the live eligible set with no duplicate horse links, all seven Task rows
+remained isolated, and zero weekday values changed. During verification William
+had legitimately updated Belami, Dream, Frost, Mariah, and Montana into the
+eligible state; the automation correctly appended them. Raven was subsequently
+added through the intended Training/Training workflow. SAM refreshed and its
+health endpoint remained OK. Rollback snapshot:
+`/Users/herald/backups/training-schedule-roster-design-20260921/before-roster-automation-20260921-130125.json`.
+
 Rollback snapshots:
 
 - `/Users/herald/backups/training-schedule-roster-design-20260921/before-20260921-121021.json`
