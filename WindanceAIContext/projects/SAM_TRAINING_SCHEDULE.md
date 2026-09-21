@@ -164,7 +164,19 @@ separate Odoo maintenance identity. Exceptional schedule repairs remain blocked
 unless William explicitly authorizes a maintenance operation; do not silently
 use a human identity for them.
 
-## Replacement-schedule relationship repair — 2026-09-20
+## Attempted replacement-schedule relationship repair — rolled back 2026-09-20
+
+**Current status:** This entire relationship/view/reader migration was rolled
+back after William found that it exposed old horses and lines that were not part
+of Shawn's visible morning schedule. The description below is retained only as
+incident history, not current operating state. Odoo relationships, labels,
+sequences, and Studio view 10094 were restored from the pre-repair snapshots;
+the newly created line 545 was detached. SAM and Herald readers were restored,
+and no weekday code was reverted or changed. Final rollback verification found
+the original 60 active rows, zero weekday-code differences from the snapshot,
+healthy services, and a successful SAM refresh. Do not retry relationship
+normalization until the intended current horse roster is established from a
+human-authoritative source rather than inferred from hidden Odoo links.
 
 William authorized a complete relationship repair after Shawn had rebuilt the
 schedule following a failure. The replacement reused legacy named rows whose

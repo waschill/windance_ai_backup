@@ -16,26 +16,18 @@ maintenance identity exists yet; exceptional root-schedule repair remains
 blocked pending William's explicit authorization. Details and recovery:
 `projects/SAM_TRAINING_SCHEDULE.md`.
 
-The replacement schedule's broken horse relationships were also repaired on
-2026-09-20. SAM and Herald now resolve every horse from the Odoo
-`x_studio_horse` relationship rather than trusting a stale text label. The live
-schedule has no duplicate horse links, contains every active Training-status
-horse exactly once, has no relationship/name mismatches, and retained every
-weekday code unchanged. Details and rollback location are recorded in
+An attempted relationship/view repair later on 2026-09-20 exposed historical
+hidden horse links and extra rows that were not part of Shawn's visible morning
+schedule. William reported the regression immediately. Vega rolled back every
+relationship, label, sequence, view, SAM-reader, and Herald-reader change to the
+private pre-repair snapshot; the one newly created row was detached. Weekday
+codes were never changed. Odoo again shows the pre-repair 60-row schedule, SAM
+refreshed successfully with 60 rows, and both services are healthy. The root
+Studio design defect remains diagnosed but intentionally unfixed pending a
+roster-authoritative cleanup: the visible “Horse” column is legacy text while
+the real horse relationship is hidden. The automatic population rule remains
+disabled and AI/SAM schedule writes remain blocked. Details:
 `projects/SAM_TRAINING_SCHEDULE.md`.
-
-The first repaired Studio view briefly showed both the relationship and legacy
-label, making rows look doubled; a second validation also found both distinct
-Odoo horses named Cosmo displayed. The label is now hidden on linked horse rows,
-the live Training-status Cosmo owns the schedule row, and the blank duplicate
-row is detached. Final audit: 60 active rows, no duplicate horse IDs or display
-names, and SAM refreshed successfully with 60 rows.
-
-Odoo Studio view 10094 was the source defect: it mislabeled an editable legacy
-text field as Horse and hid the actual horse relationship. The view now shows
-the real **Horse Record** selector and makes the legacy display label explicitly
-read-only. Odoo compiled the repaired view successfully; the automatic horse
-population rule remains disabled.
 
 ## Staff watchlist recovery — 2026-09-17
 
