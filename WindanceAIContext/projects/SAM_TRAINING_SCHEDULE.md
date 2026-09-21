@@ -256,8 +256,9 @@ values were verified unchanged.
 Server action 1983 is now **Sync Horse Roster**. It runs only when a human clicks
 it, reconciles Horse rows to the rule above, appends newly eligible horses, and
 never touches Tasks, Separators, or weekday fields. Shawn retains manual drag
-ordering. Automation 24 remains disabled. A phone-friendly **Save** button next
-to **Add Separator** uses action 2187 to save and reload the form. Odoo compiled
+ordering. Automation 24 remains disabled. A phone-friendly **Save** button uses
+action 2187 to save and reload the form. The header order is **Save — Add
+Separator — Sync Horse Roster** so the frequent phone action is first. Odoo compiled
 the form, and SAM refreshed successfully with 33 rows.
 
 Rollback snapshots:
