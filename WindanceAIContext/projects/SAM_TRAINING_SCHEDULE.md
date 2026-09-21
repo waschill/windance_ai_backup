@@ -241,3 +241,27 @@ button remains valid: it deliberately creates an unlinked separator row. The
 automatic `Populate Horese` automation remains disabled. View rollback:
 `/Users/herald/backups/training-schedule-relationship-repair-20260920/odoo-view-10094-before-20260920-231624.json`.
 
+## Authoritative roster and explicit Task rows — 2026-09-21
+
+A horse belongs on Work Schedule 22 only when active, with Status **Training**,
+and Stage **Windance Owned** or **Training**. The live set contained 25 eligible
+horses, including Mazy. Studio view 10094 now exposes **Type**, **Horse Record**,
+and **Task / Display Name**. Row types are Horse, Task, and Separator.
+
+Feed AM/PM and five lesson/time rows are Tasks with no horse relationship. The
+repair retained 25 Horse rows, seven Tasks, and one Separator. Stale, duplicate,
+and ineligible legacy rows were detached, not deleted. All retained weekday
+values were verified unchanged.
+
+Server action 1983 is now **Sync Horse Roster**. It runs only when a human clicks
+it, reconciles Horse rows to the rule above, appends newly eligible horses, and
+never touches Tasks, Separators, or weekday fields. Shawn retains manual drag
+ordering. Automation 24 remains disabled. A phone-friendly **Save** button next
+to **Add Separator** uses action 2187 to save and reload the form. Odoo compiled
+the form, and SAM refreshed successfully with 33 rows.
+
+Rollback snapshots:
+
+- `/Users/herald/backups/training-schedule-roster-design-20260921/before-20260921-121021.json`
+- `/Users/herald/backups/training-schedule-roster-design-20260921/view-before-save-button-20260921-121237.json`
+

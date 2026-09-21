@@ -1,6 +1,6 @@
 # Current Operating State
 
-Last curated: 2026-09-07. Confirm live before acting.
+Last curated: 2026-09-21. Confirm live before acting.
 
 ## Odoo Training Schedule is human-write-only — 2026-09-20
 
@@ -21,6 +21,17 @@ complete directly and retain the scheduled code, horse/display row, trainer,
 and timestamp without category, stars, or notes. New detailed submissions are
 blocked with HTTP 410; existing historical details remain preserved. The kiosk
 was reloaded and SAM is healthy.
+
+On 2026-09-21 the schedule structure was repaired using William's authoritative
+roster rule: active + Status `Training` + Stage in `Windance Owned`/`Training`.
+Work Schedule 22 now has 25 Horse rows, seven explicit Task rows (including Feed
+AM/PM), and one Separator. Tasks have no horse relationship and roster sync
+cannot alter them. Studio exposes Type, Horse Record, Task/Display Name, and drag
+ordering. **Sync Horse Roster** is human-triggered and never changes weekday
+fields; automation 24 remains disabled. A phone-friendly **Save** button is next
+to Add Separator. Zero retained weekday values changed, Odoo compiled the form,
+and SAM refreshed successfully with 33 rows. Details and rollback paths:
+`projects/SAM_TRAINING_SCHEDULE.md`.
 
 An attempted relationship/view repair later on 2026-09-20 exposed historical
 hidden horse links and extra rows that were not part of Shawn's visible morning
