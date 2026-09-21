@@ -259,7 +259,10 @@ never touches Tasks, Separators, or weekday fields. Shawn retains manual drag
 ordering. Automation 24 remains disabled. A phone-friendly **Save** button uses
 action 2187 to save and reload the form. The header order is **Save — Add
 Separator — Sync Horse Roster** so the frequent phone action is first. Odoo compiled
-the form, and SAM refreshed successfully with 33 rows.
+the form, and SAM refreshed successfully with 33 rows. For Shawn's day-to-day
+view, the technical Type and Horse Record columns are hidden and the single
+visible label column is **Horse / Name**; the hidden fields remain authoritative
+for synchronization and SAM.
 
 Rollback snapshots:
 
