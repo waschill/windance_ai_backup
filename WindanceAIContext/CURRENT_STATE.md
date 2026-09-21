@@ -16,6 +16,12 @@ maintenance identity exists yet; exceptional root-schedule repair remains
 blocked pending William's explicit authorization. Details and recovery:
 `projects/SAM_TRAINING_SCHEDULE.md`.
 
+SAM's training-detail popup is suspended as of 2026-09-20. New Training taps
+complete directly and retain the scheduled code, horse/display row, trainer,
+and timestamp without category, stars, or notes. New detailed submissions are
+blocked with HTTP 410; existing historical details remain preserved. The kiosk
+was reloaded and SAM is healthy.
+
 An attempted relationship/view repair later on 2026-09-20 exposed historical
 hidden horse links and extra rows that were not part of Shawn's visible morning
 schedule. William reported the regression immediately. Vega rolled back every

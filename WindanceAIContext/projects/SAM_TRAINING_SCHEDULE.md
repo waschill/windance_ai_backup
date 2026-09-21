@@ -55,6 +55,18 @@ SAM SQLite table `training_completion_details` and are exposed with committed
 history through `/api/history`; this feature does not post to Odoo or decrement
 Odoo lesson bundles.
 
+### Popup suspended — 2026-09-20
+
+At William's request, the category/subcategory, stars, and notes popup is
+suspended. New Training taps use SAM's ordinary one-tap `/api/cell` path and
+record only the scheduled code, horse/display row, trainer, and completion
+timestamp. The detailed submission endpoint returns HTTP 410, so a stale or
+external client cannot add new ratings or notes. Existing historical detail
+records remain preserved and readable; none were deleted. The live SAM service
+and kiosk browser were restarted, the page was verified to contain the disabled
+popup branch, and health remained `ok`. Rollback source:
+`/home/williamschilling/services/sam-schedule/backups/sam_schedule.py.before-popup-suspension-20260920-2330`.
+
 ## Vet completion audit — 2026-09-05
 
 Read-only inspection found that the 2026-08-04 Vet commit successfully created
