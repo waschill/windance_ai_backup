@@ -16,6 +16,14 @@ maintenance identity exists yet; exceptional root-schedule repair remains
 blocked pending William's explicit authorization. Details and recovery:
 `projects/SAM_TRAINING_SCHEDULE.md`.
 
+The replacement schedule's broken horse relationships were also repaired on
+2026-09-20. SAM and Herald now resolve every horse from the Odoo
+`x_studio_horse` relationship rather than trusting a stale text label. The live
+schedule has no duplicate horse links, contains every active Training-status
+horse exactly once, has no relationship/name mismatches, and retained every
+weekday code unchanged. Details and rollback location are recorded in
+`projects/SAM_TRAINING_SCHEDULE.md`.
+
 ## Staff watchlist recovery — 2026-09-17
 
 - Fixed shared bridge instruction reversal, same-service search recovery, watchlist metadata verification and Scout/Athena draft boundaries. Fresh staff assignments use the changes automatically.

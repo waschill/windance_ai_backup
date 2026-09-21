@@ -164,3 +164,31 @@ separate Odoo maintenance identity. Exceptional schedule repairs remain blocked
 unless William explicitly authorizes a maintenance operation; do not silently
 use a human identity for them.
 
+## Replacement-schedule relationship repair — 2026-09-20
+
+William authorized a complete relationship repair after Shawn had rebuilt the
+schedule following a failure. The replacement reused legacy named rows whose
+`x_studio_horse` relationships still pointed at different horses, while the old
+population automation appended additional relationship-only rows. SAM then
+compounded the problem by treating the legacy `x_name` label as authoritative
+and resolving a horse by text instead of using `x_studio_horse`.
+
+The live schedule was privately snapshotted and repaired without changing any
+weekday Training code. Named legacy rows for Mazy, Aurora, Frost, and the older
+Cosmo were linked to their actual horse records; Feed AM/PM were detached from
+incorrect horse relationships; displaced blank rows were safely reassigned to
+Arti, Hondo, and Ruby; and one new correctly linked Kaleesi row was added. All
+linked row labels were normalized to the horse's barn name.
+
+Post-repair verification found 61 active rows, 54 horse-linked rows, no duplicate
+horse relationships, no missing active Training-status horses, no linked-name
+mismatches, and zero weekday-code changes. SAM now treats `x_studio_horse` as
+the authoritative identity and uses the legacy text label only for intentionally
+unlinked rows such as Feed or lessons. Herald's deterministic training report
+uses the same relationship-first rule. SAM refreshed successfully with all 61
+rows and both services remained healthy. The guarded schedule-write path still
+returns HTTP 403, and the old Odoo population automation remains disabled.
+
+Private rollback snapshot:
+`/Users/herald/backups/training-schedule-relationship-repair-20260920/before-20260920-230946.json`.
+
