@@ -4,6 +4,14 @@ Last curated: 2026-08-29.
 
 This is a revalidation list, not a claim that work is active.
 
+## Training customer form revalidation — 2026-09-22
+
+Form submission, automated contract creation and delivery are verified. William
+requested the one-word name Intake and publication; `/intake` is publicly verified.
+The test agreement was canceled without signing. Future SaaS
+upgrades should revalidate Sign's alias checks and wizard/link behavior. See
+`projects/ODOO_TRAINING_CONTRACT_AUTOMATION_2026-09-22.md`.
+
 ## Herald execution repair follow-up — 2026-09-22
 
 The initial repair is deployed and verified, including shared YouTube controls,

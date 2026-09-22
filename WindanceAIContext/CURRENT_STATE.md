@@ -2,6 +2,19 @@
 
 Last curated: 2026-09-22. Confirm live before acting.
 
+## Customer form to training agreement — 2026-09-22
+
+Odoo automation 32/action 2183 is repaired and delivery-tested. The owner's
+personal email conflicted with all three reserved system-mail addresses on
+alias-domain 6; distinct plus-tagged system addresses now reach the same mailbox,
+while his normal sending/signing address remains unchanged. The action creates
+one linked contract per new Training Customer contact, customer first and owner
+second. A real browser form submission and Gmail arrival were verified; the
+unsigned test was canceled and its contact archived. At William's request the
+page was renamed **Intake**, published at `https://www.windance.farm/intake`, and
+verified in a signed-out browser. Details and recovery:
+`projects/ODOO_TRAINING_CONTRACT_AUTOMATION_2026-09-22.md`.
+
 ## Herald execution receipts and quiet gateway — 2026-09-22
 
 Herald now has bounded YouTube preference tools consumed by SAL and Scout, real

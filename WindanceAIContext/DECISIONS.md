@@ -1,5 +1,15 @@
 # Durable Decisions
 
+## Odoo signing identity and system aliases — 2026-09-22
+
+William wants to use his existing address for sending and countersigning training
+agreements. Separate Odoo's reserved system-mail aliases from that address rather
+than requiring another personal mailbox. The repaired form automation uses the
+native Sign wizard and customer-first signing; no agent signs contracts.
+William explicitly chose the one-word page name **Intake** and authorized
+publication at `/intake`; the public page is verified.
+See `projects/ODOO_TRAINING_CONTRACT_AUTOMATION_2026-09-22.md`.
+
 ## Verified execution and quiet gateway — 2026-09-22
 
 William authorized Herald to execute routine settings through real tools and
