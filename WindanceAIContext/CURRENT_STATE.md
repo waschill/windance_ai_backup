@@ -1,6 +1,16 @@
 # Current Operating State
 
-Last curated: 2026-09-21. Confirm live before acting.
+Last curated: 2026-09-22. Confirm live before acting.
+
+## Permanent YouTube creator exclusion — 2026-09-22
+
+William excludes Julian Goldie from video suggestions. SAL's scheduled YouTube
+generator now filters his creator-name variants from every section; Scout's AI
+watchlist collector and instructions apply the preference without requiring it
+in each request. Five regression tests passed, including 83 historical Goldie
+entries; a fresh print-only preview contained no Goldie video. Herald's earlier
+acknowledgment had not changed the scheduled producer. No report was resent.
+Details and recovery: `projects/YOUTUBE_CREATOR_EXCLUSION_2026-09-22.md`.
 
 ## Odoo Training Schedule is human-write-only — 2026-09-20
 

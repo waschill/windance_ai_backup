@@ -35,6 +35,11 @@ William and Shawn can use case-insensitive `ALD` as the short form of `Always De
 
 ## Weekly reports
 
+The YouTube reports permanently exclude Julian Goldie, including his SEO, AI and
+Agency channel-name variants, as of 2026-09-22. Enforcement is in SAL's scheduled
+generator and Scout's AI watchlist collector; see
+`projects/YOUTUBE_CREATOR_EXCLUSION_2026-09-22.md` for verification and limits.
+
 | Time | Report | Recipient / destination |
 |---|---|---|
 | Tuesday 10:30 AM | Weekly Windance software and AI-stack review | SAL schedules exact-ID local Hermes profile work; Telegram receives only each feature, concise named-agent arguments, and team consensus after Athena's QA gate |
