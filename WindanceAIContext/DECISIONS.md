@@ -1,5 +1,16 @@
 # Durable Decisions
 
+## Verified execution and quiet gateway — 2026-09-22
+
+William authorized Herald to execute routine settings through real tools and
+delegate implementation to Forge with evidence and follow-through. Conversation
+acknowledgments are not execution receipts. Initial bounded controls cover the
+YouTube report and Scout exclusions; expand through verified adapters. Model
+selection was not changed. William also requested an end to repeated Telegram
+gateway alerts: mute routine restart/startup/shutdown notices, keeping normal task
+results. Applied verification and recovery are in
+`projects/HERALD_EXECUTION_RELIABILITY_2026-09-22.md`.
+
 ## Claude private reviewer and Forge operational handoff — 2026-09-17
 
 - Vega means William's Codex collaborator and retains final implementation decisions. The former Hermes Vega profile is now Claude, a direct-access advisory reviewer reporting to Vega, using verified `anthropic/claude-opus-5` through OpenRouter with no fallback.

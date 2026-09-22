@@ -2,6 +2,11 @@
 
 Status: APPLIED AND VERIFIED on SAL and HERALD.
 
+Later September 22 implementation update: the standing exclusion is now a shared
+validated preference read by both producers, editable through Herald's verified
+report-control tool. The original narrow repair below is retained as history;
+current behavior and recovery are in `HERALD_EXECUTION_RELIABILITY_2026-09-22.md`.
+
 William permanently excludes Julian Goldie from suggested YouTube videos. This
 includes the SEO, AI and Agency channel-name variants. He should not need to
 repeat the preference when requesting another report.

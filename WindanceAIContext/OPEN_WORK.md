@@ -4,6 +4,16 @@ Last curated: 2026-08-29.
 
 This is a revalidation list, not a claim that work is active.
 
+## Herald execution repair follow-up — 2026-09-22
+
+The initial repair is deployed and verified, including shared YouTube controls,
+real staff tools, Forge evidence checks and quiet Telegram gateway notices. See
+`projects/HERALD_EXECUTION_RELIABILITY_2026-09-22.md`. After Hermes upgrades,
+revalidate profile tool exposure, native output-hook registration, worker-session
+receipt formats and muted notice flags. Other report families require bounded
+adapters before Herald can claim direct settings support. These are extension
+and revalidation items, not unfinished claims about the deployed YouTube fix.
+
 - Confirm the current Jim counselor-model deployment. A SoulChat-family download/build was in progress in the originating Codex chat and must not be treated as deployed without live evidence.
 - Confirm all assistant profiles use the intended local-first model policy and fallbacks.
 - Revalidate Gmail/Calendar approval parsing and scheduled briefing delivery after any gateway restart.

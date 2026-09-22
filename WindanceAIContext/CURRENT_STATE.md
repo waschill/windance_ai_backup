@@ -2,6 +2,25 @@
 
 Last curated: 2026-09-22. Confirm live before acting.
 
+## Herald execution receipts and quiet gateway — 2026-09-22
+
+Herald now has bounded YouTube preference tools consumed by SAL and Scout, real
+staff assignment/status tools, Forge execution-evidence validation, a native
+final-response receipt guard, and follow-through for newly dispatched workers.
+27 checks and live Harness/GPT/Forge canaries passed. Julian Goldie remains
+excluded and original report times/content limits are preserved. The failed
+iMessage acknowledgments used Gemma; Hermes Herald uses GPT-5.6 Terra. No model
+was changed. Direct settings currently cover YouTube, not every report type.
+
+The shared Hermes gateway owns the old Vega Telegram bot; Claude/Forge separate
+listeners are disabled. William requested no repeated gateway alerts. Supported
+Telegram restart/startup/shutdown notifications are now muted in default and
+Herald configurations; actual task results remain enabled. Two suppression tests
+passed and both Telegram adapters reconnected. Live staff-result delivery uses
+the configured William iMessage report route, despite a legacy Telegram wrapper
+name. See `projects/HERALD_EXECUTION_RELIABILITY_2026-09-22.md` for evidence,
+usage, limitations and recovery.
+
 ## Permanent YouTube creator exclusion — 2026-09-22
 
 William excludes Julian Goldie from video suggestions. SAL's scheduled YouTube

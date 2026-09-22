@@ -2,6 +2,13 @@
 
 Live schedule reconciled and delivery-tested 2026-09-05. Times are Mountain Time. Verify live scheduler state after future maintenance.
 
+September 22 YouTube update: SAL's loaded Mon–Thu 08:00/12:00/16:00 schedule was
+verified and retained. Herald can now update this known schedule through a bounded
+adapter with loaded-state readback. Shared creator/section/limit settings are
+verified by SAL and Scout. See `projects/HERALD_EXECUTION_RELIABILITY_2026-09-22.md`.
+Routine Hermes Telegram restart notices are muted at William's request; this is
+separate from report scheduling and task-result delivery.
+
 ## Daily delivered reports
 
 | Time | Report | Recipient | Delivery behavior |
