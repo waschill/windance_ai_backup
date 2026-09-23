@@ -151,3 +151,12 @@ verify readback. Preserve task/action history and new ledger tables; do not repl
 live databases or replay old tasks. Retain the standing Goldie exclusion unless
 William explicitly changes it. Restoring restart notices would reverse his
 current notification preference and should not be done incidentally.
+
+
+## Sept23 scheduler regression correction
+
+The earlier preview used an explicit Python invocation and missed a CRLF
+shebang introduced by this deployment. SAL scheduled execution consequently
+failed with exit 127. The source is now LF and direct executable preview passed.
+See `YOUTUBE_SCHEDULER_ENTRYPOINT_FIX_2026-09-23.md` for evidence and the remaining
+normal scheduled-delivery verification limit.

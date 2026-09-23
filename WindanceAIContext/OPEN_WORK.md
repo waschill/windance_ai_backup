@@ -1,5 +1,9 @@
 # Open Work and Revalidation List
 
+## YouTube scheduled delivery revalidation — 2026-09-23
+
+The CRLF startup regression is corrected and direct executable preview passed. Confirm a subsequent normal scheduled delivery; as of 15:31 MDT the next slot is 16:00 Sept23. No resend or future monitor was started. See `projects/YOUTUBE_SCHEDULER_ENTRYPOINT_FIX_2026-09-23.md`.
+
 Last curated: 2026-08-29.
 
 This is a revalidation list, not a claim that work is active.

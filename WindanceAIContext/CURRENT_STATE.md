@@ -1,5 +1,9 @@
 # Current Operating State
 
+## YouTube scheduler correction — 2026-09-23
+
+Vega’s Sept22 deployment introduced CRLF into SAL’s directly executed report script, preventing scheduled launch (exit 127). Corrected to LF; the actual executable now generates a print-only preview successfully with Goldie excluded. Next scheduled delivery remains unverified. See `projects/YOUTUBE_SCHEDULER_ENTRYPOINT_FIX_2026-09-23.md`.
+
 Last curated: 2026-09-22. Confirm live before acting.
 
 ## Customer form to training agreement — 2026-09-22
