@@ -18,6 +18,14 @@ Inventory alone does not establish SOP compatibility. The script now states this
 
 Recovery: `/Users/herald/services/maintenance-recovery-20260924/windance_software_maintenance.before.py`; staged repaired script and regression tests are beside it. The nightly schedule is unchanged. No software upgrade was executed by the repair validation.
 
+Live repaired audit completed at 13:50 Mountain with no check failures. It correctly reports pending package updates and explicitly limits model/container currency claims. This audit did not run upgrades.
+
+## Real assignment and completion monitoring
+
+Vega invoked the actual Hermes Herald profile. Herald created SAL Forge task `b103fb1f-e077-45be-90b0-4ad7d0ae0cd0`; Agent Harness confirmed `running`, accepted by the Forge profile at 19:51:17 UTC. This is accepted work, not verified upgrade completion. The connector stored source/channel `hermes-desktop`; the request text includes `william-software-upgrade-20260924`. Identify this task by exact ID, not by source filtering alone.
+
+The thread heartbeat `windance-software-upgrade-follow-through` is active every 15 minutes. It checks durable results, resolves authorized blockers, asks Herald to assign one host at a time (AL, SAM, HAL, HERALD after SAL), verifies outcomes and publication, and sends the final result before pausing itself. The SAL task has permission for one William-only iMessage delivery canary; its established result route may also deliver the task outcome. Do not replay old pending staff jobs or describe a setup receipt as completed upgrades.
+
 Original backup script: `Invoke-WindancePreUpgradeBackup.before.ps1` in the recovery directory. Reverting that script restores the previous behavior; restore archived directories only intentionally, because doing so also restores the dirty-repository blocker.
 
 ## Upgrade boundaries and follow-through
