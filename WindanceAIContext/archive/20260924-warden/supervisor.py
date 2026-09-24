@@ -19,7 +19,7 @@ REMOTE = {'HERALD': '/Users/herald/services/windance-supervisor/remote_ops.py',
           'SAL': '/Users/zuzu/services/windance-supervisor/remote_ops.py'}
 NAMES = {'harness': 'Herald Harness', 'dashboard': 'Herald dashboard', 'gateway': 'Hermes gateway',
          'runner': 'staff follow-through', 'staff_progress': 'staff progress', 'staff_delivery': 'staff result delivery',
-         'outbox': 'iMessage outbox', 'youtube_scheduler': 'YouTube scheduler', 'youtube_delivery': 'YouTube delivery',
+         'outbox': 'iMessage outbox', 'youtube_scheduler': 'YouTube scheduler', 'youtube_report_completed': 'YouTube report completion',
          'connection': 'host connection', 'probe': 'monitoring probe'}
 ACTION = {'harness': 'restart_harness', 'dashboard': 'restart_dashboard', 'gateway': 'start_gateway',
           'runner': 'reconcile_workers', 'staff_progress': 'reconcile_workers', 'staff_delivery': 'reconcile_workers'}
@@ -102,6 +102,7 @@ class Supervisor:
                 self.c.execute('INSERT INTO incidents(id,key,status,opened,updated) VALUES(?,?,?,?,?)',
                                (iid,key,'escalated' if recent else 'open',t,t))
             self.event(iid,'detected',{'key':key,'failures':failures,'evidence':snapshot})
+            self.notice(iid,'detected',f'Warden: {key} failed three checks. Incident {iid}. Any repair requires Codex and Claude approval; see the Work board for progress.')
             incident = self.c.execute('SELECT * FROM incidents WHERE id=?',(iid,)).fetchone()
         if incident['status'] == 'open' and not incident['attempts']:
             host, check = key.split(':',1)
@@ -110,48 +111,81 @@ class Supervisor:
             if check in ('runner','staff_progress','staff_delivery') and not snapshot.get('checks',{}).get('harness'):
                 action = None
             if action:
-                # Reserve a single review workflow before contacting either reviewer.
                 with self.c:
-                    self.c.execute("UPDATE incidents SET status='reviewing',updated=? WHERE id=?",(t,incident['id']))
-                try:
-                    day=dt.datetime.now(dt.timezone.utc).date().isoformat()
-                    b=self.c.execute('SELECT diagnoses FROM budgets WHERE day=?',(day,)).fetchone()
-                    if b and b[0]>=2: raise RuntimeError('Daily review/diagnosis limit reached')
-                    with self.c:
-                        self.c.execute('INSERT INTO budgets VALUES(?,1) ON CONFLICT(day) DO UPDATE SET diagnoses=diagnoses+1',(day,))
-                    proposal=self.transport(host,['prepare'],{'action':action,'incident':incident['id'],'key':key},timeout=45)
-                    sha=review_gate.digest(proposal)
-                    self.event(incident['id'],'proposal',{'proposal_sha256':sha,'proposal':proposal})
-                    codex=review_gate.codex_review(self.root,proposal)
-                    self.event(incident['id'],'codex_review',codex)
-                    if codex['decision']!='approve': raise RuntimeError('Codex requires William approval: '+codex['reason'])
-                    claude=self.transport(host,['review'],{'proposal_sha256':sha,'codex':codex},timeout=300)
-                    review_gate.validate_verdict(claude,proposal,'Claude')
-                    review_gate.save(self.root/'reviews'/sha/'claude.json',claude)
-                    self.event(incident['id'],'claude_review',claude)
-                    if claude['decision']!='approve': raise RuntimeError('Claude requires William approval: '+claude['reason'])
-                    if not proposal['created']<=time.time()<proposal['expires']: raise RuntimeError('Approval expired')
-                    # Claim durably BEFORE mutation, including when SSH result is lost.
-                    with self.c:
-                        self.c.execute("UPDATE incidents SET attempts=1,status='verifying',updated=? WHERE id=?",(self.clock(),incident['id']))
-                    self.event(incident['id'],'unanimous_authorization',{'proposal_sha256':sha})
-                    receipt = self.transport(host,['recover',sha],timeout=45)
-                except Exception as exc:
-                    # Review or execution uncertainty always holds; no automated retry/override.
-                    self.hold(incident['id'],key,type(exc).__name__)
-                    return
-                self.event(incident['id'],'recovery_receipt',receipt)
+                    self.c.execute("UPDATE incidents SET status='pending_review',updated=? WHERE id=?",(t,incident['id']))
+                self.event(incident['id'],'review_queued',{'action':action})
                 return
             with self.c:
                 self.c.execute("UPDATE incidents SET status='escalated',updated=? WHERE id=?",(t,incident['id']))
-        elif incident['status'] == 'verifying' and t-incident['updated'] >= 300:
+
+    def review_cycle(self):
+        # Separate launchd worker/lock; model latency never blocks health polling.
+        if (self.root/'PAUSED').exists(): return
+        for r in self.c.execute("SELECT id,key FROM incidents WHERE status='reviewing'").fetchall():
+            self.hold(r['id'],r['key'],'Interrupted review')
+        row=self.c.execute("SELECT * FROM incidents WHERE status='pending_review' ORDER BY opened LIMIT 1").fetchone()
+        if row:
             with self.c:
-                self.c.execute("UPDATE incidents SET status='escalated',updated=? WHERE id=?",(t,incident['id']))
+                claimed=self.c.execute("UPDATE incidents SET status='reviewing',updated=? WHERE id=? AND status='pending_review'",(self.clock(),row['id'])).rowcount
+            if claimed: self.review_recovery(row)
+        else:
+            try: snapshots=json.loads((self.root/'status.json').read_text())['observations']
+            except (OSError,ValueError,KeyError): snapshots={}
+            self.escalate(snapshots)
+
+    def review_recovery(self,incident):
+        host,check=incident['key'].split(':',1)
+        try:
+            action=ACTION[check]
+            if host!='HERALD': raise ValueError('Unsupported host')
+            day=dt.datetime.now(dt.timezone.utc).date().isoformat()
+            b=self.c.execute('SELECT diagnoses FROM budgets WHERE day=?',(day,)).fetchone()
+            if b and b[0]>=2: raise RuntimeError('Daily review/diagnosis limit reached')
+            with self.c:
+                self.c.execute('INSERT INTO budgets VALUES(?,1) ON CONFLICT(day) DO UPDATE SET diagnoses=diagnoses+1',(day,))
+            proposal=self.transport(host,['prepare'],{'action':action,'incident':incident['id'],'key':incident['key']},timeout=45)
+            sha=review_gate.digest(proposal)
+            self.event(incident['id'],'proposal',{'proposal_sha256':sha,'proposal':proposal})
+            codex=review_gate.codex_review(self.root,proposal)
+            self.event(incident['id'],'codex_review',codex)
+            if codex['decision']!='approve': raise RuntimeError('Codex withheld approval: '+codex['reason'][:300])
+            claude=self.transport(host,['review'],{'proposal_sha256':sha,'codex':codex},timeout=300)
+            review_gate.validate_verdict(claude,proposal,'Claude')
+            review_gate.save(self.root/'reviews'/sha/'claude.json',claude)
+            self.event(incident['id'],'claude_review',claude)
+            if claude['decision']!='approve': raise RuntimeError('Claude withheld approval: '+claude['reason'][:300])
+            if not proposal['created']<=time.time()<proposal['expires']: raise RuntimeError('Approval expired')
+            if (self.root/'PAUSED').exists(): raise RuntimeError('Maintenance pause requested')
+            # CAS prevents executing an incident that polling resolved during review.
+            with self.c:
+                claimed=self.c.execute("UPDATE incidents SET attempts=1,status='verifying',updated=? WHERE id=? AND status='reviewing'",(self.clock(),incident['id'])).rowcount
+            if not claimed:
+                self.event(incident['id'],'review_cancelled',{'reason':'Incident state changed while reviewing'})
+                return
+            self.event(incident['id'],'unanimous_authorization',{'proposal_sha256':sha})
+            receipt=self.transport(host,['recover',sha],timeout=45)
+            self.event(incident['id'],'recovery_receipt',receipt)
+        except Exception as exc:
+            self.hold(incident['id'],incident['key'],type(exc).__name__+': '+str(exc)[:350])
+
+    def supervise_reviews(self):
+        # Polling owns these deadlines so a broken review worker cannot suppress alerts.
+        for r in self.c.execute("SELECT id,key,status,updated FROM incidents WHERE status IN ('verifying','pending_review','reviewing')").fetchall():
+            elapsed=self.clock()-r['updated']
+            if r['status']=='verifying' and elapsed>=300:
+                with self.c:
+                    changed=self.c.execute("UPDATE incidents SET status='escalated',updated=? WHERE id=? AND status='verifying'",(self.clock(),r['id'])).rowcount
+                if changed:
+                    self.event(r['id'],'recovery_unverified',{'deadline_seconds':300})
+                    self.notice(r['id'],'attention',f'Warden: {r["key"]} has not recovered after the reviewed attempt. No automatic retry. Incident {r["id"]}; your direction is needed. See the Work board.')
+            elif (r['status']=='pending_review' and elapsed>=600) or (r['status']=='reviewing' and elapsed>=900):
+                self.hold(r['id'],r['key'],'Review worker deadline exceeded')
 
     def hold(self,iid,key,reason):
         summary='Change held for William: unanimous current approval or execution confirmation unavailable ('+reason+').'
         with self.c:
-            self.c.execute("UPDATE incidents SET status='held',summary=?,updated=? WHERE id=?",(summary,self.clock(),iid))
+            changed=self.c.execute("UPDATE incidents SET status='held',summary=?,updated=? WHERE id=? AND status!='resolved'",(summary,self.clock(),iid)).rowcount
+        if not changed: return
         self.event(iid,'held_for_william',{'reason':reason})
         self.notice(iid,'approval',f'Warden: {key} needs your approval. {summary} Incident {iid}. The Work board has the proposal and review results. No automatic retry will occur.')
 
@@ -227,7 +261,10 @@ class Supervisor:
             summary = 'Automatic recovery did not establish health; Codex diagnosis unavailable ('+type(exc).__name__+').'
             self.event(row['id'],'diagnosis_failed',{'error_type':type(exc).__name__})
         with self.c:
-            self.c.execute('UPDATE incidents SET summary=?,updated=? WHERE id=?',(summary,t,row['id']))
+            changed=self.c.execute("UPDATE incidents SET summary=?,updated=? WHERE id=? AND status='escalated'",(summary,t,row['id'])).rowcount
+        if not changed:
+            self.event(row['id'],'diagnosis_superseded',{'reason':'Incident state changed during diagnosis'})
+            return
         self.notice(row['id'],'attention',f"Warden: {row['key']} needs attention. {summary[:1400]} Incident {row['id']}.")
 
     def flush_notices(self):
@@ -273,13 +310,10 @@ class Supervisor:
                     snapshots[host] = {'checks':{'connection':False},'error_type':type(exc).__name__}
         paused = (self.root/'PAUSED').exists()
         if not paused:
-            # An interrupted review never silently resumes or reuses partial consent.
-            for r in self.c.execute("SELECT id,key FROM incidents WHERE status='reviewing'").fetchall():
-                self.hold(r['id'],r['key'],'Interrupted review')
             for host,value in snapshots.items():
                 for check,ok in value['checks'].items():
                     self.observe(host+':'+check,ok is True,value)
-            self.escalate(snapshots)
+            self.supervise_reviews()
             self.flush_notices()
         else:
             # Starting fresh prevents maintenance failures contributing to recovery thresholds.
@@ -287,8 +321,8 @@ class Supervisor:
                 self.c.execute('DELETE FROM checks')
         return self.render(snapshots,paused)
 
-def lock(root):
-    f = (root/'cycle.lock').open('a+b')
+def lock(root,name='cycle.lock'):
+    f = (root/name).open('a+b')
     f.seek(0)
     if os.name == 'nt':
         import msvcrt
@@ -303,18 +337,29 @@ def lock(root):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('command',choices=['once','status','pause','resume','diagnostic-canary','notify-test'])
+    p.add_argument('command',choices=['once','review-once','status','pause','resume','diagnostic-canary','notify-test'])
     a = p.parse_args()
     if a.command in ('pause','resume'):
         if a.command == 'pause':
             (ROOT/'PAUSED').write_text(now())
+            # A completed pause means no repair worker remains in flight.
+            deadline=time.monotonic()+600
+            while True:
+                try:
+                    review_handle=lock(ROOT,'review.lock')
+                    review_handle.close()
+                    break
+                except (OSError,IOError):
+                    if time.monotonic()>=deadline:
+                        raise SystemExit('Pause requested, but review still in flight; do not begin maintenance yet.')
+                    time.sleep(1)
         else:
             (ROOT/'PAUSED').unlink(missing_ok=True)
         print(a.command); return
     if a.command == 'status':
         print((ROOT/'status.json').read_text()); return
     try:
-        handle = lock(ROOT)
+        handle = lock(ROOT,'review.lock' if a.command=='review-once' else 'cycle.lock')
     except (OSError,IOError):
         print('Another supervisor cycle owns the lock'); return
     s = Supervisor()
@@ -322,6 +367,9 @@ def main():
         if a.command == 'once':
             v = s.cycle()
             print(json.dumps({'at':v['at'],'paused':v['paused'],'incidents':len(v['incidents'])}))
+        elif a.command == 'review-once':
+            s.review_cycle()
+            print(json.dumps({'at':now(),'review_cycle':'finished'}))
         elif a.command == 'notify-test':
             s.notice('installation','verified','Warden installation test: this is the independent SAL notification route. No outage occurred. Future routine recoveries and problems needing your attention will use this route.')
             s.flush_notices()

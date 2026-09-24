@@ -1,0 +1,1 @@
+compileall exit_code=0; all staged Python files compiled successfully

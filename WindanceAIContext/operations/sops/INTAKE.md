@@ -13,3 +13,5 @@ SOP-2026-001 was submitted to establish a repeatable, searchable procedure for S
 Vega reviewed Forge's PASS: the actual publisher runs Git on HAL and copies the mirror to Herald. Forge's prose calling it a HERALD remote repository was inaccurate; the source procedure did not contain that error. The source procedure remains unchanged. Review acceptance certifies this documentation procedure only, not untested SAM/deployment operations.
 
 Final Archivist review b11f91d8-6875-4521-90b3-5bb13f12f767 explicitly returned PASS but began with an introductory sentence, so the runner classified it blocked. Vega verified the full review, preserved it verbatim in the completion record and reconciled only the status to completed. The actual SOP procedure was unchanged. Both named acceptance receipts now exist.
+
+| SOP-2026-004 | 2026-09-24 | Vega | SOP-2026-004.md | ef74c165-9721-4040-87d2-4e721aab9a82 (initial only) | 0e178899-811b-4628-80ab-beddc704af92 (initial only) | Needs evidence; final consensus-guide acceptance pending |

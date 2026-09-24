@@ -9,3 +9,5 @@ SOP-2026-001 has both documentation acceptance receipts; other migrations remain
 | SOP-2026-003 | Deploy and verify a code change | Forge | Needs evidence / proposed migration | [Current policy](../../policies/CLAUDE_MANDATORY_REVIEW.md) |
 
 Prioritize the two migrations above. Preserve the current Claude suspension; do not copy historical mandatory-review language as an active gate. Reconcile known stale inventory claims against live state before vetting.
+
+| SOP-2026-004 | Operate Warden with unanimous repair approval | Vega | Needs evidence / revised gate under review | [Procedure](SOP-2026-004.md) |

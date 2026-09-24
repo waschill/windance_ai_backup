@@ -43,7 +43,7 @@ def launch(label):
             'last_exit': int(code[1]) if code else 0}
 
 def http(path, payload=None):
-    req = urllib.request.Request('http://127.0.0.1:8791' + path,
+    req = urllib.request.Request('http://localhost:8791' + path,
         data=None if payload is None else json.dumps(payload).encode(),
         headers={'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=15 if payload is None else 220) as r:
@@ -69,7 +69,7 @@ def probe():
         except Exception:
             checks['harness'] = False
         try:
-            with urllib.request.urlopen('http://127.0.0.1:9120/', timeout=8) as r:
+            with urllib.request.urlopen('http://localhost:9120/', timeout=8) as r:
                 checks['dashboard'] = r.status == 200
         except urllib.error.HTTPError as exc:
             # The dashboard authentication boundary may return 401/403 to a signed-out probe.
@@ -119,7 +119,7 @@ def probe():
                 when = day.replace(hour=slot['Hour'], minute=slot.get('Minute', 0), second=0, microsecond=0)
                 if when <= now-dt.timedelta(minutes=30) and when.timestamp() >= dt.datetime.fromisoformat(activation).timestamp():
                     due.append(when)
-        checks['youtube_delivery'] = True
+        checks['youtube_report_completed'] = True
         if due:
             last_due = max(due)
             receipts = []
@@ -130,7 +130,7 @@ def probe():
                         receipts.append(v)
                 except (ValueError, KeyError):
                     pass
-            checks['youtube_delivery'] = any(v.get('status') == 'delivered' for v in receipts)
+            checks['youtube_report_completed'] = any(v.get('status') == 'completed' for v in receipts)
             out['report_due'] = last_due.isoformat()
     return out
 
@@ -175,6 +175,11 @@ def main():
     command = sys.argv[1]
     if command == 'probe':
         value = probe()
+    elif command == 'fingerprints':
+        base=Path(__file__).resolve().parent
+        value={name:hashlib.sha256((base/name).read_bytes()).hexdigest() for name in
+               ('supervisor.py','review_gate.py','remote_ops.py','report_wrapper.py','config.json')}
+        if HERALD: value['claude_review.py']=hashlib.sha256(review_gate.CLAUDE_WRAPPER.read_bytes()).hexdigest()
     elif command == 'prepare' and HERALD:
         payload=json.load(sys.stdin)
         value=review_gate.prepare(sys.modules[__name__],payload['action'],payload['incident'],payload['key'])

@@ -1,0 +1,46 @@
+test_actual_entrypoint_exit_receipt (test_report_wrapper.ReportReceiptTests) ... ok
+test_timeout_kills_group_and_marks_unknown (test_report_wrapper.ReportReceiptTests) ... ok
+test_changed_executor_never_executes (test_review_gate.ConsensusTests) ... ok
+test_changed_process_never_executes (test_review_gate.ConsensusTests) ... ok
+test_changed_reviewer_wrapper_never_executes (test_review_gate.ConsensusTests) ... ok
+test_changed_service_config_never_executes (test_review_gate.ConsensusTests) ... ok
+test_claude_identity_and_tools_checked_against_session (test_review_gate.ConsensusTests) ... ok
+test_different_proposal_never_executes (test_review_gate.ConsensusTests) ... ok
+test_disagreement_never_executes (test_review_gate.ConsensusTests) ... ok
+test_expired_approvals_never_execute (test_review_gate.ConsensusTests) ... ok
+test_healthy_service_is_not_restarted (test_review_gate.ConsensusTests) ... ok
+test_key_action_mismatch_rejected (test_review_gate.ConsensusTests) ... ok
+test_live_launchctl_layout_fixtures (test_review_gate.ConsensusTests) ... ok
+test_missing_review_never_executes (test_review_gate.ConsensusTests) ... ok
+test_running_gateway_is_never_restarted (test_review_gate.ConsensusTests) ... ok
+test_strict_claude_output_and_session_receipt (test_review_gate.ConsensusTests) ... ok
+test_tampered_proposal_rejected (test_review_gate.ConsensusTests) ... ok
+test_timeout_reserves_review_without_retry (test_review_gate.ConsensusTests) ... ok
+test_two_approvals_execute_only_once (test_review_gate.ConsensusTests) ... ok
+test_codex_daily_cap (test_supervisor.RecoveryTests) ... ok
+test_dependency_failure_cannot_restart_workers (test_supervisor.RecoveryTests) ... ok
+test_disagreement_never_executes (test_supervisor.RecoveryTests) ... ok
+test_flapping_circuit_breaker (test_supervisor.RecoveryTests) ... ok
+test_incident_resolved_during_review_is_not_executed (test_supervisor.RecoveryTests) ... ok
+test_interrupted_review_is_held (test_supervisor.RecoveryTests) ... ok
+test_long_gap_resets_evidence (test_supervisor.RecoveryTests) ... ok
+test_no_action_for_unknown_or_report (test_supervisor.RecoveryTests) ... ok
+test_notice_is_idempotent (test_supervisor.RecoveryTests) ... ok
+test_pause_during_review_cannot_execute (test_supervisor.RecoveryTests) ... ok
+test_pause_is_read_only (test_supervisor.RecoveryTests) ... ok
+test_pending_review_deadline_alerts_without_worker (test_supervisor.RecoveryTests) ... ok
+test_polling_only_queues_reviews (test_supervisor.RecoveryTests) ... ok
+test_recovery_can_be_observed_without_claiming_repair (test_supervisor.RecoveryTests) ... ok
+test_resolved_diagnosis_cannot_send_late_attention (test_supervisor.RecoveryTests) ... ok
+test_three_failures_one_repair_two_successes (test_supervisor.RecoveryTests) ... ok
+test_timeout_never_repeats_mutation (test_supervisor.RecoveryTests) ... ok
+test_unsuccessful_recovery_deadline_alerts (test_supervisor.RecoveryTests) ... ok
+test_bare_action_has_no_approval (test_supervisor.RemoteTests) ... ok
+test_notification_path_rejected (test_supervisor.RemoteTests) ... ok
+test_notification_reserved_never_requeues (test_supervisor.RemoteTests) ... ok
+test_unknown_action_fails_closed (test_supervisor.RemoteTests) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.189s
+
+OK

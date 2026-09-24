@@ -31,7 +31,8 @@ def main():
             os.killpg(p.pid, signal.SIGKILL)
             p.wait()
             raise
-        receipt.update(status='delivered' if p.returncode == 0 else 'failed', exit_code=p.returncode)
+        receipt.update(status='completed' if p.returncode == 0 else 'failed', exit_code=p.returncode,
+                       delivery_verified=False)
     except subprocess.TimeoutExpired:
         receipt.update(status='unknown', exit_code=124)
     except Exception as exc:

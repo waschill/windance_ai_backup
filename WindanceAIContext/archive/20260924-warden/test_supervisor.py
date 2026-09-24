@@ -35,6 +35,7 @@ class RecoveryTests(unittest.TestCase):
         self.temp.cleanup()
     def sample(self,ok=False,key='HERALD:harness'):
         self.s.observe(key,ok,self.snapshot)
+        if self.s.c.execute("SELECT count(*) FROM incidents WHERE status='pending_review'").fetchone()[0]: self.s.review_cycle()
         self.t += 120
     def incident(self):
         return dict(self.s.c.execute('SELECT * FROM incidents ORDER BY opened DESC LIMIT 1').fetchone())
@@ -93,9 +94,53 @@ class RecoveryTests(unittest.TestCase):
         for _ in range(3): self.sample()
         with self.s.c: self.s.c.execute("UPDATE incidents SET status='reviewing'")
         self.calls.clear()
-        self.s.cycle()
+        self.s.review_cycle()
         self.assertEqual(self.incident()['status'],'held')
         self.assertFalse(any(c[1][0] in ('prepare','review','recover') for c in self.calls))
+    def test_polling_only_queues_reviews(self):
+        for _ in range(3):
+            self.s.observe('HERALD:harness',False,self.snapshot)
+            self.t+=120
+        self.assertEqual(self.incident()['status'],'pending_review')
+        self.assertEqual(self.calls,[])
+    def test_incident_resolved_during_review_is_not_executed(self):
+        def resolves(root,p):
+            with self.s.c: self.s.c.execute("UPDATE incidents SET status='resolved'")
+            return {'reviewer':'Codex','proposal_sha256':mod.review_gate.digest(p),'decision':'approve','reason':'fixture'}
+        self.review.stop()
+        with patch.object(mod.review_gate,'codex_review',side_effect=resolves):
+            for _ in range(3): self.sample()
+        self.assertEqual(self.incident()['status'],'resolved')
+        self.assertFalse(any(c[1][0]=='recover' for c in self.calls))
+    def test_pause_during_review_cannot_execute(self):
+        def pauses(root,p):
+            (Path(root)/'PAUSED').write_text('maintenance')
+            return {'reviewer':'Codex','proposal_sha256':mod.review_gate.digest(p),'decision':'approve','reason':'fixture'}
+        self.review.stop()
+        with patch.object(mod.review_gate,'codex_review',side_effect=pauses):
+            for _ in range(3): self.sample()
+        self.assertEqual(self.incident()['status'],'held')
+        self.assertFalse(any(c[1][0]=='recover' for c in self.calls))
+    def test_unsuccessful_recovery_deadline_alerts(self):
+        for _ in range(3): self.sample()
+        self.t+=301
+        self.s.supervise_reviews()
+        self.assertEqual(self.incident()['status'],'escalated')
+        self.assertTrue(self.s.c.execute("SELECT count(*) FROM notices WHERE key LIKE '%_attention'").fetchone()[0])
+    def test_pending_review_deadline_alerts_without_worker(self):
+        for _ in range(3):
+            self.s.observe('HERALD:harness',False,self.snapshot); self.t+=120
+        self.t+=601
+        self.s.supervise_reviews()
+        self.assertEqual(self.incident()['status'],'held')
+        self.assertTrue(self.s.c.execute("SELECT count(*) FROM notices WHERE key LIKE '%_approval'").fetchone()[0])
+    def test_resolved_diagnosis_cannot_send_late_attention(self):
+        for _ in range(3): self.sample(key='SAL:youtube_report_completed')
+        def resolves(*args,**kwargs):
+            with self.s.c: self.s.c.execute("UPDATE incidents SET status='resolved'")
+            return {'summary':'fixture','next_step':'none'}
+        with patch.object(self.s,'diagnose',side_effect=resolves): self.s.escalate({})
+        self.assertEqual(self.s.c.execute("SELECT count(*) FROM notices WHERE key LIKE '%_attention'").fetchone()[0],0)
     def test_codex_daily_cap(self):
         for key in ('SAL:youtube_delivery','SAL:outbox','HERALD:connection'):
             for _ in range(3): self.sample(key=key)
