@@ -7,7 +7,22 @@ $ErrorActionPreference = "Stop"
 $repo = "C:\Users\wasch\Documents\Codex\2026-06-19\i-need-you-to-go-through\windance_ai_backup_repo"
 $context = Join-Path $repo "WindanceAIContext"
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
-$snapshot = Join-Path $repo "current-control-plane\$stamp-pre-managed-upgrade"
+$snapshot = Join-Path $env:USERPROFILE "Documents\WindanceMaintenanceRecovery\pending\$stamp-pre-managed-upgrade"
+$publishedSnapshot = Join-Path $repo "current-control-plane\$stamp-pre-managed-upgrade"
+
+function Invoke-InventoryCommand {
+    param([string]$Program, [string[]]$Arguments)
+    # Windows PowerShell maps native stderr to ErrorRecord, including harmless
+    # progress messages. Judge native commands by their exit status instead.
+    $savedPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = 'Continue'
+        $output = & $Program @Arguments 2>&1
+        $nativeExit = $LASTEXITCODE
+    } finally { $ErrorActionPreference = $savedPreference }
+    if ($nativeExit -ne 0) { throw "Inventory command $Program failed (exit $nativeExit); partial snapshot retained outside Git." }
+    $output | ForEach-Object { "$_" }
+}
 
 git -C $repo pull --ff-only
 if ($LASTEXITCODE -ne 0) { throw "Backup repository could not be fast-forwarded." }
@@ -32,32 +47,32 @@ New-Item -ItemType Directory -Force -Path (Join-Path $snapshot "hermes") | Out-N
 Copy-Item (Join-Path $context "inventory\infrastructure-inventory.yaml") $snapshot
 Copy-Item (Join-Path $context "runbooks\WINDANCE_NETWORK_RUNBOOK.md") $snapshot
 
-$hermesState = & ssh HERALD "/Users/herald/.local/bin/hermes --version; cd ~/.hermes/hermes-agent && git status --short --branch && git rev-parse HEAD && git rev-parse origin/main"
+$hermesState = Invoke-InventoryCommand ssh @('HERALD', 'set -e; /Users/herald/.local/bin/hermes --version; cd ~/.hermes/hermes-agent; git status --short --branch; git rev-parse HEAD; git rev-parse origin/main')
 $hermesState | Set-Content -Encoding utf8 (Join-Path $snapshot "hermes\pre-upgrade-state.txt")
-& ssh HERALD "cd ~/.hermes/hermes-agent && git diff --binary HEAD" | Set-Content -Encoding utf8 (Join-Path $snapshot "hermes\windance-customizations.patch")
+Invoke-InventoryCommand ssh @('HERALD', 'cd ~/.hermes/hermes-agent && git diff --binary HEAD') | Set-Content -Encoding utf8 (Join-Path $snapshot "hermes\windance-customizations.patch")
 
 $inventory = @(
     "Created: $((Get-Date).ToString('o'))",
     "Reason: $Reason",
     "",
     "HAL winget upgrades:",
-    (& winget list --upgrade-available --accept-source-agreements --disable-interactivity 2>&1),
+    (Invoke-InventoryCommand winget @('list','--upgrade-available','--accept-source-agreements','--disable-interactivity')),
     "",
     "HAL Ollama:",
-    (& ollama --version 2>&1),
-    (& ollama list 2>&1),
+    (Invoke-InventoryCommand ollama @('--version')),
+    (Invoke-InventoryCommand ollama @('list')),
     "",
     "HERALD:",
-    (& ssh HERALD "/Users/herald/.local/bin/hermes --version; sw_vers" 2>&1),
+    (Invoke-InventoryCommand ssh @('HERALD', 'set -e; /Users/herald/.local/bin/hermes --version; sw_vers')),
     "",
     "SAL:",
-    (& ssh SAL "/opt/homebrew/bin/brew outdated; /opt/homebrew/bin/node /Users/zuzu/node-red-runtime/node_modules/node-red/red.js --version; /opt/homebrew/bin/cloudflared --version" 2>&1),
+    (Invoke-InventoryCommand ssh @('SAL', 'set -e; HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew outdated; /opt/homebrew/bin/node /Users/zuzu/node-red-runtime/node_modules/node-red/red.js --version; /opt/homebrew/bin/cloudflared --version')),
     "",
     "AL:",
-    (& ssh AL "apt list --upgradable 2>/dev/null; docker ps --format '{{.Names}} {{.Image}} {{.Status}}'" 2>&1),
+    (Invoke-InventoryCommand ssh @('AL', "set -e; apt list --upgradable 2>/dev/null; docker ps --format '{{.Names}} {{.Image}} {{.Status}}'")),
     "",
     "SAM:",
-    (& ssh SAM-WIFI "apt list --upgradable 2>/dev/null; systemctl is-active sam-schedule.service" 2>&1)
+    (Invoke-InventoryCommand ssh @('SAM-WIFI', 'set -e; apt list --upgradable 2>/dev/null; systemctl is-active sam-schedule.service'))
 )
 $inventory | Set-Content -Encoding utf8 (Join-Path $snapshot "managed-software-inventory.txt")
 
@@ -75,7 +90,8 @@ $sensitive = Get-ChildItem -Recurse -File $snapshot | Where-Object {
 }
 if ($sensitive) { throw "Sensitive-looking filename detected; refusing backup push." }
 
-git -C $repo add -- $snapshot
+Move-Item -LiteralPath $snapshot -Destination $publishedSnapshot
+git -C $repo add -- $publishedSnapshot
 git -C $repo commit -m "backup: pre-upgrade restore point $stamp"
 if ($LASTEXITCODE -ne 0) { throw "Backup commit failed." }
 git -C $repo push origin HEAD:main
