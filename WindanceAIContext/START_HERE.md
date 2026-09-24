@@ -56,3 +56,12 @@ William explicitly instructed Vega to bypass all reviews until further notice. R
 
 
 For idea capture, SOP submissions and review follow-through, read `operations/README.md`.
+
+
+## Warden independent supervisor — 2026-09-24
+
+For supervisor health, autonomous recovery, or incident history, read `projects/WARDEN_SUPERVISOR_2026-09-24.md`. Warden runs on SAL, independently of Herald and this Codex conversation. On SAL the bootstrap mirror is `/Users/zuzu/knowledge/WindanceAIContext/START_HERE.md`. Check live SAL status or Herald's timestamped mirror; pause Warden before planned maintenance.
+
+## Warden approval rule — William, 2026-09-24
+
+Warden is PAUSED and not activated while the revised authorization gate is built. Warden may execute a proposed change without William only when a background Codex/Vega reviewer and private Claude reviewer both explicitly approve that same exact change. If either disagrees, is unavailable, or yields unclear/expired approval, hold for William. This applies to Warden's proposed repairs, including previously allowlisted recovery. It does not reinstate the suspended global review requirement for unrelated work. No automatic override or rollback exception. See projects/WARDEN_SUPERVISOR_2026-09-24.md for current implementation status. Direct SAL messaging remains selected; Herald Messages is deferred by William.

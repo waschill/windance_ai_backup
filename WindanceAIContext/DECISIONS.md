@@ -108,3 +108,12 @@ William selected the SOP-library and decision-log proposals and requested a non-
 Shared process and usage: operations/README.md. SOP templates/index/intake are in operations/sops. Operational profile instructions require submission and real Archivist/Forge acceptance receipts. This is documentation acceptance, not reinstatement of suspended Claude reviews. The SAL weekly stack-review script now validates structured decisions, requires Athena/Herald/Archivist receipts, saves decision_log memory and verifies read-back before successful completion/delivery. New decision logs are available at /decision-logs and imported into the canonical library by the weekly digest.
 
 Verification and recovery: projects/KNOWLEDGE_WORKFLOW_2026-09-19.md. Health-dashboard proposal #2 was not implemented.
+
+
+## Warden independent supervisor — 2026-09-24
+
+Build supervision before a new Paperclip-like management app. Warden watches outside Herald, uses known recovery procedures and independently checks outcomes. No automatic arbitrary code changes, task replays, business mutations or dangerous host operations. Unknown failures escalate with a bounded read-only Codex diagnosis. William named no preference; Vega assigned the name Warden and William was informed. William requested evaluation of Herald's own Messages app as an independent sender; it must be delivery-tested before replacing the verified direct SAL outbox route.
+
+## Warden approval rule — William, 2026-09-24
+
+Warden is PAUSED and not activated while the revised authorization gate is built. Warden may execute a proposed change without William only when a background Codex/Vega reviewer and private Claude reviewer both explicitly approve that same exact change. If either disagrees, is unavailable, or yields unclear/expired approval, hold for William. This applies to Warden's proposed repairs, including previously allowlisted recovery. It does not reinstate the suspended global review requirement for unrelated work. No automatic override or rollback exception. See projects/WARDEN_SUPERVISOR_2026-09-24.md for current implementation status. Direct SAL messaging remains selected; Herald Messages is deferred by William.

@@ -36,3 +36,7 @@ Claude uses `anthropic/claude-opus-5` through OpenRouter with no fallback and re
 
 This policy is installed in Vega's global AGENTS.md on HAL and HERALD and linked from the shared bootstrap. It is a standing agent instruction, not a technical shell/deployment interlock. Existing sessions must follow William's instruction immediately; new sessions discover it through their persistent instructions. Policy changes or exemptions remain William's decision. There is no automatic emergency or rollback exemption. Pure inspection of existing state, such as reading logs or running git status, does not execute changed code. If applicability is disputed, obtain review or ask William.
 
+
+## Warden approval rule — William, 2026-09-24
+
+Warden is PAUSED and not activated while the revised authorization gate is built. Warden may execute a proposed change without William only when a background Codex/Vega reviewer and private Claude reviewer both explicitly approve that same exact change. If either disagrees, is unavailable, or yields unclear/expired approval, hold for William. This applies to Warden's proposed repairs, including previously allowlisted recovery. It does not reinstate the suspended global review requirement for unrelated work. No automatic override or rollback exception. See projects/WARDEN_SUPERVISOR_2026-09-24.md for current implementation status. Direct SAL messaging remains selected; Herald Messages is deferred by William.

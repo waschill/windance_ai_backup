@@ -25,6 +25,12 @@ if ($LASTEXITCODE -ne 0) { throw 'Herald context directory could not be reached.
 scp -q -r "$source\*" "HERALD:$remote/"
 if ($LASTEXITCODE -ne 0) { throw 'Herald mirror publication failed.' }
 
+$salMirror = '/Users/zuzu/knowledge/WindanceAIContext'
+ssh -o BatchMode=yes SAL "mkdir -p '$salMirror'"
+if ($LASTEXITCODE -ne 0) { throw 'SAL context directory could not be reached.' }
+scp -q -r "$source\*" "SAL:$salMirror/"
+if ($LASTEXITCODE -ne 0) { throw 'SAL mirror publication failed.' }
+
 if ($PushGit) {
     $repo = Split-Path -Parent $source
     git -C $repo add WindanceAIContext
@@ -44,4 +50,4 @@ if ($PushGit) {
 $indexPython = 'C:\Users\wasch\services\second-brain\venv\Scripts\python.exe'
 & $indexPython (Join-Path $PSScriptRoot 'refresh-windance-context-index.py')
 if ($LASTEXITCODE -ne 0) { throw 'Context files were published, but Second Brain indexing/retrieval verification failed.' }
-Write-Host "Published Windance context to Production, HAL, Herald and verified the Second Brain index."
+Write-Host "Published Windance context to Production, HAL, Herald, SAL and verified the Second Brain index."

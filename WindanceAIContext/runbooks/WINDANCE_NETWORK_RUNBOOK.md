@@ -560,3 +560,8 @@ If the cards show `Waiting...` after a Node-RED restart, wait for fresh matching
 On 2026-07-11, a Level 8 execute scheduled task fired automatically at midnight because it had been mistakenly created with a one-time scheduled trigger instead of being on-demand only. Later, a safety test also sent a shutdown wave because a PowerShell guard emitted log text into the boolean pipeline. The guard was corrected, then real execution was globally disabled and the execute scheduled task removed.
 
 Be very conservative around shutdown tooling. The network must stay up so William can fix things remotely.
+
+
+## Warden independent supervisor — 2026-09-24
+
+Warden service, checks, operator pause/resume commands, incident board, diagnostic limits and rollback are documented in `../projects/WARDEN_SUPERVISOR_2026-09-24.md`. SAL runs com.windance.supervisor; future sessions discover it via START_HERE. The supervisor does not require a running Herald model or an open Codex window.
