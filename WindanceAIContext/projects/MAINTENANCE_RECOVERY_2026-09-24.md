@@ -32,6 +32,14 @@ Herald created a second SAL task `695ad91a-a574-4d3f-ac96-22c05df64ccc`. Both ea
 
 Vega saved `/Users/herald/knowledge/SOFTWARE_UPGRADE_PLAN_2026-09-24.md` with exact remote paths and sequencing, then created corrected SAL task `d4569fda-ec32-4d30-b824-0a9eb320d718` through Agent Harness. It carries explicit SSH commands, correct host locations and all original safety requirements. Its source is `william-software-upgrade-20260924`, channel `api`; use this task as the current SAL assignment. Earlier blocked tasks must not be replayed. The follow-through must read the current plan and exact corrected task, not stop at the first blocked ID.
 
+### Verified Forge correction and replacement task
+
+The d4569fda attempt also blocked: Forge incorrectly assumed an earlier SSH call changed the host for subsequent independent terminal calls. A narrow canary then exposed SAL npm's `env node` shebang requiring Homebrew on the remote PATH. Vega verified the corrected command itself, then real Forge canary `a14701d0-87f9-4b69-b54c-3e173b013635` completed with independently validated terminal receipts for both remote version and file-existence checks. The earlier diagnostic canary `2a01959a-2eb4-4c99-aaf5-e1a391287375` was partial and is superseded.
+
+Forge-specific task instructions in `/Users/herald/services/profile-staff-runner/profile_staff_runner.py` now explain stateless terminal calls, per-call SSH prefixes, exact host paths and remote Homebrew PATH setup. Compile and prompt-isolation tests passed; other assignees' prompts do not receive the new contract. No model or persona was replaced, no tool authority expanded and no long-running service restart was needed. Original runner is preserved as `/Users/herald/services/maintenance-recovery-20260924/profile_staff_runner.before.py`; the applied repair helper is beside it.
+
+The active SAL upgrade task is now **`4ea48df1-d216-458a-acd5-8958df509e46`**, created after the passing canary. This supersedes all earlier SAL upgrade IDs. Follow this task and the current Herald plan. Passing diagnostics do not establish completed software upgrades.
+
 Original backup script: `Invoke-WindancePreUpgradeBackup.before.ps1` in the recovery directory. Reverting that script restores the previous behavior; restore archived directories only intentionally, because doing so also restores the dirty-repository blocker.
 
 ## Upgrade boundaries and follow-through
