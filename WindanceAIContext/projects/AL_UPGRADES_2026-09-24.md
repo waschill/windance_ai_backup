@@ -25,3 +25,11 @@ AL had been running kernel 7.0.0-27 with 7.0.0-34 already installed and a pendin
 William was asked for AL's physical console state because remote evidence cannot distinguish a boot stop, network failure or powered-off condition. Do not claim the reboot or new kernel is verified. Hold further host upgrades until AL is recovered. Both kernel files (7.0.0-27 and 7.0.0-34) were present before reboot; console evidence is required before proposing boot recovery. The eight phased packages remain policy-deferred, not failed updates. Next host is SAM only after AL recovery and service checks.
 
 Sources: https://github.com/open-webui/open-webui/releases/tag/v0.11.4 ; https://github.com/portainer/portainer/releases/tag/2.45.1 ; https://docs.docker.com/engine/release-notes/29/ ; https://api.github.com/repos/searxng/searxng/compare/461f174b0...master ; https://github.com/valkey-io/valkey/releases/tag/9.1.2 . The new SearXNG image revision matched the reviewed 46-commit upstream comparison.
+
+## AL outlet recovery attempt — 21:16 UTC
+
+At William's request, inspected live SAL Node-RED flow `01 - Device Monitor + Kasa`. `Tag AL` maps 192.168.36.20 to child outlet named AL on the HS300 at 192.168.36.4. `Alert + Reboot Decision` uses a 25-second off/on cycle, guarded by flow-context rebooting_AL. The node titled Require 3 Failed Pings only filters ResWEB; AL passes immediately. Do not inject test-down messages or restart Node-RED during this outage, because doing so may trigger another automatic cycle.
+
+Before manual intervention the AL outlet was ON, drawing 2.2 W, and reported on-since 14:47:08 MDT, shortly after the graceful reboot. This is evidence of an intervening outlet turn-on, consistent with the automatic rule, but does not prove the rule caused the outage.
+
+Vega performed one user-authorized AL-child-only OFF/25-second/ON sequence through the existing Kasa CLI. Both commands explicitly reported targeting AL. Outlet then reported ON since 15:15:55 MDT, drawing 1.3 W; SSH still timed out. Sent one Wake-on-LAN broadcast for AL's known MAC 98:b7:85:23:04:f0. No other outlets, flow definitions, or Level 8 controls were changed. Low power suggests standby; physical power-button/console inspection is the next step if wake does not recover AL. Further software upgrades remain on hold.
