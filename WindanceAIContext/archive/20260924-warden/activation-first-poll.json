@@ -1,0 +1,75 @@
+{
+  "at": "2026-09-24T21:52:01.205089+00:00",
+  "paused": false,
+  "host": "SAL",
+  "observations": {
+    "HERALD": {
+      "at": "2026-09-24T21:52:00.879323+00:00",
+      "host": "HERALD",
+      "checks": {
+        "harness": true,
+        "dashboard": true,
+        "gateway": true,
+        "runner": true,
+        "staff_progress": true,
+        "staff_delivery": true,
+        "connection": true
+      },
+      "harness": {
+        "loaded": true,
+        "pid": 52342,
+        "last_exit": 15
+      },
+      "dashboard": {
+        "loaded": true,
+        "pid": 76974,
+        "last_exit": 15
+      },
+      "gateway": {
+        "loaded": true,
+        "pid": 53081,
+        "last_exit": 256
+      },
+      "runner": {
+        "loaded": true,
+        "pid": 0,
+        "last_exit": 0
+      },
+      "stalled": [],
+      "failed_deliveries": 0
+    },
+    "SAL": {
+      "at": "2026-09-24T21:52:01.073133+00:00",
+      "host": "SAL",
+      "checks": {
+        "outbox": true,
+        "youtube_scheduler": true,
+        "youtube_report_completed": true,
+        "connection": true
+      },
+      "youtube_scheduler": {
+        "loaded": true,
+        "pid": 0,
+        "last_exit": 0
+      }
+    }
+  },
+  "incidents": [],
+  "events": [
+    {
+      "id": 1,
+      "incident": "installation-canary",
+      "at": "2026-09-24T20:19:38.355498+00:00",
+      "kind": "codex_diagnosis",
+      "detail": "{\"result\": {\"summary\": \"Synthetic fixture reports a failed harness check, not a real outage. Process status and successful delivery are unknown.\", \"next_step\": \"An operator may restart the harness, then verify its check and delivery separately; no action has been executed.\"}, \"usage\": [{\"input_tokens\": 14372, \"cached_input_tokens\": 0, \"cache_write_input_tokens\": 0, \"output_tokens\": 59, \"reasoning_output_tokens\": 0}], \"canary\": true}"
+    }
+  ],
+  "notifications": [
+    {
+      "key": "installation_verified",
+      "status": "delivered",
+      "attempts": 2
+    }
+  ],
+  "limits": "Known recovery only; no automatic arbitrary code edits or task replay."
+}

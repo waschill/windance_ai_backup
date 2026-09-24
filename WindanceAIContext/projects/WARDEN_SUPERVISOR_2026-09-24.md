@@ -1,8 +1,8 @@
 # Warden — independent supervision and reviewed recovery
 
 Date: 2026-09-24. Owner: William. Technical owner: Vega/Codex. Runtime: SAL.
-Status: PAUSED; revision 3 passed 41 isolated tests and compilation, and is
-awaiting Claude's revised-source decision and real consensus canary.
+Status: ACTIVE on SAL since 2026-09-24 21:52 UTC (15:52 Mountain).
+Revision 7 passed 44 isolated tests, compilation, Claude review and the live consensus canary.
 Search terms: Warden, Worden, supervisor, proactive recovery, Codex, Claude, SAL.
 
 ## Authority and communication
@@ -51,7 +51,7 @@ staff tasks remain authoritative for work; Warden's database owns incidents only
 
 ## Check frequency and coverage
 
-Two independent user LaunchAgents on SAL are planned at 120-second intervals:
+Two independent user LaunchAgents on SAL run at 120-second intervals:
 `com.windance.supervisor` polls health; `com.windance.supervisor-review` handles
 one queued review/diagnosis. Model calls do not block health polling. launchd is
 not a hard real-time scheduler; sleeping/disconnected hosts and slow probes can
@@ -122,6 +122,19 @@ must wait. Paused health polling still updates visibility and resets consecutive
 failure samples; repair/review/notifications stop. Resume after independent checks.
 Do not delete incident or reservation files to clear a held incident or retry it.
 
+For a held/escalated incident, William gives Vega explicit direction for the
+specific repair in Codex. Vega records that direction and its scope in
+`operator-directions/<incident ID>/WILLIAM_DIRECTION.md` under the SAL service
+folder, then performs only the authorized manual operation with appropriate
+verification. This note is history, not executable approval input to Warden.
+Warden resolves the incident only after two healthy checks; do not change database
+status or remove reservations to force resolution. Unsupported repairs stay with
+Vega/William rather than gaining a generic automated override.
+
+Polling also alerts if reviewed recovery remains unverified after five minutes,
+if a queued review has not started within ten minutes, or if an active review
+exceeds fifteen minutes. Initial detection alerts do not wait for either model.
+
 ## Notifications and interface
 
 Warden uses SAL's existing single-owner iMessage outbox directly, bypassing Max,
@@ -141,10 +154,17 @@ history. Missing reviewer access also produces a hold; it is never treated as ye
 Before the consensus requirement, the initial implementation passed 16 tests,
 five board checks, a disposable launchd canary, real SAL Codex diagnosis and a
 Warden notification receipt. These do not prove the later consensus revision.
-Claude review session `20260924_144117_b3af41` rejected revisions 1 and 2; findings and
-revision-specific dispositions are preserved in the implementation workspace.
-Revision 3 passed all 41 isolated SAL tests and syntax compilation. It must still pass independent review, real two-reviewer
-canary, manifest-checked deployment and scheduled-run verification before activation.
+Claude implementation review session `20260924_144117_b3af41` contains seven
+revision decisions. Revision 7 received APPROVE; 44 isolated SAL tests and
+compilation passed. Actual Codex and Claude approved canary proposal
+`50b8683ff93c618f2ce5670199f40f34aafe20f3a1b3c1e73de09798158828b1`.
+Claude runtime session `20260924_154645_3c8f55` was audited against the actual
+Opus 5/OpenRouter session and exact request/reply. The disposable sleep job
+started, retained the same positive PID for two checks and was removed.
+Four real production service fingerprints were stable across repeated reads.
+Manifest-checked activation enabled both jobs at 21:52 UTC. See archived
+activation and scheduled-verification receipts for measured live state.
+Earlier held and transport-failed canaries are preserved, not counted as passes.
 No production outage is induced by these tests. Real future scheduled YouTube
 completion still needs its own receipt; a fixture does not establish it.
 
@@ -169,3 +189,11 @@ ChatGPT.app 26.917.71314 at `/Applications/ChatGPT.app`. Bundled Codex is
 0.155.0-alpha.16.4. Deep/strict signature with the same OpenAI team, retained login
 and real background diagnosis were verified. Previous app backup:
 `/Users/zuzu/backups/codex-app-20260924/Codex.app`. No credentials were copied.
+
+## Final procedure acceptance
+
+Archivist task `ef74c165-9721-4040-87d2-4e721aab9a82` was updated after an actual
+scoped review of the revised guide and shared-memory save/readback. Forge task
+`2dd29cc7-96d9-4a4a-83e1-e11bcb80d909` returned PASS with a transcript-verified
+Herald probe. These certify procedure acceptance; Vega separately measured final
+canary execution and activation. See `archive/20260924-warden/BUILD_HISTORY.md`.

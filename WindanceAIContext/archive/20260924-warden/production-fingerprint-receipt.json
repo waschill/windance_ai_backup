@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-24T21:25:34.640228+00:00",
+  "checks": {
+    "harness": {
+      "loaded_sha256": "b3abc3bf40f2051db33d8055a530d44e820c45bceb66b40c2c330e9316b2921a",
+      "plist_sha256": "6d674a0b72acb98f0c08eba5883eebf348b8d6db25a558f83d3d4093ece68a4e"
+    },
+    "dashboard": {
+      "loaded_sha256": "a6511c8d4f2089bd790a16fb4d597e4dce474f700776f49ad55f714eb88cb80d",
+      "plist_sha256": "6621810d52171bb5de0ce06801fbc557762de457cd60c409e2d3e903673e458d"
+    },
+    "gateway": {
+      "loaded_sha256": "90a25a0627b4361a0e344c9a970c980e44fdc1317143306a68dc7c6eef72f8d6",
+      "plist_sha256": "88ef7edf7eb7eb1c3e6d34582d18ce723e69a6df2e24f1fbe064b644fa559b16"
+    },
+    "runner": {
+      "loaded_sha256": "7d7c0a9cc1410d1ef6c7737e87e7acc113b7f00877510eb69b36aa9f5d11b06f",
+      "plist_sha256": "e5f08de88c89376bd08630f384dcaeb2b38d6cf27860e08778e7488799e9ea4c"
+    }
+  },
+  "stable_read_only_fingerprints": 4
+}

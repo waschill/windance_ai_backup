@@ -6,7 +6,7 @@ import os
 import plistlib
 import subprocess
 from pathlib import Path
-EXPECTED_MANIFEST_SHA256 = 'b54917597552c2188d59eab1fe39db05d44a1e1252e045649bcb2a146a6f252f'
+EXPECTED_MANIFEST_SHA256 = '0b2441feee9faa3e0e4bc8d96dc1e88605be1ef1b5f974ac6e8a18bc249bbd9e'
 if Path.home().name!='zuzu': raise RuntimeError('Activation is SAL only')
 root=Path('/Users/zuzu/services/windance-supervisor')
 subprocess.run(['/usr/bin/python3',str(root/'supervisor.py'),'pause'],check=True)

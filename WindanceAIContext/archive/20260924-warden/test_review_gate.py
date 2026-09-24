@@ -88,6 +88,11 @@ class ConsensusTests(unittest.TestCase):
     def test_strict_claude_output_and_session_receipt(self):
         verdict={'reviewer':'Claude','proposal_sha256':self.sha,'decision':'approve','reason':'fixture'}
         content=json.dumps(verdict)
+        value,sid=gate.parse_claude(content,self.p,'Warning: fixture\n\nsession_id: 20260924_144117_b3af41\n')
+        self.assertEqual(value,verdict)
+        with self.assertRaises(ValueError): gate.parse_claude(content,self.p,'session_id: 20260924_144117_b3af41\nsession_id: 20260924_144117_b3af41\n')
+        with self.assertRaises(ValueError): gate.parse_claude('session_id: 20260924_144117_b3af41\n'+content,self.p,'')
+        with self.assertRaises(ValueError): gate.parse_claude('session_id: 20260924_144117_b3af41\n'+content,self.p,'session_id: 20260924_152508_33977e\n')
         for form in (content,'```json\n'+content+'\n```','```\n'+content+'\n```'):
             value,sid=gate.parse_claude('\nsession_id: 20260924_144117_b3af41\n'+form,self.p)
             self.assertEqual(value,verdict)
@@ -106,6 +111,39 @@ class ConsensusTests(unittest.TestCase):
             a=gate.service_fingerprint(self.ops,'fixture')
             self.ops.run.return_value.stdout=re.sub(r'(?m)^\t(pid|runs|state|active count) = .+$',r'\t\1 = changed',rendered)
             self.assertEqual(a,gate.service_fingerprint(self.ops,'fixture'))
+    def test_reviewer_gets_executable_and_current_authority(self):
+        self.assertEqual(self.p['service_fingerprint']['executable'],'/bin/sleep')
+        prompt=gate.review_prompt(self.p,'Codex')
+        self.assertIn('Current direct operator authorization from William',prompt)
+        self.assertIn('only if both agree',prompt)
+    def test_claude_pipeline_parses_separate_streams_then_audits(self):
+        codex={'reviewer':'Codex','proposal_sha256':self.sha,'decision':'approve','reason':'fixture'}
+        claude={**codex,'reviewer':'Claude'}
+        sid='20260924_152508_33977e'
+        with patch.object(gate,'execute_bounded',return_value=('Human warning, not JSON','\nsession_id: '+sid+'\n')),patch.object(gate,'canonical_claude_response',return_value=json.dumps(claude)),patch.object(gate,'audit_claude_session',return_value={'session_id':sid,'model':'anthropic/claude-opus-5','provider':'openrouter','tools':[]}) as audit:
+            self.assertEqual(gate.claude_review(self.ops,{'proposal_sha256':self.sha,'codex':codex}),claude)
+            audit.assert_called_once_with(sid)
+        self.assertEqual(json.loads((self.folder/'claude-session.json').read_text())['session_id'],sid)
+        self.assertEqual(json.loads((self.folder/'claude.json').read_text()),claude)
+    def test_canonical_response_must_belong_to_exact_proposal(self):
+        root=Path(self.tmp.name)
+        path=root/'.hermes/profiles/claude/state.db'; path.parent.mkdir(parents=True)
+        c=sqlite3.connect(path)
+        c.execute('CREATE TABLE messages(id INTEGER PRIMARY KEY,session_id TEXT,role TEXT,content TEXT)')
+        verdict={'reviewer':'Claude','proposal_sha256':self.sha,'decision':'approve','reason':'x'*2034}
+        c.execute('INSERT INTO messages(session_id,role,content) VALUES(?,?,?)',('fixture','user','Quoted hash only '+self.sha))
+        c.execute('INSERT INTO messages(session_id,role,content) VALUES(?,?,?)',('fixture','assistant',json.dumps(verdict))); c.commit()
+        with patch.object(gate.Path,'home',return_value=root):
+            with self.assertRaises(ValueError): gate.canonical_claude_response('fixture',self.p)
+            c.execute('INSERT INTO messages(session_id,role,content) VALUES(?,?,?)',('fixture','user',gate.review_prompt(self.p,'Claude')))
+            c.execute('INSERT INTO messages(session_id,role,content) VALUES(?,?,?)',('fixture','assistant',json.dumps(verdict))); c.commit()
+            response=gate.canonical_claude_response('fixture',self.p)
+            self.assertEqual(gate.validate_verdict(json.loads(response),self.p,'Claude'),verdict)
+            c.execute('INSERT INTO messages(session_id,role,content) VALUES(?,?,?)',('fixture','user','Later unrelated follow-up'))
+            for later in ('Unrelated prose',json.dumps({**verdict,'proposal_sha256':'0'*64})):
+                c.execute('INSERT INTO messages(session_id,role,content) VALUES(?,?,?)',('fixture','assistant',later)); c.commit()
+                self.assertEqual(gate.canonical_claude_response('fixture',self.p),response)
+        c.close()
     def test_claude_identity_and_tools_checked_against_session(self):
         root=Path(self.tmp.name)
         path=root/'.hermes/profiles/claude/state.db'; path.parent.mkdir(parents=True)

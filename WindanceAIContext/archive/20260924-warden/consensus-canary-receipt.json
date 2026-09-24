@@ -1,0 +1,42 @@
+{
+  "proposal_sha256": "50b8683ff93c618f2ce5670199f40f34aafe20f3a1b3c1e73de09798158828b1",
+  "codex": {
+    "reviewer": "Codex",
+    "proposal_sha256": "50b8683ff93c618f2ce5670199f40f34aafe20f3a1b3c1e73de09798158828b1",
+    "decision": "approve",
+    "reason": "The bounded operation is justified as an installation gate test: evidence identifies a loaded, stopped disposable /bin/sleep job, and the exact command targets only com.windance.supervisor-consensus-canary. Risk is low under the stated executor checks for expiry, bound verdicts, code/configuration hashes, original PID and current health. William's current Warden-specific instruction supplies authority only after Claude independently agrees to this same proposal. Verification requires the same positive PID in two samples, followed by cleanup limited to the disposable label. One attempt, with failure or uncertainty held for William, provides an appropriate recovery boundary. This approval does not authorize restarting the production harness or any broader operation."
+  },
+  "claude": {
+    "reviewer": "Claude",
+    "proposal_sha256": "50b8683ff93c618f2ce5670199f40f34aafe20f3a1b3c1e73de09798158828b1",
+    "decision": "approve",
+    "reason": "Bounded operation is justified and low-risk. Target is a single registered launchd label, com.windance.supervisor-consensus-canary, whose bound fingerprint is /bin/sleep with 2 arguments plus plist and loaded hashes; no production process, code, config, task replay, business data, SyncThing, or Level 8 is in scope. Evidence is internally coherent: loaded=true, pid=0, last_exit=0, checks.harness=false, i.e. a deliberately stopped disposable job, so 'kickstart -k' is effectively a single start with nothing to kill, and the stated goal (proving the unanimous-review gate end-to-end on a throwaway sleep job before it is trusted for real incidents) is a legitimate install-time verification rather than an operational repair. Blast radius is one sleep PID; recovery is a bootout of only that label. Authority matches William's 2026-09-24 Warden consensus policy (william-warden-consensus-2026-09-24-v1): registered service operation only, one attempt, no automatic retries or rollback, hold for William on failure or unknown outcome. My approval is advisory and non-executing; execution still requires Codex's independently bound concurrence plus the executor's re-check of both verdicts, expiry, hashes, original PID, and current health. Two caveats, neither blocking. First, the packet's created and expires fields are both rendered as the identical redacted placeholder, so I cannot verify a nonzero TTL from the evidence; the executor must enforce a live, unexpired window and fail closed if expires<=now. Second, the verification rule of two identical positive PID samples one second apart is fragile against a short sleep duration, which is not visible here; a spurious mismatch would be reported as failure and escalated to William rather than retried, which is the safe direction but may produce a false negative on the gate test. If the sleep argument is shorter than a few seconds, lengthen it or widen the sampling before rerunning. Approve as written, scoped strictly to this label and this one attempt."
+  },
+  "execution": {
+    "receipt": {
+      "performed": true,
+      "action": "restart_harness",
+      "exit_code": 0,
+      "proposal_sha256": "50b8683ff93c618f2ce5670199f40f34aafe20f3a1b3c1e73de09798158828b1"
+    },
+    "after": {
+      "host": "HERALD",
+      "checks": {
+        "harness": true
+      },
+      "harness": {
+        "loaded": true,
+        "pid": 80534,
+        "last_exit": 0
+      },
+      "purpose": "Installation canary: harness refers ONLY to the disposable com.windance.supervisor-consensus-canary sleep job. No production process is targeted. The job is deliberately stopped and registered; start it once to verify the unanimous-review gate. Cleanup bootouts only this disposable label."
+    },
+    "healthy_samples": 2,
+    "sample_spacing_seconds": 1,
+    "production_services_changed": false
+  },
+  "cleanup": {
+    "removed": true,
+    "exit_code": 0
+  }
+}

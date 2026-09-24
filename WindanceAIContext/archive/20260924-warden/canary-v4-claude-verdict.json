@@ -1,0 +1,16 @@
+{
+  "verdict": {
+    "reviewer": "Claude",
+    "proposal_sha256": "7d9eee18c1ad8c38dd6dc37d9b56cadfcf17a4091bc82364e7ea668313bc1100",
+    "decision": "approve",
+    "reason": "Bounded, low-blast-radius, and consistent with the 2026-09-24 Warden consensus policy. Scope: a single registered service operation, launchctl kickstart -k on exactly one label (gui/501/com.windance.supervisor-consensus-canary). The service_fingerprint pins executable=/bin/sleep with 2 arguments plus plist and loaded SHA-256s, and the executor rechecks those hashes, both verdicts, expiry, original PID, and health before acting; that is the control that makes the alarming word 'harness' acceptable here, since it binds the label to a disposable sleep job rather than any production process. Evidence is internally coherent: loaded=true, pid=0, last_exit=0, checks.harness=false, i.e. registered and deliberately stopped, so -k terminates nothing and no service interruption is possible. Failure mode of the worst case is a sleep process starting and later exiting. Explicit limits exclude code/config edits, task replay, upgrades, reboots, business writes, SyncThing, and Level 8; cleanup bootouts only this disposable label. Recovery is correctly conservative: one attempt, no retries, no rollback needed, hold for William on failure or unknown outcome. Verification (same positive PID on two samples one second apart) is adequate for a sleep job and fails closed. Two noted reservations, neither blocking. First, created and expires render identically in the observation I received, so I cannot independently confirm a nonzero validity window; this is fail-safe because the executor rechecks expiry and a stale or expired proposal must not execute. Second, if the job's sleep interval is shorter than the ~1s sampling window, the PID check can false-negative and will hold for William rather than retry, which is the correct direction of error. I am approving the operation as specified, not any broader restart authority, and no production 'harness' restart inherits this approval. I executed nothing and ran no tests; this verdict is static assessment of the submitted observation only."
+  },
+  "audit": {
+    "session_id": "20260924_152508_33977e",
+    "model": "anthropic/claude-opus-5",
+    "provider": "openrouter",
+    "tools": []
+  },
+  "execution": "NOT performed; parser failed before authorization and canary was removed",
+  "disposition": "Preserved original approval without changing gate state or overriding any hold."
+}

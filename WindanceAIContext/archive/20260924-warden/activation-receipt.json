@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-24T21:52:00.590771+00:00",
+  "host": "SAL",
+  "jobs": [
+    "com.windance.supervisor",
+    "com.windance.supervisor-review"
+  ],
+  "interval_seconds": 120,
+  "enabled": true
+}

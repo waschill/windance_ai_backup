@@ -1,10 +1,12 @@
 test_actual_entrypoint_exit_receipt (test_report_wrapper.ReportReceiptTests) ... ok
 test_timeout_kills_group_and_marks_unknown (test_report_wrapper.ReportReceiptTests) ... ok
+test_canonical_response_must_belong_to_exact_proposal (test_review_gate.ConsensusTests) ... ok
 test_changed_executor_never_executes (test_review_gate.ConsensusTests) ... ok
 test_changed_process_never_executes (test_review_gate.ConsensusTests) ... ok
 test_changed_reviewer_wrapper_never_executes (test_review_gate.ConsensusTests) ... ok
 test_changed_service_config_never_executes (test_review_gate.ConsensusTests) ... ok
 test_claude_identity_and_tools_checked_against_session (test_review_gate.ConsensusTests) ... ok
+test_claude_pipeline_parses_separate_streams_then_audits (test_review_gate.ConsensusTests) ... ok
 test_different_proposal_never_executes (test_review_gate.ConsensusTests) ... ok
 test_disagreement_never_executes (test_review_gate.ConsensusTests) ... ok
 test_expired_approvals_never_execute (test_review_gate.ConsensusTests) ... ok
@@ -12,6 +14,7 @@ test_healthy_service_is_not_restarted (test_review_gate.ConsensusTests) ... ok
 test_key_action_mismatch_rejected (test_review_gate.ConsensusTests) ... ok
 test_live_launchctl_layout_fixtures (test_review_gate.ConsensusTests) ... ok
 test_missing_review_never_executes (test_review_gate.ConsensusTests) ... ok
+test_reviewer_gets_executable_and_current_authority (test_review_gate.ConsensusTests) ... ok
 test_running_gateway_is_never_restarted (test_review_gate.ConsensusTests) ... ok
 test_strict_claude_output_and_session_receipt (test_review_gate.ConsensusTests) ... ok
 test_tampered_proposal_rejected (test_review_gate.ConsensusTests) ... ok
@@ -41,6 +44,6 @@ test_notification_reserved_never_requeues (test_supervisor.RemoteTests) ... ok
 test_unknown_action_fails_closed (test_supervisor.RemoteTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 41 tests in 0.189s
+Ran 44 tests in 0.201s
 
 OK

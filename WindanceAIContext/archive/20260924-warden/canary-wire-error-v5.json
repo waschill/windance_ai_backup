@@ -1,0 +1,13 @@
+{
+  "proposal_sha256": "92cd9f9f5288cc36172d2cc9964ad0557add0ceb9b600cd1a2388115a4abf50b",
+  "codex": {
+    "reviewer": "Codex",
+    "proposal_sha256": "92cd9f9f5288cc36172d2cc9964ad0557add0ceb9b600cd1a2388115a4abf50b",
+    "decision": "approve",
+    "reason": "The bounded canary operation is justified: the supplied evidence identifies a loaded, stopped disposable /bin/sleep job, and the command targets only gui/501/com.windance.supervisor-consensus-canary on HERALD. Risk is low under the stated executor safeguards. William's current Warden-specific authorization permits execution only after a matching Claude approval and successful independent checks of expiry, bound hashes, service identity, original PID and current health. Two checks requiring the same positive PID adequately verify this installation canary; cleanup must remain confined to its disposable label. Allow one attempt only and hold for William on failure or unknown outcome. This verdict does not authorize a production harness restart or establish that execution or verification occurred."
+  },
+  "cleanup": {
+    "removed": true,
+    "exit_code": 0
+  }
+}

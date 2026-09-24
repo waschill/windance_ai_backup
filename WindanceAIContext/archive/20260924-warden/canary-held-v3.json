@@ -1,0 +1,13 @@
+{
+  "proposal_sha256": "6253d74cf9dcd617dc367266fe43f3c7b75e80cbca2eaf8785b4282e69ce28c5",
+  "codex": {
+    "reviewer": "Codex",
+    "proposal_sha256": "6253d74cf9dcd617dc367266fe43f3c7b75e80cbca2eaf8785b4282e69ce28c5",
+    "decision": "needs_user",
+    "reason": "The command targets a single canary label, and the one-attempt limit and two-sample verification are reasonable safeguards. However, the packet supplies hashes without the service definition or loaded executable details, so the claim that this is only a disposable sleep job cannot be verified. kickstart -k would terminate an existing instance if state changed. Current Warden policy and authorization are also absent: the packet's claimed Claude exception does not establish an override of William's stated review suspension. Provide the applicable current policy, evidence binding this label on HERALD to the disposable executable, and verification explicitly tied to this canary before approval."
+  },
+  "cleanup": {
+    "removed": true,
+    "exit_code": 0
+  }
+}

@@ -28,7 +28,11 @@ def herald():
         path=root/(label+'.plist')
         path.write_bytes(plistlib.dumps({'Label':label,'ProgramArguments':['/bin/sleep','180'],'RunAtLoad':False}))
         subprocess.run(['/bin/launchctl','bootstrap',domain,str(path)],check=True,capture_output=True)
-        return gate.prepare(ops,'restart_harness','INC-20260924-'+uuid.uuid4().hex[:8],'HERALD:harness')
+        proposal=gate.prepare(ops,'restart_harness','INC-20260924-'+uuid.uuid4().hex[:8],'HERALD:harness')
+        proposal['installation_canary']=True
+        proposal['verification']='This installation-only canary checks the disposable job PID twice, one second apart, and requires the same positive PID. Then cleanup unloads only '+label+'. Production monitoring uses two later 120-second health samples instead.'
+        gate.save(ops.ROOT/'reviews'/gate.digest(proposal)/'proposal.json',proposal)
+        return proposal
     if phase=='review': return gate.claude_review(ops,json.load(sys.stdin))
     if phase=='execute':
         receipt=gate.authorized_recovery(ops,sys.argv[2])
@@ -37,7 +41,11 @@ def herald():
             if after['checks']['harness']: break
             time.sleep(0.25)
         if not after['checks']['harness']: raise RuntimeError('Disposable service never became healthy')
-        return {'receipt':receipt,'after':after,'production_services_changed':False}
+        time.sleep(1)
+        second=observe()
+        if not second['checks']['harness'] or second['harness']['pid']!=after['harness']['pid']:
+            raise RuntimeError('Disposable service failed its second healthy sample')
+        return {'receipt':receipt,'after':second,'healthy_samples':2,'sample_spacing_seconds':1,'production_services_changed':False}
     if phase=='cleanup':
         p=subprocess.run(['/bin/launchctl','bootout',domain+'/'+label],capture_output=True)
         return {'removed':not ops.launch(label)['loaded'],'exit_code':p.returncode}

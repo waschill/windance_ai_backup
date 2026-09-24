@@ -1,0 +1,15 @@
+{
+  "verdict": {
+    "reviewer": "Claude",
+    "proposal_sha256": "92cd9f9f5288cc36172d2cc9964ad0557add0ceb9b600cd1a2388115a4abf50b",
+    "decision": "approve",
+    "reason": "Bounded, low-blast-radius installation canary. (1) Operation: a single registered launchctl kickstart -k of gui/501/com.windance.supervisor-consensus-canary. No code or config edits, no task replay, no upgrade, no reboot, no business writes, no SyncThing, no Level 8. (2) Target identity: the service_fingerprint (executable /bin/sleep, argument_count 2, plist_sha256, loaded_sha256) corroborates the stated purpose that 'harness' here denotes only the disposable canary label, not any production supervisor process. The misleading key HERALD:harness is adequately constrained because the executor rechecks loaded/plist hashes and aborts on mismatch, so a label that ever resolved to something other than the sleep job cannot be started. (3) Evidence consistency: loaded=true, pid=0, last_exit=0, checks.harness=false is exactly the expected state for a deliberately stopped registered job; starting it is the only way to exercise the unanimous-review gate, and -k is a no-op given pid=0. (4) Authority: covered by william-warden-consensus-2026-09-24-v1 as relayed in the controlling operator instruction; my approval is the second of two required verdicts and the executor independently rechecks both bound verdicts before acting. (5) Verification: two PID samples one second apart requiring the same positive PID is appropriate for an install-time canary, and cleanup bootouts only this disposable label. (6) Recovery: single attempt, no automatic retry or rollback, hold for William on failure or unknown outcome. Residual uncertainty: created and expires arrived redacted in this packet, so I could not independently confirm the freshness window; that is mitigated, not waived, by the executor's independent expiry recheck, which must refuse an expired or already-consumed proposal. Worst realistic failure is a short-lived /bin/sleep process and an inconclusive canary, which routes to William rather than to a retry. Approve as scoped; any change to label, command, or fingerprint voids this verdict and requires a fresh review."
+  },
+  "session_id": "20260924_153319_a8380d",
+  "model": "anthropic/claude-opus-5",
+  "provider": "openrouter",
+  "tools": [],
+  "reason_length": 2034,
+  "execution": "NOT performed; CLI display JSON parse failed and cleanup removed test job",
+  "additional_format_limit": "Reason has 2034 characters; exceeds old 2000-character display limit, with no change to decision or hash."
+}
