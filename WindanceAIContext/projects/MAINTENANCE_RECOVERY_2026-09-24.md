@@ -26,6 +26,12 @@ Vega invoked the actual Hermes Herald profile. Herald created SAL Forge task `b1
 
 The thread heartbeat `windance-software-upgrade-follow-through` is active every 15 minutes. It checks durable results, resolves authorized blockers, asks Herald to assign one host at a time (AL, SAM, HAL, HERALD after SAL), verifies outcomes and publication, and sends the final result before pausing itself. The SAL task has permission for one William-only iMessage delivery canary; its established result route may also deliver the task outcome. Do not replay old pending staff jobs or describe a setup receipt as completed upgrades.
 
+### Wrong-host discovery correction
+
+Herald created a second SAL task `695ad91a-a574-4d3f-ac96-22c05df64ccc`. Both early tasks became BLOCKED because Forge searched HERALD for HAL's PowerShell script and SAL's runtimes. No missing-file diagnosis was valid: Vega independently ran the exact nested HERALD-to-HAL validation successfully and HERALD-to-SAL Node returned v26.8.1; SAL flows exist. No restoration or user-provided paths are needed.
+
+Vega saved `/Users/herald/knowledge/SOFTWARE_UPGRADE_PLAN_2026-09-24.md` with exact remote paths and sequencing, then created corrected SAL task `d4569fda-ec32-4d30-b824-0a9eb320d718` through Agent Harness. It carries explicit SSH commands, correct host locations and all original safety requirements. Its source is `william-software-upgrade-20260924`, channel `api`; use this task as the current SAL assignment. Earlier blocked tasks must not be replayed. The follow-through must read the current plan and exact corrected task, not stop at the first blocked ID.
+
 Original backup script: `Invoke-WindancePreUpgradeBackup.before.ps1` in the recovery directory. Reverting that script restores the previous behavior; restore archived directories only intentionally, because doing so also restores the dirty-repository blocker.
 
 ## Upgrade boundaries and follow-through
