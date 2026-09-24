@@ -10,6 +10,8 @@ from __future__ import annotations
 
 from datetime import datetime
 import json
+import re
+import shlex
 from pathlib import Path
 import subprocess
 import sys
@@ -35,12 +37,27 @@ def run(command: str, timeout: int = 300) -> dict:
         return {"code": 124, "output": f"ERROR: {exc}"}
 
 
+def npm_audit() -> dict:
+    item = run("ssh -o BatchMode=yes SAL 'PATH=/opt/homebrew/bin:/usr/bin:/bin /opt/homebrew/bin/npm --prefix /Users/zuzu/node-red-runtime outdated --json'")
+    # npm uses exit 1 for a valid outdated dependency map, but also for errors.
+    try:
+        data = json.loads(item["output"])
+        valid = isinstance(data, dict) and all(
+            isinstance(value, dict) and all(key in value for key in ("current", "wanted", "latest"))
+            for value in data.values())
+    except (ValueError, TypeError):
+        valid = False
+    if item["code"] in (0, 1) and valid:
+        return {"code": 0, "output": item["output"]}
+    return {"code": item["code"] or 1, "output": item["output"] or "Invalid npm audit response."}
+
+
 def audit() -> dict:
     return {
         "herald-hermes": run("/Users/herald/.local/bin/hermes update --check"),
         "herald-macos": run("softwareupdate -l", 600),
         "sal-homebrew": run("ssh -o BatchMode=yes SAL 'HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew outdated --json=v2'"),
-        "sal-node-red": run("ssh -o BatchMode=yes SAL 'PATH=/opt/homebrew/bin:/usr/bin:/bin /opt/homebrew/bin/npm --prefix /Users/zuzu/node-red-runtime outdated --json || true'"),
+        "sal-node-red": npm_audit(),
         "sal-macos": run("ssh -o BatchMode=yes SAL 'softwareupdate -l'", 600),
         "al-apt": run("ssh -o BatchMode=yes AL 'apt list --upgradable 2>/dev/null'"),
         "al-containers": run("ssh -o BatchMode=yes AL \"docker ps --format '{{.Names}}|{{.Image}}|{{.Status}}'\""),
@@ -59,12 +76,12 @@ def needs_update(name: str, item: dict) -> bool:
     if name == "sal-homebrew":
         try:
             data = json.loads(item["output"]); return bool(data.get("formulae") or data.get("casks"))
-        except Exception: return bool(item["output"].strip())
+        except (ValueError, TypeError, AttributeError): return False
     if name == "sal-node-red": return item["output"].strip() not in ("", "{}")
     if name == "hal-winget": return "upgrades available" in text or "upgrade available" in text
-    if name == "hal-ollama-models": return bool(item["output"].strip()) and "name" in text
-    if name == "al-containers": return "open-webui" in text or "portainer" in text
-    if name.endswith("macos"): return "no new software available" not in text and "software update found" in text
+    if name == "hal-ollama-models": return False  # Inventory is not registry digest comparison.
+    if name == "al-containers": return False  # Running images do not prove upstream changes.
+    if name.endswith("macos"): return "no new software available" not in text and ("software update found" in text or "* label:" in text)
     return False
 
 
@@ -85,17 +102,24 @@ def apply_updates(found: dict) -> dict:
     if "herald-hermes" in found:
         results["herald-hermes"] = run("/Users/herald/.local/bin/hermes update", 1800)
     if "sal-homebrew" in found:
-        results["sal-homebrew"] = run("ssh SAL 'HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew upgrade'", 3600)
+        try:
+            data = json.loads(found["sal-homebrew"]["output"])
+            names = [value["name"] for kind in ("formulae", "casks") for value in data.get(kind, [])]
+            if not all(isinstance(name, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_./+@-]*", name) for name in names):
+                raise ValueError("Invalid Homebrew package identifier")
+            names = [name for name in names if "syncthing" not in name.lower()]
+            command = "HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew upgrade " + " ".join(names)
+            results["sal-homebrew"] = run("ssh SAL " + shlex.quote(command), 3600) if names else {"code": 0, "output": "No eligible Homebrew packages; SyncThing excluded."}
+        except (ValueError, TypeError, KeyError, AttributeError) as exc:
+            results["sal-homebrew"] = {"code": 1, "output": f"Invalid Homebrew audit: {exc}"}
     if "sal-node-red" in found:
         results["sal-node-red"] = run("ssh SAL 'PATH=/opt/homebrew/bin:/usr/bin:/bin /opt/homebrew/bin/npm --prefix /Users/zuzu/node-red-runtime update'", 1800)
     if "sam-apt" in found:
-        results["sam-apt"] = run("ssh SAM-WIFI 'sudo -n apt-get update && sudo -n DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'", 3600)
+        results["sam-apt"] = run("ssh SAM-WIFI 'if apt list --upgradable 2>/dev/null | grep -i -e firmware -e eeprom >/dev/null; then echo Firmware-update-requires-explicit-package-plan; exit 1; fi; if dpkg-query -l syncthing 2>/dev/null | grep -q \"^ii \"; then echo SyncThing-installed-bulk-upgrade-blocked; exit 1; fi; sudo -n apt-get update && sudo -n DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'", 3600)
     if "al-apt" in found:
-        results["al-apt"] = run("ssh AL 'sudo -n /usr/local/sbin/windance-package-maintenance'", 3600)
+        results["al-apt"] = run("ssh AL 'if apt list --upgradable 2>/dev/null | grep -i -e firmware -e eeprom >/dev/null; then echo Firmware-update-requires-explicit-package-plan; exit 1; fi; if dpkg-query -l syncthing 2>/dev/null | grep -q \"^ii \"; then echo SyncThing-installed-bulk-upgrade-blocked; exit 1; fi; sudo -n /usr/local/sbin/windance-package-maintenance'", 3600)
     if "al-containers" in found:
-        # SyncThing software may update, but its exact mounts (configuration/data
-        # bindings) must remain unchanged across the container replacement.
-        results["al-containers"] = run("ssh AL 'before=$(docker inspect syncthing --format \"{{json .Mounts}}\") && docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nickfedor/watchtower:latest open-webui portainer syncthing --run-once --cleanup && after=$(docker inspect syncthing --format \"{{json .Mounts}}\") && test \"$before\" = \"$after\"'", 3600)
+        results["al-containers"] = {"code": 1, "output": "Container upgrade deferred: compare upstream digest, pin target, and retain original image for rollback. SyncThing excluded."}
     if "hal-winget" in found:
         # Parse fixed table columns, not whitespace-delimited display names.
         package_ids = []
@@ -105,29 +129,19 @@ def apply_updates(found: dict) -> dict:
             id_start, version_start = header.index("Id"), header.index("Version")
             for line in table[table.index(header) + 2:]:
                 package_id = line[id_start:version_start].strip() if len(line) > version_start else ""
-                if "." in package_id: package_ids.append(package_id)
+                if re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.+-]*", package_id) and "." in package_id and "syncthing" not in package_id.lower(): package_ids.append(package_id)
         package_results = []
+        package_codes = []
         for package_id in package_ids:
             result = run(f"ssh HAL 'winget upgrade --id {package_id} --exact --silent --accept-package-agreements --accept-source-agreements --disable-interactivity'", 600)
             package_results.append(f"[{package_id}] EXIT {result['code']}\n{result['output']}")
-        results["hal-winget"] = {"code": max([0] + [1 for text in package_results if "EXIT 0" not in text]), "output": "\n\n".join(package_results) or "No eligible Winget packages."}
+            package_codes.append(result['code'])
+        results["hal-winget"] = {"code": int(any(package_codes) or not header), "output": "\n\n".join(package_results) or ("No eligible Winget packages." if header else "Cannot parse Winget upgrade table.")}
     if "hal-ollama-models" in found:
-        names = []
-        model_lines = found["hal-ollama-models"]["output"].splitlines()
-        header_at = next((i for i, line in enumerate(model_lines) if line.strip().startswith("NAME ")), -1)
-        for line in model_lines[header_at + 1:] if header_at >= 0 else []:
-            fields = line.split()
-            if len(fields) >= 4 and ":" in fields[0]: names.append(fields[0])
-        commands = [f"ollama pull {name}" for name in names]
-        results["hal-ollama-models"] = run("ssh HAL \"" + " & ".join(commands) + "\"", 7200) if commands else {"code": 0, "output": "No Ollama models installed."}
+        results["hal-ollama-models"] = {"code": 1, "output": "Model upgrade deferred: compare registry digests for explicit upstream tags; local/custom aliases must not be pulled."}
     for target in ("herald-macos", "sal-macos"):
         if target in found:
-            command = (
-                "sudo -n /usr/local/sbin/windance-macos-maintenance install-all"
-                if target.startswith("herald")
-                else "ssh SAL 'sudo -n /usr/local/sbin/windance-macos-maintenance install-all'"
-            )
-            results[target] = run(command, 7200)
+            results[target] = {"code": 1, "output": "macOS update deferred: select explicit compatible labels and check restart needs; install-all can include an excluded major OS upgrade."}
     if any(name.startswith("sal-") for name in results):
         results["sal-postflight"] = run(
             "ssh SAL 'set -e; "
@@ -145,20 +159,36 @@ def apply_updates(found: dict) -> dict:
 def main() -> int:
     before = audit()
     failures = {k: v for k, v in before.items() if v["code"] != 0}
+    if "sal-homebrew" in before and before["sal-homebrew"]["code"] == 0:
+        try:
+            data = json.loads(before["sal-homebrew"]["output"])
+            if not isinstance(data, dict) or not all(isinstance(data.get(key), list) for key in ("formulae", "casks")):
+                raise ValueError("Expected Homebrew formulae and casks arrays")
+        except (ValueError, TypeError) as exc:
+            failures["sal-homebrew"] = {"code": 1, "output": f"Invalid Homebrew audit: {exc}"}
     found = {k: v for k, v in before.items() if needs_update(k, v)}
     backup = None
     updates = {}
     if "--apply" in sys.argv and found:
         backup = make_backup()
-        if backup["code"] == 0 and len(backup["output"].splitlines()[-1]) == 40:
+        if backup["code"] == 0 and re.fullmatch(r"[0-9a-fA-F]{40}", backup["output"].strip().split("\n")[-1]):
             updates = apply_updates(found)
         else:
-            failures["github-restore-point"] = backup
+            failures["github-restore-point"] = {"code": backup["code"] or 1, "output": backup["output"] or "Backup did not return a commit SHA."}
     after = audit() if updates else {}
+    failures.update({f"postflight-{name}": item for name, item in after.items() if item["code"] != 0})
+    remaining = [name for name, item in after.items() if needs_update(name, item)]
+    if remaining:
+        failures["updates-remain"] = {"code": 1, "output": "Updates remain after attempted maintenance: " + ", ".join(remaining)}
     record = {"generated": datetime.now().astimezone().isoformat(), "updates_found": list(found),
               "sop_policy": "Auto-apply when existing SOPs and capabilities are preserved; obtain William's approval before a fundamental operating-procedure change.",
-              "sop_impact": {name: "none detected; routine compatible upgrade" for name in found},
+              "sop_impact": {name: "Not assessed by version inventory; verify target compatibility and existing workflows before application." for name in found},
               "check_failures": failures, "backup": backup, "updates": updates, "after": after}
+    record["before"] = before
+    record["audit_limits"] = {
+        "al-containers": "Inventory only; upstream image digests are not compared. This does not establish currency.",
+        "hal-ollama-models": "Inventory only; upstream model digests are not compared. Local/custom aliases are excluded from pulls.",
+        "excluded": "SyncThing, major OS upgrades, firmware and Level 8 remain excluded."}
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(record, indent=2), encoding="utf-8")
     lines = ["# Windance Software Maintenance", "", f"Generated: {record['generated']}", "",
@@ -166,6 +196,8 @@ def main() -> int:
              "## SOP impact", "",
              "Routine upgrades proceed without approval only when existing operational capabilities, authorization boundaries, workflows, data semantics, and routing remain intact. Fundamental SOP changes stop before upgrade and are presented to William for approval.", ""]
     for name, impact in record["sop_impact"].items(): lines += [f"- {name}: {impact}"]
+    lines += ["", "## Audit limits", ""]
+    for name, limit in record["audit_limits"].items(): lines += [f"- {name}: {limit}"]
     lines += [""]
     if backup: lines += ["## GitHub restore point", "~~~", backup["output"], "~~~", ""]
     for section, values in (("Check failures / blockers", failures), ("Upgrade results", updates)):
