@@ -86,3 +86,7 @@ Herald backend deployed and chat-tested. Pending William: choose password throug
 
 Finish private setup and live inbound verification, then outbound profile/dialing integration. Installed/publicly routed but not a completed calling service. See projects/HERALD_PHONE_2026-09-25.md.
 
+
+## Weekly decision-record handoff — 2026-09-25
+The September 22 stack review reached completed Scout research but blocked Forge assessment (5f1b0dfa-4f93-4d14-b0af-bc66601ec912), with no persisted /decision-logs record. Latest SAL output confirms incomplete/no report sent. Diagnose result extraction/classification as a bounded proposed follow-up; no repair or rerun is authorized by the digest. Owner for follow-through: Vega; proposed repair owner: Forge. Revisit 2026-10-02. Evidence and acceptance criteria: operations/digests/2026-09-25.md.
+
