@@ -81,3 +81,8 @@ Herald's base, Telegram and CLI tool selections now include the existing windanc
 ## Hermex public connection — 2026-09-13
 
 Herald backend deployed and chat-tested. Pending William: choose password through `ssh -t HERALD /Users/herald/services/hermex/set-password`; configure `hermex.reflectsody.com` on SAL's Cloudflare tunnel with HTTP origin `192.168.36.21:8787`; connect and test Hermex on iPhone. Login is locked until the password is chosen. Details: `projects/HERMEX_IPHONE_BACKEND_2026-09-13.md`.
+
+## Herald telephone pilot — 2026-09-25
+
+Finish private setup and live inbound verification, then outbound profile/dialing integration. Installed/publicly routed but not a completed calling service. See projects/HERALD_PHONE_2026-09-25.md.
+

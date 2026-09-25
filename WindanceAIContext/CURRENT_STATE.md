@@ -591,3 +591,8 @@ Warden is ACTIVE on SAL as of 2026-09-24 21:52 UTC after revision 7 review and a
 ## Software upgrade continuation — 2026-09-25
 AL recovery is verified. SAM packages/kernel, HAL Ollama and applications, and HERALD Hermes 0.21.5 are upgraded with postflight checks. Mac administrator updates and final Windows checks remain in progress; Node is intentionally pinned, SyncThing/firmware excluded. Read projects/SOFTWARE_UPGRADES_2026-09-25.md for current stage, receipts, exceptions and private recovery paths. Warden was resumed after healthy checks; pause again before Mac maintenance.
 
+
+## Herald private phone connector — 2026-09-25
+
+Dedicated +16052041255 is assigned to Herald TeXML app and voice.reflectsody.com reaches Herald port8796. Real Terra/medium connector canaries and 11 security checks passed. Private caller/key/PIN configuration and real carrier call verification remain pending; outbound remains disabled/unimplemented. Wendy unchanged. See projects/HERALD_PHONE_2026-09-25.md.
+
