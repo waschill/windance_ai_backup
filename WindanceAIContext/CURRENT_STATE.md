@@ -596,3 +596,6 @@ AL recovery is verified. SAM packages/kernel, HAL Ollama and applications, and H
 
 Dedicated +16052041255 is assigned to Herald TeXML app and voice.reflectsody.com reaches Herald port8796. Real Terra/medium connector canaries and 11 security checks passed. Private caller/key/PIN configuration and real carrier call verification remain pending; outbound remains disabled/unimplemented. Wendy unchanged. See projects/HERALD_PHONE_2026-09-25.md.
 
+
+Herald phone update: William completed private setup; configured=true verified. Real call outcome still pending.
+

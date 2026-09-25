@@ -1,6 +1,6 @@
 # Herald dedicated telephone interface — 2026-09-25
 
-Status: connector and public route installed; Telnyx application/number assigned. NOT yet live-call verified. Private setup pending. Outbound not implemented or enabled.
+Status: connector and public route installed; Telnyx application/number assigned. NOT yet live-call verified. Private setup completed by William; public health configured=true verified. Outbound not implemented or enabled.
 
 William requested direct two-way phone access to existing Herald, independent of Wendy/Windy receptionist. Dedicated number +16052041255. Wendy number/application unchanged.
 
@@ -34,3 +34,8 @@ Outbound requires a suitable Telnyx voice profile and bounded dialing integratio
 Source snapshot: `archive/20260925-herald-phone/`. Local working source: `C:/Users/wasch/Documents/Codex/2026-09-24/look-at-this-video-https-youtu/herald-phone/`.
 
 Disable private config enabled flag, unassign ONLY Herald number in Telnyx, and unload only `gui/501/com.windance.herald-phone` to retire. Public route may then be removed explicitly; do not alter other Cloudflare routes or Wendy. Do not restore a whole Hermes profile/database. Retain private conversation logs under existing retention policy; they are not shared context.
+
+## Private setup completion — 2026-09-25
+
+William completed the private terminal setup. Public health now reports configured=true, active_call=false. No private number, key or PIN was retrieved into shared context. Real inbound test requested; its outcome is still pending.
+
