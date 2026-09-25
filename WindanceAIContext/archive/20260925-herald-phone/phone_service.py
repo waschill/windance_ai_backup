@@ -124,18 +124,22 @@ class PhoneService:
             return hangup('Herald is unavailable. Please try again later.')
         self.attempts.append(now)
         ticket = secrets.token_urlsafe(32)
+        binding = secrets.token_urlsafe(32)
         base = c['public_base'].rstrip('/')
         root = ET.Element('Response')
         connect = ET.SubElement(root, 'Connect', {'action': base + '/ended', 'method': 'POST'})
-        ET.SubElement(connect, 'ConversationRelay', {
+        relay_node = ET.SubElement(connect, 'ConversationRelay', {
             'url': base.replace('https://', 'wss://', 1) + '/relay/' + ticket,
             'voice': c.get('voice', 'Telnyx.Ultra.Asher'), 'language': 'en-US',
             'transcriptionProvider': 'deepgram', 'dtmfDetection': 'true',
             'interruptible': 'any', 'welcomeGreetingInterruptible': 'none',
             'welcomeGreeting': 'Please enter your private phone PIN, followed by pound.'})
+        # TeXML and relay use different call identifiers/number representations.
+        # Bind the relay to the verified webhook with our own unpredictable value.
+        ET.SubElement(relay_node, 'Parameter', {'name': 'herald_binding', 'value': binding})
         ET.SubElement(root, 'Hangup')
         response = xml_response(root)
-        self.tickets[ticket] = {'call_id': call_id, 'from': form['From'], 'to': form['To'],
+        self.tickets[ticket] = {'call_id': call_id, 'from': form['From'], 'to': form['To'], 'binding': binding,
                                 'expires': now + 90}
         self.calls[call_id] = {'xml': response.body, 'expires': now + 3600}
         return response
@@ -221,10 +225,14 @@ class PhoneService:
                 'fields': sorted(initial), 'call_matches': initial.get('callSid') == info['call_id'],
                 'from_matches': initial.get('from') == info['from'],
                 'to_matches': initial.get('to') == info['to']}), flush=True)
-            if (initial.get('type') != 'setup' or initial.get('callSid') != info['call_id'] or
-                    initial.get('from') != info['from'] or initial.get('to') != info['to']):
+            parameters = initial.get('customParameters')
+            supplied = parameters.get('herald_binding') if isinstance(parameters, dict) else None
+            if (initial.get('type') != 'setup' or not isinstance(supplied, str) or
+                    not hmac.compare_digest(supplied, info['binding'])):
+                print('relay setup rejected: binding mismatch', flush=True)
                 await ws.close(code=1008)
                 return ws
+            print('relay setup authenticated; awaiting PIN', flush=True)
             while not ws.closed:
                 remaining = (c.get('max_call_seconds', 1200) if state['authorized'] else 60) - (time.monotonic() - started)
                 if remaining <= 0:

@@ -59,7 +59,9 @@ class RelayTests(unittest.IsolatedAsyncioTestCase):
         _, text = await self.get_ticket()
         url=ET.fromstring(text).find('Connect/ConversationRelay').get('url')
         ws=await self.client.ws_connect('/relay/'+url.rsplit('/',1)[1])
-        await ws.send_json({'type':'setup','callSid':'call-123456789','from':'+16055550100','to':'+16052041255'})
+        binding=ET.fromstring(text).find('Connect/ConversationRelay/Parameter').get('value')
+        await ws.send_json({'type':'setup','callSid':'different-carrier-id','from':'different-format','to':'different-format',
+                           'customParameters':{'herald_binding':binding}})
         return ws
 
     async def test_unsigned_rejected(self):
@@ -90,7 +92,7 @@ class RelayTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(self.service.active)
         await ws.close()
 
-    async def test_setup_call_mismatch_rejected(self):
+    async def test_setup_missing_binding_rejected(self):
         _,text=await self.get_ticket()
         token=ET.fromstring(text).find('Connect/ConversationRelay').get('url').rsplit('/',1)[1]
         ws=await self.client.ws_connect('/relay/'+token)
@@ -110,6 +112,13 @@ class RelayTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await ws.receive_json(),{'type':'text','token':'Verified response.','last':False})
         self.assertEqual((await ws.receive_json())['last'],True)
         await ws.close()
+
+    async def test_setup_wrong_binding_rejected(self):
+        _,text=await self.get_ticket()
+        token=ET.fromstring(text).find('Connect/ConversationRelay').get('url').rsplit('/',1)[1]
+        ws=await self.client.ws_connect('/relay/'+token)
+        await ws.send_json({'type':'setup','customParameters':{'herald_binding':'wrong'}})
+        self.assertEqual((await ws.receive()).type.value,8)
 
     async def test_bad_pin_lockout(self):
         ws=await self.connect()

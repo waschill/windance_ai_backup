@@ -44,3 +44,8 @@ William completed the private terminal setup. Public health now reports configur
 
 William reported immediate hangup. Telnyx Conversation Relay action callback at 2026-09-25 21:00:26 UTC reached /ended with HTTP200; error64105, WebSocket connection ended unexpectedly, customer_disconnect. Confirms signed form webhook processing works for this real callback. Added sanitized connection diagnostics (frame field names and match booleans only, no PIN/speech/phone numbers/capabilities). All11 integration tests passed; restarted only phone service. Second live attempt requested to identify rejection cause. No authentication bypass applied.
 
+
+## Relay binding correction
+
+Second real call reached WebSocket setup; callSid/from/to exact-match checks all failed. The original connector incorrectly assumed identical representations across TeXML and relay. Replaced these checks with a separate unpredictable 32-byte binding passed through the documented TeXML Parameter/customParameters mechanism, in addition to existing single-use URL capability. Caller/destination restrictions remain on the signed webhook; PIN gate unchanged. Missing/wrong binding fails closed. Twelve tests passed, including alternate carrier field values accepted only with correct binding. Deployed/restarted only phone service. Awaiting real call retest; no audio success claim yet.
+
