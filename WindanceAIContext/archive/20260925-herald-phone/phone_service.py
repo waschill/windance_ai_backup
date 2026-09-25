@@ -131,7 +131,7 @@ class PhoneService:
         connect = ET.SubElement(root, 'Connect', {'action': base + '/ended', 'method': 'POST'})
         relay_node = ET.SubElement(connect, 'ConversationRelay', {
             'url': base.replace('https://', 'wss://', 1) + '/relay/' + ticket,
-            'voice': c.get('voice', 'Telnyx.Ultra.Asher'), 'language': 'en-US',
+            'voice': c.get('voice', 'Telnyx.Ultra.Callie'), 'language': c.get('language', 'en'),
             'transcriptionProvider': 'deepgram', 'dtmfDetection': 'true',
             'interruptible': 'any', 'welcomeGreetingInterruptible': 'none'})
         # TeXML and relay use different call identifiers/number representations.

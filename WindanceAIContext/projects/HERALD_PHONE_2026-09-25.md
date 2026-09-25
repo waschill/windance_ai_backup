@@ -54,3 +54,9 @@ Second real call reached WebSocket setup; callSid/from/to exact-match checks all
 
 Third call passed one-time binding and reached PIN stage but William heard silence. Added a standard TeXML Say before Connect to establish ordinary audio and moved PIN prompt from welcomeGreeting to explicit relay text after authenticated setup. Preauthentication relay error frames are now handled and diagnostic descriptions redact PIN/capabilities/caller values. Twelve tests passed. Phone service restarted with no active call reported. Awaiting audible test result.
 
+
+William heard the standard Connecting to Herald greeting but no relay PIN prompt. This isolates silence to relay speech. Changed relay voice/language to Telnyx documented example Telnyx.Ultra.Callie/en (previous Asher/en-US); preserved all auth settings. Twelve tests passed; service restarted after health active_call=false. Carrier audio retest pending.
+
+
+Before the next call, found the dedicated TeXML ConversationRelay verb reference uses Telnyx.Natural.abbie/en, unlike the general guide Ultra example. Changed runtime voice to Natural.abbie/en (config hot reload); testing this documented alternative. Callie/en not independently call-tested. Source: https://developers.telnyx.com/docs/voice/programmable-voice/texml-verbs/conversationrelay .
+
