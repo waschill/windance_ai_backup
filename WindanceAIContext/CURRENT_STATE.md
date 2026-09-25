@@ -599,3 +599,6 @@ Dedicated +16052041255 is assigned to Herald TeXML app and voice.reflectsody.com
 
 Herald phone update: William completed private setup; configured=true verified. Real call outcome still pending.
 
+
+Herald phone live update: William confirmed PIN prompt and conversation using Natural.abbie/en. Male NaturalHD.albion/en now selected; awaiting voice confirmation. Relay retained, fallback not deployed. Outbound still pending.
+

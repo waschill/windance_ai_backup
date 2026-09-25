@@ -1,6 +1,6 @@
 # Herald dedicated telephone interface — 2026-09-25
 
-Status: connector and public route installed; Telnyx application/number assigned. NOT yet live-call verified. Private setup completed by William; public health configured=true verified. Outbound not implemented or enabled.
+Status: connector and public route installed; Telnyx application/number assigned. Inbound conversation confirmed working by William with Natural.abbie/en. Private setup completed by William; public health configured=true verified. Outbound not implemented or enabled.
 
 William requested direct two-way phone access to existing Herald, independent of Wendy/Windy receptionist. Dedicated number +16052041255. Wendy number/application unchanged.
 
@@ -59,4 +59,11 @@ William heard the standard Connecting to Herald greeting but no relay PIN prompt
 
 
 Before the next call, found the dedicated TeXML ConversationRelay verb reference uses Telnyx.Natural.abbie/en, unlike the general guide Ultra example. Changed runtime voice to Natural.abbie/en (config hot reload); testing this documented alternative. Callie/en not independently call-tested. Source: https://developers.telnyx.com/docs/voice/programmable-voice/texml-verbs/conversationrelay .
+
+
+## Live conversation verified; male voice selected
+
+Telnyx trace showed the prior silent attempt still used Ultra.Callie/en, so it did not test Natural. William subsequently confirmed the PIN prompt and that he could talk to Herald with Natural.abbie/en. Ultra choices were silent; Natural worked. The drafted Gather/Say fallback was never deployed and is not needed for this verified live path. William pointed out the female voice; selected Telnyx.NaturalHD.albion/en, a male voice in the Natural family and a documented TeXML relay identifier. Configuration readback verified; male-voice live call not yet confirmed. Abbie is the known-working rollback voice. Intro Connecting to Herald remains the separate default Say voice.
+
+Outbound still needs its profile and dialing integration. No camera setup or production-drive write test was performed. Initial status notes above are historical; current inbound confirmation supersedes them.
 
