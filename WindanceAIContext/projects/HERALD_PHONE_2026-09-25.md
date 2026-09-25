@@ -79,3 +79,8 @@ Voice changes: edit only voice (and compatible language if necessary) in Herald 
 
 William explicitly supplied Quentin voice ID Telnyx.Ultra.5568a7df-e5ab-4442-9fae-2e9ba1b15ad8 and requested its use. Applied that exact voice in private config and verified readback; language en and require_pin=false retained. No service restart necessary; next call loads the new selection. Service healthy with no active call before change. Prior named Ultra samples were silent, so this UUID voice requires its own live listening check; configuration success is not audio verification. Previous voice for rollback: Telnyx.NaturalHD.albion. Outbound remains deferred at William's request.
 
+
+## Quentin reverted at William's request — 2026-09-25
+
+William reported Quentin answered but the call hung up after he requested a task. He explicitly requested reversing the voice setting. Restored Telnyx.NaturalHD.albion and verified readback; require_pin=false retained. No service restart required. This rollback does not establish the cause of the disconnect or whether the requested task executed; neither was investigated or replayed as part of this voice rollback.
+

@@ -608,3 +608,6 @@ Herald telephone: William confirmed conversation after SAL reboot. At his reques
 
 Herald voice update: William selected Quentin, Telnyx.Ultra.5568a7df-e5ab-4442-9fae-2e9ba1b15ad8. Exact setting applied; live audio pending. PIN stays disabled; outbound deferred.
 
+
+Herald current voice: restored Telnyx.NaturalHD.albion at William's request after a Quentin call disconnected following a task request. PIN remains off. Disconnect cause/task completion unverified; no task replay.
+
