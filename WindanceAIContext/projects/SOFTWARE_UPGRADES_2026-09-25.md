@@ -37,3 +37,13 @@ Official sources: https://github.com/NousResearch/hermes-agent/releases/tag/v202
 
 William authenticated on SAL. The Apple installer is actively downloading the selected Tahoe 26.7 patch; no reboot or completion is claimed. HERALD Apple installation has not started. HAL Hermes Desktop was discovered at the older v2026.9.7 source/build; a separate exact-v2026.9.24 candidate is building. The running app uses remote connection mode and has not been closed or replaced. Private user settings remain untouched. The authoritative Herald upgrade plan now supersedes yesterday's AL hold and prohibits duplicate Forge job replay.
 
+
+## HAL desktop installed — 2026-09-25 21:10 UTC
+
+HAL Hermes Desktop was separately built from exact stable source f97608f178d1ffeca59860195ab7da295f7c8e5f (v2026.9.24; desktop package 0.17.6). The workspace-scoped npm install omitted a required shared lucide-react dependency; a full root npm ci using the upstream lock resolved the build without changing source. Bundle validation passed, including native node-pty binaries and renderer payload. The upstream validation helper incorrectly required a branch string despite the production stamp writer/reader explicitly supporting null for detached commits; the local check permits null while independently requiring the exact clean stable SHA. No production application code was patched.
+
+After William's app closed, Vega backed up the full user-data directory privately, staged and swapped only the desktop package, then relaunched. Five new Hermes processes were running and established TCP connections to HERALD:9120. The saved connection, connections, secure-token-storage and native-oauth-tokens files were hash-identical to the pre-change copies. No user secrets were printed. The previous app remains alongside the release as win-unpacked.before-20260925 and in the private recovery directory. This verifies startup and transport; no message was sent as a UI canary.
+
+HAL's separate resident local Hermes gateway remains at package 0.21.1 and is not covered by the desktop replacement. Its long-running Python processes were not interrupted. An isolated Python 0.21.5 candidate has compatible dependencies and successful core imports (only hermes-agent and pillow-heif changed). Assess gateway ownership/activity before changing its runtime. HERALD's production backend is already verified 0.21.5. Do not claim every installed Hermes runtime is updated.
+
+SAL Apple installer completed download and entered Safari/Command Line Tools installation. Tahoe reboot/activation and HERALD Mac patch remain pending. The existing follow-through heartbeat has been updated and reactivated; it must inspect live processes and avoid duplicate installers.
