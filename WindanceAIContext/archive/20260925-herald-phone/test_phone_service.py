@@ -62,6 +62,7 @@ class RelayTests(unittest.IsolatedAsyncioTestCase):
         binding=ET.fromstring(text).find('Connect/ConversationRelay/Parameter').get('value')
         await ws.send_json({'type':'setup','callSid':'different-carrier-id','from':'different-format','to':'different-format',
                            'customParameters':{'herald_binding':binding}})
+        self.assertIn('private phone PIN', (await ws.receive_json())['token'])
         return ws
 
     async def test_unsigned_rejected(self):

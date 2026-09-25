@@ -49,3 +49,8 @@ William reported immediate hangup. Telnyx Conversation Relay action callback at 
 
 Second real call reached WebSocket setup; callSid/from/to exact-match checks all failed. The original connector incorrectly assumed identical representations across TeXML and relay. Replaced these checks with a separate unpredictable 32-byte binding passed through the documented TeXML Parameter/customParameters mechanism, in addition to existing single-use URL capability. Caller/destination restrictions remain on the signed webhook; PIN gate unchanged. Missing/wrong binding fails closed. Twelve tests passed, including alternate carrier field values accepted only with correct binding. Deployed/restarted only phone service. Awaiting real call retest; no audio success claim yet.
 
+
+## Audio diagnosis
+
+Third call passed one-time binding and reached PIN stage but William heard silence. Added a standard TeXML Say before Connect to establish ordinary audio and moved PIN prompt from welcomeGreeting to explicit relay text after authenticated setup. Preauthentication relay error frames are now handled and diagnostic descriptions redact PIN/capabilities/caller values. Twelve tests passed. Phone service restarted with no active call reported. Awaiting audible test result.
+

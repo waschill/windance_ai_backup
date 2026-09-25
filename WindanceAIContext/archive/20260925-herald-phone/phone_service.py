@@ -127,13 +127,13 @@ class PhoneService:
         binding = secrets.token_urlsafe(32)
         base = c['public_base'].rstrip('/')
         root = ET.Element('Response')
+        ET.SubElement(root, 'Say').text = 'Connecting to Herald.'
         connect = ET.SubElement(root, 'Connect', {'action': base + '/ended', 'method': 'POST'})
         relay_node = ET.SubElement(connect, 'ConversationRelay', {
             'url': base.replace('https://', 'wss://', 1) + '/relay/' + ticket,
             'voice': c.get('voice', 'Telnyx.Ultra.Asher'), 'language': 'en-US',
             'transcriptionProvider': 'deepgram', 'dtmfDetection': 'true',
-            'interruptible': 'any', 'welcomeGreetingInterruptible': 'none',
-            'welcomeGreeting': 'Please enter your private phone PIN, followed by pound.'})
+            'interruptible': 'any', 'welcomeGreetingInterruptible': 'none'})
         # TeXML and relay use different call identifiers/number representations.
         # Bind the relay to the verified webhook with our own unpredictable value.
         ET.SubElement(relay_node, 'Parameter', {'name': 'herald_binding', 'value': binding})
@@ -233,6 +233,7 @@ class PhoneService:
                 await ws.close(code=1008)
                 return ws
             print('relay setup authenticated; awaiting PIN', flush=True)
+            await say('Please enter your private phone PIN, followed by pound.')
             while not ws.closed:
                 remaining = (c.get('max_call_seconds', 1200) if state['authorized'] else 60) - (time.monotonic() - started)
                 if remaining <= 0:
@@ -243,6 +244,13 @@ class PhoneService:
                     break
                 event = json.loads(msg.data)
                 kind = event.get('type')
+                if kind == 'error':
+                    description = str(event.get('description', 'No description'))
+                    for value in (pin, info['binding'], request.match_info['ticket'], info['from'], info['to']):
+                        if value:
+                            description = description.replace(value, '[redacted]')
+                    print('relay error: ' + description[:500], flush=True)
+                    break
                 if not state['authorized']:
                     if kind == 'dtmf':
                         digit = event.get('digit', '')
