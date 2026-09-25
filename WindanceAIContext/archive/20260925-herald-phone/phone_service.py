@@ -147,6 +147,7 @@ class PhoneService:
     async def relay(self, request):
         info = self.tickets.pop(request.match_info['ticket'], None)
         if not info or info['expires'] < time.time() or self.active:
+            print('relay rejected: ticket_valid=%s active=%s' % (bool(info and info['expires'] >= time.time()), self.active), flush=True)
             raise web.HTTPForbidden()
         self.active = True
         ws = web.WebSocketResponse(heartbeat=20, max_msg_size=32768)
@@ -216,6 +217,10 @@ class PhoneService:
         try:
             await ws.prepare(request)
             initial = await asyncio.wait_for(ws.receive_json(), timeout=10)
+            print('relay setup: ' + json.dumps({'type': initial.get('type'),
+                'fields': sorted(initial), 'call_matches': initial.get('callSid') == info['call_id'],
+                'from_matches': initial.get('from') == info['from'],
+                'to_matches': initial.get('to') == info['to']}), flush=True)
             if (initial.get('type') != 'setup' or initial.get('callSid') != info['call_id'] or
                     initial.get('from') != info['from'] or initial.get('to') != info['to']):
                 await ws.close(code=1008)
@@ -279,9 +284,10 @@ class PhoneService:
                     else:
                         await begin_turn(text)
                 elif kind == 'error':
+                    print('relay error frame received', flush=True)
                     break
-        except (asyncio.TimeoutError, ValueError, ConnectionError):
-            pass
+        except (asyncio.TimeoutError, ValueError, ConnectionError) as exc:
+            print('relay exception: ' + type(exc).__name__, flush=True)
         finally:
             pin = ''
             if proc and proc.returncode is None:
