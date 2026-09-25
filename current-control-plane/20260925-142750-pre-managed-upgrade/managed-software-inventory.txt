@@ -1,0 +1,286 @@
+﻿Created: 2026-09-25T14:27:54.7657598-06:00
+Reason: William-authorized-resumed-upgrades-20260925
+
+HAL winget upgrades:
+Name                                                         Id                                Version             Available           Source
+---------------------------------------------------------------------------------------------------------------------------------------------
+Angry IP Scanner                                             angryziber.AngryIPScanner         3.9.3               3.10.0              winget
+balenaEtcher                                                 Balena.Etcher                     2.1.6               2.1.7               winget
+FFmpeg                                                       Gyan.FFmpeg                       9.0.1               9.0.2               winget
+LibreOffice 25.8.4.2                                         TheDocumentFoundation.LibreOffice 25.8.4.2            26.8.0.3            winget
+Microsoft Edge                                               Microsoft.Edge                    153.0.4234.48       154.0.4258.37       winget
+Microsoft Teams                                              Microsoft.Teams                   24257.205.3165.2029 26198.304.4946.9672 winget
+Microsoft Visual C++ v14 Redistributable (x64) - 14.50.35719 Microsoft.VCRedist.2015+.x64      14.50.35719.0       14.51.36247.0       winget
+Microsoft Visual C++ v14 Redistributable (x86) - 14.50.35719 Microsoft.VCRedist.2015+.x86      14.50.35719.0       14.51.36247.0       winget
+Ollama version 0.34.1                                        Ollama.Ollama                     0.34.1              0.34.4              winget
+PuTTY release 0.84 (64-bit)                                  PuTTY.PuTTY                       0.84.0.0            0.85.0.0            winget
+Telegram Desktop                                             Telegram.TelegramDesktop          7.1.3               7.2.9               winget
+UltraVNC                                                     uvncbvba.UltraVNC                 1.8.2.4             1.8.3.0             winget
+Windows Subsystem for Linux                                  Microsoft.WSL                     2.7.12.0            2.7.13              winget
+13 upgrades available.
+2 package(s) have version numbers that cannot be determined. Use --include-unknown to see all results.
+
+HAL Ollama:
+ollama version is 0.34.1
+NAME                                 ID              SIZE      MODIFIED    
+windance-ledger:latest               fffb29170f20    9.6 GB    13 days ago    
+windance-jean:latest                 b37b9bfa974f    9.6 GB    13 days ago    
+windance-max:latest                  a9ff603586b7    9.6 GB    13 days ago    
+windance-forge:latest                2e98c18ed69a    9.6 GB    13 days ago    
+windance-scout:latest                8dd1cd50a6de    9.6 GB    13 days ago    
+windance-sentinel:latest             d4b484e642a1    9.6 GB    13 days ago    
+windance-herald:latest               aa85d58177da    9.6 GB    13 days ago    
+windance-archivist:latest            4b95559feb9c    9.6 GB    13 days ago    
+windance-athena:latest               1c37c9b0886b    9.6 GB    13 days ago    
+windance-sandbox:latest              ce470181d2c7    6.6 GB    13 days ago    
+windance-iris-phi-backup:latest      56d0cb1ed2c2    9.1 GB    13 days ago    
+windance-athena-phi-backup:latest    14dea2d4b37b    9.1 GB    13 days ago    
+windance-jim-qwen:latest             fd96e2757702    9.3 GB    13 days ago    
+windance-iris:latest                 ca5cded338a8    9.6 GB    13 days ago    
+windance-jim-mindwell:latest         5707ed8e8985    9.3 GB    13 days ago    
+nomic-embed-text:latest              0a109f422b47    274 MB    3 weeks ago    
+gemma4:latest                        c6eb396dbd59    9.6 GB    3 weeks ago    
+vortex/helpingai-9b:latest           3f4f7f75b3c6    5.0 GB    3 weeks ago    
+ALIENTELLIGENCE/mindwell:latest      c5b3abcbf36c    9.3 GB    3 weeks ago    
+qwen3:14b                            bdbd181c33f2    9.3 GB    4 weeks ago    
+ministral-3:latest                   1922accd5827    6.0 GB    4 weeks ago    
+samantha-mistral:7b                  f7c8c9be1da0    4.1 GB    4 weeks ago    
+qwen3.5:9b                           6488c96fa5fa    6.6 GB    6 weeks ago    
+granite4:tiny-h                      566b725534ea    4.2 GB    6 weeks ago    
+phi4:14b                             ac896e5b8b34    9.1 GB    6 weeks ago    
+
+HERALD:
+Hermes Agent v0.21.2 (2026.9.11) · upstream 7b761da2
+Install directory: /Users/herald/.hermes/hermes-agent
+Install method: git
+Python: 3.11.15
+OpenAI SDK: 2.24.0
+Update available: 9481 commits behind — run 'hermes update'
+ProductName:		macOS
+ProductVersion:		26.5.2
+BuildVersion:		25F84
+
+SAL:
+nss
+Node-RED v5.0.7
+Node.js v26.9.0
+Darwin 25.6.0 arm64 LE
+cloudflared version 2026.9.3 (built 2026-09-24T15:31:10Z)
+
+AL:
+Listing...
+python3-software-properties/resolute-updates 0.120.1 all [upgradable from: 0.120]
+rust-coreutils/resolute-updates 0.10.0-1ubuntu2~26.04.1 amd64 [upgradable from: 0.8.0-0ubuntu3]
+software-properties-common/resolute-updates 0.120.1 all [upgradable from: 0.120]
+ubuntu-kernel-accessories/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-minimal/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-server-minimal/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-server/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-standard/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+searxng-core bcfaed4091d5 Up 3 hours
+truth-engine-lab 9591b13f1384 Up 3 hours (healthy)
+open-webui 9591b13f1384 Up 3 hours (healthy)
+portainer 4d616db18cfe Up 3 hours
+searxng-valkey a0dbf4c1d570 Up 3 hours
+syncthing lscr.io/linuxserver/syncthing:latest Up 3 hours
+
+SAM:
+Listing...
+agnostics/stable 1.7 arm64 [upgradable from: 1.6]
+at-spi2-common/stable,stable 2.56.2-1+deb13u2 all [upgradable from: 2.56.2-1+deb13u1]
+base-files/stable 13.8+deb13u7 arm64 [upgradable from: 13.8+deb13u6]
+bash/stable 5.2.37-2+b10 arm64 [upgradable from: 5.2.37-2+b9]
+bind9-dnsutils/stable-security 1:9.20.29-1~deb13u1 arm64 [upgradable from: 1:9.20.26-1~deb13u1]
+bind9-host/stable-security 1:9.20.29-1~deb13u1 arm64 [upgradable from: 1:9.20.26-1~deb13u1]
+bind9-libs/stable-security 1:9.20.29-1~deb13u1 arm64 [upgradable from: 1:9.20.26-1~deb13u1]
+busybox/stable 1:1.37.0-6+b9 arm64 [upgradable from: 1:1.37.0-6+b8]
+chromium-common/stable 1:153.0.8010.52-1~deb13u1+rpt1 arm64 [upgradable from: 1:151.0.7922.173-1~deb13u1+rpt1]
+chromium-l10n/stable,stable 1:153.0.8010.52-1~deb13u1+rpt1 all [upgradable from: 1:151.0.7922.173-1~deb13u1+rpt1]
+chromium-sandbox/stable 1:153.0.8010.52-1~deb13u1+rpt1 arm64 [upgradable from: 1:151.0.7922.173-1~deb13u1+rpt1]
+chromium/stable 1:153.0.8010.52-1~deb13u1+rpt1 arm64 [upgradable from: 1:151.0.7922.173-1~deb13u1+rpt1]
+curl/stable 8.14.1-2+deb13u5 arm64 [upgradable from: 8.14.1-2+deb13u4]
+dhcpcd-base/stable 1:10.1.0-11+deb13u4 arm64 [upgradable from: 1:10.1.0-11+deb13u3]
+dirmngr/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+dnsmasq-base/stable 2.91-1+deb13u2 arm64 [upgradable from: 2.91-1+deb13u1]
+e2fsprogs/stable 1.47.2-3+b12 arm64 [upgradable from: 1.47.2-3+b11]
+firefox/stable 156.0-1+rpt1 arm64 [upgradable from: 154.0-1+rpt1]
+gir1.2-atk-1.0/stable 2.56.2-1+deb13u2 arm64 [upgradable from: 2.56.2-1+deb13u1]
+gir1.2-glib-2.0/stable 2.84.4-3~deb13u5 arm64 [upgradable from: 2.84.4-3~deb13u3]
+gnupg-utils/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gpg-agent/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gpg-wks-client/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gpg/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gpgconf/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gpgsm/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gpgv/stable 2.4.7-21+deb13u1+b5 arm64 [upgradable from: 2.4.7-21+deb13u1+b4]
+gstreamer1.0-alsa/stable 1.26.2-1+rpt3+deb13u2 arm64 [upgradable from: 1.26.2-1+rpt3+deb13u1]
+gstreamer1.0-gl/stable 1.26.2-1+rpt3+deb13u2 arm64 [upgradable from: 1.26.2-1+rpt3+deb13u1]
+gstreamer1.0-plugins-bad/stable 1.26.2-3+rpt4+deb13u3 arm64 [upgradable from: 1.26.2-3+rpt3+deb13u2]
+gstreamer1.0-plugins-base/stable 1.26.2-1+rpt3+deb13u2 arm64 [upgradable from: 1.26.2-1+rpt3+deb13u1]
+gstreamer1.0-x/stable 1.26.2-1+rpt3+deb13u2 arm64 [upgradable from: 1.26.2-1+rpt3+deb13u1]
+gui-runcmd/stable 0.3 arm64 [upgradable from: 0.2]
+gzip/stable 1.13-1+deb13u1 arm64 [upgradable from: 1.13-1]
+imagemagick-7-common/stable,stable 8:7.1.1.43+dfsg1-1+deb13u12 all [upgradable from: 8:7.1.1.43+dfsg1-1+deb13u11]
+labwc/stable 0.20.1-1+rpt1 arm64 [upgradable from: 0.9.8-1+rpt1]
+libasound2-data/stable,stable 1.2.14-1+rpt1+deb13u1 all [upgradable from: 1.2.14-1+rpt1]
+libasound2t64/stable 1.2.14-1+rpt1+deb13u1 arm64 [upgradable from: 1.2.14-1+rpt1]
+libatk-bridge2.0-0t64/stable 2.56.2-1+deb13u2 arm64 [upgradable from: 2.56.2-1+deb13u1]
+libatk1.0-0t64/stable 2.56.2-1+deb13u2 arm64 [upgradable from: 2.56.2-1+deb13u1]
+libatopology2t64/stable 1.2.14-1+rpt1+deb13u1 arm64 [upgradable from: 1.2.14-1+rpt1]
+libatspi2.0-0t64/stable 2.56.2-1+deb13u2 arm64 [upgradable from: 2.56.2-1+deb13u1]
+libaudit-common/stable,stable 1:4.0.2-2+deb13u1 all [upgradable from: 1:4.0.2-2]
+libaudit1/stable 1:4.0.2-2+deb13u1 arm64 [upgradable from: 1:4.0.2-2+b2]
+libc-bin/stable 2.41-12+rpt1+deb13u4 arm64 [upgradable from: 2.41-12+rpt1+deb13u3]
+libc-dev-bin/stable 2.41-12+rpt1+deb13u4 arm64 [upgradable from: 2.41-12+rpt1+deb13u3]
+libc-l10n/stable,stable 2.41-12+rpt1+deb13u4 all [upgradable from: 2.41-12+rpt1+deb13u3]
+libc6-dev/stable 2.41-12+rpt1+deb13u4 arm64 [upgradable from: 2.41-12+rpt1+deb13u3]
+libc6/stable 2.41-12+rpt1+deb13u4 arm64 [upgradable from: 2.41-12+rpt1+deb13u3]
+libcap2-bin/stable 1:2.75-10+deb13u1+b3 arm64 [upgradable from: 1:2.75-10+deb13u1+b1]
+libcap2/stable 1:2.75-10+deb13u1+b3 arm64 [upgradable from: 1:2.75-10+deb13u1+b1]
+libcom-err2/stable 1.47.2-3+b12 arm64 [upgradable from: 1.47.2-3+b11]
+libcurl3t64-gnutls/stable 8.14.1-2+deb13u5 arm64 [upgradable from: 8.14.1-2+deb13u4]
+libcurl4t64/stable 8.14.1-2+deb13u5 arm64 [upgradable from: 8.14.1-2+deb13u4]
+libde265-0/stable,stable-security 1.0.15-1+deb13u2 arm64 [upgradable from: 1.0.15-1+deb13u1]
+libegl-mesa0/stable 26.2.2-1~bpo13+0~rpt1 arm64 [upgradable from: 26.2.0-1~bpo13+0~rpt3]
+libevent-2.1-7t64/stable-security 2.1.13-stable-1~deb13u1 arm64 [upgradable from: 2.1.12-stable-10+b1]
+libevent-core-2.1-7t64/stable-security 2.1.13-stable-1~deb13u1 arm64 [upgradable from: 2.1.12-stable-10+b1]
+libevent-pthreads-2.1-7t64/stable-security 2.1.13-stable-1~deb13u1 arm64 [upgradable from: 2.1.12-stable-10+b1]
+libext2fs2t64/stable 1.47.2-3+b12 arm64 [upgradable from: 1.47.2-3+b11]
+libfluidsynth3/stable 2.4.4+dfsg-1+deb13u3 arm64 [upgradable from: 2.4.4+dfsg-1+deb13u2]
+libgbm1/stable 26.2.2-1~bpo13+0~rpt1 arm64 [upgradable from: 26.2.0-1~bpo13+0~rpt3]
+libgl1-mesa-dri/stable 26.2.2-1~bpo13+0~rpt1 arm64 [upgradable from: 26.2.0-1~bpo13+0~rpt3]
+libglib2.0-0t64/stable 2.84.4-3~deb13u5 arm64 [upgradable from: 2.84.4-3~deb13u3]
+libglib2.0-bin/stable 2.84.4-3~deb13u5 arm64 [upgradable from: 2.84.4-3~deb13u3]
+libglib2.0-data/stable,stable 2.84.4-3~deb13u5 all [upgradable from: 2.84.4-3~deb13u3]
+libglx-mesa0/stable 26.2.2-1~bpo13+0~rpt1 arm64 [upgradable from: 26.2.0-1~bpo13+0~rpt3]
+libgstreamer-gl1.0-0/stable 1.26.2-1+rpt3+deb13u2 arm64 [upgradable from: 1.26.2-1+rpt3+deb13u1]
+libgstreamer-plugins-bad1.0-0/stable 1.26.2-3+rpt4+deb13u3 arm64 [upgradable from: 1.26.2-3+rpt3+deb13u2]
+libgstreamer-plugins-base1.0-0/stable 1.26.2-1+rpt3+deb13u2 arm64 [upgradable from: 1.26.2-1+rpt3+deb13u1]
+libgtk-layer-shell0/stable 0.9.0-2+rpt2 arm64 [upgradable from: 0.9.0-2]
+libjbig2dec0/stable-security 0.20-1+deb13u1 arm64 [upgradable from: 0.20-1+b3]
+libldb2/stable 2:2.11.0+samba4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:2.11.0+samba4.22.10+dfsg-0+deb13u2]
+libmagickcore-7.q16-10-extra/stable 8:7.1.1.43+dfsg1-1+deb13u12 arm64 [upgradable from: 8:7.1.1.43+dfsg1-1+deb13u11]
+libmagickcore-7.q16-10/stable 8:7.1.1.43+dfsg1-1+deb13u12 arm64 [upgradable from: 8:7.1.1.43+dfsg1-1+deb13u11]
+libmagickwand-7.q16-10/stable 8:7.1.1.43+dfsg1-1+deb13u12 arm64 [upgradable from: 8:7.1.1.43+dfsg1-1+deb13u11]
+libmbedcrypto16/stable 3.6.6-0.1~deb13u1 arm64 [upgradable from: 3.6.5-0.1~deb13u1]
+libnfs14/stable 5.0.2-1+deb13u1 arm64 [upgradable from: 5.0.2-1+b2]
+libpcre2-16-0/stable 10.46-1~deb13u2 arm64 [upgradable from: 10.46-1~deb13u1]
+libpcre2-8-0/stable 10.46-1~deb13u2 arm64 [upgradable from: 10.46-1~deb13u1]
+libperl5.40/stable 5.40.1-6+deb13u1 arm64 [upgradable from: 5.40.1-6]
+libpython3.13-dev/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+libpython3.13-minimal/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+libpython3.13-stdlib/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+libpython3.13/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+libraw23t64/stable 0.21.4-2+deb13u1 arm64 [upgradable from: 0.21.4-2]
+libsdl2-image-2.0-0/stable 2.8.8+dfsg-1+deb13u1 arm64 [upgradable from: 2.8.8+dfsg-1]
+libsmbclient0/stable 2:4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:4.22.10+dfsg-0+deb13u2]
+libsqlite3-0/stable 3.46.1-7+deb13u2 arm64 [upgradable from: 3.46.1-7+deb13u1]
+libss2/stable 1.47.2-3+b12 arm64 [upgradable from: 1.47.2-3+b11]
+libssh2-1t64/stable 1.11.1-1+deb13u2 arm64 [upgradable from: 1.11.1-1+deb13u1]
+libssl3t64/stable 3.5.7-1~deb13u2+rpt1 arm64 [upgradable from: 3.5.7-1~deb13u2]
+libtalloc2/stable 2:2.4.3+samba4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:2.4.3+samba4.22.10+dfsg-0+deb13u2]
+libtdb1/stable 2:1.4.13+samba4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:1.4.13+samba4.22.10+dfsg-0+deb13u2]
+libtevent0t64/stable 2:0.16.2+samba4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:0.16.2+samba4.22.10+dfsg-0+deb13u2]
+libwbclient0/stable 2:4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:4.22.10+dfsg-0+deb13u2]
+libxkbcommon-x11-0/stable 1.13.1-1~bpo13+1+rpt1 arm64 [upgradable from: 1.7.0-2]
+libxkbcommon0/stable 1.13.1-1~bpo13+1+rpt1 arm64 [upgradable from: 1.7.0-2]
+libxkbregistry0/stable 1.13.1-1~bpo13+1+rpt1 arm64 [upgradable from: 1.7.0-2]
+linux-base-rpi-2712/stable 1:6.18.50-1+rpt1 arm64 [upgradable from: 1:6.18.39-1+rpt1]
+linux-base-rpi-v8/stable 1:6.18.50-1+rpt1 arm64 [upgradable from: 1:6.18.39-1+rpt1]
+linux-headers-rpi-2712/stable 1:6.18.50-1+rpt1 arm64 [upgradable from: 1:6.18.39-1+rpt1]
+linux-headers-rpi-v8/stable 1:6.18.50-1+rpt1 arm64 [upgradable from: 1:6.18.39-1+rpt1]
+linux-image-rpi-2712/stable 1:6.18.50-1+rpt1 arm64 [upgradable from: 1:6.18.39-1+rpt1]
+linux-image-rpi-v8/stable 1:6.18.50-1+rpt1 arm64 [upgradable from: 1:6.18.39-1+rpt1]
+linux-libc-dev/stable,stable 1:6.18.50-1+rpt1 all [upgradable from: 1:6.18.39-1+rpt1]
+locales/stable,stable 2.41-12+rpt1+deb13u4 all [upgradable from: 2.41-12+rpt1+deb13u3]
+logsave/stable 1.47.2-3+b12 arm64 [upgradable from: 1.47.2-3+b11]
+lpplug-batt/stable 1.11 arm64 [upgradable from: 1.3]
+lpplug-bluetooth/stable 1.15 arm64 [upgradable from: 1.8]
+lpplug-clock/stable 1.14 arm64 [upgradable from: 1.6]
+lpplug-cpu/stable 1.11 arm64 [upgradable from: 1.3]
+lpplug-cputemp/stable 1.11 arm64 [upgradable from: 1.3]
+lpplug-ejecter/stable 1.19 arm64 [upgradable from: 1.9]
+lpplug-gpu/stable 1.11 arm64 [upgradable from: 1.3]
+lpplug-magnifier/stable 1.4 arm64 [upgradable from: 1.0]
+lpplug-menu/stable 1.27 arm64 [upgradable from: 1.18]
+lpplug-netman/stable 1.19 arm64 [upgradable from: 1.11]
+lpplug-power/stable 1.16 arm64 [upgradable from: 1.8]
+lpplug-updater/stable 1.12 arm64 [upgradable from: 1.5]
+lpplug-volumepulse/stable 1.20 arm64 [upgradable from: 1.13]
+lxpanel-pi/stable 1.11 arm64 [upgradable from: 1.7]
+merp/stable 0.4 arm64 [upgradable from: 0.2]
+mesa-libgallium/stable 26.2.2-1~bpo13+0~rpt1 arm64 [upgradable from: 26.2.0-1~bpo13+0~rpt3]
+mesa-vulkan-drivers/stable 26.2.2-1~bpo13+0~rpt1 arm64 [upgradable from: 26.2.0-1~bpo13+0~rpt3]
+mkvtoolnix/stable-security 92.0-1+deb13u1 arm64 [upgradable from: 92.0-1]
+nginx-common/stable-security,stable-security 1.26.3-3+deb13u9 all [upgradable from: 1.26.3-3+deb13u7]
+nginx/stable-security 1.26.3-3+deb13u9 arm64 [upgradable from: 1.26.3-3+deb13u7]
+openssl-provider-legacy/stable 3.5.7-1~deb13u2+rpt1 arm64 [upgradable from: 3.5.7-1~deb13u2]
+openssl/stable 3.5.7-1~deb13u2+rpt1 arm64 [upgradable from: 3.5.7-1~deb13u2]
+perl-base/stable 5.40.1-6+deb13u1 arm64 [upgradable from: 5.40.1-6]
+perl-modules-5.40/stable,stable 5.40.1-6+deb13u1 all [upgradable from: 5.40.1-6]
+perl/stable 5.40.1-6+deb13u1 arm64 [upgradable from: 5.40.1-6]
+pi-greeter/stable 1.3 arm64 [upgradable from: 1.2]
+pi-package-data/stable,stable 0.20 all [upgradable from: 0.19]
+pi-package-session/stable 0.20 arm64 [upgradable from: 0.19]
+pi-package/stable 0.20 arm64 [upgradable from: 0.19]
+piclone/stable 1.6 arm64 [upgradable from: 1.5]
+pipanel/stable 1:2.24 arm64 [upgradable from: 1:2.10]
+pishutdown/stable 0.43 arm64 [upgradable from: 0.39]
+piwiz/stable 1.8 arm64 [upgradable from: 1.6]
+pixtrix-icons/stable,stable 0.6 all [upgradable from: 0.5]
+pixtrix-theme/stable 0.7 arm64 [upgradable from: 0.4]
+pplug-ejecter-data/stable 1.19 arm64 [upgradable from: 1.9]
+pplug-netman-schema/stable 1.19 arm64 [upgradable from: 1.11]
+pplug-power-data/stable 1.16 arm64 [upgradable from: 1.8]
+pplug-updater-data/stable 1.12 arm64 [upgradable from: 1.5]
+python3-flask/stable,stable 3.1.1-1+deb13u1 all [upgradable from: 3.1.1-1]
+python3.13-dev/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+python3.13-minimal/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+python3.13-tk/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+python3.13-venv/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+python3.13/stable 3.13.5-2+deb13u5 arm64 [upgradable from: 3.13.5-2+deb13u4]
+raindrop/stable 1.23 arm64 [upgradable from: 1.18]
+raspberrypi-sys-mods/stable 1:20260914 arm64 [upgradable from: 1:20260612]
+raspi-firmware/stable,stable 1:1.20260915-1 all [upgradable from: 1:1.20260521-3]
+rasputin/stable 1.11 arm64 [upgradable from: 1.8]
+rc-gui/stable 2.22 arm64 [upgradable from: 2.19]
+rpcc/stable 0.18 arm64 [upgradable from: 0.16]
+rpd-applications/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-common/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-developer/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-graphics/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-plym-splash/stable 0.48 arm64 [upgradable from: 0.47]
+rpd-preferences/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-theme/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-utilities/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-wayland-core/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-wayland-extras/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-x-core/stable 1.31 arm64 [upgradable from: 1.18]
+rpd-x-extras/stable 1.31 arm64 [upgradable from: 1.18]
+rpi-connect/stable 2.13.0 arm64 [upgradable from: 2.12.2]
+rpi-eeprom/stable,stable 28.32-1 all [upgradable from: 28.30-1]
+rpi-gui-nop/stable 0.1.1 arm64 [upgradable from: 0.1.0]
+rpinters/stable 1.11 arm64 [upgradable from: 1.9]
+samba-libs/stable 2:4.22.11+dfsg-0+deb13u1 arm64 [upgradable from: 2:4.22.10+dfsg-0+deb13u2]
+sudopwd/stable 0.3 arm64 [upgradable from: 0.2]
+tzdata/stable,stable 2026c-0+deb13u1 all [upgradable from: 2026b-0+deb13u1]
+wayvnc/stable 0.10.1-1+rpt1 arm64 [upgradable from: 0.9.1-1+rpt5]
+wf-panel-pi/stable 1.34 arm64 [upgradable from: 1.13]
+wfplug-batt/stable 1.11 arm64 [upgradable from: 1.3]
+wfplug-bluetooth/stable 1.15 arm64 [upgradable from: 1.8]
+wfplug-clock/stable 1.14 arm64 [upgradable from: 1.6]
+wfplug-connect/stable 1.17 arm64 [upgradable from: 1.11]
+wfplug-cpu/stable 1.11 arm64 [upgradable from: 1.3]
+wfplug-cputemp/stable 1.11 arm64 [upgradable from: 1.3]
+wfplug-ejecter/stable 1.19 arm64 [upgradable from: 1.9]
+wfplug-gpu/stable 1.11 arm64 [upgradable from: 1.3]
+wfplug-menu/stable 1.27 arm64 [upgradable from: 1.18]
+wfplug-netman/stable 1.19 arm64 [upgradable from: 1.11]
+wfplug-power/stable 1.16 arm64 [upgradable from: 1.8]
+wfplug-squeek/stable 1.11 arm64 [upgradable from: 1.3]
+wfplug-updater/stable 1.12 arm64 [upgradable from: 1.5]
+wfplug-volumepulse/stable 1.20 arm64 [upgradable from: 1.13]
+wpasupplicant/stable 2:2.10-24+rpt2 arm64 [upgradable from: 2:2.10-24]
+xserver-common/stable,stable 2:21.1.16-1.3+rpt1+deb13u4 all [upgradable from: 2:21.1.16-1.3+rpt1+deb13u3]
+xserver-xorg-core/stable 2:21.1.16-1.3+rpt1+deb13u4 arm64 [upgradable from: 2:21.1.16-1.3+rpt1+deb13u3]
+active
