@@ -74,3 +74,8 @@ William confirmed he can talk to Herald after SAL reboot and requested removing 
 
 Voice changes: edit only voice (and compatible language if necessary) in Herald service private/config.json; config reloads for each new call. Keep Natural/NaturalHD relay-compatible identifiers. Existing examples: Telnyx.NaturalHD.albion/en, Telnyx.Natural.abbie/en. General Telnyx Ultra examples produced silence on this integration; do not reuse them without fresh verification. No new voice API credential is required for these existing Telnyx voices.
 
+
+## Quentin voice selected by William — 2026-09-25
+
+William explicitly supplied Quentin voice ID Telnyx.Ultra.5568a7df-e5ab-4442-9fae-2e9ba1b15ad8 and requested its use. Applied that exact voice in private config and verified readback; language en and require_pin=false retained. No service restart necessary; next call loads the new selection. Service healthy with no active call before change. Prior named Ultra samples were silent, so this UUID voice requires its own live listening check; configuration success is not audio verification. Previous voice for rollback: Telnyx.NaturalHD.albion. Outbound remains deferred at William's request.
+

@@ -605,3 +605,6 @@ Herald phone live update: William confirmed PIN prompt and conversation using Na
 
 Herald telephone: William confirmed conversation after SAL reboot. At his request PIN requirement disabled; signed Telnyx webhook, registered caller restriction and single-use relay binding retained. Fourteen tests pass. Caller ID is spoofable; this tradeoff explained. Male Albion remains selected; outbound still pending.
 
+
+Herald voice update: William selected Quentin, Telnyx.Ultra.5568a7df-e5ab-4442-9fae-2e9ba1b15ad8. Exact setting applied; live audio pending. PIN stays disabled; outbound deferred.
+
