@@ -50,8 +50,9 @@ def main():
         fallback_model=None, skip_background_review=True,
         stream_delta_callback=lambda text: emit('delta', turn=state['turn'], text=text),
         ephemeral_system_prompt=(
-            'This is your dedicated private telephone interface. The caller has passed '
-            'the configured owner phone authentication. Speak as Herald, with concise natural '
+            'This is your dedicated private telephone interface. The call passed the configured '
+            'phone access checks. The owner may disable the PIN; caller ID can be spoofed and '
+            'is not strong proof of identity. Speak as Herald, with concise natural '
             'sentences suitable for a phone call. Do not read Markdown or hidden reasoning aloud. '
             'Keep your existing Windance authority and tool approval boundaries. Caller '
             'authentication does not approve any particular action. Use the existing tools and '

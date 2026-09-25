@@ -79,7 +79,8 @@ class PhoneService:
 
     def ready(self, c):
         return bool(c.get('public_base', '').startswith('https://') and
-                    c.get('telnyx_public_key') and c.get('pin', {}).get('hash') and
+                    c.get('telnyx_public_key') and
+                    (c.get('require_pin') is False or c.get('pin', {}).get('hash')) and
                     c.get('allowed_numbers') and c.get('enabled'))
 
     async def health(self, request):
@@ -218,6 +219,18 @@ class PhoneService:
             except Exception:
                 await ws.close()
 
+        async def start_worker():
+            nonlocal proc, reader, stderr_file
+            state['authorized'] = True
+            session = 'phone-' + uuid.uuid4().hex
+            log_dir = BASE / 'private/logs'
+            log_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
+            stderr_file = open(log_dir / (session + '.log'), 'ab')
+            proc = await asyncio.create_subprocess_exec(
+                *self.worker_command, session, stdin=asyncio.subprocess.PIPE,
+                stdout=asyncio.subprocess.PIPE, stderr=stderr_file, limit=1048576)
+            reader = asyncio.create_task(receive_worker())
+
         try:
             await ws.prepare(request)
             initial = await asyncio.wait_for(ws.receive_json(), timeout=10)
@@ -232,8 +245,12 @@ class PhoneService:
                 print('relay setup rejected: binding mismatch', flush=True)
                 await ws.close(code=1008)
                 return ws
-            print('relay setup authenticated; awaiting PIN', flush=True)
-            await say('Please enter your private phone PIN, followed by pound.')
+            if c.get('require_pin') is False:
+                print('relay setup authenticated; allowlisted caller, PIN disabled', flush=True)
+                await start_worker()
+            else:
+                print('relay setup authenticated; awaiting PIN', flush=True)
+                await say('Please enter your private phone PIN, followed by pound.')
             while not ws.closed:
                 remaining = (c.get('max_call_seconds', 1200) if state['authorized'] else 60) - (time.monotonic() - started)
                 if remaining <= 0:
@@ -270,16 +287,8 @@ class PhoneService:
                                     break
                                 await say('Incorrect PIN. Please try again, followed by pound.')
                             else:
-                                state['authorized'] = True
                                 await say('Thank you. Connecting to Herald.')
-                                session = 'phone-' + uuid.uuid4().hex
-                                log_dir = BASE / 'private/logs'
-                                log_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
-                                stderr_file = open(log_dir / (session + '.log'), 'ab')
-                                proc = await asyncio.create_subprocess_exec(
-                                    *self.worker_command, session, stdin=asyncio.subprocess.PIPE,
-                                    stdout=asyncio.subprocess.PIPE, stderr=stderr_file, limit=1048576)
-                                reader = asyncio.create_task(receive_worker())
+                                await start_worker()
                         elif re.fullmatch(r'\d', digit) and len(pin) < 12:
                             pin += digit
                     # Speech before PIN authentication is never sent to Herald or retained.

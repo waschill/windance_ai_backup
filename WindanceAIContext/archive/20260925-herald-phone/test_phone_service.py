@@ -135,6 +135,24 @@ class RelayTests(unittest.IsolatedAsyncioTestCase):
         self.service.config_path.write_text(json.dumps(self.config))
         self.assertEqual((await self.get_ticket())[0],503)
 
+    async def test_no_pin_for_allowlisted_caller(self):
+        self.config['require_pin']=False
+        self.service.config_path.write_text(json.dumps(self.config))
+        _,text=await self.get_ticket()
+        relay=ET.fromstring(text).find('Connect/ConversationRelay')
+        ws=await self.client.ws_connect('/relay/'+relay.get('url').rsplit('/',1)[1])
+        await ws.send_json({'type':'setup','customParameters':{'herald_binding':relay.find('Parameter').get('value')}})
+        self.assertEqual((await ws.receive_json())['token'],'Herald here. How can I help?')
+        await ws.send_json({'type':'prompt','last':True,'voicePrompt':'Hello'})
+        self.assertEqual((await ws.receive_json())['token'],'Verified response.')
+        await ws.close()
+
+    async def test_no_pin_still_rejects_other_callers(self):
+        self.config['require_pin']=False
+        self.service.config_path.write_text(json.dumps(self.config))
+        _,text=await self.get_ticket(From='+16055550200')
+        self.assertIsNone(ET.fromstring(text).find('Connect'))
+
     def test_pin_hash(self):
         self.assertTrue(pin_matches(self.pin,self.config['pin']))
         self.assertFalse(pin_matches('12345678',self.config['pin']))

@@ -602,3 +602,6 @@ Herald phone update: William completed private setup; configured=true verified. 
 
 Herald phone live update: William confirmed PIN prompt and conversation using Natural.abbie/en. Male NaturalHD.albion/en now selected; awaiting voice confirmation. Relay retained, fallback not deployed. Outbound still pending.
 
+
+Herald telephone: William confirmed conversation after SAL reboot. At his request PIN requirement disabled; signed Telnyx webhook, registered caller restriction and single-use relay binding retained. Fourteen tests pass. Caller ID is spoofable; this tradeoff explained. Male Albion remains selected; outbound still pending.
+

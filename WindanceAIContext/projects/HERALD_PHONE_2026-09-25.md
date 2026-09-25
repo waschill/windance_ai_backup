@@ -67,3 +67,10 @@ Telnyx trace showed the prior silent attempt still used Ultra.Callie/en, so it d
 
 Outbound still needs its profile and dialing integration. No camera setup or production-drive write test was performed. Initial status notes above are historical; current inbound confirmation supersedes them.
 
+
+## Owner requested PIN removal — 2026-09-25
+
+William confirmed he can talk to Herald after SAL reboot and requested removing the PIN prompt. Set require_pin=false and refactored worker startup to connect immediately after signed inbound caller/destination checks and one-time relay binding. Non-allowlisted calls remain rejected. Explained caller-ID spoofing risk to William; he acknowledged the security tradeoff. Caller identity is weaker without PIN; worker instructions now state this and retain tool authority boundaries. Existing hashed PIN retained for optional reenable, not disclosed. Fourteen tests passed including no-PIN greeting/response and rejection of other numbers. Restarted only phone service; real no-PIN call pending. NaturalHD.albion/en remains current, with Abbie known-working fallback. Outbound remains unimplemented and no Telnyx outbound voice profile is assigned.
+
+Voice changes: edit only voice (and compatible language if necessary) in Herald service private/config.json; config reloads for each new call. Keep Natural/NaturalHD relay-compatible identifiers. Existing examples: Telnyx.NaturalHD.albion/en, Telnyx.Natural.abbie/en. General Telnyx Ultra examples produced silence on this integration; do not reuse them without fresh verification. No new voice API credential is required for these existing Telnyx voices.
+
