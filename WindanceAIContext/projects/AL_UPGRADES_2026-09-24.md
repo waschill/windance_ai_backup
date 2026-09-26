@@ -33,3 +33,19 @@ At William's request, inspected live SAL Node-RED flow `01 - Device Monitor + Ka
 Before manual intervention the AL outlet was ON, drawing 2.2 W, and reported on-since 14:47:08 MDT, shortly after the graceful reboot. This is evidence of an intervening outlet turn-on, consistent with the automatic rule, but does not prove the rule caused the outage.
 
 Vega performed one user-authorized AL-child-only OFF/25-second/ON sequence through the existing Kasa CLI. Both commands explicitly reported targeting AL. Outlet then reported ON since 15:15:55 MDT, drawing 1.3 W; SSH still timed out. Sent one Wake-on-LAN broadcast for AL's known MAC 98:b7:85:23:04:f0. No other outlets, flow definitions, or Level 8 controls were changed. Low power suggests standby; physical power-button/console inspection is the next step if wake does not recover AL. Further software upgrades remain on hold.
+
+## AL and Odyssey outlet restart — 2026-09-25
+
+At William's request, Vega checked the live HS300 at `192.168.36.4` and
+targeted only its named `AL` and `Odyssey` children. Warden was already paused
+before maintenance and was left paused. AL was unreachable with its outlet ON;
+Odyssey was unreachable with its outlet OFF. Both outlets were held OFF for at
+least 25 seconds and then explicitly turned ON. Live outlet reads confirmed both
+ON afterward.
+
+Odyssey returned at `192.168.36.31`, accepted SSH, and reported a fresh uptime.
+AL did not return at `192.168.36.20` after more than six minutes. One Wake-on-LAN
+packet was sent to AL's documented MAC, followed by a further two-minute wait;
+ping and SSH remained unavailable. AL was left powered ON. No repeat cycle,
+Node-RED change, SyncThing change, or Level 8 action occurred. Physical console
+or power-button inspection remains the next safe recovery step for AL.
