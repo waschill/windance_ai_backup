@@ -49,3 +49,31 @@ packet was sent to AL's documented MAC, followed by a further two-minute wait;
 ping and SSH remained unavailable. AL was left powered ON. No repeat cycle,
 Node-RED change, SyncThing change, or Level 8 action occurred. Physical console
 or power-button inspection remains the next safe recovery step for AL.
+
+## Forensic shutdown and Syncthing diagnosis — 2026-09-25
+
+AL later returned on kernel `7.0.0-34`; all expected application containers
+started. The prior boot journal ended abruptly at `2026-09-25 21:20:53 UTC`
+without systemd shutdown, reboot, suspend, OOM, panic, thermal, or power-button
+handling. SAL's persistent Node-RED context independently records
+`last_reboot_AL` at `2026-09-25T21:21:02.678Z`, with `rebooting_AL` and
+`pending_back_up_AL` still true. The live flow's documented design permits AL
+to reach the Kasa action after one failed ping; its three-failure filter applies
+only to ResWEB. The evidence therefore attributes this loss to Node-RED's Kasa
+cycle, not an operating-system shutdown.
+
+Syncthing container `syncthing` is healthy and connects securely to HAL, but all
+three Odyssey-backed folders stop at initial scan with `operation not permitted`
+for `/mnt/odyssey_syncthing/data/{business,photos,videos}` and their `.stignore`
+files. AL successfully mounts Odyssey's NFSv4.2 export; both container root and
+runtime UID/GID 1000:998 are denied below the export root. Odyssey exports
+`/Volume2/syncthing` with `sec=sys`; directory ACLs grant selected numeric users
+and group 998 while denying anonymous/guest UID 1001. This is an NFS identity/
+ACL mapping failure after the Odyssey restart, not Syncthing database damage.
+No mount, export, ACL, container, or SyncThing setting was changed.
+
+AL's WAN NIC owns `64.251.177.198`; SSH, Syncthing GUI 8384, and Syncthing
+transport 22000 listen on all interfaces. Journals show many blocked/failed
+public SSH and TLS probes, but accepted SSH sessions were only authorized LAN
+public-key sessions. These probes did not cause the Kasa power event, but the
+WAN exposure should be reviewed separately.
