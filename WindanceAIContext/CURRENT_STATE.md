@@ -1,5 +1,14 @@
 # Current Operating State
 
+## Last email report references — 2026-09-26
+
+William's email follow-ups must use the last saved report, never current inbox
+positions. Missing or invalid references terminate the report action. The
+autonomy/legacy mapping mismatch and single-use fallback were repaired; the
+morning report's four references were recovered without mailbox changes.
+14 isolated tests and the live invalid-number guard passed. Details and recovery:
+`projects/HERALD_EMAIL_REPORT_SNAPSHOT_2026-09-26.md`.
+
 ## YouTube scheduler correction — 2026-09-23
 
 Vega’s Sept22 deployment introduced CRLF into SAL’s directly executed report script, preventing scheduled launch (exit 127). Corrected to LF; the actual executable now generates a print-only preview successfully with Goldie excluded. Next scheduled delivery remains unverified. See `projects/YOUTUBE_SCHEDULER_ENTRYPOINT_FIX_2026-09-23.md`.
@@ -244,8 +253,8 @@ The production assistant path is the Herald Agent Harness on Herald, not unverif
 - The bridge now routes report requests directly to the deterministic
   `/gmail/report` endpoint and reserves `/message` for action instructions.
   Herald is forbidden to emit an actionable fallback numbered list, and Harness
-  report maps become single-use after an action instruction so stale numbers
-  cannot be reused. A clean MCP report and Telegram delivery were verified after
+  report maps originally became single-use after an action instruction. That
+  behavior was superseded by the verified persistent snapshot repair on 2026-09-26. A clean MCP report and Telegram delivery were verified after
   deployment.
 
 ## Odoo lesson bundles

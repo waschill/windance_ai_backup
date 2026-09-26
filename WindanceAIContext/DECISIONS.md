@@ -1,5 +1,14 @@
 # Durable Decisions
 
+## Last email report references — 2026-09-26
+
+William's email follow-ups must use the last saved report, never current inbox
+positions. Missing or invalid references terminate the report action. The
+autonomy/legacy mapping mismatch and single-use fallback were repaired; the
+morning report's four references were recovered without mailbox changes.
+14 isolated tests and the live invalid-number guard passed. Details and recovery:
+`projects/HERALD_EMAIL_REPORT_SNAPSHOT_2026-09-26.md`.
+
 ## Odoo signing identity and system aliases — 2026-09-22
 
 William wants to use his existing address for sending and countersigning training

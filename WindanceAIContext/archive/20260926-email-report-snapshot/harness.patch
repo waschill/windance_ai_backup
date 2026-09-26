@@ -1,0 +1,211 @@
+--- agent_harness.live.py
++++ agent_harness.fixed.py
+@@ -2919,81 +2919,54 @@
+     return value if len(value) <= max_len else value[: max_len - 1].rstrip() + "..."
+ 
+ 
+-def save_email_report_refs(report_key: str, rows: list[tuple[int, str, dict[str, Any]]]) -> None:
++def save_email_report_refs(report_key: str, rows: list[tuple[int, str, dict[str, Any]]], ready: bool = True) -> None:
++    """Persist exactly one report snapshot, including empty reports, atomically."""
++    nums = [num for num, _section, _item in rows]
++    if nums != list(range(1, len(rows) + 1)) or any(not item.get("id") for _, _, item in rows):
++        raise ValueError("Invalid email report snapshot")
+     ts = now()
+     with db() as conn:
+-        # Keep recent reports but avoid letting this grow forever.
+-        conn.execute(
+-            "DELETE FROM max_email_report_refs WHERE created_at < ?",
+-            ((dt.datetime.now(dt.UTC) - dt.timedelta(days=14)).isoformat(),),
+-        )
++        conn.execute("CREATE TABLE IF NOT EXISTS email_report_active (singleton INTEGER PRIMARY KEY CHECK(singleton=1), report_key TEXT NOT NULL, item_count INTEGER NOT NULL)")
+         conn.execute("DELETE FROM max_email_report_refs WHERE report_key=?", (report_key,))
+         for ref_num, section, item in rows:
+             conn.execute(
+-                """
+-                INSERT INTO max_email_report_refs
++                """INSERT INTO max_email_report_refs
+                 (report_key, ref_num, section, message_id, thread_id, sender, subject, created_at)
+-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+-                """,
+-                (
+-                    report_key,
+-                    ref_num,
+-                    section,
+-                    item.get("id"),
+-                    item.get("thread_id"),
+-                    item.get("from"),
+-                    item.get("subject"),
+-                    ts,
+-                ),
++                VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
++                (report_key, ref_num, section, item["id"], item.get("thread_id"),
++                 item.get("from"), item.get("subject"), ts),
+             )
++        stored = conn.execute("SELECT ref_num, message_id FROM max_email_report_refs WHERE report_key=? ORDER BY ref_num", (report_key,)).fetchall()
++        if [(row["ref_num"], row["message_id"]) for row in stored] != [(num, item["id"]) for num, _, item in rows]:
++            raise RuntimeError("Email report snapshot verification failed")
++        conn.execute("INSERT OR REPLACE INTO email_report_active VALUES (1, ?, ?)", (report_key, len(rows) if ready else -1))
+         conn.commit()
+ 
+ 
+ def latest_email_ref_map() -> dict[int, dict[str, Any]]:
++    """Never query today's inbox or fall back to an older report for numbers."""
+     with db() as conn:
+-        latest = conn.execute(
+-            """
+-            SELECT r.report_key
+-            FROM max_email_report_refs r
+-            LEFT JOIN max_email_report_consumed c ON c.report_key=r.report_key
+-            WHERE c.report_key IS NULL
+-            ORDER BY r.created_at DESC, r.id DESC
+-            LIMIT 1
+-            """
+-        ).fetchone()
++        exists = conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='email_report_active'").fetchone()
++        if not exists:
++            return {}
++        latest = conn.execute("SELECT report_key, item_count FROM email_report_active WHERE singleton=1").fetchone()
+         if not latest:
+             return {}
+         rows = conn.execute(
+-            """
+-            SELECT ref_num, section, message_id, thread_id, sender, subject, created_at
+-            FROM max_email_report_refs
+-            WHERE report_key=?
+-            ORDER BY ref_num
+-            """,
++            """SELECT report_key, ref_num, section, message_id, thread_id, sender, subject, created_at
++            FROM max_email_report_refs WHERE report_key=? ORDER BY ref_num""",
+             (latest["report_key"],),
+         ).fetchall()
++    if len(rows) != latest["item_count"] or [row["ref_num"] for row in rows] != list(range(1, len(rows) + 1)):
++        return {}
++    if any(not row["message_id"] for row in rows):
++        return {}
+     return {int(row["ref_num"]): dict(row) for row in rows}
+ 
+ 
+ def consume_latest_email_ref_map(reason: str = "numbered_action_processed") -> None:
+-    """Make a numbered report single-use so a fallback list cannot reuse stale references."""
+-    with db() as conn:
+-        latest = conn.execute(
+-            """
+-            SELECT r.report_key
+-            FROM max_email_report_refs r
+-            LEFT JOIN max_email_report_consumed c ON c.report_key=r.report_key
+-            WHERE c.report_key IS NULL
+-            ORDER BY r.created_at DESC, r.id DESC
+-            LIMIT 1
+-            """
+-        ).fetchone()
+-        if latest:
+-            conn.execute(
+-                "INSERT OR IGNORE INTO max_email_report_consumed (report_key, consumed_at, reason) VALUES (?, ?, ?)",
+-                (latest["report_key"], now(), reason),
+-            )
+-            conn.commit()
++    """Compatibility only: follow-up instructions retain the same snapshot."""
++    return None
+ 
+ 
+ def numbers_after_keywords(text: str, keywords: list[str]) -> list[int]:
+@@ -3374,6 +3347,7 @@
+     )
+ 
+     if not new_unread and not reminders and not auto_delete_notices:
++        save_email_report_refs(f"gmail-empty-{uuid.uuid4().hex}", [])
+         return "No new unread Gmail messages need attention.", "deterministic", "gmail-tracking"
+ 
+     report_key = f"gmail-{dt.datetime.now(dt.UTC).strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4().hex[:6]}"
+@@ -3398,8 +3372,8 @@
+             refs.append((ref_num, "still_pending", item))
+             lines.append(f"{ref_num}. {short_sender(item.get('from', ''))} - {compact_subject(item.get('subject', ''))}")
+             ref_num += 1
++    save_email_report_refs(report_key, refs)
+     if refs:
+-        save_email_report_refs(report_key, refs)
+         lines.append("")
+         lines.append("Reply examples: ALD 2 (always delete); NOD 3 (notify delete); Red 4 (mark read); delete 5; save 6; reply 7; draft reply to 8 saying ...")
+     return "\n".join(lines), "deterministic", "gmail-tracking"
+@@ -3650,9 +3624,20 @@
+     lowered = text.lower()
+     if not any(word in lowered for word in ["delete", "trash", "archive", "save", "keep", "draft", "reply", "notify", "mark read"]):
+         return None
++    # Exclude draft body numbers from reference validation.
++    reference_text = re.split(r"\b(?:saying|body|message)\b", text, maxsplit=1, flags=re.I)[0]
++    requested = numbers_after_keywords(reference_text, [
++        "always delete", "auto delete", "auto-delete", "notify delete", "notify and delete",
++        "advise delete", "advise and delete", "delete", "trash", "archive", "save", "keep",
++        "mark read", "mark as read", "mark it read", "reply", "response",
++    ])
++    if not requested:
++        return None
+     refs = latest_email_ref_map()
+-    if not refs:
+-        return None
++    if not refs or any(num not in refs for num in requested):
++        return ("Email report invalid: I cannot resolve every requested number against the last saved report. "
++                "This report action is terminated. Nothing changed; I will not substitute current inbox messages or an older report.",
++                "deterministic", "gmail-report-invalid")
+ 
+     lines: list[str] = []
+     actions: list[dict[str, Any]] = []
+@@ -7165,11 +7150,15 @@
+     with db() as conn:
+         handled = {str(row["message_id"]) for row in conn.execute("SELECT message_id FROM email_autonomy_actions")}
+     pending = [item for item in items if str(item.get("id") or "") not in handled]
++    run_id = f"mail-auto-{dt.datetime.now(dt.UTC).strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4().hex[:6]}"
++    # Save and read back before any autonomous decision action. Failure aborts the report.
++    report_rows = [(n, "authority", item) for n, item in enumerate(pending, 1)]
++    save_email_report_refs(run_id, report_rows, ready=False)
+     if not pending and not explicit_rule_notices:
++        save_email_report_refs(run_id, report_rows)
+         return "Email authority report\n\nNo new inbox messages required a decision.", "deterministic", "gmail-autonomy"
+ 
+     decisions = classify_email_autonomy(pending) if pending else {}
+-    run_id = f"mail-auto-{dt.datetime.now(dt.UTC).strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4().hex[:6]}"
+     lines = ["Email authority report", ""]
+     if explicit_rule_notices:
+         lines.append("Existing sender rules:")
+@@ -7229,6 +7218,7 @@
+     lines.extend(["", "Nothing was sent. Escalated messages were not changed."])
+     if reversible:
+         lines.append("To reverse an item from this report, reply: undo email 2")
++    save_email_report_refs(run_id, report_rows)
+     audit("gmail_autonomy_report", {"run_id": run_id, "items": len(pending), "reversible": reversible})
+     return "\n".join(lines), "deterministic+local-classifier", "gmail-autonomy-v1"
+ 
+@@ -7238,14 +7228,14 @@
+     if not match:
+         return None
+     ordinal = int(match.group(1))
++    ref = latest_email_ref_map().get(ordinal)
+     with db() as conn:
+-        latest = conn.execute("SELECT run_id FROM email_autonomy_actions ORDER BY created_at DESC, id DESC LIMIT 1").fetchone()
+         row = conn.execute(
+-            "SELECT * FROM email_autonomy_actions WHERE run_id=? AND ordinal=?",
+-            (latest["run_id"], ordinal),
+-        ).fetchone() if latest else None
++            "SELECT * FROM email_autonomy_actions WHERE run_id=? AND ordinal=? AND message_id=?",
++            (ref["report_key"], ordinal, ref["message_id"]),
++        ).fetchone() if ref else None
+     if not row:
+-        return f"I could not find email decision {ordinal} in the latest authority report. Nothing changed.", "deterministic", "gmail-autonomy-undo"
++        return f"Email report invalid: decision {ordinal} cannot be resolved in the last saved report. Action terminated; nothing changed.", "deterministic", "gmail-autonomy-undo"
+     if row["reversed_at"]:
+         return f"Email decision {ordinal} was already reversed. Nothing changed.", "deterministic", "gmail-autonomy-undo"
+     if row["action"] == "archived":
+@@ -7293,10 +7283,10 @@
+         else:
+             cause = f"{type(exc).__name__}: {detail[:240]}"
+         return (
+-            "Read-only mail report could not access Gmail.\n\n"
++            "Email report invalid; report generation terminated.\n\n"
+             f"Cause: {cause}\n\n"
+-            "No email was read, moved, marked, archived, deleted, or changed. "
+-            "The report failed closed so the mailbox was left alone.",
++            "Do not use numbers from this failed report. No fallback inbox list will be substituted. "
++            "Any actions completed before the failure remain in the durable action receipts.",
+             "deterministic",
+             "gmail-error",
+         )

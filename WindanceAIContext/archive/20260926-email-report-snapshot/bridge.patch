@@ -1,0 +1,21 @@
+--- gmail_bridge.live.py
++++ gmail_bridge.fixed.py
+@@ -21,7 +21,9 @@
+     "description": (
+         "Submit William's Gmail cleanup, save, draft, reply, send, or approval "
+         "instruction to the authoritative Windance Gmail approval handler. "
+-        "Use this for every Gmail action request before replying."
++        "Use this for every Gmail action request before replying. Numbered actions resolve "
++        "against the last saved report, never current inbox order. Do not generate a new "
++        "report to process follow-up instructions. An invalid reference terminates the action."
+     ),
+     "inputSchema": {
+         "type": "object",
+@@ -48,6 +50,7 @@
+         re.search(r"\b(?:run|generate|prepare|show|list|review)\b.{0,40}\b(?:gmail|email|inbox)\b.{0,30}\b(?:report|review|summary|unread)\b", normalized)
+         or re.search(r"\b(?:gmail|email|inbox)\b.{0,30}\b(?:report|review|summary|unread)\b", normalized)
+     ) and not re.search(r"\b(?:ald|nod|delete|trash|archive|save|keep|draft|reply|send|mark read|approved?|reject|no approval)\b", normalized)
++    report_request = report_request and not re.search(r"\b(?:last|previous|prior|that|same)\b.{0,30}\breport\b|\binstructions?\b", normalized)
+     if report_request:
+         url = "http://127.0.0.1:8791/gmail/report"
+         payload = b"{}"
