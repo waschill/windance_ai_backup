@@ -77,3 +77,39 @@ transport 22000 listen on all interfaces. Journals show many blocked/failed
 public SSH and TLS probes, but accepted SSH sessions were only authorized LAN
 public-key sessions. These probes did not cause the Kasa power event, but the
 WAN exposure should be reviewed separately.
+
+## Verified repair — 2026-09-26
+
+Vega repaired all three verified faults with private rollback backups and no
+simulated outage:
+
+- SAL Node-RED node `Require 3 Failed Pings` now protects both `AL` and
+  `ResWEB`. AL must fail three consecutive checks before the Kasa recovery path
+  can run; an up result resets its counter. The stale `rebooting_AL`,
+  `pending_back_up_AL`, and failure-count context values were cleared while
+  Node-RED was stopped. Node-RED restarted cleanly, the new function was read
+  back from disk, and AL's live counter was zero. Backup:
+  `/Users/zuzu/backups/al-kasa-ping-guard-20260926T024541Z` on SAL.
+- Odyssey's `/Volume2/syncthing` NFS export is now restricted to AL at
+  `192.168.36.20` and uses `all_squash` mapped to the dedicated
+  `rsync_backup:admin` identity (`1003:998`). This matches the existing NAS ACL
+  instead of relying on incompatible cross-host numeric identity mapping.
+  `/etc/exports` and `/etc/exports.tmp` were backed up privately under
+  `/Volume2/docker/vega-backups/syncthing-nfs-20260926T024736Z`, then reloaded
+  with `exportfs -ra`.
+- AL's Syncthing container retained its existing config and data but was
+  recreated with GUI/discovery/transport ports bound only to
+  `192.168.36.20`. The original container remains stopped as
+  `syncthing-pre-lan-bind-20260926T024907Z` for rollback. Private inspect and
+  configuration backup:
+  `/home/waschilladmin/docker/syncthing/backups/container-rebind-20260926T024907Z`.
+- AL's systemd `ssh.socket` now listens only on internal addresses
+  `192.168.36.20` and `192.168.36.140`, not the public fiber address. A fresh
+  key-authenticated SSH connection succeeded after the change. Pre-change
+  record: `/home/waschilladmin/backups/ssh-lan-bind-20260926T025003Z`.
+
+Post-change verification found Node-RED online, AL online on kernel
+`7.0.0-34`, Syncthing connected securely to HAL, all three folders readable,
+folder scans running/finishing without `operation not permitted`, and no SSH or
+Syncthing listener on `64.251.177.198`. Warden was paused before repair and was
+left paused.
