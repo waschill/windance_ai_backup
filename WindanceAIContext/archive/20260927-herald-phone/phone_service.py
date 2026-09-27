@@ -353,23 +353,33 @@ class PhoneService:
             print('relay exception: ' + type(exc).__name__, flush=True)
         finally:
             pin = ''
-            if proc and proc.returncode is None:
+            async def cleanup():
+                # Client disconnect can cancel the HTTP handler during its
+                # finally block. Shield cleanup so that cannot orphan a worker.
                 try:
-                    await send_worker({'type': 'close'})
-                except (BrokenPipeError, ConnectionError):
-                    pass
-                try:
-                    await asyncio.wait_for(proc.wait(), timeout=15)
-                except asyncio.TimeoutError:
-                    proc.terminate()
-                    await proc.wait()
-            if reader:
-                reader.cancel()
-                await asyncio.gather(reader, return_exceptions=True)
-            if stderr_file:
-                stderr_file.close()
-            self.active = False
-            await ws.close()
+                    if reader:
+                        reader.cancel()
+                        await asyncio.gather(reader, return_exceptions=True)
+                    if proc and proc.returncode is None:
+                        try:
+                            await send_worker({'type': 'close'})
+                        except (BrokenPipeError, ConnectionError):
+                            pass
+                        try:
+                            await asyncio.wait_for(proc.wait(), timeout=5)
+                        except asyncio.TimeoutError:
+                            proc.kill()
+                            await proc.wait()
+                finally:
+                    if stderr_file:
+                        stderr_file.close()
+                    self.active = False
+                    await ws.close()
+            cleanup_task = asyncio.create_task(cleanup())
+            try:
+                await asyncio.shield(cleanup_task)
+            except asyncio.CancelledError:
+                await cleanup_task
         return ws
 
 

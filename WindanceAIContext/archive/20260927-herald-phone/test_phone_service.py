@@ -210,6 +210,32 @@ for line in sys.stdin:
         self.assertIsNotNone(root.find('Hangup'))
         await ws.close()
 
+    async def test_caller_hangup_releases_call_and_worker(self):
+        marker=Path(self.tmp.name)/'worker-exited'
+        self.fake.write_text('''import sys,json
+from pathlib import Path
+print(json.dumps({'type':'ready','model':'gpt-5.6-terra'}),flush=True)
+for line in sys.stdin:
+ m=json.loads(line)
+ if m['type']=='close':
+  Path(sys.argv[0]).with_name('worker-exited').write_text('closed')
+  break
+''')
+        ws=await self.connect()
+        for digit in self.pin+'#':
+            await ws.send_json({'type':'dtmf','digit':digit})
+        await ws.receive_json()
+        await ws.receive_json()
+        await ws.send_json({'type':'prompt','last':True,'voicePrompt':'Check status'})
+        await ws.receive_json()
+        await ws.close()
+        for _ in range(200):
+            if not self.service.active and marker.exists():
+                break
+            await asyncio.sleep(.01)
+        self.assertTrue(marker.exists(), 'hangup must send worker close')
+        self.assertFalse(self.service.active, 'hangup must release active call')
+
 
 if __name__ == '__main__':
     unittest.main()
