@@ -1,0 +1,15 @@
+diff --git a/./staff_server.before.py b/./herald_staff_mcp.py
+index 4be8c8f..39908ed 100644
+--- a/./staff_server.before.py
++++ b/./herald_staff_mcp.py
+@@ -111,5 +111,10 @@ def assign_staff_task(assignee: str, request: str, title: str, priority: str = "
+         "priority": priority, "source": "hermes-desktop"})
+ 
+ 
++@mcp.tool(description="Read William's exact saved daily briefing and its date/source/QA evidence for report questions or corrections. Read-only: never generates or sends a report, creates events, or touches email. Use before interpreting quoted report contents. These are private William reports: use only in his private conversation, never a group. kind=daily_briefing.")
++def get_report_context(kind: str = "daily_briefing") -> dict[str, Any]:
++    return _request('/reports/context?' + urllib.parse.urlencode({'kind': kind}))
++
++
+ if __name__ == "__main__":
+     mcp.run()

@@ -94,3 +94,6 @@ The September 22 stack review reached completed Scout research but blocked Forge
 Herald phone 2026-09-27: verify a fresh owner call acknowledges requests, speaks a tool-backed answer and stays connected. Later verify a real staff assignment receipt when William requests it; no research replay during diagnosis. Outbound remains deferred. See projects/HERALD_PHONE_2026-09-25.md.
 
 Standby server research 2026-09-27 completed: choose existing-hardware coverage versus dedicated warm standby, define data/recovery targets and validate portable installations before any cutover. No procurement or infrastructure change approved by this assessment. See projects/SERVER_CAPACITY_AND_STANDBY_ASSESSMENT_2026-09-27.md.
+
+## Reacher report follow-through — 2026-09-27
+Verify the next normal 07:20 briefing delivery and audit Athena review coverage on remaining legacy report producers. This repair verified a read-only live Calendar preview, not a scheduled send. See projects/REACHER_IDENTITY_AND_BRIEFING_2026-09-27.md.

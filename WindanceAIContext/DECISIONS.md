@@ -1,5 +1,20 @@
 # Durable Decisions
 
+## Reacher (formerly Herald), OAuth and briefing continuity — 2026-09-27
+
+William renamed Herald's public identity to **Reacher**, with a calm, observant,
+direct TV-Reacher-inspired demeanor and dry humor. Internal `herald` profile IDs
+and the HERALD host remain stable; both names work. All Reacher conversational
+reasoning now uses Codex OAuth / GPT-5.6 Terra, with no alternate-provider fallback.
+Daily briefings use deterministic Mountain dates, persisted report context and an
+independent Athena release verdict. Report corrections no longer become new
+Calendar drafts or recurring tasks. 14 repair tests, 18 phone tests, real OAuth,
+Athena positive/negative canaries and live report follow-ups passed. The next
+scheduled briefing delivery remains unverified; other legacy report producers
+are not claimed to have complete Athena coverage. Details and recovery:
+`projects/REACHER_IDENTITY_AND_BRIEFING_2026-09-27.md`.
+
+
 ## Last email report references — 2026-09-26
 
 William's email follow-ups must use the last saved report, never current inbox

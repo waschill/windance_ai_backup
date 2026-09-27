@@ -565,3 +565,6 @@ Be very conservative around shutdown tooling. The network must stay up so Willia
 ## Warden independent supervisor — 2026-09-24
 
 Warden service, checks, operator pause/resume commands, incident board, diagnostic limits and rollback are documented in `../projects/WARDEN_SUPERVISOR_2026-09-24.md`. SAL runs com.windance.supervisor; future sessions discover it via START_HERE. The supervisor does not require a running Herald model or an open Codex window.
+
+## Reacher identity and OAuth — 2026-09-27
+Reacher is Herald's new public identity; internal host/profile/service IDs remain stable. Conversational reasoning is Codex OAuth only. For report dates, contextual follow-ups, Athena gating and recovery, read projects/REACHER_IDENTITY_AND_BRIEFING_2026-09-27.md. Gateway/dashboard launchd jobs are in the user domain; Harness/phone/Hermex jobs are in gui. Use graceful SIGTERM for the gateway wrapper to avoid overlapping its polling child.

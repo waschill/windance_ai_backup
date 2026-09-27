@@ -1,0 +1,23 @@
+diff --git a/./request_execution.before.py b/./request_execution.py
+index 25f457b..e635038 100644
+--- a/./request_execution.before.py
++++ b/./request_execution.py
+@@ -11,7 +11,7 @@ def report_candidate(text):
+ 
+ def unverified_claim(text):
+     return bool(re.search(r"\b(?:i|we)(?:['’]ve| have| already| just| successfully| now| have now| have already)?\s+(?:updated|changed|saved|configured|excluded|blocked|scheduled|sent|deleted|installed|restarted|created|fixed|completed|implemented|added|removed|finished|made the change)\b",text,re.I)
+-        or re.search(r'\b(?:done|all set|consider it done|it is done|it\'s done)\b',text,re.I)
++        or re.search(r'(?:^|[.!?\n]\s*)(?:done|all set|consider it done|it is done|it\'s done)(?=\s*(?:[.!?:;—-]|$))',text,re.I)
+         or re.search(r'\b(?:constraint|exclusion|rule|filter|change)\b.{0,50}\b(?:is now|is active|has been|in effect)\b',text,re.I)
+         or re.search(r'\b(?:i|we)\s+(?:will|shall)\s+(?:automatically|always|never)\b',text,re.I))
+ 
+@@ -84,7 +84,8 @@ For a simple change of one run, preserve other slots from current settings.
+         settings=load() if report_candidate(text) else None
+     except Exception:
+         settings=None
+-    prompt=json.dumps({'current_request':text,'current_youtube_settings':settings},ensure_ascii=False)
++    recent=h['recent_conversation_context'](user=user,channel=channel,limit=6,max_chars=6000)
++    prompt=json.dumps({'current_request':text,'current_youtube_settings':settings,'recent_conversation_reference_only':recent},ensure_ascii=False)
+     proposal=direct_report_request(text)
+     provider,model='deterministic','report-command'
+     if proposal is None:

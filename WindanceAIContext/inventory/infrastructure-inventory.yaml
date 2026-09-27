@@ -1,3 +1,13 @@
+assistant_public_identity:
+  name: Reacher
+  formerly: Herald
+  internal_profile: herald
+  host_alias: HERALD
+  reasoning_provider: openai-codex
+  reasoning_model: gpt-5.6-terra
+  fallback: disabled
+  verified: 2026-09-27
+
 hosts:
   HAL:
     platform: Clone Windows 11
@@ -199,7 +209,7 @@ hosts:
       nodered_network_report: 7 AM Network Report runs /Users/zuzu/bin/windance_morning_status_report.py on SAL and sends a compact SYSTEM STATUS checklist via Node-RED /codex/send-imessage; live-checks Internet, Cloudflare, hosts, Node-RED, Open WebUI, Ollama, and Gmail Pipeline
       windance_email_schedule: SAL Node-RED read-only mail report at 7:30 AM, 12:00 PM, 5:00 PM; asks HERALD /message for unread summary and sends via local iMessage
       windance_youtube_briefing_schedule: SAL LaunchAgent com.windance.youtube-briefing runs /Users/zuzu/bin/windance_youtube_briefing.py at 8:00 AM, 12:00 PM, and 4:00 PM local; sends William an AI/OpenAI-focused YouTube watch report plus latest Yee Yee, Captain Steeeve, and NetworkChuck videos via Node-RED /codex/send-imessage; uses public YouTube RSS/search and only includes AI search results with minute/hour/today ages to respect the under-24-hours rule; user Chrome was not signed into YouTube on 2026-07-19, so personal watch-history tuning is pending until William signs into YouTube in Chrome
-      windance_daily_briefing_schedule: SAL Node-RED daily briefing at 7:15 AM; asks HERALD /briefing and sends via local iMessage; /briefing appends the deterministic numbered Gmail / Inbox Actions report verbatim so the LLM cannot omit the actionable email list
+      windance_daily_briefing_schedule: SAL Node-RED 07:20 Mountain posts to HERALD /briefing; dates are deterministic, numbered Gmail actions appended verbatim, Athena reviews exact report before release, and private snapshots support follow-ups.
       windance_morning_news_briefing_schedule: SAL LaunchAgent com.windance.morning-news-briefing runs /Users/zuzu/bin/windance_morning_news_briefing.py every day at 9:00 AM Mountain time; queries Herald/Brave for Frontier AI, social-media marketing, and horse-care news; sends summary plus source-linked details through Node-RED/Max iMessage; empty sections explicitly say no material news found
       windance_daily_training_schedule: SAL Node-RED training report at 7:00 AM; asks HERALD /training/today and sends the live schedule to Shawn at +16054403400 using the Messages SMS service explicitly; HERALD decodes Odoo schedule cell codes before reporting (last letter is person S Shawn, W William, K Skye, T Teagahn, L Lynda; activity codes R Ride, L Lunge, G Ground Work, D Drive, T Trailride, F Freewalk, MT Mane and Tail; standalone F means Freewalk; cells with a time are treated as lessons with the non-time text as the client/name); SAL Node-RED saves the official dated daily_training_schedule/YYYY_MM_DD memory snapshot at 9:00 PM so same-day Odoo changes are captured before Archivist treats it as history
       windance_daily_reflection_schedule: 9:30 PM via /Users/herald/services/agent-harness/daily_reflection.py; writes daily_reflection/YYYY_MM_DD durable memory and vector-indexes it
@@ -209,8 +219,8 @@ hosts:
       odoo_connector_config: /Users/herald/.config/agent-harness/odoo.json
       odoo_connector_endpoint: http://192.168.36.21:8791/odoo/status
       odoo_lesson_bundle_status: As of 2026-08-29, production Odoo Studio Lesson Tracker uses x_lesons as the Lesson Bundles model with customer, package product, source invoice/invoice line, sales order, purchased/used/remaining lesson fields, and an exposed child-line table for the future usage ledger. Lessons 10-Pack and Lessons 4 Pack are service products configured to create trackers with 10 and 4 lessons. Active automation Create Lesson Bundle when Invoice Enters In Payment creates one duplicate-safe bundle per qualifying customer-invoice line when payment_state becomes in_payment. Historical lesson invoices were not backfilled; SAM-to-Odoo decrement and usage-event posting remain a later phase.
-      agent_harness_primary_model: local Ollama through Herald bridge at http://127.0.0.1:8790/v1 using gemma4:latest for routine Herald conversation and web synthesis; set explicitly in com.windance.agent-harness LaunchAgent on 2026-07-16 to reduce surprise OpenAI API credit burn
-      agent_harness_ollama_route: Agent Harness calls Herald bridge locally for Ollama instead of routing the launchd process directly to HAL; this avoids intermittent launchd "No route to host" failures while keeping HAL Ollama as the actual model backend
+      agent_harness_primary_model: As of 2026-09-27, Reacher (formerly Herald) uses openai-codex OAuth / gpt-5.6-terra for all conversational reasoning, with no alternate-provider fallback.
+      agent_harness_ollama_route: Retired for Herald/Reacher reasoning on 2026-09-27. Local embeddings, transcription and separate staff model routes remain distinct.
       nodered_vega_message_compatibility: SAL /vega/message remains as a backward-compatible HTTP endpoint but forwards to HERALD Agent Harness /message, not the old Vega orchestrator task service
       nodered_old_odoo_experiment_status: old SAL Node-RED Odoo experiment disabled and embedded credential removed from that function body; Odoo access should go through Herald Agent Harness
       openai_status: OpenAI API key exists on HERALD but is reserved for voice transcription and explicit Vega/Codex/technical escalation; no longer the primary routine Herald chat provider as of 2026-07-16
