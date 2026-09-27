@@ -84,3 +84,17 @@ William explicitly supplied Quentin voice ID Telnyx.Ultra.5568a7df-e5ab-4442-9fa
 
 William reported Quentin answered but the call hung up after he requested a task. He explicitly requested reversing the voice setting. Restored Telnyx.NaturalHD.albion and verified readback; require_pin=false retained. No service restart required. This rollback does not establish the cause of the disconnect or whether the requested task executed; neither was investigated or replayed as part of this voice rollback.
 
+
+## Task-request hangup repair — 2026-09-27
+
+William reported a disconnect after asking for outdoor point-to-point bridge research (3–5 km). The latest call saved his request in Herald SessionDB, but direct read-only inspection of the durable staff queue found zero tasks created today. No task was submitted or replayed during repair.
+
+Root cause: phone_service forwarded empty stream deltas and sent an empty final speech token. Telnyx rejected this with “Invalid message: missing required field: token”; connector cleanup then interrupted Herald's active model response. This is a connector defect, not evidence that Albion or Quentin caused the disconnect.
+
+A second defect: constructing AIAgent directly did not bootstrap the profile plugins or MCP discovery. Configured toolset names were present, but the failed call's tool search only saw session_search. Worker now discovers profile plugins and configured MCP servers before constructing the agent, with noninteractive OAuth, and withholds readiness if herald-staff is unavailable. A live read-only Terra canary verified herald-staff connected (13 tools), windance-gmail connected (1 tool), and actual tool_search/tool_describe/list_staff_tasks execution. One response was truncated, so the model's broad task-list interpretation is not authoritative; direct queue inspection established the absence of a task.
+
+Speech repair ignores empty output and buffers a real final chunk so every transmitted text frame has a nonblank token, including the final last=true frame. Immediate acknowledgment says “I heard you. Let me check that.” Phone instructions now require successful assignment receipts before confirming longer work and then naturally asking whether anything else is needed. Finishing a task does not close the call. Fifteen relay/auth regression tests passed, including empty tool-boundary deltas, final speech flush, and two consecutive turns. Real model/tool canaries completed without interruption. Caller allowlist, signed webhook, binding, no-PIN preference, Albion voice and deferred outbound remain unchanged.
+
+Deployed phone_service.py, worker.py and tests to /Users/herald/services/herald-phone; restarted only com.windance.herald-phone when idle. Health configured=true, active_call=false afterward. The subsequent conversation-instruction edit applies to each new worker without another service restart. Warden was already paused=true; preserved it. No research task, outbound call or message was created.
+
+Fresh carrier call requested; audible end-to-end confirmation remains pending. Do not mark production-drive writes or task assignment end-to-end verified from read-only canaries. Recovery source backup: /Users/herald/services/herald-phone/backups/20260927-before-stream-fix/. Sanitized revised source: archive/20260927-herald-phone/. Roll back only these phone files and restart the dedicated phone service while idle if required; old source retains the known speech/task-tool defects.

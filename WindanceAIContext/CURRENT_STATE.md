@@ -620,3 +620,5 @@ Herald voice update: William selected Quentin, Telnyx.Ultra.5568a7df-e5ab-4442-9
 
 Herald current voice: restored Telnyx.NaturalHD.albion at William's request after a Quentin call disconnected following a task request. PIN remains off. Disconnect cause/task completion unverified; no task replay.
 
+
+Herald phone repair 2026-09-27: empty speech-token disconnect fixed; profile plugins/MCP now bootstrapped, live read-only staff-tool canary passed. Research request received but not queued; not replayed. Fifteen regression tests passed, fresh carrier confirmation pending. See projects/HERALD_PHONE_2026-09-25.md.
