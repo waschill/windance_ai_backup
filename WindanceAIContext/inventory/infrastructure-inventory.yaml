@@ -1,6 +1,11 @@
 hosts:
   HAL:
     platform: Clone Windows 11
+    hardware_verified_20260927:
+      cpu: Intel Core i5-13400F, 10 cores / 16 threads
+      ram_gb: 64
+      gpu: NVIDIA GeForce RTX 5070, approximately 12 GB VRAM
+      production_storage: P is a local DrivePool volume on HAL; approximately 25.03 TB logical capacity and 5.93 TB used. Storage failover is separate from compute standby.
     ip: 192.168.36.10
     role: William's main daily driver and AI server
     services:
@@ -24,6 +29,11 @@ hosts:
 
   AL:
     platform: Dell Ubuntu
+    hardware_verified_20260927:
+      model: Dell OptiPlex 3070
+      cpu: Intel Core i5-8500, 6 cores / 6 threads
+      ram_gb: 32
+      disk: 2 TB SATA SSD; root logical volume only 100 GiB
     ip: 192.168.36.20
     role: Web-based services and Syncthing controller
     services:
@@ -39,6 +49,10 @@ hosts:
 
   SAL:
     platform: Mac mini macOS
+    hardware_verified_20260927:
+      model: Macmini9,1, Apple M1, 8 cores
+      ram_gb: 16
+      disk: 512 GB class SSD
     ip: 192.168.36.22
     role: Node-RED and Cloudflare connection
     services:
@@ -57,7 +71,11 @@ hosts:
       router_wan_dashboard: As of 2026-08-26, the Operations dashboard contains a Network Traffic group with whole-network WAN Download and WAN Upload gauges from HAL's read-only ASUS counter bridge. Flow backup is stored beside flows.json as flows.json.before-router-wan-gauge-20260826-214045.bak.
 
   HERALD:
-    platform: iMac 2019 Intel macOS Tahoe
+    platform: iMac20,1 Intel macOS Tahoe (live hardware identity verified 2026-09-27)
+    hardware_verified_20260927:
+      cpu: Intel Core i9-10910, 10 cores / 20 threads
+      ram_gb: 32
+      disk: 1 TB SSD
     ip: 192.168.36.21
     role: General Manager / main assistant point of contact, memory node, Hermes dashboard, and assistant harness
     identity:
