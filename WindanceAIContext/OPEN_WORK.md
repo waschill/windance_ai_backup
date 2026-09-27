@@ -27,7 +27,7 @@ adapters before Herald can claim direct settings support. These are extension
 and revalidation items, not unfinished claims about the deployed YouTube fix.
 
 - Confirm the current Jim counselor-model deployment. A SoulChat-family download/build was in progress in the originating Codex chat and must not be treated as deployed without live evidence.
-- Confirm all assistant profiles use the intended local-first model policy and fallbacks.
+- Operational model policy superseded September 27: nine staff profiles use verified Codex OAuth/Terra with fallback disabled. Revalidate actual provider/tool inventories after Hermes upgrades; preserve separate private counselor policies.
 - Revalidate Gmail/Calendar approval parsing and scheduled briefing delivery after any gateway restart.
 - Revalidate profile-specific Telegram and iMessage destinations after configuration changes.
 - Keep Mission Control tied to durable task records and execution evidence.
@@ -97,3 +97,11 @@ Standby server research 2026-09-27 completed: choose existing-hardware coverage 
 
 ## Reacher report follow-through — 2026-09-27
 Verify the next normal 07:20 briefing delivery and audit Athena review coverage on remaining legacy report producers. This repair verified a read-only live Calendar preview, not a scheduled send. See projects/REACHER_IDENTITY_AND_BRIEFING_2026-09-27.md.
+
+## Post-repair scheduled delivery revalidation — 2026-09-27
+
+See projects/HERMES_STAFF_RELIABILITY_2026-09-27.md. Safe previews, isolated action tests, actual prior scheduled receipts and restored monitor ticks are distinct from the next future scheduled delivery. Do not replay old reports or mailbox actions to manufacture verification. After upgrades, recheck native owner admission, tool whitelists, worker evidence, timer activity and report history; a loaded LaunchAgent alone is insufficient.
+
+## Hermes final independent review pending — 2026-09-27
+
+The implemented repair has live evidence and component approvals, but the final exact integration/renderer/operational deltas still require private Claude review requested by William. The configured account exhausted its monthly review budget; an urgent SMS requested a capacity decision. No spending limits were changed and no final approval is claimed. Resume from the September 27 repair workspace and its exact private packets, refresh deployed hashes, obtain the verdict, fix findings and retest before closing this item.

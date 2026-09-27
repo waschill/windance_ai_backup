@@ -1,5 +1,23 @@
 # Current Operating State
 
+## Hermes staff reliability repair — 2026-09-27
+
+Reacher and all nine operational profiles now use verified Codex OAuth/Terra,
+with no silent provider fallback. Report questions retrieve actual owner-scoped
+reports and task history; explicit Scout corrections preserve and resume the
+same task. Research QA, actual staff discussion, final QA, completion evidence
+and delivery are separate verified stages. Long replies no longer block staff
+APIs. The original wireless research completed with a directly inspected report,
+seven role opinions and an actual delivery receipt. Existing report routes,
+history, sources and unattended follow-through were repaired and checked.
+See `projects/HERMES_STAFF_RELIABILITY_2026-09-27.md` for exact final tests,
+private Claude review, live workflow evidence, limitations and recovery.
+Operational Telegram/Discord access is owner-only direct messages; groups are
+intentionally denied before private context loads. Private counseling profiles,
+SyncThing and the disabled Level 8 system remain unchanged.
+
+Final independent Claude review remains OPEN because the configured review account exhausted its monthly budget. Earlier component approvals and passing tests do not constitute final approval. An urgent SMS asked William to resolve review capacity; no billing limits were changed. See the project record for verified state and remaining work.
+
 ## Reacher (formerly Herald), OAuth and briefing continuity — 2026-09-27
 
 William renamed Herald's public identity to **Reacher**, with a calm, observant,
