@@ -16,8 +16,6 @@ Operational Telegram/Discord access is owner-only direct messages; groups are
 intentionally denied before private context loads. Private counseling profiles,
 SyncThing and the disabled Level 8 system remain unchanged.
 
-Final independent Claude review remains OPEN because the configured review account exhausted its monthly budget. Earlier component approvals and passing tests do not constitute final approval. An urgent SMS asked William to resolve review capacity; no billing limits were changed. See the project record for verified state and remaining work.
-
 ## Reacher (formerly Herald), OAuth and briefing continuity — 2026-09-27
 
 William renamed Herald's public identity to **Reacher**, with a calm, observant,

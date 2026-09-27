@@ -102,6 +102,3 @@ Verify the next normal 07:20 briefing delivery and audit Athena review coverage 
 
 See projects/HERMES_STAFF_RELIABILITY_2026-09-27.md. Safe previews, isolated action tests, actual prior scheduled receipts and restored monitor ticks are distinct from the next future scheduled delivery. Do not replay old reports or mailbox actions to manufacture verification. After upgrades, recheck native owner admission, tool whitelists, worker evidence, timer activity and report history; a loaded LaunchAgent alone is insufficient.
 
-## Hermes final independent review pending — 2026-09-27
-
-The implemented repair has live evidence and component approvals, but the final exact integration/renderer/operational deltas still require private Claude review requested by William. The configured account exhausted its monthly review budget; an urgent SMS requested a capacity decision. No spending limits were changed and no final approval is claimed. Resume from the September 27 repair workspace and its exact private packets, refresh deployed hashes, obtain the verdict, fix findings and retest before closing this item.

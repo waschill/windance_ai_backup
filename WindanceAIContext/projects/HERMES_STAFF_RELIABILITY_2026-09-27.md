@@ -1,6 +1,6 @@
 # Hermes staff reliability repair — September 27, 2026
 
-Status: verified repair state; final independent review pending.
+Status: FINAL INTEGRATION VERIFIED — deployed repair and independent review complete.
 
 William authorized repairing or rebuilding the staff, restoring existing reports
 and actions, selecting working models/tools, and independently reviewing the
@@ -39,7 +39,7 @@ retain useful research and do not falsely claim completion.
 Exact task leases, atomic worker registration, generation checks and durable
 delivery claims prevent concurrent duplicate execution and stale-worker completion.
 Long conversational inference now runs outside the API event loop. A live Codex
-reply remained in progress while the private staff API responded in 9 milliseconds;
+reply remained in progress while the private staff API responded in 8 milliseconds after the final restart;
 the previous handler could block the entire server during a reply.
 Follow-through only considers registered repair-era runs; it does not sweep or
 replay the historic pending queue. Automatic correction replay is limited to
@@ -64,7 +64,7 @@ Private counseling profiles remain separate and unchanged.
 
 Harness APIs are private by default, with only the health endpoint publicly
 accessible. Existing trusted-host callers and configured bearer authorization
-remain supported. This is a trusted-LAN boundary, not a claim that the service
+remain supported. No bearer token is currently configured; trusted-network admission is the active boundary. This is a trusted-LAN boundary, not a claim that the service
 binds only to loopback or that source addresses are cryptographic identity.
 
 ## Reports and delivery
@@ -74,7 +74,7 @@ Athena's release verdict is bound to the exact report. Reacher can retrieve save
 briefing, email and staff reports. Confirmed William Telegram reports are captured
 with content-bound delivery identifiers for later questions, including news and
 YouTube. History failures retry only history storage, never resend a Telegram
-message. Permanent history errors are quarantined and visible to the worker.
+message. Permanent history errors are quarantined. A private health receipt feeds the existing urgent monitor; rejected records and retention loss remain visible, transient failures have a retry grace period, and stale health fails closed. Routine report history retries never resend the original message.
 
 Dedicated scheduled Telegram routes were restored where they had incorrectly
 called an iMessage alias. Existing intended Shawn and staff iMessage routes remain.
@@ -102,7 +102,7 @@ prices, source links, caveats and seven actual staff opinions. AF60-XR is the
 conditional preferred choice; AF60-LR is the budget alternative. No purchase or
 installation was performed.
 
-Current combined core and weekly receipt suite: 68 Unix tests, no skips. Additional component
+Current combined suite: 73 Unix tests, no skips (64 core, seven weekly receipt/revision, two deployment recovery tests). Additional component
 coverage includes native owner admission, scoped tool calls, sender/outbox failure
 handling, report history, Gmail reference guards, Shawn authorization, weekly
 workflow stages and Node-RED result wiring. Live read-only checks covered the
@@ -115,12 +115,19 @@ proposed decisions and their factual qualifications and signoffs, and produced
 output identical to Athena's approved report. This acceptance run did not send
 a duplicate report. The production weekly schedule remains Tuesday at 10:30.
 
-Earlier component revisions received private Claude approval. The final weekly
-renderer and integration deltas have not received their final verdict: the
-configured review account returned a monthly-budget-exhausted error. Existing
-CLI and browser access checks found no independent signed-in Claude route.
-No spending limits or credentials were changed. The required final review
-remains open; successful tests do not substitute for that review.
+Scoped private Claude reviews approved the automation/history, scheduler/recovery,
+core/maintenance, and weekly changes. Findings were corrected and their exact
+revisions reviewed again. Coverage includes interrupted deployment recovery,
+retained delivery receipts, malformed report rejection, complete Harness deltas,
+and deterministic approved-report resumption. The final combined suite passed
+73 Unix tests without skips; live weekly tests separately passed 25 workflow
+and seven helper cases. Repeated counts refer to the same tests, not additional
+independent coverage.
+
+The configured review budget initially blocked these reviews despite available
+account credits. William explicitly approved restoring the allowance. Actual
+private Claude reviews resumed; credentials and privacy/model restrictions were
+preserved. Final private Claude integration review returned APPROVED FINAL INTEGRATION in session `20260927_165359_255b67` against the installed hashes and operational receipts. The private verdict SHA is `4ee172d00a01965c77a5f33873da7835663e022c3da78684b647ead2520891b3`; the reviewed final manifest is `83962185a21e308871fe232af01df43ba971a8acbe5ec370faca66ed77051a6f`.
 Preview success and a loaded schedule do not prove a future scheduled delivery.
 
 ## Scheduler repair
@@ -184,14 +191,14 @@ repair directories, and on SAL under the corresponding automation/weekly repair
 directories. They must not be copied into the public context repository: some
 operational source files contain private destinations. Use hash-guarded rollback
 in the documented reverse order; a full baseline rollback intentionally restores
-the pre-repair stack and requires the explicit full-stack flag.
+the pre-repair stack and requires the explicit full-stack flag. The history-health installer is a completed one-time migration: do not re-run it. Retain its original backup, progress and applied receipts for recovery.
 
-Warden was resumed after healthy checks at 21:46 UTC. Fresh HERALD and SAL
+Warden was resumed after the final maintenance window at 22:49 UTC. Fresh HERALD and SAL
 observations passed all configured health checks. Its code and independent
 Codex-plus-Claude consensus policy are unchanged: missing Claude capacity holds
-proposed autonomous repairs; it does not bypass approval. The final Hermes
-integration review remains a separate open requirement.
-SyncThing and the disabled Level 8 shutdown system were not modified. Canonical
-publication reached Production, HAL, HERALD and SAL; Second Brain verified 66
-files and policy retrieval at 21:56 UTC. The final independent Claude review
-is the remaining completion requirement.
+proposed autonomous repairs; it does not bypass approval. The final Hermes integration review is complete and separately recorded.
+SyncThing and the disabled Level 8 shutdown system were not modified. The canonical publisher copies this sanitized record to Production, HAL, HERALD and SAL and refreshes the shared Second Brain index. Exact publication and retrieval receipts are retained in the private repair workspace; raw operational files remain private.
+
+## Natural post-repair delivery
+
+The normal 17:00 William mail report ran automatically on September 27. Its Telegram delivery history was recorded at 23:00:12.621882 UTC and the Node-RED process completed with exit 0 at 17:00:12 Mountain. This was an ordinary scheduled run, observed through sanitized metadata; no manual trigger, duplicate delivery or mailbox-action replay was used. The private receipt is integration-review/natural-mail-acceptance.json.
