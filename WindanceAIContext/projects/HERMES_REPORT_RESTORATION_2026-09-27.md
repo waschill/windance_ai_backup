@@ -36,7 +36,7 @@ The original wireless task completed and was delivered through iMessage at **20:
 | Reacher entry points and staff models | Nine operational profiles on Codex OAuth gpt-5.6-terra, no provider fallback | Real native model/tool canaries; phone/iMessage/desktop retrieval created no tasks or approvals | Operational Telegram/Discord accepts configured owner direct messages; groups denied |
 | Core and legacy Codex backends | Harness, phone, Hermex, bridge and app server managed in Background domain | Health ports 8791/8792/8793 HTTP 200; no-task WebSocket initialization passed; orphan listener replaced | Reboot/logout not exercised |
 | Warden supervision | Resumed 21:46 UTC, existing approval policy unchanged | Fresh HERALD and SAL checks all healthy, paused=false | Autonomous repairs still need matching Codex/private-Claude approval; unavailable Claude capacity holds repair |
-| Nightly maintenance and backup | 01:30 Background calendar; existing --apply and fresh confirmed-backup gate preserved | Actual GitHub restore point, six payload hashes and reconstruction verified; new domain loaded, old GUI absent, zero executions | Root publication and ValidateOnly pending; next run requires a fresh successful backup; no upgrade run |
+| Nightly maintenance and backup | 01:30 Background calendar; existing --apply and fresh confirmed-backup gate preserved | Actual GitHub restore point, six payload hashes and reconstruction verified; new domain loaded, old GUI absent, zero executions | Canonical publication and ValidateOnly passed; next run requires a fresh successful backup; no upgrade run |
 
 ## Tests and review scope
 
@@ -61,7 +61,7 @@ The original wireless task completed and was delivered through iMessage at **20:
 - weekly_acceptance: weekly-repair/renderer-acceptance.json (weekly-repair/renderer-acceptance.json)
 - scheduler_proof: architecture-repair/scheduler-final-live-proof.json (architecture-repair/scheduler-final-live-proof.json)
 
-No fake alert, historical confirmation replay or test calendar business send was used to claim success. The real wireless delivery is recorded separately from component dry runs. Operational Telegram/Discord access is restricted to configured owner direct messages; groups are denied before private memory or tools load. No SyncThing, Level 8, billing-limit or credential changes were made. Nightly maintenance now has a verified restore point and working Background schedule. Its fresh GitHub-confirmed backup gate remains mandatory; root context publication and final ValidateOnly remain pending. No maintenance or upgrade was manually invoked.
+No fake alert, historical confirmation replay or test calendar business send was used to claim success. The real wireless delivery is recorded separately from component dry runs. Operational Telegram/Discord access is restricted to configured owner direct messages; groups are denied before private memory or tools load. No SyncThing, Level 8, billing-limit or credential changes were made. Nightly maintenance now has a verified restore point and working Background schedule. Its fresh GitHub-confirmed backup gate remains mandatory; canonical context publication and final ValidateOnly passed. No maintenance or upgrade was manually invoked.
 
 Earlier chronology: Markdown (architecture-repair/restoration-verification.before-current-state.md) and JSON (architecture-repair/restoration-verification.before-current-state.json). Full private plist backups and delivery sources must not be published.
 

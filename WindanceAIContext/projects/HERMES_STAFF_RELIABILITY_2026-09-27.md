@@ -170,6 +170,8 @@ existing confirmed-backup requirement remains in place.
 The original 01:30 nightly maintenance schedule now uses the working Background
 domain, with its existing arguments and update gates preserved. RunAtLoad is
 false; moving the timer did not invoke maintenance or install anything.
+The final canonical backup-validation command passed at 21:56 UTC after context
+publication, confirming a fresh restore point in the remote main history.
 
 The current per-report verification matrix is in
 `projects/HERMES_REPORT_RESTORATION_2026-09-27.md` in the canonical package.
@@ -189,5 +191,7 @@ observations passed all configured health checks. Its code and independent
 Codex-plus-Claude consensus policy are unchanged: missing Claude capacity holds
 proposed autonomous repairs; it does not bypass approval. The final Hermes
 integration review remains a separate open requirement.
-SyncThing and the disabled Level 8 shutdown system were not modified. Publication
-must update the canonical context and verify the Second Brain index.
+SyncThing and the disabled Level 8 shutdown system were not modified. Canonical
+publication reached Production, HAL, HERALD and SAL; Second Brain verified 66
+files and policy retrieval at 21:56 UTC. The final independent Claude review
+is the remaining completion requirement.
