@@ -59,6 +59,17 @@ def pin_matches(pin, record):
         return False
 
 
+def caller_said_goodbye(text):
+    # Match an entire farewell, never a quoted/negated mention inside a request.
+    words = re.sub(r'[^a-z\s]', ' ', text.lower())
+    words = ' '.join(words.split())
+    return bool(re.fullmatch(
+        r'(?:(?:ok|okay|alright|thanks|thank you|herald|harold) )*'
+        r'(?:goodbye|good bye|bye(?: bye)?|see (?:you|ya)(?: later)?|'
+        r'talk to (?:you|ya) later|catch (?:you|ya) later|until next time)'
+        r'(?: (?:herald|harold|thanks|thank you|bye))*', words))
+
+
 class PhoneService:
     def __init__(self, config_path=CONFIG, worker_command=None):
         self.config_path = Path(config_path)
@@ -146,7 +157,13 @@ class PhoneService:
         return response
 
     async def ended(self, request):
-        await self.signed_form(request)
+        c, form = await self.signed_form(request)
+        call = self.calls.get(form.get('CallSid'), {})
+        if call.get('goodbye'):
+            root = ET.Element('Response')
+            ET.SubElement(root, 'Say', {'voice': c.get('voice', 'Telnyx.NaturalHD.albion')}).text = 'Talk to you later, William. Goodbye.'
+            ET.SubElement(root, 'Hangup')
+            return xml_response(root)
         return hangup()
 
     async def relay(self, request):
@@ -239,6 +256,8 @@ class PhoneService:
             proc = await asyncio.create_subprocess_exec(
                 *self.worker_command, session, stdin=asyncio.subprocess.PIPE,
                 stdout=asyncio.subprocess.PIPE, stderr=stderr_file, limit=1048576)
+            stderr_file.close()  # Child owns its inherited descriptor now.
+            stderr_file = None
             reader = asyncio.create_task(receive_worker())
 
         try:
@@ -262,11 +281,15 @@ class PhoneService:
                 print('relay setup authenticated; awaiting PIN', flush=True)
                 await say('Please enter your private phone PIN, followed by pound.')
             while not ws.closed:
-                remaining = (c.get('max_call_seconds', 1200) if state['authorized'] else 60) - (time.monotonic() - started)
-                if remaining <= 0:
-                    await say('This call has reached its time limit. Goodbye.')
-                    break
-                msg = await asyncio.wait_for(ws.receive(), timeout=min(remaining, 120))
+                # Once authenticated, silence and task completion do not end a call.
+                # WebSocket heartbeats still detect a broken transport.
+                if state['authorized']:
+                    msg = await ws.receive()
+                else:
+                    remaining = 60 - (time.monotonic() - started)
+                    if remaining <= 0:
+                        break
+                    msg = await asyncio.wait_for(ws.receive(), timeout=remaining)
                 if msg.type != WSMsgType.TEXT:
                     break
                 event = json.loads(msg.data)
@@ -311,6 +334,11 @@ class PhoneService:
                     text = event.get('voicePrompt', '').strip()
                     if not text or len(text) > 8000:
                         continue
+                    if caller_said_goodbye(text):
+                        state.update(suppress=True, pending=None)
+                        self.calls.setdefault(info['call_id'], {}).update(goodbye=True, expires=time.time()+3600)
+                        await ws.send_json({'type': 'end', 'handoffData': '{"reason":"caller_done"}'})
+                        break
                     if not state['ready']:
                         state['pending'] = text
                     elif state['busy']:

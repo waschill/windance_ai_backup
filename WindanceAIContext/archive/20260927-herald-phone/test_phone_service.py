@@ -12,7 +12,7 @@ from xml.etree import ElementTree as ET
 from aiohttp.test_utils import TestClient, TestServer
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
-from phone_service import PhoneService, pin_matches, verify_signature
+from phone_service import PhoneService, pin_matches, verify_signature, caller_said_goodbye
 
 
 class RelayTests(unittest.IsolatedAsyncioTestCase):
@@ -37,6 +37,11 @@ class RelayTests(unittest.IsolatedAsyncioTestCase):
         await self.client.start_server()
 
     async def asyncTearDown(self):
+        # Let the handler reap its worker after the test closes its socket.
+        for _ in range(100):
+            if not self.service.active:
+                break
+            await asyncio.sleep(.01)
         await self.client.close()
         self.tmp.cleanup()
 
@@ -183,6 +188,27 @@ for line in sys.stdin:
     def test_pin_hash(self):
         self.assertTrue(pin_matches(self.pin,self.config['pin']))
         self.assertFalse(pin_matches('12345678',self.config['pin']))
+
+    def test_farewell_is_whole_utterance(self):
+        for phrase in ['Goodbye!', 'See ya', 'Talk to you later.', 'Okay, thanks, bye Herald', 'Bye-bye']:
+            self.assertTrue(caller_said_goodbye(phrase), phrase)
+        for phrase in ['Thanks', 'Do not say goodbye', 'Research goodbye songs', 'Before I say bye check my task', 'Bye, actually wait']:
+            self.assertFalse(caller_said_goodbye(phrase), phrase)
+
+    async def test_goodbye_ends_relay_then_callback_speaks(self):
+        ws=await self.connect()
+        for digit in self.pin+'#':
+            await ws.send_json({'type':'dtmf','digit':digit})
+        await ws.receive_json()
+        await ws.receive_json()
+        await ws.send_json({'type':'prompt','last':True,'voicePrompt':'See ya!'})
+        self.assertEqual((await ws.receive_json())['type'],'end')
+        raw,headers=self.signed(self.form())
+        response=await self.client.post('/ended',data=raw,headers=headers)
+        root=ET.fromstring(await response.text())
+        self.assertIn('Goodbye',root.find('Say').text)
+        self.assertIsNotNone(root.find('Hangup'))
+        await ws.close()
 
 
 if __name__ == '__main__':

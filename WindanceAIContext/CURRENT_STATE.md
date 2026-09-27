@@ -622,3 +622,5 @@ Herald current voice: restored Telnyx.NaturalHD.albion at William's request afte
 
 
 Herald phone repair 2026-09-27: empty speech-token disconnect fixed; profile plugins/MCP now bootstrapped, live read-only staff-tool canary passed. Research request received but not queued; not replayed. Fifteen regression tests passed, fresh carrier confirmation pending. See projects/HERALD_PHONE_2026-09-25.md.
+
+Herald phone caller-controlled ending 2026-09-27: authenticated silence/task completion no longer auto-disconnect; clear standalone farewell ends relay and signed callback speaks goodbye then hangs up. Seventeen tests passed; carrier confirmation pending. See phone project guide.
