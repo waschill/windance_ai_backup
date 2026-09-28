@@ -1,5 +1,15 @@
 # Current Operating State
 
+## Forge report-result recovery — September 28
+
+Fixed the staff runner's session-envelope parser, which discarded Forge's actual
+answer and falsely recorded no final response. The iMessage-routing task now
+shows its recovered PARTIAL result; verified source/config changes are distinct
+from still-unverified post-change report delivery. 24 regression checks passed,
+live task API read-back and Harness health passed, and no report/task was replayed
+or message sent. Timeouts now warn that writes may already have occurred. See
+`projects/FORGE_RESULT_RECOVERY_2026-09-28.md` for evidence and rollback.
+
 ## Hermes fresh-task correction — September 27 evening
 
 The earlier all-complete claim was too broad: a newly created Scout task crashed on a NULL result before research. Vega's code and the private Claude review missed that fresh-record contract. The one-line fix is deployed and privately reviewed; real-producer plus HTTP-serialization regression fails on the old code and passes on current code, alongside the 74-test suite. The same failed assignment subsequently completed with seven staff opinions, final QA and an actual delivery receipt at 8:58 PM Mountain. Fresh-NULL tests use mocked external model/QA calls; live recovery used the retained nonempty failure text. Those are distinct evidence. Read projects/HERMES_FRESH_TASK_NULL_2026-09-27.md before relying on earlier integration closure. No whole-stack bug-free guarantee is made.
