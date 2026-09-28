@@ -1,0 +1,44 @@
+﻿{
+    "schema":  1,
+    "canonical_references":  [
+                                 {
+                                     "commit":  "73f214a594caabf508f8b6ae2fab4c66e188d4c9",
+                                     "path":  "WindanceAIContext/inventory/infrastructure-inventory.yaml",
+                                     "git_blob":  "267c94b475e25ff7ca6ab00a813b26dd16d79253",
+                                     "local_worktree_sha256":  "d98d73a150e17d28ba4c4b6109882fb9d0f9e02b48b22d225cc27770f4948c9c"
+                                 },
+                                 {
+                                     "commit":  "73f214a594caabf508f8b6ae2fab4c66e188d4c9",
+                                     "path":  "WindanceAIContext/runbooks/WINDANCE_NETWORK_RUNBOOK.md",
+                                     "git_blob":  "b253f06947464c11c0c50f0cc3ad61a29731e28e",
+                                     "local_worktree_sha256":  "c756ceeca98f9eb61da74bb8e65cbc63f13786f6c98b2dcd7f36541ddd80af7d"
+                                 }
+                             ],
+    "files":  [
+                  {
+                      "path":  ".gitattributes",
+                      "sha256":  "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+                  },
+                  {
+                      "path":  "BACKUP_MANIFEST.md",
+                      "sha256":  "44830e7514e7eea77969031290cd05faf6102bf8bcc846d2e7e74f54b40910fd"
+                  },
+                  {
+                      "path":  "managed-software-inventory.txt",
+                      "sha256":  "e03c3bf269b81737ccbf3551ca93d8a381d430bd3b2da4be24d71d72365dc45e"
+                  },
+                  {
+                      "path":  "hermes\\pre-upgrade-state.txt",
+                      "sha256":  "2e67e194650a2e612c2457e627bc88378e3c8cdb9ff99e48609570a03534259c"
+                  },
+                  {
+                      "path":  "hermes\\windance-customizations.patch",
+                      "sha256":  "aeafaefa58d824c62fe359d303d91980398811e21e492b7825d41a21da50b652"
+                  },
+                  {
+                      "path":  "hermes\\windance_owner_guard.py",
+                      "sha256":  "72cc8bf9e7f9d377155371c2f70d1c58d69dd1f316006741a2fe1b30b08c2c15"
+                  }
+              ],
+    "restore":  "Apply tracked Hermes patch to recorded HEAD and restore hermes/windance_owner_guard.py at gateway/windance_owner_guard.py. Preserve existing private runtime/config backups."
+}
