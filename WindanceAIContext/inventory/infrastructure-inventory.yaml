@@ -9,6 +9,18 @@ assistant_public_identity:
   verified: 2026-09-27
 
 hosts:
+  AudioBooth:
+    platform: Windows
+    ip: 192.168.36.198
+    role: House AudioBooth computer
+    access:
+      ssh: AudioBooth (from HAL)
+      user: William Schilling
+      auth: Existing HAL homelab SSH key; BatchMode login verified 2026-09-28
+    notes:
+      ssh_record: projects/AUDIOBOOTH_SSH_2026-09-28.md
+      hardware_user_reported: Intel N100, 12 GB RAM, 954 GB storage
+      limits: Direct HERALD/SAL access and DHCP reservation not verified
   HAL:
     platform: Clone Windows 11
     hardware_verified_20260927:
