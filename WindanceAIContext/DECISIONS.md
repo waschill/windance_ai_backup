@@ -1,5 +1,10 @@
 # Durable Decisions
 
+## Hermes fresh-task correction — September 27 evening
+
+The earlier all-complete claim was too broad: a newly created Scout task crashed on a NULL result before research. Vega's code and the private Claude review missed that fresh-record contract. The one-line fix is deployed and privately reviewed; real-producer plus HTTP-serialization regression fails on the old code and passes on current code, alongside the 74-test suite. The same failed assignment subsequently completed with seven staff opinions, final QA and an actual delivery receipt at 8:58 PM Mountain. Fresh-NULL tests use mocked external model/QA calls; live recovery used the retained nonempty failure text. Those are distinct evidence. Read projects/HERMES_FRESH_TASK_NULL_2026-09-27.md before relying on earlier integration closure. No whole-stack bug-free guarantee is made.
+
+
 ## Hermes staff reliability repair — 2026-09-27
 
 Reacher and all nine operational profiles now use verified Codex OAuth/Terra,

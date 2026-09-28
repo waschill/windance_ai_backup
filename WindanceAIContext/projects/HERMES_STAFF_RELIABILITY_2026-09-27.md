@@ -1,11 +1,14 @@
 # Hermes staff reliability repair — September 27, 2026
 
-Status: FINAL INTEGRATION VERIFIED — deployed repair and independent review complete.
+Status: specific fresh-task dispatch regression corrected, reviewed and recovered. Earlier FINAL INTEGRATION VERIFIED evidence is historical; no guarantee of a defect-free stack is made.
 
-William authorized repairing or rebuilding the staff, restoring existing reports
-and actions, selecting working models/tools, and independently reviewing the
-finished code and processes with private Claude. This repair preserves existing
-services and durable records rather than discarding the stack or its history.
+## Fresh task incident — September 27 evening
+
+A new Scout task failed before model execution because its SQL NULL result became Python None, and a draft-reuse check called len() on it. Vega introduced the defect; both the tests and private Claude review missed the fresh-create/refetch path. Earlier successful resumed tasks did not establish that new research could start. The earlier unqualified completion claim was too broad.
+
+The correction normalizes an absent or null prior result to an empty string. The enhanced regression uses the real producer, isolated database, HTTP endpoint and JSON serializer, then the dispatcher with external model/QA boundaries stubbed. The old runner demonstrably fails with the exact TypeError; the deployed runner passes all 74 affected tests. Private Claude approved the specific fix and supplemental test evidence in session 20260927_205416_71772b. Live runner SHA256: 1907d15aebce5667cb66da8fb2be7ea579947730f98c5c81cc22dedcb3adf68b. This supersedes the old runner hash only; older approvals retain their exact historical scope.
+
+The same failed task completed with source-linked research, seven staff opinions, Reacher synthesis and Athena final QA, then received a delivery receipt at 8:58 PM Mountain on September 27. Recovery retained a nonempty old failure result, so its live success is distinct from fresh-NULL test evidence. See projects/HERMES_FRESH_TASK_NULL_2026-09-27.md for exact receipts and limitations. Do not use passing tests or review approval alone as evidence of a live delivered outcome.
 
 ## What failed and what changed
 

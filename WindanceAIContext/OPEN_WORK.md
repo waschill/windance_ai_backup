@@ -102,3 +102,7 @@ Verify the next normal 07:20 briefing delivery and audit Athena review coverage 
 
 See projects/HERMES_STAFF_RELIABILITY_2026-09-27.md. Safe previews, isolated action tests, actual prior scheduled receipts and restored monitor ticks are distinct from the next future scheduled delivery. Do not replay old reports or mailbox actions to manufacture verification. After upgrades, recheck native owner admission, tool whitelists, worker evidence, timer activity and report history; a loaded LaunchAgent alone is insufficient.
 
+
+## Fresh-record regression coverage — September 27 evening
+
+Specific NULL-result crash is corrected and the failed research task was recovered and delivered. See projects/HERMES_FRESH_TASK_NULL_2026-09-27.md. Preserve tests that create real pending records and traverse the actual HTTP serializer; resumed fixtures alone miss nullable-field contracts. Future genuinely new Scout work provides additional live coverage; do not manufacture duplicate assignments or claim it was already observed in this recovery.
