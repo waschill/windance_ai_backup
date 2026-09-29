@@ -1,4 +1,7 @@
 # Current Operating State
+## Reacher explicit staff handoff repaired — September 29
+
+The product-ideas prompt was misclassified as a read-only report question, and stale conversation history resurrected a deleted task. Explicit collective requests now create owner-scoped work orders for the nine operational staff, preserving the complete prompt and reusing live records on identical repeats. Short begin follow-ups preserve their source assignment; missing/deleted task references cannot establish current progress. 31 regressions and isolated full HTTP dispatch passed; live stale-reference rejection and healthy Harness verified. Production boards remain empty for William's resubmission. Downstream idea submissions, Scout research, memory receipts and consolidation were not executed or verified. See projects/REACHER_STAFF_HANDOFF_2026-09-29.md.
 ## Staff task cleanup — September 29
 
 At William's explicit direction, deleted 246 Harness staff tasks, 282 Hermes Kanban tasks, and two obsolete disabled tracking jobs. Both task ledgers are verified empty; future recurring schedules remain intact. Includes all 17 overdue pending tasks and today's failed idea-assignment handoff. William plans to resubmit; do not report the old assignment as active. Private recovery exports are retained. Warden resumed with all checks passing. See projects/STAFF_TASK_CLEANUP_2026-09-29.md for evidence, scope and recovery.
