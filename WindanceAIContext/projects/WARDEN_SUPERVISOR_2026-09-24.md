@@ -197,3 +197,7 @@ scoped review of the revised guide and shared-memory save/readback. Forge task
 `2dd29cc7-96d9-4a4a-83e1-e11bcb80d909` returned PASS with a transcript-verified
 Herald probe. These certify procedure acceptance; Vega separately measured final
 canary execution and activation. See `archive/20260924-warden/BUILD_HISTORY.md`.
+
+## September 29 operator report correction
+
+William asked Vega to inspect the report failure. Warden was operating correctly: incident INC-20260928-8fc48fd4 detected a YouTube producer exception after successful iMessage delivery. Vega corrected stale SMS receipt comparisons in four producers; no Warden code, consensus gate, incident or failed process receipt was changed. Paused for coordinated maintenance15:59:27UTC; resumed16:00:48UTC. Incident remains open until a natural successful scheduled completion and two healthy observations. Next run September29 noon Mountain. See REPORT_RECEIPT_REPAIR_2026-09-29.md for exact evidence, source hashes and limitations.

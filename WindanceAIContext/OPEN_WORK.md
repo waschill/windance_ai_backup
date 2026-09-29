@@ -110,4 +110,9 @@ Specific NULL-result crash is corrected and the failed research task was recover
 ## September 29 verified fixes and remaining checks
 
 - Shawn email wrong-recipient defect is fixed; actual carrier SMS remains blocked by SAL's absent relay. Await William's transport choice, then verify one actual sent receipt and the next natural scheduled report. Never label iMessage as SMS or reroute private email to William. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md.
-- Phone runtime compatibility and startup-failure cleanup are fixed, tested and privately reviewed. A normal owner handset call still needs audible verification. Future Hermes updates must test actual fresh phone workers, not listener health alone. See projects/PHONE_RUNTIME_REPAIR_2026-09-29.md.
+- Phone runtime compatibility and startup-failure cleanup are fixed, tested and privately reviewed. William confirmed a working owner handset call later on September29; the separate conversation-style revision still awaits physical listening. Future Hermes updates must test actual fresh phone workers, not listener health alone. See projects/PHONE_RUNTIME_REPAIR_2026-09-29.md.
+
+## September 29 report incident follow-through
+
+- Corrected four SAL iMessage receipt checks. At September29 10:01 Mountain Warden was unpaused; INC-20260928-8fc48fd4 remained open on historical failed completion. Verify the next natural YouTube run at noon: process exit0, independent delivery metadata, then normal Warden resolution. Do not replay old reports or invent completion receipts. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md.
+- Reacher phone now omits the forced acknowledgment and repeated name prefix. Installed-worker conversation verified; physical listening of this separate style change remains pending. User already confirmed the preceding runtime repair works on a real call. See projects/PHONE_CONVERSATION_2026-09-29.md.

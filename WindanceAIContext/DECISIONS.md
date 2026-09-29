@@ -1,5 +1,12 @@
 # Durable Decisions
 
+## Report receipt and phone conversation repairs — September 29, 2026
+
+William confirmed a real Reacher phone call works. The forced acknowledgment before each turn has now been removed, and phone-specific instructions omit repeated speaker labels/introduction. The deployed conversation revision passed21 tests and an installed-worker two-turn canary including hang-up cleanup; private Claude approved it. Physical listening of this separate style revision remains pending. See projects/PHONE_CONVERSATION_2026-09-29.md; it supersedes runtime source hashes in the earlier runtime project.
+
+Warden correctly detected a YouTube producer failure; both flagged reports actually reached William (September28 16:00 and September29 08:00 Mountain). The producer sent through iMessage but rejected its successful receipt because it still expected SMS. That comparison and duplicate helper were corrected in four SAL report producers. Contract regression tests and fresh print-only generation passed. Warden is resumed and all unrelated checks pass. Incident INC-20260928-8fc48fd4 remains open pending the next natural scheduled completion; no failed history was rewritten and no report replayed. Next normal YouTube run is September29 noon Mountain. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md. Shawn email SMS remains separately unresolved; no transport choice has been received.
+
+
 ## Shawn email and Reacher phone repairs — September 29, 2026
 
 Shawn's email schedule was created September 2 (first report at 11:18 Mountain). September 28's report-routing migration incorrectly moved her shared delivery branch to William's fixed recipient. The September 29 07:50 report actually reached William. Shawn email now has its own fixed-recipient route and a separate private recipient pin; it cannot fall back to William. Original 07:50/12:30/17:10 times remain. Twenty-three tests passed, including Messages false-success and wrong-recipient guards; private Claude approved the exact sender. Carrier SMS is NOT working: SAL lacks SMS relay capability, and a neutral actual SMS check failed. William was asked whether iMessage directly to Shawn is acceptable; no answer is recorded. Do not claim restored email delivery or silently substitute transports. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md.
