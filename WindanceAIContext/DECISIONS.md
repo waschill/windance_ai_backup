@@ -176,3 +176,7 @@ Build supervision before a new Paperclip-like management app. Warden watches out
 ## Warden approval rule — William, 2026-09-24
 
 Warden is ACTIVE on SAL as of 2026-09-24 21:52 UTC after revision 7 review and a successful unanimous-review canary. Always check live status before maintenance. Warden may execute a proposed change without William only when a background Codex/Vega reviewer and private Claude reviewer both explicitly approve that same exact change. If either disagrees, is unavailable, or yields unclear/expired approval, hold for William. This applies to Warden's proposed repairs, including previously allowlisted recovery. It does not reinstate the suspended global review requirement for unrelated work. No automatic override or rollback exception. See projects/WARDEN_SUPERVISOR_2026-09-24.md for current implementation status. Direct SAL messaging remains selected; Herald Messages is deferred by William.
+
+## 2026-09-29 — Vega owns management; Reacher communications
+William explicitly authorized Vega's dedicated Hermes control path, persistent follow-through, proactive oversight and telephone routing. Reacher no longer assigns or manages staff; existing safety, approval, privacy and Warden consensus rules remain. Implemented architecture and receipts: projects/VEGA_MANAGER_2026-09-29.md.
+

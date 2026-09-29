@@ -16,3 +16,7 @@ Current SHA-256 values:
 - test_phone_service.py: `9ea54ceb24c35b81a9d3b6ab39d4a951cf07cd8c70aa1b3821ce241014fe3bc5`
 
 Backup: `/Users/herald/services/herald-phone/backups/20260929-before-conversation/`. Restore only those three files while idle and restart the dedicated phone job to undo the conversation adjustment; this backup retains the preceding runtime and failure-release fixes. Private evidence includes tests.txt, ack-red.txt, installed-style-relay.json, deployed.json, claude-receipt.json and claude-verdict.txt. No outbound call was placed, and neither shared identity files nor any other channel was changed. Physical listening of this style revision remains unverified; William's confirmed working call preceded it.
+
+## Superseded route — later September 29
+William subsequently requested the phone be routed to Vega. The manager-backed worker and greeting are now installed; shared carrier/access/voice settings remain. The earlier source hashes above are historical, not current. See VEGA_MANAGER_2026-09-29.md for current verification, limitations and recovery.
+
