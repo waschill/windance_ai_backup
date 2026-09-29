@@ -1,5 +1,10 @@
 # Windance Scheduled Reports
 
+## YouTube delivery verified — September 29
+
+The existing Mon–Thu08:00/12:00/16:00 Mountain YouTube schedule now delivers through Max/iMessage. Noon September29 completed with exit0 and Messages recorded sent/delivered to William. Stale SMS receipt checks were corrected in four producers earlier that morning; Warden's incident resolved naturally. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md. William's later report that he did not see a video report remains distinct from these transport records.
+
+
 ## Shawn email recipient correction — September 29
 
 Shawn email retains 07:50, 12:30 and 17:10 Mountain. Its dedicated recipient is Shawn only; September 28's accidental William route is removed. Carrier SMS is configured as requested but the transport is unavailable, so delivery remains held/unconfirmed. Await William's choice of Shawn iMessage or enrollment of a real SMS relay. No fallback to William. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md. Older transport descriptions below are historical and do not override this status.
@@ -72,9 +77,9 @@ William and Shawn can use case-insensitive `ALD` as the short form of `Always De
 
 | Time | Report | Recipient |
 |---|---|---|
-| 8:00 AM | YouTube watch briefing (12-hour window) | William through Telegram |
-| 12:00 PM | YouTube watch briefing (4-hour window) | William through Telegram |
-| 4:00 PM | YouTube watch briefing (4-hour window) | William through Telegram |
+| 8:00 AM | YouTube watch briefing (12-hour window) | William through Max/iMessage |
+| 12:00 PM | YouTube watch briefing (4-hour window) | William through Max/iMessage |
+| 4:00 PM | YouTube watch briefing (4-hour window) | William through Max/iMessage |
 
 ## Weekly reports
 

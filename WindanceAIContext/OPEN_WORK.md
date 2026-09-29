@@ -1,5 +1,10 @@
 # Open Work and Revalidation List
 
+## Noon YouTube completion verified — September 29
+
+The noon scheduled YouTube report completed with exit0, and Messages independently recorded iMessage sent/delivered to the configured William recipient at12:00:17 Mountain. Warden resolved INC-20260928-8fc48fd4 at12:04:10 after two healthy checks and remains unpaused. This supersedes the earlier pending-noon verification. William subsequently said he still lacked the video report; a copy was made directly accessible in Codex, and clarification of scheduled roundup versus separate staff report is pending. Transport flags do not establish that he saw it. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md for receipt identifiers and limits.
+
+
 ## YouTube scheduled delivery revalidation — 2026-09-23
 
 The CRLF startup regression is corrected and direct executable preview passed. Confirm a subsequent normal scheduled delivery; as of 15:31 MDT the next slot is 16:00 Sept23. No resend or future monitor was started. See `projects/YOUTUBE_SCHEDULER_ENTRYPOINT_FIX_2026-09-23.md`.

@@ -1,5 +1,10 @@
 # Current Operating State
 
+## Noon YouTube completion verified — September 29
+
+The noon scheduled YouTube report completed with exit0, and Messages independently recorded iMessage sent/delivered to the configured William recipient at12:00:17 Mountain. Warden resolved INC-20260928-8fc48fd4 at12:04:10 after two healthy checks and remains unpaused. This supersedes the earlier pending-noon verification. William subsequently said he still lacked the video report; a copy was made directly accessible in Codex, and clarification of scheduled roundup versus separate staff report is pending. Transport flags do not establish that he saw it. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md for receipt identifiers and limits.
+
+
 ## Report receipt and phone conversation repairs — September 29, 2026
 
 William confirmed a real Reacher phone call works. The forced acknowledgment before each turn has now been removed, and phone-specific instructions omit repeated speaker labels/introduction. The deployed conversation revision passed21 tests and an installed-worker two-turn canary including hang-up cleanup; private Claude approved it. Physical listening of this separate style revision remains pending. See projects/PHONE_CONVERSATION_2026-09-29.md; it supersedes runtime source hashes in the earlier runtime project.
