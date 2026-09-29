@@ -106,3 +106,8 @@ See projects/HERMES_STAFF_RELIABILITY_2026-09-27.md. Safe previews, isolated act
 ## Fresh-record regression coverage — September 27 evening
 
 Specific NULL-result crash is corrected and the failed research task was recovered and delivered. See projects/HERMES_FRESH_TASK_NULL_2026-09-27.md. Preserve tests that create real pending records and traverse the actual HTTP serializer; resumed fixtures alone miss nullable-field contracts. Future genuinely new Scout work provides additional live coverage; do not manufacture duplicate assignments or claim it was already observed in this recovery.
+
+## September 29 verified fixes and remaining checks
+
+- Shawn email wrong-recipient defect is fixed; actual carrier SMS remains blocked by SAL's absent relay. Await William's transport choice, then verify one actual sent receipt and the next natural scheduled report. Never label iMessage as SMS or reroute private email to William. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md.
+- Phone runtime compatibility and startup-failure cleanup are fixed, tested and privately reviewed. A normal owner handset call still needs audible verification. Future Hermes updates must test actual fresh phone workers, not listener health alone. See projects/PHONE_RUNTIME_REPAIR_2026-09-29.md.

@@ -1,5 +1,10 @@
 # Windance Scheduled Reports
 
+## Shawn email recipient correction — September 29
+
+Shawn email retains 07:50, 12:30 and 17:10 Mountain. Its dedicated recipient is Shawn only; September 28's accidental William route is removed. Carrier SMS is configured as requested but the transport is unavailable, so delivery remains held/unconfirmed. Await William's choice of Shawn iMessage or enrollment of a real SMS relay. No fallback to William. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md. Older transport descriptions below are historical and do not override this status.
+
+
 ## Hermes staff reliability repair — 2026-09-27
 
 Reacher and all nine operational profiles now use verified Codex OAuth/Terra,

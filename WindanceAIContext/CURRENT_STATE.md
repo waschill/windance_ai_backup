@@ -1,5 +1,12 @@
 # Current Operating State
 
+## Shawn email and Reacher phone repairs — September 29, 2026
+
+Shawn's email schedule was created September 2 (first report at 11:18 Mountain). September 28's report-routing migration incorrectly moved her shared delivery branch to William's fixed recipient. The September 29 07:50 report actually reached William. Shawn email now has its own fixed-recipient route and a separate private recipient pin; it cannot fall back to William. Original 07:50/12:30/17:10 times remain. Twenty-three tests passed, including Messages false-success and wrong-recipient guards; private Claude approved the exact sender. Carrier SMS is NOT working: SAL lacks SMS relay capability, and a neutral actual SMS check failed. William was asked whether iMessage directly to Shawn is acceptable; no answer is recorded. Do not claim restored email delivery or silently substitute transports. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md.
+
+Reacher's phone listener answered while its per-call worker crashed after the September 28 Hermes runtime upgrade. The worker now bootstraps the installed runtime and YAML adapter correctly; failure announcements release the line. Twenty-one tests and an actual installed-worker, two-turn protocol test with a real staff-tool call passed. Private Claude approved the final source. Physical carrier audio remains to be checked by a normal owner call. See projects/PHONE_RUNTIME_REPAIR_2026-09-29.md. No outbound call, mailbox action or actual email resend was performed.
+
+
 ## Forge report-result recovery — September 28
 
 Fixed the staff runner's session-envelope parser, which discarded Forge's actual

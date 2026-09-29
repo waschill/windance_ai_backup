@@ -1,5 +1,12 @@
 # Durable Decisions
 
+## Shawn email and Reacher phone repairs — September 29, 2026
+
+Shawn's email schedule was created September 2 (first report at 11:18 Mountain). September 28's report-routing migration incorrectly moved her shared delivery branch to William's fixed recipient. The September 29 07:50 report actually reached William. Shawn email now has its own fixed-recipient route and a separate private recipient pin; it cannot fall back to William. Original 07:50/12:30/17:10 times remain. Twenty-three tests passed, including Messages false-success and wrong-recipient guards; private Claude approved the exact sender. Carrier SMS is NOT working: SAL lacks SMS relay capability, and a neutral actual SMS check failed. William was asked whether iMessage directly to Shawn is acceptable; no answer is recorded. Do not claim restored email delivery or silently substitute transports. See projects/SHAWN_MAIL_ROUTING_2026-09-29.md.
+
+Reacher's phone listener answered while its per-call worker crashed after the September 28 Hermes runtime upgrade. The worker now bootstraps the installed runtime and YAML adapter correctly; failure announcements release the line. Twenty-one tests and an actual installed-worker, two-turn protocol test with a real staff-tool call passed. Private Claude approved the final source. Physical carrier audio remains to be checked by a normal owner call. See projects/PHONE_RUNTIME_REPAIR_2026-09-29.md. No outbound call, mailbox action or actual email resend was performed.
+
+
 ## Hermes fresh-task correction — September 27 evening
 
 The earlier all-complete claim was too broad: a newly created Scout task crashed on a NULL result before research. Vega's code and the private Claude review missed that fresh-record contract. The one-line fix is deployed and privately reviewed; real-producer plus HTTP-serialization regression fails on the old code and passes on current code, alongside the 74-test suite. The same failed assignment subsequently completed with seven staff opinions, final QA and an actual delivery receipt at 8:58 PM Mountain. Fresh-NULL tests use mocked external model/QA calls; live recovery used the retained nonempty failure text. Those are distinct evidence. Read projects/HERMES_FRESH_TASK_NULL_2026-09-27.md before relying on earlier integration closure. No whole-stack bug-free guarantee is made.
