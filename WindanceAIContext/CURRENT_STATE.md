@@ -706,3 +706,7 @@ William appointed Vega/Codex as General Manager and Chief of Staff; Reacher is c
 
 Vega management live pilot passed: VM-CANARY-20260929 delivered after real Forge execution, independent verification and exact-hash Athena approval. SAL Messages row3265 confirms sent/delivered. Phone interruption and effective Reacher relay-only tools verified; physical audio check remains pending. The separate idea assignment continues through the manager; consult its live ledger.
 
+
+## Vega receipt stall recovered — September 29
+
+The independent HAL watchdog caught an artifact-capability stall in the idea assignment. Primary Vega fulfilled the existing authorization, verified 18 project files and nine shared-memory receipts, preserved the blocked worker evidence, and resumed normal dependency progression. Manager guidance now distinguishes missing worker tools from missing permission. Final report is not yet delivered. See projects/VEGA_MANAGER_2026-09-29.md.
