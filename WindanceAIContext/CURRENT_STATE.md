@@ -1,4 +1,7 @@
 # Current Operating State
+## Staff task cleanup — September 29
+
+At William's explicit direction, deleted 246 Harness staff tasks, 282 Hermes Kanban tasks, and two obsolete disabled tracking jobs. Both task ledgers are verified empty; future recurring schedules remain intact. Includes all 17 overdue pending tasks and today's failed idea-assignment handoff. William plans to resubmit; do not report the old assignment as active. Private recovery exports are retained. Warden resumed with all checks passing. See projects/STAFF_TASK_CLEANUP_2026-09-29.md for evidence, scope and recovery.
 
 ## Noon YouTube completion verified — September 29
 
