@@ -703,3 +703,6 @@ Server capacity assessment 2026-09-27: live AL i5-8500/32GB, SAL M1/16GB, Herald
 ## Vega management and telephone — 2026-09-29
 William appointed Vega/Codex as General Manager and Chief of Staff; Reacher is communications only. Persistent manager on HERALD port8797, private Codex MCP connector and 15-minute HAL watchdog are installed. Existing telephone now routes to Vega's Codex service; two-turn worker canary and 21 phone tests passed, physical carrier listening remains pending. Current product-idea project preserves nine independently attributed submissions and tracks research, receipts, review and delivery separately. Read projects/VEGA_MANAGER_2026-09-29.md and verify live state; older Herald GM descriptions are superseded.
 
+
+Vega management live pilot passed: VM-CANARY-20260929 delivered after real Forge execution, independent verification and exact-hash Athena approval. SAL Messages row3265 confirms sent/delivered. Phone interruption and effective Reacher relay-only tools verified; physical audio check remains pending. The separate idea assignment continues through the manager; consult its live ledger.
+

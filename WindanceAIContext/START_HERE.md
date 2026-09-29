@@ -69,3 +69,7 @@ Warden is ACTIVE on SAL as of 2026-09-24 21:52 UTC after revision 7 review and a
 ## Hermes staff and report reliability — 2026-09-27
 
 For Reacher/Hermes model routing, staff task execution, report context, research QA, delivery or unattended recovery, also read projects/HERMES_STAFF_RELIABILITY_2026-09-27.md. This supersedes older operational local-model defaults. Keep private recipient-bearing source files and raw session data out of this published package.
+
+## Vega management and phone — 2026-09-29
+
+For current staff authority, assignments, proactive follow-through or telephone routing, also read `projects/VEGA_MANAGER_2026-09-29.md`. William appointed Vega/Codex as manager and Reacher as communications liaison only. The persistent control plane and dedicated Codex connector are installed; an actual worker-to-review-to-iMessage delivery pilot passed. The existing phone line now reaches Vega's separate Codex context on HERALD, sharing the work ledger. Older Herald General Manager instructions are superseded; existing privacy, approvals and Warden consensus requirements remain.
