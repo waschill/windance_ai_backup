@@ -714,3 +714,7 @@ The independent HAL watchdog caught an artifact-capability stall in the idea ass
 ## Staff idea report delivered — September 29
 
 Live verification at 22:58 UTC confirms all 22 idea-project stages verified, exact-report Athena approval, and successful iMessage sender receipt. The report contains all 27 attributed concepts: 26 similar public products, one disqualified, no unsupported novelty findings, and nine durable receipts. A matching local report copy is available in the September29 Hermes task workspace. See projects/VEGA_MANAGER_2026-09-29.md for evidence and wording caveat.
+
+## Vega telephone disabled at owner direction — September 29 Mountain
+
+The actual phone route took 19–88 seconds per observed turn and interrupted pending answers on repeated line checks. William chose existing Codex voice chat if the phone could not work acceptably; Vega disabled telephone intake. Phone health configured=false is intentional, not an incident. Number/billing unchanged; staff management remains healthy. Do not re-enable phone or deploy the staged latency patch without renewed direction. See projects/VEGA_MANAGER_2026-09-29.md.

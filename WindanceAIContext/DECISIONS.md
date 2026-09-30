@@ -180,3 +180,7 @@ Warden is ACTIVE on SAL as of 2026-09-24 21:52 UTC after revision 7 review and a
 ## 2026-09-29 — Vega owns management; Reacher communications
 William explicitly authorized Vega's dedicated Hermes control path, persistent follow-through, proactive oversight and telephone routing. Reacher no longer assigns or manages staff; existing safety, approval, privacy and Warden consensus rules remain. Implemented architecture and receipts: projects/VEGA_MANAGER_2026-09-29.md.
 
+
+## 2026-09-29 — discontinue slow Vega telephone route
+
+William reported minute-long replies and directed cancellation if unsuitable, preferring Codex voice chat. Vega disabled telephone intake after confirming actual latency; paid number release remains with William. Preserve staff management and existing schedules. Do not automatically re-enable the phone. See projects/VEGA_MANAGER_2026-09-29.md.
