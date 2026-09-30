@@ -1,4 +1,7 @@
 # Current Operating State
+## Production Odoo JSON-2 connector - September 30
+
+William authorized migration. Herald Harness and the independent veterinary-report connector now use JSON-2; production remains SaaS 19.3. Test/production read comparisons, isolated argument/error/guard tests, live status and SAM refresh passed. All 49 schedule rows remain readable and schedule writes remain blocked. Warden resumed with all checks passing. No production business records or report deliveries were mutated. See projects/ODOO_JSON2_PRODUCTION_2026-09-30.md for evidence, limits and source rollback.
 
 ## Agentic stack baseline verified September 30
 
@@ -732,4 +735,5 @@ September 30 02:46 UTC: William's first real post-routing iMessage (max-imessage
 
 
 September 30 11 UTC: Vega repaired manager SQLite connection descriptor exhaustion causing intermittent health resets. 1,500 isolated closure iterations and 200 live health reads passed; project/message/stage records unchanged, Warden resumed. See projects/VEGA_MANAGER_2026-09-29.md for exact hash and recovery.
+
 
