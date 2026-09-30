@@ -1,0 +1,172 @@
+{
+  "at": "2026-09-30T06:04:19Z",
+  "method": "read-only SQL against cold restored copies; no application imports, HTTP, launchd, dispatch or sends",
+  "projects": [
+    {
+      "id": "VM-IDEAS-20260929",
+      "report_hash_matches": true,
+      "qa_approves_exact_report": true,
+      "successful_receipt": true,
+      "stages": [
+        {
+          "stage": "consolidated-report",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "cross-agent-duplicates",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "durable-receipts",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-archivist",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-athena",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-forge",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-herald",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-iris",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-ledger",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-max",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-scout",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "ideas-sentinel",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "receipt-compliance",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-archivist",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-athena",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-forge",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-herald",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-iris",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-ledger",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-max",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-scout",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        },
+        {
+          "stage": "screen-sentinel",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        }
+      ]
+    },
+    {
+      "id": "VM-CANARY-20260929",
+      "report_hash_matches": true,
+      "qa_approves_exact_report": true,
+      "successful_receipt": true,
+      "stages": [
+        {
+          "stage": "compute",
+          "verified": true,
+          "task_present": true,
+          "result_hash_matches": true
+        }
+      ]
+    }
+  ],
+  "sam": {
+    "integrity": "ok",
+    "historical_detail_rows": 101,
+    "detail_rows_after_suspension": 0,
+    "history_receipts": 46
+  },
+  "nodered": {
+    "nodes": 315,
+    "dangling_wire_targets": 0,
+    "legacy_imessage_inject_disabled": true,
+    "loaded_into_nodered": false
+  }
+}

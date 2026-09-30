@@ -1,0 +1,123 @@
+{
+  "at": "2026-09-30T06:05:40.589021+00:00",
+  "paused": false,
+  "host": "SAL",
+  "observations": {
+    "HERALD": {
+      "at": "2026-09-30T06:05:40.193195+00:00",
+      "host": "HERALD",
+      "checks": {
+        "harness": true,
+        "dashboard": true,
+        "gateway": true,
+        "runner": true,
+        "staff_progress": true,
+        "staff_delivery": true,
+        "connection": true
+      },
+      "harness": {
+        "loaded": true,
+        "pid": 52629,
+        "last_exit": 15
+      },
+      "dashboard": {
+        "loaded": true,
+        "pid": 51563,
+        "last_exit": 15
+      },
+      "gateway": {
+        "loaded": true,
+        "pid": 33939,
+        "last_exit": 256
+      },
+      "runner": {
+        "loaded": true,
+        "pid": 64479,
+        "last_exit": 0
+      },
+      "stalled": [],
+      "failed_deliveries": 0
+    },
+    "SAL": {
+      "at": "2026-09-30T06:05:40.505069+00:00",
+      "host": "SAL",
+      "checks": {
+        "outbox": true,
+        "youtube_scheduler": true,
+        "youtube_report_completed": true,
+        "connection": true
+      },
+      "youtube_scheduler": {
+        "loaded": true,
+        "pid": 0,
+        "last_exit": 0
+      },
+      "report_due": "2026-09-29T16:00:00-06:00"
+    }
+  },
+  "incidents": [
+    {
+      "id": "INC-20260928-8fc48fd4",
+      "key": "SAL:youtube_report_completed",
+      "status": "resolved",
+      "opened": 1790634917.845964,
+      "updated": 1790705050.335541,
+      "attempts": 0,
+      "diagnostic": 1,
+      "summary": "SAL's YouTube report completion check failed about 35 minutes after its due time. The scheduler is loaded but has no running PID; last_exit is 256. HERALD checks pass, but report delivery and the failure cause are unverified. Next: Have an operator inspect scheduler exit details and report completion/delivery records. The listed recovery actions do not address the SAL scheduler; no repair was attempted."
+    }
+  ],
+  "events": [
+    {
+      "id": 4,
+      "incident": "INC-20260928-8fc48fd4",
+      "at": "2026-09-29T18:04:10.335968+00:00",
+      "kind": "verified_recovery",
+      "detail": "{\"consecutive_healthy_samples\": 2}"
+    },
+    {
+      "id": 3,
+      "incident": "INC-20260928-8fc48fd4",
+      "at": "2026-09-28T22:36:39.546071+00:00",
+      "kind": "codex_diagnosis",
+      "detail": "{\"result\": {\"summary\": \"SAL's YouTube report completion check failed about 35 minutes after its due time. The scheduler is loaded but has no running PID; last_exit is 256. HERALD checks pass, but report delivery and the failure cause are unverified.\", \"next_step\": \"Have an operator inspect scheduler exit details and report completion/delivery records. The listed recovery actions do not address the SAL scheduler; no repair was attempted.\"}, \"usage\": [{\"input_tokens\": 15103, \"cached_input_tokens\": 0, \"cache_write_input_tokens\": 0, \"output_tokens\": 97, \"reasoning_output_tokens\": 0}], \"canary\": false}"
+    },
+    {
+      "id": 2,
+      "incident": "INC-20260928-8fc48fd4",
+      "at": "2026-09-28T22:35:17.846741+00:00",
+      "kind": "detected",
+      "detail": "{\"key\": \"SAL:youtube_report_completed\", \"failures\": 3, \"evidence\": {\"at\": \"2026-09-28T22:35:17.767548+00:00\", \"host\": \"SAL\", \"checks\": {\"outbox\": true, \"youtube_scheduler\": true, \"youtube_report_completed\": false, \"connection\": true}, \"youtube_scheduler\": {\"loaded\": true, \"pid\": 0, \"last_exit\": 256}, \"report_due\": \"2026-09-28T16:00:00-06:00\"}}"
+    },
+    {
+      "id": 1,
+      "incident": "installation-canary",
+      "at": "2026-09-24T20:19:38.355498+00:00",
+      "kind": "codex_diagnosis",
+      "detail": "{\"result\": {\"summary\": \"Synthetic fixture reports a failed harness check, not a real outage. Process status and successful delivery are unknown.\", \"next_step\": \"An operator may restart the harness, then verify its check and delivery separately; no action has been executed.\"}, \"usage\": [{\"input_tokens\": 14372, \"cached_input_tokens\": 0, \"cache_write_input_tokens\": 0, \"output_tokens\": 59, \"reasoning_output_tokens\": 0}], \"canary\": true}"
+    }
+  ],
+  "notifications": [
+    {
+      "key": "INC-20260928-8fc48fd4_resolved",
+      "status": "delivered",
+      "attempts": 2
+    },
+    {
+      "key": "INC-20260928-8fc48fd4_attention",
+      "status": "delivered",
+      "attempts": 2
+    },
+    {
+      "key": "INC-20260928-8fc48fd4_detected",
+      "status": "delivered",
+      "attempts": 2
+    },
+    {
+      "key": "installation_verified",
+      "status": "delivered",
+      "attempts": 2
+    }
+  ],
+  "limits": "Known recovery only; no automatic arbitrary code edits or task replay."
+}

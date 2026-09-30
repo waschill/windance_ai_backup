@@ -1,0 +1,148 @@
+{
+  "profiles": {
+    "herald": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "forge": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "sentinel": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "max": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "iris": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "ledger": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "scout": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "archivist": {
+      "fallback_model": null,
+      "fallback_providers": []
+    },
+    "athena": {
+      "fallback_model": null,
+      "fallback_providers": []
+    }
+  },
+  "native_jobs": [
+    {
+      "role": "sentinel",
+      "id": "b3a62e04e1f0",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * 0",
+        "display": "0 2 * * 0"
+      },
+      "last_status": "error",
+      "next_run_at": "2026-10-04T02:00:00-06:00",
+      "last_run_at": "2026-09-27T02:00:37.356255-06:00",
+      "error_class": "error recorded"
+    },
+    {
+      "role": "iris",
+      "id": "8eb0fa56d254",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7,12,16 * * *",
+        "display": "0 7,12,16 * * *"
+      },
+      "last_status": "error",
+      "next_run_at": "2026-09-30T07:00:00-06:00",
+      "last_run_at": "2026-09-29T16:00:02.686332-06:00",
+      "error_class": "error recorded"
+    },
+    {
+      "role": "iris",
+      "id": "ea79845789f2",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "last_status": "blocked_config",
+      "next_run_at": "2026-09-30T07:00:00-06:00",
+      "last_run_at": "2026-09-29T07:00:03.101374-06:00",
+      "error_class": "notebook/tool configuration"
+    },
+    {
+      "role": "scout",
+      "id": "5c70b313dbc4",
+      "enabled": false,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 15,
+        "display": "every 15m"
+      },
+      "last_status": null,
+      "next_run_at": "2026-08-27T14:23:21.378548-06:00",
+      "last_run_at": null,
+      "error_class": null
+    }
+  ],
+  "errors": {
+    "capture-review-reminder.err.log": {
+      "mtime": 1790730004.8534904,
+      "exception_headlines": []
+    },
+    "software-maintenance.err.log": {
+      "mtime": 1788334202.0672982,
+      "exception_headlines": []
+    },
+    "software-maintenance.log": {
+      "mtime": 1790667155.329703,
+      "exception_headlines": []
+    },
+    "capture-review-reminder.log": {
+      "mtime": 1790470805.496649,
+      "exception_headlines": []
+    }
+  },
+  "bridge_model_source": {
+    "model_literals": [
+      "gpt-5.6-terra"
+    ]
+  },
+  "bridge_model_env": {},
+  "integration_fields": {
+    "/odoo/status": {
+      "configured": true,
+      "reachable": true,
+      "authenticated": true,
+      "field_names": [
+        "configured",
+        "config_file",
+        "url",
+        "database",
+        "username",
+        "missing",
+        "reachable",
+        "authenticated",
+        "uid",
+        "version"
+      ]
+    },
+    "/search/status": {
+      "field_names": [
+        "brave_search",
+        "agent_reach",
+        "web_research_prefixes"
+      ]
+    }
+  }
+}

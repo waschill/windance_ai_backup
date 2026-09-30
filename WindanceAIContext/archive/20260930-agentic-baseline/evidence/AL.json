@@ -1,0 +1,261 @@
+{
+  "host": "AL",
+  "at": "2026-09-30T06:01:30Z",
+  "disk": "Filesystem                         Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv   98G   60G   34G  65% /",
+  "containers": [
+    {
+      "name": "open-webui",
+      "image_id": "sha256:9591b13f13843c7721c2b8eaf7382846c81b3ffe126526d1888d1fed50c6a33f",
+      "image_tags": [
+        "ghcr.io/open-webui/open-webui:v0.11.4"
+      ],
+      "image_digests": [
+        "ghcr.io/open-webui/open-webui@sha256:9591b13f13843c7721c2b8eaf7382846c81b3ffe126526d1888d1fed50c6a33f"
+      ],
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "StartedAt": "2026-09-26T02:26:34.499939479Z",
+        "Restarting": false,
+        "ExitCode": 0
+      },
+      "health": "healthy",
+      "restart": {
+        "Name": "always",
+        "MaximumRetryCount": 0
+      },
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "3000"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "3000"
+          }
+        ]
+      },
+      "mounts": [
+        {
+          "Type": "volume",
+          "Source": "/var/lib/docker/volumes/open-webui/_data",
+          "Destination": "/app/backend/data",
+          "RW": true
+        }
+      ],
+      "nonsecret_settings": {
+        "OLLAMA_BASE_URL": "/ollama",
+        "SCARF_NO_ANALYTICS": "true",
+        "DO_NOT_TRACK": "true",
+        "RAG_EMBEDDING_MODEL": "sentence-transformers/all-MiniLM-L6-v2"
+      }
+    },
+    {
+      "name": "truth-engine-lab",
+      "image_id": "sha256:9591b13f13843c7721c2b8eaf7382846c81b3ffe126526d1888d1fed50c6a33f",
+      "image_tags": [
+        "ghcr.io/open-webui/open-webui:v0.11.4"
+      ],
+      "image_digests": [
+        "ghcr.io/open-webui/open-webui@sha256:9591b13f13843c7721c2b8eaf7382846c81b3ffe126526d1888d1fed50c6a33f"
+      ],
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "StartedAt": "2026-09-26T02:26:34.502030638Z",
+        "Restarting": false,
+        "ExitCode": 0
+      },
+      "health": "healthy",
+      "restart": {
+        "Name": "unless-stopped",
+        "MaximumRetryCount": 0
+      },
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "192.168.36.20",
+            "HostPort": "3001"
+          }
+        ]
+      },
+      "mounts": [
+        {
+          "Type": "volume",
+          "Source": "/var/lib/docker/volumes/truth-engine-lab-data/_data",
+          "Destination": "/app/backend/data",
+          "RW": true
+        }
+      ],
+      "nonsecret_settings": {
+        "RAG_EMBEDDING_ENGINE": "ollama",
+        "RAG_EMBEDDING_MODEL": "nomic-embed-text:latest",
+        "SCARF_NO_ANALYTICS": "true",
+        "OFFLINE_MODE": "true",
+        "DO_NOT_TRACK": "true",
+        "OLLAMA_BASE_URL": "http://192.168.36.10:11434",
+        "ENABLE_OLLAMA_API": "true",
+        "ENABLE_OPENAI_API": "false"
+      }
+    },
+    {
+      "name": "searxng-core",
+      "image_id": "sha256:bcfaed4091d59f7ce85670bd701a2d0295872196dc19908a3965a8353b149f83",
+      "image_tags": [
+        "searxng/searxng:latest"
+      ],
+      "image_digests": [
+        "searxng/searxng@sha256:bcfaed4091d59f7ce85670bd701a2d0295872196dc19908a3965a8353b149f83"
+      ],
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "StartedAt": "2026-09-26T02:26:34.504294868Z",
+        "Restarting": false,
+        "ExitCode": 0
+      },
+      "health": null,
+      "restart": {
+        "Name": "unless-stopped",
+        "MaximumRetryCount": 0
+      },
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "192.168.36.20",
+            "HostPort": "8888"
+          }
+        ]
+      },
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "/home/waschilladmin/services/searxng/core-config",
+          "Destination": "/etc/searxng",
+          "RW": true
+        },
+        {
+          "Type": "volume",
+          "Source": "/var/lib/docker/volumes/windance-searxng_core-data/_data",
+          "Destination": "/var/cache/searxng",
+          "RW": true
+        }
+      ],
+      "nonsecret_settings": {}
+    },
+    {
+      "name": "searxng-valkey",
+      "image_id": "sha256:a0dbf4c1d5708782907c10e2c72deff317518518b5288a58416981d9db95d30b",
+      "image_tags": [
+        "valkey/valkey:9-alpine"
+      ],
+      "image_digests": [
+        "valkey/valkey@sha256:a0dbf4c1d5708782907c10e2c72deff317518518b5288a58416981d9db95d30b"
+      ],
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "StartedAt": "2026-09-26T02:26:34.486433133Z",
+        "Restarting": false,
+        "ExitCode": 0
+      },
+      "health": null,
+      "restart": {
+        "Name": "unless-stopped",
+        "MaximumRetryCount": 0
+      },
+      "ports": {
+        "6379/tcp": null
+      },
+      "mounts": [
+        {
+          "Type": "volume",
+          "Source": "/var/lib/docker/volumes/windance-searxng_valkey-data/_data",
+          "Destination": "/data",
+          "RW": true
+        }
+      ],
+      "nonsecret_settings": {}
+    },
+    {
+      "name": "portainer",
+      "image_id": "sha256:4d616db18cfeb5dd41a69c0958bc825c84483ea9cde1106eb82a5d26f3bd8b0e",
+      "image_tags": [
+        "portainer/portainer-ce:2.45.1"
+      ],
+      "image_digests": [
+        "portainer/portainer-ce@sha256:4d616db18cfeb5dd41a69c0958bc825c84483ea9cde1106eb82a5d26f3bd8b0e"
+      ],
+      "state": {
+        "Status": "running",
+        "Running": true,
+        "StartedAt": "2026-09-26T02:26:34.488145943Z",
+        "Restarting": false,
+        "ExitCode": 0
+      },
+      "health": null,
+      "restart": {
+        "Name": "always",
+        "MaximumRetryCount": 0
+      },
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "8000"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "8000"
+          }
+        ],
+        "9000/tcp": null,
+        "9443/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "9443"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "9443"
+          }
+        ]
+      },
+      "mounts": [
+        {
+          "Type": "volume",
+          "Source": "/var/lib/docker/volumes/portainer_data/_data",
+          "Destination": "/data",
+          "RW": true
+        },
+        {
+          "Type": "bind",
+          "Source": "/var/run/docker.sock",
+          "Destination": "/var/run/docker.sock",
+          "RW": true
+        }
+      ],
+      "nonsecret_settings": {}
+    }
+  ],
+  "stats": "syncthing|44.69%|723MiB / 30.65GiB\nsearxng-core|0.22%|310.6MiB / 1.5GiB\ntruth-engine-lab|0.19%|840.2MiB / 30.65GiB\nopen-webui|0.17%|1007MiB / 30.65GiB\nportainer|0.00%|20.47MiB / 30.65GiB\nsearxng-valkey|0.13%|13.07MiB / 256MiB",
+  "3000": {
+    "http": 200
+  },
+  "3001": {
+    "http": 200
+  },
+  "8888": {
+    "http": 200
+  },
+  "backup": {
+    "root": "/home/waschilladmin/backups/agentic-baseline-20260930T0600Z",
+    "sha256": "158f52dbedd63513586c592006fc8125aa2157af5dad1ca7062e35a61eca05dc",
+    "bytes": 6913,
+    "restored_hash_match": true,
+    "parse_pass": true,
+    "scope": "deployment metadata only; volumes, credentials, chat/document data and image layers not backed up",
+    "network_or_start_actions_in_restore": 0
+  }
+}

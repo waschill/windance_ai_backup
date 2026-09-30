@@ -1,0 +1,358 @@
+{
+  "host": "SAL",
+  "at": "2026-09-30T05:57:08Z",
+  "messages_7d": [
+    {
+      "service": "SMS",
+      "is_sent": 0,
+      "is_delivered": 0,
+      "n": 54
+    },
+    {
+      "service": "iMessage",
+      "is_sent": 1,
+      "is_delivered": 1,
+      "n": 207
+    }
+  ],
+  "selected_rows": [
+    {
+      "ROWID": 3265,
+      "service": "iMessage",
+      "is_sent": 1,
+      "is_delivered": 1,
+      "at": "2026-09-29 22:13:46"
+    },
+    {
+      "ROWID": 3274,
+      "service": "iMessage",
+      "is_sent": 0,
+      "is_delivered": 1,
+      "at": "2026-09-30 02:39:50"
+    }
+  ],
+  "report_files": {
+    ".local/share/windance-supervisor": [
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/reports/9aa1346509b54a9080443859fdc8b093.json",
+        "bytes": 168,
+        "mtime": 1790719217.036934
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/notifications/INC-20260928-8fc48fd4_resolved.json",
+        "bytes": 71,
+        "mtime": 1790705171.874952
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/reports/964d293687ff46ff9bbfa070e927f485.json",
+        "bytes": 168,
+        "mtime": 1790704818.1045358
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/reports/eb3b97096b8f4698ae0b5531d2a2dbc1.json",
+        "bytes": 165,
+        "mtime": 1790690417.1927202
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/notifications/INC-20260928-8fc48fd4_attention.json",
+        "bytes": 71,
+        "mtime": 1790635161.0045109
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/notifications/INC-20260928-8fc48fd4_detected.json",
+        "bytes": 71,
+        "mtime": 1790635039.4167788
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/reports/f578433752a840dfa24661c39f15a1d8.json",
+        "bytes": 165,
+        "mtime": 1790632816.3733563
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-supervisor/reports/6d0661b254ab413d8373f43b2bc42775.json",
+        "bytes": 168,
+        "mtime": 1790618416.8344882
+      }
+    ],
+    ".local/share/windance-reports": [
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212828545335.plist",
+        "bytes": 2507,
+        "mtime": 1790112508.5457625
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212828545335.json",
+        "bytes": 997,
+        "mtime": 1790112508.5456471
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212827746006.plist",
+        "bytes": 2507,
+        "mtime": 1790112507.7464454
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212827746006.json",
+        "bytes": 966,
+        "mtime": 1790112507.7463307
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212826948780.plist",
+        "bytes": 2507,
+        "mtime": 1790112506.9492102
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212826948780.json",
+        "bytes": 966,
+        "mtime": 1790112506.9490898
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212826141470.plist",
+        "bytes": 2507,
+        "mtime": 1790112506.142046
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-reports/history/20260922T212826141470.json",
+        "bytes": 1007,
+        "mtime": 1790112506.141794
+      }
+    ],
+    ".local/share/shawn-email-delivery": [
+      {
+        "path": "/Users/zuzu/.local/share/shawn-email-delivery/cd534b35707767dd0171bacbf1cb2935d414d7dbf90027741ac9075c6aa5bfff.json",
+        "bytes": 256,
+        "mtime": 1790723407.555951
+      },
+      {
+        "path": "/Users/zuzu/.local/share/shawn-email-delivery/cd534b35707767dd0171bacbf1cb2935d414d7dbf90027741ac9075c6aa5bfff.lock",
+        "bytes": 0,
+        "mtime": 1790723402.9748144
+      },
+      {
+        "path": "/Users/zuzu/.local/share/shawn-email-delivery/7a002c89b8077d4adaf69f3974caef6f8e8d12768846f041f9e0ec3a06f53a04.json",
+        "bytes": 256,
+        "mtime": 1790706607.8136845
+      },
+      {
+        "path": "/Users/zuzu/.local/share/shawn-email-delivery/7a002c89b8077d4adaf69f3974caef6f8e8d12768846f041f9e0ec3a06f53a04.lock",
+        "bytes": 0,
+        "mtime": 1790706603.0353615
+      }
+    ],
+    ".local/share/windance-imessage-outbox": [
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/results/key-1c36a2bfd9710a2133d1413d6d48e45d9bf26d5054dac2e1aa855b3b78b63b32.json",
+        "bytes": 25,
+        "mtime": 1790736022.972385
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/claims/key-1c36a2bfd9710a2133d1413d6d48e45d9bf26d5054dac2e1aa855b3b78b63b32.json",
+        "bytes": 86,
+        "mtime": 1790736022.4572332
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/claims/key-1c36a2bfd9710a2133d1413d6d48e45d9bf26d5054dac2e1aa855b3b78b63b32.lock",
+        "bytes": 0,
+        "mtime": 1790736022.457066
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/results/key-5227d5a25ff0df194bd31d31e24c8c681d18d0c5d79183306db548224f6f3556.json",
+        "bytes": 25,
+        "mtime": 1790735993.0736542
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/claims/key-5227d5a25ff0df194bd31d31e24c8c681d18d0c5d79183306db548224f6f3556.json",
+        "bytes": 86,
+        "mtime": 1790735992.5530813
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/claims/key-5227d5a25ff0df194bd31d31e24c8c681d18d0c5d79183306db548224f6f3556.lock",
+        "bytes": 0,
+        "mtime": 1790735992.552097
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/results/key-cd534b35707767dd0171bacbf1cb2935d414d7dbf90027741ac9075c6aa5bfff.json",
+        "bytes": 25,
+        "mtime": 1790723407.4861495
+      },
+      {
+        "path": "/Users/zuzu/.local/share/windance-imessage-outbox/claims/key-cd534b35707767dd0171bacbf1cb2935d414d7dbf90027741ac9075c6aa5bfff.json",
+        "bytes": 86,
+        "mtime": 1790723403.013
+      }
+    ],
+    "logs/windance-reports": [
+      {
+        "path": "/Users/zuzu/logs/windance-reports/nodered-outcomes.jsonl",
+        "bytes": 2890,
+        "mtime": 1790723407.6146028
+      },
+      {
+        "path": "/Users/zuzu/logs/windance-reports/outcomes.lock",
+        "bytes": 0,
+        "mtime": 1790550012.7868884
+      }
+    ],
+    "logs/youtube-briefing": [
+      {
+        "path": "/Users/zuzu/logs/youtube-briefing/youtube-briefing.out.log",
+        "bytes": 138668,
+        "mtime": 1790719217.0099206
+      },
+      {
+        "path": "/Users/zuzu/logs/youtube-briefing/youtube-briefing.err.log",
+        "bytes": 1252,
+        "mtime": 1790690417.10488
+      },
+      {
+        "path": "/Users/zuzu/logs/youtube-briefing/youtube-replay-20260902.log",
+        "bytes": 1688,
+        "mtime": 1788360343.6135888
+      }
+    ],
+    "logs/weekly-stack-review": [
+      {
+        "path": "/Users/zuzu/logs/weekly-stack-review/weekly-stack-review.out.log",
+        "bytes": 1962,
+        "mtime": 1790700613.300665
+      },
+      {
+        "path": "/Users/zuzu/logs/weekly-stack-review/weekly-stack-review.err.log",
+        "bytes": 3690,
+        "mtime": 1788280209.715983
+      }
+    ]
+  },
+  "log_evidence": [
+    {
+      "path": "/Users/zuzu/logs/sam-training-completion-report.err.log",
+      "mtime": 1790688917.0552912,
+      "bytes": 553,
+      "tail_bytes": 553,
+      "markers": {
+        "Traceback": 1,
+        "RuntimeError": 2,
+        "receipt": 2,
+        "imessage": 4
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/sam-training-completion-report.out.log",
+      "mtime": 1790688917.053313,
+      "bytes": 24786,
+      "tail_bytes": 24786,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/node-red.log",
+      "mtime": 1790623751.26835,
+      "bytes": 1415,
+      "tail_bytes": 1415,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/imessage-outbox.log",
+      "mtime": 1790745758.3537002,
+      "bytes": 43181,
+      "tail_bytes": 43181,
+      "markers": {
+        "delivered": 521
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/ledger-unpaid-invoices.log",
+      "mtime": 1790691010.358451,
+      "bytes": 15673,
+      "tail_bytes": 15673,
+      "markers": {
+        "receipt": 1,
+        "SMS": 1
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/weekly-stack-review/weekly-stack-review.out.log",
+      "mtime": 1790700613.300665,
+      "bytes": 1962,
+      "tail_bytes": 1962,
+      "markers": {
+        "receipt": 1,
+        "failed": 1,
+        "imessage": 1
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/youtube-briefing/youtube-briefing.out.log",
+      "mtime": 1790719217.0099206,
+      "bytes": 138668,
+      "tail_bytes": 100000,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/youtube-briefing/youtube-briefing.err.log",
+      "mtime": 1790690417.10488,
+      "bytes": 1252,
+      "tail_bytes": 1252,
+      "markers": {
+        "Traceback": 2,
+        "RuntimeError": 4,
+        "receipt": 4,
+        "imessage": 12
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/windance-reports/nodered-outcomes.jsonl",
+      "mtime": 1790723407.6146028,
+      "bytes": 2890,
+      "tail_bytes": 2890,
+      "markers": {
+        "failed": 2
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/morning-news-briefing/morning-news-briefing.err.log",
+      "mtime": 1790694007.1462352,
+      "bytes": 557,
+      "tail_bytes": 557,
+      "markers": {
+        "Traceback": 1,
+        "RuntimeError": 2,
+        "receipt": 2,
+        "imessage": 4
+      }
+    },
+    {
+      "path": "/Users/zuzu/logs/morning-news-briefing/morning-news-briefing.out.log",
+      "mtime": 1790694007.1452496,
+      "bytes": 201733,
+      "tail_bytes": 100000,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/windance-supervisor/review-error.log",
+      "mtime": 1790286720.5387237,
+      "bytes": 0,
+      "tail_bytes": 0,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/windance-supervisor/run.log",
+      "mtime": 1790747736.1720245,
+      "bytes": 288076,
+      "tail_bytes": 100000,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/windance-supervisor/error.log",
+      "mtime": 1790286720.5292518,
+      "bytes": 0,
+      "tail_bytes": 0,
+      "markers": {}
+    },
+    {
+      "path": "/Users/zuzu/logs/windance-supervisor/review.log",
+      "mtime": 1790747741.9647748,
+      "bytes": 271930,
+      "tail_bytes": 100000,
+      "markers": {}
+    }
+  ]
+}

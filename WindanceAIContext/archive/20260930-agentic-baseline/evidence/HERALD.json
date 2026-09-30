@@ -1,0 +1,1163 @@
+{
+  "host": "HERALD",
+  "at": "2026-09-30T05:54:49Z",
+  "os": "macOS-26.5.2-x86_64-i386-64bit",
+  "disk": {
+    "exit": 0,
+    "output": "Filesystem     1024-blocks     Used Available Capacity iused      ifree %iused  Mounted on\n/dev/disk1s4s1   976797816 16667348 906540140     2%  458726 4294133451    0%   /"
+  },
+  "jobs": [
+    {
+      "Label": "ai.hermes.gateway",
+      "RunAtLoad": true,
+      "KeepAlive": {
+        "SuccessfulExit": false
+      },
+      "LimitLoadToSessionType": [
+        "Aqua",
+        "Background"
+      ],
+      "WorkingDirectory": "/Users/herald/.hermes",
+      "StandardOutPath": "/Users/herald/.hermes/logs/gateway.log",
+      "StandardErrorPath": "/Users/herald/.hermes/logs/gateway.error.log",
+      "file": "/Users/herald/Library/LaunchAgents/ai.hermes.gateway.plist",
+      "sha256": "41caa93a1a9528d941ba6d80dd2372e264d56b369b09b18e0c0d7dd52071ccaa",
+      "executables": [
+        "/usr/bin/osascript"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "5",
+          "pid": "33939",
+          "last exit code": "1"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.agent-harness",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/agent-harness",
+      "StandardOutPath": "/Users/herald/logs/agent-harness/out.log",
+      "StandardErrorPath": "/Users/herald/logs/agent-harness/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.agent-harness.plist",
+      "sha256": "5e7597948183dc177137902369f6c234968a02da5f3ced8e9a555be315a46e2c",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/uvicorn"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "6",
+          "pid": "52629"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.attendance-ip-exceptions",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 7,
+        "Minute": 45
+      },
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/agent-harness",
+      "StandardOutPath": "/Users/herald/logs/attendance-ip-exceptions.out.log",
+      "StandardErrorPath": "/Users/herald/logs/attendance-ip-exceptions.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.attendance-ip-exceptions.plist",
+      "sha256": "f4d9f6be8da60b4f63a30f4af4a1aa71b6fd183d5320fb7f19e4d3936f512533",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/agent-harness/daily_attendance_ip_exceptions.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "2",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.capture-review-reminder",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 19,
+        "Minute": 0
+      },
+      "LimitLoadToSessionType": "Background",
+      "StandardOutPath": "/Users/herald/logs/capture-review-reminder.log",
+      "StandardErrorPath": "/Users/herald/logs/capture-review-reminder.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.capture-review-reminder.plist",
+      "sha256": "d49edec0a24fc81f2aca8dac63e4dd0e3a6fc8e5b84bb800b692164e573b81e2",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/capture-review-reminder/capture_review_reminder.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "3",
+          "last exit code": "1"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.codex-app-server",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/forge-workspace",
+      "StandardOutPath": "/Users/herald/logs/codex-app-server.out.log",
+      "StandardErrorPath": "/Users/herald/logs/codex-app-server.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.codex-app-server.plist",
+      "sha256": "1fd8d9be39a8c7918798344332177a0a863cf6acc8a84af464642d13b1333d68",
+      "executables": [
+        "/Users/herald/.local/bin/codex"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "1",
+          "pid": "67315",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.codex-bridge",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/windance-codex-bridge",
+      "StandardOutPath": "/Users/herald/logs/windance-codex-bridge.out.log",
+      "StandardErrorPath": "/Users/herald/logs/windance-codex-bridge.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.codex-bridge.plist",
+      "sha256": "d3dc628d91d0e9956daef468a2b2b4b790496a8918db584018599cfdf8bc7931",
+      "executables": [
+        "/Users/herald/.hermes/node/bin/node",
+        "/Users/herald/services/windance-codex-bridge/server.mjs"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "8",
+          "pid": "39561"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.daily-reflection",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 21,
+        "Minute": 30
+      },
+      "LimitLoadToSessionType": "Background",
+      "StandardOutPath": "/Users/herald/logs/agent-harness/daily-reflection.out.log",
+      "StandardErrorPath": "/Users/herald/logs/agent-harness/daily-reflection.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.daily-reflection.plist",
+      "sha256": "c364f2feed652271748817cb8bff3b685bb32076d8e537fd9c98313cec1d8e9d",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/agent-harness/daily_reflection.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "3",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.desktop-context-sync",
+      "RunAtLoad": true,
+      "StartInterval": 120,
+      "LimitLoadToSessionType": "Background",
+      "StandardOutPath": "/Users/herald/logs/desktop-context-sync/out.log",
+      "StandardErrorPath": "/Users/herald/logs/desktop-context-sync/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.desktop-context-sync.plist",
+      "sha256": "49760decb185fbf9cc975766667e061cac2876852f25410e474da3ae685ca29d",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/desktop-context-sync/desktop_context_sync.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "1696",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.fall-river-vet-report",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 12,
+        "Minute": 20
+      },
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/fall-river-vet-report",
+      "StandardOutPath": "/Users/herald/logs/fall-river-vet-report/out.log",
+      "StandardErrorPath": "/Users/herald/logs/fall-river-vet-report/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.fall-river-vet-report.plist",
+      "sha256": "f1ff1ad34ef9004bf63314564a40ac4aba668cb1a5985bd7d788f719299eec18",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/fall-river-vet-report/fall_river_vet_report.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "2",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.gmail-sender-rule-sweep",
+      "RunAtLoad": true,
+      "StartInterval": 600,
+      "LimitLoadToSessionType": "Background",
+      "StandardOutPath": "/Users/herald/logs/gmail-sender-rule-sweep/out.log",
+      "StandardErrorPath": "/Users/herald/logs/gmail-sender-rule-sweep/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.gmail-sender-rule-sweep.plist",
+      "sha256": "3309b334e1882921b436029d5c60155d4be37a6053bfac89f94042d6bda54dda",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/agent-harness/gmail_sender_rule_sweep_notify.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "327",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.herald-bridge",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "WorkingDirectory": "/Users/herald/services/herald-bridge",
+      "StandardOutPath": "/Users/herald/logs/herald-bridge.out.log",
+      "StandardErrorPath": "/Users/herald/logs/herald-bridge.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.herald-bridge.plist",
+      "sha256": "fed7e71bb67f79e45cbe049a26b09e803d51112be937c2df41fb325340e94f9a",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/herald-bridge/herald_bridge.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "29811",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.herald-phone",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/herald-phone/workspace",
+      "StandardOutPath": "/Users/herald/services/herald-phone/private/logs/service.log",
+      "StandardErrorPath": "/Users/herald/services/herald-phone/private/logs/service-error.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.herald-phone.plist",
+      "sha256": "600127e67d5e68bea4eab8c09b2c6ec011a19f731549a63b76d4831cfd9de520",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/herald-phone/phone_service.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "2",
+          "pid": "32669",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.hermes-dashboard",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": [
+        "Aqua",
+        "Background"
+      ],
+      "WorkingDirectory": "/Users/herald",
+      "StandardOutPath": "/Users/herald/logs/hermes-dashboard.out.log",
+      "StandardErrorPath": "/Users/herald/logs/hermes-dashboard.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.hermes-dashboard.plist",
+      "sha256": "6621810d52171bb5de0ce06801fbc557762de457cd60c409e2d3e903673e458d",
+      "executables": [
+        "/Users/herald/.local/bin/hermes"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "99929",
+          "pid": "51563"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.hermex",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/hermex",
+      "StandardOutPath": "/Users/herald/services/hermex/logs/stdout.log",
+      "StandardErrorPath": "/Users/herald/services/hermex/logs/stderr.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.hermex.plist",
+      "sha256": "dbd350caac916805597d7e9704c94df5b33a547038c6a421bf433634c0790290",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/hermex/launch.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "1",
+          "pid": "65674",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.jim-bridge",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "WorkingDirectory": "/Users/herald/services/herald-bridge",
+      "StandardOutPath": "/Users/herald/logs/jim-bridge.out.log",
+      "StandardErrorPath": "/Users/herald/logs/jim-bridge.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.jim-bridge.plist",
+      "sha256": "e43212a6b02dac83c0c566e56ffae316c488c7556c5823f97b328b5be1076fc0",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/herald-bridge/herald_bridge.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "29801",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.keepawake",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "StandardOutPath": "/Users/herald/logs/windance-keepawake.out.log",
+      "StandardErrorPath": "/Users/herald/logs/windance-keepawake.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.keepawake.plist",
+      "sha256": "27660d5e23aadbd9f0237ebe1ee586ec91c8c52b710c10256a58176e0b678697",
+      "executables": [
+        "/usr/bin/caffeinate"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "636",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.nightly-core-maintenance",
+      "StartCalendarInterval": {
+        "Hour": 1,
+        "Minute": 30
+      },
+      "StandardOutPath": "/Users/herald/logs/nightly-core-maintenance.log",
+      "StandardErrorPath": "/Users/herald/logs/nightly-core-maintenance.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.nightly-core-maintenance.plist",
+      "sha256": "44bd2198df8f1977ebc8aad0a9558fa74c7bee5804abc5476d5e2f1e5d00be63",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/nightly-core-maintenance/nightly_core_maintenance.py"
+      ],
+      "domains": {}
+    },
+    {
+      "Label": "com.windance.profile-staff-runner",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/profile-staff-runner",
+      "StandardOutPath": "/Users/herald/logs/profile-staff-runner/out.log",
+      "StandardErrorPath": "/Users/herald/logs/profile-staff-runner/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.profile-staff-runner.plist",
+      "sha256": "2746b12861e2a8d26339dac135f2ab0a85766cc45615b9fcd332a3f10cc3e378",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/profile-staff-runner/staff_follow_through_monitor.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "1",
+          "pid": "64479",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.router-syslog",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "WorkingDirectory": "/Users/herald/services/sentinel-router-logs",
+      "StandardOutPath": "/Users/herald/logs/router-syslog/collector.out.log",
+      "StandardErrorPath": "/Users/herald/logs/router-syslog/collector.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.router-syslog.plist",
+      "sha256": "4ebfc43cad04bded8b81cc123bbf60e90d5f4afa6d3e55f99ed774dc29408ce4",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/sentinel-router-logs/router_syslog_collector.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "66738",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.sandbox-bridge",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "WorkingDirectory": "/Users/herald/services/herald-bridge",
+      "StandardOutPath": "/Users/herald/logs/sandbox-bridge.out.log",
+      "StandardErrorPath": "/Users/herald/logs/sandbox-bridge.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.sandbox-bridge.plist",
+      "sha256": "d5265657603c8f1de9bf6cfb86555531b76df21d114f96e25e40d501fe65ad95",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/herald-bridge/herald_bridge.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "29809",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.sentinel-router-review",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 6,
+        "Minute": 50
+      },
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/sentinel-router-logs",
+      "StandardOutPath": "/Users/herald/logs/router-syslog/daily-review.out.log",
+      "StandardErrorPath": "/Users/herald/logs/router-syslog/daily-review.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.sentinel-router-review.plist",
+      "sha256": "81a4ec77cc523601c20622327314b49593d5fb596f0e772c22d33c6152459c96",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/sentinel-router-logs/sentinel_daily_router_review.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "2",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.shawn-mail-assistant",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "WorkingDirectory": "/Users/herald/services/shawn-mail-assistant",
+      "StandardOutPath": "/Users/herald/logs/shawn-mail-assistant/out.log",
+      "StandardErrorPath": "/Users/herald/logs/shawn-mail-assistant/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.shawn-mail-assistant.plist",
+      "sha256": "9dc070f834e41972af16ff502d0b62bc5875b47723d2f27394dfe7ff66a30deb",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/uvicorn"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "29805",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.software-maintenance",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 1,
+        "Minute": 30
+      },
+      "LimitLoadToSessionType": "Background",
+      "StandardOutPath": "/Users/herald/logs/software-maintenance.log",
+      "StandardErrorPath": "/Users/herald/logs/software-maintenance.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.software-maintenance.plist",
+      "sha256": "026252c7a1b72170d788fe30f52a207af62269131dd7b92fa49420c405ab0a16",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/software-maintenance/windance_software_maintenance.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "2",
+          "last exit code": "1"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.telegram-report-history",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "StandardOutPath": "/Users/herald/logs/telegram-report-history/stdout.log",
+      "StandardErrorPath": "/Users/herald/logs/telegram-report-history/stderr.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.telegram-report-history.plist",
+      "sha256": "3232679e4f75fb5f144a1591677b1ba635236bd393b4f753aa28da8bf34862be",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/bin/telegram_report_history.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "2",
+          "pid": "75494"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.urgent-monitor",
+      "RunAtLoad": true,
+      "StartInterval": 30,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/urgent-monitor",
+      "StandardOutPath": "/Users/herald/logs/urgent-monitor/out.log",
+      "StandardErrorPath": "/Users/herald/logs/urgent-monitor/err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.urgent-monitor.plist",
+      "sha256": "7b2b33f2104705574c9f27fe8ee41ca8541dd39b0a04fb67499e75f13e573fac",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/urgent-monitor/urgent_monitor.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "6713",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.vega-manager",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "LimitLoadToSessionType": "Background",
+      "WorkingDirectory": "/Users/herald/services/vega-manager",
+      "StandardOutPath": "/Users/herald/services/vega-manager/service.log",
+      "StandardErrorPath": "/Users/herald/services/vega-manager/service-error.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.vega-manager.plist",
+      "sha256": "fe4dca3bdffc2448fcd91a21a853a18e12b1311737fbf5aeb53818ce8b506a58",
+      "executables": [
+        "/Users/herald/.hermes/hermes-agent/venv/bin/python",
+        "/Users/herald/services/vega-manager/manager.py"
+      ],
+      "domains": {
+        "user": {
+          "state": "active",
+          "runs": "9",
+          "pid": "52627",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.weekly-stack-maintenance",
+      "StartCalendarInterval": {
+        "Weekday": 1,
+        "Hour": 2,
+        "Minute": 15
+      },
+      "StandardOutPath": "/Users/herald/logs/weekly-stack-maintenance.log",
+      "StandardErrorPath": "/Users/herald/logs/weekly-stack-maintenance.err.log",
+      "file": "/Users/herald/Library/LaunchAgents/com.windance.weekly-stack-maintenance.plist",
+      "sha256": "0fc6983e0017c2a3feeb4906543c1fca5348be563a82f6fc70a2393cf1e8d2e4",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/herald/services/weekly-stack-maintenance/weekly_stack_maintenance.py"
+      ],
+      "domains": {}
+    }
+  ],
+  "health": {
+    "8791/health": {
+      "http": 200,
+      "ms": 9.86,
+      "fields": {
+        "status": "ok",
+        "service": "agent-harness",
+        "provider": "openai-codex",
+        "model": "gpt-5.6-terra"
+      }
+    },
+    "8793/health": {
+      "http": 200,
+      "ms": 0.65,
+      "fields": {
+        "status": "ok",
+        "service": "windance-codex-bridge"
+      }
+    },
+    "8795/health": {
+      "http": 200,
+      "ms": 310.64,
+      "fields": {
+        "status": "ok"
+      }
+    },
+    "8796/health": {
+      "error": "URLError"
+    },
+    "8797/health": {
+      "http": 200,
+      "ms": 1.37,
+      "fields": {
+        "service": "vega-manager",
+        "status": "ok",
+        "tick_age_seconds": 0.747448205947876,
+        "projects": {
+          "cancelled": 1,
+          "delivered": 2
+        }
+      }
+    },
+    "9120/api/status": {
+      "http": 200,
+      "ms": 594.23,
+      "fields": {
+        "version": "0.21.5",
+        "auth_required": true
+      }
+    },
+    "8791/odoo/status": {
+      "http": 200,
+      "ms": 892.69,
+      "fields": {
+        "configured": true,
+        "version": {
+          "server_version": "saas~19.3+e",
+          "server_version_info": [
+            "saas~19",
+            3,
+            0,
+            "final",
+            0,
+            "e"
+          ],
+          "server_serie": "saas~19.3",
+          "protocol_version": 1
+        }
+      }
+    },
+    "8791/search/status": {
+      "http": 200,
+      "ms": 4.96,
+      "fields": {}
+    }
+  },
+  "profiles": [
+    {
+      "name": "herald",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [
+        "windance-gmail",
+        "herald-staff"
+      ],
+      "config_sha256": "faf07646cbc10a4473e17976eb446596afd4383a13ed86d86fe0055bdc038bb0"
+    },
+    {
+      "name": "forge",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [],
+      "config_sha256": "cc41244ec9f8120a4fbd526320f018604e892a67bc775dced4ab7f7590f0dffb"
+    },
+    {
+      "name": "sentinel",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [],
+      "config_sha256": "9d4c5aaf3e91e95d82289ac27b43015178fac8aec90f69cd67bc0abeb40d143f"
+    },
+    {
+      "name": "max",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [],
+      "config_sha256": "24ec91adf4c21992ff8ab72aaf636dcdb5e9bbe60509e112d9b78f2c92babd81"
+    },
+    {
+      "name": "iris",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [],
+      "config_sha256": "26a17b5ce759007572893b784cca5575b806f488fee0942324ac5902fd048bc4"
+    },
+    {
+      "name": "ledger",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [
+        "windance-ledger-records"
+      ],
+      "config_sha256": "1eafa9ead38454b802f2f52e653bc25b557a08834c91d7d0df2c0a2db9a51ac9"
+    },
+    {
+      "name": "scout",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [],
+      "config_sha256": "6d32af561f51fe9bda616fd607e4b98154a9ea4bc82bf8ed9a13150a62711813"
+    },
+    {
+      "name": "archivist",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [
+        "windance-archivist-records"
+      ],
+      "config_sha256": "5cd2dafbd6045c138015afc4a93e7e7810dc30adb43458c0c3cf00db0905f7d4"
+    },
+    {
+      "name": "athena",
+      "model": {
+        "provider": "openai-codex",
+        "default": "gpt-5.6-terra",
+        "base_url": ""
+      },
+      "fallback_models": null,
+      "mcp_names": [],
+      "config_sha256": "f8fea85ff28b008befbdc9a2e952258ce85957d762889132d570c4b182a66801"
+    }
+  ],
+  "root_mcp_names": [
+    "windance-gmail",
+    "herald-staff",
+    "google-workspace",
+    "hal-desktop-cua"
+  ],
+  "hermes_git": {
+    "exit": 0,
+    "output": "6d42313deee63b13dbf2f262d9a31cf603d3f1bc"
+  },
+  "hermes_version": {
+    "exit": 0,
+    "output": "Hermes Agent v0.21.5+4196.g6d42313.dirty (2026.9.24) \u00b7 upstream 6d42313d\nInstall directory: /Users/herald/.hermes/hermes-agent\nInstall method: git\nPython: 3.11.15\nOpenAI SDK: 2.24.0\nUpdate available \u2014 run 'hermes update'"
+  },
+  "databases": [
+    {
+      "path": "/Users/herald/.local/share/vega-manager/manager.db",
+      "bytes": 352256,
+      "schema": {
+        "projects": [
+          "id",
+          "title",
+          "request",
+          "status",
+          "plan",
+          "updated",
+          "next_check",
+          "deadline",
+          "report",
+          "report_hash",
+          "qa_task",
+          "delivery",
+          "notified",
+          "owner"
+        ],
+        "stages": [
+          "project",
+          "key",
+          "assignee",
+          "request",
+          "dependencies",
+          "task_id",
+          "status",
+          "evidence"
+        ],
+        "events": [
+          "id",
+          "project",
+          "at",
+          "kind",
+          "body"
+        ],
+        "messages": [
+          "id",
+          "request",
+          "channel",
+          "session",
+          "status",
+          "answer",
+          "created",
+          "updated",
+          "notify",
+          "receipt",
+          "owner"
+        ],
+        "state": [
+          "key",
+          "value"
+        ]
+      }
+    },
+    {
+      "path": "/Users/herald/.local/share/agent-harness/harness.db",
+      "bytes": 69414912,
+      "schema": {
+        "memories": [
+          "id",
+          "kind",
+          "key",
+          "value",
+          "confidence",
+          "source",
+          "created_at",
+          "updated_at"
+        ],
+        "conversations": [
+          "id",
+          "user",
+          "channel",
+          "message",
+          "response",
+          "provider",
+          "model",
+          "created_at"
+        ],
+        "audit_log": [
+          "id",
+          "event_type",
+          "payload_json",
+          "created_at"
+        ],
+        "approvals": [
+          "id",
+          "action",
+          "payload_json",
+          "status",
+          "requested_at",
+          "decided_at",
+          "decision_note"
+        ],
+        "ops_items": [
+          "id",
+          "topic",
+          "slug",
+          "status",
+          "summary",
+          "next_action",
+          "owner",
+          "source",
+          "created_at",
+          "updated_at"
+        ],
+        "ops_events": [
+          "id",
+          "item_id",
+          "event_type",
+          "note",
+          "source",
+          "created_at"
+        ],
+        "vector_memory": [
+          "id",
+          "source_type",
+          "source_id",
+          "title",
+          "text",
+          "embedding_json",
+          "embedding_model",
+          "created_at",
+          "updated_at"
+        ],
+        "staff_tasks": [
+          "id",
+          "assignee",
+          "title",
+          "request",
+          "requester",
+          "channel",
+          "priority",
+          "status",
+          "result",
+          "source",
+          "created_at",
+          "updated_at",
+          "completed_at",
+          "completed_by"
+        ],
+        "max_email_tracking": [
+          "message_id",
+          "thread_id",
+          "sender",
+          "subject",
+          "first_seen_at",
+          "last_seen_at",
+          "last_gmail_state",
+          "max_state",
+          "reported_at",
+          "last_reminded_at",
+          "importance",
+          "follow_up_state",
+          "notes"
+        ],
+        "max_email_report_refs": [
+          "id",
+          "report_key",
+          "ref_num",
+          "section",
+          "message_id",
+          "thread_id",
+          "sender",
+          "subject",
+          "created_at"
+        ],
+        "max_email_sender_rules": [
+          "sender_email",
+          "sender_display",
+          "action",
+          "source_message_id",
+          "source_subject",
+          "created_at",
+          "updated_at",
+          "last_matched_at",
+          "match_count"
+        ],
+        "permission_grants": [
+          "id",
+          "principal",
+          "action",
+          "resource",
+          "effect",
+          "mode",
+          "max_uses",
+          "uses",
+          "expires_at",
+          "revoked_at",
+          "revoked_by",
+          "created_at",
+          "created_by",
+          "source_channel",
+          "source_approval_id",
+          "reason"
+        ],
+        "action_plans": [
+          "id",
+          "intent_id",
+          "principal",
+          "channel",
+          "request_text",
+          "summary",
+          "risk",
+          "status",
+          "approval_id",
+          "provider",
+          "model",
+          "created_at",
+          "updated_at",
+          "completed_at"
+        ],
+        "action_steps": [
+          "id",
+          "plan_id",
+          "ordinal",
+          "action",
+          "args_json",
+          "resource",
+          "risk",
+          "status",
+          "result_json",
+          "evidence_json",
+          "error",
+          "started_at",
+          "finished_at"
+        ],
+        "bridge_lounge_sessions": [
+          "user",
+          "active",
+          "opened_at",
+          "updated_at"
+        ],
+        "delegation_tasks": [
+          "task_id",
+          "created_at",
+          "updated_at",
+          "requested_by",
+          "assigned_agent",
+          "original_request",
+          "normalized_task_payload",
+          "current_status",
+          "acceptance_receipt",
+          "execution_workspace",
+          "progress_message",
+          "error_message",
+          "result_summary",
+          "verification_evidence"
+        ],
+        "hermes_webhook_receipts": [
+          "event_id",
+          "event_type",
+          "signature_timestamp",
+          "payload_sha256",
+          "received_at"
+        ],
+        "captures": [
+          "id",
+          "original_text",
+          "source_channel",
+          "source_user",
+          "state",
+          "created_at",
+          "updated_at",
+          "discarded_at"
+        ],
+        "capture_events": [
+          "id",
+          "capture_id",
+          "event_type",
+          "actor",
+          "note",
+          "created_at"
+        ],
+        "max_email_report_consumed": [
+          "report_key",
+          "consumed_at",
+          "reason"
+        ],
+        "staff_task_notes": [
+          "id",
+          "task_id",
+          "note",
+          "author",
+          "channel",
+          "created_at"
+        ],
+        "staff_task_deliveries": [
+          "task_id",
+          "transport",
+          "status",
+          "attempted_at",
+          "delivered_at",
+          "detail"
+        ],
+        "email_autonomy_actions": [
+          "id",
+          "run_id",
+          "ordinal",
+          "message_id",
+          "thread_id",
+          "sender",
+          "subject",
+          "decision",
+          "action",
+          "reason",
+          "draft_id",
+          "created_at",
+          "reversed_at",
+          "reversal_result"
+        ],
+        "staff_task_runs": [
+          "task_id",
+          "pid",
+          "registered_at",
+          "delivery_retries"
+        ],
+        "email_report_active": [
+          "singleton",
+          "report_key",
+          "item_count"
+        ],
+        "report_snapshots": [
+          "id",
+          "user",
+          "kind",
+          "content",
+          "metadata_json",
+          "created_at"
+        ],
+        "report_reviews": [
+          "id",
+          "report_sha256",
+          "approved",
+          "reviewer",
+          "provider",
+          "model",
+          "reason",
+          "evidence_json",
+          "created_at"
+        ],
+        "staff_task_revisions": [
+          "id",
+          "task_id",
+          "snapshot_json",
+          "created_at"
+        ]
+      }
+    }
+  ]
+}

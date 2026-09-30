@@ -1,0 +1,140 @@
+{
+  "host": "SAL-SUPPLEMENT",
+  "created_utc": "2026-09-30T06:06:23Z",
+  "root": "/Users/zuzu/backups/agentic-baseline-20260930T0607Z",
+  "scope": "selected operational source and data only; no credentials, counselor stores, mailbox stores, Syncthing or Level8",
+  "files": [
+    {
+      "path": "files/Users/zuzu/bin/send_report_payload.py",
+      "source": "/Users/zuzu/bin/send_report_payload.py",
+      "kind": "exact-source",
+      "bytes": 191,
+      "sha256": "b918f367e54a971246ba8587900d149da8591c24201db4e65706cfb658a2dd1b"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_shawn_email_payload.py",
+      "source": "/Users/zuzu/bin/send_shawn_email_payload.py",
+      "kind": "exact-source",
+      "bytes": 5589,
+      "sha256": "575b1d9fef587c89fbe52a10bdf18ebb5fb18a8b470bff1e5035a3edb2c29f16"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_shawn_report_payload.py",
+      "source": "/Users/zuzu/bin/send_shawn_report_payload.py",
+      "kind": "exact-source",
+      "bytes": 1262,
+      "sha256": "b4121c125d9b2017e857ff1b06f9322fc31af104a37797f8f97c9f4fdbfea773"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_telegram_payload.py",
+      "source": "/Users/zuzu/bin/send_telegram_payload.py",
+      "kind": "exact-source",
+      "bytes": 209,
+      "sha256": "c9009f121a04e28e9c427469d8da583a72c502b5a1043fb976471556fd2c6919"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_william_imessage_payload.py",
+      "source": "/Users/zuzu/bin/send_william_imessage_payload.py",
+      "kind": "exact-source",
+      "bytes": 3177,
+      "sha256": "361617413d9f7843dd9092fd1a2df8e34cb96ec50ea4b0de806a290bba6127d2"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_william_sms_payload.py",
+      "source": "/Users/zuzu/bin/send_william_sms_payload.py",
+      "kind": "exact-source",
+      "bytes": 204,
+      "sha256": "65a0cba62fc70c809da7b034d249d7a768632f259c886a7a07421df2cce60b80"
+    },
+    {
+      "path": "files/Users/zuzu/bin/report_preferences.py",
+      "source": "/Users/zuzu/bin/report_preferences.py",
+      "kind": "exact-source",
+      "bytes": 3982,
+      "sha256": "6d6151fa0877805ac7d06c8cde8ccf2a05110be1e352836187cf97932653fbff"
+    },
+    {
+      "path": "files/Users/zuzu/bin/sal_report_adapter.py",
+      "source": "/Users/zuzu/bin/sal_report_adapter.py",
+      "kind": "exact-source",
+      "bytes": 4611,
+      "sha256": "c594b7ad17b92942c7ae14336a2eb18c3dc0eb56d09671b86c15b462d03e3d59"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_report_outcome.py",
+      "source": "/Users/zuzu/bin/windance_report_outcome.py",
+      "kind": "exact-source",
+      "bytes": 2246,
+      "sha256": "ff02ebf6f28ceee46cc96b733eb2f556549e1daca1160be3bbfb9a42f0b4373f"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_morning_status_report.py",
+      "source": "/Users/zuzu/bin/windance_morning_status_report.py",
+      "kind": "exact-source",
+      "bytes": 6429,
+      "sha256": "2eaef7c70ffebe7f7e421d851afc9e29a48468bd188fb8c0c50a3dd110a9ee67"
+    }
+  ],
+  "excluded": [],
+  "restore_tests": [
+    {
+      "path": "files/Users/zuzu/bin/send_report_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_shawn_email_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_shawn_report_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_telegram_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_william_imessage_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_william_sms_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/report_preferences.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/sal_report_adapter.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_report_outcome.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_morning_status_report.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    }
+  ],
+  "isolation": {
+    "services_started": 0,
+    "schedules_loaded": 0,
+    "task_dispatches": 0,
+    "network_calls_by_restore": 0,
+    "application_imports": 0,
+    "method": "offline byte/SQLite/parser restoration; files never installed in a live service directory"
+  },
+  "finished_utc": "2026-09-30T06:06:23Z"
+}

@@ -1,0 +1,807 @@
+{
+  "host": "HERALD",
+  "created_utc": "2026-09-30T05:58:55Z",
+  "root": "/Users/herald/backups/agentic-baseline-20260930T0600Z",
+  "scope": "selected operational source and data only; no credentials, counselor stores, mailbox stores, Syncthing or Level8",
+  "files": [
+    {
+      "path": "files/Users/herald/services/vega-manager/manager.py",
+      "source": "/Users/herald/services/vega-manager/manager.py",
+      "kind": "exact-source",
+      "bytes": 30740,
+      "sha256": "4f62730575e66c32c1f61bb93d698db6d61dc4bfede8f8262e1c853acf2d0c80"
+    },
+    {
+      "path": "files/Users/herald/services/vega-manager/manager_mcp.py",
+      "source": "/Users/herald/services/vega-manager/manager_mcp.py",
+      "kind": "exact-source",
+      "bytes": 2510,
+      "sha256": "4a5a8e537c043a75dc1f5db3b91be5c10a03114af5451fffbc785dd0e96d179d"
+    },
+    {
+      "path": "files/Users/herald/services/vega-manager/MANAGER.md",
+      "source": "/Users/herald/services/vega-manager/MANAGER.md",
+      "kind": "exact-source",
+      "bytes": 11306,
+      "sha256": "d0e3bedf923806b0e2dfa0ffc4709a1b17995815f1abb460c84858aa4ec7eb67"
+    },
+    {
+      "path": "files/Users/herald/services/agent-harness/agent_harness.py",
+      "source": "/Users/herald/services/agent-harness/agent_harness.py",
+      "kind": "exact-source",
+      "bytes": 495511,
+      "sha256": "a23ff6ddba03ebb2a5f213da16fdbb0ff5c4cca3a130a7ca070c7bc4854c5b5b"
+    },
+    {
+      "path": "files/Users/herald/services/windance-codex-bridge/server.mjs",
+      "source": "/Users/herald/services/windance-codex-bridge/server.mjs",
+      "kind": "exact-source",
+      "bytes": 14995,
+      "sha256": "62483284dea6eefe010ea9d34cc4bb4438a6042bb910462f8679ab676ef80c1c"
+    },
+    {
+      "path": "files/Users/herald/services/herald-phone/phone_service.py",
+      "source": "/Users/herald/services/herald-phone/phone_service.py",
+      "kind": "exact-source",
+      "bytes": 20468,
+      "sha256": "6f38c81989db329b154e82ff68b40af91d261567f116f8971e55a5f73ebc9959"
+    },
+    {
+      "path": "files/Users/herald/services/herald-phone/worker.py",
+      "source": "/Users/herald/services/herald-phone/worker.py",
+      "kind": "exact-source",
+      "bytes": 2592,
+      "sha256": "f260dba7ea9918c0039355f382343277954bc87d9a4e91169200bb18187df7ef"
+    },
+    {
+      "path": "files/Users/herald/services/google-workspace-mcp/google_workspace_mcp.py",
+      "source": "/Users/herald/services/google-workspace-mcp/google_workspace_mcp.py",
+      "kind": "exact-source",
+      "bytes": 8734,
+      "sha256": "23a5d5087735eb46c81b79b18df7e809e057d07f13edfa0d4e9656b2797d5f5a"
+    },
+    {
+      "path": "files/Users/herald/services/windance-gmail-mcp/server.py",
+      "source": "/Users/herald/services/windance-gmail-mcp/server.py",
+      "kind": "exact-source",
+      "bytes": 4475,
+      "sha256": "61364689b38b2eb036ef252d5325785378d9d30fcb5907ae7751d1f65092ef9e"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/report_preferences.py",
+      "source": "/Users/herald/services/profile-staff-runner/report_preferences.py",
+      "kind": "exact-source",
+      "bytes": 3982,
+      "sha256": "6d6151fa0877805ac7d06c8cde8ccf2a05110be1e352836187cf97932653fbff"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/profile_staff_runner.host-context-stage.py",
+      "source": "/Users/herald/services/profile-staff-runner/profile_staff_runner.host-context-stage.py",
+      "kind": "exact-source",
+      "bytes": 23585,
+      "sha256": "afcddde4f5776495e7d66f03842cf6f16330d1742fc4c09c5d43592bb50bde60"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/watchlist_evidence.py",
+      "source": "/Users/herald/services/profile-staff-runner/watchlist_evidence.py",
+      "kind": "exact-source",
+      "bytes": 4769,
+      "sha256": "a6af0973ad7f583bb2ecbee9aa047edcccaf20d43f13f392e9260aaf9564e01c"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/worker_lease.py",
+      "source": "/Users/herald/services/profile-staff-runner/worker_lease.py",
+      "kind": "exact-source",
+      "bytes": 3623,
+      "sha256": "a472774c3d3420c1a1b3f0f2e600951424324ea5d1c4971ab4a1a5ef13e75703"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/staff_discussion.py",
+      "source": "/Users/herald/services/profile-staff-runner/staff_discussion.py",
+      "kind": "exact-source",
+      "bytes": 9707,
+      "sha256": "b098a604ada3508217a261685f7a013dc83777121aaaf80d48a5fc5f40d57eaf"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/staff_follow_through_monitor.py",
+      "source": "/Users/herald/services/profile-staff-runner/staff_follow_through_monitor.py",
+      "kind": "exact-source",
+      "bytes": 1941,
+      "sha256": "300fe4e675e2152ffed44aa3b90d4cb9d19e7489a3be0065fa89bf0f9287f742"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/manager_queue_fairness.py",
+      "source": "/Users/herald/services/profile-staff-runner/manager_queue_fairness.py",
+      "kind": "exact-source",
+      "bytes": 577,
+      "sha256": "623771a9926574491cfe94807874c99a789181cc72fdb8b837b0ef6646944e4b"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/scout_research_policy.py",
+      "source": "/Users/herald/services/profile-staff-runner/scout_research_policy.py",
+      "kind": "exact-source",
+      "bytes": 17457,
+      "sha256": "a4f391a1f7cc12540d5087e93726b0ec8264c2b45fe14e791849cc216094be96"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/worker_verification.py",
+      "source": "/Users/herald/services/profile-staff-runner/worker_verification.py",
+      "kind": "exact-source",
+      "bytes": 4530,
+      "sha256": "fc33fdaaefd1480d6439ab8dfb938f56775f0c88136a408dd5e82756050d6f25"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/profile_staff_runner.py",
+      "source": "/Users/herald/services/profile-staff-runner/profile_staff_runner.py",
+      "kind": "exact-source",
+      "bytes": 35834,
+      "sha256": "b9498eaa83d5bb72e706ea93e243f08fbad6495f7f4b3fdaac1a4d8ca95a8127"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/verify_deploy_board.py",
+      "source": "/Users/herald/services/windance-supervisor/verify_deploy_board.py",
+      "kind": "exact-source",
+      "bytes": 1322,
+      "sha256": "1f99ac582d9b5696cb00cdb17319ab1333d6e55e353b92d57c55f32478a51581"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/submit_reviews.py",
+      "source": "/Users/herald/services/windance-supervisor/submit_reviews.py",
+      "kind": "exact-source",
+      "bytes": 2701,
+      "sha256": "d910a654879c291993b33315754bb6af277b773cbe28b58da775981cfc2598ac"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/archive_warden.py",
+      "source": "/Users/herald/services/windance-supervisor/archive_warden.py",
+      "kind": "exact-source",
+      "bytes": 2221,
+      "sha256": "a06cecca7d31febfd5185cf4cbeea1b28b50307e2611691e66875a35e0186025"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/review_gate.py",
+      "source": "/Users/herald/services/windance-supervisor/review_gate.py",
+      "kind": "exact-source",
+      "bytes": 15168,
+      "sha256": "ea0ecfa803bf4e6e32eb9a4ef8eb36106595e2b53b081af0e14a9aaa4c5279c0"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/supervisor.py",
+      "source": "/Users/herald/services/windance-supervisor/supervisor.py",
+      "kind": "exact-source",
+      "bytes": 22500,
+      "sha256": "67b792810050d6157163e4d6d849531991e723bfb1b23ea66d5d7430bdcbf9dd"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/recovery_canary.py",
+      "source": "/Users/herald/services/windance-supervisor/recovery_canary.py",
+      "kind": "exact-source",
+      "bytes": 1112,
+      "sha256": "a32a804a13a289d0f5735e61a079c5f2d76c0eb58a665704834921ce1c4afd3d"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/check_messages.py",
+      "source": "/Users/herald/services/windance-supervisor/check_messages.py",
+      "kind": "exact-source",
+      "bytes": 513,
+      "sha256": "c70a19265bd1b8b982e8f2350b98b90a0830ed2e30bbcb16a2f404919541d1b2"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/check_messages_launch.py",
+      "source": "/Users/herald/services/windance-supervisor/check_messages_launch.py",
+      "kind": "exact-source",
+      "bytes": 634,
+      "sha256": "c1e505e8f82fa288fafa91abc82c4d5271c02eddd90483a800f984b830ea8a1b"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/remote_ops.py",
+      "source": "/Users/herald/services/windance-supervisor/remote_ops.py",
+      "kind": "exact-source",
+      "bytes": 9286,
+      "sha256": "892d1d467b3cc5c4cc9234b6c1c67ef43f36dbcb6d7c1fa914db0b8ac6a814dd"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/normalize_forge_receipt.py",
+      "source": "/Users/herald/services/windance-supervisor/normalize_forge_receipt.py",
+      "kind": "exact-source",
+      "bytes": 2372,
+      "sha256": "fb44ebbb7f3f7260a1fcd8349c3d4bc14d7c6ed98b4a3921c5210ccf6e58a3c7"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/report_wrapper.py",
+      "source": "/Users/herald/services/windance-supervisor/report_wrapper.py",
+      "kind": "exact-source",
+      "bytes": 1458,
+      "sha256": "91734185c737f351d5f87c6f931186f0c391d978918d6bc3cd77534922d4d399"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/retry_archivist.py",
+      "source": "/Users/herald/services/windance-supervisor/retry_archivist.py",
+      "kind": "exact-source",
+      "bytes": 1917,
+      "sha256": "9255051e64efddd317794ea8bd72b4d7a921dd94e1e289e10b4e766618714b98"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/plugin_api.staged.py",
+      "source": "/Users/herald/services/windance-supervisor/plugin_api.staged.py",
+      "kind": "exact-source",
+      "bytes": 8548,
+      "sha256": "ed975f758e4c82895e20ce8a5276649bb62d21417f3aef48fca52f4771a85382"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/install_remote.py",
+      "source": "/Users/herald/services/windance-supervisor/install_remote.py",
+      "kind": "exact-source",
+      "bytes": 2895,
+      "sha256": "dcc099892d6d2f81c6f05495fe5cc14d36b72e82316f7f7d0ae7ee2705cd5e7f"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/share_bootstrap.py",
+      "source": "/Users/herald/services/windance-supervisor/share_bootstrap.py",
+      "kind": "exact-source",
+      "bytes": 2783,
+      "sha256": "cc4128e0c970c7d56de35db924357cc332623035352766c52cd19d5509051096"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/finish_reviews.py",
+      "source": "/Users/herald/services/windance-supervisor/finish_reviews.py",
+      "kind": "exact-source",
+      "bytes": 2718,
+      "sha256": "d93dd3568e35266e085ed0e3d0d0b09ad450a2c85af4232fe5ff97b540e5ece2"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/herald/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/herald/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 26125,
+      "sha256": "b50506c15f72e2bf7162facfbb2a2b83166767d47d00a65c574221cd8b1dd8f2"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/forge/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/forge/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 15091,
+      "sha256": "786530e71b8c711391120af6c55c107beb58ad117e1f7ffe63cde2c9fd513cbe"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/sentinel/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/sentinel/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 15406,
+      "sha256": "0e02b59176bb1911c564eecc77686d83fb3e5ead6e33bebdb4df9af57219ee52"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/max/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/max/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 12173,
+      "sha256": "c64494afca9a8951aea71fc542998b96d4b1afddc6b3c14ad54a7c76a67d9221"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/iris/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/iris/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 13087,
+      "sha256": "08920a21f2eeb0792de8b3278c7a03135350af63d283881328f15905353d6bf3"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/ledger/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/ledger/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 11709,
+      "sha256": "ab728a1a5952f470060dcf30e5e684bf40438ceef86f51b0b33b0a15a5d92ef0"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/scout/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/scout/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 20724,
+      "sha256": "ebcae8510121a3222831289246ffdb02438aa074aaae3199263990517778f5ae"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/archivist/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/archivist/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 11927,
+      "sha256": "35358aff362047a979d92c480c2ae975333b215741db461cf82465b0f22eb782"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/athena/SOUL.md",
+      "source": "/Users/herald/.hermes/profiles/athena/SOUL.md",
+      "kind": "exact-source",
+      "bytes": 12812,
+      "sha256": "526776e77162c7a976fc08b7ac15395c2d65b3dbcdd125666faa1d1ecde1df44"
+    },
+    {
+      "path": "data/manager.db",
+      "source": "/Users/herald/.local/share/vega-manager/manager.db",
+      "kind": "selected-table-export",
+      "bytes": 249856,
+      "sha256": "66c0d5043d10d09882411e7b8a095a974fef5f7378c485a411ad5602739ef0f0",
+      "integrity": "ok",
+      "counts": {
+        "projects": 3,
+        "stages": 24,
+        "events": 98
+      }
+    },
+    {
+      "path": "data/harness.db",
+      "source": "/Users/herald/.local/share/agent-harness/harness.db",
+      "kind": "selected-table-export",
+      "bytes": 995328,
+      "sha256": "b61b09ac58470fce5a6f2f26459d37b0285e8ca549ac148a8457d8ea9bc8894f",
+      "integrity": "ok",
+      "counts": {
+        "staff_tasks": 36,
+        "staff_task_notes": 0,
+        "staff_task_deliveries": 12,
+        "staff_task_runs": 36,
+        "report_reviews": 3,
+        "staff_task_revisions": 0
+      }
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.desktop-context-sync.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.desktop-context-sync.plist",
+      "kind": "exact-source",
+      "bytes": 798,
+      "sha256": "49760decb185fbf9cc975766667e061cac2876852f25410e474da3ae685ca29d"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.telegram-report-history.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.telegram-report-history.plist",
+      "kind": "exact-source",
+      "bytes": 849,
+      "sha256": "3232679e4f75fb5f144a1591677b1ba635236bd393b4f753aa28da8bf34862be"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.software-maintenance.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.software-maintenance.plist",
+      "kind": "exact-source",
+      "bytes": 936,
+      "sha256": "026252c7a1b72170d788fe30f52a207af62269131dd7b92fa49420c405ab0a16"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.shawn-mail-assistant.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.shawn-mail-assistant.plist",
+      "kind": "exact-source",
+      "bytes": 848,
+      "sha256": "9dc070f834e41972af16ff502d0b62bc5875b47723d2f27394dfe7ff66a30deb"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.gmail-sender-rule-sweep.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.gmail-sender-rule-sweep.plist",
+      "kind": "exact-source",
+      "bytes": 776,
+      "sha256": "3309b334e1882921b436029d5c60155d4be37a6053bfac89f94042d6bda54dda"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.hermex.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.hermex.plist",
+      "kind": "exact-source",
+      "bytes": 862,
+      "sha256": "dbd350caac916805597d7e9704c94df5b33a547038c6a421bf433634c0790290"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.daily-reflection.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.daily-reflection.plist",
+      "kind": "exact-source",
+      "bytes": 891,
+      "sha256": "c364f2feed652271748817cb8bff3b685bb32076d8e537fd9c98313cec1d8e9d"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.keepawake.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.keepawake.plist",
+      "kind": "exact-source",
+      "bytes": 670,
+      "sha256": "27660d5e23aadbd9f0237ebe1ee586ec91c8c52b710c10256a58176e0b678697"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.weekly-stack-maintenance.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.weekly-stack-maintenance.plist",
+      "kind": "exact-source",
+      "bytes": 763,
+      "sha256": "0fc6983e0017c2a3feeb4906543c1fca5348be563a82f6fc70a2393cf1e8d2e4"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.attendance-ip-exceptions.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.attendance-ip-exceptions.plist",
+      "kind": "exact-source",
+      "bytes": 1037,
+      "sha256": "f4d9f6be8da60b4f63a30f4af4a1aa71b6fd183d5320fb7f19e4d3936f512533"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.router-syslog.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.router-syslog.plist",
+      "kind": "exact-source",
+      "bytes": 793,
+      "sha256": "4ebfc43cad04bded8b81cc123bbf60e90d5f4afa6d3e55f99ed774dc29408ce4"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.sentinel-router-review.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.sentinel-router-review.plist",
+      "kind": "exact-source",
+      "bytes": 964,
+      "sha256": "81a4ec77cc523601c20622327314b49593d5fb596f0e772c22d33c6152459c96"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.hermes-dashboard.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.hermes-dashboard.plist",
+      "kind": "exact-source",
+      "bytes": 1161,
+      "sha256": "6621810d52171bb5de0ce06801fbc557762de457cd60c409e2d3e903673e458d"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.capture-review-reminder.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.capture-review-reminder.plist",
+      "kind": "exact-source",
+      "bytes": 915,
+      "sha256": "d49edec0a24fc81f2aca8dac63e4dd0e3a6fc8e5b84bb800b692164e573b81e2"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.nightly-core-maintenance.plist",
+      "source": "/Users/herald/Library/LaunchAgents/com.windance.nightly-core-maintenance.plist",
+      "kind": "exact-source",
+      "bytes": 742,
+      "sha256": "44bd2198df8f1977ebc8aad0a9558fa74c7bee5804abc5476d5e2f1e5d00be63"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "/Users/herald/services/herald-staff-mcp/server.py",
+      "reason": "missing or symlink"
+    },
+    {
+      "path": "/Users/herald/services/staff-records-mcp/server.py",
+      "reason": "missing or symlink"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.agent-harness.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.codex-app-server.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.fall-river-vet-report.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.profile-staff-runner.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.herald-bridge.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.codex-bridge.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.urgent-monitor.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.vega-manager.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/ai.hermes.gateway.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/herald/Library/LaunchAgents/com.windance.herald-phone.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    }
+  ],
+  "restore_tests": [
+    {
+      "path": "files/Users/herald/services/vega-manager/manager.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/vega-manager/manager_mcp.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/vega-manager/MANAGER.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/services/agent-harness/agent_harness.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-codex-bridge/server.mjs",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/services/herald-phone/phone_service.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/herald-phone/worker.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/google-workspace-mcp/google_workspace_mcp.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-gmail-mcp/server.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/report_preferences.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/profile_staff_runner.host-context-stage.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/watchlist_evidence.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/worker_lease.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/staff_discussion.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/staff_follow_through_monitor.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/manager_queue_fairness.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/scout_research_policy.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/worker_verification.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/profile-staff-runner/profile_staff_runner.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/verify_deploy_board.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/submit_reviews.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/archive_warden.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/review_gate.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/supervisor.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/recovery_canary.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/check_messages.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/check_messages_launch.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/remote_ops.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/normalize_forge_receipt.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/report_wrapper.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/retry_archivist.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/plugin_api.staged.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/install_remote.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/share_bootstrap.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/windance-supervisor/finish_reviews.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/herald/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/forge/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/sentinel/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/max/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/iris/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/ledger/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/scout/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/archivist/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/herald/.hermes/profiles/athena/SOUL.md",
+      "hash_match": true
+    },
+    {
+      "path": "data/manager.db",
+      "hash_match": true,
+      "integrity": "ok",
+      "row_counts_match": true
+    },
+    {
+      "path": "data/harness.db",
+      "hash_match": true,
+      "integrity": "ok",
+      "row_counts_match": true
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.desktop-context-sync.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.telegram-report-history.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.software-maintenance.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.shawn-mail-assistant.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.gmail-sender-rule-sweep.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.hermex.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.daily-reflection.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.keepawake.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.weekly-stack-maintenance.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.attendance-ip-exceptions.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.router-syslog.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.sentinel-router-review.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.hermes-dashboard.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.capture-review-reminder.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/Library/LaunchAgents/com.windance.nightly-core-maintenance.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    }
+  ],
+  "isolation": {
+    "services_started": 0,
+    "schedules_loaded": 0,
+    "task_dispatches": 0,
+    "network_calls_by_restore": 0,
+    "application_imports": 0,
+    "method": "offline byte/SQLite/parser restoration; files never installed in a live service directory"
+  },
+  "finished_utc": "2026-09-30T05:58:56Z"
+}

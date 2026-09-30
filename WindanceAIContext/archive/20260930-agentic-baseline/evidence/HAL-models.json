@@ -1,0 +1,127 @@
+[
+  {
+    "name": "windance-ledger:latest",
+    "size": 9608350945,
+    "digest": "fffb29170f20ce811a7dc10545d01a4e497442c4d29ccfa6f540a0df1652166f"
+  },
+  {
+    "name": "windance-jean:latest",
+    "size": 9608350985,
+    "digest": "b37b9bfa974f3a2d69b03238fd3ca706961c13c4d32c1c9e7a94d1154dc18894"
+  },
+  {
+    "name": "windance-max:latest",
+    "size": 9608350958,
+    "digest": "a9ff603586b73323e65f5f27e9276398c1541593a89ced1e7763e3a07c423538"
+  },
+  {
+    "name": "windance-forge:latest",
+    "size": 9608350992,
+    "digest": "2e98c18ed69a00e1ca2cc894918739ace7c6f951a9768908fc417f9fa9be58bc"
+  },
+  {
+    "name": "windance-scout:latest",
+    "size": 9608350944,
+    "digest": "8dd1cd50a6dee8f17c880741e523ca8e4c5b196325f349c6ead928939827f5cb"
+  },
+  {
+    "name": "windance-sentinel:latest",
+    "size": 9608350966,
+    "digest": "d4b484e642a1022321a4b3e059b78996f026f6fc2b72d66be9b626ad12c4ed41"
+  },
+  {
+    "name": "windance-herald:latest",
+    "size": 9608350997,
+    "digest": "aa85d58177dae101f47d4f32a50aa68185b4b246752e89deda49355cb40c7eb8"
+  },
+  {
+    "name": "windance-archivist:latest",
+    "size": 9608350949,
+    "digest": "4b95559feb9c06afe6f24fbc88b9b8f1c9d60e00144cba1d1cba9cee1f122dd4"
+  },
+  {
+    "name": "windance-sandbox:latest",
+    "size": 6594474527,
+    "digest": "ce470181d2c7a9aefafef8836262c5d422338bf69ccd0266a9b8d60cfed0284a"
+  },
+  {
+    "name": "windance-athena:latest",
+    "size": 9608350992,
+    "digest": "1c37c9b0886b682609a9a0d3e4effa6b5d51b26d1a9c6a9d3bb3d4cbdd3a8015"
+  },
+  {
+    "name": "windance-jim-qwen:latest",
+    "size": 9276198246,
+    "digest": "fd96e27577027da4480eb9ce1c63805146157c2f8cf3aad2448d6b6636727aca"
+  },
+  {
+    "name": "windance-iris-phi-backup:latest",
+    "size": 9053116598,
+    "digest": "56d0cb1ed2c206848ef8539e9175ddd1f03f3d85a3cbf3739e344e3b1299e8a9"
+  },
+  {
+    "name": "windance-athena-phi-backup:latest",
+    "size": 9053116619,
+    "digest": "14dea2d4b37b4477edf3fcaf9163b2ad24d4e45af3d288c940b623651af6d720"
+  },
+  {
+    "name": "windance-iris:latest",
+    "size": 9608350971,
+    "digest": "ca5cded338a80d6d4c450af727dc618b7d6441d50c3373d86248a96058c05315"
+  },
+  {
+    "name": "windance-jim-mindwell:latest",
+    "size": 9322464730,
+    "digest": "5707ed8e8985270a98d19d2753e0157f79a28a59af1f5fcddd03edf1e63f9951"
+  },
+  {
+    "name": "nomic-embed-text:latest",
+    "size": 274302450,
+    "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+  },
+  {
+    "name": "gemma4:latest",
+    "size": 9608350718,
+    "digest": "c6eb396dbd5992bbe3f5cdb947e8bbc0ee413d7c17e2beaae69f5d569cf982eb"
+  },
+  {
+    "name": "vortex/helpingai-9b:latest",
+    "size": 5036998495,
+    "digest": "3f4f7f75b3c612813b6a1fb31d6c9f1f31d0385a2413857455f9ea2ad0ea38c8"
+  },
+  {
+    "name": "ALIENTELLIGENCE/mindwell:latest",
+    "size": 9322464932,
+    "digest": "c5b3abcbf36c8e6fe44f6ec16fb09aad2014d3827791d33e4fa1b45b3c833c04"
+  },
+  {
+    "name": "qwen3:14b",
+    "size": 9276198565,
+    "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8"
+  },
+  {
+    "name": "ministral-3:latest",
+    "size": 6022236616,
+    "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71"
+  },
+  {
+    "name": "samantha-mistral:7b",
+    "size": 4108928370,
+    "digest": "f7c8c9be1da01a601010c57075c88dd545110e92548c8e871f9d594fac52da37"
+  },
+  {
+    "name": "qwen3.5:9b",
+    "size": 6594474711,
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7"
+  },
+  {
+    "name": "granite4:tiny-h",
+    "size": 4230995221,
+    "digest": "566b725534ea0e9824f844abe6a78e1ab6f7357f1efb549be94908cb681513bb"
+  },
+  {
+    "name": "phi4:14b",
+    "size": 9053116391,
+    "digest": "ac896e5b8b34a1f4efa7b14d7520725140d5512484457fab45d2a4ea14c69dba"
+  }
+]

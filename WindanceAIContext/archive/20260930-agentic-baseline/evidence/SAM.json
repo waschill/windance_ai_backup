@@ -1,0 +1,159 @@
+{
+  "host": "SAM-WIFI",
+  "at": "2026-09-30T05:54:50Z",
+  "os": "Linux-6.18.50+rpt-rpi-2712-aarch64-with-glibc2.41",
+  "disk": {
+    "exit": 0,
+    "output": "Filesystem     1K-blocks     Used Available Use% Mounted on\n/dev/mmcblk0p2 122099336 10706844 105144044  10% /"
+  },
+  "health": {
+    "sam": {
+      "http": 200,
+      "ms": 16.52,
+      "fields": {
+        "status": "ok",
+        "service": "sam-schedule"
+      }
+    }
+  },
+  "timers": {
+    "exit": 0,
+    "output": "NEXT                            LEFT LAST                               PASSED UNIT                         ACTIVATES\nTue 2026-09-29 23:55:01 MDT      11s Mon 2026-09-28 23:55:24 MDT       23h ago sam-schedule-nightly.timer   sam-schedule-nightly.service\nWed 2026-09-30 00:00:00 MDT     5min Tue 2026-09-29 00:00:13 MDT       23h ago dpkg-db-backup.timer         dpkg-db-backup.service\nWed 2026-09-30 00:00:06 MDT     5min Tue 2026-09-29 23:45:14 MDT      9min ago sam-schedule-refresh.timer   sam-schedule-refresh.service\nWed 2026-09-30 00:38:20 MDT    43min Tue 2026-09-29 00:44:15 MDT       23h ago logrotate.timer              logrotate.service\nWed 2026-09-30 01:54:35 MDT 1h 59min Tue 2026-09-29 09:00:21 MDT       14h ago apt-daily.timer              apt-daily.service\nWed 2026-09-30 02:52:33 MDT 2h 57min Tue 2026-09-29 12:30:19 MDT       11h ago certbot.timer                certbot.service\nWed 2026-09-30 06:19:00 MDT       6h Tue 2026-09-29 06:22:14 MDT       17h ago apt-daily-upgrade.timer      apt-daily-upgrade.service\nWed 2026-09-30 10:42:04 MDT      10h Tue 2026-09-29 10:02:04 MDT       13h ago man-db.timer                 man-db.service\nWed 2026-09-30 14:53:44 MDT      14h Tue 2026-09-29 14:53:44 MDT        9h ago systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service\nWed 2026-09-30 17:39:24 MDT      17h Tue 2026-09-29 17:39:24 MDT        6h ago rpi-zram-writeback.timer     rpi-zram-writeback.service\nSun 2026-10-04 03:10:59 MDT   4 days Sun 2026-09-27 03:10:14 MDT    2 days ago e2scrub_all.timer            e2scrub_all.service\nMon 2026-10-05 01:23:39 MDT   5 days Mon 2026-09-28 01:24:15 MDT 1 day 22h ago fstrim.timer                 fstrim.service\n\n12 timers listed."
+  },
+  "source": {
+    "sha256": "824026967ab935b2563f0a77021668754fa5969f704e17e3619137a455643bc1",
+    "suspension_lines": [
+      "// Detailed category/rating/note capture is suspended. Training completion",
+      "status=410,"
+    ]
+  },
+  "databases": [
+    {
+      "path": "/home/williamschilling/.local/share/sam-schedule/sam_schedule.db",
+      "bytes": 2117632,
+      "schema": {
+        "trainers": [
+          "code",
+          "name",
+          "active",
+          "sort_order",
+          "updated_at"
+        ],
+        "schedule_days": [
+          "date",
+          "day_name",
+          "source",
+          "last_updated",
+          "last_committed",
+          "committed",
+          "commit_result"
+        ],
+        "schedule_items": [
+          "id",
+          "date",
+          "horse_key",
+          "horse_name",
+          "registered_name",
+          "odoo_horse_id",
+          "odoo_schedule_row_id",
+          "sequence",
+          "training_raw",
+          "training_label",
+          "trainer_code",
+          "trainer_name",
+          "farrier_text",
+          "vet_text",
+          "training_done",
+          "farrier_done",
+          "vet_done",
+          "updated_at",
+          "training_completed_at"
+        ],
+        "event_log": [
+          "id",
+          "date",
+          "event_type",
+          "item_id",
+          "detail_json",
+          "created_at"
+        ],
+        "missed_training": [
+          "id",
+          "missed_date",
+          "target_date",
+          "horse_key",
+          "horse_name",
+          "odoo_schedule_row_id",
+          "training_code",
+          "trainer_code",
+          "trainer_name",
+          "status",
+          "detail_json",
+          "created_at",
+          "updated_at",
+          "completed",
+          "completed_at",
+          "chain_id"
+        ],
+        "weather_alert_state": [
+          "id",
+          "point",
+          "active_count",
+          "summary",
+          "alert_json",
+          "fetched_at",
+          "error"
+        ],
+        "carryover_suppressions": [
+          "date",
+          "horse_key",
+          "training_code",
+          "missed_training_id",
+          "reason",
+          "created_at"
+        ],
+        "odoo_history_posts": [
+          "date",
+          "item_id",
+          "service_type",
+          "odoo_horse_id",
+          "odoo_history_id",
+          "created_at"
+        ],
+        "weather_widget_state": [
+          "id",
+          "point",
+          "station_url",
+          "hourly_url",
+          "current_json",
+          "forecast_json",
+          "current_fetched_at",
+          "forecast_fetched_at",
+          "error"
+        ],
+        "odoo_service_clear_posts": [
+          "date",
+          "item_id",
+          "service_type",
+          "odoo_horse_id",
+          "odoo_field",
+          "cleared_at"
+        ],
+        "training_completion_details": [
+          "item_id",
+          "date",
+          "horse_key",
+          "horse_name",
+          "training_code",
+          "training_type",
+          "category",
+          "subcategory",
+          "note",
+          "stars",
+          "completed_at",
+          "updated_at"
+        ]
+      }
+    }
+  ]
+}

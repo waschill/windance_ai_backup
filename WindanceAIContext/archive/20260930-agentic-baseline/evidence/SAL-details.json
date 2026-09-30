@@ -1,0 +1,177 @@
+{
+  "host": "SAL",
+  "at": "2026-09-30T06:00:07Z",
+  "outcomes": [
+    {
+      "exit_code": 0,
+      "job": "mail",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "briefing",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "mail",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "mail",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "briefing",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "training",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 0,
+      "job": "mail",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 1,
+      "job": "shawn-mail",
+      "status": "process_failed"
+    },
+    {
+      "exit_code": 0,
+      "job": "mail",
+      "status": "process_succeeded"
+    },
+    {
+      "exit_code": 1,
+      "job": "shawn-mail",
+      "status": "process_failed"
+    }
+  ],
+  "youtube": [
+    {
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "status": "failed",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "exit_code": 1
+    }
+  ],
+  "shawn_delivery": [
+    {
+      "ok": false,
+      "status": "unconfirmed",
+      "transport": "sms"
+    },
+    {
+      "ok": false,
+      "status": "unconfirmed",
+      "transport": "sms"
+    }
+  ],
+  "outbox_result_7d": {
+    "True": 42
+  },
+  "log_diagnostics": [
+    {
+      "path": "/Users/zuzu/logs/ledger-unpaid-invoices.err.log",
+      "mtime": 1785247202.7259252,
+      "markers": {},
+      "exception_types": []
+    },
+    {
+      "path": "/Users/zuzu/logs/morning-news-briefing/morning-news-briefing.err.log",
+      "mtime": 1790694007.1462352,
+      "markers": {
+        "receipt": 2,
+        "iMessage": 4,
+        "Traceback": 1
+      },
+      "exception_types": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "path": "/Users/zuzu/logs/sam-training-completion-report.err.log",
+      "mtime": 1790688917.0552912,
+      "markers": {
+        "receipt": 2,
+        "iMessage": 4,
+        "Traceback": 1
+      },
+      "exception_types": [
+        "RuntimeError"
+      ]
+    },
+    {
+      "path": "/Users/zuzu/logs/weekly-stack-review/weekly-stack-review.out.log",
+      "mtime": 1790700613.300665,
+      "markers": {
+        "receipt": 1,
+        "iMessage": 1,
+        "Telegram": 2,
+        "incomplete": 2,
+        "sent": 3,
+        "No report": 2,
+        "FAILED": 1
+      },
+      "exception_types": []
+    }
+  ]
+}

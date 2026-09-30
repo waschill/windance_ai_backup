@@ -1,0 +1,136 @@
+{
+  "host": "SAM-WIFI",
+  "created_utc": "2026-09-30T05:58:57Z",
+  "root": "/home/williamschilling/backups/agentic-baseline-20260930T0600Z",
+  "scope": "selected operational source and data only; no credentials, counselor stores, mailbox stores, Syncthing or Level8",
+  "files": [
+    {
+      "path": "files/home/williamschilling/services/sam-schedule/sam_schedule.py",
+      "source": "/home/williamschilling/services/sam-schedule/sam_schedule.py",
+      "kind": "exact-source",
+      "bytes": 152838,
+      "sha256": "824026967ab935b2563f0a77021668754fa5969f704e17e3619137a455643bc1"
+    },
+    {
+      "path": "files/home/williamschilling/bin/sam-schedule-kiosk.sh",
+      "source": "/home/williamschilling/bin/sam-schedule-kiosk.sh",
+      "kind": "exact-source",
+      "bytes": 1441,
+      "sha256": "0ad0abd5878bb75bf39ab799926f879a1ae628170063b97fed88e72dbac57164"
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-nightly.timer",
+      "source": "/etc/systemd/system/sam-schedule-nightly.timer",
+      "kind": "exact-source",
+      "bytes": 200,
+      "sha256": "fc8103cc4130c00b0e0f9c98f3a563ba154ef63446f1e347def98a142db3722b"
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-refresh.timer",
+      "source": "/etc/systemd/system/sam-schedule-refresh.timer",
+      "kind": "exact-source",
+      "bytes": 209,
+      "sha256": "e7fd3b22299083699beb438f17df97952908ffb9bc786fbb9ee21ca48463d4dd"
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-refresh.service",
+      "source": "/etc/systemd/system/sam-schedule-refresh.service",
+      "kind": "exact-source",
+      "bytes": 326,
+      "sha256": "da03f7d03e88ab226625ed37d97d6d1599aa3531a25fbb9a66a696b28f2cb248"
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-nightly.service",
+      "source": "/etc/systemd/system/sam-schedule-nightly.service",
+      "kind": "exact-source",
+      "bytes": 456,
+      "sha256": "7a5125ac1f0d7d09d01fac182d56243c1287d5f86af7091689db2fb34767fea5"
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule.service",
+      "source": "/etc/systemd/system/sam-schedule.service",
+      "kind": "exact-source",
+      "bytes": 495,
+      "sha256": "8643177962cedbd726a10d8cb95fe283aa0c902e558e75935bbdd097d9094414"
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-refresh.timer.bak-20260909-vet-stale",
+      "source": "/etc/systemd/system/sam-schedule-refresh.timer.bak-20260909-vet-stale",
+      "kind": "exact-source",
+      "bytes": 218,
+      "sha256": "24769bc63a1dc0e9729667592507798997d2d15c118978c4a3d072ed0cb8775d"
+    },
+    {
+      "path": "data/sam_schedule.db",
+      "source": "/home/williamschilling/.local/share/sam-schedule/sam_schedule.db",
+      "kind": "consistent-sqlite",
+      "bytes": 2117632,
+      "sha256": "e2576cc1d0330ebafb0fc92e59a37f65de5e62b33b5fad81b1238046badbd65d",
+      "integrity": "ok",
+      "counts": {
+        "trainers": 8,
+        "schedule_days": 75,
+        "schedule_items": 4243,
+        "event_log": 3853,
+        "missed_training": 193,
+        "weather_alert_state": 1,
+        "carryover_suppressions": 40,
+        "odoo_history_posts": 46,
+        "weather_widget_state": 1,
+        "odoo_service_clear_posts": 41,
+        "training_completion_details": 101
+      }
+    }
+  ],
+  "excluded": [],
+  "restore_tests": [
+    {
+      "path": "files/home/williamschilling/services/sam-schedule/sam_schedule.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/home/williamschilling/bin/sam-schedule-kiosk.sh",
+      "hash_match": true
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-nightly.timer",
+      "hash_match": true
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-refresh.timer",
+      "hash_match": true
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-refresh.service",
+      "hash_match": true
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-nightly.service",
+      "hash_match": true
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule.service",
+      "hash_match": true
+    },
+    {
+      "path": "files/etc/systemd/system/sam-schedule-refresh.timer.bak-20260909-vet-stale",
+      "hash_match": true
+    },
+    {
+      "path": "data/sam_schedule.db",
+      "hash_match": true,
+      "integrity": "ok",
+      "row_counts_match": true
+    }
+  ],
+  "isolation": {
+    "services_started": 0,
+    "schedules_loaded": 0,
+    "task_dispatches": 0,
+    "network_calls_by_restore": 0,
+    "application_imports": 0,
+    "method": "offline byte/SQLite/parser restoration; files never installed in a live service directory"
+  },
+  "finished_utc": "2026-09-30T05:58:57Z"
+}

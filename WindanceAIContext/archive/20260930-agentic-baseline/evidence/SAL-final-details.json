@@ -1,0 +1,219 @@
+{
+  "errors": {
+    "morning-news-briefing/morning-news-briefing.err.log": {
+      "mtime": 1790694007.1462352,
+      "exception_headlines": [
+        "RuntimeError: William iMessage receipt invalid"
+      ]
+    },
+    "sam-training-completion-report.err.log": {
+      "mtime": 1790688917.0552912,
+      "exception_headlines": [
+        "RuntimeError: William iMessage receipt invalid"
+      ]
+    },
+    "ledger-unpaid-invoices.log": {
+      "mtime": 1790691010.358451,
+      "exception_headlines": []
+    }
+  },
+  "outcomes": [
+    {
+      "correlation": "3c8c64431e0e5607",
+      "exit_code": 0,
+      "job": "mail",
+      "recorded_at": "2026-09-27T17:00:12.786630-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "81bc72989806d425",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-27T17:10:05.503736-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "0371897a2d4cf085",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-28T07:10:02.910575-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "0cbd6e1006b7aaf5",
+      "exit_code": 0,
+      "job": "briefing",
+      "recorded_at": "2026-09-28T07:20:19.188793-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "c2f375fd1bdc9078",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-28T07:50:04.723283-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "82a8c0e23e1d9223",
+      "exit_code": 0,
+      "job": "mail",
+      "recorded_at": "2026-09-28T12:10:22.103438-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "715a7f1b05972fd9",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-28T12:30:04.303137-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "3efb56c225a36fb0",
+      "exit_code": 0,
+      "job": "mail",
+      "recorded_at": "2026-09-28T17:00:12.888600-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "e6fccd85e9b6f472",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-28T17:10:03.842300-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "b7f8e3b5181ad326",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-29T07:10:03.405924-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "548e987adab26427",
+      "exit_code": 0,
+      "job": "briefing",
+      "recorded_at": "2026-09-29T07:20:10.135355-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "53692c71f1331c3c",
+      "exit_code": 0,
+      "job": "training",
+      "recorded_at": "2026-09-29T07:50:04.101899-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "9410a2f99c389b03",
+      "exit_code": 0,
+      "job": "mail",
+      "recorded_at": "2026-09-29T12:10:08.435073-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "5c9930ad2072cc55",
+      "exit_code": 1,
+      "job": "shawn-mail",
+      "recorded_at": "2026-09-29T12:30:07.895717-06:00",
+      "status": "process_failed"
+    },
+    {
+      "correlation": "d172322575afa5a7",
+      "exit_code": 0,
+      "job": "mail",
+      "recorded_at": "2026-09-29T17:00:12.272925-06:00",
+      "status": "process_succeeded"
+    },
+    {
+      "correlation": "3f83a139509870ce",
+      "exit_code": 1,
+      "job": "shawn-mail",
+      "recorded_at": "2026-09-29T17:10:07.614127-06:00",
+      "status": "process_failed"
+    }
+  ],
+  "youtube": [
+    {
+      "started_at": "2026-09-29T22:00:05.050315+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "delivery_verified": false,
+      "finished_at": "2026-09-29T22:00:17.036273+00:00"
+    },
+    {
+      "started_at": "2026-09-28T22:00:04.565484+00:00",
+      "status": "failed",
+      "exit_code": 1,
+      "delivery_verified": false,
+      "finished_at": "2026-09-28T22:00:16.372696+00:00"
+    },
+    {
+      "started_at": "2026-09-29T18:00:04.122453+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "delivery_verified": false,
+      "finished_at": "2026-09-29T18:00:18.103816+00:00"
+    },
+    {
+      "started_at": "2026-09-28T18:00:04.703586+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "delivery_verified": false,
+      "finished_at": "2026-09-28T18:00:16.832747+00:00"
+    },
+    {
+      "started_at": "2026-09-28T14:00:05.102032+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "delivery_verified": false,
+      "finished_at": "2026-09-28T14:00:16.951358+00:00"
+    },
+    {
+      "started_at": "2026-09-24T22:00:04.284151+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "delivery_verified": false,
+      "finished_at": "2026-09-24T22:00:17.021790+00:00"
+    },
+    {
+      "started_at": "2026-09-29T14:00:04.537343+00:00",
+      "status": "failed",
+      "exit_code": 1,
+      "delivery_verified": false,
+      "finished_at": "2026-09-29T14:00:17.191463+00:00"
+    }
+  ],
+  "known_transport_rows": [
+    {
+      "ROWID": 3265,
+      "is_from_me": 1,
+      "service": "iMessage",
+      "is_sent": 1,
+      "is_delivered": 1,
+      "at": "2026-09-29 22:13:46"
+    },
+    {
+      "ROWID": 3274,
+      "is_from_me": 0,
+      "service": "iMessage",
+      "is_sent": 0,
+      "is_delivered": 1,
+      "at": "2026-09-30 02:39:50"
+    },
+    {
+      "ROWID": 3275,
+      "is_from_me": 1,
+      "service": "iMessage",
+      "is_sent": 1,
+      "is_delivered": 1,
+      "at": "2026-09-30 02:39:53"
+    },
+    {
+      "ROWID": 3276,
+      "is_from_me": 1,
+      "service": "iMessage",
+      "is_sent": 1,
+      "is_delivered": 1,
+      "at": "2026-09-30 02:40:23"
+    }
+  ]
+}

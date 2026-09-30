@@ -1,0 +1,63 @@
+{
+  "Level8DisableFlag": true,
+  "OllamaVersion": {
+    "version": "0.34.4"
+  },
+  "Disks": [
+    {
+      "Name": "C",
+      "Used": 443436163072,
+      "Free": 555701571584
+    },
+    {
+      "Name": "D",
+      "Used": 40130052096,
+      "Free": 215863263232
+    },
+    {
+      "Name": "F",
+      "Used": null,
+      "Free": null
+    },
+    {
+      "Name": "G",
+      "Used": null,
+      "Free": null
+    },
+    {
+      "Name": "H",
+      "Used": null,
+      "Free": null
+    },
+    {
+      "Name": "I",
+      "Used": null,
+      "Free": null
+    },
+    {
+      "Name": "J",
+      "Used": 5004951552,
+      "Free": 26897448960
+    },
+    {
+      "Name": "O",
+      "Used": 8127327408128,
+      "Free": 15744181891072
+    },
+    {
+      "Name": "P",
+      "Used": 5936825638912,
+      "Free": 19091997683712
+    },
+    {
+      "Name": "Temp",
+      "Used": 443436163072,
+      "Free": 555701571584
+    },
+    {
+      "Name": "W",
+      "Used": 645687975936,
+      "Free": 378519113728
+    }
+  ]
+}

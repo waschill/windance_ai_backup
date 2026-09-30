@@ -1,0 +1,437 @@
+{
+  "host": "SAL",
+  "created_utc": "2026-09-30T05:58:56Z",
+  "root": "/Users/zuzu/backups/agentic-baseline-20260930T0600Z",
+  "scope": "selected operational source and data only; no credentials, counselor stores, mailbox stores, Syncthing or Level8",
+  "files": [
+    {
+      "path": "files/Users/zuzu/bin/imessage_herald_bridge.py",
+      "source": "/Users/zuzu/bin/imessage_herald_bridge.py",
+      "kind": "exact-source",
+      "bytes": 4638,
+      "sha256": "0b4753c2823be856d2124566e04e59108f346309d301c9b6cf00962d6418ed4a"
+    },
+    {
+      "path": "files/Users/zuzu/bin/imessage_outbox_daemon.py",
+      "source": "/Users/zuzu/bin/imessage_outbox_daemon.py",
+      "kind": "exact-source",
+      "bytes": 4582,
+      "sha256": "f90fc54f5cd5d68fd5c408976d90da64dfa09ea8559e6563e4b23a5f45cdc009"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_imessage_payload.py",
+      "source": "/Users/zuzu/bin/send_imessage_payload.py",
+      "kind": "exact-source",
+      "bytes": 4697,
+      "sha256": "382b55125c3ed2d606ce6fc41be5deb4640cac884610bff8822a5f47c0e1f74f"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_youtube_briefing.py",
+      "source": "/Users/zuzu/bin/windance_youtube_briefing.py",
+      "kind": "exact-source",
+      "bytes": 15006,
+      "sha256": "07e9ca74d35525d3bd0f3bc5fe90baa7a51b2c58d313a5cb10090bea09b48487"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_morning_news_briefing.py",
+      "source": "/Users/zuzu/bin/windance_morning_news_briefing.py",
+      "kind": "exact-source",
+      "bytes": 9571,
+      "sha256": "c3096c0fb26bb006b3ef81413707e5973a943fffbeabed60d6db09dcc082bd6b"
+    },
+    {
+      "path": "files/Users/zuzu/bin/ledger_unpaid_invoice_report.py",
+      "source": "/Users/zuzu/bin/ledger_unpaid_invoice_report.py",
+      "kind": "exact-source",
+      "bytes": 5320,
+      "sha256": "df2ea6fed05fd5b41673daba8ab2d225fd289101ba36b6ca393ea43dec1c29ff"
+    },
+    {
+      "path": "files/Users/zuzu/bin/sam_training_completion_report.py",
+      "source": "/Users/zuzu/bin/sam_training_completion_report.py",
+      "kind": "exact-source",
+      "bytes": 3588,
+      "sha256": "8270345ca22e8c0cb31e9eefbb6cac8e4988e549530a50136f317a5451336a3b"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_weekly_stack_review.py",
+      "source": "/Users/zuzu/bin/windance_weekly_stack_review.py",
+      "kind": "exact-source",
+      "bytes": 31026,
+      "sha256": "b0c76ca4b89ba55c8892caca5e5eee61c5db1da893e15c51378ef2d779fe305e"
+    },
+    {
+      "path": "files/Users/zuzu/.node-red/flows.json",
+      "source": "/Users/zuzu/.node-red/flows.json",
+      "kind": "exact-source",
+      "bytes": 231861,
+      "sha256": "7a225eaa2ba010ac0518da652f485d7c1524c37438097ea1e35c27864a562cfa"
+    },
+    {
+      "path": "files/Users/zuzu/.node-red/package.json",
+      "source": "/Users/zuzu/.node-red/package.json",
+      "kind": "exact-source",
+      "bytes": 700,
+      "sha256": "4ab189f9d3f14d9bd70f89230c809b0958bf3f8b8686e55a04cf1dec1d5eae1f"
+    },
+    {
+      "path": "files/Users/zuzu/bin/start-node-red.sh",
+      "source": "/Users/zuzu/bin/start-node-red.sh",
+      "kind": "exact-source",
+      "bytes": 244,
+      "sha256": "9d7714c3f8ec1885234ada04588137314cf4af671b1719ab2e9ac26320acadd8"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/review_gate.py",
+      "source": "/Users/zuzu/services/windance-supervisor/review_gate.py",
+      "kind": "exact-source",
+      "bytes": 15168,
+      "sha256": "ea0ecfa803bf4e6e32eb9a4ef8eb36106595e2b53b081af0e14a9aaa4c5279c0"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/supervisor.py",
+      "source": "/Users/zuzu/services/windance-supervisor/supervisor.py",
+      "kind": "exact-source",
+      "bytes": 22500,
+      "sha256": "67b792810050d6157163e4d6d849531991e723bfb1b23ea66d5d7430bdcbf9dd"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/test_report_wrapper.py",
+      "source": "/Users/zuzu/services/windance-supervisor/test_report_wrapper.py",
+      "kind": "exact-source",
+      "bytes": 883,
+      "sha256": "38fee016faa6c3ea7172dd27a0d7b6d18500c441150748a8fc856f34cde93c8e"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/remote_ops.py",
+      "source": "/Users/zuzu/services/windance-supervisor/remote_ops.py",
+      "kind": "exact-source",
+      "bytes": 9286,
+      "sha256": "892d1d467b3cc5c4cc9234b6c1c67ef43f36dbcb6d7c1fa914db0b8ac6a814dd"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/update_codex_app.py",
+      "source": "/Users/zuzu/services/windance-supervisor/update_codex_app.py",
+      "kind": "exact-source",
+      "bytes": 1205,
+      "sha256": "ecb2a978ffa8b3aeefa9f9a968f301c0b0ea98b63ecc100600d446bd293c56ee"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/test_supervisor.py",
+      "source": "/Users/zuzu/services/windance-supervisor/test_supervisor.py",
+      "kind": "exact-source",
+      "bytes": 5540,
+      "sha256": "363d8d7e71640ec99d21ede3c7e75496951c7aac6a0c8845b714b43ee89beded"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/report_wrapper.py",
+      "source": "/Users/zuzu/services/windance-supervisor/report_wrapper.py",
+      "kind": "exact-source",
+      "bytes": 1458,
+      "sha256": "91734185c737f351d5f87c6f931186f0c391d978918d6bc3cd77534922d4d399"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/install_remote.py",
+      "source": "/Users/zuzu/services/windance-supervisor/install_remote.py",
+      "kind": "exact-source",
+      "bytes": 2895,
+      "sha256": "dcc099892d6d2f81c6f05495fe5cc14d36b72e82316f7f7d0ae7ee2705cd5e7f"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/share_bootstrap.py",
+      "source": "/Users/zuzu/services/windance-supervisor/share_bootstrap.py",
+      "kind": "exact-source",
+      "bytes": 2783,
+      "sha256": "cc4128e0c970c7d56de35db924357cc332623035352766c52cd19d5509051096"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/activate_warden.py",
+      "source": "/Users/zuzu/services/windance-supervisor/activate_warden.py",
+      "kind": "exact-source",
+      "bytes": 3587,
+      "sha256": "59bc9e4f226b47178ba8387513becf6e7aed6eb8e5ccb8a5a0efeef7ee594cd2"
+    },
+    {
+      "path": "data/incidents.sqlite",
+      "source": "/Users/zuzu/services/windance-supervisor/incidents.sqlite",
+      "kind": "consistent-sqlite",
+      "bytes": 45056,
+      "sha256": "8aa5fb6aae60d06b84a59fce74f8ced29561eedae760bdb1c45ed4885391c6d4",
+      "integrity": "ok",
+      "counts": {
+        "checks": 11,
+        "incidents": 1,
+        "events": 4,
+        "notices": 4,
+        "budgets": 1
+      }
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.sam-training-completion-report.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.sam-training-completion-report.plist",
+      "kind": "exact-source",
+      "bytes": 842,
+      "sha256": "f35de345df7a25149b7ef8ebd999576890585716a209bae87065bbc239ba7db9"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.codex-backup-autostart.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.codex-backup-autostart.plist",
+      "kind": "exact-source",
+      "bytes": 488,
+      "sha256": "d212c87e7ffacd181f382c66fc333ce78379e7081b19af90b87655bdcabae2d9"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.weekly-stack-review.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.weekly-stack-review.plist",
+      "kind": "exact-source",
+      "bytes": 898,
+      "sha256": "269cb02e88c1748027257d77869a5014d061271eb091fa53a13de39c1b970af8"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered-watchdog.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered-watchdog.plist",
+      "kind": "exact-source",
+      "bytes": 604,
+      "sha256": "e149661e4dc520f234e06d827e879ee271fe4958dde6d92623838b395bb8778d"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.install-macos-maintenance.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.install-macos-maintenance.plist",
+      "kind": "exact-source",
+      "bytes": 634,
+      "sha256": "241dca19f2ae24cb0b9906cf7c921ccbf699ba21bc00218fdf1367e7f09b7a21"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.morning-news-briefing.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.morning-news-briefing.plist",
+      "kind": "exact-source",
+      "bytes": 817,
+      "sha256": "3e4ee62f809a5c83b17a52ed5c724891f1a4cececf89b851bc97f95bb7043139"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.imessage-herald-bridge.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.imessage-herald-bridge.plist",
+      "kind": "exact-source",
+      "bytes": 883,
+      "sha256": "a5bd24922bceacfe1021990015ff675047fa052e0499c0bca2c4515c0b1e9744"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.ledger-unpaid-invoices.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.ledger-unpaid-invoices.plist",
+      "kind": "exact-source",
+      "bytes": 812,
+      "sha256": "90307d76285623fc318aba2929e054f13cee4849869e5dc202a9575b4d70c9c8"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.imessage-outbox.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.imessage-outbox.plist",
+      "kind": "exact-source",
+      "bytes": 856,
+      "sha256": "d1f6f9555b68822540ad6eb67531fba100156f21a00131abad0d417083a04692"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.youtube-briefing.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.windance.youtube-briefing.plist",
+      "kind": "exact-source",
+      "bytes": 2620,
+      "sha256": "19c08c4d9f1685ff17d83686b7b17534a5ba476b2956f8ea28d3738e264c012a"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered.plist",
+      "source": "/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered.plist",
+      "kind": "exact-source",
+      "bytes": 668,
+      "sha256": "cbf7d18ab25ca37929e1ebab70027256f1fb061477034034b3898be692924ccd"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "/Users/zuzu/bin/windance_report_send.py",
+      "reason": "missing or symlink"
+    },
+    {
+      "path": "/Users/zuzu/Library/LaunchAgents/com.windance.supervisor-review.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    },
+    {
+      "path": "/Users/zuzu/Library/LaunchAgents/com.windance.supervisor.plist",
+      "reason": "environment-bearing definition excluded; inventory preserves safe fields"
+    }
+  ],
+  "restore_tests": [
+    {
+      "path": "files/Users/zuzu/bin/imessage_herald_bridge.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/imessage_outbox_daemon.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/send_imessage_payload.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_youtube_briefing.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_morning_news_briefing.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/ledger_unpaid_invoice_report.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/sam_training_completion_report.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/windance_weekly_stack_review.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/.node-red/flows.json",
+      "hash_match": true,
+      "json_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/.node-red/package.json",
+      "hash_match": true,
+      "json_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/bin/start-node-red.sh",
+      "hash_match": true
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/review_gate.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/supervisor.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/test_report_wrapper.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/remote_ops.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/update_codex_app.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/test_supervisor.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/report_wrapper.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/install_remote.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/share_bootstrap.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/services/windance-supervisor/activate_warden.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "data/incidents.sqlite",
+      "hash_match": true,
+      "integrity": "ok",
+      "row_counts_match": true
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.sam-training-completion-report.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.codex-backup-autostart.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.weekly-stack-review.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered-watchdog.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.install-macos-maintenance.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.morning-news-briefing.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.imessage-herald-bridge.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.ledger-unpaid-invoices.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.imessage-outbox.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.windance.youtube-briefing.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    },
+    {
+      "path": "files/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered.plist",
+      "hash_match": true,
+      "plist_parse": "pass"
+    }
+  ],
+  "isolation": {
+    "services_started": 0,
+    "schedules_loaded": 0,
+    "task_dispatches": 0,
+    "network_calls_by_restore": 0,
+    "application_imports": 0,
+    "method": "offline byte/SQLite/parser restoration; files never installed in a live service directory"
+  },
+  "finished_utc": "2026-09-30T05:58:56Z"
+}

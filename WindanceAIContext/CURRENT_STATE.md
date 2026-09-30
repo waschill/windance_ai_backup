@@ -1,4 +1,9 @@
 # Current Operating State
+
+## Agentic stack baseline verified September 30
+
+Read `projects/AGENTIC_STACK_BASELINE_2026-09-30.md` for the live baseline, dependency map, selective backup/recovery evidence, three proposed pilot acceptance cases and cost limits. Core hosts/services are reachable; all nine operational profiles configure Codex OAuth/Terra without fallback; Vega has two delivered projects with 23 verified stages; phone intake remains disabled; SAM detail collection remains suspended. Warden is unpaused and all 11 configured checks pass. Shawn SMS delivery remains unconfirmed, three enabled native Hermes jobs show error/blocked status, and several report/maintenance jobs retain nonzero last exits. No repair, migration, rerouting, agent retirement or schedule change was performed. Fresh source/data copies and off-host hashes, four cold SQLite copies, exact project/QA evidence and Hermes reconstruction passed; full disaster recovery and total billed cost remain unverified.
+
 ## Reacher explicit staff handoff repaired — September 29
 
 The product-ideas prompt was misclassified as a read-only report question, and stale conversation history resurrected a deleted task. Explicit collective requests now create owner-scoped work orders for the nine operational staff, preserving the complete prompt and reusing live records on identical repeats. Short begin follow-ups preserve their source assignment; missing/deleted task references cannot establish current progress. 31 regressions and isolated full HTTP dispatch passed; live stale-reference rejection and healthy Harness verified. Production boards remain empty for William's resubmission. Downstream idea submissions, Scout research, memory receipts and consolidation were not executed or verified. See projects/REACHER_STAFF_HANDOFF_2026-09-29.md.

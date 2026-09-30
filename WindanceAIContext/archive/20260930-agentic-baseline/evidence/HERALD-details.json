@@ -1,0 +1,307 @@
+{
+  "host": "HERALD",
+  "at": "2026-09-30T06:00:07Z",
+  "usage_7d": [
+    {
+      "role": "herald",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 25,
+      "api_calls": 80,
+      "input_tokens": 268745,
+      "output_tokens": 6865,
+      "cache_read_tokens": 578560,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "forge",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 9,
+      "api_calls": 99,
+      "input_tokens": 428763,
+      "output_tokens": 50215,
+      "cache_read_tokens": 3089408,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "forge",
+      "model": "windance-forge:latest",
+      "billing_provider": null,
+      "billing_mode": null,
+      "cost_status": null,
+      "sessions": 11,
+      "api_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "estimated_cost_usd": null,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "sentinel",
+      "model": "gpt-5.6-terra",
+      "billing_provider": null,
+      "billing_mode": null,
+      "cost_status": null,
+      "sessions": 1,
+      "api_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "estimated_cost_usd": null,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "sentinel",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 5,
+      "api_calls": 46,
+      "input_tokens": 297201,
+      "output_tokens": 27223,
+      "cache_read_tokens": 972288,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "max",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 2,
+      "api_calls": 2,
+      "input_tokens": 12290,
+      "output_tokens": 761,
+      "cache_read_tokens": 1536,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "iris",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 2,
+      "api_calls": 9,
+      "input_tokens": 23167,
+      "output_tokens": 2654,
+      "cache_read_tokens": 60928,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "iris",
+      "model": "windance-iris:latest",
+      "billing_provider": null,
+      "billing_mode": null,
+      "cost_status": null,
+      "sessions": 21,
+      "api_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "estimated_cost_usd": null,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "ledger",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 4,
+      "api_calls": 7,
+      "input_tokens": 25343,
+      "output_tokens": 1252,
+      "cache_read_tokens": 14848,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "scout",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 39,
+      "api_calls": 243,
+      "input_tokens": 2033679,
+      "output_tokens": 142015,
+      "cache_read_tokens": 5419520,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "scout",
+      "model": "windance-scout:latest",
+      "billing_provider": null,
+      "billing_mode": null,
+      "cost_status": null,
+      "sessions": 13,
+      "api_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "estimated_cost_usd": null,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "archivist",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 7,
+      "api_calls": 16,
+      "input_tokens": 88762,
+      "output_tokens": 6947,
+      "cache_read_tokens": 95232,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "archivist",
+      "model": "windance-archivist:latest",
+      "billing_provider": null,
+      "billing_mode": null,
+      "cost_status": null,
+      "sessions": 3,
+      "api_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "estimated_cost_usd": null,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "athena",
+      "model": "gpt-5.6-terra",
+      "billing_provider": "openai-codex",
+      "billing_mode": "subscription_included",
+      "cost_status": "included",
+      "sessions": 67,
+      "api_calls": 169,
+      "input_tokens": 1535281,
+      "output_tokens": 95994,
+      "cache_read_tokens": 2119680,
+      "estimated_cost_usd": 0.0,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    },
+    {
+      "role": "athena",
+      "model": "windance-athena:latest",
+      "billing_provider": null,
+      "billing_mode": null,
+      "cost_status": null,
+      "sessions": 13,
+      "api_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "estimated_cost_usd": null,
+      "actual_cost_usd": null,
+      "actual_cost_rows": 0
+    }
+  ],
+  "cron": [
+    {
+      "role": "sentinel",
+      "top_keys": [
+        "jobs",
+        "updated_at"
+      ],
+      "jobs": [
+        {
+          "id": "b3a62e04e1f0",
+          "schedule": {},
+          "enabled": true,
+          "last_status": "error"
+        }
+      ]
+    },
+    {
+      "role": "iris",
+      "top_keys": [
+        "jobs",
+        "updated_at"
+      ],
+      "jobs": [
+        {
+          "id": "8eb0fa56d254",
+          "schedule": {},
+          "enabled": true,
+          "last_status": "error"
+        },
+        {
+          "id": "ea79845789f2",
+          "schedule": {},
+          "enabled": true,
+          "last_status": "blocked_config"
+        }
+      ]
+    },
+    {
+      "role": "scout",
+      "top_keys": [
+        "jobs",
+        "updated_at"
+      ],
+      "jobs": [
+        {
+          "id": "5c70b313dbc4",
+          "schedule": {},
+          "enabled": false,
+          "last_status": null
+        }
+      ]
+    }
+  ],
+  "phone": {
+    "service": "herald-phone",
+    "status": "ok",
+    "configured": false,
+    "active_call": false
+  },
+  "bridge": {
+    "status": "ok",
+    "service": "windance-codex-bridge"
+  },
+  "phone_config": {
+    "enabled": false,
+    "config_exists": true
+  },
+  "mcp_sources": {
+    "herald-staff-mcp": [
+      "herald_staff_mcp.py"
+    ],
+    "staff-records-mcp": [
+      "staff_records_mcp.py"
+    ]
+  },
+  "log_diagnostics": []
+}

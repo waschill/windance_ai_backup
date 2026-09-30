@@ -1,5 +1,9 @@
 # Open Work and Revalidation List
 
+## Baseline findings September 30
+
+The authorized audit is recorded in `projects/AGENTIC_STACK_BASELINE_2026-09-30.md`. Before architectural changes, resolve or explicitly accept: native Hermes Sentinel/Iris scheduled errors and possible workflow overlap; Shawn's unresolved SMS transport choice; natural post-repair news/completion/invoice outcomes; capture-reminder and maintenance last-exit causes; matched report-delivery observability; actual cost attribution; complete replacement-host recovery and off-site coverage. These are findings, not new dispatched tasks or authority to change services. Keep the phone disabled and all existing privacy, Odoo, SyncThing, Level 8 and Warden restrictions. Selective cold restoration passed; do not treat partial manager/Harness exports as complete replacement databases.
+
 ## Noon YouTube completion verified — September 29
 
 The noon scheduled YouTube report completed with exit0, and Messages independently recorded iMessage sent/delivered to the configured William recipient at12:00:17 Mountain. Warden resolved INC-20260928-8fc48fd4 at12:04:10 after two healthy checks and remains unpaused. This supersedes the earlier pending-noon verification. William subsequently said he still lacked the video report; a copy was made directly accessible in Codex, and clarification of scheduled roundup versus separate staff report is pending. Transport flags do not establish that he saw it. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md for receipt identifiers and limits.

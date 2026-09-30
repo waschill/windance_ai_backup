@@ -1,0 +1,26 @@
+{
+  "at": "2026-09-30T06:02:07Z",
+  "base": "6d42313deee63b13dbf2f262d9a31cf603d3f1bc",
+  "root": "/Users/herald/backups/agentic-baseline-20260930T0600Z/hermes-reconstruction",
+  "patch_sha256": "aeafaefa58d824c62fe359d303d91980398811e21e492b7825d41a21da50b652",
+  "files": [
+    {
+      "path": "gateway/authz_mixin.py",
+      "sha256": "713407dd2ff95e45ccf735ba5a56092fb357adaab278f60a63c662586463fff8",
+      "matches_live": true
+    },
+    {
+      "path": "plugins/web/searxng/provider.py",
+      "sha256": "35daa39ac518284eb9c445e8aa5d1f9425a3aa3991c0e62a155fb2003152450b",
+      "matches_live": true
+    },
+    {
+      "path": "gateway/windance_owner_guard.py",
+      "sha256": "72cc8bf9e7f9d377155371c2f70d1c58d69dd1f316006741a2fe1b30b08c2c15",
+      "matches_live": true
+    }
+  ],
+  "isolated_index": true,
+  "live_worktree_modified": false,
+  "applications_started": 0
+}

@@ -1,0 +1,80 @@
+{
+  "host": "HERALD-SUPPLEMENT",
+  "created_utc": "2026-09-30T06:06:22Z",
+  "root": "/Users/herald/backups/agentic-baseline-20260930T0607Z",
+  "scope": "selected operational source and data only; no credentials, counselor stores, mailbox stores, Syncthing or Level8",
+  "files": [
+    {
+      "path": "files/Users/herald/services/herald-staff-mcp/herald_staff_mcp.py",
+      "source": "/Users/herald/services/herald-staff-mcp/herald_staff_mcp.py",
+      "kind": "exact-source",
+      "bytes": 7720,
+      "sha256": "2208e16d141cd19c58f2585259aa715f6eca5c57caa1e05ff9d10097440ece5c"
+    },
+    {
+      "path": "files/Users/herald/services/staff-records-mcp/staff_records_mcp.py",
+      "source": "/Users/herald/services/staff-records-mcp/staff_records_mcp.py",
+      "kind": "exact-source",
+      "bytes": 4278,
+      "sha256": "16f4d29404ccf9ae8fd85f6ff2a164b1b9d9078f4d15bc63b7ec6ea809002605"
+    },
+    {
+      "path": "files/Users/herald/bin/windance_report_send.py",
+      "source": "/Users/herald/bin/windance_report_send.py",
+      "kind": "exact-source",
+      "bytes": 1441,
+      "sha256": "aacab51098b3cf89c4b8660e67f3958eff71b56e496ea91a526e629279515780"
+    },
+    {
+      "path": "files/Users/herald/bin/windance_shawn_report_send.py",
+      "source": "/Users/herald/bin/windance_shawn_report_send.py",
+      "kind": "exact-source",
+      "bytes": 1097,
+      "sha256": "365cecf54d3861566f2e3dddeea893b7c657c819122235553434d81703c8bf56"
+    },
+    {
+      "path": "files/Users/herald/bin/telegram_report_history.py",
+      "source": "/Users/herald/bin/telegram_report_history.py",
+      "kind": "exact-source",
+      "bytes": 7609,
+      "sha256": "c27716d4fce6a292e6de475a73c6ce221465e27a3175f82f5262799ef9054c55"
+    }
+  ],
+  "excluded": [],
+  "restore_tests": [
+    {
+      "path": "files/Users/herald/services/herald-staff-mcp/herald_staff_mcp.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/services/staff-records-mcp/staff_records_mcp.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/bin/windance_report_send.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/bin/windance_shawn_report_send.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    },
+    {
+      "path": "files/Users/herald/bin/telegram_report_history.py",
+      "hash_match": true,
+      "python_parse": "pass"
+    }
+  ],
+  "isolation": {
+    "services_started": 0,
+    "schedules_loaded": 0,
+    "task_dispatches": 0,
+    "network_calls_by_restore": 0,
+    "application_imports": 0,
+    "method": "offline byte/SQLite/parser restoration; files never installed in a live service directory"
+  },
+  "finished_utc": "2026-09-30T06:06:22Z"
+}

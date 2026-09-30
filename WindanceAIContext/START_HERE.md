@@ -15,6 +15,8 @@ For any Windance network, assistant-stack, automation, Odoo, email, or SAM task,
 5. `OPEN_WORK.md`
 6. The relevant project or runbook file
 
+For the agentic-stack baseline, dependencies, backup/recovery evidence, pilot acceptance cases and cost estimates, read `projects/AGENTIC_STACK_BASELINE_2026-09-30.md` and its four linked companion records. This audit verified live state and selected cold restoration; it authorizes no migration, agent retirement, routing change or phone reactivation. Older inventory descriptions remain historical where they conflict with the dated baseline.
+
 For scheduled report timing and recipients, also read `REPORT_SCHEDULES.md`.
 
 Also check the Vega task inbox at `C:\Users\wasch\Documents\Codex\2026-06-19\i-need-you-to-go-through\vega-task-inbox\VEGA_TASK_INBOX.md` and, when Herald is reachable, `/Users/herald/knowledge/VEGA_TASK_INBOX.md`.

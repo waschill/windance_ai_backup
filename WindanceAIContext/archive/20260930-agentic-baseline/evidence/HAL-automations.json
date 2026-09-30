@@ -1,0 +1,42 @@
+[
+  {
+    "file": "C:\\Users\\wasch\\.codex\\automations\\ai-stack-team-trials\\automation.toml",
+    "metadata": [
+      "id = \"ai-stack-team-trials\"",
+      "kind = \"heartbeat\"",
+      "name = \"AI stack team trials\"",
+      "status = \"ACTIVE\"",
+      "rrule = \"DTSTART:20260704T200000\\nRRULE:FREQ=DAILY;COUNT=1\""
+    ]
+  },
+  {
+    "file": "C:\\Users\\wasch\\.codex\\automations\\vega-staff-management-watchdog\\automation.toml",
+    "metadata": [
+      "id = \"vega-staff-management-watchdog\"",
+      "kind = \"heartbeat\"",
+      "name = \"Vega staff management watchdog\"",
+      "status = \"ACTIVE\"",
+      "rrule = \"FREQ=MINUTELY;INTERVAL=15\""
+    ]
+  },
+  {
+    "file": "C:\\Users\\wasch\\.codex\\automations\\weekly-idea-board-and-decision-follow-through\\automation.toml",
+    "metadata": [
+      "id = \"weekly-idea-board-and-decision-follow-through\"",
+      "kind = \"heartbeat\"",
+      "name = \"Weekly Idea Board and decision follow-through\"",
+      "status = \"ACTIVE\"",
+      "rrule = \"FREQ=WEEKLY;BYDAY=FR;BYHOUR=16;BYMINUTE=0;BYSECOND=0\""
+    ]
+  },
+  {
+    "file": "C:\\Users\\wasch\\.codex\\automations\\windance-software-upgrade-follow-through\\automation.toml",
+    "metadata": [
+      "id = \"windance-software-upgrade-follow-through\"",
+      "kind = \"heartbeat\"",
+      "name = \"Windance software upgrade follow-through\"",
+      "status = \"PAUSED\"",
+      "rrule = \"FREQ=MINUTELY;INTERVAL=15\""
+    ]
+  }
+]

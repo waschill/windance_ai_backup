@@ -1,0 +1,592 @@
+[
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/vega-manager/manager.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/vega-manager/manager_mcp.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/vega-manager/MANAGER.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/agent-harness/agent_harness.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-codex-bridge/server.mjs",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/herald-phone/phone_service.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/herald-phone/worker.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/google-workspace-mcp/google_workspace_mcp.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-gmail-mcp/server.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/report_preferences.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/profile_staff_runner.host-context-stage.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/watchlist_evidence.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/worker_lease.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/staff_discussion.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/staff_follow_through_monitor.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/manager_queue_fairness.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/scout_research_policy.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/worker_verification.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/profile-staff-runner/profile_staff_runner.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/verify_deploy_board.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/submit_reviews.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/archive_warden.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/review_gate.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/supervisor.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/recovery_canary.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/check_messages.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/check_messages_launch.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/remote_ops.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/normalize_forge_receipt.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/report_wrapper.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/retry_archivist.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/plugin_api.staged.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/install_remote.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/share_bootstrap.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/services/windance-supervisor/finish_reviews.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/herald/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/forge/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/sentinel/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/max/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/iris/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/ledger/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/scout/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/archivist/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/.hermes/profiles/athena/SOUL.md",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "data/manager.db",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "data/harness.db",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.desktop-context-sync.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.telegram-report-history.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.software-maintenance.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.shawn-mail-assistant.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.gmail-sender-rule-sweep.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.hermex.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.daily-reflection.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.keepawake.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.weekly-stack-maintenance.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.attendance-ip-exceptions.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.router-syslog.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.sentinel-router-review.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.hermes-dashboard.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.capture-review-reminder.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD",
+    "Path": "files/Users/herald/Library/LaunchAgents/com.windance.nightly-core-maintenance.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/imessage_herald_bridge.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/imessage_outbox_daemon.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/send_imessage_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/windance_youtube_briefing.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/windance_morning_news_briefing.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/ledger_unpaid_invoice_report.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/sam_training_completion_report.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/windance_weekly_stack_review.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/.node-red/flows.json",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/.node-red/package.json",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/bin/start-node-red.sh",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/review_gate.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/supervisor.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/test_report_wrapper.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/remote_ops.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/update_codex_app.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/test_supervisor.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/report_wrapper.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/install_remote.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/share_bootstrap.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/services/windance-supervisor/activate_warden.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "data/incidents.sqlite",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.sam-training-completion-report.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.codex-backup-autostart.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.weekly-stack-review.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered-watchdog.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.install-macos-maintenance.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.morning-news-briefing.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.imessage-herald-bridge.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.ledger-unpaid-invoices.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.imessage-outbox.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.windance.youtube-briefing.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL",
+    "Path": "files/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered.plist",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/home/williamschilling/services/sam-schedule/sam_schedule.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/home/williamschilling/bin/sam-schedule-kiosk.sh",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/etc/systemd/system/sam-schedule-nightly.timer",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/etc/systemd/system/sam-schedule-refresh.timer",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/etc/systemd/system/sam-schedule-refresh.service",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/etc/systemd/system/sam-schedule-nightly.service",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/etc/systemd/system/sam-schedule.service",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "files/etc/systemd/system/sam-schedule-refresh.timer.bak-20260909-vet-stale",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAM",
+    "Path": "data/sam_schedule.db",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD-supplement",
+    "Path": "files/Users/herald/services/herald-staff-mcp/herald_staff_mcp.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD-supplement",
+    "Path": "files/Users/herald/services/staff-records-mcp/staff_records_mcp.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD-supplement",
+    "Path": "files/Users/herald/bin/windance_report_send.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD-supplement",
+    "Path": "files/Users/herald/bin/windance_shawn_report_send.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "HERALD-supplement",
+    "Path": "files/Users/herald/bin/telegram_report_history.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/send_report_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/send_shawn_email_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/send_shawn_report_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/send_telegram_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/send_william_imessage_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/send_william_sms_payload.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/report_preferences.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/sal_report_adapter.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/windance_report_outcome.py",
+    "HashMatch": true
+  },
+  {
+    "Host": "SAL-supplement",
+    "Path": "files/Users/zuzu/bin/windance_morning_status_report.py",
+    "HashMatch": true
+  }
+]

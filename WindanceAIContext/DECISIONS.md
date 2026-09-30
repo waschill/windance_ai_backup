@@ -1,5 +1,9 @@
 # Durable Decisions
 
+## September 30 agentic stack baseline before architectural changes
+
+William authorized live audit, fresh backups, selected isolated restoration, canonical publication and index verification. Scope explicitly excludes migration, retiring agents, changing model routing and re-enabling phone intake. Existing privacy, Odoo, SyncThing, Level 8 and Warden rules remain. Audit findings and acceptance proposals are documented in `projects/AGENTIC_STACK_BASELINE_2026-09-30.md`; they do not themselves authorize follow-on production changes. Process success, QA, delivery receipts and recipient reading remain distinct evidence. Unknown actual costs and incomplete full recovery coverage must remain labelled unverified.
+
 ## Report receipt and phone conversation repairs — September 29, 2026
 
 William confirmed a real Reacher phone call works. The forced acknowledgment before each turn has now been removed, and phone-specific instructions omit repeated speaker labels/introduction. The deployed conversation revision passed21 tests and an installed-worker two-turn canary including hang-up cleanup; private Claude approved it. Physical listening of this separate style revision remains pending. See projects/PHONE_CONVERSATION_2026-09-29.md; it supersedes runtime source hashes in the earlier runtime project.

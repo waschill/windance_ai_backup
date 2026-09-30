@@ -1,0 +1,881 @@
+{
+  "host": "SAL",
+  "at": "2026-09-30T05:54:50Z",
+  "os": "macOS-26.7-arm64-arm-64bit",
+  "disk": {
+    "exit": 0,
+    "output": "Filesystem     1024-blocks     Used Available Capacity iused      ifree %iused  Mounted on\n/dev/disk3s1s1   482797652 12716904 416539452     3%  458735 4165394520    0%   /"
+  },
+  "jobs": [
+    {
+      "Label": "com.windance.codex-backup-autostart",
+      "RunAtLoad": true,
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.codex-backup-autostart.plist",
+      "sha256": "d212c87e7ffacd181f382c66fc333ce78379e7081b19af90b87655bdcabae2d9",
+      "executables": [
+        "/usr/bin/open"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.imessage-herald-bridge",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "StandardOutPath": "/Users/zuzu/imessage-herald-bridge.log",
+      "StandardErrorPath": "/Users/zuzu/imessage-herald-bridge-error.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.imessage-herald-bridge.plist",
+      "sha256": "a5bd24922bceacfe1021990015ff675047fa052e0499c0bca2c4515c0b1e9744",
+      "executables": [
+        "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/zuzu/bin/imessage_herald_bridge.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "2",
+          "pid": "79454"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.imessage-outbox",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "StandardOutPath": "/Users/zuzu/logs/imessage-outbox.out.log",
+      "StandardErrorPath": "/Users/zuzu/logs/imessage-outbox.err.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.imessage-outbox.plist",
+      "sha256": "d1f6f9555b68822540ad6eb67531fba100156f21a00131abad0d417083a04692",
+      "executables": [
+        "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/zuzu/bin/imessage_outbox_daemon.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "pid": "68704",
+          "last exit code": "(never exited)"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.install-macos-maintenance",
+      "RunAtLoad": true,
+      "StandardOutPath": "/Users/zuzu/install-macos-maintenance.out",
+      "StandardErrorPath": "/Users/zuzu/install-macos-maintenance.err",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.install-macos-maintenance.plist",
+      "sha256": "241dca19f2ae24cb0b9906cf7c921ccbf699ba21bc00218fdf1367e7f09b7a21",
+      "executables": [
+        "/usr/bin/osascript",
+        "/Users/zuzu/install-windance-macos-maintenance.applescript"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.ledger-unpaid-invoices",
+      "StartCalendarInterval": {
+        "Hour": 8,
+        "Minute": 10
+      },
+      "StandardOutPath": "/Users/zuzu/logs/ledger-unpaid-invoices.log",
+      "StandardErrorPath": "/Users/zuzu/logs/ledger-unpaid-invoices.err.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.ledger-unpaid-invoices.plist",
+      "sha256": "90307d76285623fc318aba2929e054f13cee4849869e5dc202a9575b4d70c9c8",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/zuzu/bin/ledger_unpaid_invoice_report.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "4",
+          "last exit code": "1"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.morning-news-briefing",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Hour": 9,
+        "Minute": 0
+      },
+      "WorkingDirectory": "/Users/zuzu",
+      "StandardOutPath": "/Users/zuzu/logs/morning-news-briefing/morning-news-briefing.out.log",
+      "StandardErrorPath": "/Users/zuzu/logs/morning-news-briefing/morning-news-briefing.err.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.morning-news-briefing.plist",
+      "sha256": "3e4ee62f809a5c83b17a52ed5c724891f1a4cececf89b851bc97f95bb7043139",
+      "executables": [
+        "/Users/zuzu/bin/windance_morning_news_briefing.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "4",
+          "last exit code": "1"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.sam-training-completion-report",
+      "StartCalendarInterval": {
+        "Hour": 7,
+        "Minute": 35
+      },
+      "StandardOutPath": "/Users/zuzu/logs/sam-training-completion-report.out.log",
+      "StandardErrorPath": "/Users/zuzu/logs/sam-training-completion-report.err.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.sam-training-completion-report.plist",
+      "sha256": "f35de345df7a25149b7ef8ebd999576890585716a209bae87065bbc239ba7db9",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/zuzu/bin/sam_training_completion_report.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "4",
+          "last exit code": "1"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.supervisor-review",
+      "RunAtLoad": true,
+      "StartInterval": 120,
+      "WorkingDirectory": "/Users/zuzu/services/windance-supervisor",
+      "StandardOutPath": "/Users/zuzu/logs/windance-supervisor/review.log",
+      "StandardErrorPath": "/Users/zuzu/logs/windance-supervisor/review-error.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.supervisor-review.plist",
+      "sha256": "a16adc864debf5891127a18ad7f0f9c583d700193b07cc0b180b1b9440948752",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/zuzu/services/windance-supervisor/supervisor.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "3129",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.supervisor",
+      "RunAtLoad": true,
+      "StartInterval": 120,
+      "WorkingDirectory": "/Users/zuzu/services/windance-supervisor",
+      "StandardOutPath": "/Users/zuzu/logs/windance-supervisor/run.log",
+      "StandardErrorPath": "/Users/zuzu/logs/windance-supervisor/error.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.supervisor.plist",
+      "sha256": "37bbf0cd56789ae12283ee919e92c18dfc756f69e79b8790bf305ff33baae4f8",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/zuzu/services/windance-supervisor/supervisor.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "3113",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.weekly-stack-review",
+      "RunAtLoad": false,
+      "StartCalendarInterval": {
+        "Weekday": 2,
+        "Hour": 10,
+        "Minute": 30
+      },
+      "WorkingDirectory": "/Users/zuzu",
+      "StandardOutPath": "/Users/zuzu/logs/weekly-stack-review/weekly-stack-review.out.log",
+      "StandardErrorPath": "/Users/zuzu/logs/weekly-stack-review/weekly-stack-review.err.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.weekly-stack-review.plist",
+      "sha256": "269cb02e88c1748027257d77869a5014d061271eb091fa53a13de39c1b970af8",
+      "executables": [
+        "/Users/zuzu/bin/windance_weekly_stack_review.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "1",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.windance.youtube-briefing",
+      "RunAtLoad": false,
+      "StartCalendarInterval": [
+        {
+          "Hour": 8,
+          "Minute": 0,
+          "Weekday": 1
+        },
+        {
+          "Hour": 12,
+          "Minute": 0,
+          "Weekday": 1
+        },
+        {
+          "Hour": 16,
+          "Minute": 0,
+          "Weekday": 1
+        },
+        {
+          "Hour": 8,
+          "Minute": 0,
+          "Weekday": 2
+        },
+        {
+          "Hour": 12,
+          "Minute": 0,
+          "Weekday": 2
+        },
+        {
+          "Hour": 16,
+          "Minute": 0,
+          "Weekday": 2
+        },
+        {
+          "Hour": 8,
+          "Minute": 0,
+          "Weekday": 3
+        },
+        {
+          "Hour": 12,
+          "Minute": 0,
+          "Weekday": 3
+        },
+        {
+          "Hour": 16,
+          "Minute": 0,
+          "Weekday": 3
+        },
+        {
+          "Hour": 8,
+          "Minute": 0,
+          "Weekday": 4
+        },
+        {
+          "Hour": 12,
+          "Minute": 0,
+          "Weekday": 4
+        },
+        {
+          "Hour": 16,
+          "Minute": 0,
+          "Weekday": 4
+        }
+      ],
+      "WorkingDirectory": "/Users/zuzu/bin",
+      "StandardOutPath": "/Users/zuzu/logs/youtube-briefing/youtube-briefing.out.log",
+      "StandardErrorPath": "/Users/zuzu/logs/youtube-briefing/youtube-briefing.err.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.windance.youtube-briefing.plist",
+      "sha256": "19c08c4d9f1685ff17d83686b7b17534a5ba476b2956f8ea28d3738e264c012a",
+      "executables": [
+        "/usr/bin/python3",
+        "/Users/zuzu/services/windance-supervisor/report_wrapper.py"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "6",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.zuzu.nodered-watchdog",
+      "RunAtLoad": true,
+      "StartInterval": 60,
+      "StandardOutPath": "/tmp/nodered-watchdog.out",
+      "StandardErrorPath": "/tmp/nodered-watchdog.err",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered-watchdog.plist",
+      "sha256": "e149661e4dc520f234e06d827e879ee271fe4958dde6d92623838b395bb8778d",
+      "executables": [
+        "/Users/zuzu/nodered-restart-watchdog.sh"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "6272",
+          "last exit code": "0"
+        }
+      }
+    },
+    {
+      "Label": "com.zuzu.nodered",
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "WorkingDirectory": "/Users/zuzu",
+      "StandardOutPath": "/Users/zuzu/nodered.log",
+      "StandardErrorPath": "/Users/zuzu/nodered-error.log",
+      "file": "/Users/zuzu/Library/LaunchAgents/com.zuzu.nodered.plist",
+      "sha256": "cbf7d18ab25ca37929e1ebab70027256f1fb061477034034b3898be692924ccd",
+      "executables": [
+        "/Users/zuzu/bin/start-node-red.sh"
+      ],
+      "domains": {
+        "gui": {
+          "state": "active",
+          "runs": "7",
+          "pid": "11917",
+          "last exit code": "0"
+        }
+      }
+    }
+  ],
+  "health": {
+    "nodered": {
+      "http": 200,
+      "ms": 6.83
+    }
+  },
+  "nodered": {
+    "sha256": "7a225eaa2ba010ac0518da652f485d7c1524c37438097ea1e35c27864a562cfa",
+    "node_count": 315,
+    "types": {
+      "tab": 12,
+      "ui-base": 1,
+      "ui-theme": 1,
+      "ui-page": 1,
+      "ui-group": 5,
+      "inject": 40,
+      "function": 85,
+      "exec": 28,
+      "debug": 30,
+      "http in": 8,
+      "http response": 8,
+      "comment": 13,
+      "ui-template": 11,
+      "ping": 8,
+      "change": 14,
+      "switch": 4,
+      "rbe": 3,
+      "cpu": 1,
+      "ui-gauge": 13,
+      "http request": 24,
+      "split": 1,
+      "join": 1,
+      "catch": 3
+    },
+    "schedules": [
+      {
+        "id": "d3d898c93e3f44b7",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "ba1a94d5d49d41a0",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "db9bcd536dea4df2",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "3d53fe4f17c644fb",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "951be7684ff54f69",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "be942a70f5f14ca4",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "036a959d05ba4e43",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "6a0a47c5df3bab82",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "c45af7ff9af9e00e",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "e10a0010cafe0001",
+        "type": "tab",
+        "disabled": true
+      },
+      {
+        "id": "e20a0010cafe0001",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "windance_reports_001",
+        "type": "tab",
+        "disabled": false
+      },
+      {
+        "id": "90640b83f6fd9c86",
+        "type": "inject",
+        "name": "Network condition",
+        "z": "d3d898c93e3f44b7",
+        "repeat": "",
+        "crontab": "00 07 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "38a0dcf044c643c8",
+        "type": "inject",
+        "name": "TEST AL Down",
+        "z": "ba1a94d5d49d41a0",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "7da4c26ab10b4b7c",
+        "type": "inject",
+        "name": "TEST AL Up",
+        "z": "ba1a94d5d49d41a0",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "6a5c4b81dc0c4876",
+        "type": "inject",
+        "name": "SAL CPU every 5s",
+        "z": "db9bcd536dea4df2",
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "ecc9590638284046",
+        "type": "inject",
+        "name": "SAL RAM every 30s",
+        "z": "db9bcd536dea4df2",
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "0dab7dd7cbc94de8",
+        "type": "inject",
+        "name": "HAL legacy CPU poll disabled",
+        "z": "db9bcd536dea4df2",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "ed2229ee9a7448cd",
+        "type": "inject",
+        "name": "HAL legacy GPU poll disabled",
+        "z": "db9bcd536dea4df2",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "heraldcpu0000001",
+        "type": "inject",
+        "name": "HERALD CPU every 10s",
+        "z": "db9bcd536dea4df2",
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "7"
+      },
+      {
+        "id": "362cb9320b534851",
+        "type": "inject",
+        "name": "Check Odyssey disk",
+        "z": "3d53fe4f17c644fb",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "868bc0aa34cf406f",
+        "type": "inject",
+        "name": "Check TMA-1 disk",
+        "z": "3d53fe4f17c644fb",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "9f5d1a66a7d6478c",
+        "type": "inject",
+        "name": "Check TMA-2 disk",
+        "z": "3d53fe4f17c644fb",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "8ab7134f70c940b3",
+        "type": "inject",
+        "name": "Check Syncthing Business",
+        "z": "3d53fe4f17c644fb",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "2d35abe09ada4648",
+        "type": "inject",
+        "name": "Check Syncthing Videos",
+        "z": "3d53fe4f17c644fb",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "ed76d3ca4b7a4074",
+        "type": "inject",
+        "name": "Check Syncthing Photos",
+        "z": "3d53fe4f17c644fb",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "ad36601c55ea4b4a",
+        "type": "inject",
+        "name": "DISABLED - 9 AM Custer Weather",
+        "z": "951be7684ff54f69",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "5b358b6a6ff4404c",
+        "type": "inject",
+        "name": "Route Weather Now - Outbound",
+        "z": "951be7684ff54f69",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "4a46e06ed99f459e",
+        "type": "inject",
+        "name": "Route Weather Now - Return",
+        "z": "951be7684ff54f69",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "2a94bc23a3894b2d",
+        "type": "inject",
+        "name": "Poll every 2s (disabled; reliable worker owns bridge)",
+        "z": "be942a70f5f14ca4",
+        "d": true,
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "f195a2e920714ba9",
+        "type": "inject",
+        "name": "Test Odoo partner search",
+        "z": "036a959d05ba4e43",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "484efacf881567d2",
+        "type": "inject",
+        "name": "Update Gemma",
+        "z": "6a0a47c5df3bab82",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "c498cce30a60c233",
+        "type": "inject",
+        "name": "Model Inventory",
+        "z": "6a0a47c5df3bab82",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "07c87cc3bf1d5296",
+        "type": "inject",
+        "name": "Running Model Status",
+        "z": "6a0a47c5df3bab82",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "924aa42529e9103c",
+        "type": "inject",
+        "name": "LLM Details",
+        "z": "6a0a47c5df3bab82",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "a3668944ec462e94",
+        "type": "inject",
+        "name": "Update Dolphin",
+        "z": "6a0a47c5df3bab82",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "eae07c9cf54e8eeb",
+        "type": "inject",
+        "name": "Check LLM Updates",
+        "z": "6a0a47c5df3bab82",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "15"
+      },
+      {
+        "id": "e10a0010cafe0002",
+        "type": "inject",
+        "name": "DISABLED - 7:30 AM Mail Review",
+        "z": "e10a0010cafe0001",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "e10a0010cafe0003",
+        "type": "inject",
+        "name": "DISABLED - Noon Mail Review",
+        "z": "e10a0010cafe0001",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "e10a0010cafe0004",
+        "type": "inject",
+        "name": "DISABLED - 5 PM Mail Review",
+        "z": "e10a0010cafe0001",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "e20a0010cafe0009",
+        "type": "inject",
+        "name": "Test HERALD health",
+        "z": "e20a0010cafe0001",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "e20a0010cafe0011",
+        "type": "inject",
+        "name": "Test HERALD message",
+        "z": "e20a0010cafe0001",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "wr_train_inject",
+        "type": "inject",
+        "name": "7:10 AM Training to Shawn",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "10 07 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "wr_brief_inject",
+        "type": "inject",
+        "name": "7:20 AM Daily Briefing",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "20 07 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "wr_mail_0730",
+        "type": "inject",
+        "name": "DISABLED - duplicate 7:30 AM Mail (included in 7:15 briefing)",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "wr_mail_1200",
+        "type": "inject",
+        "name": "12:10 PM Read-only Mail",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "10 12 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "wr_mail_1700",
+        "type": "inject",
+        "name": "5 PM Read-only Mail",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "00 17 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "wr_train_eod_inject",
+        "type": "inject",
+        "name": "9:00 PM Training memory snapshot",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "00 21 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "samtemp00000001",
+        "type": "inject",
+        "name": "SAM CPU Temp every 30s",
+        "z": "db9bcd536dea4df2",
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "4"
+      },
+      {
+        "id": "shawn_mail_0750",
+        "type": "inject",
+        "name": "7:50 AM Shawn Email Review",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "50 07 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "shawn_mail_1230",
+        "type": "inject",
+        "name": "12:30 PM Shawn Email Review",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "30 12 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      },
+      {
+        "id": "shawn_mail_1710",
+        "type": "inject",
+        "name": "5:10 PM Shawn Email Review",
+        "z": "windance_reports_001",
+        "repeat": "",
+        "crontab": "10 17 * * *",
+        "once": false,
+        "onceDelay": 0.1
+      }
+    ]
+  },
+  "databases": [
+    {
+      "path": "/Users/zuzu/services/windance-supervisor/incidents.sqlite",
+      "bytes": 45056,
+      "schema": {
+        "checks": [
+          "key",
+          "failures",
+          "successes",
+          "last_at"
+        ],
+        "incidents": [
+          "id",
+          "key",
+          "status",
+          "opened",
+          "updated",
+          "attempts",
+          "diagnostic",
+          "summary"
+        ],
+        "events": [
+          "id",
+          "incident",
+          "at",
+          "kind",
+          "detail"
+        ],
+        "notices": [
+          "key",
+          "text",
+          "status",
+          "attempts"
+        ],
+        "budgets": [
+          "day",
+          "diagnoses"
+        ]
+      }
+    }
+  ]
+}

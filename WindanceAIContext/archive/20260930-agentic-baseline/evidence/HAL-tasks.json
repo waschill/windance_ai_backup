@@ -1,0 +1,170 @@
+[
+  {
+    "Name": "Hermes Dashboard",
+    "State": "Ready",
+    "LastRun": "2026-09-17T09:31:46-06:00",
+    "Result": 267014,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": true,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "Windance-Ollama-Serve",
+    "State": "Ready",
+    "LastRun": "2026-09-17T09:31:46-06:00",
+    "Result": 0,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": true,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindanceCodexAutoStart",
+    "State": "Ready",
+    "LastRun": "2026-09-17T09:31:46-06:00",
+    "Result": 2147942402,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": true,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindanceForgeLocalWorker",
+    "State": "Disabled",
+    "LastRun": "2026-08-10T15:51:01-06:00",
+    "Result": 0,
+    "Next": "2026-09-30T00:06:00-06:00",
+    "Triggers": [
+      {
+        "Start": "2026-08-04T12:00:00",
+        "Enabled": true,
+        "Interval": "PT1M"
+      }
+    ]
+  },
+  {
+    "Name": "WindanceHALMetricsBridge",
+    "State": "Ready",
+    "LastRun": "2026-09-17T09:31:46-06:00",
+    "Result": 3221225786,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": true,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindanceLevel8VegaDryRun",
+    "State": "Disabled",
+    "LastRun": "1999-11-30T00:00:00-07:00",
+    "Result": 267011,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": null,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindanceOpenOrgChart",
+    "State": "Ready",
+    "LastRun": "2026-07-27T16:51:01-06:00",
+    "Result": 0,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": null,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindanceOpenTransportCalculator",
+    "State": "Ready",
+    "LastRun": "2026-07-27T18:39:40-06:00",
+    "Result": 0,
+    "Next": null,
+    "Triggers": [
+      {
+        "Start": null,
+        "Enabled": null,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindancePreUpgradeGitHubBackup",
+    "State": "Disabled",
+    "LastRun": "1999-11-30T00:00:00-07:00",
+    "Result": 267011,
+    "Next": "2026-10-05T01:00:00-06:00",
+    "Triggers": [
+      {
+        "Start": "2026-09-01T01:00:00",
+        "Enabled": true,
+        "Interval": null
+      }
+    ]
+  },
+  {
+    "Name": "WindanceSecondBrainIndex",
+    "State": "Ready",
+    "LastRun": "2026-09-29T22:38:50-06:00",
+    "Result": 0,
+    "Next": "2026-09-30T00:38:49-06:00",
+    "Triggers": [
+      {
+        "Start": "2026-08-03T00:38:49-06:00",
+        "Enabled": true,
+        "Interval": "PT2H"
+      }
+    ]
+  },
+  {
+    "Name": "WindanceVegaDelegationWorker",
+    "State": "Disabled",
+    "LastRun": "2026-08-10T15:51:01-06:00",
+    "Result": 267014,
+    "Next": "2026-09-30T00:06:00-06:00",
+    "Triggers": [
+      {
+        "Start": "2026-08-04T09:05:00",
+        "Enabled": true,
+        "Interval": "PT1M"
+      }
+    ]
+  },
+  {
+    "Name": "WindanceVegaTaskBridge",
+    "State": "Disabled",
+    "LastRun": "2026-07-21T16:54:01-06:00",
+    "Result": 0,
+    "Next": "2026-09-30T00:06:00-06:00",
+    "Triggers": [
+      {
+        "Start": "2026-07-21T10:00:00",
+        "Enabled": true,
+        "Interval": "PT1M"
+      }
+    ]
+  }
+]
