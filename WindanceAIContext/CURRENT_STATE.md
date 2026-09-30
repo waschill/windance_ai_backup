@@ -730,3 +730,6 @@ William and Shawn iMessages now enter Vega with persisted sender identity, separ
 
 September 30 02:46 UTC: William's first real post-routing iMessage (max-imessage:3274) answered with a successful sender receipt in 29.88 seconds. Shawn's real exchange remains unverified. See the Vega manager project evidence.
 
+
+September 30 11 UTC: Vega repaired manager SQLite connection descriptor exhaustion causing intermittent health resets. 1,500 isolated closure iterations and 200 live health reads passed; project/message/stage records unchanged, Warden resumed. See projects/VEGA_MANAGER_2026-09-29.md for exact hash and recovery.
+
