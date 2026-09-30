@@ -1,0 +1,109 @@
+Created: 2026-09-29T23:55:37.5964247-06:00
+Reason: owner-authorized-agentic-stack-baseline-no-upgrade
+
+HAL winget upgrades:
+Name                  Id                     Version       Available     Source
+-------------------------------------------------------------------------------
+App Installer         Microsoft.AppInstaller 1.29.290.0    1.29.380      winget
+Git                   Git.Git                2.55.0.3      2.55.0.5      winget
+Microsoft Edge        Microsoft.Edge         154.0.4258.37 154.0.4258.48 winget
+Ollama version 0.34.4 Ollama.Ollama          0.34.4        0.35.0        winget
+4 upgrades available.
+2 package(s) have version numbers that cannot be determined. Use --include-unknown to see all results.
+
+HAL Ollama:
+ollama version is 0.34.4
+NAME                                 ID              SIZE      MODIFIED    
+windance-ledger:latest               fffb29170f20    9.6 GB    2 weeks ago    
+windance-jean:latest                 b37b9bfa974f    9.6 GB    2 weeks ago    
+windance-forge:latest                2e98c18ed69a    9.6 GB    2 weeks ago    
+windance-max:latest                  a9ff603586b7    9.6 GB    2 weeks ago    
+windance-sentinel:latest             d4b484e642a1    9.6 GB    2 weeks ago    
+windance-scout:latest                8dd1cd50a6de    9.6 GB    2 weeks ago    
+windance-herald:latest               aa85d58177da    9.6 GB    2 weeks ago    
+windance-archivist:latest            4b95559feb9c    9.6 GB    2 weeks ago    
+windance-athena:latest               1c37c9b0886b    9.6 GB    2 weeks ago    
+windance-sandbox:latest              ce470181d2c7    6.6 GB    2 weeks ago    
+windance-iris-phi-backup:latest      56d0cb1ed2c2    9.1 GB    2 weeks ago    
+windance-athena-phi-backup:latest    14dea2d4b37b    9.1 GB    2 weeks ago    
+windance-jim-qwen:latest             fd96e2757702    9.3 GB    2 weeks ago    
+windance-iris:latest                 ca5cded338a8    9.6 GB    2 weeks ago    
+windance-jim-mindwell:latest         5707ed8e8985    9.3 GB    2 weeks ago    
+nomic-embed-text:latest              0a109f422b47    274 MB    4 weeks ago    
+gemma4:latest                        c6eb396dbd59    9.6 GB    4 weeks ago    
+vortex/helpingai-9b:latest           3f4f7f75b3c6    5.0 GB    4 weeks ago    
+ALIENTELLIGENCE/mindwell:latest      c5b3abcbf36c    9.3 GB    4 weeks ago    
+qwen3:14b                            bdbd181c33f2    9.3 GB    4 weeks ago    
+ministral-3:latest                   1922accd5827    6.0 GB    5 weeks ago    
+samantha-mistral:7b                  f7c8c9be1da0    4.1 GB    5 weeks ago    
+qwen3.5:9b                           6488c96fa5fa    6.6 GB    6 weeks ago    
+granite4:tiny-h                      566b725534ea    4.2 GB    6 weeks ago    
+phi4:14b                             ac896e5b8b34    9.1 GB    6 weeks ago
+
+HERALD:
+Hermes Agent v0.21.5+4196.g6d42313.dirty (2026.9.24) · upstream 6d42313d
+Install directory: /Users/herald/.hermes/hermes-agent
+Install method: git
+Python: 3.11.15
+OpenAI SDK: 2.24.0
+Update available — run 'hermes update'
+ProductName:		macOS
+ProductVersion:		26.5.2
+BuildVersion:		25F84
+
+SAL:
+node
+Node-RED v5.0.7
+Node.js v26.9.0
+Darwin 25.6.0 arm64 LE
+cloudflared version 2026.9.3 (built 2026-09-24T15:31:10Z)
+
+AL:
+Listing...
+containerd.io/resolute 2.3.6-1~ubuntu.26.04~resolute amd64 [upgradable from: 2.3.5-1~ubuntu.26.04~resolute]
+libevent-core-2.1-7t64/resolute-updates,resolute-security 2.1.12-stable-10ubuntu0.2 amd64 [upgradable from: 2.1.12-stable-10ubuntu0.1]
+python3-distupgrade/resolute-updates 1:26.04.25 all [upgradable from: 1:26.04.23]
+python3-jwt/resolute-updates,resolute-security 2.10.1-4ubuntu1.1 all [upgradable from: 2.10.1-4ubuntu1]
+python3-software-properties/resolute-updates 0.120.1 all [upgradable from: 0.120]
+rust-coreutils/resolute-updates 0.10.0-1ubuntu2~26.04.1 amd64 [upgradable from: 0.8.0-0ubuntu3]
+software-properties-common/resolute-updates 0.120.1 all [upgradable from: 0.120]
+ubuntu-kernel-accessories/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-minimal/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-release-upgrader-core/resolute-updates 1:26.04.25 all [upgradable from: 1:26.04.23]
+ubuntu-server-minimal/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-server/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+ubuntu-standard/resolute-updates 1.570.4 amd64 [upgradable from: 1.570.3]
+syncthing lscr.io/linuxserver/syncthing:latest Up 4 days
+searxng-core bcfaed4091d5 Up 4 days
+truth-engine-lab 9591b13f1384 Up 4 days (healthy)
+open-webui 9591b13f1384 Up 4 days (healthy)
+portainer 4d616db18cfe Up 4 days
+searxng-valkey a0dbf4c1d570 Up 4 days
+
+SAM:
+Listing...
+chromium-common/stable 1:154.0.8037.57-1~deb13u1+rpt1 arm64 [upgradable from: 1:153.0.8010.52-1~deb13u1+rpt1]
+chromium-l10n/stable,stable 1:154.0.8037.57-1~deb13u1+rpt1 all [upgradable from: 1:153.0.8010.52-1~deb13u1+rpt1]
+chromium-sandbox/stable 1:154.0.8037.57-1~deb13u1+rpt1 arm64 [upgradable from: 1:153.0.8010.52-1~deb13u1+rpt1]
+chromium/stable 1:154.0.8037.57-1~deb13u1+rpt1 arm64 [upgradable from: 1:153.0.8010.52-1~deb13u1+rpt1]
+ghostscript/stable-security 10.05.1~dfsg-1+deb13u2 arm64 [upgradable from: 10.05.1~dfsg-1+deb13u1]
+labwc/stable 0.20.2-1~bpo13+1 arm64 [upgradable from: 0.20.1-1+rpt1]
+libgs-common/stable-security,stable-security 10.05.1~dfsg-1+deb13u2 all [upgradable from: 10.05.1~dfsg-1+deb13u1]
+libgs10-common/stable-security,stable-security 10.05.1~dfsg-1+deb13u2 all [upgradable from: 10.05.1~dfsg-1+deb13u1]
+libgs10/stable-security 10.05.1~dfsg-1+deb13u2 arm64 [upgradable from: 10.05.1~dfsg-1+deb13u1]
+libheif-plugin-dav1d/stable-security 1.23.4-1~deb13u1 arm64 [upgradable from: 1.19.8-1+deb13u1]
+libheif-plugin-libde265/stable-security 1.23.4-1~deb13u1 arm64 [upgradable from: 1.19.8-1+deb13u1]
+libheif1/stable-security 1.23.4-1~deb13u1 arm64 [upgradable from: 1.19.8-1+deb13u1]
+libneatvnc1/stable 1.0.2-1+rpt1 arm64 [upgradable from: 1.0.1-1+rpt1]
+libwlroots-0.20/stable 0.20.2-1+rpt4 arm64 [upgradable from: 0.20.2-1+rpt3]
+pcmanfm-pi/stable 1.10 arm64 [upgradable from: 1.8]
+pipanel/stable 1:2.25 arm64 [upgradable from: 1:2.24]
+raindrop/stable 1.24 arm64 [upgradable from: 1.23]
+raspi-firmware/stable,stable 1:1.20260915-1 all [upgradable from: 1:1.20260521-3]
+rpi-eeprom/stable,stable 28.33-1 all [upgradable from: 28.30-1]
+rsync/stable-security 3.5.0+ds1-0+deb13u1 arm64 [upgradable from: 3.4.1+ds1-5+deb13u4]
+wayvnc/stable 0.10.2-1+rpt1 arm64 [upgradable from: 0.10.1-1+rpt1]
+wf-panel-pi/stable 1.38 arm64 [upgradable from: 1.34]
+wfplug-imenu/stable 0.15 arm64 [upgradable from: 0.14]
+wpasupplicant/stable 2:2.10-24+rpt3 arm64 [upgradable from: 2:2.10-24+rpt2]
+active
