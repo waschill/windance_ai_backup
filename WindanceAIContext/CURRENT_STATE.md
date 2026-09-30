@@ -718,3 +718,7 @@ Live verification at 22:58 UTC confirms all 22 idea-project stages verified, exa
 ## Vega telephone disabled at owner direction — September 29 Mountain
 
 The actual phone route took 19–88 seconds per observed turn and interrupted pending answers on repeated line checks. William chose existing Codex voice chat if the phone could not work acceptably; Vega disabled telephone intake. Phone health configured=false is intentional, not an incident. Number/billing unchanged; staff management remains healthy. Do not re-enable phone or deploy the staged latency patch without renewed direction. See projects/VEGA_MANAGER_2026-09-29.md.
+
+## Vega sender routing — September 29, 2026
+William and Shawn iMessages now enter Vega with persisted sender identity, separate sessions, origin-bound projects and fixed-recipient replies. Global reports default to Vega; direct staff reports name the actual author. Quick questions need no delegation; reports default to answer and why, with requested detail honored. Installed tests and two no-notification live canaries passed; a real post-change iMessage exchange remains unverified. Dots deferred; phone intentionally disabled. See projects/VEGA_MANAGER_2026-09-29.md for evidence, hashes and recovery.
+

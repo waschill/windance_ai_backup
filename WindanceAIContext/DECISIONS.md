@@ -184,3 +184,7 @@ William explicitly authorized Vega's dedicated Hermes control path, persistent f
 ## 2026-09-29 — discontinue slow Vega telephone route
 
 William reported minute-long replies and directed cancellation if unsuitable, preferring Codex voice chat. Vega disabled telephone intake after confirming actual latency; paid number release remains with William. Preserve staff management and existing schedules. Do not automatically re-enable the phone. See projects/VEGA_MANAGER_2026-09-29.md.
+
+## Vega sender routing — September 29, 2026
+William and Shawn iMessages now enter Vega with persisted sender identity, separate sessions, origin-bound projects and fixed-recipient replies. Global reports default to Vega; direct staff reports name the actual author. Quick questions need no delegation; reports default to answer and why, with requested detail honored. Installed tests and two no-notification live canaries passed; a real post-change iMessage exchange remains unverified. Dots deferred; phone intentionally disabled. See projects/VEGA_MANAGER_2026-09-29.md for evidence, hashes and recovery.
+
