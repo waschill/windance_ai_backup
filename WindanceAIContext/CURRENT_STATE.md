@@ -741,3 +741,6 @@ September 30 11 UTC: Vega repaired manager SQLite connection descriptor exhausti
 ## HAL Codex SSH service repair — September 30
 HAL socket-directory ACL corrected to Codex-required user-only access; managed 0.159.2 daemon starts and Herald SSH WebSocket proxy returns HTTP101. Herald GUI re-add remains pending. See projects/HAL_CODEX_SSH_2026-09-30.md.
 
+
+HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no error at September30 16:39 Mountain; earlier GUI-pending caveat is resolved.
+
