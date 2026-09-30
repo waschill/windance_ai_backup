@@ -89,3 +89,9 @@ Installed SHA256: Harness a23ff6ddba03ebb2a5f213da16fdbb0ff5c4cca3a130a7ca070c7b
 
 Independent HAL verification after deployment: manager heartbeat age 8.17 seconds; Codex bridge healthy, zero active/queued turns. Ledger has 30 answered and four interrupted messages, no failed/pending turns; recent interruptions are retained phone history. VM-IDEAS-20260929 remains delivered with 22 verified stages, VM-CANARY-20260929 delivered with one, both with recorded successful sender receipts. VM-PHONE-LATENCY-20260929 remains cancelled with its previously dispatched stage retained. Phone health configured=false and active_call=false is intentional. No active overdue project, stuck delivery or advancing stage requiring correction was found. No schedules, SyncThing, Level 8 or telephone configuration were changed during this check. The staged phone-latency patch remains undeployed.
 
+
+## First real sender-aware inbound exchange — September 30, 2026, 02:46 UTC check
+
+HAL verified real inbound record max-imessage:3274: owner William, channel max-imessage, answered, notify=1, with successful one-chunk iMessage sender receipt (ok=true, nested receipt ok=true). Recorded intake-to-final-update duration was 29.88 seconds; answer length 291 characters and SHA256 b13489e81ab587064d672d22913ca66eb0e0b8077b04a75c4ba0597b335dd7ef. Message contents and contacts are intentionally omitted. This supersedes the previous unverified real-exchange limitation for William only; Shawn still has only the no-notification owner canary. Recipient reading and separate Messages-database confirmation were not verified.
+
+Manager heartbeat age 3.40 seconds, bridge idle with no active/queued turns, 31 answered messages and four historical interruptions; no failed/pending turn. Projects unchanged: two delivered with receipts, phone investigation cancelled. No correction, replay or notification send was performed by this oversight check.

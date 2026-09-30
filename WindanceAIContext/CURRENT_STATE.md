@@ -722,3 +722,6 @@ The actual phone route took 19–88 seconds per observed turn and interrupted pe
 ## Vega sender routing — September 29, 2026
 William and Shawn iMessages now enter Vega with persisted sender identity, separate sessions, origin-bound projects and fixed-recipient replies. Global reports default to Vega; direct staff reports name the actual author. Quick questions need no delegation; reports default to answer and why, with requested detail honored. Installed tests and two no-notification live canaries passed; a real post-change iMessage exchange remains unverified. Dots deferred; phone intentionally disabled. See projects/VEGA_MANAGER_2026-09-29.md for evidence, hashes and recovery.
 
+
+September 30 02:46 UTC: William's first real post-routing iMessage (max-imessage:3274) answered with a successful sender receipt in 29.88 seconds. Shawn's real exchange remains unverified. See the Vega manager project evidence.
+
