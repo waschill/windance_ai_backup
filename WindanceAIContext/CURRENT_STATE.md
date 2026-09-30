@@ -737,3 +737,7 @@ September 30 02:46 UTC: William's first real post-routing iMessage (max-imessage
 September 30 11 UTC: Vega repaired manager SQLite connection descriptor exhaustion causing intermittent health resets. 1,500 isolated closure iterations and 200 live health reads passed; project/message/stage records unchanged, Warden resumed. See projects/VEGA_MANAGER_2026-09-29.md for exact hash and recovery.
 
 
+
+## HAL Codex SSH service repair — September 30
+HAL socket-directory ACL corrected to Codex-required user-only access; managed 0.159.2 daemon starts and Herald SSH WebSocket proxy returns HTTP101. Herald GUI re-add remains pending. See projects/HAL_CODEX_SSH_2026-09-30.md.
+
