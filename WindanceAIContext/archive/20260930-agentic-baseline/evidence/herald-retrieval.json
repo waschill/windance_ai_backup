@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-30T06:14:52Z",
+  "checks": [
+    {
+      "file": "AGENTIC_STACK_BASELINE_2026-09-30.md",
+      "retrieved": true,
+      "through": "HERALD -> HAL Second Brain"
+    },
+    {
+      "file": "AGENTIC_STACK_DEPENDENCIES_2026-09-30.md",
+      "retrieved": true,
+      "through": "HERALD -> HAL Second Brain"
+    },
+    {
+      "file": "AGENTIC_STACK_RECOVERY_2026-09-30.md",
+      "retrieved": true,
+      "through": "HERALD -> HAL Second Brain"
+    },
+    {
+      "file": "AGENTIC_STACK_PILOTS_2026-09-30.md",
+      "retrieved": true,
+      "through": "HERALD -> HAL Second Brain"
+    },
+    {
+      "file": "AGENTIC_STACK_COSTS_2026-09-30.md",
+      "retrieved": true,
+      "through": "HERALD -> HAL Second Brain"
+    }
+  ]
+}

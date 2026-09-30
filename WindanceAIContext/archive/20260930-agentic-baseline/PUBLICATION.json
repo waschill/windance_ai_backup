@@ -1,0 +1,11 @@
+{
+  "reports_commit": "2dc5d5f0ecc3499183e5239a219ffbc02b5e8475",
+  "remote_main_confirmed": true,
+  "reports": 5,
+  "embedded_chunks": 35,
+  "local_and_remote_mirror_hashes_passed": 20,
+  "herald_retrieval_passed": 5,
+  "source_index_hashes_passed": 5,
+  "backup_commit": "42c5b6e2499316ac3b7874ced175b0216a9ef12c",
+  "note": "This receipt records publication of the unchanged five report files; a subsequent evidence-only commit publishes these receipts."
+}

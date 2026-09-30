@@ -1,0 +1,50 @@
+{
+  "at": "2026-09-30T06:14:36Z",
+  "checks": [
+    {
+      "file": "AGENTIC_STACK_BASELINE_2026-09-30.md",
+      "source_hash_matches": true,
+      "chunks": 12,
+      "embedded_chunks": 12,
+      "retrieved": true,
+      "error": null,
+      "deleted": false
+    },
+    {
+      "file": "AGENTIC_STACK_DEPENDENCIES_2026-09-30.md",
+      "source_hash_matches": true,
+      "chunks": 4,
+      "embedded_chunks": 4,
+      "retrieved": true,
+      "error": null,
+      "deleted": false
+    },
+    {
+      "file": "AGENTIC_STACK_RECOVERY_2026-09-30.md",
+      "source_hash_matches": true,
+      "chunks": 9,
+      "embedded_chunks": 9,
+      "retrieved": true,
+      "error": null,
+      "deleted": false
+    },
+    {
+      "file": "AGENTIC_STACK_PILOTS_2026-09-30.md",
+      "source_hash_matches": true,
+      "chunks": 5,
+      "embedded_chunks": 5,
+      "retrieved": true,
+      "error": null,
+      "deleted": false
+    },
+    {
+      "file": "AGENTIC_STACK_COSTS_2026-09-30.md",
+      "source_hash_matches": true,
+      "chunks": 5,
+      "embedded_chunks": 5,
+      "retrieved": true,
+      "error": null,
+      "deleted": false
+    }
+  ]
+}

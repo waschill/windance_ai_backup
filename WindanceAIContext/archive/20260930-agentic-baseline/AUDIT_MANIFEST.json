@@ -1,5 +1,10 @@
 [
   {
+    "path": "PUBLICATION.json",
+    "sha256": "7429150dd354ad9926805968741684cd1321614b1d15bfef7f9c87e68c13e852",
+    "bytes": 471
+  },
+  {
     "path": "audit-tools\\al_probe.py",
     "sha256": "3dc45ff78a1ca682f9d3772ed47ff9c214d04dc33c6c1a79d7b1d9225b2763bf",
     "bytes": 2318
@@ -38,6 +43,16 @@
     "path": "audit-tools\\verify_cold_recovery.py",
     "sha256": "665263c1680efea43a71133f7d4b3bf6e0da70e46cbc47658d828c04186afbd0",
     "bytes": 2404
+  },
+  {
+    "path": "audit-tools\\verify_herald_retrieval.py",
+    "sha256": "6cd6dcc9be4cabbc731959d5834115f2551a48abd83d5b94abd2db5abcf7e21c",
+    "bytes": 586
+  },
+  {
+    "path": "audit-tools\\verify_index.py",
+    "sha256": "27d858d5096acdcb6c0d2501560d9f6b4bd7d8a4029e15811b6c6ba822256a58",
+    "bytes": 1378
   },
   {
     "path": "evidence\\AL.json",
@@ -95,6 +110,11 @@
     "bytes": 35646
   },
   {
+    "path": "evidence\\herald-retrieval.json",
+    "sha256": "2ce8730ec6aa417a92297054ea32650bed9edf4c7b83dccad1978c48dc979a44",
+    "bytes": 772
+  },
+  {
     "path": "evidence\\HERALD-supplement-backup.json",
     "sha256": "63b190cd6326bfd5289e0fd5b53edf97204b2260e729015b2abde9ddfece9e74",
     "bytes": 2885
@@ -110,9 +130,29 @@
     "bytes": 907
   },
   {
+    "path": "evidence\\index-verification.json",
+    "sha256": "41b42c937ef97a05acc1db6a5a8b751268ea3d0b36c414728af22319b175b11a",
+    "bytes": 1194
+  },
+  {
+    "path": "evidence\\local-mirrors.json",
+    "sha256": "0c1e1e053dac2ffa35c56b0dc91b2d102b6d9b4d88ab7755a04a361f7942d7c5",
+    "bytes": 1498
+  },
+  {
     "path": "evidence\\offhost-verification.json",
     "sha256": "a7250a23765bff9f7ff2e9896b3734036878ecf4c12ff038abc67d8f31b04108",
     "bytes": 15900
+  },
+  {
+    "path": "evidence\\publisher-verification.json",
+    "sha256": "41f65c27bf220bbb5899aab52b87c3bcb607f2fd53be77b74296fd1121a6daa1",
+    "bytes": 208
+  },
+  {
+    "path": "evidence\\remote-mirrors.json",
+    "sha256": "e343b4e359d5c7c5e1d679ba4842f7c56e4aac8374e8b5b2204c1013671d5b4a",
+    "bytes": 1068
   },
   {
     "path": "evidence\\SAL-backup.json",
