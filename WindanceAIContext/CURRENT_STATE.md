@@ -1,5 +1,9 @@
 # Current Operating State
 
+## October1 later owner approval — alarm repair authorized, access blocked
+
+William explicitly approved restoring the SAM temperature-alarm link. This supersedes older unanswered alarm-approval holds below. The signed-in Node-RED tab remains blocked by browser tool policy; no repair has been deployed and no alternate route may bypass that denial. Do not ask again for repair approval. Resume once tool access is permitted, with fresh backup and graph verification. Training diagnostics are separately staged and tested, not installed. See archive/20261001-training-diagnostics/training-diagnostics/README.md. Other project boundaries and Warden suspension remain unchanged.
+
 ## October 1 owner direction and approved recovery — current override
 
 William approved the coordinated training correction and unchanged Harness registration. He deferred Shawn's actual-training-note collection and pilot until after this project: keep collection suspended; it is not a current completion blocker. He authorized temporarily suspending Warden checks until project completion. Warden is paused and its two gui/501 jobs are unloaded; preserve its code, incidents and consensus policy and restore the recorded jobs/supervision at project completion after maintenance coordination. Do not rely on stale cached Warden status or older unanswered-approval passages below.
@@ -755,3 +759,4 @@ HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no er
 
 ## September30 project authority and release-watch handoff
 William authorized sustained agentic-stack execution with evidence gates. Phase1 remains open; original pilots restored. Priorities: email, network/software upkeep, read-only unpaid invoices. SAM protected22:00–05:00 America/Denver. See projects/AGENTIC_STACK_PROJECT_2026-09-30.md. Two-hour continuation and daily08:00 progress report are active in the owning chat. William confirmed HERALD OS update complete; live26.7.1/build25G241 corroborates version. Former15-minute upgrade polling is now daily10:00 release watch; see projects/SOFTWARE_RELEASE_WATCH_2026-09-30.md. Distinct Harness/runner/manager health investigation belongs to the stack project, preserving live Warden consensus. No service, route or business data changed to establish these records and automations.
+

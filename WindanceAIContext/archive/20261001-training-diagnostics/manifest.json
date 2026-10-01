@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_training_diagnostics.py",
+    "sha256": "243d8d2ed27277cdd40102810c03bc0cff924e3e504f2e13ae086a471c327613"
+  },
+  {
+    "path": "test_training_diagnostics.js",
+    "sha256": "9ef7154c4f048ab20355e819bb21cb778d33c164eb5ef4d3cb0ec99c86e136b5"
+  },
+  {
+    "path": "training-candidate\\node-changes.json",
+    "sha256": "2647b0ce60f327d925a5917f47acf49eb995ab34217a9db7ca3ac82af4948f12"
+  },
+  {
+    "path": "training-candidate\\README.md",
+    "sha256": "5513cc65dc93f6546a00d2f0d13ea405d7f2d5e051388c7bc18260dbb6a416f0"
+  },
+  {
+    "path": "training-diagnostics\\candidate.json",
+    "sha256": "7061eb200054f4c21dc8a9281b9a9956c7f827ae3e2f0a2da341b6307e29403c"
+  },
+  {
+    "path": "training-diagnostics\\README.md",
+    "sha256": "da5fd01e33d2c4e776ee0a498cd71d75c2cd6ad4fc16a43a60459d9ccaf79d76"
+  }
+]

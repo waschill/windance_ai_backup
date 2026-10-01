@@ -1,5 +1,9 @@
 # Windance AI and Homelab — Start Here
 
+## October1 later owner approval — alarm repair authorized, access blocked
+
+William explicitly approved restoring the SAM temperature-alarm link. This supersedes older unanswered alarm-approval holds below. The signed-in Node-RED tab remains blocked by browser tool policy; no repair has been deployed and no alternate route may bypass that denial. Do not ask again for repair approval. Resume once tool access is permitted, with fresh backup and graph verification. Training diagnostics are separately staged and tested, not installed. See archive/20261001-training-diagnostics/training-diagnostics/README.md. Other project boundaries and Warden suspension remain unchanged.
+
 ## October 1 owner direction and approved recovery — current override
 
 William approved the coordinated training correction and unchanged Harness registration. He deferred Shawn's actual-training-note collection and pilot until after this project: keep collection suspended; it is not a current completion blocker. He authorized temporarily suspending Warden checks until project completion. Warden is paused and its two gui/501 jobs are unloaded; preserve its code, incidents and consensus policy and restore the recorded jobs/supervision at project completion after maintenance coordination. Do not rely on stale cached Warden status or older unanswered-approval passages below.
@@ -85,3 +89,4 @@ For Reacher/Hermes model routing, staff task execution, report context, research
 ## Vega management and phone — 2026-09-29
 
 For current staff authority, assignments, proactive follow-through or telephone routing, also read `projects/VEGA_MANAGER_2026-09-29.md`. William appointed Vega/Codex as manager and Reacher as communications liaison only. The persistent control plane and dedicated Codex connector are installed; an actual worker-to-review-to-iMessage delivery pilot passed. The phone route was intentionally disabled after unacceptable live latency; do not re-enable it or deploy its staged latency patch without renewed direction. William and Shawn iMessages enter Vega with sender-specific reply routes and a shared durable project ledger. Older Herald General Manager instructions are superseded; existing privacy, approvals and Warden consensus requirements remain.
+
