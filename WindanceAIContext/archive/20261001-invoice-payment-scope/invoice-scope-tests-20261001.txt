@@ -1,0 +1,22 @@
+test_duplicate_invoice_names_do_not_mix_amounts (__main__.InvoiceTests.test_duplicate_invoice_names_do_not_mix_amounts) ... ok
+test_effective_cap_warning_and_scope (__main__.InvoiceTests.test_effective_cap_warning_and_scope) ... ok
+test_empty_and_nonempty_reports_disclose_payment_scope (__main__.InvoiceTests.test_empty_and_nonempty_reports_disclose_payment_scope) ... ok
+test_empty_success_is_distinct_from_error (__main__.InvoiceTests.test_empty_success_is_distinct_from_error) ... ok
+test_exact_decimal_sum (__main__.InvoiceTests.test_exact_decimal_sum) ... ok
+test_fractional_precision_preserved (__main__.InvoiceTests.test_fractional_precision_preserved) ... ok
+test_in_payment_row_cannot_enter_unpaid_report (__main__.InvoiceTests.test_in_payment_row_cannot_enter_unpaid_report) ... ok
+test_job_failure_never_sends_normal_report (__main__.InvoiceTests.test_job_failure_never_sends_normal_report) ... ok
+test_malformed_rows_fail_closed (__main__.InvoiceTests.test_malformed_rows_fail_closed) ... ok
+test_missing_date_and_invoice_name (__main__.InvoiceTests.test_missing_date_and_invoice_name) ... ok
+test_print_only_failure_has_no_notifications (__main__.InvoiceTests.test_print_only_failure_has_no_notifications) ... ok
+test_read_only_query_contract (__main__.InvoiceTests.test_read_only_query_contract) ... ok
+test_sender_accepts_verified_empty_and_nonempty_results (__main__.InvoiceTests.test_sender_accepts_verified_empty_and_nonempty_results) ... ok
+test_sender_withholds_query_failure (__main__.InvoiceTests.test_sender_withholds_query_failure) ... ok
+test_separate_currency_balances (__main__.InvoiceTests.test_separate_currency_balances) ... ok
+test_success_routes_once_and_preview_does_not_send (__main__.InvoiceTests.test_success_routes_once_and_preview_does_not_send) ... ok
+test_unknown_currency_never_defaults_to_dollars (__main__.InvoiceTests.test_unknown_currency_never_defaults_to_dollars) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.017s
+
+OK

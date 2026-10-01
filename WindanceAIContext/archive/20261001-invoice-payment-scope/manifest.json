@@ -1,0 +1,46 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "invoice_function.py",
+    "sha256": "6a9ed3455243415214145f6802e3c7f36945c27d2fcb75fd0d6254ef34024fc4"
+  },
+  {
+    "path": "invoice_payment_state_probe.py",
+    "sha256": "68352c5b4ad09e0d18c8a946ee20003afe642f437201633c888c96d86055ae15"
+  },
+  {
+    "path": "invoice-payment-links-20261001.json",
+    "sha256": "f0c010f710c83976b4bc72e3d68c6e1a6836b3c5b5fe488c56aedc25d21fcf9c"
+  },
+  {
+    "path": "invoice-payment-schema-20261001.json",
+    "sha256": "ec7aa9ac31bfa97913a98425d029526bd8664bb556a153a550a50c75c8d93f35"
+  },
+  {
+    "path": "invoice-payment-scope-20261001.md",
+    "sha256": "3817226c7ccedfcdb28efd47d4a07b05e99095666d9ad097af5f132ce45c2d3d"
+  },
+  {
+    "path": "invoice-scope-tests-20261001.txt",
+    "sha256": "683d9b1dd43f04c71ee64f18432c940d0c896a4275bd309fdf08ca1cdf164fa4"
+  },
+  {
+    "path": "main-original.json",
+    "sha256": "879b203520c315cc1e0cec511929b15fe0f95e4e642557ceeae1b48026e6cd30"
+  },
+  {
+    "path": "sender_function.py",
+    "sha256": "5825e9629b21ab9746afd98a38e8165b70775f1575660830c48351832b819ac1"
+  },
+  {
+    "path": "sender-original.json",
+    "sha256": "9e4eb8514e9d0d6900468d90f88dff3be4ad42bc557a8faa74443dacf298ba97"
+  },
+  {
+    "path": "test_invoice_candidate.py",
+    "sha256": "d5264252ff686d7da14af3165986fd094359028ca157d0700f4d52232082e1b9"
+  }
+]
