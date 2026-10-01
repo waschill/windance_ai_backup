@@ -1,5 +1,9 @@
 # Windance pilot acceptance cases
 
+## September30 correction: original pilots govern
+
+The three cases below drifted from William's original plan. They remain useful supplementary regression fixtures, but are not the primary acceptance pilots. The authoritative three are daily training-schedule delivery to Shawn, progress analysis supported by actual training notes, and read-only failed-workflow diagnosis. Their acceptance criteria and current gaps are recorded in [the project contract](AGENTIC_STACK_PROJECT_2026-09-30.md#original-pilot-contract). No primary pilot is declared passed. William's later project authorization permits gated implementation; this original audit-era document does not override it.
+
 Prepared as the next-step test contract, not executed live assignments or migration approval. These three cases exercise the current architecture first. Compare any later candidate against the same frozen fixtures and record correctness, p50/p95 elapsed time, retries, tool/model calls, input/output/cache counts, and measured or explicitly unavailable cost.
 
 All pilot instances must use isolated copies, outbound-denied networking, fake dispatch/delivery and no production credentials. No live inbox mutation, scheduled invocation, task creation, delivery or phone activation is part of these cases. Existing production behavior is the baseline, not something a fixture may redefine.

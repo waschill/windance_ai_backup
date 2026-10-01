@@ -23,6 +23,8 @@ Also check the Vega task inbox at `C:\Users\wasch\Documents\Codex\2026-06-19\i-n
 
 ## Sources of truth
 
+For continued agentic-stack execution, read `projects/AGENTIC_STACK_PROJECT_2026-09-30.md`. William subsequently authorized sustained scoped implementation and service moves with evidence gates; Phase1 remains open. Priorities are email, network/software upkeep, then read-only unpaid-invoice checking. SAM's owner-specified protected interval is 22:00–05:00 America/Denver daily. The original audit-only scope above describes the baseline, not the later project authorization. All protected rules remain.
+
 - This directory is the source of truth for curated operational knowledge.
 - Live service state and live configuration override documentation; inspect before changing anything.
 - Durable task records override an agent's prose about task status.

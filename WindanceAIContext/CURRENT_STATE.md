@@ -744,3 +744,6 @@ HAL socket-directory ACL corrected to Codex-required user-only access; managed 0
 
 HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no error at September30 16:39 Mountain; earlier GUI-pending caveat is resolved.
 
+
+## September30 project authority and release-watch handoff
+William authorized sustained agentic-stack execution with evidence gates. Phase1 remains open; original pilots restored. Priorities: email, network/software upkeep, read-only unpaid invoices. SAM protected22:00–05:00 America/Denver. See projects/AGENTIC_STACK_PROJECT_2026-09-30.md. Two-hour continuation and daily08:00 progress report are active in the owning chat. William confirmed HERALD OS update complete; live26.7.1/build25G241 corroborates version. Former15-minute upgrade polling is now daily10:00 release watch; see projects/SOFTWARE_RELEASE_WATCH_2026-09-30.md. Distinct Harness/runner/manager health investigation belongs to the stack project, preserving live Warden consensus. No service, route or business data changed to establish these records and automations.
