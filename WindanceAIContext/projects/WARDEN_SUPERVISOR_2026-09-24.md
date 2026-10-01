@@ -1,5 +1,13 @@
 # Warden — independent supervision and reviewed recovery
 
+## October 1 owner direction and approved recovery — current override
+
+William approved the coordinated training correction and unchanged Harness registration. He deferred Shawn's actual-training-note collection and pilot until after this project: keep collection suspended; it is not a current completion blocker. He authorized temporarily suspending Warden checks until project completion. Warden is paused and its two gui/501 jobs are unloaded; preserve its code, incidents and consensus policy and restore the recorded jobs/supervision at project completion after maintenance coordination. Do not rely on stale cached Warden status or older unanswered-approval passages below.
+
+HERALD Harness was restored at 04:47 UTC October 1 with health 200 and unchanged task/delivery/run/revision ledgers. The four training fields and matching recipient helper are installed and structurally verified; a live read-only dated training response passed. No manual send, dispatch or SAM service interruption occurred. Natural delivery acceptance is still zero of seven. An unintended editor removal of SAM's cross-tab temperature-alarm notification wire was detected; gauge monitoring and SAM service remain intact, but that alarm notification path is disconnected. Its supported link-node restoration is staged and held for William's specific approval after automatic approval review rejected the import. Do not bypass that hold. Other service recovery and phase gates remain open.
+
+Authoritative details, exact evidence and recovery instructions: `archive/20261001-approved-recovery/approved-recovery-20261001.md`. This dated override supersedes older pending-approval, note-pilot and Warden-active statements; it does not erase history or declare the project complete.
+
 ## Noon YouTube completion verified — September 29
 
 The noon scheduled YouTube report completed with exit0, and Messages independently recorded iMessage sent/delivered to the configured William recipient at12:00:17 Mountain. Warden resolved INC-20260928-8fc48fd4 at12:04:10 after two healthy checks and remains unpaused. This supersedes the earlier pending-noon verification. William subsequently said he still lacked the video report; a copy was made directly accessible in Codex, and clarification of scheduled roundup versus separate staff report is pending. Transport flags do not establish that he saw it. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md for receipt identifiers and limits.

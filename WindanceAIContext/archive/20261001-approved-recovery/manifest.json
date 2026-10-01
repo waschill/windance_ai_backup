@@ -1,0 +1,54 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "approved-harness-recovery-20261001.json",
+    "sha256": "4d9ae49859f85d955ce3fa67a3842c5516671f3568860b611a006d902121906a"
+  },
+  {
+    "path": "approved-recovery-20261001.md",
+    "sha256": "54a3416f52af21274a767646c029fed2534ef8f0961c3e9d855c5493fa33a454"
+  },
+  {
+    "path": "approved-recovery-offhost-20261001.json",
+    "sha256": "1f5fecdc03489660707fabf6a90d7834f18aaa4901ceb9cb4427182730b266e9"
+  },
+  {
+    "path": "approved-training-install-20261001.json",
+    "sha256": "021b31ee70b3297efc422cdf727c8ad796a9180a1b4560c76e8a400da92889a2"
+  },
+  {
+    "path": "harness-training-readonly-20261001.json",
+    "sha256": "3e28498db481db8fa3a010c0f6c19520fb8f939940ea7afc366aff95a4bad36e"
+  },
+  {
+    "path": "herald-preapproved-recovery-20261001.json",
+    "sha256": "fd3631dc01f085a83f42fe0dca89174dd544e75f7b8aaee76c9b8ea33387ad3b"
+  },
+  {
+    "path": "recover_approved_harness.py",
+    "sha256": "e930ed1a0f5103b979027cf801f96da7f90a00266a43b69b81cb6d274d185424"
+  },
+  {
+    "path": "suspend_warden_for_project.py",
+    "sha256": "5532cd1c51ca440c68cbb8686c624dfc71097628cab37b74bd2456474e096b5b"
+  },
+  {
+    "path": "training_install_control.py",
+    "sha256": "cb6a90e1f154fff5c955b0b561fb8adc88ba0fc5977e17eb6c32f7aea91c6c12"
+  },
+  {
+    "path": "verified-approved-training-20261001.json",
+    "sha256": "9b4e7a36c2797ddd172c944cfc2c199c2beee5d6687550fa776f5eeff3484ae1"
+  },
+  {
+    "path": "verify_approved_training.py",
+    "sha256": "d4afe9264c55f2c3a1e18fc57297f4830cbfa379217e0314c0158c89ec1e3586"
+  },
+  {
+    "path": "warden-project-suspension-20261001.json",
+    "sha256": "edd4719b4a6d48a45a523bfbb7a30693c9d7c6adc01483416b5a991157740a0a"
+  }
+]

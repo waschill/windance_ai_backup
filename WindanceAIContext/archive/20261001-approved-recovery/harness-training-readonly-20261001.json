@@ -1,0 +1,1 @@
+{"at": "2026-10-01T05:01:36.279891+00:00", "explicit_dispatches": 0, "explicit_sends": 0, "health": {"http": 200, "latency_ms": 178, "status": "ok"}, "training/today": {"http": 200, "latency_ms": 1172, "provider": "deterministic", "model": "odoo-training-schedule", "business_date": "2026-09-30", "current_dated_header": true, "body_exported": false}}

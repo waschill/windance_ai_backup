@@ -1,5 +1,13 @@
 # Open Work and Revalidation List
 
+## October 1 owner direction and approved recovery — current override
+
+William approved the coordinated training correction and unchanged Harness registration. He deferred Shawn's actual-training-note collection and pilot until after this project: keep collection suspended; it is not a current completion blocker. He authorized temporarily suspending Warden checks until project completion. Warden is paused and its two gui/501 jobs are unloaded; preserve its code, incidents and consensus policy and restore the recorded jobs/supervision at project completion after maintenance coordination. Do not rely on stale cached Warden status or older unanswered-approval passages below.
+
+HERALD Harness was restored at 04:47 UTC October 1 with health 200 and unchanged task/delivery/run/revision ledgers. The four training fields and matching recipient helper are installed and structurally verified; a live read-only dated training response passed. No manual send, dispatch or SAM service interruption occurred. Natural delivery acceptance is still zero of seven. An unintended editor removal of SAM's cross-tab temperature-alarm notification wire was detected; gauge monitoring and SAM service remain intact, but that alarm notification path is disconnected. Its supported link-node restoration is staged and held for William's specific approval after automatic approval review rejected the import. Do not bypass that hold. Other service recovery and phase gates remain open.
+
+Authoritative details, exact evidence and recovery instructions: `archive/20261001-approved-recovery/approved-recovery-20261001.md`. This dated override supersedes older pending-approval, note-pilot and Warden-active statements; it does not erase history or declare the project complete.
+
 ## Baseline findings September 30
 
 The authorized audit is recorded in `projects/AGENTIC_STACK_BASELINE_2026-09-30.md`. Before architectural changes, resolve or explicitly accept: native Hermes Sentinel/Iris scheduled errors and possible workflow overlap; Shawn's unresolved SMS transport choice; natural post-repair news/completion/invoice outcomes; capture-reminder and maintenance last-exit causes; matched report-delivery observability; actual cost attribution; complete replacement-host recovery and off-site coverage. These are findings, not new dispatched tasks or authority to change services. Keep the phone disabled and all existing privacy, Odoo, SyncThing, Level 8 and Warden restrictions. Selective cold restoration passed; do not treat partial manager/Harness exports as complete replacement databases.

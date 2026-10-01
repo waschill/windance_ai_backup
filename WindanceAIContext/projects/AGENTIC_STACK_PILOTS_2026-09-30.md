@@ -1,5 +1,13 @@
 # Windance pilot acceptance cases
 
+## October 1 owner direction and approved recovery — current override
+
+William approved the coordinated training correction and unchanged Harness registration. He deferred Shawn's actual-training-note collection and pilot until after this project: keep collection suspended; it is not a current completion blocker. He authorized temporarily suspending Warden checks until project completion. Warden is paused and its two gui/501 jobs are unloaded; preserve its code, incidents and consensus policy and restore the recorded jobs/supervision at project completion after maintenance coordination. Do not rely on stale cached Warden status or older unanswered-approval passages below.
+
+HERALD Harness was restored at 04:47 UTC October 1 with health 200 and unchanged task/delivery/run/revision ledgers. The four training fields and matching recipient helper are installed and structurally verified; a live read-only dated training response passed. No manual send, dispatch or SAM service interruption occurred. Natural delivery acceptance is still zero of seven. An unintended editor removal of SAM's cross-tab temperature-alarm notification wire was detected; gauge monitoring and SAM service remain intact, but that alarm notification path is disconnected. Its supported link-node restoration is staged and held for William's specific approval after automatic approval review rejected the import. Do not bypass that hold. Other service recovery and phase gates remain open.
+
+Authoritative details, exact evidence and recovery instructions: `archive/20261001-approved-recovery/approved-recovery-20261001.md`. This dated override supersedes older pending-approval, note-pilot and Warden-active statements; it does not erase history or declare the project complete.
+
 ## September30 correction: original pilots govern
 
 The three cases below drifted from William's original plan. They remain useful supplementary regression fixtures, but are not the primary acceptance pilots. The authoritative three are daily training-schedule delivery to Shawn, progress analysis supported by actual training notes, and read-only failed-workflow diagnosis. Their acceptance criteria and current gaps are recorded in [the project contract](AGENTIC_STACK_PROJECT_2026-09-30.md#original-pilot-contract). No primary pilot is declared passed. William's later project authorization permits gated implementation; this original audit-era document does not override it.
