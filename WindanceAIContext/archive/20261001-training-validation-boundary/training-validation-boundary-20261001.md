@@ -1,0 +1,13 @@
+# Training validation boundary — October1 19:05 UTC
+
+The missing07:10 delivery is now localized to validation withholding, not an established scheduler failure. Independent Messages row3338 at13:10:30UTC (07:10:30Mountain) contains the deployed Training source/status/date validation-error signature. It is an iMessage with sent=0 and delivered=0. The report_error outcome records process_succeeded/exit0 at07:10:30.926937. No notification receipt should be inferred from that process result. No report was replayed.
+
+The exact deployed formatter and encoder were read from SAL's saved flow and executed in a bounded sender-free VM against one current read-only /training/today response. HTTP200, formatting, encoding and the stable daily-key suffix passed; no validation error was produced. The report body was never exported. This narrows the defect but does not establish the morning response's status, provider/model, date, message identity or payload. The30-second timing is compatible with a timeout but is not proof of one. Do not weaken validation or label its rejection erroneous without the rejected-input metadata.
+
+Harness access logs retain training200 entries without timestamps in the sampled tail, so those entries cannot be assigned to07:10. No exact morning request result has been recovered. Messages is current (latest outgoing18:30UTC), excluding a wholly stale database as the explanation for the absent training receipt.
+
+Additional sanitized outcomes: briefing07:21 and mail12:10 recorded process success, while Shawn mail07:50 and12:30 recorded failure. These are process observations, not verified delivery claims. Existing Shawn SMS limitation remains distinct from training. No other message bodies, contacts, mailbox contents or secrets were exported.
+
+Next: recover producer timing/error evidence if available; otherwise prepare minimal safe validation-rejection metadata (status classification and boolean checks, never body/contact/token) for a future normal run. Separately trace why report_error can report process success without affirmative independent delivery. Do not enable Warden or the phone, replay alerts, or bypass the held alarm-link repair. Training acceptance remains zero; Phase1 open.
+
+No production code, scheduler, service, Odoo data or SAM changes occurred. One read-only current training request was used; VM has no sender/dispatch hooks. No application model call or paid commitment was introduced; Codex dollar cost remains unmeasured. Evidence: training-live-function-check-20261001.json and training-error-boundary-20261001.json. Previous missing-receipt evidence is preserved; this adds a localized validation boundary without rewriting failure history.
