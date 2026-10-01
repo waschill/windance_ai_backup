@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory-owner-boundary-20261001.json",
+    "sha256": "220ae89f7ee22667dff354570a259cd886a11032ecc003bfcebbdfc5514b266b"
+  },
+  {
+    "path": "memory-owner-boundary-20261001.md",
+    "sha256": "555646cec15121995e789283592ee157e83b38d9b83759881ebccbd118cb5eb9"
+  },
+  {
+    "path": "memory-provenance-metadata-20261001.json",
+    "sha256": "f9f1fecb1534ab2893dcda0604f482eaaaa99580a5939a552f476bd692c52e07"
+  },
+  {
+    "path": "test_memory_owner_boundary.py",
+    "sha256": "b3cab36a694740023553fc16d712b1c3860b3f22a451d7889bb9b6a0029e3fc4"
+  }
+]
