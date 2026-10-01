@@ -1,0 +1,13 @@
+# Training rollback prepared; production deployment held
+
+At October1 03:43UTC a fresh private rollback package was created at SAL /Users/zuzu/backups/training-correction-20261001T034328Z. Four files were copied and read back by SHA256: current flows.json, ledger_unpaid_invoice_report.py, send_shawn_report_payload.py and send_imessage_payload.py. Each was restored into a fresh temporary directory and parsed successfully. No credentials or private recipient pin were copied. The package is a selected on-host file recovery point, not full host or receipt-state recovery.
+
+Two complete candidate files were prepared beside the backups. The flow candidate changes only wr_train_format, wr_train_send, wr_train_exec and wr_train_eod_memory_format. The Python candidate changes only shawn_recipient; all other Python AST nodes compare equal. The private recipient resolver was exercised read-only against existing configuration and confirmed valid and distinct from William, without printing the recipient. Live hashes still matched before-files. The exact candidate/source hashes and file modes are in training-rollback-preparation-20261001.json.
+
+Automatic approval review rejected the proposed command that would pause Warden and install the Python helper before the Node-RED changes. Reason: installing only one part risks a partial production deployment and inconsistent automated routing. The command was rejected before execution. A subsequent read-only preflight confirmed all four live hashes unchanged and Warden unpaused. No service, scheduler, recipient, flow or business record changed.
+
+William was asked to approve the coordinated correction: recipient lookup plus four training-node updates, Warden paused with confirmed quiescence, schedules unchanged, no manual sends, and recovery if either part fails. No answer was recorded at publication. Do not treat the broader project goal, Node-RED login or this document as that approval; do not bypass the automatic review rejection by another execution route.
+
+The prepared deployment still needs a safe all-parts activation procedure. In particular, a rollback must not silently restore the known wrong-recipient route or clear outbox claims/receipts. Prefer withholding affected report delivery while resolving an incomplete deployment, with unchanged business data and preserved evidence. Verify the actual partial-failure behavior in isolation before another production attempt. Do not execute the earlier helper-first command merely because the files were backed up.
+
+The Warden-held Harness registration repair is a separate approval and remains held. This deployment hold does not establish that all other baseline work is blocked. Phase1 and the overall project remain open.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "prepare_training_rollback.py",
+    "sha256": "92bbf65cdbc3fd2ed7d86552685cda9c3f62d6fd1632de2b8f726666ab0034d5"
+  },
+  {
+    "path": "training-rollback-preparation-20261001.json",
+    "sha256": "3244371e5a2425eecb11812403d0ab9bf6dba78850c05ebeac05da0af3c2826a"
+  },
+  {
+    "path": "training-rollout-hold-20261001.md",
+    "sha256": "1943558555dd2e2e5d570cb971188dad509d3d980d6dea533e246184c059a94b"
+  }
+]
