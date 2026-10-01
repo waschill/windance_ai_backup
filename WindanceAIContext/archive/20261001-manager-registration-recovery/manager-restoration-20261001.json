@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-01T23:05:23.798695+00:00",
+  "loaded": [
+    "com.windance.codex-app-server",
+    "com.windance.codex-bridge",
+    "com.windance.vega-manager"
+  ],
+  "domain": "user/501",
+  "health": {
+    "8791": {
+      "http": 200,
+      "status": "ok"
+    },
+    "8793": {
+      "http": 200,
+      "status": "ok",
+      "active": 0,
+      "queued": 0,
+      "busy": false
+    },
+    "8797": {
+      "http": 200,
+      "status": "ok"
+    }
+  },
+  "ledger_unchanged": true,
+  "bridge_state_unchanged": true,
+  "manager_tick_age_seconds": 2.29,
+  "explicit_sends": 0,
+  "explicit_dispatches": 0,
+  "backup_path": "/Users/herald/backups/manager-recovery-20261001T2305Z"
+}

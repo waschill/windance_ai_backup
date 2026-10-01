@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-01T23:04:28.790457+00:00",
+  "backup_path": "/Users/herald/backups/manager-recovery-20261001T2305Z",
+  "files": {
+    "com.windance.codex-app-server.plist": "1fd8d9be39a8c7918798344332177a0a863cf6acc8a84af464642d13b1333d68",
+    "state.json": "3b00228ddcf24977218edc81e4436a075ca77f8f88577b16f0b96598d3e9a546",
+    "manager.db": "8d6f110daafadd5e2a90737f0e0a635f3f169722db24193eaef27eff4cfa7cae",
+    "com.windance.codex-bridge.plist": "d3dc628d91d0e9956daef468a2b2b4b790496a8918db584018599cfdf8bc7931",
+    "com.windance.vega-manager.plist": "fe4dca3bdffc2448fcd91a21a853a18e12b1311737fbf5aeb53818ce8b506a58",
+    "server.mjs": "62483284dea6eefe010ea9d34cc4bb4438a6042bb910462f8679ab676ef80c1c",
+    "manager.py": "1d2c67417ca4080158db8e5c9840b5c602523856bfc7551ad0f2c8276a4c7a83"
+  },
+  "ledger_hashes": {
+    "projects": "c5dfffe7c3b45e1f3d96fce2d0cf7d2f2caf5900d9a86cec9f6946214ac8b55e",
+    "stages": "941df07865da7ffe26f9d22417ec1165cb52ef66815747e8392e0e6b4d6fbd3b",
+    "events": "257fe7c4359d7ac642553df07f32bf3bb00f1d7f6745c3ff245bc6d8181a941d",
+    "messages": "6b9dc85079c5eae792a9f92f597372151d2a980ff0dbb74eb7715930fabe4972"
+  },
+  "cold_restore_verified": true,
+  "pending_messages": 0,
+  "pending_deliveries": 0,
+  "active_projects": 0,
+  "bridge_queued_running": 0,
+  "production_started": false
+}

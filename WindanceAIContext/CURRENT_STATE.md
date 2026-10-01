@@ -1,5 +1,9 @@
 # Current Operating State
 
+## October1 23:05UTC — manager, bridge and app-server registrations restored
+
+Restored unchanged HERALD com.windance.codex-app-server, com.windance.codex-bridge and com.windance.vega-manager into user/501 after a fresh seven-file backup, cold integrity checks, off-host hashes, idle work/delivery predicates and exact source guards. Harness/bridge/manager health200, fresh manager tick, actual connector and app-server initialize RPC passed. Full project/stage/event/message hashes and bridge state remained unchanged; no replay, send, model turn, Odoo call or SAM change. Profile-staff-runner remains unrecovered; actual model-backed request, sustained uptime and reboot persistence unverified. Phone8796 was unreachable and was not enabled/restarted. Warden stays paused/unloaded. Alarm restoration is owner-approved but browser access remains blocked. Evidence and selective recovery: archive/20261001-manager-registration-recovery/manager-registration-recovery-20261001.md. Phase1 remains open.
+
 ## October1 later owner approval — alarm repair authorized, access blocked
 
 William explicitly approved restoring the SAM temperature-alarm link. This supersedes older unanswered alarm-approval holds below. The signed-in Node-RED tab remains blocked by browser tool policy; no repair has been deployed and no alternate route may bypass that denial. Do not ask again for repair approval. Resume once tool access is permitted, with fresh backup and graph verification. Training diagnostics are separately staged and tested, not installed. See archive/20261001-training-diagnostics/training-diagnostics/README.md. Other project boundaries and Warden suspension remain unchanged.
@@ -759,4 +763,5 @@ HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no er
 
 ## September30 project authority and release-watch handoff
 William authorized sustained agentic-stack execution with evidence gates. Phase1 remains open; original pilots restored. Priorities: email, network/software upkeep, read-only unpaid invoices. SAM protected22:00–05:00 America/Denver. See projects/AGENTIC_STACK_PROJECT_2026-09-30.md. Two-hour continuation and daily08:00 progress report are active in the owning chat. William confirmed HERALD OS update complete; live26.7.1/build25G241 corroborates version. Former15-minute upgrade polling is now daily10:00 release watch; see projects/SOFTWARE_RELEASE_WATCH_2026-09-30.md. Distinct Harness/runner/manager health investigation belongs to the stack project, preserving live Warden consensus. No service, route or business data changed to establish these records and automations.
+
 

@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager-backup-20261001.json",
+    "sha256": "d0acd83feaf0b5623aee2d5dd7684b77dab6a1397cb70910bec98758641eb806"
+  },
+  {
+    "path": "manager-registration-recovery-20261001.md",
+    "sha256": "35988f35996305462b038dcf59eaa33bdc08e7862f57470b05c31e060082baf0"
+  },
+  {
+    "path": "manager-restoration-20261001.json",
+    "sha256": "9765e9b0d9caad817b52b61c9e6681ed72bdcf0f746a3e7b889bbf4b081346cf"
+  },
+  {
+    "path": "recover_manager_services.py",
+    "sha256": "6789f7ffb1c9336e9d2b011c48e07ff352e80130daca1940278bf1c078b99205"
+  }
+]
