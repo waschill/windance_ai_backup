@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "training-natural-check-20261001.json",
+    "sha256": "a6b34b613e2a2bdc2f6fff7b754b7562bd866be17314c8904972dec05d765d99"
+  },
+  {
+    "path": "training-natural-check-20261001.md",
+    "sha256": "310a302c8d1d0a861da5b7a7e7fe71fac805f470f0f830d8b3da33cf3eea8077"
+  },
+  {
+    "path": "training-natural-runtime-20261001.json",
+    "sha256": "5d8a11d45d85a83b76a185118c9a061b0abd4f9fa074873b2c7a7ceb22b40314"
+  }
+]
