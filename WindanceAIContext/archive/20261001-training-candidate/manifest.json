@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_training_candidate.py",
+    "sha256": "7f23ae594600125bdcfa5050a310059593fa4668bc8a911b98d5c38be97e57fb"
+  },
+  {
+    "path": "sender-isolation-20261001.json",
+    "sha256": "7c182564beaf692cd9a998dc4a1e04c4e3e4d8cafd39562a94044ca51a774564"
+  },
+  {
+    "path": "test_sender_isolation.py",
+    "sha256": "d901723ad4b99dee1f0ed3e5548bbb03534dbad5fc2bf7f65d072fe1afeccc67"
+  },
+  {
+    "path": "test_training_candidate.js",
+    "sha256": "69453765cad83b679600d102cdc2d189abe17c94a2fe7c80b7817303b164bd20"
+  },
+  {
+    "path": "invoice-candidate/recipient_function.py",
+    "sha256": "e5010a9bdcc2892d7b0da91b90401a3d84e1fede1ce48b27c8772bcc1ae8e8f0"
+  },
+  {
+    "path": "invoice-candidate/test_recipient.py",
+    "sha256": "216e919d49edcd0fe7ac94b666df49240b2c33d9e6e04ef4459428a43d78a865"
+  },
+  {
+    "path": "training-candidate/node-changes.json",
+    "sha256": "2647b0ce60f327d925a5917f47acf49eb995ab34217a9db7ca3ac82af4948f12"
+  },
+  {
+    "path": "training-candidate/README.md",
+    "sha256": "5513cc65dc93f6546a00d2f0d13ea405d7f2d5e051388c7bc18260dbb6a416f0"
+  }
+]

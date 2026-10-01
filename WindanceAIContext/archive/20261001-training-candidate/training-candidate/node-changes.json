@@ -1,0 +1,19 @@
+{
+  "status": "STAGED_ONLY",
+  "expected_saved_flow_sha256": "7a225eaa2ba010ac0518da652f485d7c1524c37438097ea1e35c27864a562cfa",
+  "changes": {
+    "wr_train_format": {
+      "func": "const parts = new Intl.DateTimeFormat('en-US', {\n  timeZone: 'America/Denver', year: 'numeric', month: '2-digit', day: '2-digit'\n}).formatToParts(new Date());\nconst part = type => parts.find(p => p.type === type).value;\nconst businessDate = `${part('year')}-${part('month')}-${part('day')}`;\nconst response = msg.payload;\nconst expectedHeader = new RegExp('^Windance training schedule for (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ' + businessDate + ':');\nif (Number(msg.statusCode) !== 200 || !response || typeof response !== 'object' ||\n    response.provider !== 'deterministic' || response.model !== 'odoo-training-schedule' ||\n    typeof response.reply !== 'string' || !expectedHeader.test(response.reply.trim()) ||\n    typeof msg._msgid !== 'string' || !/^[A-Za-z0-9._-]{1,128}$/.test(msg._msgid)) {\n  node.error('Training source/status/date could not be verified; delivery or snapshot withheld.', msg);\n  return null;\n}\nmsg.trainingDate = businessDate;\nmsg.payload = `Windance daily training report:\\n\\n${response.reply.trim()}`;\nreturn msg;"
+    },
+    "wr_train_send": {
+      "func": "if (typeof msg.payload !== 'string' || !msg.payload.trim() ||\n    typeof msg.trainingDate !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(msg.trainingDate)) {\n  node.error('Validated training report required; delivery withheld.', msg);\n  return null;\n}\nconst encoded = Buffer.from(msg.payload.trim(), 'utf8').toString('base64');\n// Date/owner identity is stable across repeated triggers. Changed content under\n// the same key must hold for reconciliation in the existing durable outbox.\nmsg.payload = encoded + ' training-Shawn-' + msg.trainingDate;\nreturn msg;"
+    },
+    "wr_train_exec": {
+      "command": "/usr/bin/python3 /Users/zuzu/bin/send_shawn_report_payload.py"
+    },
+    "wr_train_eod_memory_format": {
+      "func": "const parts = new Intl.DateTimeFormat('en-US', {\n  timeZone: 'America/Denver', year: 'numeric', month: '2-digit', day: '2-digit'\n}).formatToParts(new Date());\nconst part = type => parts.find(p => p.type === type).value;\nconst businessDate = `${part('year')}-${part('month')}-${part('day')}`;\nconst response = msg.payload;\nconst expectedHeader = new RegExp('^Windance training schedule for (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ' + businessDate + ':');\nif (Number(msg.statusCode) !== 200 || !response || typeof response !== 'object' ||\n    response.provider !== 'deterministic' || response.model !== 'odoo-training-schedule' ||\n    typeof response.reply !== 'string' || !expectedHeader.test(response.reply.trim()) ||\n    typeof msg._msgid !== 'string' || !/^[A-Za-z0-9._-]{1,128}$/.test(msg._msgid)) {\n  node.error('Training source/status/date could not be verified; delivery or snapshot withheld.', msg);\n  return null;\n}\nmsg.trainingDate = businessDate;\nmsg.method = 'POST';\nmsg.url = 'http://192.168.36.21:8791/memory';\nmsg.headers = {'Content-Type': 'application/json'};\nmsg.payload = JSON.stringify({\n  kind: 'daily_training_schedule', key: businessDate.replace(/-/g, '_'),\n  value: `Windance daily training schedule final snapshot for ${businessDate}.\\n\\n${response.reply.trim()}\\n\\nThis is a planned-work schedule snapshot, not evidence of training completion or progress.`,\n  confidence: 0.98, source: 'SAL Node-RED 9 PM final training snapshot'\n});\nreturn msg;"
+    }
+  },
+  "dependency": "tested recipient_function.py must replace the broken shared shawn_recipient lookup before this route can work"
+}
