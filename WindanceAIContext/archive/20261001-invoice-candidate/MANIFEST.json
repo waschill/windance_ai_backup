@@ -1,0 +1,34 @@
+[
+  {
+    "file": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "file": "harness-original.json",
+    "sha256": "5f4fd9452ce86765fb9f88d35d5805f38278c33ff13537cf73fd3b82b5acd6c0"
+  },
+  {
+    "file": "invoice_function.py",
+    "sha256": "c267f4042698dc93d34324beb013369e1987a7ec01ba25c4e02e30028a01b21a"
+  },
+  {
+    "file": "main-original.json",
+    "sha256": "879b203520c315cc1e0cec511929b15fe0f95e4e642557ceeae1b48026e6cd30"
+  },
+  {
+    "file": "README.md",
+    "sha256": "3d7a52b5f89bfebc7c9e83163a8b3303f59d05f5afdf232de3b2a2b6e794d578"
+  },
+  {
+    "file": "sender_function.py",
+    "sha256": "5825e9629b21ab9746afd98a38e8165b70775f1575660830c48351832b819ac1"
+  },
+  {
+    "file": "sender-original.json",
+    "sha256": "9e4eb8514e9d0d6900468d90f88dff3be4ad42bc557a8faa74443dacf298ba97"
+  },
+  {
+    "file": "test_invoice_candidate.py",
+    "sha256": "f1e297728353ce3a2b6db2e69b804bceee3c5db64aa3c08b73a4eade834c17e7"
+  }
+]
