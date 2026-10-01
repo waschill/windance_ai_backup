@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "audit_memory_write_contract.py",
+    "sha256": "f8556e12d35fa8689d67aa1e0406031f8ad002a2ea20c0174bce278678bf7323"
+  },
+  {
+    "path": "memory-write-contract-20261001.json",
+    "sha256": "436354dea0ef09dfdf56a3d780bf830c64ef14a75917bbda977b301b467880c1"
+  },
+  {
+    "path": "memory-write-contract-20261001.md",
+    "sha256": "2b7fff6ccccc7cee109cf6179bf8df017d06e3a67a90d85929c3ccf16d190510"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "live_source_sha256": "db8a435907a2fb49796818a17b29334874b1919d6a03640901a22b6b12ea8195",
+  "callers": [
+    "answer_web_research_and_remember",
+    "create_level8_shutdown_task",
+    "create_project_workflow",
+    "create_weekly_stack_review_workflow",
+    "daily_reflection",
+    "post_sam_commit",
+    "put_memory",
+    "remember_text"
+  ],
+  "cross_owner_key_overwrite_reproduced": true,
+  "vector_source_id_collision_reproduced": true,
+  "fixture_only": true,
+  "production_writes": 0,
+  "model_calls": 0,
+  "limits": "Caller source strings do not establish authentication or access grants. No historical disclosure established."
+}
