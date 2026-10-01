@@ -4,12 +4,24 @@
     "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
   },
   {
+    "path": "test_webui_bootstrap_guard.py",
+    "sha256": "311e2718e81cb23bcab4698e56ad8e33bac56fa817d4fbfa788609e18f3f0fc8"
+  },
+  {
     "path": "webui_access_probe.py",
     "sha256": "b973ea7b1d17612ce6eadb09e11fe725def1037ac95db391bb254a951370be2a"
   },
   {
     "path": "webui-access-baseline-20261001.md",
     "sha256": "20c4d0894f593c31b1c0c812fac871052ee5d6b4aeec11622b7bc91be6917018"
+  },
+  {
+    "path": "webui-bootstrap-followup.md",
+    "sha256": "ac1eecfbf445946450248c044d202dca4585b1846de93c44b8b2a9f9ee77297c"
+  },
+  {
+    "path": "webui-bootstrap-guard-20261001.json",
+    "sha256": "4c63b7c0aa23d6c38248cc83ef54a866af961209e2662edd00aa2ad03e6f9d22"
   },
   {
     "path": "webui-lab-access-20261001.json",

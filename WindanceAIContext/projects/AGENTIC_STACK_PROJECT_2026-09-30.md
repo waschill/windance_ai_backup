@@ -107,3 +107,7 @@ Read-only Odoo schema inspection found no training/school category in the existi
 ## October1 existing WebUI access baseline
 AL production and lab both passed health and denied unauthenticated chat/user API requests with401. Production has one admin and signup disabled. Lab has zero users, signup enabled and a LAN-reachable3001 endpoint; installed code promotes the first signup to administrator. No signup or configuration change was made. This bootstrap exposure must be addressed before treating the lab as a private workspace. Production has22chats, one file and two active non-global filters; no contents or identities were exported. Privacy separation, function permissions, knowledge quality and application-data restoration remain unproven. Full metadata receipts and limits: archive/20261001-webui-access/webui-access-baseline-20261001.md. Phase1 remains open; existing deployment holds are unchanged.
 
+
+## October1 lab bootstrap guard verified
+Four isolated checks of the installed signup guard prove that signup=false alone still permits first-admin enrollment on an empty lab. Do not apply that ineffective fix. Both login-form and initial-admin guard settings must be accounted for, or complete intended administrator enrollment through restricted access. No Compose ownership labels were found, so preserve the actual private container definition and volume before any recreation. No account or setting changed. Details and exact guard evidence: archive/20261001-webui-access/webui-bootstrap-followup.md. The interface gate remains open.
+
