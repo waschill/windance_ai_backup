@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_baseline_probe.py",
+    "sha256": "bb7c42c904f5b950c4399615903c8e0f987a36efbe568ca9acf5f815c2c230d6"
+  },
+  {
+    "path": "email-baseline-20261001.json",
+    "sha256": "49d2f00729a55e0c762550b05997e48f3a4b92d2b40b00e13dd0cab8298322b5"
+  },
+  {
+    "path": "runtime-verification-20261001.md",
+    "sha256": "c0c40aeb1638e1c1e8151fd0da3f92f699d8646173f7fb1ec83277954236bffe"
+  },
+  {
+    "path": "training_flow_reconcile.py",
+    "sha256": "8b1e07bde45109340d73108484bcb7f50fd70cee88f25377f499c35e57fd7f1c"
+  },
+  {
+    "path": "training-flow-reconcile-20261001.json",
+    "sha256": "f17b1c49d42526ecfb3439148a0bb3c12d3892da3d213bd7e25ab7997752bab7"
+  }
+]
