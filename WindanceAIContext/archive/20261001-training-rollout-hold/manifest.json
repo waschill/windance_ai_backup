@@ -8,6 +8,18 @@
     "sha256": "92bbf65cdbc3fd2ed7d86552685cda9c3f62d6fd1632de2b8f726666ab0034d5"
   },
   {
+    "path": "test_training_partial_deployment.py",
+    "sha256": "2fa8e9763366340955f81b36b54371049c17711bc43e560111954138d84bf33f"
+  },
+  {
+    "path": "training-coordinated-rollout.md",
+    "sha256": "364af91b191b40ead768848c7278bc53ceae08658cf688d1145f4cc4fc52807d"
+  },
+  {
+    "path": "training-partial-deployment-20261001.json",
+    "sha256": "7cd69e235ffa697aa14951bf45863609a6809945433d3b1312be8ebfb74a08d5"
+  },
+  {
     "path": "training-rollback-preparation-20261001.json",
     "sha256": "3244371e5a2425eecb11812403d0ab9bf6dba78850c05ebeac05da0af3c2826a"
   },

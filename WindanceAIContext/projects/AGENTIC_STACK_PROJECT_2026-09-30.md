@@ -111,3 +111,7 @@ AL production and lab both passed health and denied unauthenticated chat/user AP
 ## October1 lab bootstrap guard verified
 Four isolated checks of the installed signup guard prove that signup=false alone still permits first-admin enrollment on an empty lab. Do not apply that ineffective fix. Both login-form and initial-admin guard settings must be accounted for, or complete intended administrator enrollment through restricted access. No Compose ownership labels were found, so preserve the actual private container definition and volume before any recreation. No account or setting changed. Details and exact guard evidence: archive/20261001-webui-access/webui-bootstrap-followup.md. The interface gate remains open.
 
+
+## October1 partial-deployment isolation and revised proposal
+Four SAL tests using actual saved adapter/resolver functions and the staged training formatter passed: flow-first with old resolver withholds before sender; matched components preserve recipient/text/key; missing or wrong-owner pin withholds. No real sender or private recipient configuration was accessed. This supports a revised flow-first proposal, not execution approval or proof of runtime atomicity. Proposed order, partial-failure holds and recovery limits: archive/20261001-training-rollout-hold/training-coordinated-rollout.md. Do not retry the rejected helper-first sequence or restore the known wrong-recipient flow as automatic rollback. Coordinated deployment approval remains pending, and the Warden-held Harness repair is a separate hold.
+
