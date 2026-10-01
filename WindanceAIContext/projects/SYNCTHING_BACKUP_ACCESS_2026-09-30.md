@@ -1,0 +1,13 @@
+# Backup folder write access repair — September 30, 2026
+
+William explicitly authorized correcting Syncthing write access throughout its assigned backup folders. Live AL configuration assigns only Business, Photos and Videos beneath /mnt/odyssey_syncthing/data. Odyssey exports /Volume2/syncthing solely to AL using all_squash UID1003/GID998 (rsync_backup). Roots retain named/default backup-account access; old UID1000 entries could lose effective write access when source modes narrow the ACL mask.
+
+A root-owned private manifest at Odyssey /Volume2/docker/vega-backups/syncthing-backup-access-20260930/ownership-before.json records path, UID, GID, mode, inode and device for 12,452 non-symlink UID1000 entries: 12,327 Photos and 125 Videos. Changed only their owner to the mapped backup UID1003, with inode/device/prestate assertions and verification of unchanged group and permission mode for each entry. No file contents, guest access, export, mount, share membership or other owner entries were changed. Fresh restore point 01c21e6b05a154b12ffdcbc11e2e534c13512d34 validated before mutation. The prior Business ownership repair was retained.
+
+All12,452 repaired entries passed read/write (plus directory traversal) checks as UID1003/GID998. Nested create/write/remove probes passed in formerly restricted Photos and Videos directories. Actual container UID1000/GID998 also passed an NFS Business-root create/remove probe (export maps it to UID1003). Photos alone was briefly paused/resumed through REST to reset failed-transfer backoff; its original unpaused state was verified. A Business scan exceeded the client's30-second timeout but completed server-side successfully; it was not restarted. No service restart or Warden change was needed.
+
+Immediately after repair Photos rescanned with pullErrors=0 (previously401). Business and Videos were idle with zero pending items/errors. Final Photos backlog verification follows below. New NAS entries naturally use mapped UID1003; arbitrary future external permission changes are not guaranteed against.
+
+Rollback: review the private ownership manifest and restore only matching entries if the mapping is deliberately changed. Blindly restoring UID1000 reintroduces the observed lockout; never restore entire folders or overwrite file contents.
+
+Final observed state: Photos is still scanning with zero pull errors, 401 pending items and208,417,412 bytes. Completion of those transfers is not yet verified. Broad full-tree effective-access audit was stopped to avoid competing with the large Photos rescan; all corrected entries were separately verified successfully. No claim of a completed full-tree audit is made.
