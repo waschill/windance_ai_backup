@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_memory_owner_candidate.py",
+    "sha256": "e0ba34ec454bfe65239db36783e6fac61ac3fd1309d4c708874a0cf273b3b397"
+  },
+  {
+    "path": "memory_owner_boundary.py",
+    "sha256": "f01029a4f68d1abae9dee0cb505ae5f640d1dc6afc32d54918e2d5aa72d91f35"
+  },
+  {
+    "path": "memory-owner-candidate-20261001.md",
+    "sha256": "9ad9660b0ff728b6f9d5708f8bed88da3837a0ed38f6ee00de628c42335085c2"
+  },
+  {
+    "path": "memory-retrieval-candidate-20261001.json",
+    "sha256": "ef82f5ebc135b8009701ec112a17ea7f972a1dfe027ae1603dda54f880919f37"
+  },
+  {
+    "path": "test_memory_owner_candidate.py",
+    "sha256": "c0956f4b612fec104a422113ec3565e7d2f1895e12c5a04db87245ac215cc1bb"
+  },
+  {
+    "path": "test_memory_retrieval_integration.py",
+    "sha256": "b4f48724fdd85940dbf15c4845fa956f90863d89832bb5974a9cae491c6e0d39"
+  }
+]
