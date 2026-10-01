@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager_answer_canary.py",
+    "sha256": "97aaf0719a7aec4aeda13fdfa8f45476f254a3b00a2950567e5d53ef2990a524"
+  },
+  {
+    "path": "manager-answer-canary-20261001.md",
+    "sha256": "d0953f675414f78c2193a03f1f4ae3f48f1dccba60c23a0a5b2a376e6f3fc659"
+  },
+  {
+    "path": "manager-answer-canary-receipt.json",
+    "sha256": "fc7ade6ca6c87da33900dd0cdbb338229a0e1b33b2a475b2c699fb48017785c4"
+  }
+]

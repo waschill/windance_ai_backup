@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-01T23:13:43.140822+00:00",
+  "request_id": "STACK-RECOVERY-CANARY-20261001T2313Z",
+  "status": "answered",
+  "notify": 0,
+  "receipt_absent": true,
+  "exact_reply": true,
+  "answer_sha256": "014419a45a473caa4d924118de95d6abfe10b11a3addb3eb13441e89134fab11",
+  "elapsed_seconds": 13.95,
+  "project_stage_counts_unchanged": true,
+  "timeout_interrupt_requested": false,
+  "no_retry_submissions": true,
+  "production_model_route_unchanged": true,
+  "model_call_attempts": 1
+}
