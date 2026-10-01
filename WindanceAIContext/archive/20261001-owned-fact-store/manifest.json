@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "1c09f55e84e44ac7b3e54ef9e3039da45dd7e23a3ed6584eb6f003a8da40e45d"
+  },
+  {
+    "path": "owned-fact-store-candidate-20261001.md",
+    "sha256": "8eb13cd4406ac7a4fefba2be2622db7c78c06556ab8c48f6cac4fab588b4c56c"
+  },
+  {
+    "path": "test_owned_fact_store.py",
+    "sha256": "fa55da3b025f435e3feede362f4dd56b52d4208f615c4b3ae4fd9c48f7e6edf4"
+  }
+]

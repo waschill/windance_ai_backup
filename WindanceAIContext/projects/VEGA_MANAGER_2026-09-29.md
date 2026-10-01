@@ -135,3 +135,7 @@ Eleven policy tests passed on HAL/HERALD plus candidate semantic/lexical/fallbac
 ## October1 learned-fact writer collision and shared-copy gap
 
 Actual writer in disposable SQLite reproduces different-owner same-key overwrite and vector-ID collision. Explicit remembering also copies text to a shared Hermes memory file without owner/scope enforcement; no private mirror content was inspected. Eight direct writer paths include SAM, reflection and direct API, so the retrieval-only candidate remains staged until writes, caller identity and derived copies are reconciled. Evidence and implementation contract: archive/20261001-memory-write-contract/memory-write-contract-20261001.md. Zero production writes, model calls or sends; Phase1 remains open.
+
+## October1 owned-fact storage candidate passes isolated contract tests
+
+Eight HAL SQLite tests passed for separate owner/business/personal keys, revision-checked correction, deletion/recreation, explicit revision-bound sharing/revocation and atomic write/readback failures. Component is staged only; no production schema or memory change. Authenticated ingress, source validation, eight existing writers, grant-event audit, retrieval and Hermes-copy integration remain incomplete. Exact implementation and limits: archive/20261001-owned-fact-store/owned-fact-store-candidate-20261001.md. Zero model calls or external actions; Phase1 open.

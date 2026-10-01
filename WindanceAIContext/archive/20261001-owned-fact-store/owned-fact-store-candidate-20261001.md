@@ -1,0 +1,13 @@
+# Owned-fact storage candidate — October 1
+
+Staged only, not imported by production. No production schema/data/source changes.
+
+The candidate uses separate owned_facts, owned_fact_events and owned_fact_grants tables. Keys include owner and explicit business/personal scope. Only an owner principal can mutate its facts. Updates require the expected revision; canonical readback occurs inside the same transaction before commit. Events retain source references and value hashes rather than obsolete raw values. Deletion removes the current value and grants while retaining revision metadata. Recreation requires the tombstone revision. Business sharing requires an explicit grant to the current revision; corrections revoke prior grants instead of disclosing new content automatically. Personal sharing is withheld.
+
+Eight isolated tests on HAL passed: equal-key owner/scope isolation, correction and stale edit, delete/recreate, grant/revoke/revision binding, missing/unauthorized principal, event failure atomicity, readback failure atomicity, and caller transaction preservation. Synthetic in-memory SQLite only; no production memory, embeddings, model, network, Odoo or message calls. Tests execute candidate component behavior, not actual endpoint integration or concurrent multi-process performance.
+
+Important remaining work: principal arguments must be bound to authenticated ingress, not trusted from payloads. Source-reference existence/authority and secret rejection are caller obligations and are not yet integrated. Reconcile all eight existing writers, direct/background service identity, reflection scope, SAM sources, legacy ownership, correction/forget interfaces, canonical retrieval/vector invalidation, and Hermes derived copies. Grants currently persist access state but do not have a separate grant-event audit; add that before production use. Deletion here is current-fact removal, not erasure of existing conversation history, source systems, old mirrors or private backups. No end-to-end memory/privacy acceptance is claimed.
+
+The existing retrieval candidate remains undeployed. No automatic migration or legacy ownership inference is implemented. The live Harness stays on the previously verified email-owner-guard revision. Recovery for this component is simply not deploying it; future installation requires fresh verified backups and a selective migration/rollback plan preserving post-install facts.
+
+Files: owned_fact_store.py, test_owned_fact_store.py. Run with the existing HAL Second Brain virtual-environment Python using `-m unittest -v test_owned_fact_store`. No new dependency or charge. Phase 1 remains open.
