@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-01T23:10:54.530733+00:00",
+  "loaded": "com.windance.profile-staff-runner",
+  "domain": "user/501",
+  "monitor_receipt": {
+    "at": "2026-10-01T23:10:53.680614+00:00",
+    "ok": true,
+    "followups": 0,
+    "legacy_queue_swept": false,
+    "invalid_timestamps": 0
+  },
+  "ledger_unchanged": true,
+  "explicit_sends": 0,
+  "replayed_tasks": 0,
+  "backup_path": "/Users/herald/backups/staff-monitor-recovery-20261001T2310Z"
+}

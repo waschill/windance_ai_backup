@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "recover_staff_monitor.py",
+    "sha256": "caa459b926931a8b5360a7e3b52f8d92bbf71d27227633f09061a153d1158857"
+  },
+  {
+    "path": "staff-monitor-backup-20261001.json",
+    "sha256": "ac68d928c8dd573f38ad2c9f08698677b910748176cb012d1394010707dea12a"
+  },
+  {
+    "path": "staff-monitor-recovery-20261001.md",
+    "sha256": "ec073f1bc47505fd44b012bf41e8776082e165a8190127e734fa26e8e506d26e"
+  },
+  {
+    "path": "staff-monitor-restoration-20261001.json",
+    "sha256": "1fc60e8027b6f44078687c621401629c563e2d976cb6bd0edaa39b90ebe139f2"
+  }
+]

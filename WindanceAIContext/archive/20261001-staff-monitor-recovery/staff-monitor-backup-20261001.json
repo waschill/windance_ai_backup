@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-01T23:10:26.477869+00:00",
+  "backup_path": "/Users/herald/backups/staff-monitor-recovery-20261001T2310Z",
+  "files": {
+    "dispatch_health.py": "0cf68bfe43bb118bd94873dedb78d2f9ea38b73c4dbcee2820e7972434263bad",
+    "com.windance.profile-staff-runner.plist": "2746b12861e2a8d26339dac135f2ab0a85766cc45615b9fcd332a3f10cc3e378",
+    "staff_follow_through_monitor.py": "300fe4e675e2152ffed44aa3b90d4cb9d19e7489a3be0065fa89bf0f9287f742",
+    "harness.db": "48c8ac0816487fe7cf4246fa0854971b4e85e424f0859bcbac0efa607a538559",
+    "isolated.db": "48c8ac0816487fe7cf4246fa0854971b4e85e424f0859bcbac0efa607a538559",
+    "isolated.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "isolated.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+  },
+  "ledger_hashes": {
+    "staff_tasks": "7c63f12d3b63d9989ce95b82e16e8de293419a1cca5bfc5cb3e35e47468cc05b",
+    "staff_task_runs": "f0eb6993028b3164c54d0c0f1d09f651684af39ecdc815c4f916a47cb0c66b26",
+    "staff_task_deliveries": "33dc4e4f71fb4fee5510055f0cb053bfb68fb9e4f294be0161179091a541bcf2",
+    "staff_task_revisions": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "isolated_result": {
+    "ok": true,
+    "followups": 0,
+    "invalid_timestamps": 0,
+    "legacy_queue_swept": false
+  },
+  "production_started": false
+}
