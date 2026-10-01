@@ -1,0 +1,36 @@
+{
+  "detail_route_guards": [
+    {
+      "line": 2942,
+      "context": [
+        "}",
+        "",
+        "function trainingUsesRating(item) {",
+        "  // Detailed category/rating/note capture is suspended. Training completion",
+        "  // uses the ordinary one-tap cell path and records only the scheduled work,",
+        "  // trainer, horse, and completion timestamp.",
+        "  return false;"
+      ]
+    },
+    {
+      "line": 3804,
+      "context": [
+        "            if path == \"/api/training-completion\":",
+        "                return self.send_json(",
+        "                    {\"error\": \"Detailed training ratings and notes are currently disabled; use /api/cell.\"},",
+        "                    status=410,",
+        "                )",
+        "            if path == \"/api/missed-training/cell\":",
+        "                return self.send_json(set_missed_training_done(str(payload[\"id\"]), bool(payload[\"done\"])))"
+      ]
+    }
+  ],
+  "notes_coverage": {
+    "records": 101,
+    "first_date": "2026-09-06",
+    "last_date": "2026-09-20",
+    "nonempty_notes": 0,
+    "recent_since_sep22": 0
+  },
+  "sam_http": 200
+}

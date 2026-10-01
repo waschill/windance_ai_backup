@@ -1,0 +1,7 @@
+{
+  "test_scope": "single AST-extracted function; synthetic read stub; no application import, database, send or network",
+  "mixed_currency_combined_as_usd": true,
+  "invoice_identifiers_omitted": true,
+  "query_failure_kind": "odoo-error",
+  "query_failure_returns_nonempty_string": true
+}
