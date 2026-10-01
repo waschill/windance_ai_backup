@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-01T23:30:04.410896+00:00",
+  "harness_sha256": "db8a435907a2fb49796818a17b29334874b1919d6a03640901a22b6b12ea8195",
+  "helper_sha256": "02442671b64a239b7b5bbfacdb695fb04c1202bee054ab9543b65a4fecf11f92",
+  "health_http": 200,
+  "live_cross_owner_request_withheld": true,
+  "protected_tables_unchanged": true,
+  "real_mailbox_actions": 0,
+  "test_sends": 0,
+  "backup_path": "/Users/herald/backups/email-owner-boundary-20261001T2330Z",
+  "initial_probe_limit": "Oversized ordinal routed to execution-controller/needs-detail, not an email guard test; corrected to delete 99."
+}

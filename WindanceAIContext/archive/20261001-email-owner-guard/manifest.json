@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_owner_candidate.py",
+    "sha256": "5f4218a62a13b103630116d6929dd870152e36e0cf84883372b90499e5d55d32"
+  },
+  {
+    "path": "deploy_email_owner_boundary.py",
+    "sha256": "d0721b7f77f5e7fd3b4caa0b5061eb90b2d5d5b07413876a289baa17ef270e3e"
+  },
+  {
+    "path": "email_owner_boundary.py",
+    "sha256": "02442671b64a239b7b5bbfacdb695fb04c1202bee054ab9543b65a4fecf11f92"
+  },
+  {
+    "path": "email-owner-backup-20261001.json",
+    "sha256": "6086d222bccc34c68959fd664ccb17c86c20c4c05b21862f6d071032671172b2"
+  },
+  {
+    "path": "email-owner-deployment-20261001.json",
+    "sha256": "a72cda0337e45c050151889de6f679a8b59d8ad6aaeef0fd5c92496393e882ca"
+  },
+  {
+    "path": "email-owner-guard-deployed-20261001.md",
+    "sha256": "91cbc27aff42476513f53fce9203a73eecde986f39717b3b8ae7338be5585cd3"
+  },
+  {
+    "path": "test_email_owner_candidate.py",
+    "sha256": "ba2a309bcc9b6d6817825a992cbd4a44c80cc72cc449823bfbb80bb233cc0b80"
+  }
+]

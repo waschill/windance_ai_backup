@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-01T23:28:47.224688+00:00",
+  "backup_path": "/Users/herald/backups/email-owner-boundary-20261001T2330Z",
+  "files": {
+    "agent_harness.py": "709118f2ae2bf9df5d429e1343c06d709707f8f422db54058085801fca0e3aa7",
+    "harness.db": "2179e01c212573f5f4239c4d087537716320652d4bb969f10b80a8b20245b452",
+    "isolated.db": "2179e01c212573f5f4239c4d087537716320652d4bb969f10b80a8b20245b452"
+  },
+  "table_hashes": {
+    "staff_tasks": "7c63f12d3b63d9989ce95b82e16e8de293419a1cca5bfc5cb3e35e47468cc05b",
+    "staff_task_runs": "f0eb6993028b3164c54d0c0f1d09f651684af39ecdc815c4f916a47cb0c66b26",
+    "staff_task_deliveries": "33dc4e4f71fb4fee5510055f0cb053bfb68fb9e4f294be0161179091a541bcf2",
+    "staff_task_revisions": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "email_report_active": "aad7e8a112cca5c5b29ef7801f2f2b7e904c6242dfc31ab072da68f7f09713a0",
+    "max_email_report_refs": "6a04af62743c976ed9fa7313ecafc8be9c07184ab6ac473a5999584438aa2c0c",
+    "email_autonomy_actions": "3b63053240ad08113013904379d57ea94584f170117fd02ce2ca668aa8824a1e",
+    "approvals": "daa9becefe1be549037def266a303ef295aae67835c9c710a1fc6b54e601053d"
+  },
+  "cold_restore_verified": true,
+  "production_modified": false
+}

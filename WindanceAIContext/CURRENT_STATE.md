@@ -1,5 +1,9 @@
 # Current Operating State
 
+## October1 23:30UTC — scoped email owner guard deployed
+
+Corrected the reproduced internal /message cross-owner email/approval path with request-local owner context and guarded private capabilities.32 cross-owner HTTP cases, two William compatibility cases,18 primitive guards, concurrency/reset and existing14 snapshot tests passed; sender-aware intake and a synthetic shared training route preserved. Fresh source/full-database backup, cold checks and off-host hashes verified. Restarted only Harness outside SAM protected hours. The initial oversized-number live probe tested the wrong general route and failed its assertion; a corrected supported numbered-email probe verified the running service withholds Shawn access. Eight protected tables unchanged; health200. No real mailbox action/send/Odoo/model call. Harness hash is now db8a435907a2fb49796818a17b29334874b1919d6a03640901a22b6b12ea8195; preserve this guard when rebasing older candidates. Direct service credentials, privileged tool scope and broader memory privacy are not solved by this scoped fix. Evidence/recovery: archive/20261001-email-owner-guard/email-owner-guard-deployed-20261001.md. Warden remains suspended; alarm repair browser-blocked; Phase1 open.
+
 ## October1 23:10UTC — registered staff monitor restored
 
 Loaded unchanged com.windance.profile-staff-runner in HERALD user/501 after inspecting retry semantics, confirming36terminal registered tasks/no active work/no eligible delivery retries, fresh full SQLite backup, isolated actual-function no-dispatch/no-send test and verified off-host hashes. First live cycle returned ok, zero followups/invalid timestamps and no legacy queue sweep; full task/run/delivery/revision hashes unchanged. Exact cause of system-Python database-open failure remains unknown; application Python passed integrity and semantic checks. Source and schedule definitions unchanged. Warden remains suspended; no SAM/phone change. Recovery, evidence and remaining limits: archive/20261001-staff-monitor-recovery/staff-monitor-recovery-20261001.md. Phase1 remains open; future work and reboot persistence still need verification.
@@ -767,6 +771,7 @@ HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no er
 
 ## September30 project authority and release-watch handoff
 William authorized sustained agentic-stack execution with evidence gates. Phase1 remains open; original pilots restored. Priorities: email, network/software upkeep, read-only unpaid invoices. SAM protected22:00–05:00 America/Denver. See projects/AGENTIC_STACK_PROJECT_2026-09-30.md. Two-hour continuation and daily08:00 progress report are active in the owning chat. William confirmed HERALD OS update complete; live26.7.1/build25G241 corroborates version. Former15-minute upgrade polling is now daily10:00 release watch; see projects/SOFTWARE_RELEASE_WATCH_2026-09-30.md. Distinct Harness/runner/manager health investigation belongs to the stack project, preserving live Warden consensus. No service, route or business data changed to establish these records and automations.
+
 
 
 
