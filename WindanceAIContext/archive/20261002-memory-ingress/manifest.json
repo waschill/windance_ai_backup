@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "memory-ingress-candidate-20261002.md",
+    "sha256": "d90bda2455b47389ce4d4a7d083da5a6b9e4eba08144be781ff0c3d80300e36d"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "1c09f55e84e44ac7b3e54ef9e3039da45dd7e23a3ed6584eb6f003a8da40e45d"
+  },
+  {
+    "path": "test_memory_ingress_policy.py",
+    "sha256": "876d6074b7e53a1d625d44ec6f6fdee715f2bc49ff2f0938c75aa767414739b2"
+  },
+  {
+    "path": "test_owned_fact_store.py",
+    "sha256": "fa55da3b025f435e3feede362f4dd56b52d4208f615c4b3ae4fd9c48f7e6edf4"
+  }
+]
