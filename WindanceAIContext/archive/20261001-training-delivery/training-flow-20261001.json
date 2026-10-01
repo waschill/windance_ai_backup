@@ -1,0 +1,31 @@
+[
+  {
+    "id": "wr_train_get",
+    "url": "http://192.168.36.21:8791/training/today",
+    "method": "GET",
+    "ret": "obj"
+  },
+  {
+    "id": "wr_train_format",
+    "func": "const res = msg.payload || {};\nconst reply = String(res.reply || \"No training schedule returned from Herald.\").trim();\nmsg.payload = `Windance daily training report:\n\n${reply}`;\nreturn msg;"
+  },
+  {
+    "id": "wr_train_send",
+    "func": "let text = String(msg.payload || \"\").trim();\nif (!text) return null;\nmsg.payload = Buffer.from(JSON.stringify({text}), \"utf8\").toString(\"base64\");\nreturn msg;"
+  },
+  {
+    "id": "wr_train_exec",
+    "command": "/usr/bin/python3 /Users/zuzu/bin/send_william_imessage_payload.py",
+    "addpay": true,
+    "append": "",
+    "timer": ""
+  },
+  {
+    "id": "wr_train_eod_memory_format",
+    "func": "const res = msg.payload || {};\nconst reply = String(res.reply || \"No training schedule returned from Herald.\").trim();\nconst today = new Date();\nconst yyyy = today.getFullYear();\nconst mm = String(today.getMonth() + 1).padStart(2, \"0\");\nconst dd = String(today.getDate()).padStart(2, \"0\");\nconst iso = `${yyyy}-${mm}-${dd}`;\nconst key = `${yyyy}_${mm}_${dd}`;\nconst memValue = `Windance daily training schedule final snapshot for ${iso}.\n\n${reply}\n\nThis is the end-of-day historical snapshot saved after the workday, so use this record for later questions about what the training schedule was on this date rather than re-reading the current Odoo work schedule.`;\nmsg.method = \"POST\";\nmsg.url = \"http://192.168.36.21:8791/memory\";\nmsg.headers = {\"Content-Type\":\"application/json\"};\nmsg.payload = JSON.stringify({kind:\"daily_training_schedule\", key, value:memValue, confidence:0.98, source:\"SAL Node-RED 9 PM final training snapshot\"});\nreturn msg;"
+  },
+  {
+    "id": "wr_outcome_training",
+    "func": "const p=msg.payload; const code=(p && typeof p === \"object\") ? p.code : p;\nconst receipt={job:\"training\",correlation:String(msg._msgid||\"missing\"),exit_code:Number.isInteger(code)?code:null};\nreturn {payload:Buffer.from(JSON.stringify(receipt)).toString(\"base64\")};"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "recipient_resolves": false,
+  "error_type": "RuntimeError",
+  "missing_configuration": true,
+  "log": {
+    "exists": true,
+    "mtime": 1790777408.634653,
+    "missing_recipient_mentions": 0,
+    "odoo_read_failure_mentions": 0,
+    "error_lines": 2
+  }
+}

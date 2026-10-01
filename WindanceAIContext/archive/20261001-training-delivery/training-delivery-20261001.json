@@ -1,0 +1,20 @@
+{
+  "recipient_nodes": [
+    {
+      "id": "wr_brief_format",
+      "name": "Format daily briefing",
+      "has_recipient": true
+    },
+    {
+      "id": "wr_mail_format",
+      "name": "Format read-only mail report",
+      "has_recipient": true
+    },
+    {
+      "id": "wr_error_format",
+      "name": "Format report error",
+      "has_recipient": true
+    }
+  ],
+  "training_receipts_7d": []
+}

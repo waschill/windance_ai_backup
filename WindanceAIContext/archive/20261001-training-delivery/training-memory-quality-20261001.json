@@ -1,0 +1,8 @@
+{
+  "records": 90,
+  "earliest": "2026-07-01T14:09:59.204338+00:00",
+  "latest": "2026-09-30T03:00:01.538130+00:00",
+  "missing_response_rows": 0,
+  "upstream_error_rows": 1,
+  "scope": "only daily_training_schedule business-memory metadata; no raw values"
+}

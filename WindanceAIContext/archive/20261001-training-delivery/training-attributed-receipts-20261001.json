@@ -1,0 +1,61 @@
+{
+  "match_method": "exact report prefix in attributedBody; metadata only",
+  "rows": [
+    {
+      "rowid": 3018,
+      "service": "SMS",
+      "sent": 0,
+      "delivered": 0,
+      "utc": "2026-09-24 13:10:02",
+      "matches_configured_william": false
+    },
+    {
+      "rowid": 3041,
+      "service": "SMS",
+      "sent": 0,
+      "delivered": 0,
+      "utc": "2026-09-25 13:10:02",
+      "matches_configured_william": false
+    },
+    {
+      "rowid": 3084,
+      "service": "SMS",
+      "sent": 0,
+      "delivered": 0,
+      "utc": "2026-09-26 13:10:01",
+      "matches_configured_william": false
+    },
+    {
+      "rowid": 3103,
+      "service": "SMS",
+      "sent": 0,
+      "delivered": 0,
+      "utc": "2026-09-27 13:10:02",
+      "matches_configured_william": false
+    },
+    {
+      "rowid": 3182,
+      "service": "SMS",
+      "sent": 0,
+      "delivered": 0,
+      "utc": "2026-09-28 13:10:02",
+      "matches_configured_william": false
+    },
+    {
+      "rowid": 3213,
+      "service": "iMessage",
+      "sent": 1,
+      "delivered": 1,
+      "utc": "2026-09-29 13:10:03",
+      "matches_configured_william": true
+    },
+    {
+      "rowid": 3281,
+      "service": "iMessage",
+      "sent": 1,
+      "delivered": 1,
+      "utc": "2026-09-30 13:10:02",
+      "matches_configured_william": true
+    }
+  ]
+}

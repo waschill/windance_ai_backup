@@ -1,0 +1,199 @@
+{
+  "historical_config_comparisons": [
+    {
+      "file": "flows.backup-before-frontdoor-imessage-order-20260812-091817.json",
+      "mtime": 1786547898.8599408,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-error-hardening-20260812-091938.json",
+      "mtime": 1786547980.0803144,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-herald-identity-20260815-111819.json",
+      "mtime": 1786547979.879944,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-herald-identity-20260815-111835.json",
+      "mtime": 1786547979.879944,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-order-20260812-091212.json",
+      "mtime": 1786547533.4799619,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-rowid-rbe-20260702-220434.json",
+      "mtime": 1783051474.3602865,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-single-message-.json",
+      "mtime": 1786177480.687957,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-imessage-single-message-20260808-0820.json",
+      "mtime": 1786177500.6999192,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-safe-imessage-sender-20260704-102410.json",
+      "mtime": 1783182250.0066352,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-sam-wifi-monitor-20260909.json",
+      "mtime": 1789016127.868263,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-training-sms-service-20260703-102739.json",
+      "mtime": 1783096059.9550064,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-vega-diagnostics-20260704-102138.json",
+      "mtime": 1783182098.4982557,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-vega-diagnostics-cleanup-20260704-102510.json",
+      "mtime": 1783182310.0979927,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-vega-orchestrator-20260704-100209.json",
+      "mtime": 1783180929.3127778,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-vega-reply-fix-20260704-101911.json",
+      "mtime": 1783181951.111249,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.backup-before-vega-sim-endpoint-20260704-101955.json",
+      "mtime": 1783181995.0553906,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-20260724-safe-noon-mail-delivery",
+      "mtime": 1784917685.2077544,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-add-sal-device-status-20260703-110543",
+      "mtime": 1783096059.9581454,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-device-cache-20260711-201341",
+      "mtime": 1783822421.3106775,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-disable-vega-prefix-20260710-083530",
+      "mtime": 1783694074.3799958,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-herald-first-",
+      "mtime": 1784249449.4826455,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-herald-first-20260716-185058",
+      "mtime": 1784249458.1911888,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-imessage-to-herald-20260710-083434",
+      "mtime": 1783201030.2062008,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-morning-status-20260711-202857",
+      "mtime": 1783823337.3581033,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-status-cards-20260711-192946",
+      "mtime": 1783819786.1086252,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.bak-vega-default-20260808",
+      "mtime": 1786191184.0595894,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-delivery-receipts-20260902-084450.bak",
+      "mtime": 1788321384.240979,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-hal-metrics-bridge-20260725-214710.bak",
+      "mtime": 1785036743.5882776,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-imessage-outbox-20260902-084303.bak",
+      "mtime": 1788360183.87298,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-mail-delivery-repair",
+      "mtime": 1785262421.4068701,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-report-routing-20260905-075217.bak",
+      "mtime": 1788616338.2455082,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-report-stagger-20260902-085729.bak",
+      "mtime": 1788360290.2556596,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-router-wan-gauge-20260826-214045.bak",
+      "mtime": 1786814315.4390776,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-sam-cpu-20260725-210344.bak",
+      "mtime": 1785001489.4675696,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-sam-temp-alarm-20260725-213223.bak",
+      "mtime": 1785035024.7118495,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-shawn-http-route-fix.bak",
+      "mtime": 1788369507.1343815,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.before-shawn-mail-20260902-111826.bak",
+      "mtime": 1788361049.4134839,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.pre-morning-consolidation-.bak",
+      "mtime": 1785769222.9279666,
+      "training_recipient_matches_private_shawn_pin": true
+    },
+    {
+      "file": "flows.json.windance-syncthing-20260725114449.bak",
+      "mtime": 1784917695.6440938,
+      "training_recipient_matches_private_shawn_pin": true
+    }
+  ]
+}
