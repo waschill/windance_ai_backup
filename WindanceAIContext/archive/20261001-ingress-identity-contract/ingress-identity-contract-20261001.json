@@ -1,0 +1,39 @@
+{
+  "source_sha256": "db8a435907a2fb49796818a17b29334874b1919d6a03640901a22b6b12ea8195",
+  "cases": [
+    {
+      "trusted_host": true,
+      "credential_present": false,
+      "claimed_owner": "william",
+      "passed_middleware": true
+    },
+    {
+      "trusted_host": true,
+      "credential_present": false,
+      "claimed_owner": "shawn",
+      "passed_middleware": true
+    },
+    {
+      "trusted_host": false,
+      "credential_present": true,
+      "claimed_owner": "william",
+      "passed_middleware": true
+    },
+    {
+      "trusted_host": false,
+      "credential_present": true,
+      "claimed_owner": "shawn",
+      "passed_middleware": true
+    },
+    {
+      "trusted_host": false,
+      "credential_present": false,
+      "claimed_owner": "william",
+      "passed_middleware": false
+    }
+  ],
+  "finding": "Service authorization does not bind the claimed person. Downstream shown here is a synthetic marker, not a real action.",
+  "production_requests": 0,
+  "model_calls": 0,
+  "dispatches": 0
+}

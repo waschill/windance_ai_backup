@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "ingress-identity-contract-20261001.json",
+    "sha256": "9ca27da97dac0bc1ba3066208129821481cfcad5e3cb6a4e3ec805fea40c95eb"
+  },
+  {
+    "path": "ingress-identity-contract-20261001.md",
+    "sha256": "3852b3200e1d519a290671a6205088c83e16dd1ac34c325012753f8f7781ef4c"
+  },
+  {
+    "path": "test_ingress_identity_contract.py",
+    "sha256": "7cba76dd306d105532e0c1b3bfe37cb3c59f09aae62efe0a7ecb0ea2cf66e322"
+  }
+]

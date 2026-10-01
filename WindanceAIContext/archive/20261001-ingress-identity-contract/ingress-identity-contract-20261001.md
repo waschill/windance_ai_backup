@@ -1,0 +1,15 @@
+# Person identity versus service authorization — October 1
+
+Read-only source audit and isolated current-function tests; no production requests or changes.
+
+Harness source SHA256: db8a435907a2fb49796818a17b29334874b1919d6a03640901a22b6b12ea8195. Its middleware admits trusted source hosts or a configured bearer credential. The message payload supplies user and defaults it to william. The existing request-local email guard reads that field. Five actual-middleware synthetic tests confirm both named owners pass the same service authorization; an untrusted unauthenticated fixture is rejected. This does not prove an unauthenticated general-LAN bypass or historical disclosure. The downstream test is only a marker, not the real message handler.
+
+The manager /messages handler accepts owner from its body, defaults missing owner to William, and validates membership in William/Shawn. That validates spelling, not person identity. Do not describe either default or the scoped email guard as authenticated per-person isolation.
+
+SAL's existing /Users/zuzu/bin/imessage_herald_bridge.py supplies a useful upstream identity source: it reads incoming Messages rows and sender handles, normalizes the sender, checks a private ALLOWED mapping, skips unapproved senders, then sets user from that mapping. A stable source row identifier is carried as request_id. ask_herald sends JSON to Harness with Content-Type only; no per-bridge identity assertion is attached there. No private mapping, contacts or message bodies were exported. This is source inspection, not proof of live bridge activity or end-to-end sender authenticity. Its displayed query does not establish direct-chat versus group provenance; that boundary needs inspection too.
+
+Integration direction: preserve verified sender mapping at ingress, authenticate the sending adapter separately, and bind its permitted principals/channels to the server-side credential. Carry immutable principal/source metadata across manager and worker hops. Direct owner sessions require owner-specific authentication. Background producers need explicit service identities and narrowly authorized fact scopes; they must not inherit William by default. Request payloads must not self-grant a person identity. Existing SAM and report callers need a mapped compatibility plan before rejecting ambiguous legacy callers. No credentials were generated or changed and no new public endpoint was introduced.
+
+Next implementation requires a caller/credential map and isolated end-to-end tests of the actual ingress adapters before connecting owned-fact writes. The new storage module is still only a staged component. Preserve separate business/personal facts, no guessing legacy ownership, no shared Hermes export of private facts, and no live message replay.
+
+Evidence: test_ingress_identity_contract.py and ingress-identity-contract-20261001.json. Zero model calls, dispatches, sends, Odoo calls or service changes. No rollback required for this audit. Phase 1 remains open.

@@ -198,3 +198,7 @@ Actual writer in disposable SQLite reproduces different-owner same-key overwrite
 ## October1 owned-fact storage candidate passes isolated contract tests
 
 Eight HAL SQLite tests passed for separate owner/business/personal keys, revision-checked correction, deletion/recreation, explicit revision-bound sharing/revocation and atomic write/readback failures. Component is staged only; no production schema or memory change. Authenticated ingress, source validation, eight existing writers, grant-event audit, retrieval and Hermes-copy integration remain incomplete. Exact implementation and limits: archive/20261001-owned-fact-store/owned-fact-store-candidate-20261001.md. Zero model calls or external actions; Phase1 open.
+
+## October1 identity integration gate traced to service boundaries
+
+Five actual Harness middleware fixtures distinguish service authorization from person identity; both owner claims pass the same trusted-host/bearer boundary. Manager owner defaults likewise do not authenticate a person. SAL Messages ingress maps approved sender handles to owners, but its inspected request carries no per-adapter assertion. No general-LAN bypass, live replay or historical disclosure is established. Source trace, limits and next integration requirements: archive/20261001-ingress-identity-contract/ingress-identity-contract-20261001.md. Owned-fact component remains staged until ingress/caller scopes and derived copies are reconciled. No production/model/send changes; Phase1 open.
