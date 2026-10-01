@@ -1,0 +1,33 @@
+{
+  "test": "restored manager HTTP application, workers suppressed",
+  "starts": [
+    {
+      "iteration": 1,
+      "http": 200,
+      "projects": 3,
+      "retained_rows_unchanged": true,
+      "health": "starting (workers intentionally suppressed)"
+    },
+    {
+      "iteration": 2,
+      "http": 200,
+      "projects": 3,
+      "retained_rows_unchanged": true,
+      "health": "starting (workers intentionally suppressed)"
+    }
+  ],
+  "source_hash": "1d2c67417ca4080158db8e5c9840b5c602523856bfc7551ad0f2c8276a4c7a83",
+  "database_input_hash": "66c0d5043d10d09882411e7b8a095a974fef5f7378c485a411ad5602739ef0f0",
+  "input_hashes_unchanged": true,
+  "row_counts": {
+    "projects": 3,
+    "stages": 24,
+    "events": 98
+  },
+  "interfaces": [
+    "lo"
+  ],
+  "external_or_worker_attempts": 0,
+  "elapsed_seconds": 0.081,
+  "limitations": "selected operational tables only; no credentials, message recovery, worker execution, dispatch, sending, scheduling or production boot test"
+}

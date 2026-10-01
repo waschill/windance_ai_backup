@@ -1,0 +1,30 @@
+[
+  {
+    "file": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "file": "manager-http-restore-20261001.json",
+    "sha256": "c70918afa0fc804c16f4a7fbe36f5aa9274e8ab7969e48d7ad4f6ec80490f1bc"
+  },
+  {
+    "file": "manager-restore-container-boundary.json",
+    "sha256": "8d442dc74b095d771ef36954c0f76883098a991edfe57f79f3a255f4ef487964"
+  },
+  {
+    "file": "manager-restore-container-exit.json",
+    "sha256": "5760dc975279032a384b29e5fafa78f458e1fa9205aa4648adb56dde0c5bfefd"
+  },
+  {
+    "file": "manager-restore-input-hashes.json",
+    "sha256": "e750e8cf3067971c78e769e9c7666ef40c75ae4ffb555d09932d39846741f3d2"
+  },
+  {
+    "file": "README.md",
+    "sha256": "fb695c2688bd1f5a6ddb984986266aea54ef10a334d2e49d8eeef1ac8f233999"
+  },
+  {
+    "file": "restore_manager_isolated.py",
+    "sha256": "0bba5551f753416e1a7727cf5152b3ef5d60f87c3cad1e657e86be53583e6095"
+  }
+]
