@@ -730,3 +730,7 @@ Production/lab snapshot copies return health200 and unauthenticated chats/users4
 ## October2 restored WebUI ordinary-user chat isolation verified
 
 Both isolated snapshots pass eight actual HTTP checks using synthetic ordinary users/test-signed sessions: owner read, cross-user list/read/edit/delete denial, admin denial, invalid token and content retention. Backups unchanged; containers removed. No production accounts/services altered. Real login, broader knowledge/memory privacy, lab ownership and interface acceptance remain open. Evidence: archive/20261002-webui-restored-privacy/webui-restored-privacy-20261002.md.
+
+## October2 restored WebUI knowledge metadata boundaries verified
+
+Both snapshots pass eight synthetic authenticated HTTP checks: ordinary cross-user reads/listing/edits/deletes denied, owner state preserved, administrator read explicitly demonstrated. Initial fixture expected wrong denial statuses; corrected to exact source-defined400/access-prohibited. No attached-file/vector/citation or real-login acceptance claimed. Backups unchanged, containers removed, production unchanged. Evidence: archive/20261002-webui-knowledge-acl/webui-knowledge-acl-20261002.md.

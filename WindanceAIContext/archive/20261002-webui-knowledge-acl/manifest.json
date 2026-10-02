@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "verify_webui_restored_knowledge.py",
+    "sha256": "4e8b686c793ed82858c1f98d3781f690e37c18a3712a063c9b99c28abf2e4024"
+  },
+  {
+    "path": "webui_knowledge_probe.py",
+    "sha256": "408fce381b718c3b19d74794e22a83890ddfd83e84ddae190e435ccc8fd9adf9"
+  },
+  {
+    "path": "webui-knowledge-acl-20261002.json",
+    "sha256": "a780e83523631e0d470b079b7dccc76c9742e5ff26cc194dc95a44b2aa0e1dd3"
+  },
+  {
+    "path": "webui-knowledge-acl-20261002.md",
+    "sha256": "10ffd4e27748c160cf1aac0f985f4c531874b0a5688c4d2f20861a6e9b3f883f"
+  },
+  {
+    "path": "webui-knowledge-acl-r2-20261002.json",
+    "sha256": "9a8ef965464cf56f07cdd402233b5e157e7cf3cc845bba37505eeccfffcc2e93"
+  }
+]
