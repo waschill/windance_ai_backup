@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "daily_report_cycle.py",
+    "sha256": "978fdda1be109cc17d831788969de5bef669d808a63e270ebb00789fe4fd551d"
+  },
+  {
+    "path": "daily-cycle-installed-20261002.md",
+    "sha256": "cf5b066f3c545156ff53942c0439d776e815cf5c4599ca5ef2d1d249a0d89d22"
+  },
+  {
+    "path": "daily-cycle-installed-probes.jsonl",
+    "sha256": "881403eee292413493a1156ebadba1a5bce4311ed11e8f6b61b83521788b9318"
+  },
+  {
+    "path": "deploy_daily_cycle.py",
+    "sha256": "6a7687f8c6e89f4048e523a7f3b861ebe9d7549e506b836fb551e1b74c5b85fc"
+  },
+  {
+    "path": "prepare_daily_cycle.py",
+    "sha256": "1d5547b5b8624bc6dfee33e9c7368fee620c2bc28751d5f23c2939bc727a1987"
+  },
+  {
+    "path": "receipt_report_transport.py",
+    "sha256": "16a24617694efdd1ea19b094b0473cb896ad5050b6c66fdfc7871a4c033742fe"
+  },
+  {
+    "path": "test_capture_daily_cycle.py",
+    "sha256": "f34afc28d862cf20bc4698293a8c4347dd1ab1d6ebdb13a420a766b846e5cfb5"
+  },
+  {
+    "path": "test_daily_cycle_budget.py",
+    "sha256": "dd866a34b49b5ed148d77098aefb868b5bd5e3c7f5f8f47fb46e331095fb1e7a"
+  },
+  {
+    "path": "test_report_transport_budget.py",
+    "sha256": "fb216fba8dad0fdbcb47a0e9b977fd61ddd620e59c3782267dd4ce6428fc81a7"
+  },
+  {
+    "path": "test_sentinel_daily_cycle.py",
+    "sha256": "c60ea694e3f4aabafa6038a6b00fdb243c49e15c98a4b533e94b3d86acccf6b2"
+  },
+  {
+    "path": "verify_daily_cycle_backup.py",
+    "sha256": "ce9b4e3cfa760ae4b352b8d609591591573f58342cd8b07a0e40b028861a7159"
+  }
+]

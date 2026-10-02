@@ -997,3 +997,7 @@ Current sourcec2fa4c908a2ff5cdcc92d58da0ac5cf38534d800a235cbdf3bfcaed5341e3ef7/f
 ## October2 Capture and Sentinel receipt-aware calendars restored without immediate runs
 
 Exactly two user/501 jobs registered waiting at original19:00/06:50 Mountain schedules, RunAtLoad=false, zero runs/empty journals. Eleven-file off-host backup verified, dry runs blocked outbound/writes and succeeded. No catch-up/send; natural acceptance pending. Prior-day reconciliation cadence needs bounded continuation review. Recovery: archive/20261002-daily-receipt-restored/daily-receipt-restored-20261002.md.
+
+## October2 daily rollover correction installed before first restored calendar runs
+
+Capture/Sentinel can reconcile prior receipt then handle today in same invocation, maxone new submission/two transport passes with shared budget. Fourteen-file backup/two cold journals verified; tests and installed no-send dry runs pass. Plists/calendars/journals unchanged, scheduled runs0. Recovery: archive/20261002-daily-cycle-installed/daily-cycle-installed-20261002.md. Natural acceptance still pending.

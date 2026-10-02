@@ -1,0 +1,16 @@
+# Daily report rollover correction installed — 2026-10-02
+
+Capture and Sentinel now use daily_report_cycle: at most two journal/transport passes per scheduled invocation. It first reconciles an older attempted report; only if that receipt is verified can it continue to today's snapshot. At most one new submission occurs. Unresolved old work holds without rendering/submitting today; repeated verified work is not resent. This corrects the prior requirement for a second invocation after older verification, which could otherwise postpone the current report by a day.
+
+A150second shared transport allowance shrinks across passes; each SSH call is capped at75seconds and receives a relative endpoint wait budget (maximum55seconds). Exhaustion before the second pass creates no new daily snapshot. This is not a hard whole-process deadline for report rendering, filesystem access or SQLite; those limits are separate. There is no unbounded backlog loop or retry under a new identity. Journal schema2 remains unchanged.
+
+Installed source hashes:
+Capture a7ab085cc89bf5cc4a7cba7bfa2a9b03733fab57c3311e9107d0ba38963a805a.
+Sentinel f23e296237b6439656b735a13cd8c19700b45671f5744d9ebc2360dadc64b2b8.
+New daily_report_cycle helper978fdda1be109cc17d831788969de5bef669d808a63e270ebb00789fe4fd551d; updated transport16a24617694efdd1ea19b094b0473cb896ad5050b6c66fdfc7871a4c033742fe. Only these two daily service directories changed; Harness and shared wrapper copies were not changed.
+
+Tests: ten wire-contract cases, actual Sentinel main4cases, actual Capture main5cases, shrinking/exhausted/unresolved cycle budgets, invalid transport budgets/no transport and timeout result. Midnight Sentinel resolves old then submits current in the same invocation; Capture resolves old then correctly skips a current empty inbox. All synthetic, no sends. Fresh14-file backup and two cold journal copies passed independent HAL hashes/integrity/schema/empty checks before deployment. Preflight confirmed both registered jobs had no process and zero runs, empty journals, exact old hashes, sufficient distance from calendar times, receiver health and Warden pause. Atomic file replacement required no service restart. Plists, schedules and empty journals were unchanged; launch counters stayed zero. Installed dry runs passed against current data with outbound/process/writes blocked, no report contents published.
+
+Recovery: HERALD /Users/herald/backups/daily-cycle-deploy-20261002; HAL C:\Users\wasch\Documents\WindanceBaselineRecovery\20261002-daily-cycle-deploy\daily-cycle-deploy-20261002. This incremental source backup is used with the unchanged caller-r2 dependency recovery package. Preserve current journals; never restore these empty cold copies over later work. Source rollback preserves identity schema but reinstates delayed-current-day behavior. Inspect active work and exact revisions before any rollback; the installer rejects repeated deployment state.
+
+Expected next natural runs remain Capture October2 at19:00 and Sentinel October3 at06:50 America/Denver. No catch-up or manual message was sent. Real GUI/background-context receipt delivery, observed latency and original training pilot are still unverified. Phase1 open; notes deferred, Warden suspended, phone/Level8/SyncThing unchanged. No new paid commitment; dollar cost unknown.
