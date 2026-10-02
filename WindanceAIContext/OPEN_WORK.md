@@ -514,3 +514,7 @@ Static source audit found direct Trash in always-delete/notify-delete numbered c
 ## October2 actual sender-rule storage integration exposed and corrected continuation after uncertainty
 
 Actual saved-reference/rule/audit/schema tests reproduced a second sender rule being saved after the first Trash response became uncertain. Staged handler now stops the remaining command immediately. Eight sequential normal/lost/empty-latest/invalid-reference cases pass across both rule commands. No real mailbox/model or production changes. Concurrency, identity, operator recovery and final package gates remain. Evidence: archive/20261002-email-direct-rule-stop/email-direct-rule-stop-20261002.md. Phase1 open.
+
+## October2 actual API approval payload incompatibility reproduced and corrected
+
+Action-request route stored a reserved argument field rejected by the staged item journal. Actual model/route/storage/approval/executor composition reproduced zero execution; staged route normalization now passes normal and lost-response scenarios with one synthetic effect and no repeat. Existing records not rewritten. Caller audit also confirms legacy unspecified-owner service context is not identity proof. No actual mailbox/model or production changes. Evidence: archive/20261002-email-action-route/email-action-route-20261002.md. Phase1 open.
