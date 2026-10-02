@@ -930,3 +930,7 @@ Process-local child deadline and POSIX timer stop orphan polling independently o
 ## October2 actual HERALD-SAL disconnect retains one request and stops workers
 
 Interrupted live SSH in query and newly admitted submit cases; independent SAL probes confirm endpoint/worker stop. Reconnected same-key submit preserves one item and unchanged bytes. Synthetic fixture removed; no real sends/production changes. Full package/caller coverage/historical cutover gates remain. Evidence: archive/20261002-ssh-disconnect-recovery/ssh-disconnect-recovery-20261002.md.
+
+## October2 capture reminder durable caller passes actual-main isolated cases
+
+Count-only report uses persisted identity and receipt transport; empty inbox does not discard previous uncertain attempt. Five capture and four shared Sentinel cases pass. Live19:00 system-Python job remains unregistered/source unchanged; actual-DB interpreter and cold/history/receiver gates remain. Evidence: archive/20261002-capture-durable-main/capture-durable-main-20261002.md.

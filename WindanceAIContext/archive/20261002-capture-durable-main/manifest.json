@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "capture-durable-main-20261002.md",
+    "sha256": "44980cab7a5128607ca9e326b237e20c8951ab9cf4fce22dd43ce490bcd7f86f"
+  },
+  {
+    "path": "daily_report_journal.py",
+    "sha256": "852524bed04a84854f8fe8f442090dd2c83f697191cf414c96e58602e97bed60"
+  },
+  {
+    "path": "prepare_capture_durable.py",
+    "sha256": "f92719a7a06b24dabed41d4999df35333a1021f24dd462c873442ab56c3ff379"
+  },
+  {
+    "path": "test_capture_durable_main.py",
+    "sha256": "6430b8fb8cba8093df05059437e402c4a46599745c7da0fc8a7e0d950c68ca0c"
+  }
+]
