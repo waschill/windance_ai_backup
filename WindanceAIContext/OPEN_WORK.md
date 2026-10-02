@@ -358,3 +358,7 @@ Real isolated child exits before send, after synthetic acceptance and after conf
 ## October2 composed SAM source/schema candidate passes isolated checks
 
 Private exact-current-source candidate changes only schema init, memory acknowledgment and history intent call. Actual schema revealed TEXT item IDs; staged journal corrected before deployment. Candidate connect/init/commit/history/HTTP functions pass normal, late-memory-error and lost-history cases with all effects intercepted; repeated schema initialization and prior intent/process/cold tests pass. Full startup, pre-existing DB recovery, reconciliation and live rollout gates remain. Packet: archive/20261002-sam-full-candidate/sam-full-candidate-20261002.md. No production/Odoo/API/model changes; Phase1 open.
+
+## October2 fresh SAM database backup and schema/cold recovery verified
+
+Read-only online snapshot, pinned original/candidate schema functions and repeated initialization preserve all eleven existing tables/rows; candidate adds only empty intent table. Seven private files copied to HAL and independently hashed; four SQLite copies pass integrity and all-table comparisons. Service/two timers remain active with no restart, API, Odoo or model calls. No private rows/source published. Full startup, unknown-outcome reconciliation, need-clear concurrency and deployment gates remain; staged only, Phase1 open. Recovery instructions: archive/20261002-sam-existing-db-recovery/sam-existing-db-recovery-20261002.md.

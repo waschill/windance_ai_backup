@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-existing-db-offhost-20261002.json",
+    "sha256": "8023a4f9cb7d2d3f2c97f1b56cf5473eb4160fbd1ffa68965806bde57c2e1a51"
+  },
+  {
+    "path": "sam-existing-db-recovery-20261002.md",
+    "sha256": "b0ee974b58a4e747f40a71de4348dcac888e52867f255e8c3fcea8c5990fd1b0"
+  },
+  {
+    "path": "test_sam_existing_database_recovery.py",
+    "sha256": "0ed604335a9050cf3a3605c7c4248525b36788fd6494964c576fb2f7612a9e7d"
+  },
+  {
+    "path": "verify_sam_existing_database_offhost.py",
+    "sha256": "e151ae8c00bfdab5663542528b18f0054a15919bec0bd6d208e83c26031f19fb"
+  }
+]
