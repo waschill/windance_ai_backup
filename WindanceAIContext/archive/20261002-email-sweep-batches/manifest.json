@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_sweep_batches.py",
+    "sha256": "fe1ec9b07f9a0dea40162c41de8526c24433af756537d12fd729abddaa993c64"
+  },
+  {
+    "path": "build_sweep_batch_caller.py",
+    "sha256": "1614d4693725e7f9ef3cb75c05b0d2bacca742b5ef44cb81212a466ff7b0ffb4"
+  },
+  {
+    "path": "email_sweep_batch.py",
+    "sha256": "32993cd0d89c593a86bed98e5cbc9a76b3afae4a3bb042bba80125195e3ee9e8"
+  },
+  {
+    "path": "email_sweep_contract.py",
+    "sha256": "44568092ff8d50a7f8156c6331ac022ea2ab8a0dd6ed0caf07b625c4fb3d2833"
+  },
+  {
+    "path": "email-sweep-batches-20261002.md",
+    "sha256": "22e0f3f30778631eefff422f240d70277b312226e6bac04705d91d84cbba0ce3"
+  },
+  {
+    "path": "test_email_batch_cursor_crash.py",
+    "sha256": "de33d26fa21f44380c6c097688233dfeb37ee91756c54dd83ab30e0ec305588a"
+  },
+  {
+    "path": "test_email_batch_uncertainty.py",
+    "sha256": "36ed9105f77f92c32116dba57106b86d67e1bfbe4a923c08a6095c89c95d413a"
+  },
+  {
+    "path": "test_email_sweep_batch.py",
+    "sha256": "6ddbc07034b08066555151fdacd8215ac8d5732a9635520fcf7bd299bbd786ff"
+  },
+  {
+    "path": "test_email_sweep_fair_batches.py",
+    "sha256": "4003aff467ec9e103eb516d9981659551f4a63fa264b962a82a0de84bf4fa0f9"
+  },
+  {
+    "path": "test_email_sweep_message_cap.py",
+    "sha256": "42d88a0c7c5269b7cea4719f6183e5ab1a2fcb8af5fb4ce51f2ab59ca26ddac5"
+  },
+  {
+    "path": "test_sweep_batch_caller.py",
+    "sha256": "f4006f58c9799d3428708f0a993eb00f64056f2c70d15e0091f1eef77c9538e7"
+  }
+]

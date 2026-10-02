@@ -1029,3 +1029,7 @@ Fixed report/sweep worker now shares256 API/OAuth exchanges across transports/th
 ## October2 email partial-write budget exhaustion held without replay
 
 Actual worker/local SDK fixture with budget5 confirms mark-read once, no Trash, unconfirmed intent preserved and second run no write. Live read-only counts181active sender rules and5pending approvals establish batching need and stale prior approval count. No production changes; bounded fair batching and joint caller coverage contract next. Evidence: archive/20261002-email-partial-budget-recovery/email-partial-budget-recovery-20261002.md.
+
+## October2 staged bounded email batches rotate with durable partial coverage
+
+Eight-rule/twenty-message batches and CAS cursor pass fairness/change/concurrency tests; actual worker covers20rules in3runs/27reads, respects20message cap and survives abrupt exit before cursor without repeat writes. Uncertain actions retain cursor. Strict matching caller labels partial; no live changes. Fresh recovery/rebase, historical-count semantics and identity/history/auth gates remain. Evidence: archive/20261002-email-sweep-batches/email-sweep-batches-20261002.md.
