@@ -626,3 +626,7 @@ Full r5 module uses actual durable client/urllib transport against staged FastAP
 ## October2 exact current email package startup and off-host recovery pass
 
 Fresh read-only online snapshot, current ten-file stage4600e59 and unchanged live source verified. Actual baseline/candidate ASGI startup health200; 28 non-sequence tables preserved, six recovery tables empty, cold copy equal. HAL independently verifies 15 files and four SQLite copies. No external/Gmail/model/service/SAM action. Account/human identity, provider uncertainty and deployment gates remain. Evidence: archive/20261002-email-current-package-recovery/email-current-package-recovery-20261002.md.
+
+## October2 staged email sweep holds partial reads and removes raw provider errors
+
+Before/after actual-function tests reproduce partial-batch continuation and diagnostic leakage, then verify read failures stop before actions, fixed HTTP503/502 and honest held domain-rule replies. Current private ten-file candidate b30bd912 remains uninstalled; previous full recovery certifies4600e59 only. Unknown action effects, identity and transport gates remain. No real mailbox/model/service/SAM action. Evidence: archive/20261002-email-sweep-hold/email-sweep-hold-20261002.md.
