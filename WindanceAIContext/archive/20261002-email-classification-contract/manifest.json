@@ -1,0 +1,46 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_classification_candidate.py",
+    "sha256": "1552053adcc0cbb79c4a91b210c603ee3e4a043f6c4f79fad9035f92c287af0a"
+  },
+  {
+    "path": "email_baseline_probe.py",
+    "sha256": "bb7c42c904f5b950c4399615903c8e0f987a36efbe568ca9acf5f815c2c230d6"
+  },
+  {
+    "path": "email_classification_contract.py",
+    "sha256": "3866fc9b9294b2e9f354c2f43ea0194616ebe0ec723fb133ba3fd4bd9bd236fc"
+  },
+  {
+    "path": "email-classification-build-20261002.json",
+    "sha256": "c2278ebeb18978a79ad08f5698d7b7219c4caaeb7666e5ce1094abcfa703eeb0"
+  },
+  {
+    "path": "email-classification-contract-20261002.md",
+    "sha256": "0bd1a66c0abbf268e6cc9922f34ba800e4d8bd96a7f21c7704fc5d9220beff69"
+  },
+  {
+    "path": "email-classification-report-20261002.json",
+    "sha256": "b0a7dbdb71a7724fcb2c263909c7d7780cdcf02985c7c3cc71b74ee20b93c02b"
+  },
+  {
+    "path": "email-classification-tests-20261002.json",
+    "sha256": "5c517f5a9fff1781d71633fbc8b50b5119612a962191a1cb162d37f875eb79cf"
+  },
+  {
+    "path": "email-runtime-metadata-20261002.json",
+    "sha256": "19bebd757cb33655dc67fd6e281da956d215cac6d1c4cca4a31f0e6a4d44fb7c"
+  },
+  {
+    "path": "test_email_classification_contract.py",
+    "sha256": "54598581e568e7e8667c8dc6412196440d97f2843710947bf6443661675a0051"
+  },
+  {
+    "path": "test_email_classification_report.py",
+    "sha256": "5ad84d4f39928b16b8b2e408399c36aef28301f6634b5e2eb3d407bccb881ba6"
+  }
+]

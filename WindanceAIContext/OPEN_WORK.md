@@ -374,3 +374,7 @@ Actual SAM helper with synthetic remote effects can clear a newer need after res
 ## October2 composed SAM two-journal commit candidate passes
 
 Private full-source r2 composes history intent, exact-acknowledgment clear intent and memory guard. Six actual-schema/commit-path synthetic scenarios pass: no repeated confirmed writes, unknown outcomes block commit, and newer needs survive lost-response/local-receipt retries. No production or real Odoo calls. Earlier r1 startup/recovery does not certify r2. Atomic first-write versioning/operation identity, authoritative reconciliation, cutover and deployment remain unresolved; existing narrow Odoo permission does not authorize new server actions/fields. Packet: archive/20261002-sam-reliability-r2/sam-reliability-r2-20261002.md. Phase1 open.
+
+## October2 email cross-batch classification defect reproduced and correction staged
+
+Live report metadata remains structurally valid with five references. Actual classifier accepts duplicate/other-batch indexes that can overwrite escalation with automatic. One-function candidate validates a complete unique batch before accepting decisions. Nine baseline/nine candidate and three actual-report synthetic scenarios pass; invalid batches leave messages untouched, valid reversible actions preserved. No real mailbox/model/send or production changes. Fresh maintenance/backup/deployment next; owner authentication, semantic quality and uncertain outcomes remain gates. Packet: archive/20261002-email-classification-contract/email-classification-contract-20261002.md. Phase1 open.
