@@ -585,3 +585,7 @@ Actual staged schema/history/clear/commit composition reveals a lost-memory-resp
 ## October2 staged SAM frozen-summary retry correction verified
 
 Private r4 preserves prepared payload across lost acknowledgment, holds changed schedule input and checks configuration presence before effects. Eleven actual-function/schema cases pass with synthetic remotes, including cold-copy retry and changed trigger. No production/SAM changes. Real rollover, pre-freeze crash content, atomic concurrent-edit protection, correction/recommit and Odoo first-clear race remain open; candidate not deployment-ready. Evidence: archive/20261002-sam-memory-snapshot-r4/sam-memory-snapshot-r4-20261002.md.
+
+## October2 actual rollover broadens SAM recovery evidence: r4 failed
+
+Nine actual SAM functions reproduce own-rollover retry conflict, missing pre-freeze carry evidence and stale-summary completion after an in-flight edit. New-carry lost-response case passes; candidate acceptance remains FAILED, uninstalled. Next revision needs durable phase/effect records and atomic schedule-revision finalization. Browser screenshot confirms Always allow but same-origin Chrome tool still denies access; cause unknown, no bypass. Evidence: archive/20261002-sam-rollover-gates/sam-memory-rollover-gates-20261002.md.

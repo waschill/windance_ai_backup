@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-memory-rollover-gates-20261002.md",
+    "sha256": "83d01b8696b0c242eaa5097a7c1ffe11e1802acdbafc11db26463f4d744f34af"
+  },
+  {
+    "path": "test_sam_memory_rollover_r4.py",
+    "sha256": "a41127cbd7d6e6794c031ed375cb72052d17eb7e7ced1ace8df2475a4674f14a"
+  }
+]
