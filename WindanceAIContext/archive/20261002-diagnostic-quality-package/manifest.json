@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_diagnostic_recovery_package_r2.py",
+    "sha256": "683951bf453d58b76f9800dbb02209b557fe4a3fba22752e7274683e158c9d7b"
+  },
+  {
+    "path": "diagnostic-http-worker-quality-regression.json",
+    "sha256": "59e865ba7b352bffcf15441caf53d6fa12dde36b3cb8a67d1527d7516de6f5cf"
+  },
+  {
+    "path": "diagnostic-quality-package-20261002.md",
+    "sha256": "8f5d335998da709406bb1a76b2659ac6734810c0cc9ad61997774083edd38179"
+  },
+  {
+    "path": "diagnostic-recovery-package-r2-20261002.zip",
+    "sha256": "76ddd54a77ae11952078415dae1a322a1434fbcf6df3e1bb42dd15031024efd9"
+  }
+]

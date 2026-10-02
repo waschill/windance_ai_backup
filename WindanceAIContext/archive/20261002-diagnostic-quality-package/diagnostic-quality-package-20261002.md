@@ -1,0 +1,13 @@
+# Corrected diagnostic integration and recovery package — October 2, 2026 UTC
+
+Current staged source recovery ZIP is `diagnostic-recovery-package-r2-20261002.zip`, SHA-256 `76ddd54a77ae11952078415dae1a322a1434fbcf6df3e1bb42dd15031024efd9`. It supersedes the earlier ZIP for current source restoration; retain the original as historical evidence. No production deployment occurred.
+
+The new worker and inspector from `20261002-diagnostic-evidence-quality` passed the actual authenticated HERALD HTTP → claimed ledger → AL isolated worker → protected result path with supported evidence. Unauthenticated submission and cross-principal result access were denied; identical resubmission did not start another worker. Job `33054404a6354391b04c08092d8b55b9`, exact terminal SHA in the accompanying regression record. The temporary listener stopped and the worker container was removed.
+
+The ten-file revision2 package replaces only the worker and inspector pins relative to the earlier package. HAL verified archive/member hashes, isolated extraction and compilation. HERALD restored its API from the ZIP and passed twelve no-dispatch checks. Those recovery checks did not run a worker, create a listener, schedule or send anything. Five separate actual-container evidence-quality cases remain recorded in the preceding packet; the full HTTP test here covers supported evidence, not every insufficient-evidence response through the whole transport.
+
+Restore with the existing `verify_diagnostic_recovery_package.py ARCHIVE EXPECTED_SHA`; append `--test-api` only under the compatible HERALD Python environment for isolated no-dispatch validation. The verifier and environment requirements are recorded in `20261002-diagnostic-package-recovery`. The archive contains no credentials, operational data, service installer or Docker image bytes. Fixed test-path dependency remains; unpacking this archive is not a service deployment.
+
+Remaining gates are unchanged: real identity/provisioning, persistent job storage/consumer, UI, protected logs and streaming bounds, remaining concurrent/crash/cleanup/power-loss cases, general diagnostic reasoning and full original pilot acceptance. Email and training business acceptance are not replaced by these controls. The actual-notes pilot remains owner-deferred; Warden must be restored only at verified overall completion.
+
+One synthetic diagnostic worker ran during the full integration test; application model calls0. No business mailbox/Odoo/send/staff task, SAM interruption, Warden restart, SyncThing/Level8 or phone change. No new charges or resets. Latest account reading remains78% weekly used/22% remaining; total project dollars unknown. Phase1 and overall goal remain open.

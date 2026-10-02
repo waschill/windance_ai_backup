@@ -566,3 +566,7 @@ Ten-file source package matches freshly observed staged host hashes. HAL verifie
 ## October2 unsupported diagnostic repair recommendation reproduced and corrected
 
 Actual worker returned a repair despite contradictory evidence/insufficient status. Staged worker now validates evidence structure/types/hash shape and withholds cause/repair/rollback when unsupported. Five isolated worker cases and receipt-inspector checks pass; completion and diagnostic sufficiency distinguished. Previous ZIP remains historical, not current-revision certification. No production/model/business changes. Evidence: archive/20261002-diagnostic-evidence-quality/diagnostic-evidence-quality-20261002.md.
+
+## October2 corrected diagnostic full transport and current recovery ZIP verified
+
+New evidence-quality worker/inspector pass actual authenticated HTTP-to-AL supported-evidence path with owner isolation and no duplicate. Revision2 ten-file ZIP verified on HAL; restored HERALD API passes twelve no-dispatch checks. Old ZIP retained as history; neither is production deployment or full project acceptance. No business/model/SAM changes. Evidence/current restore point: archive/20261002-diagnostic-quality-package/diagnostic-quality-package-20261002.md.
