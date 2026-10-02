@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "9b45b02958a5d28b019e5ce182d3af3c4d7827922b856360f47096c5f4a1401c"
+  },
+  {
+    "path": "source_bound_facts.py",
+    "sha256": "039b6b91b837608debfe41ce441adf8107c717b7915a2989bebc3e3c2ec9b89e"
+  },
+  {
+    "path": "source_fact_gateway.py",
+    "sha256": "d0f7753dfcaa9aaf6384529b7637ad98cd3ee1ef5ca815a171cfe9d0215cc290"
+  },
+  {
+    "path": "source_memory_api.py",
+    "sha256": "e07de1585084b2d1c1bfc1f4fc9b1703dac2697003173d9b86a0165899e0840e"
+  },
+  {
+    "path": "source-memory-http-20261002.json",
+    "sha256": "1db7b2bde3737d1980b7d616cfa61fa764208ccbb31fe4e228ab838feb0acf16"
+  },
+  {
+    "path": "source-memory-http-20261002.md",
+    "sha256": "6b3b50135b856f424bcfe37c347be3f96a1b68755c68d10f667db93e1efc90e7"
+  },
+  {
+    "path": "test_source_memory_http.py",
+    "sha256": "af1fa2c7440a09157eeacfb526a264f841d3d56a39e34b6335b7c0c48fb9f9d7"
+  }
+]

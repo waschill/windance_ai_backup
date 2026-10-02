@@ -1,0 +1,1 @@
+{"actual_harness_mounted_in_disposable_process": true, "authenticated_source_intent_and_scope_passed": true, "caller_value_override_rejected": true, "quoted_instruction_rejected": true, "cross_owner_withheld": true, "source_drift_withheld": true, "same_source_replay_idempotent": true, "secret_fixture_rejected": true, "production_changes": false, "model_calls": 0}

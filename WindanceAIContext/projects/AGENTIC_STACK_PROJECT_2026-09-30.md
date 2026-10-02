@@ -273,3 +273,7 @@ Harness now rejects recognized secret-like remember commands before incoming aud
 ## October2 source-bound memory candidate passes47component tests
 
 New staged server-side source seam checks owner/channel/reference and exact excerpt, binds source hashes atomically to fact/request, and withholds retrieval after source loss/drift.10new cases plus37existing pass. Content labeled source_quote, not external truth; upstream identity/remember authorization, sharing, inferred habits and conversational integration remain incomplete. No live schema/data/model change. Packet: archive/20261002-source-bound-facts/source-bound-facts-20261002.md. Phase1 open.
+
+## October2 explicit source-intent HTTP memory path tested
+
+Actual disposable Harness app accepts staged authenticated source-derived initial memories, rejects caller value/target overrides and quoted/nonmatching-scope intent, preserves replay identity and withholds other-owner or changed-source reads. Retained source and server parser determine content; ordinary remember is personal, explicit business syntax supported. No production mounting/credentials/schema; actual sender authentication, conversational correction/forget/sharing and legacy integration remain. Packet: archive/20261002-source-memory-http/source-memory-http-20261002.md. Zero model/send/production change; Phase1 open.
