@@ -797,3 +797,7 @@ Runtime now opens existing-only SQLite; missing/empty history holds and provisio
 ## October2 staged receipt lifecycle composes actual sender function
 
 SAL tests compose exact production send_one with intercepted external effect, actual decoder/observer and journal across five two-restart cases. Persistent request hold fixes a later-restart continuation gap; staged schema2, no migration/live changes. Complete queue handler, real store continuity, bounded observation, delayed receipts and consumer rollout remain gates. Evidence: archive/20261002-receipt-outbox-composition/receipt-outbox-composition-20261002.md.
+
+## October2 receipt observation supervised in composed tests
+
+Actual observer now runs through pinned-wheel subprocess with CPU/alarm/wall limits, RSS watchdog and strict private-safe response validation. Five composition/restart cases and six fault cases pass; stalled worker reaped at15.003seconds. Staged only; complete queue/store/deadline/consumer integration remains open. Evidence: archive/20261002-bounded-receipt-observation/bounded-receipt-observation-20261002.md.
