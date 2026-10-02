@@ -1,0 +1,11 @@
+# Actual staged caller-to-Harness HTTP compatibility — October 2
+
+Pinned caller d282c158 and server package manifest d9dd9a97 were composed over a temporary real127.0.0.1 Uvicorn listener. Actual caller main/post_json, urllib transport, Harness HTTP authentication and fixed subprocess worker ran with isolated temporary data/config/log paths. No production service or scheduler was started or changed.
+
+Four cases passed: absent caller authentication made no worker launch; wrong caller authentication was rejected without a launch; matching synthetic authentication completed an actual empty sender-rule sweep with one fixed worker and a valid caller success result; absent server authentication failed without another launch. The isolated data had no sender rules and no Google credential file, so no provider or notice call occurred. Notice destination was an invalid synthetic sentinel. The source and manifest hashes were asserted before running; the worker also enforced its existing manifest policy.
+
+Listener shutdown and thread termination were asserted in finally; tool exit0 confirms cleanup completed. No process or service remains running from this test. Fixture inputs and token were synthetic and stayed private. The first run passed before explicit source hash assertions were added; the pinned repeat passed as well. No broader repetition is needed without a new change or finding.
+
+This closes the basic real-HTTP caller/server auth contract, not the production caller cutover. Nonempty provider semantics are covered separately by local-provider tests, not by this empty integration case. Real mailbox/account/history binding, caller configuration, durable notice identity/receipt, whole-client execution bounds, schedule recovery and natural delivery remain open. The600-second job remains unregistered; no notice sent. Node-RED remained inaccessible and was not accessed through another route.
+
+No live rollback required. Staged private caller remains in HAL sweep-caller-private and HERALD /tmp/sweep-caller-candidate.private.py. Use the exact verified release backup from the preceding recovery record only for isolated restoration, never overwrite newer live data or replay stored actions. No SAM/Odoo/SyncThing/Warden/phone changes or new paid commitments. Application-model calls zero; Codex cost separate and unpriced. Phase1 remains open.

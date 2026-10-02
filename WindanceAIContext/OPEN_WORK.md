@@ -754,3 +754,7 @@ Saved600-second job is unregistered in HERALD user/gui501. Live caller20c9295a s
 ## October2 sweep caller auth/result correction staged
 
 Private candidated282c158 requires sweep auth, waits150seconds, rejects redirects/oversized or malformed results and sanitizes errors. Actual-main and urllib-loopback tests pass; unknown notice response remains explicitly unconfirmed. Not installed and job remains inactive. Durable delivery identity/receipt, coordinated callers/account history and recovery remain gates. Evidence: archive/20261002-sweep-caller-candidate/sweep-caller-candidate-20261002.md.
+
+## October2 staged sweep caller and Harness real HTTP compatibility passes
+
+Pinned callerd282c158 and serverd9dd9a97 pass missing/wrong client auth, actual authenticated empty subprocess sweep and missing server auth over a temporary loopback listener. One worker, no provider/notice calls; listener stopped. Production unchanged. Nonempty actual mailbox, durable notice receipt, coordinated configuration and schedule recovery remain open. Evidence: archive/20261002-sweep-caller-harness-http/sweep-caller-harness-http-20261002.md.

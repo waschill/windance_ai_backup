@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sweep-caller-harness-http-20261002.json",
+    "sha256": "2dc5a74dcd2281971e9d1162266eeacc01a7728d68235500399cbf62fe5f63c5"
+  },
+  {
+    "path": "sweep-caller-harness-http-20261002.md",
+    "sha256": "3327e0692056cef139c688f15ce07af29ec5d13e438459bfd1e6ed6e025adf0b"
+  },
+  {
+    "path": "test_sweep_caller_harness_http.py",
+    "sha256": "82181377b2c62a829e2f4abd89a05acf69b957c8df089c5cf46f7dd83b15b307"
+  }
+]
