@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-composed-boundaries-20261002.md",
+    "sha256": "2e19c743d6d3d59d70a441f158df5628df6b88a995d2d7d38759b5f9268b9dd0"
+  },
+  {
+    "path": "test_email_approved_boundary.py",
+    "sha256": "7a462d51aaf6b9282c564b64f6edbe31e6bb12c6dfe97a7e1fecc62ac771d201"
+  },
+  {
+    "path": "test_email_rule_composed.py",
+    "sha256": "55f1ef88ceaedb99fc0a39856dea24881ad99384828a0aeb5d712c285d966016"
+  }
+]

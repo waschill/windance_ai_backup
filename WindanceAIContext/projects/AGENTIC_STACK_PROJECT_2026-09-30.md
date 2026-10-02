@@ -421,3 +421,7 @@ Actual rule/report paths allowed classification after uncertain Trash and a seco
 ## October2 optimistic Trash receipts reproduced and correction staged
 
 Actual helper previously accepted failed/malformed mark-read and Trash evidence as success. Eight baseline/eight candidate synthetic cases pass; staged helper requires matching identity/labels, disables SDK retries and stops before Trash on uncertain mark-read. Errors omit provider content and never claim untouched. Not deployed; composed journal/action-path and live compatibility gates remain. Evidence: archive/20261002-email-trash-receipt/email-trash-receipt-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 composed rule recovery passes; approved-action gap reproduced
+
+Four actual-schema/rule/report/Trash-helper synthetic scenarios avoid repeated remote effects after lost responses or local tracking failure. Uncertainty stays visible. Separate actual approved executor test bypasses an existing synthetic hold; signature lacks durable approval identity. Full approval lifecycle integration is next, preserving new-request versus retry semantics and sender approvals. Evidence: archive/20261002-email-composed-boundaries/email-composed-boundaries-20261002.md. No real mailbox/model or production changes; Phase1 open.
