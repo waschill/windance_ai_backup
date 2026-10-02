@@ -821,3 +821,7 @@ Nine SAL queue cases pass using exact daemon atomic/quarantine helpers and real 
 ## October2 full isolated queue/receipt/owner-loop composition passes
 
 Nine SAL scenarios now run actual daemon main/owner lock/file helpers and intercepted send_one with staged queue plus real bounded observer/checkpoint/journal. Restarts preserve quarantine/no duplicate sends; lock contender denied. No production change. Whole-request/descendant deadline, consumer/protocol compatibility and coherent rollout recovery remain gates. Evidence: archive/20261002-full-receipt-queue/full-receipt-queue-20261002.md.
+
+## October2 whole-request timeout preserves uncertain send state
+
+Dedicated-process-group supervisor passes full isolated queue normal/before-send/after-send stalls;1.5-second deadline ends stalls without replay across two restarts. Same-group descendant test prevents late synthetic effect. No deployment; parent-death/escaped-session/normal-exit descendant limits and live budgets/consumers/recovery remain open. Evidence: archive/20261002-whole-outbox-deadline/whole-outbox-deadline-20261002.md.
