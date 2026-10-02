@@ -88,3 +88,7 @@ Read-only online snapshot, pinned original/candidate schema functions and repeat
 ## October2 full SAM candidate startup passes isolated HTTP checks
 
 Full pinned module/main ran as unprivileged SAM user in separate loopback-only network namespace on a private restored snapshot, with startup producers/scheduler intercepted. Five actual GET routes returned200, original eleven tables unchanged, test server stopped. Initial sysfs-based namespace assertion failed before app import; corrected to namespace-aware socket interface query. No production/API/Odoo/model/send/dispatch changes. Reconciliation and need-clear concurrency remain deployment gates; Phase1 open. Packet: archive/20261002-sam-startup-isolated/sam-startup-isolated-20261002.md.
+
+## October2 email batch classification guard installed
+
+Coordinated idle Harness update after live ownership/Warden checks, fresh six-file r2 backup, cold SQLite/eight-table checks and HAL verification. Exact-batch validator prevents duplicate/other-batch answers from releasing automatic actions. Installed source0a95a09f0ad1932b53d38130579411ac8679c99265e4dc8741b8fd171dce2ab0, health200, unchanged protected records/plist and three installed-code report fixtures verified. No actual mail/model/send calls. Initial sidecar-bearing backup is superseded by stable r2. Recovery: archive/20261002-email-classification-deployed/email-classification-deployed-20261002.md. Natural workflow, ownership and uncertain remote outcomes remain open; Phase1 open.
