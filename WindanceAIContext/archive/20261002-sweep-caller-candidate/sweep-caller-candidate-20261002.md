@@ -1,0 +1,13 @@
+# Scheduled sweep caller candidate — October 2
+
+Private staged candidate d282c158355b9d937e7175193eadd56d331fc8d07d45542c4bbe2ef7cd672aef changes only post_json and main from pinned source20c9295a. Original top-level endpoint/recipient settings are preserved privately; unrelated AST matches. No deployment, launch registration or endpoint call occurred.
+
+Sweep requests require AGENT_HARNESS_TOKEN, attach Authorization only for the configured Harness sweep URL, disable proxy lookup and redirects, cap response bytes at1MiB and require a JSON object. Main uses150seconds rather than90 to exceed the staged worker's120-second deadline. This is a socket timeout, not a hard whole-client wall deadline or provider-call budget. No retries were added.
+
+Result validation checks exact allowed keys, nonnegative integer counts (rejecting booleans), count consistency, string-list notices/errors and known status. Empty/malformed replies cannot count as success. Held/error results do not notify. Notices use a neutral results heading rather than claiming every item was auto-deleted. Because the actual notice delivery contract remains inaccessible/unverified, returned notice responses produce notification_unconfirmed/exit1, not delivery success. Exceptions produce fixed uncertainty metadata without private content. No caller log prints full mailbox results.
+
+Seven actual-main synthetic cases plus timeout passed. Actual urllib loopback transport verifies missing-auth zero calls, one authenticated sweep POST, no Harness token on a separate notice POST, and a307 redirect with no target request or retry. Synthetic failed delivery response never returns success. Listener stopped; real endpoints and recipients were never used.
+
+This candidate is deliberately not rollout-complete: durable notice identity/receipt/reconciliation and integration with the permitted actual delivery contract are still required. An unconfirmed exit must not trigger blind resend or replay. The600-second launch job remains unregistered; do not start it just because these fixtures pass. Whole-client deadline, exact-package backup/recovery, real account/history binding and coordinated server/caller authentication remain open. Preserve the owner-approved sender-rule semantics and recipient when finishing integration.
+
+Private original/candidate: HAL workspace sweep-caller-private. Recovery for this staging-only work is to discard the candidate; live source/plist/data are unchanged. Before installation obtain fresh verified backup and maintenance coordination. Node-RED access restriction remains intact; no alternate Node-RED access attempted. No SAM/Odoo/mailbox action, external send or model call; no paid commitment. Codex cost separate and unknown. Phase1 remains open.
