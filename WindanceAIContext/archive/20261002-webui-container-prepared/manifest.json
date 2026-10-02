@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "inspect_lab_container_shape.py",
+    "sha256": "f2d66c05d918216cf849c08a0d419d33770ca93224674bff7b5d518231765d60"
+  },
+  {
+    "path": "prepare_lab_container.py",
+    "sha256": "f4ab050df1f184250251222a8bd96448cb392d029b5723542c790890b94f1d0a"
+  },
+  {
+    "path": "webui-container-prepared-20261002.md",
+    "sha256": "e44858177553906a9efe02b78c6868ae33069128619e9dba2a82a09820ffeee6"
+  },
+  {
+    "path": "webui-container-transition.json",
+    "sha256": "02722a0b34d1d4124949df9cac6c2b9e5b536154f117fbc8d173568f0dd9da1f"
+  }
+]

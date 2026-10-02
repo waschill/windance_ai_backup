@@ -1098,3 +1098,7 @@ Actual signup accepted first synthetic admin despite disabled environment flags 
 ## October2 live lab override prevents database-only containment; fresh backup verified
 
 Live empty lab explicitly sets initial-admin override true in server process, unlike passing cold-test environment. Preflight held before mutation; persistent flags alone insufficient. Fresh2database/3file AL backup and independent HAL all-table/integrity/hash verification pass. Exact runtime transition/rollback still needed; no service change. Evidence: archive/20261002-webui-live-precontainment/webui-live-precontainment-20261002.md.
+
+## October2 exact unstarted lab replacement prepared
+
+Docker candidate preserves current image/volume/ports/restart/unrelated settings, changes three enrollment flags only; one documented null/false OOM normalization. Original remains running; candidate never started. Identity record copied to HAL, original retained for rollback. Persistent-settings/live transition still required; no containment claim. Evidence: archive/20261002-webui-container-prepared/webui-container-prepared-20261002.md.

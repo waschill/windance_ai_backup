@@ -1,0 +1,17 @@
+{
+  "original_id": "ece8e5dcacd21a307cf17295db9d67cb1406ce94d8732af568511c120e078fbb",
+  "staged_id": "d6e2c6803d08d0e98961e88aa935821d63e1ccc6b416368a4c5ef16664e91aab",
+  "staged_name": "truth-engine-lab-containment-staged-20261002",
+  "staged_started": false,
+  "image_id": "sha256:9591b13f13843c7721c2b8eaf7382846c81b3ffe126526d1888d1fed50c6a33f",
+  "host_config_match_except_oom_false_null_normalization": true,
+  "oom_false_null_normalized": true,
+  "mounts_exact_match": true,
+  "unrelated_config_exact_match": true,
+  "changed_environment_names": [
+    "ENABLE_INITIAL_ADMIN_SIGNUP",
+    "ENABLE_LOGIN_FORM",
+    "ENABLE_SIGNUP"
+  ],
+  "original_running": true
+}
