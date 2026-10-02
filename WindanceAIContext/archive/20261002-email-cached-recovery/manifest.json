@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-cached-recovery-20261002.md",
+    "sha256": "ac3e35737d11a365e312a3577c6ce21fd24bfee233875ac212280d71c95f4566"
+  },
+  {
+    "path": "test_email_cached_recovery.py",
+    "sha256": "4eb198d7dfa0c0741e29099eb288a9f540fda73da4c619c6779bf1897275486e"
+  },
+  {
+    "path": "verify_email_offhost_recovery.py",
+    "sha256": "032019d8188ed397507a71a36e8504c6269035a902c82bbe199180178e3005c4"
+  }
+]

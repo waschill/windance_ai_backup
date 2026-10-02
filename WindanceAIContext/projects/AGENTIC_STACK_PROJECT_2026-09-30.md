@@ -637,3 +637,7 @@ Candidate30ec0a37 preserves unrelated AST/Calendar and routes Gmail through sing
 ## October2 staged Gmail credential reuse and rotation checks pass
 
 Candidate61028799 adds in-memory Gmail-only credential reuse without file writes. Sixteen concurrent preparations use one synthetic refresh; rotation/stale/malformed/missing input and cooldown checks pass. Actual candidate draft/journal/SDK/cache/HTTP loopback retains one POST across cold retry. Not deployed; full recovery certifies prior30ec0a37 only. Identity, whole-job bounds and exact new revision recovery remain open. Evidence: archive/20261002-gmail-credential-cache/gmail-auth-cache-evidence-20261002.md.
+
+## October2 current cached-email candidate recovery verified
+
+Exact61028799 candidate now passes full isolated import/ASGI startup, health200, sweep401/503/502,28-table preservation and empty new journals. Fresh private snapshot and HAL17-file/four-SQLite verification pass. No deployment/external/model/SAM action. Provider identity, whole-job bounds and decoding/privileged-writer limits remain. Evidence and recovery: archive/20261002-email-cached-recovery/email-cached-recovery-20261002.md.
