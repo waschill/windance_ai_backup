@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_outbox_request.py",
+    "sha256": "cd8837a448463edf1a56f5868b0f6a3e0ddd74311ac73aa4e8e0ecfbc4268774"
+  },
+  {
+    "path": "outbox_request_guardian.py",
+    "sha256": "1c09454203b2132cc178c9d6dd9b0574c0dc00d14e5b567aed09ea4719448ab5"
+  },
+  {
+    "path": "receipt_request_worker.py",
+    "sha256": "433ccec378c18bce4e70854ad11288f9e488af856cc56d21a0d86e1b4f0ead42"
+  },
+  {
+    "path": "supervised-worker-composition-20261002.md",
+    "sha256": "164f54736bfee651f21491a0819c98f30fe2b1af65cf6e5046d1a3adcc29941d"
+  },
+  {
+    "path": "test_worker_cli_composition.py",
+    "sha256": "86ceee6fde3e5fb7dae645fe87e2246c6d71441ac5b466f3c1cc1771677e275e"
+  },
+  {
+    "path": "test_worker_cli_deadline.py",
+    "sha256": "bc71497623ccd0503560cedb351d81a0ca4b8811cc6e441a2986d4f2904c06e0"
+  }
+]

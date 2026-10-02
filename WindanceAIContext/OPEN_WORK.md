@@ -874,3 +874,7 @@ SAL Python3.9 monotonic origins differ between processes; prior cross-process fi
 ## October2 single-request receipt worker staged
 
 Real receipt composition passed nine isolated crash/delivery cases. New owner boundary independently preserves existing daemon lock, holds missing history, rejects invalid IDs and never replays absent requests. Complete CLI/guardian integration remains unverified; no installation or real send. Evidence: archive/20261002-single-request-worker/single-request-worker-20261002.md.
+
+## October2 supervised CLI worker composition passes in isolation
+
+Actual worker argument parsing/pinned loading/queue lock/receipt path passed nine instrumented cases. Guardian cutoff at1.5seconds released lock; two restarts held pre/post-send uncertainty without replay. No real transport or deployment. Caller bounded-wait/status contracts, SMS coverage, updated cold package and coordinated cutover remain gates. Evidence: archive/20261002-supervised-worker-composition/supervised-worker-composition-20261002.md.
