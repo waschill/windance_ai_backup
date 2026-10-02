@@ -705,3 +705,7 @@ Read-only verified snapshot review finds four pending Gmail approvals; 11 initia
 ## October2 account-checked email candidate selected recovery verified
 
 Exact21-source manifestdcfdd110 passes fresh isolated startup, preserved28 original tables, six empty journals and cold-copy checks. HAL verifies28 stable files/four SQLite copies. Restored release passes five local workflow cases including account rejection and no repeated uncertain writes. No deployment or real provider/model/SAM action. Identity/history migration, coordinated callers and natural delivery remain open. Evidence: archive/20261002-email-account-recovery/email-account-recovery-20261002.md.
+
+## October2 sender-rule sweeps staged through bounded worker
+
+Candidate61257141 routes internal sweeps through existing120-second supervisor and rejects missing HTTP auth. Actual ASGI/worker checks and three nonempty local SDK/journal cases pass, retaining uncertain effects without repeated writes. Not deployed; total call bounds, identity/history, coordinated callers and exact new recovery remain open. Evidence: archive/20261002-email-bounded-sweep/email-bounded-sweep-20261002.md.
