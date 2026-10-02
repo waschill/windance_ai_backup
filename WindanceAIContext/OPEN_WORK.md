@@ -250,3 +250,7 @@ Staged HTTP router independently enforces scoped credentials even for trusted lo
 ## October2 staged memory survives actual child-process crashes and cold restore
 
 Before/after-commit forced child exits preserve atomicity and stable retry revision. Fresh interpreter and cold SQLite backup retain corrected facts, revoked grants and superseded-request behavior. All three synthetic scenario groups passed without production I/O. Current consistent snapshot only; older restore requires post-backup reconciliation. Production integration remains unfinished. Evidence: archive/20261002-memory-process-recovery/memory-process-recovery-20261002.md. Phase1 open; zero application model calls or sends.
+
+## October2 WebUI application-data backup and isolated recovery verified
+
+Production and lab application data captured privately on AL and copied to HAL. Each instance's three stable files/two SQLite databases passed off-host hashes, integrity and all-table comparisons; production upload reference captured. Network-disabled cached-image application ORM reads passed with temporary test key after initial missing-key failure. Original containers remain healthy and unchanged. Cache, production authentication/session recovery, image availability after host loss and complete host rebuild remain unproven; no interface acceptance or phase advancement claimed. Recovery record: archive/20261002-webui-recovery/webui-recovery-20261002.md. No inference, send, dispatch or production service changes. Phase1 open.

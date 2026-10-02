@@ -1,0 +1,27 @@
+{
+  "backup_root": "/home/waschilladmin/backups/webui-recovery-20261002",
+  "results": [
+    {
+      "container": "open-webui",
+      "backup_hashes_verified": true,
+      "cold_application_model_reads_passed": false,
+      "cold_exit": 1,
+      "counts": null,
+      "network": "none",
+      "published_ports": 0,
+      "original_runtime_unchanged": true
+    },
+    {
+      "container": "truth-engine-lab",
+      "backup_hashes_verified": true,
+      "cold_application_model_reads_passed": false,
+      "cold_exit": 1,
+      "counts": null,
+      "network": "none",
+      "published_ports": 0,
+      "original_runtime_unchanged": true
+    }
+  ],
+  "cache_excluded": true,
+  "private_values_exported": false
+}

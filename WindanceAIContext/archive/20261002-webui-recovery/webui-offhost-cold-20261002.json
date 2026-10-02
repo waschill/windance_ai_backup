@@ -1,0 +1,22 @@
+{
+  "offhost_root": "C:\\Users\\wasch\\Documents\\WindanceBaselineRecovery\\20261002-webui",
+  "results": [
+    {
+      "container": "open-webui",
+      "verified_files": 3,
+      "verified_databases": 2,
+      "all_file_hashes_match": true,
+      "integrity_passed": true,
+      "all_table_hashes_match": true
+    },
+    {
+      "container": "truth-engine-lab",
+      "verified_files": 3,
+      "verified_databases": 2,
+      "all_file_hashes_match": true,
+      "integrity_passed": true,
+      "all_table_hashes_match": true
+    }
+  ],
+  "private_contents_exported": false
+}

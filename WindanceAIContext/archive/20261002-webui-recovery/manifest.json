@@ -1,0 +1,46 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "backup_webui_data.py",
+    "sha256": "d36abaeaa65868a7ef05c08ad091d87995ed454cde698a352afab3d93087de12"
+  },
+  {
+    "path": "restore_webui_isolated.py",
+    "sha256": "b9fdb01bf2613869d05a80a0fc5c877dcad96bfb4ae108f2a66cefa999028a18"
+  },
+  {
+    "path": "retry_webui_cold_models.py",
+    "sha256": "c109d59c50b77712f9c7e647e137a75ff65bddb0457ad1050701103a422d62ee"
+  },
+  {
+    "path": "verify_webui_offhost.py",
+    "sha256": "517391f1f81707815c8892e8eb724bf9f8603cac245ef5cd0dfd57cbb64bec28"
+  },
+  {
+    "path": "webui-backup-lab-20261002.json",
+    "sha256": "040b45325549214c218d17d5ad77469f0913a822075dc6243f8de252809513b1"
+  },
+  {
+    "path": "webui-backup-production-20261002.json",
+    "sha256": "37d6ade1d897527e105e2e240cc703193dd9bd55a7496cda8a6480684c96eba4"
+  },
+  {
+    "path": "webui-cold-model-r2-20261002.json",
+    "sha256": "7426da5543d84ad3e73267d0dfb13e4d7102997c4f4e8ac894fce55e07323a92"
+  },
+  {
+    "path": "webui-cold-model-restore-20261002.json",
+    "sha256": "a0fe96e53b806ba6f3c3dac4f2c47bd27480c5e1dc00d5bb7a785b1606342510"
+  },
+  {
+    "path": "webui-offhost-cold-20261002.json",
+    "sha256": "482b2760237cb403bf7fa20fe74f05b292ff9009d2961326dd186a29cdeeffa0"
+  },
+  {
+    "path": "webui-recovery-20261002.md",
+    "sha256": "928ca1c52a1d6f7784fcdf8465a92018f8446adbf370830ba8b9257a3b8be724"
+  }
+]

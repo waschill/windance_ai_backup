@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "container": "open-webui",
+      "exit": 0,
+      "cold_model_reads_passed": true,
+      "counts": {
+        "users": 1,
+        "files": 1
+      },
+      "network": "none",
+      "production_secret_used": false,
+      "ephemeral_test_key_persisted": false
+    },
+    {
+      "container": "truth-engine-lab",
+      "exit": 0,
+      "cold_model_reads_passed": true,
+      "counts": {
+        "users": 0,
+        "files": 0
+      },
+      "network": "none",
+      "production_secret_used": false,
+      "ephemeral_test_key_persisted": false
+    }
+  ],
+  "production_changed": false,
+  "private_values_exported": false
+}

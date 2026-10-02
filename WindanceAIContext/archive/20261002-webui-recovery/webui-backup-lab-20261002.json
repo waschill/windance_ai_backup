@@ -1,0 +1,1 @@
+{"sqlite_databases": 2, "stable_files": 3, "uploaded_references_verified": 0, "application_table_counts": {"chat": 0, "file": 0, "function": 0, "knowledge": 0, "memory": 0, "tool": 0, "user": 0}, "integrity_and_table_hashes_verified": true, "cache_excluded": true, "runtime_not_stopped": true, "private_values_exported": false}
