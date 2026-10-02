@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "verify_webui_restored_files.py",
+    "sha256": "04cc3a8865e32bf86944c1889e5cfff209c2cc4591beeb0e1609986b79a9b2f3"
+  },
+  {
+    "path": "webui_file_probe.py",
+    "sha256": "2bbf75f97359ea6cf10cf53d13bc8e8e9861711fe00e53e6a6336d8f5ff4ff7f"
+  },
+  {
+    "path": "webui-file-acl-20261002.json",
+    "sha256": "b22c2a82c20a625028e04c5d419e25c5531f0a91236a57be004a6ab008790033"
+  },
+  {
+    "path": "webui-file-acl-20261002.md",
+    "sha256": "cbabed782f4a83510c6efd850827a42bf08deb107bebe2af403f6bd416494989"
+  }
+]

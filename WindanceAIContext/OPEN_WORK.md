@@ -734,3 +734,7 @@ Both isolated snapshots pass eight actual HTTP checks using synthetic ordinary u
 ## October2 restored WebUI knowledge metadata boundaries verified
 
 Both snapshots pass eight synthetic authenticated HTTP checks: ordinary cross-user reads/listing/edits/deletes denied, owner state preserved, administrator read explicitly demonstrated. Initial fixture expected wrong denial statuses; corrected to exact source-defined400/access-prohibited. No attached-file/vector/citation or real-login acceptance claimed. Backups unchanged, containers removed, production unchanged. Evidence: archive/20261002-webui-knowledge-acl/webui-knowledge-acl-20261002.md.
+
+## October2 restored WebUI direct-file ownership checks pass
+
+Both isolated snapshots pass12 synthetic HTTP/model checks: owner reads across four routes, cross-user read/delete denial, content retention, unauthenticated denial and explicit administrator access. No production files/accounts changed; backup hashes unchanged and containers removed. Ingestion/vector/shared-grant/citation and real-login acceptance remain open. Evidence: archive/20261002-webui-file-acl/webui-file-acl-20261002.md.

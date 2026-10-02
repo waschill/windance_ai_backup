@@ -1,0 +1,11 @@
+# Restored WebUI direct-file access — October 2
+
+Twelve actual model/token/ASGI checks passed in each isolated production/lab snapshot. The fixture created synthetic ordinary users, a synthetic administrator, one synthetic database file record and a synthetic text file in disposable /tmp. It did not use upload processing, embeddings, real documents or production credentials.
+
+Owner reads returned200 with the exact synthetic marker through metadata, raw content, filename content and extracted-data-content routes. Another ordinary user received404 without the marker through all four routes. Cross-user deletion was denied; both database-backed content and original temporary file remained intact. Unauthenticated download returned401. Administrator download returned200, documenting the privileged-access limit rather than claiming privacy against administrators.
+
+Original backup hashes were verified before and after. Pinned image9591b13f ran with network none, no published ports, read-only root, temporary/tmp, oneCPU/2GB/128-process limits and application outbound/subprocess denial. Platform metadata was cached before the application guard; lifespan schedulers were inactive. Temporary signing keys stayed inside the test processes. Every exact test container was removed and absence checked; production accounts, files and services were untouched.
+
+Private test copies/logs: /home/waschilladmin/backups/webui-file-check-20261002T084215Z. They contain synthetic fixture changes and are not authoritative restore sources. Original verified backups remain /home/waschilladmin/backups/webui-recovery-20261002 with independent HAL copies. No live rollback is necessary. The published runner/probe creates a fresh isolated copy on each use; never run it against a production data directory.
+
+Limits: direct unshared-file routes only. Shared chat/knowledge grants, ingestion and vector retrieval, model context, source citations, deletion propagation, real login/session recovery and whole application lifecycle remain unverified. A successful file ACL test does not prove counselor/business memory separation across the staff stack. Live lab bootstrap ownership remains open. No model/send/Odoo/SAM action or new spending commitment occurred; Codex cost remains separately unknown. Phase1 and overall interface acceptance remain open.
