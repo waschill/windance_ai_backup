@@ -657,3 +657,7 @@ Standalone prototype now arms independent kernel timer and checks parent identit
 ## October2 fixed email worker verifies code and forwards owner context
 
 Private17-file worker package e41e91ef rejects12 invalid requests before loading and altered helper hashes before execution. Full Harness empty-inbox report passes in an isolated supervised process with William context asserted. Staged only; caller authentication, nonempty workflows, additional dependencies and exact-package recovery remain open. Raw report exception disclosure also remains to fix. Evidence: archive/20261002-email-fixed-worker/email-fixed-worker-20261002.md.
+
+## October2 report errors sanitized and nonempty worker interruption verified
+
+Candidate1bc85632/manifest6d385677 removes raw report exception disclosure; actual-function and full-subprocess response/audit fixtures pass. Complete nonempty report tests preserve confirmed or uncertain intent across process termination and second report without repeated fixture effects. Staged only; actual identity/provider/endpoint integration and exact-package recovery remain open. Evidence: archive/20261002-email-report-privacy-worker/email-report-privacy-worker-20261002.md.
