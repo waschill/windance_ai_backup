@@ -306,3 +306,7 @@ Actual SAL run-loop slice, real isolated loopback HTTP, actual manager schema an
 ## October2 Messages cutover/rollback identity contract verified in isolation
 
 Staged authenticated Messages intake preserves installed max-imessage row IDs instead of new generic AUTH IDs. Actual installed legacy handler retry after authenticated acceptance leaves one record; pre-cutover legacy row retry holds409 without duplicate or fabricated provenance. Extended sender-chain and source-memory intake tests pass. Live cutover still requires clean cursor/acceptance reconciliation, full app/policy/transport integration, backups and ownership. No production changes/sends/dispatch/model calls. Evidence: archive/20261002-authenticated-cutover/authenticated-cutover-20261002.md. Phase1 open.
+
+## October2 protected SAL-to-manager transport verified live
+
+Temporary loopback-only SSH forward using SAL's existing HERALD alias, strict host-key verification and batch authentication reached manager health HTTP200/service vega-manager. Its owned child was stopped and local port verified closed. Initial direct-address authentication failure was resolved by using the already configured alias/key selection; no credentials, SSH settings or persistent services changed. No POST/send/dispatch/inference. Persistent transport ownership/restart and authenticated application integration remain open. Evidence: archive/20261002-manager-protected-transport/manager-protected-transport-20261002.md. Node-RED denial untouched; Phase1 open.

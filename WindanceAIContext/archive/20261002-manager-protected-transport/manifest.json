@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager-protected-transport-20261002.json",
+    "sha256": "6308b849ebfde3ae1996806ebe8f5f90b2376187ecfc3f81f662536a297c5d36"
+  },
+  {
+    "path": "manager-protected-transport-20261002.md",
+    "sha256": "2f2231c556fd90bad8493140f08672ce11a5fc830d1f3c8d1cbdb2ffefa5ffda"
+  },
+  {
+    "path": "manager-protected-transport-initial-failure-20261002.json",
+    "sha256": "bfb2973e8ae271351a0ae611424f43e010ad3cc1627a76ac1dc8638a85099a7c"
+  },
+  {
+    "path": "probe_manager_protected_transport.py",
+    "sha256": "dbf9e5ff3ec2315f016cd9fdbaa313a24fc7a91c4b098459989e0cd35bb8400b"
+  }
+]
