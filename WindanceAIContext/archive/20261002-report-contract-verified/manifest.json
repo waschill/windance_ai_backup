@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "report-contract-verified-20261002.md",
+    "sha256": "9d2f2171cd969d92fdd8a2774ad57f78ed7cee875a369aceb361d63102442364"
+  },
+  {
+    "path": "test_current_report_contract.py",
+    "sha256": "c96581dc9303c6831277d155447df0a9ffa8ddf097531d916b9f2aa271a29021"
+  }
+]

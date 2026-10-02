@@ -881,3 +881,7 @@ Caller expiry, actual keyed admission, supervised instrumented CLI, receipts and
 ## October2 current31-file receipt release cold-restored on HAL and SAL
 
 Immutable r2 ZIP05ab4484 includes guardian/worker/admission/caller modules. Both hosts verify every source hash; restored SAL flow/crash/deadline/lifecycle and HAL journal/status tests pass. Post-test archive/source unchanged; no production activation. Caller transport/compatibility and coordinated cutover remain open. Evidence: archive/20261002-receipt-release-r2-recovery/receipt-release-r2-recovery-20261002.md.
+
+## October2 actual report caller incompatibility and maintenance ownership verified
+
+Actual unchanged HERALD wrapper accepts legacy ok:true but rejects new verified_delivery schema; five stubbed-SSH cases confirm coordinated caller/receiver change is required. Manager healthy; separate upgrade project/stages complete, legacy send record not independent receipt proof. No duplicate work or production change. Evidence: archive/20261002-report-contract-verified/report-contract-verified-20261002.md.
