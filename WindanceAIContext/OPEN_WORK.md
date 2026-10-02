@@ -574,3 +574,7 @@ New evidence-quality worker/inspector pass actual authenticated HTTP-to-AL suppo
 ## October2 narrow SAM business-memory admission staged
 
 Fresh installed Harness source still permits broad trusted-host legacy memory writes. Staged dedicated producer contract accepts only established daily-schedule shape and business provenance, never infers a human owner or grants reads. Valid case and ten denial cases pass; no storage/service/SAM change. Credential, source/revision acknowledgment, reader policy and legacy caller integration remain required before rollout. Notes collection stays suspended. Evidence: archive/20261002-sam-memory-producer-contract/sam-memory-producer-contract-20261002.md.
+
+## October2 actual SAM renderer fits narrow producer contract; retry requirement verified
+
+Fresh pinned live source extracted into HAL synthetic fixture. Empty/mixed/Unicode summaries admitted; oversized rejected without local commit; lost acknowledgment leaves day uncommitted and repeats identical content on retry. Already-committed day does not repost. Receiver idempotency/revision/credential integration still required; no real API/Odoo/notes/SAM changes. Fixture SQLite cleanup corrected. Evidence: archive/20261002-sam-memory-render-integration/sam-memory-render-integration-20261002.md.

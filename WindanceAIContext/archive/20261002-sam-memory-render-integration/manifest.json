@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-memory-render-integration-20261002.md",
+    "sha256": "29199922809a49612a32df34b5a2f1ecc37c36646f42a1e15cfbb1684ee6c338"
+  },
+  {
+    "path": "test_sam_memory_render_contract.py",
+    "sha256": "bef8dbcd88890b954c6858253f8a64b2da3bd1ad4b63e4b3dc4d3a173c1ece55"
+  }
+]
