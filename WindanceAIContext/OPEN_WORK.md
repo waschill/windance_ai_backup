@@ -926,3 +926,7 @@ Fresh10-file original/candidate/synthetic-journal ZIP6e9c16e9 cold-restored on H
 ## October2 admission/status workers self-expire after parent loss
 
 Process-local child deadline and POSIX timer stop orphan polling independently of caller. SAL query/submit killed-parent fixtures retain exactly one request; admission/status/full-flow regressions pass with no real send. No deployment; actual SSH disconnect and refreshed complete package remain gates. Evidence: archive/20261002-client-orphan-deadline/client-orphan-deadline-20261002.md.
+
+## October2 actual HERALD-SAL disconnect retains one request and stops workers
+
+Interrupted live SSH in query and newly admitted submit cases; independent SAL probes confirm endpoint/worker stop. Reconnected same-key submit preserves one item and unchanged bytes. Synthetic fixture removed; no real sends/production changes. Full package/caller coverage/historical cutover gates remain. Evidence: archive/20261002-ssh-disconnect-recovery/ssh-disconnect-recovery-20261002.md.

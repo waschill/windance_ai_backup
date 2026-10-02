@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "ssh_disconnect_fixture.py",
+    "sha256": "d32ae30d4272c6ff3eda186f7399c68ef73ba613361707e7245dcf2fcc4684eb"
+  },
+  {
+    "path": "ssh-disconnect-recovery-20261002.md",
+    "sha256": "75a2d85ce3180645a84fa84fece5dca8503b7b8affbe3b3ec42edf3bbcd4381a"
+  },
+  {
+    "path": "test_ssh_disconnect.py",
+    "sha256": "7db244c76fb31d95064b1ffcce9a93c53fe259bc6ae42df3e0f949d8cc552c9a"
+  }
+]

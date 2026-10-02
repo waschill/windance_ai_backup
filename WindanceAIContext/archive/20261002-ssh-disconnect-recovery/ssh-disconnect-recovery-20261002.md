@@ -1,0 +1,11 @@
+# Actual SSH disconnect recovery — October 2, 2026
+
+Executed real HERALD-to-SAL SSH interruption against staged protocol/client modules and an isolated /tmp/windance-disconnect-20261002 fixture. Instrumentation records only endpoint/worker PIDs; actual outbox_protocol_cli.main and fixed bounded admission/status workers execute unchanged. Private synthetic request travels on stdin. No production outbox, recipient, Messages database or sender code is involved.
+
+Two cases pass: query of existing keyed queue and submit that creates one new synthetic keyed request. An independent SSH probe first confirms local SSH client plus SAL endpoint and worker alive and exactly one queued item. Test kills the HERALD SSH process while those handles are live, then probes SAL independently until both recorded PIDs are absent/non-running within the5-second observation window for a2-second worker budget. Queue hashes remain unchanged. Reconnecting via the actual endpoint with submit/same key and0.3-second wait returns unknown/exit14 and preserves exactly one queue entry and content hash. No duplicated admission.
+
+Final independent probes again confirmed no recorded endpoint/worker running for both cases. Checked exact resolved synthetic root under /private/tmp and no symlinks, then removed the fixture. Test source remains staged. No live schedule, service or sender changed; no real send. Earlier direct parent-loss tests remain valid and now have real SSH-channel interruption evidence alongside them.
+
+Scope limits: terminating the client is a channel disconnect test, not packet blackholing, hung kernel/SSH server, physical power loss or timing under sustained congestion. Already-sent Apple Events and actual receipt-provider availability remain outside this fixture. A disconnected caller must still treat admission/delivery as unknown and query the same identity; worker exit is not proof no side effect occurred. No production receiver/dispatcher/wrapper installed. Refreshed complete package, caller coverage and coordinated historical-send/cutover reconciliation remain gates. Phase1 open and natural pilot count unchanged.
+
+Application model calls0, paid commitments0; Codex dollar cost unknown. SAM/Odoo/SyncThing/Level8/Warden/phone/routing protections unchanged.
