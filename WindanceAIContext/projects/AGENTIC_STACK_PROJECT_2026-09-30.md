@@ -761,3 +761,7 @@ Unchanged reminder source fails safe --dry-run under configured systemPython wit
 ## October2 capture reminder recovery candidate prepared
 
 Sourcef354d141 adds stable Mountain-date delivery identity and honest submitted wording; actual enqueue composition holds changed content and uncertain retries without requeue. Interpreter-only plist candidate preserves schedule/other fields. No installation/send. Runtime-owner coordination, fresh recovery, recipient/date policy and natural independent receipt remain gates. Evidence: archive/20261002-capture-reminder-candidate/capture-reminder-candidate-20261002.md.
+
+## October2 independent Messages receipt observer staged
+
+Current sender success remains osascript completion, not delivery. Live schema verified content-free. Read-only exact direct-message observer passes12 HAL/SAL synthetic cases, rejecting stale/group/wrong/ambiguous/incomplete evidence and preserving DB bytes. No sends or live integration. Trusted baseline/chunk persistence, bounded observation and coordinated receipt-consumer migration remain open. Evidence: archive/20261002-messages-delivery-evidence/messages-delivery-evidence-20261002.md.

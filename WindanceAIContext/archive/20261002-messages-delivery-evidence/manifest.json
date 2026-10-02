@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "messages_delivery_evidence.py",
+    "sha256": "0aa5c1242fc19f3d2e57ee697f6af9667ef1501f54e3687f04ea9470483bc85d"
+  },
+  {
+    "path": "messages-delivery-evidence-20261002.md",
+    "sha256": "54361cd9d359b5b5bdf0907344ea9a8d9b6d4c3bf35f60b89ca05d2ea497ddfb"
+  },
+  {
+    "path": "messages-delivery-evidence-sal-tests-20261002.json",
+    "sha256": "2f9eef1d9e3e50e762476e05193bc4de055fa50c2536276cf2612fa250bcd8db"
+  },
+  {
+    "path": "messages-delivery-evidence-tests-20261002.json",
+    "sha256": "2f9eef1d9e3e50e762476e05193bc4de055fa50c2536276cf2612fa250bcd8db"
+  },
+  {
+    "path": "test_messages_delivery_evidence.py",
+    "sha256": "1c5bd545fa14ba701736f16638d03b6066ac0f26826e7e04212926480d974701"
+  }
+]
