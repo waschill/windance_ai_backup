@@ -446,3 +446,7 @@ Actual approve_pending allowed two overlapping synthetic callers to execute one 
 ## October2 approval claim expiration and receipt drift checks pass
 
 Staged revision2 rechecks freshness inside the claim transaction and requires one final receipt row updated. Actual-function predecessor/candidate fixtures prove expired-before-claim executes zero actions and status drift no longer yields false success. Concurrency/lost-response regressions pass. Selected-number/item/recovery/privacy integration remains; not deployed. Evidence: archive/20261002-email-approval-claim-r2/email-approval-claim-r2-20261002.md. No actual mailbox/model or production changes; Phase1 open.
+
+## October2 approval process termination and cold retry verified
+
+Actual claim/pending lookup survives child exits before effect, after synthetic effect and after final receipt; fresh processes and consistent cold copies never repeat the effect. Interrupted executing remains held, not asserted live. Initial annotation fixture failure corrected. UI/reconciliation, old backups and selected-number/per-item integration remain gates. Evidence: archive/20261002-email-approval-process-recovery/email-approval-process-recovery-20261002.md. No real mailbox/model or production changes; Phase1 open.

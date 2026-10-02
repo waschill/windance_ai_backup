@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-approval-process-recovery-20261002.md",
+    "sha256": "d802dc88f9c0e16f7ff23d18c6fa3347a86a1d0833bfa97aba182de6f9975af8"
+  },
+  {
+    "path": "test_email_approval_process_recovery.py",
+    "sha256": "e7468caa70bafe64fef8dcc6362eecef23ecf14b01bada53636d40d0507bb2fa"
+  }
+]
