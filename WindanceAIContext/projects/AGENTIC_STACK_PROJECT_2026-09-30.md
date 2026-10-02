@@ -337,3 +337,7 @@ Actual SAM service-history helper suppresses ordinary retries with saved receipt
 ## October2 SAM history-create intent candidate prevents blind retry in isolation
 
 Staged durable pre-write intent binds operation/payload and preserves unconfirmed holds; confirmed record IDs are reused. Actual extracted SAM helper with intercepted effects passed five normal/lost/malformed/local-receipt-failure/payload-change cases, each only one simulated create. No schema/source/service deployed. Process interruption, reconciliation, clear-step concurrency and full recovery remain gates; do not roll back to a writer ignoring outstanding intents. Packet: archive/20261002-sam-history-intent/sam-history-intent-20261002.md. No actual Odoo/API/model/send calls; Phase1 open.
+
+## October2 SAM intent process-death/cold/concurrency checks passed
+
+Real isolated child exits before send, after synthetic acceptance and after confirmation preserve held/confirmed state on fresh process restart and consistent cold copy, with no second effect. Competing process stays held while first completes. No Odoo client or production DB used. Full SAM integration, authoritative reconciliation, older-backup handling and need-clear concurrency remain gates. Packet: archive/20261002-sam-intent-process-recovery/sam-intent-process-recovery-20261002.md. No production/API/model/send changes; Phase1 open.
