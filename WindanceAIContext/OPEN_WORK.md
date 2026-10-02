@@ -706,3 +706,7 @@ Manifest1262ea18 now has fresh online snapshot, exact copied service-layout star
 ## October2 prior expected-account prototype integrated into complete email workflow
 
 Extends earlier account-boundary record, preserving its original helper and pending owner question. Manifestdcfdd110 now requires explicit policy and matching provider profile in actual Gmail service. Full local workflow verifies wrong account reads profile only and missing policy makes zero Gmail requests; neither starts an intent. No real policy configured or deployment. Historical binding, auth callers and exact recovery remain open. Evidence: archive/20261002-gmail-account-bound-integration/gmail-account-boundary-20261002.md.
+
+## October2 mailbox history binding requires explicit nonempty migration
+
+Standalone transactional guard passes account-change/concurrency and12 historical-table preservation tests. Verified07:56snapshot contains existing references/rules/actions and59 Gmail-prefixed approvals; no automatic account adoption is justified. Helper remains unintegrated and must not be deployed alone to turn existing service into a hold. Actual owner confirmation and evidence-backed migration remain open. Evidence: archive/20261002-gmail-history-binding-check/gmail-history-binding-check-20261002.md.

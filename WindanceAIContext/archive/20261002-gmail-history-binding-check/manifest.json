@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "gmail_history_binding.py",
+    "sha256": "1dff9cf91ff578c4ba422b66e83328996628e124eb01f1d4d1edce02c30cc110"
+  },
+  {
+    "path": "gmail-history-binding-check-20261002.md",
+    "sha256": "28d865b55097c91ebe0eda9645a4c99b64a9c1c3fa705b21be212ef266e826b6"
+  },
+  {
+    "path": "test_gmail_history_binding.py",
+    "sha256": "fb40c07a9d1ac66e5cd48d49c799bfbd255eba2eb13593a6767d54d02b30c83e"
+  }
+]

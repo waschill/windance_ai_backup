@@ -1,0 +1,15 @@
+# Historical Gmail state must not silently change accounts
+
+October2. Standalone staged check only; not installed or integrated into Gmail service yet.
+
+The expected-account profile check does not by itself bind existing SQLite action/reference/approval history to that account. New gmail_history_binding helper records a hash of an already provider-verified, independently configured account for William in a single-row binding. Same-account use is accepted; a different account holds. Competing first bindings run under BEGIN IMMEDIATE so only one account wins. The helper does not expose an adoption, reset, migration or deletion function.
+
+When no binding exists, any data in12 known mailbox history/journal tables or Gmail-prefixed approvals prevents automatic binding. The transaction rolls back, preserving all records and leaving no newly created binding table. Unrelated non-mail approvals are not treated as mailbox history. This guard is not a full enumeration of every privileged external writer or arbitrary approval payload; callers must first verify the provider identity and independently approved expectation.
+
+Disposable SQLite tests passed repeat same-account, changed-account hold, concurrent different-account first bindings, all12 history-table holds with no data/schema changes, Gmail-approval hold and unrelated-approval preservation. No production or mailbox action occurred.
+
+Read-only aggregate inspection of the previously verified07:56:05UTC snapshot found2244 tracking rows,109 report references,4 consumed-report records,181 sender rules,146 autonomy-action rows,1 active report and59 Gmail-prefixed approval rows. These are historical snapshot counts, not freshly polled live state or inferred pending actions. No subjects, addresses, payloads or approval identifiers were output. This confirms a nonempty migration is required: the application must not silently initialize a new account binding against this history, discard it, or pretend a profile match proves historical ownership.
+
+Next step is an explicit evidence-backed migration plan after William confirms the expected account, with current source/profile provenance and review of outstanding uncertain/pending actions. Historical records whose account cannot be established must not become executable against another mailbox. Existing owner authority permits preparing this work; no automatic adoption is implemented. Do not deploy this guard alone against the existing database and then call the resulting hold a working solution.
+
+Current integrated candidate remains21-file manifestdcfdd1100d28895db508edf4875b409a49687eed1e0599350c5212fef42967c5; this helper is separate. Preserve previous release recovery packages and current journals. No rollback required. Shared-token66-route rollout, inaccessible Node-RED caller, actual identity and exact latest-package recovery remain open. No mail/model/Odoo/SAM/service/schedule/Warden/phone/Level8/SyncThing change or paid commitment. Application model calls zero; Codex cost attribution separate. Phase1 open.
