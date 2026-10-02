@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "admission-worker-flow-20261002.md",
+    "sha256": "2153c3a7f282183837670dac3bb699c58ae30803c6b54d5603906b9a7bc08365"
+  },
+  {
+    "path": "test_admission_crashes.py",
+    "sha256": "0c6e3fa76dc4b4457bd0f00c992070456e996954e447d17ec2d9895183a01e7d"
+  },
+  {
+    "path": "test_admission_worker_flow.py",
+    "sha256": "6e3225b6f4592dab7e2f9bfbc8d3343f9d9f63205d64509dfdb1332cbb948824"
+  },
+  {
+    "path": "test_worker_cli_composition.py",
+    "sha256": "6f54740e7e998bc5ebdef00e821e747f1135a28da2c6eb98d7f99c9646e5ecb2"
+  }
+]

@@ -873,3 +873,7 @@ Ten state fixtures and pending-to-verified transition pass without sends or file
 ## October2 keyed admission and status share one staged caller budget
 
 Eight SAL cases pass: bounded lock contention, one same-key queue item, no claim-only recreation, orphan/conflicting/missing history and SMS holds. New claim/queue writes use file and directory fsync; power-loss proof remains open. No live caller switch. Full producer-worker composition, crash/caller transport and recovery package remain gates. Evidence: archive/20261002-bounded-admission/bounded-admission-20261002.md.
+
+## October2 full keyed caller-to-worker isolated flow passes
+
+Caller expiry, actual keyed admission, supervised instrumented CLI, receipts and later same-key query/reentry produce verified delayed delivery or held post-send uncertainty with zero duplicates. Three admission process-crash points preserve claim-only hold and single queue publication. No live deployment; transport/caller contracts, lifecycle, complete recovery release and natural evidence remain gates. Evidence: archive/20261002-admission-worker-flow/admission-worker-flow-20261002.md.
