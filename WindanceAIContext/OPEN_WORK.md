@@ -882,3 +882,7 @@ Actual worker argument parsing/pinned loading/queue lock/receipt path passed nin
 ## October2 bounded read-only caller reconciliation staged
 
 Ten state fixtures and pending-to-verified transition pass without sends or file mutations by query.55-second maximum wait returns explicit uncertainty/expiry and only same-request query guidance; no blind retry. Live caller/admission integration and complete budgets remain unverified; production unchanged. Evidence: archive/20261002-bounded-status-reconciliation/bounded-status-reconciliation-20261002.md.
+
+## October2 keyed admission and status share one staged caller budget
+
+Eight SAL cases pass: bounded lock contention, one same-key queue item, no claim-only recreation, orphan/conflicting/missing history and SMS holds. New claim/queue writes use file and directory fsync; power-loss proof remains open. No live caller switch. Full producer-worker composition, crash/caller transport and recovery package remain gates. Evidence: archive/20261002-bounded-admission/bounded-admission-20261002.md.

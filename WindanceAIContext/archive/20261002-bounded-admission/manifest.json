@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_outbox_client.py",
+    "sha256": "d510fdf1f5a74f2a611448e688e51c5782d880bdc62504831cf8c3e07c9e26ee"
+  },
+  {
+    "path": "bounded-admission-20261002.md",
+    "sha256": "dc6dfbe9a65b748a5361c85cdcef24a14999f6c51f57f910bda505ffb2489fae"
+  },
+  {
+    "path": "keyed_outbox_admission.py",
+    "sha256": "3cad984399825d8a0ec19be8908942dccdae2c5dcc607dac3076c327d93d94ae"
+  },
+  {
+    "path": "test_bounded_admission.py",
+    "sha256": "caa85a61965053c91ded366e7cb2935937ecd826cf6f37dc2ba2213efebe35de"
+  }
+]
