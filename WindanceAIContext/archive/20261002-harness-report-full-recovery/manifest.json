@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "harness-report-full-recovery-20261002.md",
+    "sha256": "d04135177eb4c64e0df8e0415a1ae8197dd2cd226309cfdfa6b0390575deb92d"
+  },
+  {
+    "path": "package_report_callers_r2.py",
+    "sha256": "d82129a552d7ec7c65b6bbd53fa7136b2b3afc54afa6e4e3d0b8bb7c1f8e086a"
+  },
+  {
+    "path": "test_harness_report_http.py",
+    "sha256": "58f14f7dfc9bd17937d900772e62e0536ffbebec33a03e4cd4b8eeba54514847"
+  }
+]

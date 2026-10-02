@@ -969,3 +969,7 @@ Actual candidate passes7 isolated cases including changed-body reconciliation an
 ## October2 staged task view distinguishes receipt evidence and legacy records
 
 Live read-only count12 legacy delivered rows, no other statuses; new journal absent. Candidate r2 adds content-free handoff/text delivery state; actual function/readonly tests pass and transport functions unchanged. Legacy history not adopted or replayed. No deployment; restored full startup and coordinated release remain. Evidence: archive/20261002-harness-report-visibility/harness-report-visibility-20261002.md.
+
+## October2 complete staged Harness startup/HTTP and caller r2 cold recovery pass
+
+32-file private caller package restored/hash-verified on HERALD and HAL. Restored full candidate startup/ASGI auth, receipt-state, original-snapshot and memory-guard checks pass with outbound effects/live writes blocked and no live-service source dependencies. Function regressions and post-test hashes pass. No deployment; exact receiver ownership/rollback and fresh live cutover remain next. Evidence: archive/20261002-harness-report-full-recovery/harness-report-full-recovery-20261002.md.
