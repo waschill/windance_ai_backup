@@ -866,3 +866,7 @@ Dedicated group leader kills same-group workers on parent EOF, worker exit or de
 ## October2 stronger supervisor cutoff gate fails; no rollout
 
 0.3-second guardian tests allowed a synthetic0.8-second effect in repeated samples despite near-deadline finish entry. External-group alternative also failed; root cause unverified, no test processes remain. Earlier lifecycle passes do not prove cutoff. No production change; preserve uncertainty and investigate action-boundary/actual termination before integration. Evidence: archive/20261002-guardian-cutoff-failure/guardian-cutoff-failure-20261002.md.
+
+## October2 cross-process clock defect corrected in staged supervisor
+
+SAL Python3.9 monotonic origins differ between processes; prior cross-process finish timing was invalid. Relative-duration guardian protocol plus independent parent total deadline passes five aged-parent cutoffs, lifecycle/descendant checks and full queue stall/restart no-replay tests. No production deployment; caller/entrypoint/package and natural-delivery gates remain. Evidence: archive/20261002-process-local-deadlines/process-local-deadlines-20261002.md.
