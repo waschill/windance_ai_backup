@@ -21,7 +21,7 @@
   },
   {
     "path": "email-sweep-batches-20261002.md",
-    "sha256": "22e0f3f30778631eefff422f240d70277b312226e6bac04705d91d84cbba0ce3"
+    "sha256": "35067a459cb70ddac6baa7a68b6a4b85841a545ca00d258efc3b4a79a4574e40"
   },
   {
     "path": "test_email_batch_cursor_crash.py",
