@@ -622,3 +622,7 @@ Verified eight-file candidate started in pinned AL network-none/read-only/nonroo
 ## October2 complete staged SAM-to-memory HTTP path passes
 
 Full r5 module uses actual durable client/urllib transport against staged FastAPI/SQLite in isolated AL container. Normal, lost acknowledgment and corrected-credential cases retain one event/receiver commit and finish locally without duplicate carry. Listeners stopped; exact exit0 container removed. No production/SAM/external action. Real credentials/TLS, reader migration, correction workflow and Odoo first-clear race remain open. Evidence: archive/20261002-sam-r5-complete-http/sam-r5-complete-http-20261002.md.
+
+## October2 exact current email package startup and off-host recovery pass
+
+Fresh read-only online snapshot, current ten-file stage4600e59 and unchanged live source verified. Actual baseline/candidate ASGI startup health200; 28 non-sequence tables preserved, six recovery tables empty, cold copy equal. HAL independently verifies 15 files and four SQLite copies. No external/Gmail/model/service/SAM action. Account/human identity, provider uncertainty and deployment gates remain. Evidence: archive/20261002-email-current-package-recovery/email-current-package-recovery-20261002.md.
