@@ -1005,3 +1005,7 @@ Capture/Sentinel can reconcile prior receipt then handle today in same invocatio
 ## October2 manager immutable receipt snapshot helper staged
 
 Isolated tests pass original-key retention, uncertain original-body query, verified no replay, recipient hold and concurrent snapshot confirmation guards. No live manager change or messages; integration/crash/recovery gates remain. Node-RED retry remains browser-policy denied. Evidence: archive/20261002-manager-snapshot-staged/manager-snapshot-staged-20261002.md.
+
+## October2 actual staged manager receipt binding and abrupt-exit test pass
+
+Pinned live manager/wrapper unchanged. Candidate preserves unrelated function ASTs and Shawn path; actual send/advance holds legacy evidence, reconciles original snapshot and completes once on verified receipt. Abrupt child exit leaves durable attempt and restart queries only. No live deployment/send; full call-path/recovery/host gates remain. Evidence: archive/20261002-manager-receipt-integration/manager-receipt-integration-20261002.md.

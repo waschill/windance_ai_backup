@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager-receipt-integration-20261002.md",
+    "sha256": "cc2d8223043f98cf0193619310cc138ed5ad1c2b506d4754b9d6ca99087c185e"
+  },
+  {
+    "path": "prepare_manager_receipt.py",
+    "sha256": "51f69a3c0f67466a368909951d7a48815ffddaa76f58dc3f0678b7f732e8e129"
+  },
+  {
+    "path": "test_manager_receipt_candidate.py",
+    "sha256": "d2756bd04c3aa87b2853f3cab20b9d8276060f3c74cceb22951d415d7632b1d7"
+  },
+  {
+    "path": "test_manager_receipt_crash.py",
+    "sha256": "6810be29ea70acb6dd3cd0b8141a62464eab946629a2ff24262571f2c938cf7d"
+  }
+]
