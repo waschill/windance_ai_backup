@@ -893,3 +893,7 @@ Exact request/body-bound result and exit codes keep pending/uncertain/legacy fro
 ## October2 real HERALD-SAL stdin protocol passes; caller gaps remain
 
 Four actual SSH synthetic receipt cases preserve legacy/verified/unknown and exit codes; seven fixture files unchanged then removed. Exact current caller checks confirm capture main lacks key reference and Sentinel deliver requires environment tracing; file-wide matches are not coverage proof. No global wrapper switch or production change. Evidence: archive/20261002-real-ssh-wire/real-ssh-wire-20261002.md.
+
+## October2 Sentinel timeout triggers second send; staged correction tested
+
+Actual original main reproduced2attempts after uncertain first delivery. Candidate separates report-generation failure from send uncertainty, uses one Mountain-date identity and makes no fallback send. HERALD4control cases/key test pass; HAL tzdata limitation recorded. No installation; caller date/history/activation and complete recovery remain gates. Evidence: archive/20261002-sentinel-delivery-correction/sentinel-delivery-correction-20261002.md.

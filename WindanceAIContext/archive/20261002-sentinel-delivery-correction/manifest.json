@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "prepare_sentinel_delivery.py",
+    "sha256": "3c616cce6ee4c000ea8d65f3ca42089d68c0b3f7e4a910983adb4614a9d7fbcf"
+  },
+  {
+    "path": "sentinel-delivery-correction-20261002.md",
+    "sha256": "34994d5e437cdf0153ebd561be4181d4feaabd301d1e765937c70b7e45fe4246"
+  },
+  {
+    "path": "test_sentinel_delivery_control.py",
+    "sha256": "3290a74e0a678e0aca3f32f776c890c5a91eb60c6a22ba5238b22f82c2c375c2"
+  }
+]
