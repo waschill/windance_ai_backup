@@ -473,3 +473,7 @@ Single Gmail claimed approval now uses original approval/item0 intent and minima
 ## October2 shared mailbox uncertainty reservation staged
 
 Participating autonomy/rule and approved-item journals atomically reserve one mailbox mutation slot and release only with confirmed receipt. Four cross-path and four exact-draft reconciliation cases pass; uncertainty/local receipt failure blocks another path and only exact draft confirmation releases. No live/full-Harness integration yet; undo/direct writers, startup backfill, operator UX and concurrency/recovery remain gates. Evidence: archive/20261002-email-shared-admission/email-shared-admission-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 shared mutation hold composed into schema/report
+
+Actual staged report detects existing approved-operation uncertainty before inbox/model/rules/reference work and returns deterministic hold notice; post-rule uncertainty also stops further preparation. Actual schema/report fixture and four full approval-chain regressions pass. Startup backfill, undo/direct writers, operator reconciliation and exact recovery remain gates. Evidence: archive/20261002-email-shared-harness/email-shared-harness-20261002.md. No real mailbox/model or production changes; Phase1 open.
