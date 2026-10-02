@@ -1057,3 +1057,7 @@ Read-only loopback /team returns200 normally and401 with synthetic untrusted X-F
 ## October2 staged diagnostic input bounds and validation privacy pass
 
 Actual API now caps request streams at4096bytes/10seconds before parsing and returns content-free validation errors. Eight stream cases, private-sentinel rejection, valid fragmentation and12 existing API ownership/cancel/recovery checks pass on temporary storage, zero dispatch. No deployment; new exact package and full worker transport regression still needed. Evidence: archive/20261002-diagnostic-request-bounds/diagnostic-request-bounds-20261002.md.
+
+## October2 diagnostic revision3 recovery and actual worker path pass
+
+Thirteen-file exact ZIP760766df verified on HAL and restored on HERALD. Ownership/cancel/recovery and request-bound tests pass; restored HTTP-to-AL fixed worker completes once, denies cross-owner results, prevents duplicate worker and closes temporary listener. Source hashes unchanged. No persistent deployment; identity/UI/consumer and original pilot gates remain. Evidence: archive/20261002-diagnostic-r3-recovery/diagnostic-r3-recovery-20261002.md.

@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_diagnostic_recovery_package_r3.py",
+    "sha256": "e5213a47173bd4bdcafcd7f3769673a485ede02a413c5dcd7e1e20a6d2179bf0"
+  },
+  {
+    "path": "diagnostic-r3-recovery-20261002.md",
+    "sha256": "86a97ce68e2454589398c63309e10ee1e5b78beaa5303656b1b0334082c5f374"
+  },
+  {
+    "path": "diagnostic-r3-worker-results.json",
+    "sha256": "52673c75e19ad59c0f28825350898aeb798ac32fb3c60f304f1e8a1a23a2594a"
+  },
+  {
+    "path": "diagnostic-recovery-package-r3-20261002.zip",
+    "sha256": "760766df5bcb81805632203f6cf2cf5cc4dc13e804e6a2ad164bc12ee898b447"
+  },
+  {
+    "path": "test_restored_diagnostic_r3.py",
+    "sha256": "bc8ea4fa656f900c2e90d8c0c13a46700dcd43cfb1e5d85a926c826ed743fa18"
+  },
+  {
+    "path": "verify_diagnostic_recovery_package.py",
+    "sha256": "3f5816a0198134934ff37a5feae257ec087326bc6cac4a8a9f72f2c8b744359b"
+  }
+]
