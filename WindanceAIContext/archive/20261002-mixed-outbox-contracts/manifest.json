@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "keyed_outbox_admission.py",
+    "sha256": "5a0435350923981683ffe994abcc73fe2cc0cc87be6e281a0c7ff05f973ae1d0"
+  },
+  {
+    "path": "mixed-outbox-contracts-20261002.md",
+    "sha256": "2b299375cb39c61c44311f491718b2f38f63f858bc55c642ebde3a2b20cfe762"
+  },
+  {
+    "path": "receipt_request_worker.py",
+    "sha256": "3e7e7372916174de4dc2b502daf461fed6fc5b30a14d91ef509d8d8a05ace068"
+  },
+  {
+    "path": "test_admission_worker_flow.py",
+    "sha256": "3b1ee0e97301cda8575742338365bdac54fc784c48d208f0b3333a291bfaa18e"
+  },
+  {
+    "path": "test_outbox_client_parent_loss.py",
+    "sha256": "f171be06d0dc5e227236c88f32cbffd4712c24bf1e9fc8f24901f9345afeb59d"
+  },
+  {
+    "path": "test_worker_cli_composition.py",
+    "sha256": "ee6c28b01cb9c1609bb4e2f60c03294622ceb1c53f7a8d6134ae79ccf310b085"
+  },
+  {
+    "path": "test_worker_legacy_contract.py",
+    "sha256": "ec9c53695aca6abc181a121e2bf9b2203faa63661ab0e190de404205ac7f9be8"
+  }
+]

@@ -929,3 +929,7 @@ Exact live count query fails system Python with OperationalError but succeeds ap
 ## October2 William manager final-report contract passes staged wrapper composition
 
 Exact current send/advance plus staged wrapper/transport keep unknown/uncertain/legacy at delivery with no receipt; only verified result completes, preserving one project/report key. No manager change, task dispatch or real send. Shawn and other notification paths remain separate unverified scope. Evidence: archive/20261002-manager-report-pipeline/manager-report-pipeline-20261002.md.
+
+## October2 staged receiver distinguishes new receipt requests from legacy senders
+
+Dual claim/queue markers bind new contract to content; missing/mismatched/unknown identity holds instead of downgrade. Five legacy/SMS/hold cases plus automatic-selection full flow and parent-loss tests pass. Legacy receipts never upgraded; no live producer/consumer change. Persistent dispatcher/coordinated cutover remains open. Evidence: archive/20261002-mixed-outbox-contracts/mixed-outbox-contracts-20261002.md.
