@@ -646,3 +646,7 @@ Actual Google client/HTTPX loopback tests record one POST in seven success/failu
 ## October2 staged Gmail transport integrated and exact recovery verified
 
 Candidate30ec0a37 preserves unrelated AST/Calendar and routes Gmail through single-attempt transport. Actual draft/journal/Google/loopback tests retain one POST across cold-database retry; lost response stays unconfirmed. Fresh snapshot/full isolated startup and HAL16-file/four-DB recovery checks pass. Not deployed; identity, whole-job bounds, refresh persistence and broader callers remain open. No real mailbox/model/service/SAM changes. Evidence: archive/20261002-email-transport-composed/email-transport-composed-20261002.md.
+
+## October2 staged Gmail credential reuse and rotation checks pass
+
+Candidate61028799 adds in-memory Gmail-only credential reuse without file writes. Sixteen concurrent preparations use one synthetic refresh; rotation/stale/malformed/missing input and cooldown checks pass. Actual candidate draft/journal/SDK/cache/HTTP loopback retains one POST across cold retry. Not deployed; full recovery certifies prior30ec0a37 only. Identity, whole-job bounds and exact new revision recovery remain open. Evidence: archive/20261002-gmail-credential-cache/gmail-auth-cache-evidence-20261002.md.
