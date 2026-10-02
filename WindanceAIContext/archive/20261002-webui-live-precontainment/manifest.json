@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "backup_webui_lab_precontainment.py",
+    "sha256": "6120dd73ddb8715d9d5f0dbfae3dc201512193cad434ca9bd595c030d596849f"
+  },
+  {
+    "path": "preflight_webui_lab.py",
+    "sha256": "e45823fd905640fa332e7b4ce055a4bc2244ac91ea95dda86c3e9fdffe614f17"
+  },
+  {
+    "path": "verify_webui_lab_precontainment.py",
+    "sha256": "e5bd29e87db07a47a03ae3720236f7656a8c148090109ef394d771e257bb240c"
+  },
+  {
+    "path": "webui-lab-live-preflight.json",
+    "sha256": "bc5c4ef6993ea6f0c2554b9dddcdd129062ba2c251132b2272ff49232a662ab1"
+  },
+  {
+    "path": "webui-live-precontainment-20261002.md",
+    "sha256": "9835939ba9d00f26c2dcc0ab3575803c83d130d432ff02024729b1d6be3f46da"
+  }
+]

@@ -1081,3 +1081,7 @@ Both snapshot copies pass actual synthetic password sign-in, wrong-password reje
 ## October2 empty-lab persistent bootstrap controls verified in isolation
 
 Actual signup accepted first synthetic admin despite disabled environment flags because persisted signup/login settings remained true. Fresh copy with supported Config.upsert disabled both plus initial-admin override false returned403/no account. Original backups unchanged/containers removed; live lab untouched. Fresh live ownership/backup/containment gate remains. Evidence: archive/20261002-webui-bootstrap-persistence/webui-bootstrap-persistence-20261002.md.
+
+## October2 live lab override prevents database-only containment; fresh backup verified
+
+Live empty lab explicitly sets initial-admin override true in server process, unlike passing cold-test environment. Preflight held before mutation; persistent flags alone insufficient. Fresh2database/3file AL backup and independent HAL all-table/integrity/hash verification pass. Exact runtime transition/rollback still needed; no service change. Evidence: archive/20261002-webui-live-precontainment/webui-live-precontainment-20261002.md.
