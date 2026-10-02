@@ -505,3 +505,7 @@ Actual saved-reference/rule/audit/schema tests reproduced a second sender rule b
 ## October2 actual API approval payload incompatibility reproduced and corrected
 
 Action-request route stored a reserved argument field rejected by the staged item journal. Actual model/route/storage/approval/executor composition reproduced zero execution; staged route normalization now passes normal and lost-response scenarios with one synthetic effect and no repeat. Existing records not rewritten. Caller audit also confirms legacy unspecified-owner service context is not identity proof. No actual mailbox/model or production changes. Evidence: archive/20261002-email-action-route/email-action-route-20261002.md. Phase1 open.
+
+## October2 content-free read-only recovery inspection verified
+
+New local diagnostic reports approval/journal/reservation state without mailbox content or mutations, distinguishes incomplete schema and unknown reads, and bounds returned references with cooperative SQLite deadline. Eight synthetic checks and three actual private recovery-copy inspections pass; database hashes unchanged. This is operator visibility, not reconciliation or live health. Evidence: archive/20261002-email-recovery-status/email-recovery-status-20261002.md. No production/model/mailbox changes; Phase1 open.
