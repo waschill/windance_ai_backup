@@ -1,0 +1,42 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "5a692c754fe39e38eb2287cff5e17825df66ac5641990f7ecceb5b9271de70a5"
+  },
+  {
+    "path": "email_approval_lineage.py",
+    "sha256": "d9f7958e81b3903f2bbb1eb3cf218d8fa04836c0236eb8a0643bbbae50d76730"
+  },
+  {
+    "path": "email_approval_selection.py",
+    "sha256": "002851f11cb1e24b30b0c9a81dfa1a9d20bb1502ce26cabc0dd04d5786358c5f"
+  },
+  {
+    "path": "email_approved_item_intent.py",
+    "sha256": "5af99911de988f75afbd1a95ec69c1b47d6f88b545b459443bd5567b52906dcd"
+  },
+  {
+    "path": "email_mailbox_admission.py",
+    "sha256": "4cd60fc869ca5363b6c8fb0de17175134610d1ea9279b2fc45ba09d9657ec68f"
+  },
+  {
+    "path": "email-shared-admission-20261002.md",
+    "sha256": "12cec5c47ee386d3ba24fe959b689e4d0351636aeba6a4f203561a549d024a86"
+  },
+  {
+    "path": "gmail_draft_recovery.py",
+    "sha256": "4ae40da14bf033af295c68f5e30c8e940284963598d3ac22d42e3036ec848c51"
+  },
+  {
+    "path": "test_email_draft_reconciliation.py",
+    "sha256": "eb432e457f75c27407d2981408ddf5f8be522533acc8285e5482aae5eab0b498"
+  },
+  {
+    "path": "test_email_shared_admission.py",
+    "sha256": "c6cf5a9fdeb9c6599ef619580327f3535dbf0b278d486eed70f70093150c811d"
+  }
+]

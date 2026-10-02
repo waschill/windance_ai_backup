@@ -469,3 +469,7 @@ Actual handlers, schema, batch executor, journals and Trash helper pass four nor
 ## October2 single approved actions journaled in staged executor
 
 Single Gmail claimed approval now uses original approval/item0 intent and minimal validated receipt. Three actual handler/executor/schema synthetic Trash cases pass; normal confirmed, lost/bad receipts uncertain and retry adds no effect. Four whole/selected batch-chain regressions pass. Shared admission/no-ID callers/undo/identity and exact recovery remain gates. Evidence: archive/20261002-email-single-intent/email-single-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 shared mailbox uncertainty reservation staged
+
+Participating autonomy/rule and approved-item journals atomically reserve one mailbox mutation slot and release only with confirmed receipt. Four cross-path and four exact-draft reconciliation cases pass; uncertainty/local receipt failure blocks another path and only exact draft confirmation releases. No live/full-Harness integration yet; undo/direct writers, startup backfill, operator UX and concurrency/recovery remain gates. Evidence: archive/20261002-email-shared-admission/email-shared-admission-20261002.md. No real mailbox/model or production changes; Phase1 open.
