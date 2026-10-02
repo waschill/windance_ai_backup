@@ -858,3 +858,7 @@ Actual producer main queued then killed while waiting; complete staged daemon/ob
 ## October2 fresh live outbox backup privately restored and verified
 
 119files include unchanged producer/daemon plus50claims/67results; queue/inflight/uncertain0 and three inventories match. SAL/HAL isolated restoration hashes pass without executing code. Private records excluded from publication; stable read is not atomic/live replay proof. Post-snapshot reconciliation and fresh coordinated cutover remain required. Evidence: archive/20261002-live-outbox-recovery/live-outbox-recovery-20261002.md.
+
+## October2 staged request guardian handles parent loss and normal-exit descendants
+
+Dedicated group leader kills same-group workers on parent EOF, worker exit or deadline; lifecycle/no-late-effect and full queue no-replay tests pass. Total timeout returns varied up to4.508seconds for1.5-second budget; cleanup overhead/escaped-session/guardian-death limits explicit. Production unchanged; r1 package remains historical. Evidence: archive/20261002-outbox-guardian-lifecycle/outbox-guardian-lifecycle-20261002.md.
