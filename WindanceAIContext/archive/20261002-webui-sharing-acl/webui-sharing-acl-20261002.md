@@ -1,0 +1,11 @@
+# Restored knowledge/file sharing and revocation — October 2
+
+Eight checks passed in each isolated production/lab snapshot using the actual installed knowledge/file/access-grant models, token verification and HTTP routes. Three synthetic ordinary users and one synthetic source/file were created only in disposable copies. The grant lifecycle used actual model APIs; this does not certify the owner-facing grant-editing UI or HTTP authorization for changing grants.
+
+Before sharing, the second user could not download the file. An explicit user/read grant on its knowledge record enabled knowledge metadata and direct file reads for that user; a third user still could not read it. The read grant did not permit editing knowledge metadata (exact400/access-prohibited response). Removing all grants revoked knowledge and file access on subsequent requests using the same signed session. The owner's content and source file remained intact. No public/group grant or production record was involved.
+
+The test does not erase bytes a recipient already downloaded and does not establish removal from model context, vector caches, shared chats or client storage. These remain distinct information-lifecycle limits. No retrieval/model inference, real login, session revocation, public sharing or source-citation claim is made.
+
+Pinned installed image9591b13f and original verified backups were used with network none, no ports, read-only root, temporary/tmp, oneCPU/2GB/128-process bounds, and application connection/subprocess denial. Platform metadata was cached before the guard; no lifecycle scheduler ran. Original backup hashes remained unchanged and all exact test containers were removed. Private fixture copies/logs: /home/waschilladmin/backups/webui-sharing-check-20261002T084538Z. Do not restore these fixture-modified copies over live data. Authoritative originals remain under /home/waschilladmin/backups/webui-recovery-20261002 and the independently verified HAL backup.
+
+Production accounts/services, SAM, Odoo, SyncThing, Warden, phone and Level8 were unchanged. No paid commitment or application-model call; Codex cost separate and unknown. No live rollback needed. Empty-lab ownership, full lifecycle, source-backed answers/corrections and overall interface acceptance remain open; Phase1 remains open.

@@ -738,3 +738,7 @@ Both snapshots pass eight synthetic authenticated HTTP checks: ordinary cross-us
 ## October2 restored WebUI direct-file ownership checks pass
 
 Both isolated snapshots pass12 synthetic HTTP/model checks: owner reads across four routes, cross-user read/delete denial, content retention, unauthenticated denial and explicit administrator access. No production files/accounts changed; backup hashes unchanged and containers removed. Ingestion/vector/shared-grant/citation and real-login acceptance remain open. Evidence: archive/20261002-webui-file-acl/webui-file-acl-20261002.md.
+
+## October2 restored knowledge-to-file sharing and revocation verified
+
+Both isolated snapshots pass eight lifecycle checks: explicit reader gains source/file access without edit permission, unrelated user remains denied, removal revokes both reads on same session and owner content survives. Actual grant models/HTTP reads; grant-editing UI/API authorization and downstream copied context not certified. Backups unchanged, containers removed, production unchanged. Evidence: archive/20261002-webui-sharing-acl/webui-sharing-acl-20261002.md.
