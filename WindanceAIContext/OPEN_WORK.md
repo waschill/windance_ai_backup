@@ -1038,3 +1038,7 @@ Source15cf1c789e1c1fcef837ed8ccc9e7df9525e73693d7ca9c15be1f279fb38d316 and three
 ## October2 staged email provider-call ceiling verified
 
 Fixed report/sweep worker now shares256 API/OAuth exchanges across transports/threads. Actual300-rule worker fixture held at256requests before writes; five report and three sweep regressions pass on final22-source package, real provider/model calls0. No deployment; large-rule fairness, partial-write exhaustion, fresh recovery/rebase and account/history/auth gates remain. Evidence: archive/20261002-email-exchange-budget/email-exchange-budget-20261002.md.
+
+## October2 email partial-write budget exhaustion held without replay
+
+Actual worker/local SDK fixture with budget5 confirms mark-read once, no Trash, unconfirmed intent preserved and second run no write. Live read-only counts181active sender rules and5pending approvals establish batching need and stale prior approval count. No production changes; bounded fair batching and joint caller coverage contract next. Evidence: archive/20261002-email-partial-budget-recovery/email-partial-budget-recovery-20261002.md.
