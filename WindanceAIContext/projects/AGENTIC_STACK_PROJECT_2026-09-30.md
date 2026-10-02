@@ -965,3 +965,7 @@ Immutable body/key and query-only reconciliation pass isolated tests; recipient 
 ## October2 Harness report identity integrated in private staged candidate
 
 Actual candidate passes7 isolated cases including changed-body reconciliation and receipt-ledger failure recovery without another send. Original recipient/format retained; unrelated function ASTs unchanged; Shawn remains legacy. No deployment. Pending-state visibility, legacy reconciliation and refreshed coordinated release remain before cutover. Evidence: archive/20261002-harness-report-identity/harness-report-identity-20261002.md.
+
+## October2 staged task view distinguishes receipt evidence and legacy records
+
+Live read-only count12 legacy delivered rows, no other statuses; new journal absent. Candidate r2 adds content-free handoff/text delivery state; actual function/readonly tests pass and transport functions unchanged. Legacy history not adopted or replayed. No deployment; restored full startup and coordinated release remain. Evidence: archive/20261002-harness-report-visibility/harness-report-visibility-20261002.md.

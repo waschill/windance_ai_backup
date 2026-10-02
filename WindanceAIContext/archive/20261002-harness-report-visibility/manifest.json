@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "harness-report-visibility-20261002.md",
+    "sha256": "14525bfe41a6fd7e17394baf3c4865da9fc7821aac80390af4c2cfb2a70988bb"
+  },
+  {
+    "path": "inspect_task_delivery_counts.py",
+    "sha256": "8ce07df032e5804e525b294c375b34fe66717ad11ea8f44710d8cee0a69be81e"
+  },
+  {
+    "path": "prepare_harness_report_visibility.py",
+    "sha256": "48d9d76276a85e29ce059a59f7fd593db88962c99f9d975d20901c7d10d1359b"
+  },
+  {
+    "path": "task_report_status.py",
+    "sha256": "41f9c68a739b216355f02115f7e327c644566450f7d943e3813af4bb610937a5"
+  },
+  {
+    "path": "test_harness_report_visibility.py",
+    "sha256": "9df15c3786a5d0729364abbc96136e68fafc952eee326eb7e06fbd257ac57e5e"
+  },
+  {
+    "path": "test_task_report_status.py",
+    "sha256": "bd6ebecf05cae81b8052c5c502bc9cdec5def8218d8a30a5de92081f698008ed"
+  }
+]
