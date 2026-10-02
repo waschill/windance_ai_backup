@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_outcome_candidate.py",
+    "sha256": "205bc0fe18bb29a89c7ad515269cb8f1cba8ba442e5d4d492855d6348c70d2f1"
+  },
+  {
+    "path": "email-outcome-build-20261002.json",
+    "sha256": "7e5620e89e5efa3005192267100025f2b28880074f02d5489f1beaaf0ea729b8"
+  },
+  {
+    "path": "email-outcome-contract-20261002.md",
+    "sha256": "332cb1337f7bfe3611a198c1cf2094039ad895cad4489da2bbeca8b734ba7f47"
+  },
+  {
+    "path": "email-outcome-tests-20261002.json",
+    "sha256": "52603423b78b5a2d5bec41df776867ba1c4a1c304502e63ba12e492cb3be9ea2"
+  },
+  {
+    "path": "test_email_outcome_report.py",
+    "sha256": "21c8dad993d5ab67eafce05fa49f9b4257e03d9fe74d8cd95bec3f048dc615ec"
+  }
+]

@@ -369,3 +369,7 @@ Live report metadata remains structurally valid with five references. Actual cla
 ## October2 email batch classification guard installed
 
 Coordinated idle Harness update after live ownership/Warden checks, fresh six-file r2 backup, cold SQLite/eight-table checks and HAL verification. Exact-batch validator prevents duplicate/other-batch answers from releasing automatic actions. Installed source0a95a09f0ad1932b53d38130579411ac8679c99265e4dc8741b8fd171dce2ab0, health200, unchanged protected records/plist and three installed-code report fixtures verified. No actual mail/model/send calls. Initial sidecar-bearing backup is superseded by stable r2. Recovery: archive/20261002-email-classification-deployed/email-classification-deployed-20261002.md. Natural workflow, ownership and uncertain remote outcomes remain open; Phase1 open.
+
+## October2 email uncertain-outcome report defect reproduced and staged
+
+Actual report calls accepted synthetic Trash/draft effects untouched after lost responses and accepts empty draft IDs. One-function candidate validates receipts, distinguishes preparation failure from uncertain remote outcomes and removes raw exception text/blanket unchanged claims. Six baseline/six candidate cases pass with no real mailbox/model calls. Durable pre-action intent and crash/concurrent recovery remain; candidate not installed. Packet: archive/20261002-email-outcome-contract/email-outcome-contract-20261002.md. Phase1 open.
