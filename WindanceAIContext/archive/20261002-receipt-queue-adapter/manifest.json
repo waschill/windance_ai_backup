@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "receipt_queue_handler.py",
+    "sha256": "af17e96b77830eb856572886e417cb1815be086216349ff54e7cfa7f11e0b52b"
+  },
+  {
+    "path": "receipt-queue-adapter-20261002.md",
+    "sha256": "26027ab305517081cbb602907384b1f24097703bf5f4b766b9434e18f9d999d4"
+  },
+  {
+    "path": "test_receipt_queue_handler.py",
+    "sha256": "183ca7f67b1df1dc65b61ead6f63d565bb3e04728eea6d528d579a85515405db"
+  }
+]
