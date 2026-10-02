@@ -641,3 +641,7 @@ Candidate61028799 adds in-memory Gmail-only credential reuse without file writes
 ## October2 current cached-email candidate recovery verified
 
 Exact61028799 candidate now passes full isolated import/ASGI startup, health200, sweep401/503/502,28-table preservation and empty new journals. Fresh private snapshot and HAL17-file/four-SQLite verification pass. No deployment/external/model/SAM action. Provider identity, whole-job bounds and decoding/privileged-writer limits remain. Evidence and recovery: archive/20261002-email-cached-recovery/email-cached-recovery-20261002.md.
+
+## October2 staged Gmail decoded-response bounds pass
+
+Transport548bfcc1 caps raw and gzip-decoded bytes during decoding and checks cooperative response deadlines. Six loopback size/compression/trickle cases plus prior transport/refresh/durable-intent regressions pass with no repeated POST. Package manifest1576629e distinguishes unchanged main61028799 from prior helper. Not deployed; hard whole-job bounds, identity and exact new package recovery remain open. Evidence: archive/20261002-gmail-response-bounds/gmail-response-bounds-20261002.md.

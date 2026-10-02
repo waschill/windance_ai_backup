@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_response_bound_package.py",
+    "sha256": "0c661bd11ca6c8c28700e5f7d43c6b7984e7fe170be9c48e10e5b4b19e1200d8"
+  },
+  {
+    "path": "gmail_single_attempt_transport.py",
+    "sha256": "548bfcc1eb9453fd267133b5738d72bddcfee0f36b9010acda45039a8135d1e5"
+  },
+  {
+    "path": "gmail-response-bounds-20261002.md",
+    "sha256": "513d01fb64f0de55e8cf2de9a87b8c35ae6e4361bbeb3aae5617d49a40e8ca5f"
+  },
+  {
+    "path": "test_gmail_response_bounds.py",
+    "sha256": "147ec20e3a8a89d47d638694a4cbfe31ea9c1a5d16d344aa8b686d0e2fd4916f"
+  }
+]
