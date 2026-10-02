@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "persistent-full-flow-20261002.md",
+    "sha256": "06e7674396e15862098e47cfa8b710c0f01fd06a3fd72994e92bf9a0735c7ecd"
+  },
+  {
+    "path": "receipt_outbox_dispatcher.py",
+    "sha256": "6dbd015e73b5a3df5060ae5f98d4c2b522273bfd9151ff7e5a7c42136cd862f5"
+  },
+  {
+    "path": "test_dispatcher_queue_bound.py",
+    "sha256": "04595c3474364433554fe88072de37440cbc8b9b80a0931843474a12bf02e4d9"
+  },
+  {
+    "path": "test_persistent_receipt_flow.py",
+    "sha256": "0787f8075144a6ac4956eead0a0eb4d9c92e61c281a6fdb7bdc4917e14c318c5"
+  }
+]

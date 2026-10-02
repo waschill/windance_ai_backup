@@ -1,0 +1,11 @@
+# Persistent receiver full-flow verification — October 2, 2026
+
+Added isolated full persistent-loop composition using copied current dispatcher/guardian/runtime worker and real queue/journal/checkpoint/decoder/observer. A test-only worker bootstrap loads the exact runtime worker then the established instrumentation wrapper; only Messages transport and crash/stall timing are synthetic. No production endpoint or sender is invoked.
+
+SAL3cases pass: delayed flags produce verified2chunk result;60-second stall after first synthetic send is terminated under1.5-second request budget and settles uncertain; dispatcher process is killed after one synthetic send while worker active, guardian stops worker within2-second observation, restarted dispatcher queries preserved attempt and settles uncertain. Counts2/1/1, zero duplicates. Persistent loop remains alive after queue settlement until explicitly terminated/reaped. This composes actual loop and worker CLI rather than inferring from separate unit checks; instrumentation remains a limit versus real Messages/provider delivery.
+
+Bounded queue enumeration replaces unbounded list/sort. select_request streams at most4097directory entries, retains only first/next names, selects non-symlink regular JSON files and holds processing if more than4096entries exist. All entries, including temporary files, count toward the cap. Cursor fairness remains unchanged. Small-cap boundary fixtures verify empty/exact-limit/overflow/rotation; full3case persistent flow reran after this change and passed. Bound is on enumeration count/memory, not hard realtime filesystem I/O. Overflow in persistent mode currently waits without an external alert; operational monitoring remains a deployment requirement.
+
+No service installed, launchd/schedule enabled, journal provisioned live, or real send. Historical r2 and private caller bundles remain immutable and need a new complete release before activation. Default600second request ceiling still requires live legacy chunk/budget reconciliation; this packet tests short synthetic budgets only. Legacy transport interruption and full real caller/receiver cutover remain gates; natural delivery acceptance unchanged. Phase1 open.
+
+SAM/Odoo/SyncThing/Level8/Warden/phone/routing unchanged. No application model calls/purchases; Codex cost unknown.

@@ -937,3 +937,7 @@ Dual claim/queue markers bind new contract to content; missing/mismatched/unknow
 ## October2 persistent receipt dispatcher staged and no-send integration tested
 
 Single dispatcher lock and original owner lock enforced; retained legacy result and missing-journal quarantine tests pass. Observed persistent loop rotates past held item, then test process stopped. Full sender-through-loop, parent-loss, backlog/budget and refreshed recovery/cutover remain gates; no service installed. Evidence: archive/20261002-persistent-dispatcher/persistent-dispatcher-20261002.md.
+
+## October2 full persistent receiver handles receipt delay/stall/parent death
+
+Actual loop/guardian/runtime CLI with synthetic transport passes3cases, no duplicate effects; killed dispatcher worker stops before recovery. Streaming4096-entry cap replaces unbounded sort; boundary/fairness and full-flow tests pass. No service installed; monitoring, live budgets, refreshed recovery/cutover remain gates. Evidence: archive/20261002-persistent-full-flow/persistent-full-flow-20261002.md.
