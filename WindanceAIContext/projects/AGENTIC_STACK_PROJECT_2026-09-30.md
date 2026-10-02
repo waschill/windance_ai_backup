@@ -1021,3 +1021,7 @@ Restored r2 package passes six tests including actual message/overdue/project/pr
 ## October2 Vega manager receipt update installed and health verified
 
 Source15cf1c789e1c1fcef837ed8ccc9e7df9525e73693d7ca9c15be1f279fb38d316 and three helpers installed after fresh nine-file/cold/off-host verification. First transition assertion caused brief original-manager outage and recovery; corrected removal polling then passed. Fresh heartbeat, four ledger tables/non-tick state, bridge state/plist unchanged; no sends/dispatch and zero receipt snapshots. Legacy history unchanged, Warden paused. Recovery/limits: archive/20261002-manager-receipt-installed/manager-receipt-installed-20261002.md.
+
+## October2 staged email provider-call ceiling verified
+
+Fixed report/sweep worker now shares256 API/OAuth exchanges across transports/threads. Actual300-rule worker fixture held at256requests before writes; five report and three sweep regressions pass on final22-source package, real provider/model calls0. No deployment; large-rule fairness, partial-write exhaustion, fresh recovery/rebase and account/history/auth gates remain. Evidence: archive/20261002-email-exchange-budget/email-exchange-budget-20261002.md.

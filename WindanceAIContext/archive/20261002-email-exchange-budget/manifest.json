@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_exchange_budget.py",
+    "sha256": "9eecb9c77e5832d3f1ec2b30097159f7d50e1a8bce7535e5835f7dc618f4b3d6"
+  },
+  {
+    "path": "email-exchange-budget-20261002.md",
+    "sha256": "e3f8940b1de54557755bc130dac6c20b6469393870ad4c5b4be05be7890000ec"
+  },
+  {
+    "path": "gmail_exchange_budget.py",
+    "sha256": "f7d6528c389efe51102f464eacfb6c4dfad92c429360f67e89f3453d151e7208"
+  },
+  {
+    "path": "test_email_sweep_exchange_cap.py",
+    "sha256": "399044db0a69dd8b3dca5bb4722136fd8f074ec136e7308f0fc8cbe2dfa71978"
+  },
+  {
+    "path": "test_gmail_exchange_budget.py",
+    "sha256": "db29e39c225d004ff9b59a7dcf1078ffdbc9ea5346f8c2cec9ace6e36b266f48"
+  }
+]
