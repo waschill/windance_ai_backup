@@ -786,3 +786,7 @@ Latest100 outgoing iMessages all attributed-only, zero plain text: staged exact-
 ## October2 attributed-message decoder synthetic evaluation passes
 
 Pinned LGPL pytypedstream wheel imports without installation; actual Foundation fixtures pass145 assertions on HAL and SAL, preserving exact Unicode and rejecting malformed/wrong-root/substring-only evidence. No real Messages content read or sender/service change. Resource-bounded live format coverage and complete receipt integration remain gates; no delivery/pilot claim. Evidence: archive/20261002-messages-attributed-decoder/messages-attributed-decoder-20261002.md.
+
+## October2 bounded live Messages format coverage verified
+
+Read-only SAL worker decoded99 of100 latest outgoing attributed archives; one remains unsupported, zero plain text. Counts only exported, no delivery/pilot claim or sender changes. CPU/wall limits and sampled RSS watchdog documented after unsupported macOS DATA limit; exact bytes/string audit-path guard verified. Complete request/chunk receipt integration remains open. Evidence: archive/20261002-messages-live-format/messages-live-format-20261002.md.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "attributed-live-coverage-20261002.json",
+    "sha256": "9e9ca1e89a5c43ddd07b15039eec2b7dabf440f69d6cc9504fbd214e72bd6fd2"
+  },
+  {
+    "path": "measure_attributed_coverage.py",
+    "sha256": "fb2594f37f980767025d3abfc95a7a735f9be8967c97a4b337765d33290faa50"
+  },
+  {
+    "path": "messages-live-format-20261002.md",
+    "sha256": "576c4994d70d1f9a9230dc51711403c47708ca2e9e027c0bebbdc800803d2eff"
+  }
+]
