@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "9b45b02958a5d28b019e5ce182d3af3c4d7827922b856360f47096c5f4a1401c"
+  },
+  {
+    "path": "owned_memory_api.py",
+    "sha256": "e030accbccb8fc46ac7ab43c1c9ac6ef5607e022fb2489b5919aca14efb932b5"
+  },
+  {
+    "path": "owned-memory-http-20261002.json",
+    "sha256": "2a8e5282c6495314ae25b7e30f72e1028e879cae02e189906dd2af22d57651f5"
+  },
+  {
+    "path": "owned-memory-http-20261002.md",
+    "sha256": "0007aeea2183747b8de5d38fd19aa37ffefc33cc293e9ceabfdd9d9ec55d8b80"
+  },
+  {
+    "path": "source_fact_gateway.py",
+    "sha256": "f1f6a6ddce8777b694e6c9378b118b719e5a13144286e9ed4f681173dc0bdbe4"
+  },
+  {
+    "path": "test_owned_memory_http.py",
+    "sha256": "2c58414c6a2b51ea1080906bf19ef334ac9ee6176179b2f57f48b4fbbb66821f"
+  }
+]

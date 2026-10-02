@@ -183,3 +183,7 @@ Staged selector filters owner/scope/grant/deletion before limits and reads curre
 ## October2 atomic memory provenance/request ledger candidate tested
 
 Direct remember source currently identifies channel/user before the conversation record exists. Staged gateway binds stable issuer/event ID and payload hash to fact/history/result in one transaction; retries do not rewrite, conflicting event reuse rejects, and old retries cannot resurrect corrected/deleted values. Six new tests plus31existing pass (37total). Actual adapter authentication/source truth/secret checks and assistant routing remain incomplete. Packet: archive/20261002-source-fact-request-ledger/source-fact-request-ledger-20261002.md. No production/model/external actions; Phase1 open.
+
+## October2 owned-memory router tested on disposable actual Harness
+
+Staged HTTP router independently enforces scoped credentials even for trusted loopback. Eight concurrent identical requests committed once; forged owner and cross-owner query rejected/withheld; correction/deletion/replay and actual secret classifier fixture passed. Actual Harness app ran only in disposable dirs with intercepted external operations and synthetic credentials. Production routes remain unchanged; real conversational/worker/credential/mirror integration and migration still incomplete. Evidence: archive/20261002-owned-memory-http/owned-memory-http-20261002.md. No production/model/send change; Phase1 open.
