@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "live-messages-checkpoint-20261002.json",
+    "sha256": "fa21738b637f1e306bfa624e18b4772d067a57b3dabc725bcfbc058413430e5c"
+  },
+  {
+    "path": "messages_store_checkpoint.py",
+    "sha256": "cd17655d9e4935915e7ed9e4140c0c977468e17b45a50e3ccb7653e406032b31"
+  },
+  {
+    "path": "messages-store-checkpoint-20261002.md",
+    "sha256": "a58081fd4c11dc8f209f1ae71d994158d0e3ef762d7a40afa4337a5885e11ca2"
+  },
+  {
+    "path": "test_messages_store_checkpoint.py",
+    "sha256": "1abe91f5a0cc11a8e56097a3017ebe112db7cb8c53ac05410985c811bd13fbd4"
+  },
+  {
+    "path": "verify_live_messages_checkpoint.py",
+    "sha256": "9c76dc72595e1b6ecf939abe6802b49b97d11d285f241b13ed944fd628ad2212"
+  }
+]

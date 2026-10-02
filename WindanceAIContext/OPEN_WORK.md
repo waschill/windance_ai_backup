@@ -814,3 +814,7 @@ SAL tests compose exact production send_one with intercepted external effect, ac
 ## October2 receipt observation supervised in composed tests
 
 Actual observer now runs through pinned-wheel subprocess with CPU/alarm/wall limits, RSS watchdog and strict private-safe response validation. Five composition/restart cases and six fault cases pass; stalled worker reaped at15.003seconds. Staged only; complete queue/store/deadline/consumer integration remains open. Evidence: archive/20261002-bounded-receipt-observation/bounded-receipt-observation-20261002.md.
+
+## October2 Messages store checkpoint compatibility verified
+
+Readonly checkpoint detects synthetic replacement/changed or missing anchor while preserving ordinary appends. HAL/SAL fixtures pass; content-free SAL live reread verifies same anchor in0.0274seconds. Not integrated; durable attempt binding, same-view receipt observation and rollback/race limits remain open. Evidence: archive/20261002-messages-store-checkpoint/messages-store-checkpoint-20261002.md.
