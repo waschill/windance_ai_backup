@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "message_receipt_journal.py",
+    "sha256": "6de41ae7def9822da7a31f68e9b5b9b729c72a9cbcdf773e96052a7b71f5c913"
+  },
+  {
+    "path": "message-journal-recovery-20261002.md",
+    "sha256": "1f5891d30cb55b95093a8ee5eec7e988c87e37880b2bbfb68a17b074cff1be2e"
+  },
+  {
+    "path": "test_message_receipt_journal.py",
+    "sha256": "1fbd00ab577e14755bf1ed27efe20e0e1a937f079b672b28947b39e239ca6cb2"
+  },
+  {
+    "path": "test_receipt_journal_process_crashes.py",
+    "sha256": "d1fa533bfe26fb5da51f29b9d6c34d5133546a5da84b2cded3989b21671465bc"
+  }
+]

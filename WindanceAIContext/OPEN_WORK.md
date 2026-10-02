@@ -802,3 +802,7 @@ Pinned live daemon passes four fresh-interpreter crash/restart cases with synthe
 ## October2 durable per-chunk receipt journal staged
 
 HAL/SAL synthetic tests verify single concurrent attempt authorization, reopen holds, content identity, sequential same-store boundaries, exclusive receipt claims and cold-copy recovery. No integration or live sender change. Trusted baseline/store provenance, actual process-crash composition, missing-history fail-closed rollout and caller timing remain gates. Evidence: archive/20261002-message-receipt-journal/message-receipt-journal-20261002.md.
+
+## October2 staged receipt journal fails closed on missing history
+
+Runtime now opens existing-only SQLite; missing/empty history holds and provisioning cannot overwrite. HAL/SAL regressions and four abrupt-process journal exits pass without repeated synthetic effects. Not deployed; full actual-outbox/observer composition, store continuity, schema validation and power-loss proof remain open. Evidence: archive/20261002-message-journal-recovery/message-journal-recovery-20261002.md.
