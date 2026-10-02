@@ -1,0 +1,13 @@
+# Dedicated SAM producer HTTP protocol — October 2, 2026 UTC
+
+Staged temporary test listener on HERALD only; production Harness/SAM routes and credentials unchanged. No SAM interruption or natural commit was triggered.
+
+`sam_business_memory_api.py` exposes one POST route `/memory/business/sam-schedule` backed by the staged dedicated-credential admission and atomic business-source/receipt store. It has no memory-read route and no default credential. Its envelope requires a bounded event ID and strict integer expected revision; extra owner fields are forbidden. Source/event conflicts return409; denied producer content/credential403; unavailable storage503 with same-event guidance. API docs endpoints are disabled. This is a proposed separate boundary, not an installed replacement for legacy `/memory`.
+
+Actual loopback Uvicorn/urllib HTTP test used ephemeral service credentials, separate temporary client/server SQLite databases and the installed Harness `memory_looks_secret` function extracted from source. Missing/wrong credentials, caller owner override, personal kind, boolean revision and a synthetic password-like value were denied. No raw sentinel appeared in the error. GET returned405. One secret-like fixture validates integration of that simple classifier, not comprehensive secret detection.
+
+The staged durable client sent one summary. The test discarded the first successful response; its retry reused the same event and recovered the receiver's original revision1 receipt. The server retained one source/receipt commit. A confirmed local retry made no further HTTP call. Changed content under the same event returned409. Temporary listener thread stopped, socket closed and databases/credentials discarded in cleanup. Sanitized results accompany this packet.
+
+This proves loopback HTTP compatibility between staged components. It does not provision SAM's real credential, authenticate the physical producer beyond bearer possession, secure external TLS, bound HTTP body streaming before parsing, install schemas/services or resolve canonical business-reader policy. Actual schedule renderer composition was tested separately in preceding packets; this HTTP test used a synthetic summary. Full SAM candidate must combine memory, history/clear safeguards and recovery without disrupting existing authorized workflows. Current Odoo clear-concurrency limit remains unresolved.
+
+No production memory/legacy route was disabled or changed, no real schedule/note/mailbox data used, and no Odoo/send/model/operational staff dispatch occurred. Detailed-note collection stays suspended. Warden/SyncThing/Level8/phone and SAM protected hours preserved. No new software or paid commitment. No production rollback required. Phase1 and project remain open.

@@ -1,0 +1,11 @@
+{
+  "actual_http": true,
+  "missing_wrong_credentials_denied": true,
+  "no_read_route": true,
+  "owner_private_kind_and_boolean_revision_denied": true,
+  "actual_secret_classifier_fixture_denied": true,
+  "lost_response_same_event_recovered": true,
+  "receiver_commits": 1,
+  "cached_retry_http_calls": 0,
+  "listener_stopped_verified": true
+}

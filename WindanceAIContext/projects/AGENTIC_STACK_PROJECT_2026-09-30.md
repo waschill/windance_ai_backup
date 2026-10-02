@@ -573,3 +573,7 @@ Dedicated producer admission composed with temporary SQLite source/receipt trans
 ## October2 actual SAM commit composed with durable client/receiver receipts
 
 Staged client persists stable event before transport and validates exact event/date/content/revision acknowledgment. Actual commit-function seam plus receiver passes six cases: lost response retries one receiver commit; wrong date/hash/event/superseded receipts leave local day uncommitted. Receiver regressions pass. No production/SAM/API/Odoo/notes changes. Full candidate/transport/schema/recovery composition remains required. Evidence: archive/20261002-sam-memory-protocol/sam-memory-protocol-20261002.md.
+
+## October2 dedicated SAM producer HTTP/client/receipt integration passes
+
+Temporary HERALD loopback API rejects missing/wrong producer credentials, owner/private-kind/boolean-revision overrides and actual secret-classifier fixture; no read route. Durable client recovers lost response using one event/receiver commit and cached retry makes no HTTP call. Listener stopped; no production/SAM/Odoo/model changes. Real credentials/TLS/schema/full candidate/business reader integration remains open. Evidence: archive/20261002-sam-memory-http/sam-memory-http-20261002.md.
