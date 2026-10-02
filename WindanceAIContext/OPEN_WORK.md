@@ -698,3 +698,7 @@ Prior fixture classification hid missing/subprocess inference dependencies. New2
 ## October2 actual cached OAuth resolver and SDK construction pass read-only boundary
 
 Existing Herald route resolves exact Codex OAuth/Terra with network/subprocess/filesystem changes denied. Actual unchanged profile entry and real SDK construction pass through inline adapter with model request intercepted before network and client closed. No actual model/credential value disclosure/config change. Remote acceptance/refresh, identity, exact recovery and coordinated callers remain open. Evidence: archive/20261002-email-runtime-resolution/email-runtime-resolution-20261002.md.
+
+## October2 current20-source email release restoration verified
+
+Manifest1262ea18 now has fresh online snapshot, exact copied service-layout startup, health/auth checks,28-table preservation and empty new journals. HAL independently verifies27 stable files, nested manifest/policy and four SQLite copies. No external/provider/model/service/SAM action. Actual identity, coordinated66-route callers, natural delivery and full host dependencies remain open. Evidence/recovery: archive/20261002-email-release-recovery/email-release-recovery-20261002.md.

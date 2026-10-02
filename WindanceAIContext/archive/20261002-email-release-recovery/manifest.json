@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-release-recovery-20261002.md",
+    "sha256": "fe211b86fcdeb431142af3e5231cc8bfb6c5d65873a8f2d691f9fabfb58fd77a"
+  },
+  {
+    "path": "recover_email_release.py",
+    "sha256": "e2f253bafa0a0da3efb0b5a679495f0a660e5f0f073f8f968c7382965d7b3170"
+  },
+  {
+    "path": "verify_email_release_recovery.py",
+    "sha256": "dd49801de37098828cafe79ac4ad0f25677d306e52b864d74ed9df92f71205d9"
+  }
+]
