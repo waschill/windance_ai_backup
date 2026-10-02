@@ -621,3 +621,7 @@ Before/after actual-function tests reproduce partial-batch continuation and diag
 ## October2 latest email sweep candidate passes actual ASGI and off-host recovery
 
 Current b30bd912 full startup health200 and real ASGI sweep401/503/502 verify auth/held/error behavior with no mailbox actions. Fresh read-only snapshot, 28 original non-sequence tables, six empty new tables and cold copy verified; HAL checks15 files/four SQLite copies. No production/service/SAM changes. Identity, provider uncertainty and execution bounds remain deployment gates. Evidence: archive/20261002-email-sweep-full-recovery/email-sweep-full-recovery-20261002.md.
+
+## October2 installed Gmail transport hidden write replay reproduced
+
+Actual googleapiclient execute(num_retries=0) plus installed httplib2 0.32.0 issued two simulated POSTs after BadStatusLine or ResponseNotReady and returned success. No network/mailbox action. Durable outer intents do not prevent this lower-layer replay; no historical duplicate claim. Add transport no-replay/deadline evidence to deployment gates and preserve Calendar behavior. Evidence: archive/20261002-gmail-hidden-transport-retry/gmail-hidden-transport-retry-20261002.md.

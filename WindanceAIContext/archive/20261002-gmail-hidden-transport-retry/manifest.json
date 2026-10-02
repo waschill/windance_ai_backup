@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "gmail-hidden-transport-retry-20261002.md",
+    "sha256": "e69211414784d56bac7d1eadc410586969c674f0a1629ef8965a64b6b17a7860"
+  },
+  {
+    "path": "test_gmail_hidden_retry.py",
+    "sha256": "508b6aa8122f6006bad38a262ec9a37900e9b79066d050871403fb45777d308b"
+  }
+]
