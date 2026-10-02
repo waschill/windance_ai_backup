@@ -577,3 +577,7 @@ Staged client persists stable event before transport and validates exact event/d
 ## October2 dedicated SAM producer HTTP/client/receipt integration passes
 
 Temporary HERALD loopback API rejects missing/wrong producer credentials, owner/private-kind/boolean-revision overrides and actual secret-classifier fixture; no read route. Durable client recovers lost response using one event/receiver commit and cached retry makes no HTTP call. Listener stopped; no production/SAM/Odoo/model changes. Real credentials/TLS/schema/full candidate/business reader integration remains open. Evidence: archive/20261002-sam-memory-http/sam-memory-http-20261002.md.
+
+## October2 composed SAM recovery gate failed in isolation
+
+Actual staged schema/history/clear/commit composition reveals a lost-memory-response retry deadlock: regenerated history summary differs, so the durable client correctly holds rather than replacing content. Eight scenarios characterize the failure and duplicate protections; candidate acceptance FAILED, not deployed. Next correction requires stable commit snapshot with changed-input detection and pre-effect configuration checks. Odoo first-clear race and production integration remain open. Evidence: archive/20261002-sam-memory-composition-failure/sam-memory-composition-failure-20261002.md.
