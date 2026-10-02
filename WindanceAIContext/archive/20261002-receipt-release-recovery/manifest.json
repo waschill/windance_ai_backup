@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "package_receipt_release.py",
+    "sha256": "294a7699dd661f2d3c0764fb5a94ea93b98c74bcb496076d98c04c89ffc92af1"
+  },
+  {
+    "path": "receipt-release-recovery-20261002.md",
+    "sha256": "d76d9ab2c47810fa31d21063d37e9295cf7e98095fc67d413bd8a2d8063baf7b"
+  },
+  {
+    "path": "verify_receipt_release.py",
+    "sha256": "8c6b54f716aa30e678df27a329558a9e4a303ef3a903aa77447aa8a10d4f0aac"
+  },
+  {
+    "path": "verify_restored_receipt_files.py",
+    "sha256": "2604e25b88e6a106416a7783c11a0e1ec5eb75f93130ac7e62d5f92b2786ae62"
+  }
+]

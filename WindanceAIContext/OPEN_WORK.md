@@ -850,3 +850,7 @@ Ten state fixtures preserve all file bytes and distinguish legacy submission fro
 ## October2 killed waiting caller reconciles same request without replay
 
 Actual producer main queued then killed while waiting; complete staged daemon/observer/journal flow yielded verified delayed delivery or held post-send crash. Actual repeated same-key enqueue and readonly lookup created no new queue item/send. No production change. Cold-release recovery, real caller/worker integration and deployment gates remain open. Evidence: archive/20261002-lost-caller-reconciliation/lost-caller-reconciliation-20261002.md.
+
+## October2 exact staged receipt release cold-restored on HAL and SAL
+
+20-file ZIP99a0ea53 and manifest3d26953c verified both hosts; SAL restored full queue/lost-caller/deadline workflows and HAL journal/status fixtures pass. Post-test source/archive hashes unchanged. Staged package only, not live outbox backup or deployment. Coherent production recovery, lifecycle/caller/protocol integration remain gates. Evidence: archive/20261002-receipt-release-recovery/receipt-release-recovery-20261002.md.
