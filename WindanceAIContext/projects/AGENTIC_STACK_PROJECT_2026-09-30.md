@@ -1065,3 +1065,7 @@ Thirteen-file exact ZIP760766df verified on HAL and restored on HERALD. Ownershi
 ## October2 diagnostic transport capture bounded and recovery verified
 
 Staged SSH capture now enforces streaming stdout/stderr/time limits and keeps failed claims uncertain without replay. Seven real-process cases, actual-ledger uncertainty and full HTTP-to-AL regression pass. Exact15-file r4 ZIP restored API/stream/process tests and unchanged hashes pass; no persistent deployment. Evidence: archive/20261002-diagnostic-transport-bounds/diagnostic-transport-bounds-20261002.md.
+
+## October2 staged diagnostic admission and single-worker limits pass
+
+Transactional32global/8owner active-job ceilings and1running-or-cancel-pending slot pass concurrent and cold-recovery tests. Exact retries remain idempotent; uncertain jobs retain capacity until matching receipt. Initial incomplete fixture receipt correctly rejected, corrected test passes; existing12API cases pass. No worker or deployment. Evidence: archive/20261002-diagnostic-admission/diagnostic-admission-20261002.md.

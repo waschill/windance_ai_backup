@@ -1,0 +1,11 @@
+# Diagnostic admission limits — staged
+
+The staged SQLite ledger now enforces fixed limits inside the same BEGIN IMMEDIATE transaction as admission/claim:32 active jobs globally,8 per authenticated owner and1 running or cancellation-pending job. Queued/running/cancel_requested states count as active. Exact idempotent resubmission returns the original record before capacity checks; different evidence under the same key still conflicts. Queue rejection returns429 with fixed metadata. Uncertain work is not reset, expired or requeued to free capacity.
+
+Concurrent fixture test on HERALD's application Python:20 same-owner submissions admitted exactly8;8 concurrent different-job claims admitted exactly1. Cancellation intent continued to occupy the running slot. Cold SQLite restoration retained that hold. A matching stop receipt released the slot, and global32-job capacity rejected a new fifth owner's request. No worker executed. The existing twelve-case API ownership/idempotency/cancellation/recovery suite passed with the changed ledger.
+
+The first new test omitted the evidence hash from its synthetic stop receipt and correctly failed the existing receipt-identity check. The fixture was corrected to include the original evidence hash; the production guard was preserved. This failure does not represent a live job or service failure.
+
+Limits are staging choices, not a measured optimum or spending guarantee. They constrain this ledger implementation and database, not multiple unrelated databases or privileged writers. Terminal history is retained; cumulative disk growth, queue age, fairness, real identity, persistent worker lifecycle, UI and broader diagnostic acceptance remain unfinished. Aggregate active-job limits do not prove a host CPU/memory limit beyond the separately tested worker containment. Busy claim semantics remain no dispatch; no automatic queue consumer has been enabled.
+
+The revision4 ZIP remains an immutable predecessor and does not contain this ledger update. Before installation or claiming current complete recovery, create a new exact package and validate the consumer/HTTP path with these admission rules. Current archive includes changed ledger and concurrency test. No live service, schedule, mailbox, send, model, Odoo, SAM, Warden, phone, Level8 or SyncThing action. Phase1 remains open.
