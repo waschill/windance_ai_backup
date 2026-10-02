@@ -954,3 +954,7 @@ Single dispatcher lock and original owner lock enforced; retained legacy result 
 ## October2 full persistent receiver handles receipt delay/stall/parent death
 
 Actual loop/guardian/runtime CLI with synthetic transport passes3cases, no duplicate effects; killed dispatcher worker stops before recovery. Streaming4096-entry cap replaces unbounded sort; boundary/fairness and full-flow tests pass. No service installed; monitoring, live budgets, refreshed recovery/cutover remain gates. Evidence: archive/20261002-persistent-full-flow/persistent-full-flow-20261002.md.
+
+## October2 staged dispatcher gains content-free operating observations
+
+Atomic PID/state/time/budget records and throttled idle refresh pass monitoring checks plus actual CLI and persistent synthetic flow regression. No real sends or service changes. Status files are not liveness or delivery proof; 70 live legacy results remain unverified receipts. Updated combined recovery release and coordinated cutover remain next. Evidence: archive/20261002-dispatcher-observation/dispatcher-observation-20261002.md.
