@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "verify_webui_restored_http.py",
+    "sha256": "9ea19f41dc3c01a09d0267a65bc29b1865f4b97323c3b12b880afbf6fa632fac"
+  },
+  {
+    "path": "webui-restored-http-20261002.md",
+    "sha256": "25972864395e35fa9de50f59c8eac7602afc78e4293be2d4d7711e5de9ae6e25"
+  },
+  {
+    "path": "webui-restored-http-diagnostic-20261002.json",
+    "sha256": "32829b9dcdc1dc2e892f9c9452235ab15dafe2aebaf405c58128446f4833a0e3"
+  },
+  {
+    "path": "webui-restored-http-r2-20261002.json",
+    "sha256": "e5352733d29540a6f6f920f7d88ed7596e6040c5b5ab92913eb1ab23a891d989"
+  },
+  {
+    "path": "webui-restored-http-result-20261002.json",
+    "sha256": "49c6f3fef2e9dcfb925d620033b54656b4bdcf3f69087e0f1a3e411d011f8565"
+  }
+]

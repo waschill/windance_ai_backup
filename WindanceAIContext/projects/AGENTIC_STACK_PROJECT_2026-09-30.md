@@ -709,3 +709,7 @@ Exact21-source manifestdcfdd110 passes fresh isolated startup, preserved28 origi
 ## October2 sender-rule sweeps staged through bounded worker
 
 Candidate61257141 routes internal sweeps through existing120-second supervisor and rejects missing HTTP auth. Actual ASGI/worker checks and three nonempty local SDK/journal cases pass, retaining uncertain effects without repeated writes. Not deployed; total call bounds, identity/history, coordinated callers and exact new recovery remain open. Evidence: archive/20261002-email-bounded-sweep/email-bounded-sweep-20261002.md.
+
+## October2 restored WebUI actual HTTP boundary passes in isolation
+
+Production/lab snapshot copies return health200 and unauthenticated chats/users401 in pinned network-none containers. Initial platform-metadata subprocess import failure diagnosed and pre-cached before application guard; no application isolation relaxation. Backups unchanged and all test containers removed. Login/session, empty-lab bootstrap, lifecycle and knowledge acceptance remain open. Evidence: archive/20261002-webui-restored-http/webui-restored-http-20261002.md.
