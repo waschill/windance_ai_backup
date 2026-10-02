@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_direct_rule_intent.py",
+    "sha256": "7794176d50005f7ff711d8fc897d496597bc1a8d6bb10035839cf5ca7b1a2c77"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "fef734ec81ed7bbe4643790f192724eced9ec66064d040862e9189170ee49b03"
+  },
+  {
+    "path": "email-direct-rule-intent-20261002.md",
+    "sha256": "b94af9bff1d5787f7206c4666944626e13d5e3aa0a34e5d003e302b6a440669e"
+  },
+  {
+    "path": "test_email_direct_rule_intent.py",
+    "sha256": "19678bee44b7db7169c6a2fa4bf4e938e7fdedaf1a1cc88c414d9f535b774a79"
+  }
+]

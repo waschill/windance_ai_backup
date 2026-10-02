@@ -493,3 +493,7 @@ Nine actual schema/handler/primitive synthetic reversal cases pass with no repea
 ## October2 full current email package startup/private/off-host recovery passes
 
 Exact undo/approval/shared-hold package imported and passed full ASGI lifecycle/health on fresh isolated private copies with external effects denied. All28 original non-sequence tables preserved, baseline sequence matched, six added tables empty, cold copy identical. Fifteen stable files and four databases independently verified on HAL. No production/SAM interruption. Identity/live transport/direct-writer/operator gates remain. Evidence: archive/20261002-email-undo-package-recovery/email-undo-package-recovery-20261002.md. Phase1 open.
+
+## October2 immediate numbered sender-rule bypass journaled
+
+Static source audit found direct Trash in always-delete/notify-delete numbered commands. Staged handler journals report/command-bound identity, preserves distinct later instructions and holds before preparation on prior uncertainty. Four actual parser/schema command fixtures pass; raw provider errors withheld. Local rule/reference transport and dynamic/external callers remain unverified. Evidence: archive/20261002-email-direct-rule-intent/email-direct-rule-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
