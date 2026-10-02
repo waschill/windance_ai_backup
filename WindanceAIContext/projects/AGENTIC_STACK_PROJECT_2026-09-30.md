@@ -341,3 +341,7 @@ Staged durable pre-write intent binds operation/payload and preserves unconfirme
 ## October2 SAM intent process-death/cold/concurrency checks passed
 
 Real isolated child exits before send, after synthetic acceptance and after confirmation preserve held/confirmed state on fresh process restart and consistent cold copy, with no second effect. Competing process stays held while first completes. No Odoo client or production DB used. Full SAM integration, authoritative reconciliation, older-backup handling and need-clear concurrency remain gates. Packet: archive/20261002-sam-intent-process-recovery/sam-intent-process-recovery-20261002.md. No production/API/model/send changes; Phase1 open.
+
+## October2 composed SAM source/schema candidate passes isolated checks
+
+Private exact-current-source candidate changes only schema init, memory acknowledgment and history intent call. Actual schema revealed TEXT item IDs; staged journal corrected before deployment. Candidate connect/init/commit/history/HTTP functions pass normal, late-memory-error and lost-history cases with all effects intercepted; repeated schema initialization and prior intent/process/cold tests pass. Full startup, pre-existing DB recovery, reconciliation and live rollout gates remain. Packet: archive/20261002-sam-full-candidate/sam-full-candidate-20261002.md. No production/Odoo/API/model changes; Phase1 open.

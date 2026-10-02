@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_sam_reliability_candidate.py",
+    "sha256": "618848c22442ad46cf1bf43acf17d33ce08d2b0667f90dbcf44a541262ec1fcb"
+  },
+  {
+    "path": "sam_history_intent.py",
+    "sha256": "bdb0193cebecefc918c0b11ef763ce64d363bf64a3f744a8b2b3e304e9847b01"
+  },
+  {
+    "path": "sam-full-candidate-20261002.json",
+    "sha256": "95d7ab55c5bca6f6ff2ee69b5340708cbaac6a8dc7c4f2f65f73199d632b61d6"
+  },
+  {
+    "path": "sam-full-candidate-20261002.md",
+    "sha256": "a019ace9ae65e1244794352672d2ec791cc9817020c68f118373c30de53905f6"
+  },
+  {
+    "path": "sam-full-candidate-tests-20261002.jsonl",
+    "sha256": "29f2afd16c47fdfbceeac72a6ec8e9ced9649d60f7d0a24819a92b46c40b4d84"
+  },
+  {
+    "path": "test_sam_full_candidate.py",
+    "sha256": "a0c43c9ab1de2d44c92ad4264454b325a9c62c3c4fd058a3fa815e350e4c6455"
+  },
+  {
+    "path": "test_sam_history_intent.py",
+    "sha256": "1f361c893127100d52e8102396277962467fceb77c8563169db7e318c2072886"
+  },
+  {
+    "path": "test_sam_intent_process_recovery.py",
+    "sha256": "01dd3cfe29839f2252ea5a530592a5a797b009ea35b4919ddf2d2f9eab679548"
+  }
+]
