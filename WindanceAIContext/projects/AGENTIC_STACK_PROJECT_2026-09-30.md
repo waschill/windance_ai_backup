@@ -413,3 +413,7 @@ Staged report now queries only current inbox operation identities (max50), retai
 ## October2 exact bounded-history candidate recovery verified
 
 Fresh private snapshot and full baseline/candidate ASGI lifecycle/health pass with external effects denied. All28 original non-sequence tables preserved; candidate state index exists and is selected; cold copy matches. Eight stable files copied to HAL and independently hash/integrity/table verified. No production changes. Exact revision2bfa3678 now has startup/private/off-host recovery evidence; identity, live Gmail, transport and cross-path gates remain. Record: archive/20261002-email-bounded-recovery/email-bounded-recovery-20261002.md. Phase1 open.
+
+## October2 sender-rule retry gap reproduced and staged correction verified
+
+Actual rule/report paths allowed classification after uncertain Trash and a second rule attempt in synthetic lost-response test. Composed candidate journals rule Trash and refreshes report admission: one attempt, zero classifier calls, durable visible hold and no raw exception leak. Prepared-draft regressions pass. Direct approval/undo and other writers remain outside this boundary; not deployed. Evidence: archive/20261002-email-rule-intent/email-rule-intent-20261002.md. No actual Gmail/model or production changes; Phase1 open.
