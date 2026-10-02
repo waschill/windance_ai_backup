@@ -682,3 +682,7 @@ R2 main5e95c9d6/manifest2f1df84b routes summary callers through120-second fixed 
 ## October2 Gmail caller auth compatibility dependency found
 
 Live Gmail MCP source sends no Authorization; staged fail-closed server must not deploy without coordinated caller/config work. Plist token entry absent but runtime source remains unverified. Staged client c806dedd passes five loopback auth/failure/redirect cases with no retry; no live token/config change. Scheduled Node-RED caller remains inaccessible and unverified, with no workaround attempted. Evidence: archive/20261002-gmail-caller-compatibility/gmail-caller-compatibility-20261002.md.
+
+## October2 shared Harness auth rollout scope verified
+
+Live static read-only /team probe without Authorization returns200; source guard bypasses absent token.67 guarded functions/66 routes identified. Setting shared token would affect far more than Gmail, so no configuration change was made. Coordinated caller inventory/cutover and real identity remain deployment gates; Node-RED access is still blocked without workaround. Evidence: archive/20261002-harness-auth-scope/harness-auth-scope-20261002.md.

@@ -1,0 +1,603 @@
+{
+  "source_sha256": "0a95a09f0ad1932b53d38130579411ac8679c99265e4dc8741b8fd171dce2ab0",
+  "guarded_functions": [
+    {
+      "function": "staff_work_board",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/staff/tasks/board"
+        }
+      ]
+    },
+    {
+      "function": "post_staff_task_note",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/tasks/{task_id}/notes"
+        }
+      ]
+    },
+    {
+      "function": "resume_staff_research",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/tasks/{task_id}/resume-research"
+        }
+      ]
+    },
+    {
+      "function": "revise_weekly_review_task",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/tasks/{task_id}/revise-weekly-review"
+        }
+      ]
+    },
+    {
+      "function": "get_self_status",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/self/status"
+        }
+      ]
+    },
+    {
+      "function": "get_system_cpu",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/system/cpu"
+        }
+      ]
+    },
+    {
+      "function": "get_system_diagnostics",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/system/diagnostics"
+        }
+      ]
+    },
+    {
+      "function": "get_voice_status",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/voice/status"
+        }
+      ]
+    },
+    {
+      "function": "walkie_text",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/walkie/text"
+        }
+      ]
+    },
+    {
+      "function": "voice_walkie",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/voice/walkie"
+        }
+      ]
+    },
+    {
+      "function": "voice_ask",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/voice/ask"
+        }
+      ]
+    },
+    {
+      "function": "message_sync",
+      "routes": []
+    },
+    {
+      "function": "get_unread",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/email/unread"
+        }
+      ]
+    },
+    {
+      "function": "get_calendar",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/calendar/upcoming"
+        }
+      ]
+    },
+    {
+      "function": "get_report_context",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/reports/context"
+        }
+      ]
+    },
+    {
+      "function": "post_delivered_report",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/reports/delivered"
+        }
+      ]
+    },
+    {
+      "function": "post_briefing",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/briefing"
+        }
+      ]
+    },
+    {
+      "function": "post_gmail_report",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/gmail/report"
+        }
+      ]
+    },
+    {
+      "function": "post_daily_reflection",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/reflection/daily"
+        }
+      ]
+    },
+    {
+      "function": "get_training_today",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/training/today"
+        }
+      ]
+    },
+    {
+      "function": "get_sam_schedule",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/sam/schedule"
+        }
+      ]
+    },
+    {
+      "function": "post_sam_commit",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/sam/commit"
+        }
+      ]
+    },
+    {
+      "function": "get_team",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/team"
+        }
+      ]
+    },
+    {
+      "function": "get_ops_items",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/ops/items"
+        }
+      ]
+    },
+    {
+      "function": "post_ops_item",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/ops/items"
+        }
+      ]
+    },
+    {
+      "function": "get_ops_status",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/ops/status"
+        }
+      ]
+    },
+    {
+      "function": "post_staff_task",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/tasks"
+        }
+      ]
+    },
+    {
+      "function": "get_staff_tasks",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/staff/tasks"
+        }
+      ]
+    },
+    {
+      "function": "get_staff_task",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/staff/tasks/{task_id}"
+        }
+      ]
+    },
+    {
+      "function": "post_staff_task_start",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/tasks/{task_id}/start"
+        }
+      ]
+    },
+    {
+      "function": "post_staff_task_complete",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/tasks/{task_id}/complete"
+        }
+      ]
+    },
+    {
+      "function": "get_excalidraw_status",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/excalidraw/status"
+        }
+      ]
+    },
+    {
+      "function": "get_excalidraw_files",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/excalidraw/files"
+        }
+      ]
+    },
+    {
+      "function": "post_excalidraw_create",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/excalidraw/create"
+        }
+      ]
+    },
+    {
+      "function": "get_excalidraw_file",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/excalidraw/files/{filename}"
+        }
+      ]
+    },
+    {
+      "function": "request_calendar_create",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/calendar/create/approval"
+        }
+      ]
+    },
+    {
+      "function": "request_gmail_action",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/gmail/action/approval"
+        }
+      ]
+    },
+    {
+      "function": "post_gmail_sender_rule_sweep",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/gmail/sender-rules/sweep"
+        }
+      ]
+    },
+    {
+      "function": "get_search_status",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/search/status"
+        }
+      ]
+    },
+    {
+      "function": "post_web_search",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/search/web"
+        }
+      ]
+    },
+    {
+      "function": "post_web_context",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/search/context"
+        }
+      ]
+    },
+    {
+      "function": "get_odoo_status",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/odoo/status"
+        }
+      ]
+    },
+    {
+      "function": "odoo_search",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/odoo/search"
+        }
+      ]
+    },
+    {
+      "function": "odoo_horse_history_report",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/odoo/horse-history/report"
+        }
+      ]
+    },
+    {
+      "function": "odoo_write",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/odoo/write"
+        }
+      ]
+    },
+    {
+      "function": "odoo_horse_history",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/odoo/horse-history"
+        }
+      ]
+    },
+    {
+      "function": "odoo_partners",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/odoo/partners"
+        }
+      ]
+    },
+    {
+      "function": "odoo_model_fields",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/odoo/model/{model_name}/fields"
+        }
+      ]
+    },
+    {
+      "function": "post_idea",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/ideas"
+        }
+      ]
+    },
+    {
+      "function": "get_ideas",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/ideas"
+        }
+      ]
+    },
+    {
+      "function": "post_idea_review",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/ideas/{capture_id}/review"
+        }
+      ]
+    },
+    {
+      "function": "post_capture",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/captures"
+        }
+      ]
+    },
+    {
+      "function": "get_captures",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/captures"
+        }
+      ]
+    },
+    {
+      "function": "get_capture_review",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/captures/review"
+        }
+      ]
+    },
+    {
+      "function": "post_capture_transition",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/captures/{capture_id}/transition"
+        }
+      ]
+    },
+    {
+      "function": "put_memory",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/memory"
+        }
+      ]
+    },
+    {
+      "function": "list_memory",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/memory"
+        }
+      ]
+    },
+    {
+      "function": "get_decision_logs",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/decision-logs"
+        }
+      ]
+    },
+    {
+      "function": "get_vector_memory",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/memory/vector"
+        }
+      ]
+    },
+    {
+      "function": "get_second_brain_search",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/second-brain/search"
+        }
+      ]
+    },
+    {
+      "function": "get_vector_memory_graph",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/memory/vector/graph"
+        }
+      ]
+    },
+    {
+      "function": "post_vector_reindex",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/memory/vector/reindex"
+        }
+      ]
+    },
+    {
+      "function": "create_approval",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/approvals"
+        }
+      ]
+    },
+    {
+      "function": "list_approvals",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/approvals"
+        }
+      ]
+    },
+    {
+      "function": "decide_approval",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/approvals/{approval_id}/decision"
+        }
+      ]
+    },
+    {
+      "function": "staff_follow_through",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/staff/follow-through"
+        }
+      ]
+    },
+    {
+      "function": "report_control",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/reports/control"
+        }
+      ]
+    }
+  ]
+}

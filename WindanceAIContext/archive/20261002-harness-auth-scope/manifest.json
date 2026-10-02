@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "harness-auth-scope-20261002.md",
+    "sha256": "9dcd9d54289484104ac13cbaf46763a4d36d70d9afc71187e077b9673b0bb005"
+  },
+  {
+    "path": "harness-auth-surface-20261002.json",
+    "sha256": "5fea670a06735f42062e6b2c6d51bd9be2d9856f0d0610aba5f4e46ec51e8c85"
+  }
+]
