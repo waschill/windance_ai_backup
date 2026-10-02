@@ -977,3 +977,7 @@ Live read-only count12 legacy delivered rows, no other statuses; new journal abs
 ## October2 live receiver ownership, launch candidate and fresh recovery verified
 
 One existing SAL receiver, empty queue/inflight/uncertain, Warden pause confirmed. Same-label/interpreter plist candidate linted;125-file stable live snapshot independently cold-verified SAL/HAL. No registration/source change. Producer has no global admission lock, so idle polling alone is unsafe; explicit transition guard and no-replay rollback constraints recorded before deployment. Evidence: archive/20261002-receiver-cutover-preparation/receiver-cutover-preparation-20261002.md.
+
+## October2 receiver pause lease passes disposable-process interruption tests
+
+Five real-signal cases pass on owned synthetic workers: resume, controller disconnect, expiry, wrong identity and guard termination. No production signals. SIGTERM cleanup correction included; abrupt guard death/inspection failure remain limits. Full old-receiver handoff rehearsal remains before cutover. Evidence: archive/20261002-receiver-pause-lease/receiver-pause-lease-20261002.md.
