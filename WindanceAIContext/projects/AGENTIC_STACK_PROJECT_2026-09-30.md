@@ -329,3 +329,7 @@ Running main systemd service matches sam_schedule.py; commit_day source posts sa
 ## October2 SAM commit acknowledgment gap reproduced; guard staged
 
 Installed commit_day plus actual JSON helper in disposable empty-schedule fixture marks committed for application-error or malformed successful-HTTP JSON. Candidate requires explicit status ok before local marking; five baseline/five candidate cases pass with all API/Odoo effects intercepted. No historical false commit established. Earlier Odoo/rollover retry safety and fresh backup/maintenance/deployment remain gates; no live commit/source/service change. Packet: archive/20261002-sam-commit-acknowledgment/sam-commit-acknowledgment-20261002.md. Detailed notes remain suspended; Phase1 open.
+
+## October2 SAM upstream lost-response retry window verified synthetically
+
+Actual SAM service-history helper suppresses ordinary retries with saved receipts, but simulated accepted history write followed by lost response yields another create on retry. Harness source directly creates without an operation key in that helper. No actual Odoo records read/written; no historical duplicates claimed. Durable pre-write intent and uncertain-outcome hold/reconciliation are needed before broader commit retry changes; prior acknowledgment guard stays staged. Packet: archive/20261002-sam-service-history-retry/sam-service-history-retry-20261002.md. All production services unchanged; Phase1 open.

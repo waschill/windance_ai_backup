@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-service-history-retry-20261002.json",
+    "sha256": "53b319e84505b302ba03051c62721d19a910a6c7178d94dbeba2a599a22afb0a"
+  },
+  {
+    "path": "sam-service-history-retry-20261002.md",
+    "sha256": "7fe39a4b1385a1e3824453a31465c3974f85ad9edcfc5723cc1897f65244a090"
+  },
+  {
+    "path": "test_sam_service_history_retry.py",
+    "sha256": "904d42228a710edc583e84abd129a7588229f428960950c8d7d15ec00e1a5c5b"
+  }
+]
