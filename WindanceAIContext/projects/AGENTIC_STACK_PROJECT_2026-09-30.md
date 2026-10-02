@@ -625,3 +625,7 @@ Current b30bd912 full startup health200 and real ASGI sweep401/503/502 verify au
 ## October2 installed Gmail transport hidden write replay reproduced
 
 Actual googleapiclient execute(num_retries=0) plus installed httplib2 0.32.0 issued two simulated POSTs after BadStatusLine or ResponseNotReady and returned success. No network/mailbox action. Durable outer intents do not prevent this lower-layer replay; no historical duplicate claim. Add transport no-replay/deadline evidence to deployment gates and preserve Calendar behavior. Evidence: archive/20261002-gmail-hidden-transport-retry/gmail-hidden-transport-retry-20261002.md.
+
+## October2 standalone Gmail transport passes single-attempt failure tests
+
+Actual Google client/HTTPX loopback tests record one POST in seven success/failure scenarios. Three offline SDK cases verify static discovery, bounded refresh exchanges and no API401 replay. Staged only: full Harness composition, whole-job deadline, identity and exact-revision recovery remain open. No real mailbox/model/service/SAM action. Evidence: archive/20261002-gmail-single-attempt-transport/gmail-single-attempt-transport-20261002.md.

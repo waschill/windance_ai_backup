@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "gmail_single_attempt_transport.py",
+    "sha256": "78b1620411c0e4f594062e0fa3d36cd76e80718a6feefaa68de5d20604508d7e"
+  },
+  {
+    "path": "gmail-single-attempt-transport-20261002.md",
+    "sha256": "4543c640a91137e5bff59132f5face22a6fce89edd5f3ee54bb47fdedeb50724"
+  },
+  {
+    "path": "test_gmail_single_attempt_transport.py",
+    "sha256": "ff4b9999679e84257051a6488bd6e8df5a63ee15a5157b5fbde96101ca54471f"
+  },
+  {
+    "path": "test_gmail_transport_refresh.py",
+    "sha256": "0c297fe13150c97196731c89b90f81cd1f59aae5e25aca409861e8da288fd939"
+  }
+]
