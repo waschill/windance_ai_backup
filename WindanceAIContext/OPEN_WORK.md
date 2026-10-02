@@ -422,3 +422,7 @@ Eight private file hashes and four SQLite integrity checks pass independently on
 ## October2 bounded email history lookup composed and tested
 
 Staged report now queries only current inbox operation identities (max50), retaining global unresolved counts via indexed aggregate and consistent read transaction. Ten-thousand-record fixture and actual composed report normal/lost-response recovery pass without duplicate synthetic drafts. No real Gmail/model or production changes. This is allocation/result bounded, not a transport/time or cross-path guarantee. New revision needs its own full startup/recovery gate. Evidence: archive/20261002-email-bounded-history/email-bounded-history-20261002.md. Phase1 remains open.
+
+## October2 exact bounded-history candidate recovery verified
+
+Fresh private snapshot and full baseline/candidate ASGI lifecycle/health pass with external effects denied. All28 original non-sequence tables preserved; candidate state index exists and is selected; cold copy matches. Eight stable files copied to HAL and independently hash/integrity/table verified. No production changes. Exact revision2bfa3678 now has startup/private/off-host recovery evidence; identity, live Gmail, transport and cross-path gates remain. Record: archive/20261002-email-bounded-recovery/email-bounded-recovery-20261002.md. Phase1 open.

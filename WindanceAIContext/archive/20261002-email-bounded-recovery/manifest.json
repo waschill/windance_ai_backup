@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-bounded-recovery-20261002.md",
+    "sha256": "53f39746d2e4d5ea4c39f5f6892fbb6337d7ea0f2ee4fbc20f3245b0b7ee6673"
+  },
+  {
+    "path": "test_email_private_recovery.py",
+    "sha256": "7e9ecd3fe97c580fb7af575d6bb0fff3598ef3cc1d13ce78453b9a1af3a776d2"
+  },
+  {
+    "path": "verify_email_offhost_recovery.py",
+    "sha256": "12bbee8710f8994fae006e0ad2196afdc0565861f1c9fbbe4c9f51492cda8098"
+  }
+]
