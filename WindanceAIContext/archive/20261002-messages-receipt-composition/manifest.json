@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "messages_attributed_receipt.py",
+    "sha256": "c7170390bf7fbdc7a73d4286e81574230b43a05a9ff643adc3a275be915c16f9"
+  },
+  {
+    "path": "messages-receipt-composition-20261002.md",
+    "sha256": "4d53bdb11992cc8c7d9169f5fda5887e382792f2d3cda2f5846cce1e94c4b349"
+  },
+  {
+    "path": "test_messages_attributed_receipt.py",
+    "sha256": "bdfa0c76541814989a2f5684d09e36d3d836315c0b5c7b7a05bd64641647147e"
+  }
+]

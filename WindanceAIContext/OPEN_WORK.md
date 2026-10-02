@@ -790,3 +790,7 @@ Pinned LGPL pytypedstream wheel imports without installation; actual Foundation 
 ## October2 bounded live Messages format coverage verified
 
 Read-only SAL worker decoded99 of100 latest outgoing attributed archives; one remains unsupported, zero plain text. Counts only exported, no delivery/pilot claim or sender changes. CPU/wall limits and sampled RSS watchdog documented after unsupported macOS DATA limit; exact bytes/string audit-path guard verified. Complete request/chunk receipt integration remains open. Evidence: archive/20261002-messages-live-format/messages-live-format-20261002.md.
+
+## October2 exact attributed receipt composition staged
+
+Read-only observer plus actual pinned decoder passes25 synthetic HAL/SAL SQLite scenarios, including unreadable-candidate ambiguity, conflicting representations and incomplete flags. No sender/receipt consumer changed, no live delivery claimed. Durable request/chunk boundaries, exclusive receipt claims, supervised execution and coordinated rollout remain open. Evidence: archive/20261002-messages-receipt-composition/messages-receipt-composition-20261002.md.
