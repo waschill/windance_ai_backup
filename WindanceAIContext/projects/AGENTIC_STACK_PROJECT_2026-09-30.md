@@ -537,3 +537,7 @@ Temporary HERALD loopback API accepted scoped submission, fixed SSH adapter invo
 ## October2 active HTTP cancellation confirmed against exact isolated worker
 
 Principal-authorized cancel records intent, verifies exact isolated container and persists cancellation only after observed stopped acknowledgment. Real running-worker test passed; failed/wrong acknowledgments stay pending. Twelve ASGI/SQLite regressions and actual normal HTTP-worker regression pass. Cleanup now coordinated via operator-only retained container; interrupted cleanup/races remain gates. No production listener, staff dispatch or business changes. Evidence: archive/20261002-diagnostic-http-cancel/diagnostic-http-cancel-20261002.md.
+
+## October2 remote response loss survives cold/fresh-process reconciliation; quota checkpoint
+
+After one actual isolated worker completed, injected response loss left ledger held; retry started nothing. Wrong worker version rejected, restored ledger/fresh process accepted exact existing receipt without rerun. No production service/model/business changes. Account-wide weekly usage78% used/22% remaining; two free resets unused, purchased credits0, project dollars unknown. Evidence: archive/20261002-diagnostic-remote-loss/diagnostic-remote-loss-20261002.md. Remaining job/pilot gates open.

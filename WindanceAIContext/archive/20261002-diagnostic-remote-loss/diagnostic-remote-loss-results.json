@@ -1,0 +1,11 @@
+{
+  "job_id": "09431b85c2924ac5a0b1528464b9758b",
+  "actual_remote_completion_before_injected_loss": true,
+  "held_state_before_recovery": "running",
+  "duplicate_start_denied": true,
+  "wrong_worker_version_denied": true,
+  "cold_fresh_process_reconciled": true,
+  "receipt_exactly_matches_original": true,
+  "recovery_started_worker": false,
+  "terminal_sha256": "39c19b1230fb5c7f05564aa36d3780ad0fff0cb5e27d32cd314826c8df2a1f5f"
+}
