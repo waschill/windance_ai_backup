@@ -762,3 +762,7 @@ Pinned callerd282c158 and serverd9dd9a97 pass missing/wrong client auth, actual 
 ## October2 broader live launch-registration reconciliation
 
 HERALD26 selected definitions:14 registered,12 absent across user/gui501 including intentionally disabled phone;11 others need dependency/ownership reconciliation, not batch activation. Core recovered services remain running. SAL9/11 registered, with both Warden jobs intentionally unloaded. Invoice last exit1 lacks timestamp and is not proof of new post-repair failure. No service/send/dispatch changes. Evidence: archive/20261002-launch-registration-reconciliation/launch-registration-reconciliation-20261002.md.
+
+## October2 missing-job source triage finds legacy context privacy mismatch
+
+All11 selected absent-job scripts/interpreters exist; source effects grouped for email/report/upkeep/memory recovery without activation. Actual desktop-context functions copy synthetic personal excerpt without explicit remember request into shared ownerless/sessionless payload. No real conversations accessed or memory writes; job remains unregistered and must not be restored unchanged. Evidence: archive/20261002-unregistered-job-dependencies/unregistered-job-dependencies-20261002.md.

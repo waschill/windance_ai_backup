@@ -1,0 +1,378 @@
+[
+  {
+    "label": "com.windance.attendance-ip-exceptions",
+    "run_at_load": false,
+    "calendar": {
+      "Hour": 7,
+      "Minute": 45
+    },
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/agent-harness/daily_attendance_ip_exceptions.py",
+        "exists": true,
+        "sha256": "cc5242282d4e4d3b0a031f0897b5af99d6c88ae5aae889e1fe7d3e018884ac5b",
+        "imports": [
+          "__future__",
+          "agent_harness",
+          "argparse",
+          "datetime",
+          "json",
+          "subprocess",
+          "urllib.request",
+          "zoneinfo"
+        ],
+        "effect_call_names": [
+          "RuntimeError",
+          "h.odoo_execute_kw",
+          "send",
+          "subprocess.run"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.capture-review-reminder",
+    "run_at_load": false,
+    "calendar": {
+      "Hour": 19,
+      "Minute": 0
+    },
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/capture-review-reminder/capture_review_reminder.py",
+        "exists": true,
+        "sha256": "763a096d0a61319ea4c732ae24119b2f642adc847570585c7fa6f05802753900",
+        "imports": [
+          "__future__",
+          "argparse",
+          "json",
+          "pathlib",
+          "sqlite3",
+          "subprocess"
+        ],
+        "effect_call_names": [
+          "RuntimeError",
+          "conn.execute",
+          "subprocess.run"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.daily-reflection",
+    "run_at_load": false,
+    "calendar": {
+      "Hour": 21,
+      "Minute": 30
+    },
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/agent-harness/daily_reflection.py",
+        "exists": true,
+        "sha256": "a809bffec4afddf30a1718c5edd322c0fcc1b86e8275ae0ab78f40c9cd040d5b",
+        "imports": [
+          "json",
+          "re",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "post_json"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.desktop-context-sync",
+    "run_at_load": true,
+    "calendar": null,
+    "interval": 120,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/desktop-context-sync/desktop_context_sync.py",
+        "exists": true,
+        "sha256": "b4654e49d7a1592c4aa41d043bfe2e5f367ce03b9b4fd5b6f9af4df30a62d974",
+        "imports": [
+          "__future__",
+          "json",
+          "pathlib",
+          "re",
+          "sqlite3",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "conn.execute"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.fall-river-vet-report",
+    "run_at_load": false,
+    "calendar": {
+      "Hour": 12,
+      "Minute": 20
+    },
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/fall-river-vet-report/fall_river_vet_report.py",
+        "exists": true,
+        "sha256": "acecb5b2c99c0de9befb79926bcff8db6e74af8befbe3d61a54072ede4b2477d",
+        "imports": [
+          "__future__",
+          "argparse",
+          "base64",
+          "datetime",
+          "email.message",
+          "fcntl",
+          "google.auth.transport.requests",
+          "google.oauth2.credentials",
+          "googleapiclient.discovery",
+          "hashlib",
+          "json",
+          "odoo_json2",
+          "os",
+          "pathlib",
+          "re",
+          "subprocess",
+          "sys",
+          "time",
+          "typing",
+          "urllib.error",
+          "urllib.request",
+          "uuid"
+        ],
+        "effect_call_names": [
+          "RuntimeError",
+          "atomic_write_json",
+          "odoo.execute_kw",
+          "run_send",
+          "self.execute_kw",
+          "send_email",
+          "subprocess.run",
+          "tmp.replace",
+          "tmp.write_text"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.gmail-sender-rule-sweep",
+    "run_at_load": true,
+    "calendar": null,
+    "interval": 600,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/agent-harness/gmail_sender_rule_sweep_notify.py",
+        "exists": true,
+        "sha256": "20c9295addda27835b6d6520556a2390b58146a6ed5d76dd8e60353b4aea566d",
+        "imports": [
+          "__future__",
+          "json",
+          "sys",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "post_json"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.hermex",
+    "run_at_load": true,
+    "calendar": null,
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/hermex/launch.py",
+        "exists": true,
+        "sha256": "e1c7c0760e5ac154722afdbae95c917c4c92db7a87dc42a9fe6f8c8f20117515",
+        "imports": [
+          "json",
+          "os",
+          "pathlib",
+          "runpy",
+          "sys"
+        ],
+        "effect_call_names": [
+          "runpy.run_path"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.sentinel-router-review",
+    "run_at_load": false,
+    "calendar": {
+      "Hour": 6,
+      "Minute": 50
+    },
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/sentinel-router-logs/sentinel_daily_router_review.py",
+        "exists": true,
+        "sha256": "1f8f1aaa283bd57ecd2895d13b81e2de150a2a0294320bc9de7d1d113078f6a1",
+        "imports": [
+          "__future__",
+          "argparse",
+          "base64",
+          "datetime",
+          "hashlib",
+          "json",
+          "pathlib",
+          "re",
+          "subprocess",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "RUN_LOG.open",
+          "RUN_LOG.parent.mkdir",
+          "RuntimeError",
+          "handle.write",
+          "subprocess.run"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.software-maintenance",
+    "run_at_load": false,
+    "calendar": {
+      "Hour": 1,
+      "Minute": 30
+    },
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/software-maintenance/windance_software_maintenance.py",
+        "exists": true,
+        "sha256": "9472f32281d0f1a026546bc1f2162f0cbe5e69325608e2b0253714b3f56b35ad",
+        "imports": [
+          "__future__",
+          "datetime",
+          "json",
+          "pathlib",
+          "re",
+          "shlex",
+          "subprocess",
+          "sys",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "REPORT.write_text",
+          "STATE.write_text",
+          "run",
+          "subprocess.run"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.telegram-report-history",
+    "run_at_load": true,
+    "calendar": null,
+    "interval": null,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/bin/telegram_report_history.py",
+        "exists": true,
+        "sha256": "c27716d4fce6a292e6de475a73c6ce221465e27a3175f82f5262799ef9054c55",
+        "imports": [
+          "__future__",
+          "datetime",
+          "fcntl",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "sys",
+          "tempfile",
+          "time",
+          "urllib.error",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "RuntimeError",
+          "os.replace",
+          "path.unlink",
+          "post_history",
+          "prune_retention",
+          "run_loop",
+          "temporary.unlink",
+          "write_private"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  },
+  {
+    "label": "com.windance.urgent-monitor",
+    "run_at_load": true,
+    "calendar": null,
+    "interval": 30,
+    "interpreter_exists": true,
+    "targets": [
+      {
+        "path": "/Users/herald/services/urgent-monitor/urgent_monitor.py",
+        "exists": true,
+        "sha256": "9ab46cc2509fbbb98f076de54ce1ceaf0aa43b7d1866d18ef7f936589a3b9ce2",
+        "imports": [
+          "__future__",
+          "base64",
+          "datetime",
+          "email.message",
+          "google.auth.transport.requests",
+          "google.oauth2.credentials",
+          "googleapiclient.discovery",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "subprocess",
+          "time",
+          "typing",
+          "urllib.error",
+          "urllib.request"
+        ],
+        "effect_call_names": [
+          "LOCK_FILE.unlink",
+          "LOCK_FILE.write_text",
+          "RuntimeError",
+          "STATE_FILE.write_text",
+          "f.write",
+          "message.replace",
+          "send_email",
+          "send_local_messages",
+          "send_max",
+          "subprocess.run",
+          "to.replace"
+        ]
+      }
+    ],
+    "opaque_shell_command": false
+  }
+]

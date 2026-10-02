@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "desktop-context-boundary-20261002.json",
+    "sha256": "e6f68f05bb65e37cfe1db9c04e12807bdb20c2c6821a916c951e0ce1797f54d5"
+  },
+  {
+    "path": "herald-unregistered-dependencies-20261002.json",
+    "sha256": "cab512e31c6c21f741a96d33227a53ca229de3194ed7e9284f6dabc1db5e147e"
+  },
+  {
+    "path": "probe_desktop_context_boundary.py",
+    "sha256": "cbce4dd111e76397ced3971d1d7bcd9fb71b3d6efa16778fe2ac0eda40ba860d"
+  },
+  {
+    "path": "unregistered-job-dependencies-20261002.md",
+    "sha256": "ac237d5b592fd102583049f6e2567eda83ae5a7a1da1398d847aceb5dc673ed8"
+  }
+]
