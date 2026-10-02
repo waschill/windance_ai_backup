@@ -417,3 +417,7 @@ Fresh private snapshot and full baseline/candidate ASGI lifecycle/health pass wi
 ## October2 sender-rule retry gap reproduced and staged correction verified
 
 Actual rule/report paths allowed classification after uncertain Trash and a second rule attempt in synthetic lost-response test. Composed candidate journals rule Trash and refreshes report admission: one attempt, zero classifier calls, durable visible hold and no raw exception leak. Prepared-draft regressions pass. Direct approval/undo and other writers remain outside this boundary; not deployed. Evidence: archive/20261002-email-rule-intent/email-rule-intent-20261002.md. No actual Gmail/model or production changes; Phase1 open.
+
+## October2 optimistic Trash receipts reproduced and correction staged
+
+Actual helper previously accepted failed/malformed mark-read and Trash evidence as success. Eight baseline/eight candidate synthetic cases pass; staged helper requires matching identity/labels, disables SDK retries and stops before Trash on uncertain mark-read. Errors omit provider content and never claim untouched. Not deployed; composed journal/action-path and live compatibility gates remain. Evidence: archive/20261002-email-trash-receipt/email-trash-receipt-20261002.md. No real mailbox/model or production changes; Phase1 open.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_trash_receipt.py",
+    "sha256": "acd74220efc20886b9c8d8f17bfeba55323aca9ed56936ff6a45ab0091c41ab1"
+  },
+  {
+    "path": "email-trash-receipt-20261002.md",
+    "sha256": "d9946085625d2ff1289ced2b1bc7d38837c35eef7bd942303f574179c0d8718f"
+  },
+  {
+    "path": "test_email_trash_receipt.py",
+    "sha256": "e3fae471b5838c64e3a96fffe66d7367924e0a3ff9837955f90b108c9d557f90"
+  }
+]
