@@ -398,3 +398,7 @@ Staged report checks intent records before rules/classifier, avoids repeated dra
 ## October2 email candidate full ASGI/private-data recovery verified
 
 Fresh read-only online snapshot, full baseline/candidate module and ASGI lifecycle with external effects denied, health200, and cold restoration passed. All28 non-sequence tables preserved; initial sequence difference matches unchanged baseline startup. Seven private stable files verified on HAL; four database integrity/table comparisons pass. No production/mail/model changes. Authoritative operation reconciliation and cross-path admission remain deployment gates. Packet: archive/20261002-email-private-recovery/email-private-recovery-20261002.md. Phase1 open.
+
+## October2 bounded exact-draft recovery lookup staged
+
+Official Gmail draft search/raw retrieval supports a proposed operation-marker and payload comparison. Read-only helper accepts only one complete exact draft match; ten synthetic cases pass, at most two reads and no write interface. Missing/ambiguous/edited results never release a hold or retry creation. Marker preservation, trusted mailbox binding, journal integration and transport deadlines remain unverified; not installed. Packet: archive/20261002-gmail-draft-recovery/gmail-draft-recovery-20261002.md. No actual Gmail/model calls; Phase1 open.
