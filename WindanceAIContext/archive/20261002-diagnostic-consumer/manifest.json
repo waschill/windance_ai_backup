@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "diagnostic_consumer.py",
+    "sha256": "a72248d0069246906aed76617be4e7d402c58e5d4b8f056e7d20a47ddb823d2d"
+  },
+  {
+    "path": "diagnostic-consumer-20261002.md",
+    "sha256": "b6103726cd5490c4602bb685df64094080816a77d0c78cef5193bf481d1d10e8"
+  },
+  {
+    "path": "diagnostic-consumer-http-results.json",
+    "sha256": "73bf8bb335772d973f0b8758bb8b13adb07dead5143e7153d067556de427c5db"
+  },
+  {
+    "path": "diagnostic-recovery-package-r5-20261002.zip",
+    "sha256": "b68b775b44802e1b5558b6cf45fd1b1c21af0240a1ae1897253df77b57388c80"
+  },
+  {
+    "path": "package_diagnostic_consumer_r5.py",
+    "sha256": "bc89654d205178045ebdefb6a77034e3eb879f54390ed528d46a4e27ea93032d"
+  },
+  {
+    "path": "test_diagnostic_consumer_http.py",
+    "sha256": "29d8242af28b4499e23304411311d67f294e01845f33c8b50be8ea2778e00d33"
+  },
+  {
+    "path": "test_diagnostic_consumer.py",
+    "sha256": "c262968bd92f7c279942d61ebc8867466965502acb54cc406ec8a343f12e2627"
+  },
+  {
+    "path": "test_restored_diagnostic_r5.py",
+    "sha256": "9060fa4ea54f721d8e704024e71035805e2a5c02154ae31d1dafc514ed1fb2ce"
+  }
+]

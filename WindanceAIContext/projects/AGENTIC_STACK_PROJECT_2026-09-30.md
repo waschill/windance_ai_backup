@@ -1069,3 +1069,7 @@ Staged SSH capture now enforces streaming stdout/stderr/time limits and keeps fa
 ## October2 staged diagnostic admission and single-worker limits pass
 
 Transactional32global/8owner active-job ceilings and1running-or-cancel-pending slot pass concurrent and cold-recovery tests. Exact retries remain idempotent; uncertain jobs retain capacity until matching receipt. Initial incomplete fixture receipt correctly rejected, corrected test passes; existing12API cases pass. No worker or deployment. Evidence: archive/20261002-diagnostic-admission/diagnostic-admission-20261002.md.
+
+## October2 durable diagnostic consumer and revision5 recovery pass
+
+One-cycle consumer reconciles uncertain work before queued work, requires matching stop receipt and never advances after uncertainty. Restart/cancellation tests and actual HTTP-to-AL consumer test pass. Exact19-file r5 ZIP restored five test suites with unchanged hashes. No daemon or persistent deployment; identity/UI/lifecycle/general diagnosis remain open. Evidence: archive/20261002-diagnostic-consumer/diagnostic-consumer-20261002.md.
