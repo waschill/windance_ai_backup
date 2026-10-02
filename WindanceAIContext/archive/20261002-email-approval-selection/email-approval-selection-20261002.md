@@ -1,0 +1,13 @@
+# Atomic numbered-approval selection component
+
+October 2 UTC / October 1 Mountain 2026. Local staged component only; no deployment or full-handler integration.
+
+Existing numbered decisions create a new remainder approval and separately change the original before execution. The staged email_approval_selection component instead binds exact original ID/action/payload/requested timestamp and pending state under BEGIN IMMEDIATE. It records selected, rejected and remaining original item indexes, a selection digest and child identity; inserts remaining approval; and claims/rejects the parent in one transaction. It offers no mailbox callback or send capability. Authentication, report-reference validation and decision parsing must occur in the actual caller before using this internal component.
+
+Five HAL synthetic SQLite cases passed: two overlapping selections yield exactly one durable selection and one child; child insert failure rolls back both evidence and parent; expiration leaves parent pending/no child; an already claimed whole approval blocks selection; rejection-only selection retains untouched items. Child payload retains explicit expiry and original requested time, preventing an accidental extension for records using fallback expiry. Old summary text is cleared because substring removal cannot preserve numbering reliably; the integrated handler must render a correct summary from bound references.
+
+No action-body copies are added to selection evidence: indexes map to the retained original approval payload, which remains private. Flat Gmail batches are capped at50; nested or non-Gmail item actions and duplicate/overlapping/out-of-range indexes are rejected. These are internal validation rules, not proof of caller authentication or complete production compatibility.
+
+Remaining work: connect actual numbered handler and schema, preserve all sender/PIN/ref checks, represent selected execution final/uncertain outcomes, propagate stable item identity through remainder lineage, provide correct operator display, handle process death and actual full-app recovery. Whole-approval and selection claims must compete on the same original row. A child approval must never reset an earlier unresolved mailbox effect. No route or live schema changed.
+
+Reproduction: existing HAL Second Brain Python runs archived test_email_approval_selection.py alongside email_approval_selection.py. It uses temporary synthetic databases and zero external connections. Production recovery points and previous exact private candidates remain unchanged; no rollback needed. Phase1 remains open, and Codex capacity is consumed despite zero application inference/mailbox calls.

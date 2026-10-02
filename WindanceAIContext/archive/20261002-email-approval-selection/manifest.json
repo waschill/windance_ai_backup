@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_approval_selection.py",
+    "sha256": "002851f11cb1e24b30b0c9a81dfa1a9d20bb1502ce26cabc0dd04d5786358c5f"
+  },
+  {
+    "path": "email-approval-selection-20261002.md",
+    "sha256": "fca25fa19ae8f183acd948ecc76c703932da66cd9e0144c9564ab4515f0766fc"
+  },
+  {
+    "path": "test_email_approval_selection.py",
+    "sha256": "4c28bc2a7c3fc1bf5c64f9840a4db3f90fcaacf4d4374078f4c38545f9f2da8f"
+  }
+]

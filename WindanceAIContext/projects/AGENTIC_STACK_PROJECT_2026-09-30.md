@@ -437,3 +437,7 @@ Staged revision2 rechecks freshness inside the claim transaction and requires on
 ## October2 approval process termination and cold retry verified
 
 Actual claim/pending lookup survives child exits before effect, after synthetic effect and after final receipt; fresh processes and consistent cold copies never repeat the effect. Interrupted executing remains held, not asserted live. Initial annotation fixture failure corrected. UI/reconciliation, old backups and selected-number/per-item integration remain gates. Evidence: archive/20261002-email-approval-process-recovery/email-approval-process-recovery-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 atomic numbered-selection component tested
+
+Staged internal component atomically claims/rejects original batch, records item-index lineage and creates remaining approval without extending expiry. Five synthetic cases pass, including concurrency and child-insert rollback. No mailbox execution capability; full authenticated handler/schema/display/item/recovery integration pending. Evidence: archive/20261002-email-approval-selection/email-approval-selection-20261002.md. No production or real mailbox/model changes; Phase1 open.
