@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager-receipt-recovery-20261002.md",
+    "sha256": "6cbb5de3497c75d4aaddefec2bd47dfc2830e56336829442e593fa7e4e81172f"
+  },
+  {
+    "path": "package_manager_receipt_release.py",
+    "sha256": "2287898d0f3ff4ef5f1b42decfb8dcaa75a1d2f1b21ef6bf4e5c6c4515fea5b2"
+  },
+  {
+    "path": "test_manager_delivery_lifecycle.py",
+    "sha256": "72827b8cf33f3cb2c40432836871cc81b0cba024f027a8d99c8de7cea8d45bd4"
+  },
+  {
+    "path": "verify_manager_receipt_release.py",
+    "sha256": "09c619e96e0133dd0a85d086d9773a123aae1fcad725c63678beeeb7e4eb9866"
+  }
+]

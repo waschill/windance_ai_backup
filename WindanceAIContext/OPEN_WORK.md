@@ -1026,3 +1026,7 @@ Pinned live manager/wrapper unchanged. Candidate preserves unrelated function AS
 ## October2 manager progress retry identity defect corrected in staging
 
 Caller could change key after uncertain progress send. Private r2 now persists pending key/failure until confirmation; actual full-module progress test and four receipt regressions pass on HERALD app Python with synthetic transports. HAL full import lacked aiohttp; no software installed. No live deployment. Remaining path/lifecycle/recovery gates recorded: archive/20261002-manager-progress-identity/manager-progress-identity-20261002.md.
+
+## October2 manager full caller/lifecycle tests and private recovery pass
+
+Restored r2 package passes six tests including actual message/overdue/project/progress callers and temporary HTTP lifecycle, no real sends/dispatch. Fifteen-file ZIP verified HERALD/HAL with cold five-table equivalence and unchanged post-test hashes. First sidecar-containing package superseded. No deployment; fresh coordinated live installation gate next. Recovery: archive/20261002-manager-receipt-recovery/manager-receipt-recovery-20261002.md.
