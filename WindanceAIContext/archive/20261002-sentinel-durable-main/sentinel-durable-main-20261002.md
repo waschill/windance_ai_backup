@@ -1,0 +1,13 @@
+# Sentinel durable main integration — October 2, 2026
+
+Prepared private Sentinel candidate608070e958e7226b831c02f393c690db088878cffc1c8e88e66e3705ffbe7d9b: caller-contract-private/sentinel_daily_router_review_durable.py and private HERALD /tmp/windance-caller-stage-20261002 counterpart. This supersedes the same-day-only candidatece7defdc, without installing either. Removed the old direct deliver function so actual main has one durable entry path; source report/recipient remain unchanged. Proposed private journal path is ~/.local/share/sentinel-report-delivery/reports.db, not provisioned live.
+
+Daily journal schema2 adds persisted report_available separately from delivery state. Report rendering returns original body and availability; existing BLOCKED prefix or generation exception records unavailable. Runtime rejects older schema1 instead of guessing/migrating history. Normal render strings remain available for existing generic synthetic tests. All actual Sentinel rendering supplies explicit availability. Once a snapshot exists, main never renders it again for recovery.
+
+HERALD actual candidate main with intercepted router/transport passes4cases: normal/repeated invocation renders once and transports once; midnight uncertain run submits once, next-day invocation queries original body/key and returns1 for current-day noncompletion, subsequent invocation creates current-day snapshot and submits once; BLOCKED notice receipt returns1 on first and repeated run despite verified delivery; missing history returns1 without rendering or transport. Generic journal invariants and real child-crash/reopen query-only tests pass against schema2. No live logs fetched or messages sent.
+
+Successful receipt is explicitly not router health: availability false persists even after restart/receipt confirmation. Reconciling a prior day does not silently send a second report in the same invocation. A later invocation is required for today's report; missed-day/catch-up orchestration remains a rollout choice to verify against the actual schedule, not an enabled new schedule. Capture reminder and other caller contracts remain separate gates.
+
+Need cold recovery of this private caller/journal, legacy history reconciliation/explicit provisioning, transport supervision/lifecycle, complete updated package and coordinated rollout before installation. Current immutable r2 remains historical and unchanged. Private report text/recipient must stay owner-only and out of published context. No schema1 live migration occurred, no service/job activation. Phase1 remains open and natural delivery count unchanged.
+
+No production send, dispatch, SAM, Odoo, SyncThing, Level8, Warden, phone or routing change. Application model calls0, purchases0; Codex cost unknown.

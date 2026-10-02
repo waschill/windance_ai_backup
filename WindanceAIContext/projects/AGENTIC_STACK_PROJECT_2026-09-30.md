@@ -901,3 +901,7 @@ Actual original main reproduced2attempts after uncertain first delivery. Candida
 ## October2 daily report identity survives midnight and process crash in staging
 
 Explicit private journal commits original report/key before transport; attempting runs resume query-only, old uncertainty blocks new-day sends, missing history/recipient change hold. HERALD normal/restart and child-crash tests pass with no real sends. Not yet integrated into Sentinel; metadata, cold recovery and caller rollout remain gates. Evidence: archive/20261002-daily-report-identity/daily-report-identity-20261002.md.
+
+## October2 Sentinel actual main uses durable snapshots in isolated integration
+
+Schema2 persists report availability separately from delivery. Actual candidate main passes normal/repeat, midnight recovery, BLOCKED receipt persistence and missing-history cases; child-crash query-only regressions pass. No live installation/provisioning; private cold recovery, schedule/history/caller coordination remain gates. Evidence: archive/20261002-sentinel-durable-main/sentinel-durable-main-20261002.md.

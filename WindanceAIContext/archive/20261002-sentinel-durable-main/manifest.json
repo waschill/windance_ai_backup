@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "daily_report_journal.py",
+    "sha256": "b9bce37049a46cb4c1932c53a5a4be3f1bb61480704cabd6435470ea71704199"
+  },
+  {
+    "path": "prepare_sentinel_durable.py",
+    "sha256": "b1ec804ec0904f985e8d05347c503b5efecabb2c8684cf705301dbf45718c0c8"
+  },
+  {
+    "path": "sentinel-durable-main-20261002.md",
+    "sha256": "5712d30b3fd500e96d743b848253236b8441a4dabeb62236e360edbc0f547ac7"
+  },
+  {
+    "path": "test_daily_report_crash.py",
+    "sha256": "565040b5f432f2a66b1507d5e98937a35bf6139a51db3140f759cea4c8a1e83a"
+  },
+  {
+    "path": "test_daily_report_journal.py",
+    "sha256": "1a7c6e0fdebcd13fca2b2b67fd9d52097b309f2ed59746810114c2f5e4251897"
+  },
+  {
+    "path": "test_sentinel_durable_main.py",
+    "sha256": "0c181d0defb0b334b6891b241ab5db6c0d1b1ac7bfc37f62469de1a1c9c4691c"
+  }
+]
