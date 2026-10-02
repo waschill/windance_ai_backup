@@ -697,3 +697,7 @@ Extends earlier account-boundary record, preserving its original helper and pend
 ## October2 mailbox history binding requires explicit nonempty migration
 
 Standalone transactional guard passes account-change/concurrency and12 historical-table preservation tests. Verified07:56snapshot contains existing references/rules/actions and59 Gmail-prefixed approvals; no automatic account adoption is justified. Helper remains unintegrated and must not be deployed alone to turn existing service into a hold. Actual owner confirmation and evidence-backed migration remain open. Evidence: archive/20261002-gmail-history-binding-check/gmail-history-binding-check-20261002.md.
+
+## October2 saved email history preflight distinguishes legacy archive labels
+
+Read-only verified snapshot review finds four pending Gmail approvals; 11 initially unclassified autonomy records are stored archived labels, not evidence of failures. Source unchanged, privacy/enum fixtures pass. No account adoption, replay or service change. Explicit account/history reconciliation, fresh migration testing and coordinated caller cutover remain open. Evidence: archive/20261002-email-history-preflight/email-history-preflight-20261002.md.

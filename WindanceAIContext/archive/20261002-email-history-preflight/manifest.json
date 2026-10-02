@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_history_preflight.py",
+    "sha256": "649320e9444b86e0049d3d6f402c3b856ff59a2c9a12c0627491f25aacde43fe"
+  },
+  {
+    "path": "email-history-preflight-20261002.json",
+    "sha256": "aea72cd19ca3ebd289699c739058ed850d6c8fb600b24acd98ef9efada8db182"
+  },
+  {
+    "path": "email-history-preflight-20261002.md",
+    "sha256": "7dc76646b6f13a9abe2cb756a5bce10356823e68224a85a9ab19c829f607258c"
+  },
+  {
+    "path": "test_email_history_preflight.py",
+    "sha256": "637b6aa8c6861eec8834810d78a8f5ca392c0c5e9a710083cf0b7b79328b2b9b"
+  }
+]

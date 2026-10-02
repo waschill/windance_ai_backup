@@ -1,0 +1,46 @@
+{
+  "snapshot_sha256": "152ffc2006ea67fe61ed88f5d55ce1161aadc6d015d7903c78bdb43a3f42cea7",
+  "tables": {
+    "max_email_tracking": {
+      "rows": 2244,
+      "sha256": "7899a87edbd59617ace9d3391865cbfb893a1b9f23ba70146e5c306212643178"
+    },
+    "max_email_report_refs": {
+      "rows": 109,
+      "sha256": "ad28dc2f273ee357506b70cd214a523a19b1d506269ce936a9df1a76dc5fb39b"
+    },
+    "max_email_report_consumed": {
+      "rows": 4,
+      "sha256": "3ee92c06d86f04e00ab4d8b4bf5aa9c30f6e6ff450372a4e03d295e19710a767"
+    },
+    "max_email_sender_rules": {
+      "rows": 181,
+      "sha256": "7527d4bf41b66d990f831400b8ed5e94a4ead87c9e1ef978a86c02e4455c5724"
+    },
+    "email_autonomy_actions": {
+      "rows": 146,
+      "sha256": "fe8c89f3b3517a9a2a830590f4b858564e43c6bf459b43d0a6b24556bd6f6bbb"
+    },
+    "email_report_active": {
+      "rows": 1,
+      "sha256": "8ab435ee73fab2a77a6d9b60e14502ba3f005bb1306b92e4ea8303198d85828d"
+    }
+  },
+  "gmail_approval_status_counts": {
+    "executed": 24,
+    "expired": 17,
+    "pending": 4,
+    "rejected": 14
+  },
+  "autonomy_action_counts": {
+    "archived": 11,
+    "draft_created": 2,
+    "left_untouched": 81,
+    "trashed": 52
+  },
+  "existing_account_bindings": 0,
+  "records_requiring_review_not_replay": 4,
+  "source_unchanged": true,
+  "migration_ready": false,
+  "limits": "Historical snapshot only. Counts and stored labels do not prove provider delivery, human/account identity, action completion or current live state. Legacy error_left_untouched catches exceptions around provider writes; it does not prove no effect occurred."
+}
