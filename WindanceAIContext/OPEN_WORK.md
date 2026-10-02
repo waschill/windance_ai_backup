@@ -238,3 +238,7 @@ Installed only invoice formatter and SAL result-classification function, preserv
 ## October2 canonical fact retrieval/sharing lifecycle tested
 
 Staged selector filters owner/scope/grant/deletion before limits and reads current facts; sharing grants/revokes/invalidations now have transactional audit events. Eight new lifecycle cases plus23existing component tests pass (31total). Actual Harness/worker/source-proof/mirror integration remains incomplete; deletion is not source-history erasure. Production unchanged. Rebase old memory full sources onto current invoice revision before deployment. Packet/limits: archive/20261002-fact-retrieval-lifecycle/fact-retrieval-lifecycle-20261002.md. Zero model calls or external actions; Phase1 open.
+
+## October2 atomic memory provenance/request ledger candidate tested
+
+Direct remember source currently identifies channel/user before the conversation record exists. Staged gateway binds stable issuer/event ID and payload hash to fact/history/result in one transaction; retries do not rewrite, conflicting event reuse rejects, and old retries cannot resurrect corrected/deleted values. Six new tests plus31existing pass (37total). Actual adapter authentication/source truth/secret checks and assistant routing remain incomplete. Packet: archive/20261002-source-fact-request-ledger/source-fact-request-ledger-20261002.md. No production/model/external actions; Phase1 open.
