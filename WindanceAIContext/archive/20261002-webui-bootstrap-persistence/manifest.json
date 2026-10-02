@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "verify_webui_bootstrap_http.py",
+    "sha256": "6ecb1c22992995bd8ac7b2a1a916be00c77f4ba9cb88cc925e6da3f1d87a33ed"
+  },
+  {
+    "path": "verify_webui_bootstrap_persisted.py",
+    "sha256": "57644e6452ffcf112bd78ae25a199543b41e98df4c7719321991dfe0d76a7129"
+  },
+  {
+    "path": "webui_bootstrap_http_probe.py",
+    "sha256": "afe972d3e3072d43cab7d9f66936d554de6b045c9a5b7d2bfd00c425bb279b53"
+  },
+  {
+    "path": "webui_bootstrap_persisted_probe.py",
+    "sha256": "0a97e459177a93c1519e92927a5ae02fba51cb92275ece961edc283dc7e3b72b"
+  },
+  {
+    "path": "webui-bootstrap-env-only-result.json",
+    "sha256": "09f3c3f815b40956f6a9434bdeb4320c0d5b68ecaf6ede8f0d4d2faa82df8637"
+  },
+  {
+    "path": "webui-bootstrap-persisted-result.json",
+    "sha256": "aad78bc50c7a7c0d11a871cfb04e67e5255866cd2bdf0d41e0b0ad64f0409883"
+  },
+  {
+    "path": "webui-bootstrap-persistence-20261002.md",
+    "sha256": "d7cf3ed0527641e120ce2bc42bd5230e8e97dcebc70a51bcec0061b083fa6fe1"
+  }
+]

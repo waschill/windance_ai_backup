@@ -1090,3 +1090,7 @@ One-cycle consumer reconciles uncertain work before queued work, requires matchi
 ## October2 restored WebUI password login and owner separation pass
 
 Both snapshot copies pass actual synthetic password sign-in, wrong-password rejection and owner/cross-owner/anonymous chat checks; no direct token minting. Initial async-helper fixture defect corrected, application unchanged. Original hashes preserved/test containers removed. Live ownership/bootstrap, UI/citations/memory remain open. Evidence: archive/20261002-webui-password-login/webui-password-login-20261002.md.
+
+## October2 empty-lab persistent bootstrap controls verified in isolation
+
+Actual signup accepted first synthetic admin despite disabled environment flags because persisted signup/login settings remained true. Fresh copy with supported Config.upsert disabled both plus initial-admin override false returned403/no account. Original backups unchanged/containers removed; live lab untouched. Fresh live ownership/backup/containment gate remains. Evidence: archive/20261002-webui-bootstrap-persistence/webui-bootstrap-persistence-20261002.md.
