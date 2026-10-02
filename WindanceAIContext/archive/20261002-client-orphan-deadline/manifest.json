@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_outbox_client.py",
+    "sha256": "5371bcb74c6883ece7678648b7f2d400f5e90fe664527a27ab7c0ba1e196f900"
+  },
+  {
+    "path": "bounded_outbox_status.py",
+    "sha256": "8b7aa7a96defac2ce3cedca2302b6d07e3d5e0619959ee4f199e76896669bced"
+  },
+  {
+    "path": "client-orphan-deadline-20261002.md",
+    "sha256": "3490552cbbffb2c54352c21c2374f249fb00f3f38ca4effd3342e41569be189b"
+  },
+  {
+    "path": "test_outbox_client_parent_loss.py",
+    "sha256": "7b9fc5bc09959c750056554f00198c6326294e4c06cd5bba0eba3aa4016baad6"
+  }
+]

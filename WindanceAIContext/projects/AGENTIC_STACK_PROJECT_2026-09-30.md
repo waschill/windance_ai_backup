@@ -909,3 +909,7 @@ Schema2 persists report availability separately from delivery. Actual candidate 
 ## October2 Sentinel06:50 job remains unregistered; private recovery verified
 
 Fresh10-file original/candidate/synthetic-journal ZIP6e9c16e9 cold-restored on HERALD/HAL. Actual scheduled system Python passes candidate main/crash and query-only cold-state tests; HAL verifies hashes/SQLite but fcntl behavior unsupported. Live source/plist unchanged, no journal provision or activation. Legacy daily-send reconciliation and coordinated receiver/caller rollout remain gates. Evidence: archive/20261002-sentinel-cold-recovery/sentinel-cold-recovery-20261002.md.
+
+## October2 admission/status workers self-expire after parent loss
+
+Process-local child deadline and POSIX timer stop orphan polling independently of caller. SAL query/submit killed-parent fixtures retain exactly one request; admission/status/full-flow regressions pass with no real send. No deployment; actual SSH disconnect and refreshed complete package remain gates. Evidence: archive/20261002-client-orphan-deadline/client-orphan-deadline-20261002.md.
