@@ -1,3 +1,7 @@
+## October2 receipt receiver and Harness caller installed — current override
+
+SAL receipt-aware outbox receiver now runs under the existing gui/501/com.windance.imessage-outbox label with verified19-file runtime, preserved delivery history and no manual sends. HERALD Harness current source is c2fa4c908a2ff5cdcc92d58da0ac5cf38534d800a235cbdf3bfcaed5341e3ef7: immutable William report snapshots, strict receipt transport and content-free delivery status. Health/live task API verified;12legacy delivery rows remain unverified and untouched, new journal empty at deployment. Earlier9865597/0a95 headlines are historical. Shared wrapper/manager remain legacy; daily caller recovery and natural training acceptance remain unfinished. See archive/20261002-receipt-receiver-installed/receipt-receiver-installed-20261002.md and archive/20261002-harness-report-installed/harness-report-installed-20261002.md. Phase1 open; Warden stays suspended, notes deferred, phone/Level8 disabled, SyncThing unchanged.
+
 # Current Operating State
 ## October2 content-free memory rejection installed and live-verified
 
@@ -797,3 +801,4 @@ William authorized sustained agentic-stack execution with evidence gates. Phase1
 ## October2 email batch classification guard installed
 
 Coordinated idle Harness update after live ownership/Warden checks, fresh six-file r2 backup, cold SQLite/eight-table checks and HAL verification. Exact-batch validator prevents duplicate/other-batch answers from releasing automatic actions. Installed source0a95a09f0ad1932b53d38130579411ac8679c99265e4dc8741b8fd171dce2ab0, health200, unchanged protected records/plist and three installed-code report fixtures verified. No actual mail/model/send calls. Initial sidecar-bearing backup is superseded by stable r2. Recovery: archive/20261002-email-classification-deployed/email-classification-deployed-20261002.md. Natural workflow, ownership and uncertain remote outcomes remain open; Phase1 open.
+

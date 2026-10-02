@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "deploy_harness_report_identity.py",
+    "sha256": "247fa9324b2e1aab2fd4df3368cd5bdbd90e784c72a55bf716f03c63d90aaafe"
+  },
+  {
+    "path": "harness-report-installed-20261002.md",
+    "sha256": "9e111573fa4717c225da070584e55a95bd2791a6a1ed4c9d8fb5a56fea88682d"
+  },
+  {
+    "path": "harness-report-installed-verification.json",
+    "sha256": "a3553b7cda1776d8bc631f4ded54c18caf6f5246f435427a78edda6f13ae37e9"
+  },
+  {
+    "path": "verify_harness_report_backup.py",
+    "sha256": "bde8d5cf37f91795796c522660c64fcbb739d67e1e7185338ab874ac9c399956"
+  },
+  {
+    "path": "verify_harness_report_live.py",
+    "sha256": "fa96d7166cf81858a9e2ca890672f81725779f2462718fb87c33a8c236da992d"
+  }
+]

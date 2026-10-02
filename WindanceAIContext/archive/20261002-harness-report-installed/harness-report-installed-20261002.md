@@ -1,0 +1,18 @@
+# Harness receipt caller installed — 2026-10-02
+
+HERALD Harness now runs source SHA c2fa4c908a2ff5cdcc92d58da0ac5cf38534d800a235cbdf3bfcaed5341e3ef7 with five tested helpers: task_report_journal, task_report_status, daily_report_journal, receipt_report_transport and outbox_wire_protocol. This supersedes prior current-source0a95 and9865597 assumptions. The change binds William's existing eligible staff reports to immutable report snapshots and direct strict receiver transport; pending uncertainty is queried with the original key/body. Existing task handoff/text rendering exposes content-free delivery state. Shawn's legacy path and unrelated memory/email/invoice functions remain unchanged.
+
+Receiver r3 on SAL was freshly verified healthy and Warden paused. Deployment occurred outside SAM protected hours after live manager messages/projects/notifications, execution bridge and Harness work were checked idle. Ten-file private backup captured old/new source, helpers, original plist, online SQLite and cold copy. Integrity/eight protected-table hashes passed on HERALD; every file plus cold integrity/eight-table hashes independently verified on HAL before deployment. Same checks were repeated at installation.
+
+A new private task-report-delivery.db was explicitly provisioned. Helpers then source were installed atomically; existing user/501/com.windance.agent-harness was restarted. Health200, source/helper hashes, unchanged service definition and all eight protected table hashes verified afterward. New journal remained empty. Existing12legacy delivered rows were not adopted, upgraded, deleted or resent. No manual message, model/task invocation, Odoo write, schedule change or SAM service restart occurred.
+
+Read-only live HTTP verification fetched an existing task via the installed endpoint and inspected only the returned delivery metadata: legacy_recorded, independent_receipt=false. HTTP200, unchanged legacy status counts and empty new journal passed. No private task content was output or published. Current auth configuration remains unchanged; this check does not prove resolution of previously documented global authentication limitations.
+
+Recovery:
+- HERALD /Users/herald/backups/harness-report-deploy-20261002 contains backup-receipt.json,10stable recovery files, HAL verification and deployment receipt.
+- HAL C:\Users\wasch\Documents\WindanceBaselineRecovery\20261002-harness-report-deploy\harness-report-deploy-20261002 contains independently verified copies and deployment receipt.
+- Caller-r2 immutable archive and receiver-r3 immutable archive remain separately verified code recovery sources.
+
+Prefer forward correction. If reverting source, first inspect new journal and in-flight work: old code can generate different keys for uncertain reports. Never restore cold.db/empty history or erase delivery state to roll back code. Do not run the old caller for any pending new snapshot without a reconciled no-replay plan. Existing backup deployment script is one-time guarded and intentionally rejects the installed revision/helper/journal state on repeat. Investigate partial outcomes rather than rerunning it blindly.
+
+Next: natural receiver/Harness observation and separately guarded daily caller recovery (Capture and Sentinel) with history/schedule reconciliation. Shared report wrapper and manager remain legacy; no claim of complete staff-wide receipt coverage. Original natural training-delivery pilot still unproven; Shawn training notes remain deferred. Warden jobs stay unloaded until project completion; phone/Level8/SyncThing unchanged. Phase1 open. No new paid commitment; application model calls0, Codex dollar cost unknown.

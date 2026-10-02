@@ -1002,3 +1002,7 @@ Busy original receiver aborts/resumes; arrival after idle check survives old rem
 ## October2 receipt-aware SAL receiver installed under existing service label
 
 Guarded idle cutover passed: old process removed,19runtime hashes/plist verified, schema3 journal explicitly provisioned, new PID/fresh idle status and installed query-only endpoint pass. Previous125-file delivery state unchanged, zero new-contract admissions/manual sends. Warden pause preserved; callers unchanged. Recovery and no-replay rollback restrictions: archive/20261002-receipt-receiver-installed/receipt-receiver-installed-20261002.md. Phase1/natural delivery acceptance remain open.
+
+## October2 Harness receipt caller installed and live task metadata verified
+
+Current sourcec2fa4c908a2ff5cdcc92d58da0ac5cf38534d800a235cbdf3bfcaed5341e3ef7/five helpers installed after verified10-file backup and idle checks. Health200, eight protected-table hashes and plist unchanged; live task API explicitly marks legacy receipt unverified.12legacy rows untouched, new journal empty, no sends. Recovery: archive/20261002-harness-report-installed/harness-report-installed-20261002.md. Daily callers/manager/natural acceptance remain open.
