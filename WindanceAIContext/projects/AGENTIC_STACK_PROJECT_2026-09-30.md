@@ -973,3 +973,7 @@ Live read-only count12 legacy delivered rows, no other statuses; new journal abs
 ## October2 complete staged Harness startup/HTTP and caller r2 cold recovery pass
 
 32-file private caller package restored/hash-verified on HERALD and HAL. Restored full candidate startup/ASGI auth, receipt-state, original-snapshot and memory-guard checks pass with outbound effects/live writes blocked and no live-service source dependencies. Function regressions and post-test hashes pass. No deployment; exact receiver ownership/rollback and fresh live cutover remain next. Evidence: archive/20261002-harness-report-full-recovery/harness-report-full-recovery-20261002.md.
+
+## October2 live receiver ownership, launch candidate and fresh recovery verified
+
+One existing SAL receiver, empty queue/inflight/uncertain, Warden pause confirmed. Same-label/interpreter plist candidate linted;125-file stable live snapshot independently cold-verified SAL/HAL. No registration/source change. Producer has no global admission lock, so idle polling alone is unsafe; explicit transition guard and no-replay rollback constraints recorded before deployment. Evidence: archive/20261002-receiver-cutover-preparation/receiver-cutover-preparation-20261002.md.
