@@ -925,3 +925,7 @@ Count-only report uses persisted identity and receipt transport; empty inbox doe
 ## October2 capture real readonly dry run passes intended application interpreter
 
 Exact live count query fails system Python with OperationalError but succeeds app Python after correcting bytes/string audit instrumentation. Durable candidate real --dry-run passes with no effects/history creation; interpreter-only plist hash matches earlier e72e7caf candidate,19:00 unchanged. No installation; launchd/cold/history/receiver gates remain. Evidence: archive/20261002-capture-runtime-access/capture-runtime-access-20261002.md.
+
+## October2 William manager final-report contract passes staged wrapper composition
+
+Exact current send/advance plus staged wrapper/transport keep unknown/uncertain/legacy at delivery with no receipt; only verified result completes, preserving one project/report key. No manager change, task dispatch or real send. Shawn and other notification paths remain separate unverified scope. Evidence: archive/20261002-manager-report-pipeline/manager-report-pipeline-20261002.md.

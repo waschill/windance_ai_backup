@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager-report-pipeline-20261002.md",
+    "sha256": "79a143dbabd0e4d72ba4fb89dd57d7d77e97a404325a9f8230f358e8471e90b1"
+  },
+  {
+    "path": "test_manager_report_pipeline.py",
+    "sha256": "80aee44c9e4911fde55bd4784c029586fd55dc229658310e749a81f4c06cc043"
+  }
+]
