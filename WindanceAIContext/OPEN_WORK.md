@@ -666,3 +666,7 @@ Trusted-worker prototype kills/waits exact child at deadline; actual durable-int
 ## October2 email worker exits after supervisor loss or suspension
 
 Standalone prototype now arms independent kernel timer and checks parent identity. Actual killed-parent fixture exits with durable intent unconfirmed; suspended-parent fixture also terminates by child timer. Prior deadline/output/no-replay tests pass. Not integrated into Harness; native sandbox, real identity and complete endpoint coverage unverified. Evidence: archive/20261002-email-parent-failure/email-parent-failure-20261002.md.
+
+## October2 fixed email worker verifies code and forwards owner context
+
+Private17-file worker package e41e91ef rejects12 invalid requests before loading and altered helper hashes before execution. Full Harness empty-inbox report passes in an isolated supervised process with William context asserted. Staged only; caller authentication, nonempty workflows, additional dependencies and exact-package recovery remain open. Raw report exception disclosure also remains to fix. Evidence: archive/20261002-email-fixed-worker/email-fixed-worker-20261002.md.
