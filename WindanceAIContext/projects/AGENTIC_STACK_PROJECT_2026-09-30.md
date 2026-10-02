@@ -985,3 +985,7 @@ Five real-signal cases pass on owned synthetic workers: resume, controller disco
 ## October2 original receiver and launchd handoff rehearsals pass without sends
 
 Busy original receiver aborts/resumes; arrival after idle check survives old removal and new actual worker handles once. Separate heartbeat-only launchd fixture proves stopped bootout, old PID exit and same-label replacement; fixture unregistered afterward. No production signals/labels changed. Guarded receiver-only deployment preparation is next; prior lease limits remain. Evidence: archive/20261002-receiver-handoff-rehearsal/receiver-handoff-rehearsal-20261002.md.
+
+## October2 receipt-aware SAL receiver installed under existing service label
+
+Guarded idle cutover passed: old process removed,19runtime hashes/plist verified, schema3 journal explicitly provisioned, new PID/fresh idle status and installed query-only endpoint pass. Previous125-file delivery state unchanged, zero new-contract admissions/manual sends. Warden pause preserved; callers unchanged. Recovery and no-replay rollback restrictions: archive/20261002-receipt-receiver-installed/receipt-receiver-installed-20261002.md. Phase1/natural delivery acceptance remain open.

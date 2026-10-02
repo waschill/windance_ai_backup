@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "install_receipt_receiver.py",
+    "sha256": "33ab3e7f80eca6686d1970ce79dd9b17bcd8e4b3fc55557f92e68cc814fd1d2e"
+  },
+  {
+    "path": "probe_gui_receipt_access.py",
+    "sha256": "26a756554ccc65cc4d545a02cf274f10f5040a789b0582b0d658d75601fa17ad"
+  },
+  {
+    "path": "receipt-receiver-installed-20261002.md",
+    "sha256": "9361b5cfdbd049eca672d8a9712c26b252736779ae65d558cebfd7c3e5f15516"
+  },
+  {
+    "path": "receipt-receiver-installed-verification.json",
+    "sha256": "278f68ddaf2efc31dcf33e67fc48566cb0a4a7126284e74458926afbafd4584c"
+  },
+  {
+    "path": "verify_installed_receipt_receiver.py",
+    "sha256": "aca7a5fb6ca754a290c9100dba84c24e0828faef81a869da4f67a00c03b062c0"
+  }
+]
