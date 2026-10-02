@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "13220eb4699603c3ef9c347a191cc01937f6a8112e50ad1cb6c6db2003d493a1"
+  },
+  {
+    "path": "email-draft-reconciliation-20261002.json",
+    "sha256": "21c95439348428a6350ad1408b18834ed8143d2bc016c1ad10036b63c054b727"
+  },
+  {
+    "path": "email-draft-reconciliation-20261002.md",
+    "sha256": "476f46df797a8557176b81300f6097361779c58376f90e9436f0e741be54576e"
+  },
+  {
+    "path": "email-draft-reconciliation-process-20261002.json",
+    "sha256": "c9ba34d77f40d115f6be77d1988a243676a70eb651b0f81b27ffa1833e8b6376"
+  },
+  {
+    "path": "gmail_draft_recovery.py",
+    "sha256": "4ae40da14bf033af295c68f5e30c8e940284963598d3ac22d42e3036ec848c51"
+  },
+  {
+    "path": "test_email_action_intent.py",
+    "sha256": "4906eb7034c3932ac52593a53c7cbb1d71ffb60b5006bbac4e79327f5ec1b86c"
+  },
+  {
+    "path": "test_email_draft_reconciliation.py",
+    "sha256": "5c9e8b134061481381f9481219f5d03e21c2bff4f66b04a8692d2f6ee78ae353"
+  }
+]

@@ -402,3 +402,7 @@ Fresh read-only online snapshot, full baseline/candidate module and ASGI lifecyc
 ## October2 bounded exact-draft recovery lookup staged
 
 Official Gmail draft search/raw retrieval supports a proposed operation-marker and payload comparison. Read-only helper accepts only one complete exact draft match; ten synthetic cases pass, at most two reads and no write interface. Missing/ambiguous/edited results never release a hold or retry creation. Marker preservation, trusted mailbox binding, journal integration and transport deadlines remain unverified; not installed. Packet: archive/20261002-gmail-draft-recovery/gmail-draft-recovery-20261002.md. No actual Gmail/model calls; Phase1 open.
+
+## October2 durable draft evidence and positive reconciliation tested
+
+Staged component atomically stores marker/fingerprint/source identity before draft callback. Exact read-only draft match confirms local intent only after rechecking unchanged evidence; missing/edited/local-drift cases remain held. Four connected cases plus child-exit/concurrency regression pass without duplicate synthetic creates. Initial Windows fixture-handle cleanup corrected before passing run. Full Harness rebuild, mailbox binding, live marker behavior and cross-path integration remain open. Packet: archive/20261002-email-draft-reconciliation/email-draft-reconciliation-20261002.md. No actual Gmail/model or production changes; Phase1 open.
