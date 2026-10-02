@@ -366,3 +366,7 @@ Read-only online snapshot, pinned original/candidate schema functions and repeat
 ## October2 full SAM candidate startup passes isolated HTTP checks
 
 Full pinned module/main ran as unprivileged SAM user in separate loopback-only network namespace on a private restored snapshot, with startup producers/scheduler intercepted. Five actual GET routes returned200, original eleven tables unchanged, test server stopped. Initial sysfs-based namespace assertion failed before app import; corrected to namespace-aware socket interface query. No production/API/Odoo/model/send/dispatch changes. Reconciliation and need-clear concurrency remain deployment gates; Phase1 open. Packet: archive/20261002-sam-startup-isolated/sam-startup-isolated-20261002.md.
+
+## October2 service-need retry risk reproduced and clear journal staged
+
+Actual SAM helper with synthetic remote effects can clear a newer need after response/local-receipt loss and records success without checking write acknowledgments. Staged durable clear intent preserves uncertainty, reuses confirmed outcomes and verifies exact model/horse/field plus true result. Six baseline/six candidate cases passed with no real Odoo calls. First-clear concurrency, authoritative reconciliation, full composition and deployment remain open. Packet: archive/20261002-sam-clear-intent/sam-clear-intent-20261002.md. No production changes; Phase1 open.

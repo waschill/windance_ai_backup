@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam_clear_intent.py",
+    "sha256": "57324f96c8e5638a3679f729d10a0425cb07751e2b9802630daf87d73107430f"
+  },
+  {
+    "path": "sam-clear-intent-20261002.json",
+    "sha256": "b83e23dc0bccec7460946cb6ae9cfb1be24d6dec77d5a9eb3cff01a67a6cad0e"
+  },
+  {
+    "path": "sam-clear-intent-20261002.md",
+    "sha256": "8e0b730578b01d9a8ba85b1b8d9d839369ed09f6661a983a647b747077dca0d6"
+  },
+  {
+    "path": "test_sam_clear_intent.py",
+    "sha256": "0f23259d4d1c87b5f9e09176cfab924d16741204daeb535739ad4ffbd7e53d9a"
+  }
+]
