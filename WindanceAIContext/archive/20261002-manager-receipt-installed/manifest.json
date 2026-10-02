@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "deploy_manager_receipts.py",
+    "sha256": "7410cfd9ea898b165dbbc934dfb9875a5819a0099e733b7bd9b7a2bd6300495e"
+  },
+  {
+    "path": "manager-receipt-installed-20261002.md",
+    "sha256": "bd573e56516c4f63a3ed00cba5005317f3ace3235279878d3f7d38af8a4d4c80"
+  },
+  {
+    "path": "verify_manager_deploy_backup.py",
+    "sha256": "3488a1712de4bcf1838fb8629491e43174d6d40eb61968c83a7334f617add59e"
+  }
+]

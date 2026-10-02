@@ -1017,3 +1017,7 @@ Caller could change key after uncertain progress send. Private r2 now persists p
 ## October2 manager full caller/lifecycle tests and private recovery pass
 
 Restored r2 package passes six tests including actual message/overdue/project/progress callers and temporary HTTP lifecycle, no real sends/dispatch. Fifteen-file ZIP verified HERALD/HAL with cold five-table equivalence and unchanged post-test hashes. First sidecar-containing package superseded. No deployment; fresh coordinated live installation gate next. Recovery: archive/20261002-manager-receipt-recovery/manager-receipt-recovery-20261002.md.
+
+## October2 Vega manager receipt update installed and health verified
+
+Source15cf1c789e1c1fcef837ed8ccc9e7df9525e73693d7ca9c15be1f279fb38d316 and three helpers installed after fresh nine-file/cold/off-host verification. First transition assertion caused brief original-manager outage and recovery; corrected removal polling then passed. Fresh heartbeat, four ledger tables/non-tick state, bridge state/plist unchanged; no sends/dispatch and zero receipt snapshots. Legacy history unchanged, Warden paused. Recovery/limits: archive/20261002-manager-receipt-installed/manager-receipt-installed-20261002.md.

@@ -1,3 +1,7 @@
+## October2 manager receipt enforcement installed — current override
+
+Vega manager source15cf1c789e1c1fcef837ed8ccc9e7df9525e73693d7ca9c15be1f279fb38d316 now uses immutable original-key snapshots and independent local Messages receipts for William; pending progress keys survive uncertainty. Shawn/shared wrapper remain legacy. Fresh heartbeat/unchanged ledgers/verified off-host backup; zero manual sends/new snapshots. First transition assertion recovered before corrected deployment. Natural delivery/reboot acceptance unverified; Phase1 open. Details: archive/20261002-manager-receipt-installed/manager-receipt-installed-20261002.md.
+
 ## October2 daily rollover follow-up — installed
 
 Capture sourcea7ab085cc89bf5cc4a7cba7bfa2a9b03733fab57c3311e9107d0ba38963a805a and Sentinel sourcef23e296237b6439656b735a13cd8c19700b45671f5744d9ebc2360dadc64b2b8 now reconcile an older verified request and continue today within one bounded transport cycle. This supersedes the prior open cadence issue. Calendars remain19:00/06:50 Mountain; no scheduled runs/manual sends yet, natural delivery still unverified. Evidence/recovery: archive/20261002-daily-cycle-installed/daily-cycle-installed-20261002.md.
@@ -809,6 +813,7 @@ William authorized sustained agentic-stack execution with evidence gates. Phase1
 ## October2 email batch classification guard installed
 
 Coordinated idle Harness update after live ownership/Warden checks, fresh six-file r2 backup, cold SQLite/eight-table checks and HAL verification. Exact-batch validator prevents duplicate/other-batch answers from releasing automatic actions. Installed source0a95a09f0ad1932b53d38130579411ac8679c99265e4dc8741b8fd171dce2ab0, health200, unchanged protected records/plist and three installed-code report fixtures verified. No actual mail/model/send calls. Initial sidecar-bearing backup is superseded by stable r2. Recovery: archive/20261002-email-classification-deployed/email-classification-deployed-20261002.md. Natural workflow, ownership and uncertain remote outcomes remain open; Phase1 open.
+
 
 
 
