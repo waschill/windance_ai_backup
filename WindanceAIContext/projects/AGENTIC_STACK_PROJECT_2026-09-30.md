@@ -333,3 +333,7 @@ Installed commit_day plus actual JSON helper in disposable empty-schedule fixtur
 ## October2 SAM upstream lost-response retry window verified synthetically
 
 Actual SAM service-history helper suppresses ordinary retries with saved receipts, but simulated accepted history write followed by lost response yields another create on retry. Harness source directly creates without an operation key in that helper. No actual Odoo records read/written; no historical duplicates claimed. Durable pre-write intent and uncertain-outcome hold/reconciliation are needed before broader commit retry changes; prior acknowledgment guard stays staged. Packet: archive/20261002-sam-service-history-retry/sam-service-history-retry-20261002.md. All production services unchanged; Phase1 open.
+
+## October2 SAM history-create intent candidate prevents blind retry in isolation
+
+Staged durable pre-write intent binds operation/payload and preserves unconfirmed holds; confirmed record IDs are reused. Actual extracted SAM helper with intercepted effects passed five normal/lost/malformed/local-receipt-failure/payload-change cases, each only one simulated create. No schema/source/service deployed. Process interruption, reconciliation, clear-step concurrency and full recovery remain gates; do not roll back to a writer ignoring outstanding intents. Packet: archive/20261002-sam-history-intent/sam-history-intent-20261002.md. No actual Odoo/API/model/send calls; Phase1 open.
