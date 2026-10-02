@@ -602,3 +602,7 @@ Private r4 preserves prepared payload across lost acknowledgment, holds changed 
 ## October2 actual rollover broadens SAM recovery evidence: r4 failed
 
 Nine actual SAM functions reproduce own-rollover retry conflict, missing pre-freeze carry evidence and stale-summary completion after an in-flight edit. New-carry lost-response case passes; candidate acceptance remains FAILED, uninstalled. Next revision needs durable phase/effect records and atomic schedule-revision finalization. Browser screenshot confirms Always allow but same-origin Chrome tool still denies access; cause unknown, no bypass. Evidence: archive/20261002-sam-rollover-gates/sam-memory-rollover-gates-20261002.md.
+
+## October2 atomic SAM local-rollover receipt verified in isolation
+
+Actual pinned rollover logic refactored in a fixture to one explicit SQLite transaction passes seven cases: receipt/callback failure rollback, six-way concurrent once-only execution, cold-copy retry and changed/corrupt evidence holds. No production changes. Full candidate integration, business-input binding and atomic finalization still required; failed r4 remains uninstalled. Evidence: archive/20261002-sam-atomic-rollover/sam-atomic-rollover-20261002.md.

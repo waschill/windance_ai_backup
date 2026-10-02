@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam_rollover_receipt.py",
+    "sha256": "6dd6512ac7fe7b0809fa8f82609ca1d080a25f6f0fbf727b4a80ddb0954b7540"
+  },
+  {
+    "path": "sam-atomic-rollover-20261002.md",
+    "sha256": "847959f0e87332150381a2a02f76d5bb40bbcb5345b4bdce85054eef04054440"
+  },
+  {
+    "path": "test_sam_rollover_transaction.py",
+    "sha256": "a9637ef6b48af159857e556a7c28b5be472097e53ec2420f811f26b8d4f797fc"
+  }
+]
