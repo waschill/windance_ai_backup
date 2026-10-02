@@ -218,3 +218,7 @@ SAL schema/count-only inspection guided direct-chat metadata checks. Existing di
 ## October2 actual bridge run-loop candidate tested privately
 
 Private full-source SAL candidate integrates strict sender/direct-chat checks. Seven actual candidate functions passed normal, HTTP-failure and sender-failure scenarios using disposable database/cursor and intercepted transport. Rejected rows skip without send; failed accepted row retains preceding cursor and reuses stable request/ack keys. Downstream deduplication and manager persistence were mocked, so exactly-once delivery is not proven. No deployment or production cursor change. Evidence and next gates: archive/20261002-actual-sender-bridge/actual-sender-bridge-candidate-20261002.md. Phase1 open; zero model calls.
+
+## October2 actual outbox and cursor crash contracts verified in isolation
+
+Six actual outbox-function scenarios and four actual staged-bridge scenarios passed in disposable fixtures. Completed/uncertain work is not resent; changed-content keys reject; cursor-save failure preserves retry keys. Two private sender-map entries are compatible with the strict parser, checked without exporting values. First fixture compile needed the production postponed-annotations flag, then passed. Successful outbox receipts still mean process success, not independently confirmed Messages delivery. Evidence/limits: archive/20261002-outbox-crash-contract/outbox-crash-contract-20261002.md. Candidate not deployed; no real sends, queue/cursor changes or model calls; Phase1 open.

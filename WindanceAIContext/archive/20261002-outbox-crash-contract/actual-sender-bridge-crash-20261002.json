@@ -1,0 +1,62 @@
+{
+  "candidate_sha256": "e90460b83533ecab7332dd0f7b78a122419c9325a6e24c777f98b5c5f92c632a",
+  "scenarios": [
+    {
+      "scenario": "none",
+      "request_ids": [
+        "max-imessage:1",
+        "max-imessage:4"
+      ],
+      "sender_envelope_attempts": 2,
+      "cursor_after": 4,
+      "retry_cursors": [],
+      "passed": true
+    },
+    {
+      "scenario": "sender",
+      "request_ids": [
+        "max-imessage:1",
+        "max-imessage:4",
+        "max-imessage:4"
+      ],
+      "sender_envelope_attempts": 3,
+      "cursor_after": 4,
+      "retry_cursors": [
+        3
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "http",
+      "request_ids": [
+        "max-imessage:1",
+        "max-imessage:4",
+        "max-imessage:4"
+      ],
+      "sender_envelope_attempts": 2,
+      "cursor_after": 4,
+      "retry_cursors": [
+        3
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "cursor",
+      "request_ids": [
+        "max-imessage:1",
+        "max-imessage:4",
+        "max-imessage:4"
+      ],
+      "sender_envelope_attempts": 3,
+      "cursor_after": 4,
+      "retry_cursors": [
+        3
+      ],
+      "passed": true
+    }
+  ],
+  "real_http_calls": 0,
+  "real_sends": 0,
+  "production_cursor_writes": 0,
+  "limits": "Stable keys preserved. Sender deduplication and manager persistence were mocked, not proven."
+}

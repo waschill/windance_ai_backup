@@ -1,0 +1,41 @@
+{
+  "source_sha256": {
+    "send_imessage_payload.py": "382b55125c3ed2d606ce6fc41be5deb4640cac884610bff8822a5f47c0e1f74f",
+    "imessage_outbox_daemon.py": "f90fc54f5cd5d68fd5c408976d90da64dfa09ea8559e6563e4b23a5f45cdc009"
+  },
+  "scenarios": [
+    {
+      "scenario": "completed_retry",
+      "intercepted_send_attempts": 1,
+      "passed": true
+    },
+    {
+      "scenario": "post_send_crash",
+      "intercepted_send_attempts": 1,
+      "passed": true
+    },
+    {
+      "scenario": "post_receipt_crash",
+      "intercepted_send_attempts": 1,
+      "passed": true
+    },
+    {
+      "scenario": "content_conflict",
+      "intercepted_send_attempts": 0,
+      "passed": true
+    },
+    {
+      "scenario": "pre_queue_recovery",
+      "intercepted_send_attempts": 1,
+      "passed": true
+    },
+    {
+      "scenario": "partial_chunk_failure",
+      "intercepted_send_attempts": 2,
+      "passed": true
+    }
+  ],
+  "real_sends": 0,
+  "production_outbox_writes": 0,
+  "limits": "Process-level idempotency/uncertainty behavior only; no independent Messages transport delivery proof."
+}
