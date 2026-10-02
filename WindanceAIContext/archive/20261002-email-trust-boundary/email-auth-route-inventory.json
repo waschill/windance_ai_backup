@@ -1,0 +1,679 @@
+{
+  "source_sha256": "b5fab65c669a41ed54fe9996c99e0e1d21cbbf8fe68120e7636b5cdb5925427a",
+  "http_routes": 76,
+  "routes": [
+    {
+      "method": "get",
+      "path": "/staff/tasks/board",
+      "handler": "staff_work_board",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/tasks/{task_id}/notes",
+      "handler": "post_staff_task_note",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/tasks/{task_id}/resume-research",
+      "handler": "resume_staff_research",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/tasks/{task_id}/revise-weekly-review",
+      "handler": "revise_weekly_review_task",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/health",
+      "handler": "health",
+      "middleware": "health exception",
+      "reachable_guards": []
+    },
+    {
+      "method": "get",
+      "path": "/self/status",
+      "handler": "get_self_status",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/action/tools",
+      "handler": "get_action_tools",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": []
+    },
+    {
+      "method": "post",
+      "path": "/action/plan",
+      "handler": "post_action_plan",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": []
+    },
+    {
+      "method": "get",
+      "path": "/action/plans/{plan_id}",
+      "handler": "get_action_plan",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": []
+    },
+    {
+      "method": "get",
+      "path": "/permissions",
+      "handler": "get_permissions",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": []
+    },
+    {
+      "method": "post",
+      "path": "/permissions/{grant_id}/revoke",
+      "handler": "revoke_permission",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": []
+    },
+    {
+      "method": "get",
+      "path": "/system/cpu",
+      "handler": "get_system_cpu",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/system/diagnostics",
+      "handler": "get_system_diagnostics",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/voice/status",
+      "handler": "get_voice_status",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/walkie/text",
+      "handler": "walkie_text",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/voice/walkie",
+      "handler": "voice_walkie",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/voice/ask",
+      "handler": "voice_ask",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/voice/vega",
+      "handler": "voice_vega",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/message",
+      "handler": "message",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/email/unread",
+      "handler": "get_unread",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/calendar/upcoming",
+      "handler": "get_calendar",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/reports/context",
+      "handler": "get_report_context",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/reports/delivered",
+      "handler": "post_delivered_report",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/briefing",
+      "handler": "post_briefing",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/gmail/report",
+      "handler": "post_gmail_report",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/reflection/daily",
+      "handler": "post_daily_reflection",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/training/today",
+      "handler": "get_training_today",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/sam/schedule",
+      "handler": "get_sam_schedule",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/sam/commit",
+      "handler": "post_sam_commit",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/team",
+      "handler": "get_team",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/ops/items",
+      "handler": "get_ops_items",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/ops/items",
+      "handler": "post_ops_item",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/ops/status",
+      "handler": "get_ops_status",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/tasks",
+      "handler": "post_staff_task",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/delegation/tasks/{task_id}/ack",
+      "handler": "post_vega_delegation_ack",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_hal_delegation_worker"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/delegation/tasks/{task_id}/update",
+      "handler": "post_vega_delegation_update",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_hal_delegation_worker"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/staff/tasks",
+      "handler": "get_staff_tasks",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/staff/tasks/{task_id}",
+      "handler": "get_staff_task",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/tasks/{task_id}/start",
+      "handler": "post_staff_task_start",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/tasks/{task_id}/complete",
+      "handler": "post_staff_task_complete",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/excalidraw/status",
+      "handler": "get_excalidraw_status",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/excalidraw/files",
+      "handler": "get_excalidraw_files",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/excalidraw/create",
+      "handler": "post_excalidraw_create",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/excalidraw/files/{filename}",
+      "handler": "get_excalidraw_file",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/calendar/create/approval",
+      "handler": "request_calendar_create",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/gmail/action/approval",
+      "handler": "request_gmail_action",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/gmail/sender-rules/sweep",
+      "handler": "post_gmail_sender_rule_sweep",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/search/status",
+      "handler": "get_search_status",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/search/web",
+      "handler": "post_web_search",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/search/context",
+      "handler": "post_web_context",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/odoo/status",
+      "handler": "get_odoo_status",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/odoo/search",
+      "handler": "odoo_search",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/odoo/horse-history/report",
+      "handler": "odoo_horse_history_report",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/odoo/write",
+      "handler": "odoo_write",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/odoo/horse-history",
+      "handler": "odoo_horse_history",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/odoo/partners",
+      "handler": "odoo_partners",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/odoo/model/{model_name}/fields",
+      "handler": "odoo_model_fields",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/ideas",
+      "handler": "post_idea",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/ideas",
+      "handler": "get_ideas",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/ideas/{capture_id}/review",
+      "handler": "post_idea_review",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/captures",
+      "handler": "post_capture",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/captures",
+      "handler": "get_captures",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/captures/review",
+      "handler": "get_capture_review",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/captures/{capture_id}/transition",
+      "handler": "post_capture_transition",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/memory",
+      "handler": "put_memory",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/memory",
+      "handler": "list_memory",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/decision-logs",
+      "handler": "get_decision_logs",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/memory/vector",
+      "handler": "get_vector_memory",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/second-brain/search",
+      "handler": "get_second_brain_search",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/memory/vector/graph",
+      "handler": "get_vector_memory_graph",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/memory/vector/reindex",
+      "handler": "post_vector_reindex",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/approvals",
+      "handler": "create_approval",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "get",
+      "path": "/approvals",
+      "handler": "list_approvals",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/approvals/{approval_id}/decision",
+      "handler": "decide_approval",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/staff/follow-through",
+      "handler": "staff_follow_through",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    },
+    {
+      "method": "post",
+      "path": "/reports/control",
+      "handler": "report_control",
+      "middleware": "trusted source or configured bearer",
+      "reachable_guards": [
+        "require_token"
+      ]
+    }
+  ],
+  "limits": "Static reachability does not prove guard execution, ordering, proxy behavior, or per-user identity. Middleware and startup decorators are excluded."
+}

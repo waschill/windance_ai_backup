@@ -1058,3 +1058,7 @@ Original rule evidence now commits with the intent before callback; bounded20-re
 ## October2 combined email/current-Harness candidate and recovery verified
 
 Conflict-free three-way AST composition preserves all installed receipt/privacy/memory behavior and staged email changes. Exact30-source release startup and39-file HAL cold recovery pass, including separate task-report journal; restored receipt/report/fairness/vanished-message tests pass with no real effects. Livec2fa unchanged. Account/history/auth/caller/natural acceptance gates remain; no deployment. Evidence: archive/20261002-email-rebased-recovery/email-rebased-recovery-20261002.md.
+
+## October2 Harness trust-boundary qualification verified
+
+Actual restored candidate rejects12 simulated untrusted requests and preserves documented trusted-source behavior; no external effects. Corrected76-route inventory includes indirect message guard and excludes startup/middleware decorators. Local unauthenticated reads do not establish public exposure; proxy and human identity remain unverified. No deployment; Node-RED reload retry still permission-denied. Evidence: archive/20261002-email-trust-boundary/email-trust-boundary-20261002.md.

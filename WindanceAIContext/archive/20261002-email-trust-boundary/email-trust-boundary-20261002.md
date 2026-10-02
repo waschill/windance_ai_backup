@@ -1,0 +1,17 @@
+# Harness authentication boundary — October 2, 2026
+
+The restored combined candidate b5fab65c669a41ed54fe9996c99e0e1d21cbbf8fe68120e7636b5cdb5925427a passed the actual-module isolated ASGI trust-boundary test on HERALD's existing application Python. This is staged evidence, not a deployment or proof of live network exposure.
+
+Twelve untrusted requests across team, task, permission, message, Gmail approval and action-plan routes were rejected before handlers, with both empty and configured token settings. An X-Forwarded-For header alone did not bypass application checks. Health remained available. Trusted loopback could read team with no configured token; configuring a token required it for team. Correct bearer authentication permitted an untrusted simulated source, and a wrong bearer failed. The permissions handler still accepted trusted loopback without a bearer even when the shared token was configured. Approval and staff-task fixture tables stayed empty. Audit guards prohibited real sockets, subprocesses and writes outside temporary fixture storage.
+
+The middleware uses trusted source addresses or a configured bearer, except for health. Some handlers add their own token check; delegation handlers have a separate worker guard. Message handling delegates to a token-checking function through asyncio.to_thread. This is service/source trust, not authenticated human ownership or capability isolation.
+
+The corrected attached AST inventory contains 76 HTTP routes. It excludes middleware/startup decorators and follows named to_thread targets. It replaces the preliminary local inventory that incorrectly counted those decorators and missed the indirect message guard. Static reachability is not proof that a guard executes before all effects. No raw source, recipient values, tokens or mailbox content are included.
+
+Earlier live unauthenticated GET results came from HERALD loopback; they do not establish arbitrary LAN or internet access. These isolated tests do not validate reverse-proxy configuration, server forwarded-header interpretation, firewall behavior or deployment authentication. Do not globally enable a shared token until affected callers have a coordinated migration and verification plan. A shared bearer alone would not solve per-user authorization.
+
+Recovery package tested: /Users/herald/backups/email-rebased-recovery-20261002T172133Z/release/agent_harness.py. Run test_harness_trust_boundary.py using the existing application Python with -B and that source path. The test creates only temporary fixture state and does not launch a production listener or schedule work. Prior exact recovery evidence remains in archive/20261002-email-rebased-recovery.
+
+Email deployment remains unapproved by evidence gates: intended mailbox confirmation, defensible historical ownership, caller authentication migration and natural acceptance remain unresolved. No legacy approval was cancelled, adopted or replayed. Node-RED access was retried after William reloaded Chrome; the tool again explicitly denied access due to a saved permission. Repair authorization remains valid, but no alternate route was used to bypass the denial and the alarm repair remains undeployed.
+
+No production configuration, schedule, mailbox action, model route, SAM service, Odoo data, Warden job, phone, Level8 or SyncThing change occurred. No application inference was invoked. Project-specific dollar cost remains unknown. Phase 1 remains open.

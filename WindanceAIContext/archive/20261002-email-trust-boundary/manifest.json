@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-auth-route-inventory.json",
+    "sha256": "ac932b35ebe68f4c793b0f46a545d3755d20f6bbde0fdb115b30cb9c55b53fe2"
+  },
+  {
+    "path": "email-trust-boundary-20261002.md",
+    "sha256": "f0f09fa76a40727e915b0e2c3c277cf68ffe7b4fe82db9f615d9fccbae93d340"
+  },
+  {
+    "path": "inventory_harness_auth.py",
+    "sha256": "ba7bf27563ad0ef68fbe0f6c27c8a56133ab58326785140538f291e66918d413"
+  },
+  {
+    "path": "test_harness_trust_boundary.py",
+    "sha256": "4087f07feb518a0af364da0af1acd9a14ff85b6aafe9d7184cb580ab469fe613"
+  }
+]
