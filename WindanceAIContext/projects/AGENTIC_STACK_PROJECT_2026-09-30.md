@@ -457,3 +457,7 @@ Staged component binds current executing/selected batch to original item identit
 ## October2 five Gmail primitive acknowledgment checks staged
 
 Nineteen baseline/nineteen candidate actual-helper synthetic cases verify missing/blank resource IDs and contradictory identity/label evidence no longer produce success. SDK retries disabled; send acknowledgment means acceptance only, never delivery. Full candidate composed, no real Gmail/send/model or production changes. Item-ledger/shared admission and live compatibility/recovery gates remain. Evidence: archive/20261002-email-action-receipts/email-action-receipts-20261002.md. Phase1 open.
+
+## October2 per-item receipts integrated; actual connector lock corrected
+
+Actual schema/batch executor now preserves confirmed/uncertain per-item receipts without repeated synthetic effects in three scenarios. Full composition exposed nested schema-initializing connection lock; accepted r2 modules reuse the transaction and pass component/lineage regressions. Main hash alone cannot distinguish failed and corrected packages; verify module manifest. Whole/selected composition, single/shared admission, identity and exact recovery remain gates. Evidence: archive/20261002-email-item-harness/email-item-harness-20261002.md. No real mailbox/model or production changes; Phase1 open.
