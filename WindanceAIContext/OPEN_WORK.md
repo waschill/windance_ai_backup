@@ -414,3 +414,7 @@ Actual staged Harness report/schema/prepared-MIME helper passes normal and accep
 ## October2 live Gmail profile verified; expected owner binding remains pending
 
 Existing credential completed profile-only read in0.399s with no mail content or writes; refresh was in-memory and credential file unchanged. Integration lacks independent expected-account setting, so human owner match is unverified. William asked for intended Gmail address. Staged boundary passes seven synthetic match/mismatch/config/error cases; not installed. Packet: archive/20261002-gmail-account-boundary/gmail-account-boundary-20261002.md. No account address/secrets exported, no model calls; Phase1 open.
+
+## October2 independent HAL email recovery verified; quota checkpoint
+
+Eight private file hashes and four SQLite integrity checks pass independently on HAL; all28 original non-sequence tables preserved, all original tables match baseline startup, cold copy matches and new recovery tables are empty. No production or mailbox changes. Account-wide weekly Codex usage is63% used/37% remaining, two free resets unused and zero purchased credits; project dollar attribution remains unknown. Evidence and reproducible read-only verifier: archive/20261002-email-offhost-recovery/email-offhost-recovery-20261002.md. Gmail identity/transport/cross-path gates remain open; Phase1 incomplete.

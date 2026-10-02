@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-offhost-recovery-20261002.md",
+    "sha256": "ab81a0a9fc9a9132c33bbc25a1c6237cc797f06c249900b330b3b979d16ef0d0"
+  },
+  {
+    "path": "verify_email_offhost_recovery.py",
+    "sha256": "92ac1680edf1e576cfa1e5fe8ff6001b09fe049185d30365c5dd4caece27ab8c"
+  }
+]
