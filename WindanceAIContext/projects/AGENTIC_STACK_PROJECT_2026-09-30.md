@@ -817,3 +817,7 @@ Readonly poller repeats only absent/incomplete delivery evidence and propagates 
 ## October2 staged receipt queue transitions verified
 
 Nine SAL queue cases pass using exact daemon atomic/quarantine helpers and real staged journal/coordinator with synthetic receipt callbacks. Legacy results preserved; legacy/missing-history/SMS holds; marker/result crash recovery no replay. Not deployed; combined real-observer queue, owner lock, deadlines and protocol/consumer coverage remain gates. Evidence: archive/20261002-receipt-queue-adapter/receipt-queue-adapter-20261002.md.
+
+## October2 full isolated queue/receipt/owner-loop composition passes
+
+Nine SAL scenarios now run actual daemon main/owner lock/file helpers and intercepted send_one with staged queue plus real bounded observer/checkpoint/journal. Restarts preserve quarantine/no duplicate sends; lock contender denied. No production change. Whole-request/descendant deadline, consumer/protocol compatibility and coherent rollout recovery remain gates. Evidence: archive/20261002-full-receipt-queue/full-receipt-queue-20261002.md.
