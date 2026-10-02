@@ -1,0 +1,11 @@
+# Whole and selected approval chains verified in isolation
+
+October 2 UTC / October 1 Mountain 2026. Exact staged package unchanged; no production deployment.
+
+Actual application db/seed, pending lookup, whole approval handler, numbered selection handler, batch executor and Trash helper were composed with the real staged selection/lineage/item/receipt modules. Only Gmail responses, authentication/freshness decisions and source report references were synthetic. This is stronger integration evidence than the prior intercepted batch executor tests, but not live identity or mailbox evidence.
+
+Four cases pass: whole three-item normal completion; whole batch with last accepted Trash response lost; selected original indexes0/2 normal; selected last accepted response lost. Confirmed preceding items remain confirmed. Lost final outcomes yield uncertain parent and unconfirmed last item. Repeating the same user-facing approval entry adds no remote calls in all cases. Selected cases preserve exactly one pending remainder containing original index1. Provider sentinel content is absent from responses/audit. SQLite integrity passes. Actual Gmail/send/model calls zero.
+
+Accepted private package remains `/Users/herald/backups/email-item-harness-r2-20261002`, main `ed6c0ee54a67848807284cb25d0055d839f4646eb50083555bc89cd58b4e4481`; complete package manifest is checked by the archived test before imports. The same main hash in earlier non-r2 package is not sufficient: corrected modules are required, as recorded in email-item-harness packet.
+
+Remaining: real authentication/account binding, other primitive actions through full chain, standalone single-action approvals, shared mailbox holds across automation/approval/undo, operator visibility/reconciliation, process-death and full exact-package recovery. A remaining child can be separately approved, so unresolved resource conflicts still require shared admission. No natural delivery or project completion is claimed. Do not activate uncertain approvals based only on elapsed time or old pending snapshots. No live rollback required; retain private packages and recovery records. No service/SAM/Odoo/Warden/phone changes. Codex account capacity is consumed; dollar attribution unknown. Phase1 open.

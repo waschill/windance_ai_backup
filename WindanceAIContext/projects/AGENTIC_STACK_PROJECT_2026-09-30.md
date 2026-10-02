@@ -461,3 +461,7 @@ Nineteen baseline/nineteen candidate actual-helper synthetic cases verify missin
 ## October2 per-item receipts integrated; actual connector lock corrected
 
 Actual schema/batch executor now preserves confirmed/uncertain per-item receipts without repeated synthetic effects in three scenarios. Full composition exposed nested schema-initializing connection lock; accepted r2 modules reuse the transaction and pass component/lineage regressions. Main hash alone cannot distinguish failed and corrected packages; verify module manifest. Whole/selected composition, single/shared admission, identity and exact recovery remain gates. Evidence: archive/20261002-email-item-harness/email-item-harness-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 composed whole/selected approval chains pass
+
+Actual handlers, schema, batch executor, journals and Trash helper pass four normal/last-response-lost scenarios with simulated Gmail. Confirmed preceding items preserved, uncertainty honest, selected remainder exact, repeated approval adds no effects. Auth/freshness/source refs mocked; no live identity/delivery claim. Shared admission/single actions/operator recovery remain. Evidence: archive/20261002-email-full-approval-chain/email-full-approval-chain-20261002.md. No real Gmail/model or production changes; Phase1 open.

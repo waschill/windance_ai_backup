@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-full-approval-chain-20261002.md",
+    "sha256": "939860b2d730a5be8c2fc9ab73bef133710bd029fe0cea1c23f50a963faf63fe"
+  },
+  {
+    "path": "test_email_full_approval_chain.py",
+    "sha256": "7cc92ccdb9ece46b73d0f623b815b3794ad95129aadd314a6b544b2d36f31605"
+  }
+]
