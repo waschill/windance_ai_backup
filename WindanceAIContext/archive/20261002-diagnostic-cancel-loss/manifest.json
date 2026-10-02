@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "diagnostic_cancel_worker.py",
+    "sha256": "5d44dad4c6910e51e2d689d59e329b318b0309939ec3f55ed41b826ef5b963fd"
+  },
+  {
+    "path": "diagnostic-cancel-loss-20261002.md",
+    "sha256": "0f56a284d5e2082ab8cca61ad2de6b40f63cbda80142ce2d91cabfc9165a3a21"
+  },
+  {
+    "path": "diagnostic-http-cancel-loss-results.json",
+    "sha256": "9bfef27cf59f5d66966c248640cf860e28684540b792888aa006c7ecfeeedbcf"
+  },
+  {
+    "path": "test_diagnostic_http_cancel.py",
+    "sha256": "90a723d35aa3754f60412f08c5761b9b7e1037917a7095d9881b3921f4aad251"
+  }
+]

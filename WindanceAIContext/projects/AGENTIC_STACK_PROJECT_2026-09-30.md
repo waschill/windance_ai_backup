@@ -541,3 +541,7 @@ Principal-authorized cancel records intent, verifies exact isolated container an
 ## October2 remote response loss survives cold/fresh-process reconciliation; quota checkpoint
 
 After one actual isolated worker completed, injected response loss left ledger held; retry started nothing. Wrong worker version rejected, restored ledger/fresh process accepted exact existing receipt without rerun. No production service/model/business changes. Account-wide weekly usage78% used/22% remaining; two free resets unused, purchased credits0, project dollars unknown. Evidence: archive/20261002-diagnostic-remote-loss/diagnostic-remote-loss-20261002.md. Remaining job/pilot gates open.
+
+## October2 lost stop acknowledgment recovered without another kill
+
+Exact worker stop receipt now persisted before response and validated on repeat. Actual HTTP cancellation with injected post-response loss stayed pending, then accepted identical saved receipt without another Docker call/kill. Job result unavailable and retry claim denied; test cleanup verified. Kill-before-receipt/concurrency/power-loss gates remain. No production/business/model changes. Evidence: archive/20261002-diagnostic-cancel-loss/diagnostic-cancel-loss-20261002.md.
