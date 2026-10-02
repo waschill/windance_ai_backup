@@ -809,3 +809,7 @@ Readonly checkpoint detects synthetic replacement/changed or missing anchor whil
 ## October2 staged receipt query binds persisted pre-send checkpoint
 
 Schema3 journal persists checkpoint with attempt; supervised observer verifies it before/after exact query in same SQLite read view. Seven SAL composition/restart cases pass including replacement/anchor-change holds; HAL regressions/crash tests pass. No live deployment. Full queue, request deadline, delayed receipt and consumer recovery gates remain open. Evidence: archive/20261002-checkpoint-bound-receipts/checkpoint-bound-receipts-20261002.md.
+
+## October2 bounded delayed receipt polling staged
+
+Readonly poller repeats only absent/incomplete delivery evidence and propagates remaining deadline to worker; ambiguity/store changes stop immediately. Five clock cases and eight SAL composed/restart cases pass, including delayed two-chunk flags without duplicate sends. No deployment; whole-request/queue/consumer and recovery gates remain. Evidence: archive/20261002-delayed-message-receipts/delayed-message-receipts-20261002.md.
