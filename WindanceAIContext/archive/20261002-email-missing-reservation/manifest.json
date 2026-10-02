@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_mailbox_admission.py",
+    "sha256": "b00cb5bc6a48458995124bf4988d13f1838c070dda72c20c28d93e4a61e6efe9"
+  },
+  {
+    "path": "email-missing-reservation-20261002.md",
+    "sha256": "3faebd6ba774b306b9bc003613690480ba7b9ee3df0870141df710ef02029a1f"
+  },
+  {
+    "path": "test_email_missing_reservation.py",
+    "sha256": "de6bd5254116692b820b3473fdae93fddcd6ffc7f9b9f61793fc771e9a83b2d4"
+  }
+]

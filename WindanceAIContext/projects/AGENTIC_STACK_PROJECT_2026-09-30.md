@@ -477,3 +477,7 @@ Participating autonomy/rule and approved-item journals atomically reserve one ma
 ## October2 shared mutation hold composed into schema/report
 
 Actual staged report detects existing approved-operation uncertainty before inbox/model/rules/reference work and returns deterministic hold notice; post-rule uncertainty also stops further preparation. Actual schema/report fixture and four full approval-chain regressions pass. Startup backfill, undo/direct writers, operator reconciliation and exact recovery remain gates. Evidence: archive/20261002-email-shared-harness/email-shared-harness-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 old unresolved journals retain mutation holds without reservation
+
+Staged admission checks unresolved autonomy/approved journals as well as shared slot, preventing partial/older schema state from silently allowing another mutation. Four missing/orphan/confirmed-history cases and eight admission/reconciliation regressions pass. No historical evidence rewritten; old snapshots predating all intents still need external reconciliation. Evidence: archive/20261002-email-missing-reservation/email-missing-reservation-20261002.md. Full package integration and remaining rollout gates open; no production changes.
