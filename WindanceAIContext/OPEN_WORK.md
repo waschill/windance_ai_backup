@@ -890,3 +890,7 @@ Eight SAL cases pass: bounded lock contention, one same-key queue item, no claim
 ## October2 full keyed caller-to-worker isolated flow passes
 
 Caller expiry, actual keyed admission, supervised instrumented CLI, receipts and later same-key query/reentry produce verified delayed delivery or held post-send uncertainty with zero duplicates. Three admission process-crash points preserve claim-only hold and single queue publication. No live deployment; transport/caller contracts, lifecycle, complete recovery release and natural evidence remain gates. Evidence: archive/20261002-admission-worker-flow/admission-worker-flow-20261002.md.
+
+## October2 current31-file receipt release cold-restored on HAL and SAL
+
+Immutable r2 ZIP05ab4484 includes guardian/worker/admission/caller modules. Both hosts verify every source hash; restored SAL flow/crash/deadline/lifecycle and HAL journal/status tests pass. Post-test archive/source unchanged; no production activation. Caller transport/compatibility and coordinated cutover remain open. Evidence: archive/20261002-receipt-release-r2-recovery/receipt-release-r2-recovery-20261002.md.
