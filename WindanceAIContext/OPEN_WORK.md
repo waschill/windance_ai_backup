@@ -958,3 +958,7 @@ Actual loop/guardian/runtime CLI with synthetic transport passes3cases, no dupli
 ## October2 staged dispatcher gains content-free operating observations
 
 Atomic PID/state/time/budget records and throttled idle refresh pass monitoring checks plus actual CLI and persistent synthetic flow regression. No real sends or service changes. Status files are not liveness or delivery proof; 70 live legacy results remain unverified receipts. Updated combined recovery release and coordinated cutover remain next. Evidence: archive/20261002-dispatcher-observation/dispatcher-observation-20261002.md.
+
+## October2 current receipt receiver r3 cold-restored on HAL and SAL
+
+41-file immutable archive verified on both hosts; restored SAL copy passes persistent flow, legacy contract, monitoring, orphan-worker and admission/crash tests. Post-test source/archive hashes unchanged. No real sends or production changes. Separate caller package and coordinated live cutover remain; this is code recovery, not a live-state rollback snapshot. Evidence: archive/20261002-receipt-release-r3-recovery/receipt-release-r3-recovery-20261002.md.
