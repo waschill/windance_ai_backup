@@ -702,3 +702,7 @@ Existing Herald route resolves exact Codex OAuth/Terra with network/subprocess/f
 ## October2 current20-source email release restoration verified
 
 Manifest1262ea18 now has fresh online snapshot, exact copied service-layout startup, health/auth checks,28-table preservation and empty new journals. HAL independently verifies27 stable files, nested manifest/policy and four SQLite copies. No external/provider/model/service/SAM action. Actual identity, coordinated66-route callers, natural delivery and full host dependencies remain open. Evidence/recovery: archive/20261002-email-release-recovery/email-release-recovery-20261002.md.
+
+## October2 prior expected-account prototype integrated into complete email workflow
+
+Extends earlier account-boundary record, preserving its original helper and pending owner question. Manifestdcfdd110 now requires explicit policy and matching provider profile in actual Gmail service. Full local workflow verifies wrong account reads profile only and missing policy makes zero Gmail requests; neither starts an intent. No real policy configured or deployment. Historical binding, auth callers and exact recovery remain open. Evidence: archive/20261002-gmail-account-bound-integration/gmail-account-boundary-20261002.md.

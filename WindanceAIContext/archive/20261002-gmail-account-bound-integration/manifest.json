@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_account_boundary.py",
+    "sha256": "06f3ac5308eaeb25019325013a03b84610be8aa18b16cff9479fe93b19c63000"
+  },
+  {
+    "path": "gmail_account_boundary_r2.py",
+    "sha256": "d7a10ac75ccf53da5fb6c64052c28dfec2d21dfd61ed53fdbfb8a1d12440fd15"
+  },
+  {
+    "path": "gmail-account-boundary-20261002.md",
+    "sha256": "ef6dc3c7969178a7a3612d94d8fb0a2262eb85750858e559c21650c3e2795f1b"
+  },
+  {
+    "path": "test_email_complete_loopback.py",
+    "sha256": "2d99e49788522ceb3ef01491612eb489614b9585a9c17c2101df493f4dccf4c3"
+  },
+  {
+    "path": "test_gmail_account_boundary_r2.py",
+    "sha256": "aa3d7033b8a27c7047950fcd823c3e4cbf436968193281c3a4d5b749182b809f"
+  }
+]
