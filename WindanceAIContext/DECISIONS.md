@@ -1,5 +1,9 @@
 # Durable Decisions
 
+## October 2 Space companion trial and temporary email hold
+
+William selected an additive OpenAI Space trial while retaining the current Second Brain, and temporarily held his existing automatic email reviews to test Don. Preserve old rules/schedules; do not delete or automatically resume. Don's participation and email capabilities must be verified, not inferred from page creation. See projects/SPACE_TRIAL_AND_EMAIL_HOLD_2026-10-02.md for applied holds, trial links, privacy and pending acceptance.
+
 ## September 30 agentic stack baseline before architectural changes
 
 William authorized live audit, fresh backups, selected isolated restoration, canonical publication and index verification. Scope explicitly excludes migration, retiring agents, changing model routing and re-enabling phone intake. Existing privacy, Odoo, SyncThing, Level 8 and Warden rules remain. Audit findings and acceptance proposals are documented in `projects/AGENTIC_STACK_BASELINE_2026-09-30.md`; they do not themselves authorize follow-on production changes. Process success, QA, delivery receipts and recipient reading remain distinct evidence. Unknown actual costs and incomplete full recovery coverage must remain labelled unverified.

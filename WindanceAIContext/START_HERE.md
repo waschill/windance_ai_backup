@@ -1,5 +1,9 @@
 # Windance AI and Homelab — Start Here
 
+## October 2 owner email hold and Space trial
+
+William's automatic email reviews are temporarily held while he tests Don. Preserve the hold flag, disabled midday/evening Node-RED nodes, paused native Iris email job and disabled sender sweep; do not automatically restore or resume them during other stack work. Rules and schedules are retained. Shawn's separate email system is outside this hold. A private additive Space trial is created, but Don's direct handoff and independent acceptance remain pending. See `projects/SPACE_TRIAL_AND_EMAIL_HOLD_2026-10-02.md` for verification, current Harness revision, links and selective recovery.
+
 ## October1 later owner approval — alarm repair authorized, access blocked
 
 William explicitly approved restoring the SAM temperature-alarm link. This supersedes older unanswered alarm-approval holds below. The signed-in Node-RED tab remains blocked by browser tool policy; no repair has been deployed and no alternate route may bypass that denial. Do not ask again for repair approval. Resume once tool access is permitted, with fresh backup and graph verification. Training diagnostics are separately staged and tested, not installed. See archive/20261001-training-diagnostics/training-diagnostics/README.md. Other project boundaries and Warden suspension remain unchanged.

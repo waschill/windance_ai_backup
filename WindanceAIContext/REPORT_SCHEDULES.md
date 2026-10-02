@@ -1,5 +1,9 @@
 # Windance Scheduled Reports
 
+## October 2 William email reviews temporarily held
+
+William asked to hold his old automatic email work while trialing Don. The 07:20 briefing email entry point returns a held notice without mailbox access; its calendar briefing remains scheduled. The 12:10 and17:00 Node-RED mail injects are disabled, retaining original cron times and wiring. Native Iris William email brief at07:00/12:00/16:00 is paused; sender sweeps are disabled and guarded. No automatic resumption. Shawn's distinct schedule is unchanged. The historical daily report table below does not override this hold. Details and Space handover: projects/SPACE_TRIAL_AND_EMAIL_HOLD_2026-10-02.md.
+
 ## YouTube delivery verified — September 29
 
 The existing Mon–Thu08:00/12:00/16:00 Mountain YouTube schedule now delivers through Max/iMessage. Noon September29 completed with exit0 and Messages recorded sent/delivered to William. Stale SMS receipt checks were corrected in four producers earlier that morning; Warden's incident resolved naturally. See projects/REPORT_RECEIPT_REPAIR_2026-09-29.md. William's later report that he did not see a video report remains distinct from these transport records.

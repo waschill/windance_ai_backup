@@ -1,3 +1,7 @@
+## October 2 William email automation held and Space companion trial created
+
+Owner-directed temporary hold is verified: two William Node-RED mail triggers disabled with times/wires retained, morning email/autonomy/sweep entry points guarded by WILLIAM_EMAIL_HOLD, Iris's duplicate email job paused, sender sweep launchd entries disabled. All181 sender rules and eight protected tables preserved. Harness nowdb2dc2c45b1bf9611613b295e324f75e5d2aba12f3037c2d87d60ef284f1a2cb; health/live held checks pass without mail/model/send calls. Morning calendar briefing remains scheduled; Shawn routes unchanged. Private Space pages and retrieval checks pass; Don receipt/participation and full migration acceptance unverified. Do not resume automatically. Evidence/recovery: projects/SPACE_TRIAL_AND_EMAIL_HOLD_2026-10-02.md.
+
 ## October2 manager receipt enforcement installed — current override
 
 Vega manager source15cf1c789e1c1fcef837ed8ccc9e7df9525e73693d7ca9c15be1f279fb38d316 now uses immutable original-key snapshots and independent local Messages receipts for William; pending progress keys survive uncertainty. Shawn/shared wrapper remain legacy. Fresh heartbeat/unchanged ledgers/verified off-host backup; zero manual sends/new snapshots. First transition assertion recovered before corrected deployment. Natural delivery/reboot acceptance unverified; Phase1 open. Details: archive/20261002-manager-receipt-installed/manager-receipt-installed-20261002.md.
