@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_rule_receipts.py",
+    "sha256": "bd6020f09c22d2d672ce2500b95341bc06a7068b87ca75f3f762c7fecb76e586"
+  },
+  {
+    "path": "email_sweep_contract.py",
+    "sha256": "4567950c8be267cf4821283367fc951992ab96f90030929353630ec8fbf57807"
+  },
+  {
+    "path": "email-rule-effect-counts-20261002.md",
+    "sha256": "1b39824099b0d28680cde596b2992a1337e1b20ed7ef3a79184391f40667e6ff"
+  },
+  {
+    "path": "test_email_repeated_match_evidence.py",
+    "sha256": "acabb10ff2fdca29112e4f7d17061ded3ea9c29b890c4dd363408798e443c8db"
+  },
+  {
+    "path": "test_email_rule_bookkeeping_failure.py",
+    "sha256": "835cfcec7ef7ff2cbaee1cd3edd5b3987001bd67d702cf470bc68ef28030ede6"
+  },
+  {
+    "path": "test_email_rule_change_receipt.py",
+    "sha256": "02f7a5d9fcf354115ad502eb51116ac8f7ff9dccf44165205e29591a8d4ab016"
+  },
+  {
+    "path": "test_email_rule_effect_counts.py",
+    "sha256": "b94dcd956df6991d127b160b56f3cadfec97f8444f9c7d7f7179e8e83e61e6d3"
+  },
+  {
+    "path": "test_sweep_effects_caller.py",
+    "sha256": "64e62ffc196fbddbc25d8514dc5c4f1ad7f64e8beba139410a06ce73355a0b25"
+  }
+]

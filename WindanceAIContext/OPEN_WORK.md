@@ -1046,3 +1046,7 @@ Actual worker/local SDK fixture with budget5 confirms mark-read once, no Trash, 
 ## October2 staged bounded email batches rotate with durable partial coverage
 
 Eight-rule/twenty-message batches and CAS cursor pass fairness/change/concurrency tests; actual worker covers20rules in3runs/27reads, respects20message cap and survives abrupt exit before cursor without repeat writes. Uncertain actions retain cursor. Strict matching caller labels partial; no live changes. Fresh recovery/rebase, historical-count semantics and identity/history/auth gates remain. Evidence: archive/20261002-email-sweep-batches/email-sweep-batches-20261002.md.
+
+## October2 staged email counters distinguish new and recovered effects
+
+Reproduced duplicate match increment without repeat mailbox write; candidate records rule accounting atomically once and exposes new/prior effect counts. Actual counter/rule-change/crash/report regressions pass; local bookkeeping failure repairs on relisting without new write. Recovery when trashed message no longer appears remains open, along with deployment/rebase/auth/history gates. No production changes. Evidence: archive/20261002-email-rule-effect-counts/email-rule-effect-counts-20261002.md.
