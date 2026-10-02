@@ -569,3 +569,7 @@ Fresh pinned live source extracted into HAL synthetic fixture. Empty/mixed/Unico
 ## October2 atomic SAM business-source replay/revision receipts staged
 
 Dedicated producer admission composed with temporary SQLite source/receipt transaction. Eight simultaneous identical requests yield one commit; changed/stale requests denied, old replay marked superseded after correction, injected receipt failure rolls back source, cold replay equal and source drift denied. No live route/client/data changes. Persistent SAM event/receipt validation and business reader/source policy remain required before rollout. Evidence: archive/20261002-sam-business-memory-receipts/sam-business-memory-receipts-20261002.md.
+
+## October2 actual SAM commit composed with durable client/receiver receipts
+
+Staged client persists stable event before transport and validates exact event/date/content/revision acknowledgment. Actual commit-function seam plus receiver passes six cases: lost response retries one receiver commit; wrong date/hash/event/superseded receipts leave local day uncommitted. Receiver regressions pass. No production/SAM/API/Odoo/notes changes. Full candidate/transport/schema/recovery composition remains required. Evidence: archive/20261002-sam-memory-protocol/sam-memory-protocol-20261002.md.

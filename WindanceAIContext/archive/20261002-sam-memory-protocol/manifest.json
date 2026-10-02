@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam_business_memory.py",
+    "sha256": "a66faba5d895e52889e09634026653db78bafd186bef3976e764c690e74086b3"
+  },
+  {
+    "path": "sam_memory_client.py",
+    "sha256": "ec34dae746d60c4e97f23d4defd578fb9207d770bc7d4bd322cc9795fd561539"
+  },
+  {
+    "path": "sam-memory-protocol-20261002.md",
+    "sha256": "26872175229d85bb2aab0ff23a7298eb904fd23d2bc333fa5879a657baa1eb19"
+  },
+  {
+    "path": "test_sam_memory_protocol.py",
+    "sha256": "3bd5cba45928c340043251f46fe1a93c931a069827f6f1344079d973ba604546"
+  }
+]
