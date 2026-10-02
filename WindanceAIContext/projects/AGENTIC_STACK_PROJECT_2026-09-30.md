@@ -1037,3 +1037,7 @@ Eight-rule/twenty-message batches and CAS cursor pass fairness/change/concurrenc
 ## October2 staged email counters distinguish new and recovered effects
 
 Reproduced duplicate match increment without repeat mailbox write; candidate records rule accounting atomically once and exposes new/prior effect counts. Actual counter/rule-change/crash/report regressions pass; local bookkeeping failure repairs on relisting without new write. Recovery when trashed message no longer appears remains open, along with deployment/rebase/auth/history gates. No production changes. Evidence: archive/20261002-email-rule-effect-counts/email-rule-effect-counts-20261002.md.
+
+## October2 staged rule accounting recovers without relisting trashed mail
+
+Original rule evidence now commits with the intent before callback; bounded20-record local reconciliation verifies confirmed receipts and repairs accounting atomically. Actual empty-inbox failure/recovery fixture,20/5/0bounds, missing-provenance/contradictory-receipt guards and report/HTTP/caller regressions pass. No production changes. Live Harness stillc2fa; rebase and exact recovery next. Evidence: archive/20261002-email-rule-provenance/email-rule-provenance-20261002.md.

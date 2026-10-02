@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_rule_provenance.py",
+    "sha256": "93e648963742d30f479ef68ec844832e02a528b1843b819790fadf8957aefda8"
+  },
+  {
+    "path": "build_sweep_provenance_caller.py",
+    "sha256": "e25e417af2704cf4c6f94e23a5dbde82620a383d3b91bf7039ec142abe5e244e"
+  },
+  {
+    "path": "email_rule_accounting.py",
+    "sha256": "d796247b0c0fe16bae6256e4c5eb667b0631010d698ed83f8b88affea6a34ce8"
+  },
+  {
+    "path": "email_sweep_contract.py",
+    "sha256": "05a659283d58f820f0ccc08bc957569ad86b0cb326ed3e41815f5fb65a5cb289"
+  },
+  {
+    "path": "email-rule-provenance-20261002.md",
+    "sha256": "2739e985d776894dbc35f7ecd7611c69e4bd33f00038f2f001f9d18f79a868ff"
+  },
+  {
+    "path": "test_email_rule_accounting.py",
+    "sha256": "435d9658c0913055f3134a798fb3360968e9f6bbf3d032042bf4343213b65db0"
+  },
+  {
+    "path": "test_email_rule_vanished_recovery.py",
+    "sha256": "d743b5d71dff58e1d44db3cee0e618f00af6518d0d32273b0c33c45aa35a1084"
+  },
+  {
+    "path": "test_sweep_provenance_caller.py",
+    "sha256": "4cfa651c8ffc85cde91466b53b3b669afbecfbb42c07fbe1386694ed13362abc"
+  }
+]
