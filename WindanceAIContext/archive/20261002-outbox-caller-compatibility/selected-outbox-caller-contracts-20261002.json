@@ -1,0 +1,206 @@
+[
+  {
+    "path": "/Users/zuzu/bin/send_imessage_payload.py",
+    "sha256": "382b55125c3ed2d606ce6fc41be5deb4640cac884610bff8822a5f47c0e1f74f",
+    "references": [
+      "windance-imessage-outbox"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/zuzu/bin/windance_morning_status_report.py",
+    "sha256": "2eaef7c70ffebe7f7e421d851afc9e29a48468bd188fb8c0c50a3dd110a9ee67",
+    "references": [
+      "send_imessage_payload.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 102,
+        "seconds": 90
+      },
+      {
+        "line": 112,
+        "seconds": 90
+      },
+      {
+        "line": 125,
+        "seconds": 80
+      },
+      {
+        "line": 22,
+        "seconds": "dynamic"
+      },
+      {
+        "line": 34,
+        "seconds": 6
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/zuzu/bin/imessage_herald_bridge.py",
+    "sha256": "e90460b83533ecab7332dd0f7b78a122419c9325a6e24c777f98b5c5f92c632a",
+    "references": [
+      "send_imessage_payload.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 51,
+        "seconds": 10
+      },
+      {
+        "line": 92,
+        "seconds": 180
+      },
+      {
+        "line": 69,
+        "seconds": 180
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/zuzu/bin/send_shawn_email_payload.py",
+    "sha256": "575b1d9fef587c89fbe52a10bdf18ebb5fb18a8b470bff1e5035a3edb2c29f16",
+    "references": [
+      "send_imessage_payload.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 55,
+        "seconds": "dynamic"
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/zuzu/bin/imessage_outbox_daemon.py",
+    "sha256": "f90fc54f5cd5d68fd5c408976d90da64dfa09ea8559e6563e4b23a5f45cdc009",
+    "references": [
+      "windance-imessage-outbox"
+    ],
+    "idempotency_reference": false,
+    "timeouts": [
+      {
+        "line": 37,
+        "seconds": 45
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/zuzu/bin/send_william_imessage_payload.py",
+    "sha256": "361617413d9f7843dd9092fd1a2df8e34cb96ec50ea4b0de806a290bba6127d2",
+    "references": [
+      "send_imessage_payload.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 53,
+        "seconds": 90
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/zuzu/bin/send_shawn_report_payload.py",
+    "sha256": "b4121c125d9b2017e857ff1b06f9322fc31af104a37797f8f97c9f4fdbfea773",
+    "references": [
+      "send_imessage_payload.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 17,
+        "seconds": 80
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/herald/bin/windance_report_send.py",
+    "sha256": "aacab51098b3cf89c4b8660e67f3958eff71b56e496ea91a526e629279515780",
+    "references": [
+      "send_imessage_payload.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 19,
+        "function": "main",
+        "seconds": 80
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/herald/services/vega-manager/manager.py",
+    "sha256": "0ad87dcebb5844736ca218101ded61ce15c525c0042222f3f9e90d319f5445d5",
+    "references": [
+      "windance_report_send.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 39,
+        "function": "connect",
+        "seconds": 20
+      },
+      {
+        "line": 95,
+        "function": "http",
+        "seconds": "dynamic"
+      },
+      {
+        "line": 250,
+        "function": "send",
+        "seconds": 90
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/herald/services/capture-review-reminder/capture_review_reminder.py",
+    "sha256": "763a096d0a61319ea4c732ae24119b2f642adc847570585c7fa6f05802753900",
+    "references": [
+      "windance_report_send.py"
+    ],
+    "idempotency_reference": false,
+    "timeouts": [
+      {
+        "line": 34,
+        "function": "main",
+        "seconds": 90
+      }
+    ],
+    "literal_sms_true": false
+  },
+  {
+    "path": "/Users/herald/services/sentinel-router-logs/sentinel_daily_router_review.py",
+    "sha256": "1f8f1aaa283bd57ecd2895d13b81e2de150a2a0294320bc9de7d1d113078f6a1",
+    "references": [
+      "send_imessage_payload.py",
+      "windance_report_send.py"
+    ],
+    "idempotency_reference": true,
+    "timeouts": [
+      {
+        "line": 95,
+        "function": "deliver",
+        "seconds": 80
+      },
+      {
+        "line": 80,
+        "function": "deliver",
+        "seconds": 90
+      }
+    ],
+    "literal_sms_true": false
+  }
+]

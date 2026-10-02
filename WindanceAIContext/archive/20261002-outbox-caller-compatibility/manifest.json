@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "inventory_outbox_callers.py",
+    "sha256": "36fcfce589722f134b4fe44252319ea76fdfc23d47b147747e3efd5a60c207bc"
+  },
+  {
+    "path": "outbox-caller-compatibility-20261002.md",
+    "sha256": "f1603e4c48dcd64b57b04849ab425ca90f225e5883afcb3d2255ae6f25a38afa"
+  },
+  {
+    "path": "outbox-state-counts-20261002.json",
+    "sha256": "fde9cc71b88f6f08de0835d9115ced9e8f536004e1e67b330d94cf598e9269db"
+  },
+  {
+    "path": "selected-outbox-caller-contracts-20261002.json",
+    "sha256": "365fc6a445f550428bea70c04f987daf8466183c0d04e533d7456b5e246df977"
+  },
+  {
+    "path": "summarize_outbox_state.py",
+    "sha256": "cf7daab5ba5fea53e3034656ae18c33ea2339b88d1c65022a11e23b980e7499b"
+  }
+]

@@ -838,3 +838,7 @@ Nine SAL scenarios now run actual daemon main/owner lock/file helpers and interc
 ## October2 whole-request timeout preserves uncertain send state
 
 Dedicated-process-group supervisor passes full isolated queue normal/before-send/after-send stalls;1.5-second deadline ends stalls without replay across two restarts. Same-group descendant test prevents late synthetic effect. No deployment; parent-death/escaped-session/normal-exit descendant limits and live budgets/consumers/recovery remain open. Evidence: archive/20261002-whole-outbox-deadline/whole-outbox-deadline-20261002.md.
+
+## October2 live caller timeout mismatch and legacy receipts reconciled
+
+Read-only source confirms sender max(60,45*chunks+15) can exceed80-second wrappers; adding inner receipt waits alone is incompatible. Queue/inflight/uncertain currently0;66 retained results all legacy ok,49 keyed. No records changed or delivery inferred. All-host/Node-RED/SMS coverage and coordinated admission/deadline/result-query semantics remain open. Evidence: archive/20261002-outbox-caller-compatibility/outbox-caller-compatibility-20261002.md.
