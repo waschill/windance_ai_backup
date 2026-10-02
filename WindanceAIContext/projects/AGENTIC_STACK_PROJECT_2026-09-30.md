@@ -857,3 +857,7 @@ Dedicated group leader kills same-group workers on parent EOF, worker exit or de
 ## October2 cross-process clock defect corrected in staged supervisor
 
 SAL Python3.9 monotonic origins differ between processes; prior cross-process finish timing was invalid. Relative-duration guardian protocol plus independent parent total deadline passes five aged-parent cutoffs, lifecycle/descendant checks and full queue stall/restart no-replay tests. No production deployment; caller/entrypoint/package and natural-delivery gates remain. Evidence: archive/20261002-process-local-deadlines/process-local-deadlines-20261002.md.
+
+## October2 single-request receipt worker staged
+
+Real receipt composition passed nine isolated crash/delivery cases. New owner boundary independently preserves existing daemon lock, holds missing history, rejects invalid IDs and never replays absent requests. Complete CLI/guardian integration remains unverified; no installation or real send. Evidence: archive/20261002-single-request-worker/single-request-worker-20261002.md.
