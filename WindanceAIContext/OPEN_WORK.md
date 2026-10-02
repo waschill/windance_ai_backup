@@ -534,3 +534,7 @@ Pinned isolated worker now has independent in-container three-second deadline. I
 ## October2 diagnostic input/terminal evidence survives off-host restoration
 
 Revision3 snapshots bounded worker/evidence files per job and binds hashes to stopped-container/result receipts. Completed/timeout/cancel runs pass; cold copies verify, missing terminal or changed input yields unknown. Three job packages copied to HAL and independently inspected without re-execution. No production/model/send/Odoo changes. General authenticated durable job contract and other pilot gates remain open. Evidence: archive/20261002-bounded-diagnostic-records/bounded-diagnostic-records-20261002.md.
+
+## October2 staged authenticated job ledger and cold retry boundary verified
+
+Actual ASGI/SQLite tests pass credential-derived identity, cross-principal denial, request-key/payload binding, one winning claim, honest cancellation and cold retry without requeue. Result unavailable remains409. No listener, worker consumer, staff assignment or model/send/Odoo action enabled. Execution adapter/transport/real identity/coordinator integration remain open; not a second manager or completed pilot. Evidence: archive/20261002-diagnostic-job-api/diagnostic-job-api-20261002.md.
