@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_diagnostic_recovery_package.py",
+    "sha256": "e86abef6a4e4b300d524620cfba55d647b8135aeeeef83e3d8de5f640034cfde"
+  },
+  {
+    "path": "diagnostic-package-recovery-20261002.md",
+    "sha256": "73757a4045df520b2b4bf87c47f9a546b6ab0389624741e7c244fefc9b27b616"
+  },
+  {
+    "path": "diagnostic-recovery-package-20261002.zip",
+    "sha256": "f802dd776627b4cce235ea82b14773c05e6564d0af65a9f41fddc92b5296afc1"
+  },
+  {
+    "path": "verify_diagnostic_recovery_package.py",
+    "sha256": "3f5816a0198134934ff37a5feae257ec087326bc6cac4a8a9f72f2c8b744359b"
+  }
+]

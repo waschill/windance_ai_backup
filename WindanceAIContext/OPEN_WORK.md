@@ -558,3 +558,7 @@ After one actual isolated worker completed, injected response loss left ledger h
 ## October2 lost stop acknowledgment recovered without another kill
 
 Exact worker stop receipt now persisted before response and validated on repeat. Actual HTTP cancellation with injected post-response loss stayed pending, then accepted identical saved receipt without another Docker call/kill. Job result unavailable and retry claim denied; test cleanup verified. Kill-before-receipt/concurrency/power-loss gates remain. No production/business/model changes. Evidence: archive/20261002-diagnostic-cancel-loss/diagnostic-cancel-loss-20261002.md.
+
+## October2 exact diagnostic package restored and verified; service availability rechecked
+
+Ten-file source package matches freshly observed staged host hashes. HAL verifies isolated extraction/compilation; HERALD restored API passes twelve no-dispatch checks. Package excludes credentials/data/image bytes and is not deployment or full host recovery. AL has no diagnostic containers left; production WebUI healthy and HERALD Harness/bridge/manager health200. No production changes. Evidence/recovery: archive/20261002-diagnostic-package-recovery/diagnostic-package-recovery-20261002.md. Remaining project gates open.
