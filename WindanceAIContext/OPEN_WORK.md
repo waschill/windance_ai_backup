@@ -898,3 +898,7 @@ Immutable r2 ZIP05ab4484 includes guardian/worker/admission/caller modules. Both
 ## October2 actual report caller incompatibility and maintenance ownership verified
 
 Actual unchanged HERALD wrapper accepts legacy ok:true but rejects new verified_delivery schema; five stubbed-SSH cases confirm coordinated caller/receiver change is required. Manager healthy; separate upgrade project/stages complete, legacy send record not independent receipt proof. No duplicate work or production change. Evidence: archive/20261002-report-contract-verified/report-contract-verified-20261002.md.
+
+## October2 coordinated report wire contract and private wrapper staged
+
+Exact request/body-bound result and exit codes keep pending/uncertain/legacy from success; stdin replaces private argv transport. Ten HAL/SAL stub cases, actual endpoint legacy-preservation cases and private wrapper boundary checks pass. No live installation; keyed caller coverage, real SSH/lifecycle and refreshed complete package remain gates. Evidence: archive/20261002-report-wire-contract/report-wire-contract-20261002.md.
