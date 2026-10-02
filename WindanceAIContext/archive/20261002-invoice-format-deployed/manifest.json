@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "invoice-backup-herald-r2-20261002.json",
+    "sha256": "f5a42fb97bfc41bdde3dd1bfd8ddc0738d1f02ed84226b6a62f50669da8fa9c9"
+  },
+  {
+    "path": "invoice-backup-sal-r2-20261002.json",
+    "sha256": "d0b87a75d35ce1bb8f7b480f81770620079d8573b02be954d0857a7aa3ce927d"
+  },
+  {
+    "path": "invoice-deploy-herald-20261002.json",
+    "sha256": "48e40c619d949fddfb0a8d33530430c24e7af7795461958195f239f94e093e7f"
+  },
+  {
+    "path": "invoice-deploy-sal-20261002.json",
+    "sha256": "eb58acb11bcc8d220c04706ede0b78e15e98cdfe79ae63489e1be2ea33dbd8ed"
+  },
+  {
+    "path": "invoice-format-deployed-20261002.md",
+    "sha256": "ab5fb1bad9ec0b56d33509f6c3a4da1ce08fb3ed07692826af8adda7e0494f93"
+  },
+  {
+    "path": "invoice-installed-preview-20261002.json",
+    "sha256": "159c061c331e9a874c9a6c60d41880745d27607339b8fd5bc3508202fbdfe8d4"
+  },
+  {
+    "path": "invoice-postchecks-20261002.json",
+    "sha256": "633316a0b9455ad515d2d756d92181a656160be940891009e7c4bfec3f5646ae"
+  },
+  {
+    "path": "rollout_invoice_format.py",
+    "sha256": "59250df19a86456edc05a45b92c8e2f8306cf64c54ca426085ccf8cb46753e1f"
+  }
+]

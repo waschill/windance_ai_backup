@@ -1,0 +1,1 @@
+{"host": "SAL", "source_sha256": "ecd3ae83ff085921bd4fb799be932e5a920cd4b4db4a29a3be3a6b0a7760a2bf", "service_definition_unchanged": true, "protected_tables_unchanged": true, "harness_health_200": false, "scheduler_restarted": false, "manual_send": false, "backup": "/Users/zuzu/backups/invoice-format-deploy-20261002T0023Z-r2"}

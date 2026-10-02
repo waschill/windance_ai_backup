@@ -1,0 +1,1 @@
+{"checks": {"exit_zero": true, "heading": true, "scope_disclosed": true, "has_invoice_identifiers": true, "no_error_report": true, "no_send_flag": true}, "elapsed_ms": 1233, "stderr_nonempty": false, "report_body_exported": false, "passed": true}

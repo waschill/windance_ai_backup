@@ -1,0 +1,1 @@
+{"host": "HERALD", "source_sha256": "4e0b60a2d51fa6d08c28f940a6a0566f756bc257bd864f89cf3272fd92fbc26e", "service_definition_unchanged": true, "protected_tables_unchanged": true, "harness_health_200": true, "scheduler_restarted": false, "manual_send": false, "backup": "/Users/herald/backups/invoice-format-deploy-20261002T0023Z-r2"}

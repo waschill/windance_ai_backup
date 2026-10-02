@@ -1,5 +1,9 @@
 # Current Operating State
 
+## October2 unpaid-invoice correction installed; no-send preview passes
+
+Installed only invoice formatter and SAL result-classification function, preserving privacy/recipient guards. Fresh r2 two-host backups, cold SQLite integrity/eight-table hashes and off-host stable hashes verified after correcting a preflight utility path and transient-sidecar manifest defect. Harness health200; protected tables unchanged; live cross-owner email withheld. Actual installed SAL no-send preview exited0 in1.233s with identifiers/scope and no stderr.08:10schedule unchanged; natural delivery still unverified. Harness now4e0b60a2d51fa6d08c28f940a6a0566f756bc257bd864f89cf3272fd92fbc26e; rebase older candidates. Evidence/recovery: archive/20261002-invoice-format-deployed/invoice-format-deployed-20261002.md. No send/accounting write/SAM change; Warden suspended, Phase1 open.
+
 ## October2 Messages intake privacy boundary deployed
 
 Installed tested strict sender/direct-chat checks on SAL and restarted only existing Messages intake bridge after fresh five-file backup, cold structural checks, off-host hashes, Warden/ownership and empty-work predicates. New process stable; installed source/helper hashes match candidate; cursor/plist and empty outbox unchanged. Installed read-only query passes live schema. No message replay/manual send or SAM change. Natural future intake and independent delivery remain unverified; authenticated memory integration remains open. Evidence and selective rollback without cursor rewind: archive/20261002-sender-boundary-deployed/sender-boundary-deployed-20261002.md. Warden stays suspended; Phase1 open.
@@ -775,6 +779,7 @@ HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no er
 
 ## September30 project authority and release-watch handoff
 William authorized sustained agentic-stack execution with evidence gates. Phase1 remains open; original pilots restored. Priorities: email, network/software upkeep, read-only unpaid invoices. SAM protected22:00–05:00 America/Denver. See projects/AGENTIC_STACK_PROJECT_2026-09-30.md. Two-hour continuation and daily08:00 progress report are active in the owning chat. William confirmed HERALD OS update complete; live26.7.1/build25G241 corroborates version. Former15-minute upgrade polling is now daily10:00 release watch; see projects/SOFTWARE_RELEASE_WATCH_2026-09-30.md. Distinct Harness/runner/manager health investigation belongs to the stack project, preserving live Warden consensus. No service, route or business data changed to establish these records and automations.
+
 
 
 
