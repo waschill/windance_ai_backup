@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "authenticated_message_ingress.py",
+    "sha256": "a2a28e4fce64586a73ec3544732ac3d61f5ec32846979ad0dcb7723a1f46caca"
+  },
+  {
+    "path": "harness_memory_policy.py",
+    "sha256": "294f410854c457f610eca40a199d8bf155ea13fb024c0efffccdbd915624d25d"
+  },
+  {
+    "path": "memory_command_router.py",
+    "sha256": "29b9775dc5fb9698cf7bfaa84db4765b3d3a48759f358e551f5623d02a70dab0"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "memory-route-process-recovery-20261002.json",
+    "sha256": "bc1a2c7a86c223cd32748e1d331d34e01fdfac88007f761315120b9edb763f27"
+  },
+  {
+    "path": "memory-route-process-recovery-20261002.md",
+    "sha256": "1c5a3fd2e5afc5aea500f5dacd77df741a2a51cd5cab67bee91a1880d2a1afb3"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "9b45b02958a5d28b019e5ce182d3af3c4d7827922b856360f47096c5f4a1401c"
+  },
+  {
+    "path": "source_bound_facts.py",
+    "sha256": "8667a5fbeab1d8856409c696d89cfe161a6ac45be476d7b29805df4342977d22"
+  },
+  {
+    "path": "source_fact_gateway.py",
+    "sha256": "d0f7753dfcaa9aaf6384529b7637ad98cd3ee1ef5ca815a171cfe9d0215cc290"
+  },
+  {
+    "path": "source_memory_api.py",
+    "sha256": "7ee36b1d74d1d28017f6da77cf314fba56278b89f01b33ca06ac721b90ea7186"
+  },
+  {
+    "path": "test_memory_route_process_recovery.py",
+    "sha256": "5b02b3a97f4fdc411ba4a99de7c25200ae09a7e194dc673902d89093e75bdd36"
+  }
+]

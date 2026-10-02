@@ -326,3 +326,7 @@ Full candidate manager now classifies memory_pending before general worker dispa
 ## October2 conversational source-verified memory inspection tested
 
 Staged explicit what-do-you-remember/show-my-memories commands now use attested owner and current source verification, separate personal/business scope, and expose record/revision/source for correction. Actual full-app processor test excludes other owner, other scope, forgotten and changed-source facts; bridge forbidden and delivery intercepted. Bounded pagination implemented but volume continuation untested. General worker retrieval, legacy/mirror containment and composed recovery/rollout remain. Packet: archive/20261002-conversational-memory-inspection/conversational-memory-inspection-20261002.md. No production/model/send/dispatch change; Phase1 open.
+
+## October2 composed memory route process-exit and cold recovery passed
+
+Three real isolated child exits before fact commit, after fact commit/before answer, and after answer recovered in fresh interpreters with no duplicate revision. Post-forgetting consistent cold snapshots retained tombstones; replaying an older initial request did not resurrect its value. Actual staged source/intake/processor and installed manager schema used with synthetic data only. Older-snapshot reconciliation, sender delivery and host-loss recovery remain outside this evidence. Packet: archive/20261002-memory-route-process-recovery/memory-route-process-recovery-20261002.md. No production/model/send/dispatch changes; Phase1 open.
