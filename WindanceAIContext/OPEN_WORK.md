@@ -438,3 +438,7 @@ Actual helper previously accepted failed/malformed mark-read and Trash evidence 
 ## October2 composed rule recovery passes; approved-action gap reproduced
 
 Four actual-schema/rule/report/Trash-helper synthetic scenarios avoid repeated remote effects after lost responses or local tracking failure. Uncertainty stays visible. Separate actual approved executor test bypasses an existing synthetic hold; signature lacks durable approval identity. Full approval lifecycle integration is next, preserving new-request versus retry semantics and sender approvals. Evidence: archive/20261002-email-composed-boundaries/email-composed-boundaries-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 approval concurrency gap reproduced; claim staged
+
+Actual approve_pending allowed two overlapping synthetic callers to execute one pending approval twice. Staged exact-row atomic Gmail claim permits one effect; lost result persists uncertain with fixed content-free response. Selected-number batch path, durable item identities, status consumers, final-update drift and process recovery remain gates; no rollout. Evidence: archive/20261002-email-approval-claim/email-approval-claim-20261002.md. No real mailbox/model or production changes; Phase1 open.
