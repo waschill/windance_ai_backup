@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "outbox_protocol_cli.py",
+    "sha256": "eaad1963363ce90f31453b6739c0d1a06df71649cc87b3d97f33005cda2dfc47"
+  },
+  {
+    "path": "real-ssh-wire-20261002.md",
+    "sha256": "93074ecc22d665920d9b1a53ff9524a623be7841a2eab18a5a5e5c3bf4a06d82"
+  },
+  {
+    "path": "setup_wire_ssh_fixture.py",
+    "sha256": "fdef9091d353d3a48e21e8f607ab0038d8f452d1466e2e6392b9b76a30f0246b"
+  },
+  {
+    "path": "test_real_ssh_wire.py",
+    "sha256": "a7945bfd859e8d616073bce91c2312b2eae2f162166f20ebf49eb9fa425d2517"
+  }
+]

@@ -902,3 +902,7 @@ Actual unchanged HERALD wrapper accepts legacy ok:true but rejects new verified_
 ## October2 coordinated report wire contract and private wrapper staged
 
 Exact request/body-bound result and exit codes keep pending/uncertain/legacy from success; stdin replaces private argv transport. Ten HAL/SAL stub cases, actual endpoint legacy-preservation cases and private wrapper boundary checks pass. No live installation; keyed caller coverage, real SSH/lifecycle and refreshed complete package remain gates. Evidence: archive/20261002-report-wire-contract/report-wire-contract-20261002.md.
+
+## October2 real HERALD-SAL stdin protocol passes; caller gaps remain
+
+Four actual SSH synthetic receipt cases preserve legacy/verified/unknown and exit codes; seven fixture files unchanged then removed. Exact current caller checks confirm capture main lacks key reference and Sentinel deliver requires environment tracing; file-wide matches are not coverage proof. No global wrapper switch or production change. Evidence: archive/20261002-real-ssh-wire/real-ssh-wire-20261002.md.
