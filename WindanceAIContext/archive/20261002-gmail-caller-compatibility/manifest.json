@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_gmail_caller_auth.py",
+    "sha256": "d68589788ba98833b6b52feb2a6b9163dc49641abecfb5b1d7aa01b0a847539c"
+  },
+  {
+    "path": "gmail-caller-compatibility-20261002.md",
+    "sha256": "e85e1e5786c3d61b681149243426892102182f3a42979b4d3c180706ef6f8e2b"
+  },
+  {
+    "path": "test_gmail_caller_auth.py",
+    "sha256": "f762a3df01118d8316779300fb7c721e97e9e98b48f27e8179d6775d96b51735"
+  }
+]
