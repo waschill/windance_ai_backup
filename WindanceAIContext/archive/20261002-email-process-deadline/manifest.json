@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_process_deadline.py",
+    "sha256": "2c17da1d3e25b3419959d722ff705913953ed1d8a741485a0af7238a2418d735"
+  },
+  {
+    "path": "email-process-deadline-20261002.md",
+    "sha256": "bb9d776fc83bfb8c663a30cffbd7b7f5831d89f127451ce27027bb96801742f3"
+  },
+  {
+    "path": "test_email_process_deadline.py",
+    "sha256": "cdb24d2ddaee0952b31e131abfc2b2f36a5dce2b9bba6548b8cf5fcb8c753771"
+  }
+]
