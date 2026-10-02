@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_intent_visibility.py",
+    "sha256": "c9c17ba645b3fceadbebeb3d5e355c6d0abacc79f1e48b8cde170babad9b759b"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "27bffb8be2b13de26ca6fb816c538d6f435b70e7f1831ab6c641f792a027e451"
+  },
+  {
+    "path": "email-intent-visibility-20261002.md",
+    "sha256": "60dcbba73ac3d3338d2cdd583f1964d297f1eb72f0ff0a1f2c66af8bb98f0329"
+  },
+  {
+    "path": "email-intent-visibility-build-20261002.json",
+    "sha256": "aadc67ad0211257e9069e0e550063914c81c9e5e1f57a6cf2b461d3a18bc469f"
+  },
+  {
+    "path": "email-intent-visibility-outcomes-20261002.json",
+    "sha256": "9b9c3e601a580518f48688e5cd891b67a77b23066611dec33276ce186dc1707a"
+  },
+  {
+    "path": "email-intent-visibility-process-20261002.json",
+    "sha256": "c9ba34d77f40d115f6be77d1988a243676a70eb651b0f81b27ffa1833e8b6376"
+  },
+  {
+    "path": "email-intent-visibility-tests-20261002.json",
+    "sha256": "6146e023bf8928993d986f36719b3f0cc655ddc025e08488e0689d70cc3e0e5f"
+  },
+  {
+    "path": "test_email_intent_visibility.py",
+    "sha256": "ddf1cdf2b55890a518ab5c1be311a006d0c88e160d8e4611fb96a23c62dc1144"
+  }
+]

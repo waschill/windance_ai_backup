@@ -390,3 +390,7 @@ Actual report calls accepted synthetic Trash/draft effects untouched after lost 
 ## October2 autonomous email intent and composed report staged
 
 Durable per-message intent precedes Trash/draft callback and preserves unknown outcomes. Three real child exits and competing-process check pass without duplicate synthetic effect. Private candidate composes actual db schema/report; six report scenarios pass with synthetic adapters. Full actual-schema/startup recovery, held-operation visibility, regenerated-draft handling and authoritative Gmail reconciliation remain open; not installed. Packet: archive/20261002-email-action-intent/email-action-intent-20261002.md. No real mailbox/model calls; Phase1 open.
+
+## October2 held email operation visibility and actual schema verified
+
+Staged report checks intent records before rules/classifier, avoids repeated draft generation and shows unknown outcomes even with an empty inbox. Actual candidate db/seed/connection/report functions pass three interrupted-receipt/inbox scenarios; process/concurrency and outcome regressions pass. No real mailbox/model calls or live schema changes. Full app/private recovery, cross-path admission and actionable authoritative reconciliation remain gates. Packet: archive/20261002-email-intent-visibility/email-intent-visibility-20261002.md. Phase1 open.
