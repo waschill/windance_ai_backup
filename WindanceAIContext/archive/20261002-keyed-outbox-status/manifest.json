@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "keyed_outbox_status.py",
+    "sha256": "5716a80b0c846e4a1b93d6dab7afcbc0a6d389658c6f30ead1fcebe3c4ce0f3a"
+  },
+  {
+    "path": "keyed-outbox-status-20261002.md",
+    "sha256": "995d7c2311e7feab25d545cf3f189a9fec000576277a5b077d5c6f9822590309"
+  },
+  {
+    "path": "test_keyed_outbox_status.py",
+    "sha256": "c7e5c56c91ea6f3b355674640fedf875e00919af99652a2c1aa8aab216f1dc2f"
+  },
+  {
+    "path": "test_keyed_status_enqueue.py",
+    "sha256": "a0411154dca157ddc4ff225b866b41cab16cb1c7845d55e7f157070b1f6909dc"
+  }
+]

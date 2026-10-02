@@ -842,3 +842,7 @@ Dedicated-process-group supervisor passes full isolated queue normal/before-send
 ## October2 live caller timeout mismatch and legacy receipts reconciled
 
 Read-only source confirms sender max(60,45*chunks+15) can exceed80-second wrappers; adding inner receipt waits alone is incompatible. Queue/inflight/uncertain currently0;66 retained results all legacy ok,49 keyed. No records changed or delivery inferred. All-host/Node-RED/SMS coverage and coordinated admission/deadline/result-query semantics remain open. Evidence: archive/20261002-outbox-caller-compatibility/outbox-caller-compatibility-20261002.md.
+
+## October2 read-only keyed outcome lookup staged
+
+Ten state fixtures preserve all file bytes and distinguish legacy submission from journal-backed delivery; actual producer Unicode enqueue compatibility passes on SAL. No sends or installation. Lookup provides timeout reconciliation without enqueue but is not wired to callers; authenticated/bounded access, full lost-response composition and coordinated rollout remain gates. Evidence: archive/20261002-keyed-outbox-status/keyed-outbox-status-20261002.md.
