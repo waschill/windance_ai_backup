@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "diagnose",
+    "job": "/tmp/windance-bounded-diagnosis-20261002/job-6a5ae8c041934cbdbe31f81655c34d07",
+    "inspection": {
+      "replay_authorized": false,
+      "live_worker_state": "not_observed",
+      "evidence_trust": "local operator files, not cryptographic attestation",
+      "verification": "verified_record",
+      "recorded_outcome": "completed"
+    },
+    "cold_copy_equal": true,
+    "missing_terminal_unknown": true,
+    "input_drift_unknown": true
+  },
+  {
+    "mode": "timeout",
+    "job": "/tmp/windance-bounded-diagnosis-20261002/job-8e9d61091ebe4ab5a79cc13cea560ac3",
+    "inspection": {
+      "replay_authorized": false,
+      "live_worker_state": "not_observed",
+      "evidence_trust": "local operator files, not cryptographic attestation",
+      "verification": "verified_record",
+      "recorded_outcome": "timed_out"
+    },
+    "cold_copy_equal": true,
+    "missing_terminal_unknown": true,
+    "input_drift_unknown": true
+  },
+  {
+    "mode": "cancel",
+    "job": "/tmp/windance-bounded-diagnosis-20261002/job-7a4af5139a9a42119e97b9f6edbfd154",
+    "inspection": {
+      "replay_authorized": false,
+      "live_worker_state": "not_observed",
+      "evidence_trust": "local operator files, not cryptographic attestation",
+      "verification": "verified_record",
+      "recorded_outcome": "cancelled"
+    },
+    "cold_copy_equal": true,
+    "missing_terminal_unknown": true,
+    "input_drift_unknown": true
+  }
+]

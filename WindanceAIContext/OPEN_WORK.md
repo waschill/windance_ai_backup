@@ -530,3 +530,7 @@ Existing pinned local image ran fixed known-failure diagnosis with network none,
 ## October2 diagnostic worker deadline survives coordinator crash
 
 Pinned isolated worker now has independent in-container three-second deadline. Injected coordinator exit73 left stale running record, while independent exact-ID observation verified worker exit137 and no accepted result; test cleaned only that container. Normal/deadline/cancel regressions pass. No production/model/send/Odoo changes. Persistent authenticated job contract/reconciler and remaining pilot gates open. Evidence: archive/20261002-bounded-diagnosis-crash/bounded-diagnosis-crash-20261002.md.
+
+## October2 diagnostic input/terminal evidence survives off-host restoration
+
+Revision3 snapshots bounded worker/evidence files per job and binds hashes to stopped-container/result receipts. Completed/timeout/cancel runs pass; cold copies verify, missing terminal or changed input yields unknown. Three job packages copied to HAL and independently inspected without re-execution. No production/model/send/Odoo changes. General authenticated durable job contract and other pilot gates remain open. Evidence: archive/20261002-bounded-diagnostic-records/bounded-diagnostic-records-20261002.md.

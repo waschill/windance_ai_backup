@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_diagnosis_job_r3.py",
+    "sha256": "9f866748f9ecf6d4c424cdd86e81f7632c91f5db91bbbb03bcbf87e8bc8cac8e"
+  },
+  {
+    "path": "bounded-diagnostic-records-20261002.md",
+    "sha256": "20bd2d16a0cc0111e3e86628b3dcb3a413761a3598205fc8f796835c1f53e6e5"
+  },
+  {
+    "path": "bounded-record-offhost-results.json",
+    "sha256": "efa9f73609048c899db193ab25a1d47175ec637212f5dd8e8781da91f60f9d03"
+  },
+  {
+    "path": "bounded-record-results.json",
+    "sha256": "c754aa72b3bbdc179caa10b039030e07d82a88d1f396ac326c3cb1081c72c0dc"
+  },
+  {
+    "path": "inspect_diagnostic_record.py",
+    "sha256": "8dc4fe9395e54ae534fd138d9c40a673a3e77e8f90fe9300547b9c1c1e1104c4"
+  }
+]
