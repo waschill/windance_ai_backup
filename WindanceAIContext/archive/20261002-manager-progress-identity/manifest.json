@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager-progress-identity-20261002.md",
+    "sha256": "6d891ebbcdb1773c46614c4e961c877c134e91e18793847099fb820cb3f04ab5"
+  },
+  {
+    "path": "prepare_manager_receipt.py",
+    "sha256": "73293e21892ea65825d81ac45b53ef063061d53be66743ae97c3344ae52daea5"
+  },
+  {
+    "path": "test_manager_progress_identity.py",
+    "sha256": "810324668ecbb012d4e9f2c19700961962ec770ab31086864dd2760342db1fe8"
+  },
+  {
+    "path": "test_manager_receipt_candidate.py",
+    "sha256": "8fbc01a662492bb137a3984592eea087724ee8b62ac32d720363ea597592b91e"
+  }
+]

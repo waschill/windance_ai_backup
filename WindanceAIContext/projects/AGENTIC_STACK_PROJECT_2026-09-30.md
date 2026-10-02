@@ -1009,3 +1009,7 @@ Isolated tests pass original-key retention, uncertain original-body query, verif
 ## October2 actual staged manager receipt binding and abrupt-exit test pass
 
 Pinned live manager/wrapper unchanged. Candidate preserves unrelated function ASTs and Shawn path; actual send/advance holds legacy evidence, reconciles original snapshot and completes once on verified receipt. Abrupt child exit leaves durable attempt and restart queries only. No live deployment/send; full call-path/recovery/host gates remain. Evidence: archive/20261002-manager-receipt-integration/manager-receipt-integration-20261002.md.
+
+## October2 manager progress retry identity defect corrected in staging
+
+Caller could change key after uncertain progress send. Private r2 now persists pending key/failure until confirmation; actual full-module progress test and four receipt regressions pass on HERALD app Python with synthetic transports. HAL full import lacked aiohttp; no software installed. No live deployment. Remaining path/lifecycle/recovery gates recorded: archive/20261002-manager-progress-identity/manager-progress-identity-20261002.md.
