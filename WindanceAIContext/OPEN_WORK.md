@@ -330,3 +330,7 @@ Staged explicit what-do-you-remember/show-my-memories commands now use attested 
 ## October2 composed memory route process-exit and cold recovery passed
 
 Three real isolated child exits before fact commit, after fact commit/before answer, and after answer recovered in fresh interpreters with no duplicate revision. Post-forgetting consistent cold snapshots retained tombstones; replaying an older initial request did not resurrect its value. Actual staged source/intake/processor and installed manager schema used with synthetic data only. Older-snapshot reconciliation, sender delivery and host-loss recovery remain outside this evidence. Packet: archive/20261002-memory-route-process-recovery/memory-route-process-recovery-20261002.md. No production/model/send/dispatch changes; Phase1 open.
+
+## October2 actual legacy memory HTTP boundary reproduced safely
+
+Current Harness GET/POST memory routes in disposable full app with synthetic shared service token and Shawn owner context returned/unscoped-overwrote a synthetic William-labelled kind/key. No private data or production access involved; vector/mirror writes intercepted. This is missing API owner enforcement, not evidence of historical disclosure or unauthenticated LAN access. Explicit service-caller scoping, coherent legacy/mirror containment and worker filesystem/tool isolation remain privacy rollout gates. Packet: archive/20261002-legacy-memory-api-boundary/legacy-memory-api-boundary-20261002.md. No model/send/production changes; Phase1 open.

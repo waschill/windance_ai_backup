@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "legacy-memory-api-boundary-20261002.json",
+    "sha256": "77a616d58e890e56e3202b4ded34d3e1a09395183217ba36afa6b82dbd7117f3"
+  },
+  {
+    "path": "legacy-memory-api-boundary-20261002.md",
+    "sha256": "2474b503422a4d7a5c40df49d34d6c6e88634072f2eb34a8b2862fbe18659439"
+  },
+  {
+    "path": "test_legacy_memory_api_boundary.py",
+    "sha256": "032151679419431271fa08ea57e03147bed0d09e0e3bfc42e0933012a41dba5f"
+  }
+]
