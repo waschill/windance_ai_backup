@@ -798,3 +798,7 @@ Read-only observer plus actual pinned decoder passes25 synthetic HAL/SAL SQLite 
 ## October2 actual outbox abrupt-process recovery verified
 
 Pinned live daemon passes four fresh-interpreter crash/restart cases with synthetic intercepted sender: zero repeated effects, uncertain work quarantined and completed result retained. Production unchanged. Submission is not delivery; pre-send/chunk receipt identity and power-loss directory durability remain unproven. Evidence: archive/20261002-outbox-process-crashes/outbox-process-crashes-20261002.md.
+
+## October2 durable per-chunk receipt journal staged
+
+HAL/SAL synthetic tests verify single concurrent attempt authorization, reopen holds, content identity, sequential same-store boundaries, exclusive receipt claims and cold-copy recovery. No integration or live sender change. Trusted baseline/store provenance, actual process-crash composition, missing-history fail-closed rollout and caller timing remain gates. Evidence: archive/20261002-message-receipt-journal/message-receipt-journal-20261002.md.
