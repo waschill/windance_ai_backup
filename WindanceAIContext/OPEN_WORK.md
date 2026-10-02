@@ -386,3 +386,7 @@ Coordinated idle Harness update after live ownership/Warden checks, fresh six-fi
 ## October2 email uncertain-outcome report defect reproduced and staged
 
 Actual report calls accepted synthetic Trash/draft effects untouched after lost responses and accepts empty draft IDs. One-function candidate validates receipts, distinguishes preparation failure from uncertain remote outcomes and removes raw exception text/blanket unchanged claims. Six baseline/six candidate cases pass with no real mailbox/model calls. Durable pre-action intent and crash/concurrent recovery remain; candidate not installed. Packet: archive/20261002-email-outcome-contract/email-outcome-contract-20261002.md. Phase1 open.
+
+## October2 autonomous email intent and composed report staged
+
+Durable per-message intent precedes Trash/draft callback and preserves unknown outcomes. Three real child exits and competing-process check pass without duplicate synthetic effect. Private candidate composes actual db schema/report; six report scenarios pass with synthetic adapters. Full actual-schema/startup recovery, held-operation visibility, regenerated-draft handling and authoritative Gmail reconciliation remain open; not installed. Packet: archive/20261002-email-action-intent/email-action-intent-20261002.md. No real mailbox/model calls; Phase1 open.

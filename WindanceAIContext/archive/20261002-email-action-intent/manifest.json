@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_intent_candidate.py",
+    "sha256": "9512422b978fcebdb598dbc680465d6450c6166e9e0b10737905882880847df5"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "00f0ab858ed876ef8525ebda8971191f4db023d770d0b3d1cbdd6efe4da3f5c0"
+  },
+  {
+    "path": "email-action-intent-20261002.md",
+    "sha256": "047a08d74895d78e6f0700a7edf2c674aa6a49b5ca2cc77900a2214ea00dcab2"
+  },
+  {
+    "path": "email-action-intent-process-20261002.json",
+    "sha256": "c9ba34d77f40d115f6be77d1988a243676a70eb651b0f81b27ffa1833e8b6376"
+  },
+  {
+    "path": "email-intent-build-20261002.json",
+    "sha256": "b73dbfc051e67a8ddb4a338eb6289e61ee93c85c0515e7fed1ca43e9ebd835b6"
+  },
+  {
+    "path": "email-intent-report-20261002.json",
+    "sha256": "d962645c6d8ad3f0fdd0743856ff5bab5c2bf11db5a466000b99ac052521685a"
+  },
+  {
+    "path": "test_email_action_intent.py",
+    "sha256": "e4e37e856162947fcdced168f83e34d353453b9366661f1d7116e51abb8db579"
+  },
+  {
+    "path": "test_email_outcome_report.py",
+    "sha256": "49f5961746c5e27611a6d72479ef24a0a55acbb6eef1f9e8447b8a9f0a64ac12"
+  }
+]
