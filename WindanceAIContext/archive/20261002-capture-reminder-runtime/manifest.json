@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "capture-reminder-runtime-20261002.json",
+    "sha256": "99fba6b65a30c20eea703664d2ddf745dc467b18b038d14e7d051878d9db9f50"
+  },
+  {
+    "path": "capture-reminder-runtime-20261002.md",
+    "sha256": "55b888047d6a4a756c958fd4db0f76ad77af6037d26207388aea4aa2439635e9"
+  }
+]

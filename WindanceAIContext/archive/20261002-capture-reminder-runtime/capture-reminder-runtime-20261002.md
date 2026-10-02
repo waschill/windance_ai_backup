@@ -1,0 +1,13 @@
+# Capture reminder runtime discrepancy — October 2
+
+The saved19:00 capture-review reminder remains unregistered. Its source763a096d and plistd49edec0 were read without alteration. RunAtLoad is false. Its main supports --dry-run, reads only the active-capture count, and invokes the existing report sender only outside dry-run. No capture titles/content were exported.
+
+Actual installed source --dry-run under the configured /usr/bin/python3 exited1 with sqlite3.OperationalError/unable-to-open-database. The database exists. The identical unchanged source/argument under /Users/herald/.hermes/hermes-agent/venv/bin/python exited0, produced the expected reminder shape and no stderr. Neither invocation sent a message. This identifies a runtime-dependent access discrepancy, not the underlying OS/security/SQLite cause; do not describe the database as absent or damaged on this evidence.
+
+The same pattern had appeared in earlier system-Python recovery work. A concrete candidate is to change only ProgramArguments[0] to the working application interpreter, preserving all schedule/recipient/source fields. It is not installed. Before activation: verify fresh backup and isolated main/sender contract, recipient/deduplication behavior, ownership and the active shared-runtime maintenance window; then use exact registration/health/rollback checks without manually sending or replaying a reminder.
+
+The current related chat Check Hermes staff task activity reports VM-CORE-UPGRADE-20261002 intentionally waiting for05:00MDT after SAM protected hours. Its latest completed oversight turn reports manager/bridge healthy; it does not authorize another dispatcher or imply that maintenance has completed. No message or assignment was sent to that chat. Coordinate this interpreter-dependent change with that existing work rather than racing its runtime update.
+
+Read-only inspection of the report sender shows it uses the existing SAL outbox and supports WINDANCE_DELIVERY_KEY when supplied. The reminder does not itself establish a date-bound delivery identity; its final ok/transport check does not independently prove recipient receipt. Those contracts need evaluation before treating schedule restoration as reliable delivery. Do not call the sender during diagnosis.
+
+No service, launch definition, database, schedule, model route or SAM change occurred. Warden stays suspended, phone disabled, SyncThing untouched and no Node-RED access attempted. No new spending commitment/application-model call. Codex cost remains separate and unknown. No rollback needed; Phase1 remains open. Companion JSON contains only hashes and runtime outcomes, no private capture contents or recipient values.

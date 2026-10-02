@@ -766,3 +766,7 @@ HERALD26 selected definitions:14 registered,12 absent across user/gui501 includi
 ## October2 missing-job source triage finds legacy context privacy mismatch
 
 All11 selected absent-job scripts/interpreters exist; source effects grouped for email/report/upkeep/memory recovery without activation. Actual desktop-context functions copy synthetic personal excerpt without explicit remember request into shared ownerless/sessionless payload. No real conversations accessed or memory writes; job remains unregistered and must not be restored unchanged. Evidence: archive/20261002-unregistered-job-dependencies/unregistered-job-dependencies-20261002.md.
+
+## October2 capture reminder runtime-dependent failure verified
+
+Unchanged reminder source fails safe --dry-run under configured systemPython with database-open error but passes under installed applicationPython; no send. Concrete interpreter-only correction identified, not installed. Shared-runtime upgrade waits05:00MDT in existing oversight chat; recipient/delivery identity and coordinated backup/activation gates remain. Evidence: archive/20261002-capture-reminder-runtime/capture-reminder-runtime-20261002.md.
