@@ -905,3 +905,7 @@ Explicit private journal commits original report/key before transport; attemptin
 ## October2 Sentinel actual main uses durable snapshots in isolated integration
 
 Schema2 persists report availability separately from delivery. Actual candidate main passes normal/repeat, midnight recovery, BLOCKED receipt persistence and missing-history cases; child-crash query-only regressions pass. No live installation/provisioning; private cold recovery, schedule/history/caller coordination remain gates. Evidence: archive/20261002-sentinel-durable-main/sentinel-durable-main-20261002.md.
+
+## October2 Sentinel06:50 job remains unregistered; private recovery verified
+
+Fresh10-file original/candidate/synthetic-journal ZIP6e9c16e9 cold-restored on HERALD/HAL. Actual scheduled system Python passes candidate main/crash and query-only cold-state tests; HAL verifies hashes/SQLite but fcntl behavior unsupported. Live source/plist unchanged, no journal provision or activation. Legacy daily-send reconciliation and coordinated receiver/caller rollout remain gates. Evidence: archive/20261002-sentinel-cold-recovery/sentinel-cold-recovery-20261002.md.

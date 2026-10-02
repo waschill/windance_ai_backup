@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "backup_sentinel_candidate.py",
+    "sha256": "cd5820b4b60ccd886d6c8c5b11a8b236297047449383418ea0cbdd85bd97f032"
+  },
+  {
+    "path": "sentinel-cold-recovery-20261002.md",
+    "sha256": "cda060a8ebc66701c98bee26841ae129d6075dd0d4a86ab65e92e81b7a71b4f6"
+  },
+  {
+    "path": "verify_daily_snapshot_restore.py",
+    "sha256": "70fb10beeeaec8958487c63fa051bd5484b9137284c0a94410678aa22ce8c5c2"
+  },
+  {
+    "path": "verify_receipt_release.py",
+    "sha256": "8c6b54f716aa30e678df27a329558a9e4a303ef3a903aa77447aa8a10d4f0aac"
+  },
+  {
+    "path": "verify_restored_release.py",
+    "sha256": "eae3687a700cebbe2ec416a7ca6ea3916ddcc778f89740fa21114888c99b81aa"
+  }
+]
