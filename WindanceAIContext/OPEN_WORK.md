@@ -806,3 +806,7 @@ HAL/SAL synthetic tests verify single concurrent attempt authorization, reopen h
 ## October2 staged receipt journal fails closed on missing history
 
 Runtime now opens existing-only SQLite; missing/empty history holds and provisioning cannot overwrite. HAL/SAL regressions and four abrupt-process journal exits pass without repeated synthetic effects. Not deployed; full actual-outbox/observer composition, store continuity, schema validation and power-loss proof remain open. Evidence: archive/20261002-message-journal-recovery/message-journal-recovery-20261002.md.
+
+## October2 staged receipt lifecycle composes actual sender function
+
+SAL tests compose exact production send_one with intercepted external effect, actual decoder/observer and journal across five two-restart cases. Persistent request hold fixes a later-restart continuation gap; staged schema2, no migration/live changes. Complete queue handler, real store continuity, bounded observation, delayed receipts and consumer rollout remain gates. Evidence: archive/20261002-receipt-outbox-composition/receipt-outbox-composition-20261002.md.

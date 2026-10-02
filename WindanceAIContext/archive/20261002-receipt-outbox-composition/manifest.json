@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "attributed_text_candidate.py",
+    "sha256": "7005e6f89d401e521035c771cfc109a8cdf55158c9511d0ae3e01f4861ff8735"
+  },
+  {
+    "path": "message_receipt_journal.py",
+    "sha256": "42b49969ef8777469accc549c1b5998ea55d1036633be499b13a7ed67a7f0371"
+  },
+  {
+    "path": "messages_attributed_receipt.py",
+    "sha256": "c7170390bf7fbdc7a73d4286e81574230b43a05a9ff643adc3a275be915c16f9"
+  },
+  {
+    "path": "receipt_chunk_coordinator.py",
+    "sha256": "3528e3610acbdbf3eaa9beedda362202ee1d081eada71bb1f043fad5fda50582"
+  },
+  {
+    "path": "receipt-outbox-composition-20261002.md",
+    "sha256": "1a4f8be9aa1438634239ddc3d66923acaba511df2b83c11898f3aca902070d69"
+  },
+  {
+    "path": "test_receipt_outbox_composition.py",
+    "sha256": "b7b77e1c5f905fa2a9b8febc19745e4babe3c78454000e808258d93e34553892"
+  }
+]
