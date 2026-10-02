@@ -1041,3 +1041,7 @@ Reproduced duplicate match increment without repeat mailbox write; candidate rec
 ## October2 staged rule accounting recovers without relisting trashed mail
 
 Original rule evidence now commits with the intent before callback; bounded20-record local reconciliation verifies confirmed receipts and repairs accounting atomically. Actual empty-inbox failure/recovery fixture,20/5/0bounds, missing-provenance/contradictory-receipt guards and report/HTTP/caller regressions pass. No production changes. Live Harness stillc2fa; rebase and exact recovery next. Evidence: archive/20261002-email-rule-provenance/email-rule-provenance-20261002.md.
+
+## October2 combined email/current-Harness candidate and recovery verified
+
+Conflict-free three-way AST composition preserves all installed receipt/privacy/memory behavior and staged email changes. Exact30-source release startup and39-file HAL cold recovery pass, including separate task-report journal; restored receipt/report/fairness/vanished-message tests pass with no real effects. Livec2fa unchanged. Account/history/auth/caller/natural acceptance gates remain; no deployment. Evidence: archive/20261002-email-rebased-recovery/email-rebased-recovery-20261002.md.

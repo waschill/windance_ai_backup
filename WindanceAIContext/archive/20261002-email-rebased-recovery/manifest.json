@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "complete_email_rebase_backup.py",
+    "sha256": "a900908530d103a33f2882866ab22a74321a92de513aa20060c7cb50a9a9703f"
+  },
+  {
+    "path": "email-rebased-recovery-20261002.md",
+    "sha256": "e3b7e73fe3ec647470d1c1507d68c552e811031587213238f1fbc4b4727c4370"
+  },
+  {
+    "path": "rebase_email_harness.py",
+    "sha256": "e8d7ea6b04c929812d6e7962998731ddd33cd8db59799113a26c08a920966240"
+  },
+  {
+    "path": "recover_email_rebased.py",
+    "sha256": "1683e021efec6920ac673dab1c8152f3f23d8ffd5f8157575ccf871a469f5208"
+  },
+  {
+    "path": "verify_email_rebased.py",
+    "sha256": "1e5ad238c585e0be16f4e1f05353f7b8d604da26d8f1e353caeef45c551fd19f"
+  }
+]
