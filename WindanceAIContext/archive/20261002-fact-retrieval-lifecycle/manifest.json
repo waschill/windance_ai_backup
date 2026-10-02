@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bridge_sender_boundary.py",
+    "sha256": "16df0f010896a8cc93c4837e3fba7d11cf0147c068615e5de5a6d8ab243072c3"
+  },
+  {
+    "path": "fact-retrieval-lifecycle-20261002.md",
+    "sha256": "cde5a821b86a043ac8a80457f4c1e1607ea27cc6bc359be77f835cf1bb72f055"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "d38974c8720251bb7985690cc9451c411caaee7c61527350d3235c82d9fdaed6"
+  },
+  {
+    "path": "test_fact_retrieval_lifecycle.py",
+    "sha256": "6783b8ee2ec6eab8a003bc34ddeeef8f59b92b14d0afb99aaebf9149a9b5b834"
+  },
+  {
+    "path": "test_memory_ingress_policy.py",
+    "sha256": "876d6074b7e53a1d625d44ec6f6fdee715f2bc49ff2f0938c75aa767414739b2"
+  },
+  {
+    "path": "test_owned_fact_store.py",
+    "sha256": "fa55da3b025f435e3feede362f4dd56b52d4208f615c4b3ae4fd9c48f7e6edf4"
+  },
+  {
+    "path": "test_sender_memory_chain.py",
+    "sha256": "b7cd37fc3b0fa83563471164541e47c31a977d1463b098f560659f295ce92aaa"
+  }
+]
