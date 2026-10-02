@@ -510,3 +510,7 @@ Exact undo/approval/shared-hold package imported and passed full ASGI lifecycle/
 ## October2 immediate numbered sender-rule bypass journaled
 
 Static source audit found direct Trash in always-delete/notify-delete numbered commands. Staged handler journals report/command-bound identity, preserves distinct later instructions and holds before preparation on prior uncertainty. Four actual parser/schema command fixtures pass; raw provider errors withheld. Local rule/reference transport and dynamic/external callers remain unverified. Evidence: archive/20261002-email-direct-rule-intent/email-direct-rule-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 actual sender-rule storage integration exposed and corrected continuation after uncertainty
+
+Actual saved-reference/rule/audit/schema tests reproduced a second sender rule being saved after the first Trash response became uncertain. Staged handler now stops the remaining command immediately. Eight sequential normal/lost/empty-latest/invalid-reference cases pass across both rule commands. No real mailbox/model or production changes. Concurrency, identity, operator recovery and final package gates remain. Evidence: archive/20261002-email-direct-rule-stop/email-direct-rule-stop-20261002.md. Phase1 open.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_direct_rule_stop.py",
+    "sha256": "58301516feb55d309065326507307f4a79644f0c0b8d8f16a8142aa789129f56"
+  },
+  {
+    "path": "email-direct-rule-stop-20261002.md",
+    "sha256": "f2cfa2b3c3a814bb91a02dca61db36d3f66b4bb7876285415d3941c6780c3f8c"
+  },
+  {
+    "path": "test_email_direct_rule_storage.py",
+    "sha256": "9a725d2e2a07b0bbbdf8298d8cc939f6a500113ea76c2154a534d64703d54470"
+  }
+]
