@@ -614,3 +614,7 @@ Seven actual-schema cases pass changed/deleted source and receipt holds plus a c
 ## October2 composed SAM r5 resolves reproduced rollover/stale-completion cases
 
 Eleven actual candidate functions and SQLite stores pass ten cases: own-rollover lost-response retry, retained pre-freeze carry/history evidence, atomic rejection of in-flight edits, and existing history/clear/receipt/config holds. No production changes. Full startup/transport/private recovery, correction workflow and first-clear Odoo race remain open; r5 is not deployment-ready. Evidence: archive/20261002-sam-memory-composed-r5/sam-memory-composed-r5-20261002.md.
+
+## October2 full SAM r5 isolated startup and saved-database restoration pass
+
+Verified eight-file candidate started in pinned AL network-none/read-only/nonroot container with inactive producers/scheduler. Five actual HTTP reads pass; 11 original tables unchanged, five new tables empty, cold-copy/repeated init equal. Exact exited0 container removed. No production/SAM change. Input was earlier verified snapshot, not a fresh live backup. Live integration, correction workflow and Odoo first-clear race remain open. Evidence: archive/20261002-sam-r5-isolated-startup/sam-r5-isolated-startup-20261002.md.

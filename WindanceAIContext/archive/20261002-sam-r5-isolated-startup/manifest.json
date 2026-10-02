@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-r5-isolated-startup-20261002.md",
+    "sha256": "ffc6b08cb088b92402755ebb147c61667f541fb8a1541c145ea56a1f82d02991"
+  },
+  {
+    "path": "test_sam_startup_r5_container.py",
+    "sha256": "56e213077912888b2cdafa4b17e237631fad02456b7e350dde2d0b12658b277c"
+  }
+]
