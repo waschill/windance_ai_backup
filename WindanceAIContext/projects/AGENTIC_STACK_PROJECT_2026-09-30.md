@@ -533,3 +533,7 @@ Fixed adapter binds claimed job/evidence/worker versions to actual Docker termin
 ## October2 actual authenticated HTTP-to-AL diagnostic integration passes
 
 Temporary HERALD loopback API accepted scoped submission, fixed SSH adapter invoked one pinned isolated AL worker, and matching result was available only to submitting principal. Unauthenticated/cross-principal requests denied; identical resubmission retained job with no second worker. Listener shutdown verified; no persistent service/queue/staff dispatch or production changes. Real identity, active cancellation and remaining recovery/job gates open. Evidence: archive/20261002-diagnostic-http-worker/diagnostic-http-worker-20261002.md.
+
+## October2 active HTTP cancellation confirmed against exact isolated worker
+
+Principal-authorized cancel records intent, verifies exact isolated container and persists cancellation only after observed stopped acknowledgment. Real running-worker test passed; failed/wrong acknowledgments stay pending. Twelve ASGI/SQLite regressions and actual normal HTTP-worker regression pass. Cleanup now coordinated via operator-only retained container; interrupted cleanup/races remain gates. No production listener, staff dispatch or business changes. Evidence: archive/20261002-diagnostic-http-cancel/diagnostic-http-cancel-20261002.md.

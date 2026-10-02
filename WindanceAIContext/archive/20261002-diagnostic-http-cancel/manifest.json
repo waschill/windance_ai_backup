@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_diagnosis_job_r4.py",
+    "sha256": "8631caa199085d4f437a89ad6fecfe5abf4d14c9911cd232e265a42ddddcb5c4"
+  },
+  {
+    "path": "diagnostic_cancel_worker.py",
+    "sha256": "342da938f2f26dac4f89fc2deb2c80d4b49fe8bce5f492927226af85ab6534d6"
+  },
+  {
+    "path": "diagnostic_job_api.py",
+    "sha256": "1847b0262438bcc51273a2a8824d99c5ce844ca8d1bc3d45b1994f9d7e915bfa"
+  },
+  {
+    "path": "diagnostic_job_ledger.py",
+    "sha256": "2c13c9529214bad626af66de33f469c750c78c9a8deb188d5043740f37920ee2"
+  },
+  {
+    "path": "diagnostic_remote_adapter.py",
+    "sha256": "f86cf92eaba56d15064bef6177d1cd1f3aaed84be1a19c680995f64741606883"
+  },
+  {
+    "path": "diagnostic_remote_worker.py",
+    "sha256": "588c883babb0d0da30485ca8e507f78e7268ae9f800aacb69ae79ff619272d67"
+  },
+  {
+    "path": "diagnostic-http-cancel-20261002.md",
+    "sha256": "665f31634a4d81e5e51e8696618147f29c0ed78f89091dfa96cde352ac5c6a58"
+  },
+  {
+    "path": "diagnostic-http-cancel-results.json",
+    "sha256": "6b1001c478fa65596ff3460332778ffc63ef281c534862ff170df2b8c232a528"
+  },
+  {
+    "path": "diagnostic-http-worker-cancel-regression.json",
+    "sha256": "bc6fca9f337296e262189720de6de28c0a278075c5d9cef8fa0851e3df52e374"
+  },
+  {
+    "path": "test_diagnostic_http_cancel.py",
+    "sha256": "b3c4f66e3868499d65046e6cc4cc2eec36e2a4cc0a2ab4ac9f37e0bb6d217053"
+  },
+  {
+    "path": "test_diagnostic_job_api.py",
+    "sha256": "e04b6209ae7132d21b33146142eb61dc7b56f1f92bfc11d37ce54b93863b8114"
+  }
+]

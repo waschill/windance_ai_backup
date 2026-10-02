@@ -1,0 +1,8 @@
+{
+  "actual_http_cancel_acknowledged": true,
+  "exact_worker_stopped": true,
+  "result_unavailable": true,
+  "retry_claim_denied": true,
+  "job_id": "11896a4ed7f84da98dc2a909dc4ac704",
+  "test_cleanup_verified": true
+}

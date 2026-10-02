@@ -1,0 +1,11 @@
+{
+  "http_authenticated": true,
+  "unauthenticated_denied": true,
+  "cross_owner_result_denied": true,
+  "actual_worker_completed": true,
+  "duplicate_started": false,
+  "job_id": "47bab31e052a48f6a610177e5c3c1fcd",
+  "terminal_sha256": "a8ba17ff10c9a5a6e7f0c2e000f38d7743447b1d3e11c317d850aec223b2315f",
+  "persistent_service": false,
+  "listener_stopped_verified": true
+}
