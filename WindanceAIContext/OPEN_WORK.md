@@ -442,3 +442,7 @@ Four actual-schema/rule/report/Trash-helper synthetic scenarios avoid repeated r
 ## October2 approval concurrency gap reproduced; claim staged
 
 Actual approve_pending allowed two overlapping synthetic callers to execute one pending approval twice. Staged exact-row atomic Gmail claim permits one effect; lost result persists uncertain with fixed content-free response. Selected-number batch path, durable item identities, status consumers, final-update drift and process recovery remain gates; no rollout. Evidence: archive/20261002-email-approval-claim/email-approval-claim-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 approval claim expiration and receipt drift checks pass
+
+Staged revision2 rechecks freshness inside the claim transaction and requires one final receipt row updated. Actual-function predecessor/candidate fixtures prove expired-before-claim executes zero actions and status drift no longer yields false success. Concurrency/lost-response regressions pass. Selected-number/item/recovery/privacy integration remains; not deployed. Evidence: archive/20261002-email-approval-claim-r2/email-approval-claim-r2-20261002.md. No actual mailbox/model or production changes; Phase1 open.
