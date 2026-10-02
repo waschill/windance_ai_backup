@@ -974,3 +974,7 @@ Actual isolated notification bridge marks failed notice seen and skips next run 
 ## October2 staged task report identity survives uncertainty and process crash
 
 Immutable body/key and query-only reconciliation pass isolated tests; recipient drift, absent history and legacy attempts hold. Current-user schedule check finds no direct old notification bridge registration but is not complete runtime proof. Helper not integrated/deployed; actual Harness caller binding is next. Evidence: archive/20261002-task-report-identity/task-report-identity-20261002.md.
+
+## October2 Harness report identity integrated in private staged candidate
+
+Actual candidate passes7 isolated cases including changed-body reconciliation and receipt-ledger failure recovery without another send. Original recipient/format retained; unrelated function ASTs unchanged; Shawn remains legacy. No deployment. Pending-state visibility, legacy reconciliation and refreshed coordinated release remain before cutover. Evidence: archive/20261002-harness-report-identity/harness-report-identity-20261002.md.

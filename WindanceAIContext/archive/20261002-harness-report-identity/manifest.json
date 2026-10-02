@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "harness-report-identity-20261002.md",
+    "sha256": "e5dba4475fb6870dc54e2c5c958b3fac8ec536392f9cc4d57f4e95ac40394159"
+  },
+  {
+    "path": "prepare_harness_report_identity.py",
+    "sha256": "4afc415fd10fa24579b783e97d7aa994ee9c4769d67b640315c948dba4131d4b"
+  },
+  {
+    "path": "test_harness_report_identity.py",
+    "sha256": "5264c427f0ee881d949f28af3287e923b9de02e9df068caedb040c28139a5d26"
+  }
+]
