@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "verify_webui_restored_privacy.py",
+    "sha256": "dbca0ea02189cb0e8800aea70dae529a1d59a7856d9a8413fbd77f0a1a96d433"
+  },
+  {
+    "path": "webui_privacy_probe.py",
+    "sha256": "886ba6cc687aea85dc5021725c062731481d196b12888881327c229c97e780c7"
+  },
+  {
+    "path": "webui-restored-privacy-20261002.json",
+    "sha256": "770321ffaa8b08128996d998d96205820cee50fa8f6a537596feb65a97b9db21"
+  },
+  {
+    "path": "webui-restored-privacy-20261002.md",
+    "sha256": "c244056d88816d96e48c30ef778a92d17639210edae154ef1d810ded528c9ef1"
+  },
+  {
+    "path": "webui-restored-privacy-r2-20261002.json",
+    "sha256": "f6ed8ed4fe9761b9f499a3ae880591920b7427c631d2da81dcd4d81601549eaa"
+  }
+]

@@ -713,3 +713,7 @@ Candidate61257141 routes internal sweeps through existing120-second supervisor a
 ## October2 restored WebUI actual HTTP boundary passes in isolation
 
 Production/lab snapshot copies return health200 and unauthenticated chats/users401 in pinned network-none containers. Initial platform-metadata subprocess import failure diagnosed and pre-cached before application guard; no application isolation relaxation. Backups unchanged and all test containers removed. Login/session, empty-lab bootstrap, lifecycle and knowledge acceptance remain open. Evidence: archive/20261002-webui-restored-http/webui-restored-http-20261002.md.
+
+## October2 restored WebUI ordinary-user chat isolation verified
+
+Both isolated snapshots pass eight actual HTTP checks using synthetic ordinary users/test-signed sessions: owner read, cross-user list/read/edit/delete denial, admin denial, invalid token and content retention. Backups unchanged; containers removed. No production accounts/services altered. Real login, broader knowledge/memory privacy, lab ownership and interface acceptance remain open. Evidence: archive/20261002-webui-restored-privacy/webui-restored-privacy-20261002.md.
