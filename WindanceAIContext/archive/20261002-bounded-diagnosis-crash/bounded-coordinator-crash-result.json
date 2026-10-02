@@ -1,0 +1,9 @@
+{
+  "coordinator_exit": 73,
+  "worker_exit": 137,
+  "worker_stopped_verified": true,
+  "elapsed_observation_seconds": 2.997,
+  "stale_recorded_status": "running",
+  "result_available": false,
+  "interpretation": "Interrupted coordinator; bounded worker ended without accepted result. No replay."
+}

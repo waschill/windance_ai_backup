@@ -1,0 +1,69 @@
+"""Fixed local diagnostic job; explicit submit/status/cancel/result records."""
+import hashlib,json,os,subprocess,sys,time,uuid
+from pathlib import Path
+IMAGE='sha256:9591b13f13843c7721c2b8eaf7382846c81b3ffe126526d1888d1fed50c6a33f'
+root=Path(__file__).resolve().parent
+mode=sys.argv[1]
+assert mode in ('diagnose','timeout','cancel','crash-test')
+job=root/('job-'+uuid.uuid4().hex);job.mkdir(mode=0o700)
+name='windance-diagnosis-'+uuid.uuid4().hex
+events=[];start=time.monotonic();container=None
+def record(state,**extra):
+    events.append({'state':state,'elapsed_seconds':round(time.monotonic()-start,3),**extra})
+    tmp=job/'status.tmp'
+    with tmp.open('w') as stream:
+        json.dump(events,stream,indent=2);stream.flush();os.fsync(stream.fileno())
+    os.replace(tmp,job/'status.json')
+args=['docker','create','--name',name,'--pull=never','--network=none','--read-only',
+      '--cap-drop=ALL','--security-opt=no-new-privileges','--user=65534:65534',
+      '--pids-limit=16','--memory=128m','--cpus=0.5','--log-driver=none',
+      '--mount',f'type=bind,src={root},dst=/evidence,readonly',
+      '--label','windance.diagnostic=isolated-r2',
+      '--entrypoint','timeout',IMAGE,'--signal=KILL','3s','python','-B',
+      '/evidence/bounded_diagnosis_worker.py','timeout' if mode=='crash-test' else mode]
+try:
+    record('submitted',limits={'worker_seconds':3,'diagnostic_invocations':1,'model_calls':0,'network':'none','memory_mb':128,'cpus':0.5})
+    container=subprocess.check_output(args,text=True,timeout=15).strip()
+    with (job/'container.json').open('w') as stream:
+        json.dump({'id':container,'name':name,'image':IMAGE},stream);stream.flush();os.fsync(stream.fileno())
+    config=json.loads(subprocess.check_output(['docker','inspect',container],text=True,timeout=5))[0]
+    host=config['HostConfig']
+    assert host['NetworkMode']=='none' and host['ReadonlyRootfs'] and host['Memory']==128*1024*1024
+    assert host['PidsLimit']==16 and host['NanoCpus']==500000000
+    assert config['Config']['User']=='65534:65534' and all(not m['RW'] for m in config['Mounts'])
+    assert 'ALL' in host['CapDrop'] and 'no-new-privileges' in host['SecurityOpt']
+    assert config['Config']['Entrypoint']==['timeout'] and config['Config']['Cmd'][:2]==['--signal=KILL','3s']
+    if mode=='crash-test':
+        subprocess.run(['docker','start',container],check=True,stdout=subprocess.DEVNULL,timeout=5)
+        actual=json.loads(subprocess.check_output(['docker','inspect',container],text=True,timeout=5))[0]
+        assert actual['State']['Running'] is True
+        record('running',container_settings_verified=True,crash_injection=True)
+        print(json.dumps({'job':str(job)}),flush=True)
+        os._exit(73)
+    record('running',container_settings_verified=True)
+    proc=subprocess.Popen(['docker','start','-a',container],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+    try:
+        out,err=proc.communicate(timeout=0.5 if mode=='cancel' else 5)
+    except subprocess.TimeoutExpired:
+        record('cancel_requested' if mode=='cancel' else 'deadline_exceeded')
+        subprocess.run(['docker','kill',container],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,timeout=5)
+        out,err=proc.communicate(timeout=5)
+        status='cancelled' if mode=='cancel' else 'timed_out'
+    else:
+        assert len(out)<=65536 and len(err)<=65536
+        if mode=='timeout' and proc.returncode==137:
+            status='timed_out'
+        else:
+            assert proc.returncode==0
+            result=json.loads(out);(job/'result.json').write_text(json.dumps(result,indent=2));status='completed'
+    actual=json.loads(subprocess.check_output(['docker','inspect',container],text=True,timeout=5))[0]
+    assert actual['State']['Running'] is False
+    record(status,worker_stopped_verified=True)
+except Exception:
+    record('failed',detail='Job control or verification failed; do not infer completion')
+    raise
+finally:
+    if container:
+        subprocess.run(['docker','rm','-f','-v',container],check=True,stdout=subprocess.DEVNULL,timeout=10)
+        record('cleaned',previous_state=events[-1]['state'])
+print(json.dumps({'job':str(job),'events':events,'result_available':(job/'result.json').exists()}))

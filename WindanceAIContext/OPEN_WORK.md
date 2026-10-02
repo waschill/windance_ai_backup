@@ -526,3 +526,7 @@ New local diagnostic reports approval/journal/reservation state without mailbox 
 ## October2 isolated diagnostic timeout/cancel controls verified on AL
 
 Existing pinned local image ran fixed known-failure diagnosis with network none, read-only root/evidence, nonroot/capability/resource limits. Diagnosis, three-second timeout and explicit test cancellation all verified stopped workers and cleaned unique disposable containers; result/event evidence retained. No production service or model/send/Odoo/dispatch changes. General authenticated job contract, coordinator recovery and open-ended diagnosis remain unproven; original pilot3/Phase4 not passed. Evidence: archive/20261002-bounded-diagnosis/bounded-diagnosis-20261002.md.
+
+## October2 diagnostic worker deadline survives coordinator crash
+
+Pinned isolated worker now has independent in-container three-second deadline. Injected coordinator exit73 left stale running record, while independent exact-ID observation verified worker exit137 and no accepted result; test cleaned only that container. Normal/deadline/cancel regressions pass. No production/model/send/Odoo changes. Persistent authenticated job contract/reconciler and remaining pilot gates open. Evidence: archive/20261002-bounded-diagnosis-crash/bounded-diagnosis-crash-20261002.md.

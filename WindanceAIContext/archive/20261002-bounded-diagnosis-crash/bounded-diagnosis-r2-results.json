@@ -1,0 +1,108 @@
+[
+  {
+    "mode": "diagnose",
+    "job": "/tmp/windance-bounded-diagnosis-20261002/job-2e742ced555645fa8c4292a3cfc01114",
+    "events": [
+      {
+        "state": "submitted",
+        "elapsed_seconds": 0.0,
+        "limits": {
+          "worker_seconds": 3,
+          "diagnostic_invocations": 1,
+          "model_calls": 0,
+          "network": "none",
+          "memory_mb": 128,
+          "cpus": 0.5
+        }
+      },
+      {
+        "state": "running",
+        "elapsed_seconds": 0.169,
+        "container_settings_verified": true
+      },
+      {
+        "state": "completed",
+        "elapsed_seconds": 0.371,
+        "worker_stopped_verified": true
+      },
+      {
+        "state": "cleaned",
+        "elapsed_seconds": 0.436,
+        "previous_state": "completed"
+      }
+    ],
+    "result_available": true
+  },
+  {
+    "mode": "timeout",
+    "job": "/tmp/windance-bounded-diagnosis-20261002/job-842c9d824deb48d6966cf4d26ed3cd52",
+    "events": [
+      {
+        "state": "submitted",
+        "elapsed_seconds": 0.0,
+        "limits": {
+          "worker_seconds": 3,
+          "diagnostic_invocations": 1,
+          "model_calls": 0,
+          "network": "none",
+          "memory_mb": 128,
+          "cpus": 0.5
+        }
+      },
+      {
+        "state": "running",
+        "elapsed_seconds": 0.087,
+        "container_settings_verified": true
+      },
+      {
+        "state": "timed_out",
+        "elapsed_seconds": 3.335,
+        "worker_stopped_verified": true
+      },
+      {
+        "state": "cleaned",
+        "elapsed_seconds": 3.399,
+        "previous_state": "timed_out"
+      }
+    ],
+    "result_available": false
+  },
+  {
+    "mode": "cancel",
+    "job": "/tmp/windance-bounded-diagnosis-20261002/job-2100c0129b4a4dbf89edd104f85a045c",
+    "events": [
+      {
+        "state": "submitted",
+        "elapsed_seconds": 0.0,
+        "limits": {
+          "worker_seconds": 3,
+          "diagnostic_invocations": 1,
+          "model_calls": 0,
+          "network": "none",
+          "memory_mb": 128,
+          "cpus": 0.5
+        }
+      },
+      {
+        "state": "running",
+        "elapsed_seconds": 0.142,
+        "container_settings_verified": true
+      },
+      {
+        "state": "cancel_requested",
+        "elapsed_seconds": 0.643
+      },
+      {
+        "state": "cancelled",
+        "elapsed_seconds": 0.739,
+        "worker_stopped_verified": true
+      },
+      {
+        "state": "cleaned",
+        "elapsed_seconds": 0.771,
+        "previous_state": "cancelled"
+      }
+    ],
+    "result_available": false
+  }
+]
