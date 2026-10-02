@@ -167,3 +167,7 @@ Six actual outbox-function scenarios and four actual staged-bridge scenarios pas
 ## October2 Messages intake privacy boundary deployed
 
 Installed tested strict sender/direct-chat checks on SAL and restarted only existing Messages intake bridge after fresh five-file backup, cold structural checks, off-host hashes, Warden/ownership and empty-work predicates. New process stable; installed source/helper hashes match candidate; cursor/plist and empty outbox unchanged. Installed read-only query passes live schema. No message replay/manual send or SAM change. Natural future intake and independent delivery remain unverified; authenticated memory integration remains open. Evidence and selective rollback without cursor rewind: archive/20261002-sender-boundary-deployed/sender-boundary-deployed-20261002.md. Warden stays suspended; Phase1 open.
+
+## October2 invoice correction rebased to current guarded sources
+
+Function-only private candidates preserve all other AST nodes, including email owner and recipient guards. Fresh live read-only comparison reconciles10selected invoices and per-currency totals;65In Payment rows remain explicitly excluded. Old broader-match verifier remains incomplete; separate same-scope projection matches without concealing broader exclusions.17synthetic tests rerun passed. No deployment/send/accounting mutation; fresh coordinated recovery/deployment checks next. Evidence: archive/20261002-invoice-final-rebase/invoice-final-rebase-20261002.md. Six read-only Odoo calls, zero model calls; Phase1 open.
