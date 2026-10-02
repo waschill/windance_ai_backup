@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "inspect_notification_schedule.py",
+    "sha256": "989128d0a68dc4237d227613f350424832f04505c46e49859782033974e0c92d"
+  },
+  {
+    "path": "task_report_journal.py",
+    "sha256": "f84188cb53b5c5aa9dced7ae85754e2312b2cf30dcc37769dd602eef337301b9"
+  },
+  {
+    "path": "task-report-identity-20261002.md",
+    "sha256": "eb46eee5057234026103c3aba487438a109d5e1b0b4a4ec0837e3f4e4268acdd"
+  },
+  {
+    "path": "test_task_report_crash.py",
+    "sha256": "49e52ba8b371e86ec623f4935be478dc3afed700ff2f435d2fec7bf2fa0e2abe"
+  },
+  {
+    "path": "test_task_report_journal.py",
+    "sha256": "7cac4d18f7bbd39d106422887bcd858b5f545f5f05eb26064ee4a0ca1d9354db"
+  }
+]

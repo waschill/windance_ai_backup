@@ -970,3 +970,7 @@ Atomic PID/state/time/budget records and throttled idle refresh pass monitoring 
 ## October2 shared-wrapper audit reproduces notice-loss path and reconciles Harness revision
 
 Actual isolated notification bridge marks failed notice seen and skips next run without key; active scheduling remains unverified. Harness0a95 differs from saved9865597 only in classify_email_autonomy function AST; memory guards identical, service running/HTTP200. Do not roll back to stale headline. Harness body-dependent key remains an identity gap before shared-wrapper cutover. Evidence: archive/20261002-shared-report-caller-audit/shared-report-caller-audit-20261002.md.
+
+## October2 staged task report identity survives uncertainty and process crash
+
+Immutable body/key and query-only reconciliation pass isolated tests; recipient drift, absent history and legacy attempts hold. Current-user schedule check finds no direct old notification bridge registration but is not complete runtime proof. Helper not integrated/deployed; actual Harness caller binding is next. Evidence: archive/20261002-task-report-identity/task-report-identity-20261002.md.
