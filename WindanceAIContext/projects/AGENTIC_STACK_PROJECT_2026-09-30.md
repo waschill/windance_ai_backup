@@ -605,3 +605,7 @@ Eleven actual candidate functions and SQLite stores pass ten cases: own-rollover
 ## October2 full SAM r5 isolated startup and saved-database restoration pass
 
 Verified eight-file candidate started in pinned AL network-none/read-only/nonroot container with inactive producers/scheduler. Five actual HTTP reads pass; 11 original tables unchanged, five new tables empty, cold-copy/repeated init equal. Exact exited0 container removed. No production/SAM change. Input was earlier verified snapshot, not a fresh live backup. Live integration, correction workflow and Odoo first-clear race remain open. Evidence: archive/20261002-sam-r5-isolated-startup/sam-r5-isolated-startup-20261002.md.
+
+## October2 complete staged SAM-to-memory HTTP path passes
+
+Full r5 module uses actual durable client/urllib transport against staged FastAPI/SQLite in isolated AL container. Normal, lost acknowledgment and corrected-credential cases retain one event/receiver commit and finish locally without duplicate carry. Listeners stopped; exact exit0 container removed. No production/SAM/external action. Real credentials/TLS, reader migration, correction workflow and Odoo first-clear race remain open. Evidence: archive/20261002-sam-r5-complete-http/sam-r5-complete-http-20261002.md.

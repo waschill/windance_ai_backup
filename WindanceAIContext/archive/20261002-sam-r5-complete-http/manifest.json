@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam_business_memory_api.py",
+    "sha256": "a2207ec1ff6488ffb4176cb57784a94b9a176d3b1f6d2bac339be23460f9252e"
+  },
+  {
+    "path": "sam_business_memory.py",
+    "sha256": "a66faba5d895e52889e09634026653db78bafd186bef3976e764c690e74086b3"
+  },
+  {
+    "path": "sam_memory_contract.py",
+    "sha256": "8c1a397f441c1f79c4001e4f0f99b4ecf3bdbf4f5c1620afc44c22f5abe28e1b"
+  },
+  {
+    "path": "sam-r5-complete-http-20261002.md",
+    "sha256": "6bd19cbaa4afe95c9510cff5d607c3f1102086b5b9a2a7cdbda62861e0d7ca2f"
+  },
+  {
+    "path": "test_sam_r5_complete_http.py",
+    "sha256": "a605b4f45f90e9c1db8317376ce1504da2772bdb9ebfe7685b4f13263ec0a3ed"
+  }
+]
