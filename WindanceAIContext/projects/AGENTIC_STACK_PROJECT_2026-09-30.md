@@ -581,3 +581,7 @@ Temporary HERALD loopback API rejects missing/wrong producer credentials, owner/
 ## October2 composed SAM recovery gate failed in isolation
 
 Actual staged schema/history/clear/commit composition reveals a lost-memory-response retry deadlock: regenerated history summary differs, so the durable client correctly holds rather than replacing content. Eight scenarios characterize the failure and duplicate protections; candidate acceptance FAILED, not deployed. Next correction requires stable commit snapshot with changed-input detection and pre-effect configuration checks. Odoo first-clear race and production integration remain open. Evidence: archive/20261002-sam-memory-composition-failure/sam-memory-composition-failure-20261002.md.
+
+## October2 staged SAM frozen-summary retry correction verified
+
+Private r4 preserves prepared payload across lost acknowledgment, holds changed schedule input and checks configuration presence before effects. Eleven actual-function/schema cases pass with synthetic remotes, including cold-copy retry and changed trigger. No production/SAM changes. Real rollover, pre-freeze crash content, atomic concurrent-edit protection, correction/recommit and Odoo first-clear race remain open; candidate not deployment-ready. Evidence: archive/20261002-sam-memory-snapshot-r4/sam-memory-snapshot-r4-20261002.md.

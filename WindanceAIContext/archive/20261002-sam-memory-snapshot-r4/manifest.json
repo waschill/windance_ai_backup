@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_sam_memory_r4.py",
+    "sha256": "cc1ec5d53759653fc2e6b0800598df6e42aa462c1362d0387807ed1e3db43907"
+  },
+  {
+    "path": "sam_commit_snapshot.py",
+    "sha256": "a2c688452ecd181bef56c7be5d6e6a36b87ae9ef69c49cf0d7c1341a706c51ff"
+  },
+  {
+    "path": "sam-memory-snapshot-r4-20261002.md",
+    "sha256": "9aac53e862113d4df530ce6cedab7b3740e31c23fdd2917f3ce505c73ab66bed"
+  },
+  {
+    "path": "test_sam_memory_r4.py",
+    "sha256": "fb449c83c247bd7236fc2fd1481ae76650e722f4e6cbf9a7abfce3b96741be02"
+  }
+]
