@@ -910,3 +910,7 @@ Four actual SSH synthetic receipt cases preserve legacy/verified/unknown and exi
 ## October2 Sentinel timeout triggers second send; staged correction tested
 
 Actual original main reproduced2attempts after uncertain first delivery. Candidate separates report-generation failure from send uncertainty, uses one Mountain-date identity and makes no fallback send. HERALD4control cases/key test pass; HAL tzdata limitation recorded. No installation; caller date/history/activation and complete recovery remain gates. Evidence: archive/20261002-sentinel-delivery-correction/sentinel-delivery-correction-20261002.md.
+
+## October2 daily report identity survives midnight and process crash in staging
+
+Explicit private journal commits original report/key before transport; attempting runs resume query-only, old uncertainty blocks new-day sends, missing history/recipient change hold. HERALD normal/restart and child-crash tests pass with no real sends. Not yet integrated into Sentinel; metadata, cold recovery and caller rollout remain gates. Evidence: archive/20261002-daily-report-identity/daily-report-identity-20261002.md.

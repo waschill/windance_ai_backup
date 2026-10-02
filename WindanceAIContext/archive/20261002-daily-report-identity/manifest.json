@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "daily_report_journal.py",
+    "sha256": "0a7ea9eddaa66ee74f774d3353054a503c72bc2571a62db7840705089133a5a5"
+  },
+  {
+    "path": "daily-report-identity-20261002.md",
+    "sha256": "54b7e93fa95e46f39ff19a43745e64d08a13d041852d7dc9e8cd39ce31c1f9e9"
+  },
+  {
+    "path": "test_daily_report_crash.py",
+    "sha256": "565040b5f432f2a66b1507d5e98937a35bf6139a51db3140f759cea4c8a1e83a"
+  },
+  {
+    "path": "test_daily_report_journal.py",
+    "sha256": "1a7c6e0fdebcd13fca2b2b67fd9d52097b309f2ed59746810114c2f5e4251897"
+  }
+]
