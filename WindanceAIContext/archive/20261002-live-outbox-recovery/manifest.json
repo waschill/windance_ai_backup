@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "backup_live_outbox.py",
+    "sha256": "4b71948789028cb8b33efea334c1a8cf87358f0f39c2547d66fffb5dfc06584d"
+  },
+  {
+    "path": "live-outbox-backup-summary-20261002.json",
+    "sha256": "1d67752d3a8a441573851ca8bdff60892a5b50d0747538712d64ad1fa929f92b"
+  },
+  {
+    "path": "live-outbox-recovery-20261002.md",
+    "sha256": "496388c221cdc278d498acccd263a1e403dee78ddbd005b30ab2e485d5f23e2d"
+  },
+  {
+    "path": "verify_private_outbox_backup.py",
+    "sha256": "2d7c3e3937db2d3d5a698f8f568b56610794e36a20ec4a59758b90c99d3c78f7"
+  }
+]

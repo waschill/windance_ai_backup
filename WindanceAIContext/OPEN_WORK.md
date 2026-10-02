@@ -854,3 +854,7 @@ Actual producer main queued then killed while waiting; complete staged daemon/ob
 ## October2 exact staged receipt release cold-restored on HAL and SAL
 
 20-file ZIP99a0ea53 and manifest3d26953c verified both hosts; SAL restored full queue/lost-caller/deadline workflows and HAL journal/status fixtures pass. Post-test source/archive hashes unchanged. Staged package only, not live outbox backup or deployment. Coherent production recovery, lifecycle/caller/protocol integration remain gates. Evidence: archive/20261002-receipt-release-recovery/receipt-release-recovery-20261002.md.
+
+## October2 fresh live outbox backup privately restored and verified
+
+119files include unchanged producer/daemon plus50claims/67results; queue/inflight/uncertain0 and three inventories match. SAL/HAL isolated restoration hashes pass without executing code. Private records excluded from publication; stable read is not atomic/live replay proof. Post-snapshot reconciliation and fresh coordinated cutover remain required. Evidence: archive/20261002-live-outbox-recovery/live-outbox-recovery-20261002.md.
