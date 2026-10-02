@@ -321,3 +321,7 @@ Three real isolated child exits before fact commit, after fact commit/before ans
 ## October2 actual legacy memory HTTP boundary reproduced safely
 
 Current Harness GET/POST memory routes in disposable full app with synthetic shared service token and Shawn owner context returned/unscoped-overwrote a synthetic William-labelled kind/key. No private data or production access involved; vector/mirror writes intercepted. This is missing API owner enforcement, not evidence of historical disclosure or unauthenticated LAN access. Explicit service-caller scoping, coherent legacy/mirror containment and worker filesystem/tool isolation remain privacy rollout gates. Packet: archive/20261002-legacy-memory-api-boundary/legacy-memory-api-boundary-20261002.md. No model/send/production changes; Phase1 open.
+
+## October2 live SAM legacy-memory producer dependency confirmed
+
+Running main systemd service matches sam_schedule.py; commit_day source posts sam_daily_schedule/date_key to legacy memory. Nightly/refresh timers active/waiting, oneshots idle; wrapper provenance/recent outcomes remain unverified. No commit/API/DB operation or interruption. Preserve this dependency while preparing producer-specific write-only scope; do not blanket-disable legacy memory or assign business history a guessed person owner. Detailed notes remain suspended. Packet: archive/20261002-sam-memory-caller-scope/sam-memory-caller-scope-20261002.md. Other caller coverage remains incomplete; Phase1 open.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "inventory_sam_memory_dependencies.py",
+    "sha256": "5efaa54e59f008d8775330cf5123d98010eb5ec152167deb4ce0fa5e788361a4"
+  },
+  {
+    "path": "sam-memory-caller-scope-20261002.md",
+    "sha256": "3807f795aed600cf113cbe9ab6a5941c87e3d5d76afad16f1bf33ddafca2442b"
+  },
+  {
+    "path": "sam-memory-dependencies-20261002.json",
+    "sha256": "ca55d1226291a2a06c875bfa4f7c2738461c22a78adf17e6b1f6031aacf65cf5"
+  }
+]

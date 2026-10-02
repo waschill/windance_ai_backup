@@ -1,0 +1,157 @@
+{
+  "scope": "SAM top-level Python static references and named unit state only",
+  "records": [
+    {
+      "path": "/home/williamschilling/services/sam-schedule/app.py",
+      "sha256": "499c9fc36aae6246d7a96db397ea007bca0f870e342af637cf244a8f574f9132",
+      "literal_routes": [
+        "/api/cell",
+        "/api/commit",
+        "/api/schedule",
+        "/api/trainers",
+        "/api/trainers/delete",
+        "/api/update",
+        "/health",
+        "/sam/commit",
+        "/sam/schedule"
+      ],
+      "functions": [
+        {
+          "function": "fetch_from_herald",
+          "line": 100,
+          "endpoint_literals": [
+            "/sam/schedule"
+          ],
+          "literal_memory_kinds": []
+        },
+        {
+          "function": "commit_day",
+          "line": 190,
+          "endpoint_literals": [
+            "/sam/commit"
+          ],
+          "literal_memory_kinds": []
+        }
+      ]
+    },
+    {
+      "path": "/home/williamschilling/services/sam-schedule/sam_schedule.py",
+      "sha256": "824026967ab935b2563f0a77021668754fa5969f704e17e3619137a455643bc1",
+      "literal_routes": [
+        "/api/",
+        "/api/cell",
+        "/api/commit",
+        "/api/commit/",
+        "/api/health",
+        "/api/history",
+        "/api/missed-training/cell",
+        "/api/reports/missed-training",
+        "/api/reports/rapid-training-completions",
+        "/api/schedule",
+        "/api/schedule/week",
+        "/api/system/exit-kiosk",
+        "/api/system/keyboard",
+        "/api/system/shutdown",
+        "/api/trainers",
+        "/api/trainers/",
+        "/api/training-completion",
+        "/api/training-completion/prefill",
+        "/api/update",
+        "/api/weather",
+        "/api/weather-alerts",
+        "/health",
+        "/memory",
+        "/training-rating-demo"
+      ],
+      "functions": [
+        {
+          "function": "commit_day",
+          "line": 1743,
+          "endpoint_literals": [
+            "/memory"
+          ],
+          "literal_memory_kinds": [
+            "sam_daily_schedule"
+          ]
+        },
+        {
+          "function": "do_GET",
+          "line": 3720,
+          "endpoint_literals": [
+            "/training-rating-demo"
+          ],
+          "literal_memory_kinds": []
+        },
+        {
+          "function": "do_HEAD",
+          "line": 3778,
+          "endpoint_literals": [
+            "/training-rating-demo"
+          ],
+          "literal_memory_kinds": []
+        }
+      ]
+    },
+    {
+      "path": "/home/williamschilling/services/sam-schedule/sam_schedule_server.py",
+      "sha256": "60fbe23fd6805e9e83ec58b5c1cf223a8661ff996d00d9c214a43d78f2e66a00",
+      "literal_routes": [
+        "/api/commit",
+        "/api/schedule",
+        "/api/status",
+        "/api/toggle",
+        "/api/trainers",
+        "/api/trainers/",
+        "/api/update",
+        "/memory"
+      ],
+      "functions": [
+        {
+          "function": "commit_schedule",
+          "line": 459,
+          "endpoint_literals": [
+            "/memory"
+          ],
+          "literal_memory_kinds": [
+            "sam_daily_schedule_commit"
+          ]
+        }
+      ]
+    }
+  ],
+  "units": {
+    "sam-schedule.service": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "matching_source_paths": [
+        "/home/williamschilling/services/sam-schedule/sam_schedule.py"
+      ]
+    },
+    "sam-schedule-nightly.timer": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "waiting"
+    },
+    "sam-schedule-refresh.timer": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "waiting"
+    },
+    "sam-schedule-nightly.service": {
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "matching_source_paths": []
+    },
+    "sam-schedule-refresh.service": {
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "matching_source_paths": []
+    }
+  },
+  "production_changes": false,
+  "database_reads": 0,
+  "api_calls": 0
+}
