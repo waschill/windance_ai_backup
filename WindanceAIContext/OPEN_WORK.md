@@ -946,3 +946,7 @@ Exact current send/advance plus staged wrapper/transport keep unknown/uncertain/
 ## October2 staged receiver distinguishes new receipt requests from legacy senders
 
 Dual claim/queue markers bind new contract to content; missing/mismatched/unknown identity holds instead of downgrade. Five legacy/SMS/hold cases plus automatic-selection full flow and parent-loss tests pass. Legacy receipts never upgraded; no live producer/consumer change. Persistent dispatcher/coordinated cutover remains open. Evidence: archive/20261002-mixed-outbox-contracts/mixed-outbox-contracts-20261002.md.
+
+## October2 persistent receipt dispatcher staged and no-send integration tested
+
+Single dispatcher lock and original owner lock enforced; retained legacy result and missing-journal quarantine tests pass. Observed persistent loop rotates past held item, then test process stopped. Full sender-through-loop, parent-loss, backlog/budget and refreshed recovery/cutover remain gates; no service installed. Evidence: archive/20261002-persistent-dispatcher/persistent-dispatcher-20261002.md.
