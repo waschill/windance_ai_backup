@@ -453,3 +453,7 @@ Read-only staged resolver maps items across repeated splits to original approval
 ## October2 durable approved-item outcome component tested
 
 Staged component binds current executing/selected batch to original item identity, records uncertainty before effects and confirms only validated bounded receipts. Synthetic partial batch retains confirmed first item and uncertain second, avoids repeats and denies unselected/changed payload. Not wired to production; real validators/shared mailbox admission/auth/recovery remain. Evidence: archive/20261002-email-approved-item-intent/email-approved-item-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 five Gmail primitive acknowledgment checks staged
+
+Nineteen baseline/nineteen candidate actual-helper synthetic cases verify missing/blank resource IDs and contradictory identity/label evidence no longer produce success. SDK retries disabled; send acknowledgment means acceptance only, never delivery. Full candidate composed, no real Gmail/send/model or production changes. Item-ledger/shared admission and live compatibility/recovery gates remain. Evidence: archive/20261002-email-action-receipts/email-action-receipts-20261002.md. Phase1 open.

@@ -1,0 +1,11 @@
+# Gmail primitive acknowledgment checks staged
+
+October 2 UTC / October 1 Mountain 2026. No production deployment.
+
+Read-only inspection found mark-read/archive helpers fabricate success from missing identity (falling back to requested ID), and draft/send helpers return success flags with missing IDs. Actual five-helper baseline fixtures reproduce these behaviors. The staged package validates nonempty provider resource IDs, exact requested identity and expected removed-label state for mark-read/archive, before success audit/return. All five explicitly disable SDK retries. Draft/send receipt means provider acceptance evidence only, never recipient delivery. Existing return shapes, caller approval logic and MIME construction remain unchanged.
+
+Nineteen baseline and nineteen candidate cases passed: valid receipts remain accepted; missing/blank IDs are rejected for all five helpers; wrong IDs and contradictory labels rejected for mark-read/archive. Rejected candidate receipts emit no success audit. All Gmail service objects are synthetic; actual send count zero. Live provider compatibility, response preservation and independent delivery are unverified. Missing labels fail closed by design and require compatibility checking before rollout.
+
+Private candidate `/Users/herald/backups/email-action-receipts-20261002`, main SHA256 `46bd50849fd0c58ea8181de0e4fef0e6f2ec6074c4f4e29202899b6e3748de38`. New helper gmail_action_receipts.py SHA256 `f50c7fd9a41208105e947ace64d7bc40ffb5dad94df43831e86196bf447e9ed7`. Other three packaged helpers unchanged from prior selection package. Builder preserves unrelated AST; only five primitive functions change.
+
+Per-item intent component is still separate and not installed in this full candidate. Connect it with action-specific normalized validators, current claimed approval identity and shared mailbox admission; preserve sender/PIN/ref checks. Full exact-revision startup/recovery, account/requester binding, transport bounds, undo and operator reconciliation remain gates. No rollout or rollback performed; retain previous private packages and production backups. No real Gmail/model/Odoo/send or service/SAM/Warden/phone changes. Phase1 remains open, Codex quota is consumed and dollar attribution remains unknown.
