@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "capture-runtime-access-20261002.md",
+    "sha256": "d3a0bc8847cc492dc05ba85e37858817768903cb35b22eb28aeeddfbc866c136"
+  },
+  {
+    "path": "probe_capture_candidate_dry.py",
+    "sha256": "0a09be83c35d54b4618d6cd18b7924e4e63614e9267bf037d7f40a278bab1f45"
+  },
+  {
+    "path": "probe_capture_interpreter.py",
+    "sha256": "889a06db00178bfb4e2854c688549e4408a6f5f72ad6f8d575f2116450fc9f93"
+  }
+]

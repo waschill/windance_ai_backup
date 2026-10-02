@@ -934,3 +934,7 @@ Interrupted live SSH in query and newly admitted submit cases; independent SAL p
 ## October2 capture reminder durable caller passes actual-main isolated cases
 
 Count-only report uses persisted identity and receipt transport; empty inbox does not discard previous uncertain attempt. Five capture and four shared Sentinel cases pass. Live19:00 system-Python job remains unregistered/source unchanged; actual-DB interpreter and cold/history/receiver gates remain. Evidence: archive/20261002-capture-durable-main/capture-durable-main-20261002.md.
+
+## October2 capture real readonly dry run passes intended application interpreter
+
+Exact live count query fails system Python with OperationalError but succeeds app Python after correcting bytes/string audit instrumentation. Durable candidate real --dry-run passes with no effects/history creation; interpreter-only plist hash matches earlier e72e7caf candidate,19:00 unchanged. No installation; launchd/cold/history/receiver gates remain. Evidence: archive/20261002-capture-runtime-access/capture-runtime-access-20261002.md.
