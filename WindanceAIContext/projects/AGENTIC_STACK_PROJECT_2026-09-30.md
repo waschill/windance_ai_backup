@@ -593,3 +593,7 @@ Nine actual SAM functions reproduce own-rollover retry conflict, missing pre-fre
 ## October2 atomic SAM local-rollover receipt verified in isolation
 
 Actual pinned rollover logic refactored in a fixture to one explicit SQLite transaction passes seven cases: receipt/callback failure rollback, six-way concurrent once-only execution, cold-copy retry and changed/corrupt evidence holds. No production changes. Full candidate integration, business-input binding and atomic finalization still required; failed r4 remains uninstalled. Evidence: archive/20261002-sam-atomic-rollover/sam-atomic-rollover-20261002.md.
+
+## October2 staged SAM atomic source-checked completion verified
+
+Seven actual-schema cases pass changed/deleted source and receipt holds plus a competing writer between comparison and completion. Both checks occur in one SQLite transaction. No production changes; coherent initial read and post-rollover token must still be composed into the next candidate. All-carry dependency is conservative; correction/invalidation and Odoo first-clear race remain open. Evidence: archive/20261002-sam-source-finalization/sam-source-finalization-20261002.md.
