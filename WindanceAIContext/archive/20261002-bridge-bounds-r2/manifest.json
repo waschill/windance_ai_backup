@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bridge_codex_turn_candidate.js",
+    "sha256": "8eb560434e570ff86afc3eb89ec8ca9eb736673af88e6cdcd68d45e2a9e63ed4"
+  },
+  {
+    "path": "bridge-bounds-r2-20261002.json",
+    "sha256": "1849bb2ec4d4e87bd334edb7cd7bba87a2ba146c9ce89e312bf9450605bec84a"
+  },
+  {
+    "path": "bridge-bounds-r2-20261002.md",
+    "sha256": "0e282b875352d786f5d3dd192eaaf16807905ee1401709ee753665e05cb66337"
+  },
+  {
+    "path": "build_bridge_bounds_candidate.py",
+    "sha256": "fa84f8e5633bbf622bbbba650214c0572fc4aaa1c5566de00c63f255a63cb3b4"
+  },
+  {
+    "path": "build_manager_bounds_candidate.py",
+    "sha256": "28fe97242aa8972db8cfa01eff420589f294d4e45475df83c68a178d2cefda86"
+  },
+  {
+    "path": "manager-bounds-r2-20261002.json",
+    "sha256": "8c01aab8e337e6a7a298669b95cc2208ebb9fcdb338637946dd6455daac54438"
+  },
+  {
+    "path": "test_bridge_bounds_candidate.mjs",
+    "sha256": "5dcc9df0a6a1eafb3912b4f8deaf2b2dc743a8f84999190c0949ff55ba9c2a63"
+  },
+  {
+    "path": "test_manager_bounds_candidate.py",
+    "sha256": "2853e9c41ec89cd3798d0b66890dc9bc42123b6b985f7a2ab9caf52337605dbe"
+  }
+]

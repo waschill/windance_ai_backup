@@ -199,3 +199,7 @@ Three isolated actual-function scenarios confirm normal completion and explicit 
 ## October2 cancellation/uncertainty candidate passes13isolated scenarios
 
 Staged actual bridge candidate requests deadline interruption, distinguishes terminal evidence from RPC acknowledgment, preserves uncertainty, holds conflicting sessions/capacity and converts restart-running records to uncertain.13 synthetic actual-function/selector/startup cases pass with no network/model/production activity. Initial builder hash failure was CRLF normalization and corrected before staging. Manager state propagation, authoritative reconciliation, protocol races and durable restart remain deployment gates. Packet: archive/20261002-bridge-bounds-candidate/bridge-bounds-candidate-20261002.md. Not installed; no read-only job acceptance claimed; Phase1 open.
+
+## October2 manager uncertainty propagation and event races tested
+
+Staged bridge now retains early terminal events, accepts completion racing interruption, and treats interruption persistence failure as uncertain.16isolated bridge cases pass. Actual staged manager handler persists unknown execution, withholds its delivery, polls the same job without resubmission and accepts later terminal evidence in disposable SQLite. Only manager process_messages changed. Remote reconciliation, actual persisted restart/HTTP and deployment checks remain. Packet: archive/20261002-bridge-bounds-r2/bridge-bounds-r2-20261002.md. No production/model/send change; Phase1 open.

@@ -1,0 +1,1 @@
+{"actual_function": "process_messages", "disposable_sqlite": true, "status_mapping_passed": true, "uncertain_notify_withheld": true, "repeated_status_read_without_resubmit": true, "later_terminal_receipt_accepted": true, "production_changes": false, "sends": 0, "model_calls": 0}
