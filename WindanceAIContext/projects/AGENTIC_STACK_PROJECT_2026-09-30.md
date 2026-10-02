@@ -381,3 +381,7 @@ Durable per-message intent precedes Trash/draft callback and preserves unknown o
 ## October2 held email operation visibility and actual schema verified
 
 Staged report checks intent records before rules/classifier, avoids repeated draft generation and shows unknown outcomes even with an empty inbox. Actual candidate db/seed/connection/report functions pass three interrupted-receipt/inbox scenarios; process/concurrency and outcome regressions pass. No real mailbox/model calls or live schema changes. Full app/private recovery, cross-path admission and actionable authoritative reconciliation remain gates. Packet: archive/20261002-email-intent-visibility/email-intent-visibility-20261002.md. Phase1 open.
+
+## October2 email candidate full ASGI/private-data recovery verified
+
+Fresh read-only online snapshot, full baseline/candidate module and ASGI lifecycle with external effects denied, health200, and cold restoration passed. All28 non-sequence tables preserved; initial sequence difference matches unchanged baseline startup. Seven private stable files verified on HAL; four database integrity/table comparisons pass. No production/mail/model changes. Authoritative operation reconciliation and cross-path admission remain deployment gates. Packet: archive/20261002-email-private-recovery/email-private-recovery-20261002.md. Phase1 open.

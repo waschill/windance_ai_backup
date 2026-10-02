@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-private-recovery-20261002.json",
+    "sha256": "413bbbf602309b489b3d345971eff08fe62e7d8f0a61063932cfe7994b5d0cde"
+  },
+  {
+    "path": "email-private-recovery-20261002.md",
+    "sha256": "aa96e3bb32248df49e9a95a455a28766674aa7f8e9bb58ca3b0131c9e63a3e56"
+  },
+  {
+    "path": "email-private-recovery-offhost-20261002.json",
+    "sha256": "5ffecad6231cfcce1a04ad233654a4fb1b0e2f397ce0efe977129be22a0c4775"
+  },
+  {
+    "path": "test_email_private_recovery.py",
+    "sha256": "0aadc0a112571a08206ab31c8ba46599d6fc78a83465abca2cea1d7fd13f6105"
+  }
+]
