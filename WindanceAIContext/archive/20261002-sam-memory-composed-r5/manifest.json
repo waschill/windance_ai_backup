@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_sam_memory_r5.py",
+    "sha256": "c8abf9406321e42704ac3c7c000a3c34929d3ae2fd903cff56a1ca51fb3713bb"
+  },
+  {
+    "path": "sam-memory-composed-r5-20261002.md",
+    "sha256": "24c295d901079cfd6f8a7ec4296c408a950c00e73d9c244070c423b35a27781f"
+  },
+  {
+    "path": "test_sam_memory_rollover_r5.py",
+    "sha256": "79f49f4953c6e5d9bd5f65e3ee797c3e268f6b991912fbe2b7f7299462918e8e"
+  }
+]

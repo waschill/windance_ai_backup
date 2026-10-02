@@ -597,3 +597,7 @@ Actual pinned rollover logic refactored in a fixture to one explicit SQLite tran
 ## October2 staged SAM atomic source-checked completion verified
 
 Seven actual-schema cases pass changed/deleted source and receipt holds plus a competing writer between comparison and completion. Both checks occur in one SQLite transaction. No production changes; coherent initial read and post-rollover token must still be composed into the next candidate. All-carry dependency is conservative; correction/invalidation and Odoo first-clear race remain open. Evidence: archive/20261002-sam-source-finalization/sam-source-finalization-20261002.md.
+
+## October2 composed SAM r5 resolves reproduced rollover/stale-completion cases
+
+Eleven actual candidate functions and SQLite stores pass ten cases: own-rollover lost-response retry, retained pre-freeze carry/history evidence, atomic rejection of in-flight edits, and existing history/clear/receipt/config holds. No production changes. Full startup/transport/private recovery, correction workflow and first-clear Odoo race remain open; r5 is not deployment-ready. Evidence: archive/20261002-sam-memory-composed-r5/sam-memory-composed-r5-20261002.md.
