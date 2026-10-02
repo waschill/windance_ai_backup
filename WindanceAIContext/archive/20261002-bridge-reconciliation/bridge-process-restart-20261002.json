@@ -1,0 +1,1 @@
+{"actual_candidate_process_starts": 2, "restart_running_persisted_uncertain": true, "active_remote_remains_held": true, "exact_terminal_reconciled_after_restart": true, "authenticated_http_status_verified": true, "final_result_preserved": true, "rpc_methods": ["initialize", "initialized", "thread/read"], "model_calls": 0, "production_changes": false, "synthetic_rpc_only": true}

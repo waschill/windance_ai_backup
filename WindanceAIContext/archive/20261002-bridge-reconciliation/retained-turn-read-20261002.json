@@ -1,0 +1,1 @@
+{"exact_thread_and_turn_matched":true,"thread_status":{"type":"notLoaded"},"turn_status":"completed","item_types":["userMessage","reasoning","agentMessage"],"final_answer_matches_existing_canary":true,"final_sha256":"014419a45a473caa4d924118de95d6abfe10b11a3addb3eb13441e89134fab11","methods":["initialize","thread/read"],"model_calls":0,"production_job_state_changed":false}

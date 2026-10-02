@@ -266,3 +266,7 @@ Staged actual bridge candidate requests deadline interruption, distinguishes ter
 ## October2 manager uncertainty propagation and event races tested
 
 Staged bridge now retains early terminal events, accepts completion racing interruption, and treats interruption persistence failure as uncertain.16isolated bridge cases pass. Actual staged manager handler persists unknown execution, withholds its delivery, polls the same job without resubmission and accepts later terminal evidence in disposable SQLite. Only manager process_messages changed. Remote reconciliation, actual persisted restart/HTTP and deployment checks remain. Packet: archive/20261002-bridge-bounds-r2/bridge-bounds-r2-20261002.md. No production/model/send change; Phase1 open.
+
+## October2 exact-turn read and durable restart reconciliation pass
+
+Live read-only app-server lookup matched the existing synthetic canary's exact completed turn/final answer without resume/inference. Staged reconciliation accepts only exact terminal evidence and preserves missing/ambiguous/active holds.12outcome fixtures,16existing cancellation cases and two actual isolated bridge process starts with authenticated HTTP/persisted-state checks pass. Synthetic transport used for crash/restart test; no production restart or model calls. Candidate not installed; fresh coordinated recovery/deployment next. Packet: archive/20261002-bridge-reconciliation/bridge-reconciliation-20261002.md. Diagnostic capability/spend gates remain open.

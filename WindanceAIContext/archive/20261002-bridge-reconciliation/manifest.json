@@ -1,0 +1,62 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bridge_codex_turn_candidate.js",
+    "sha256": "8eb560434e570ff86afc3eb89ec8ca9eb736673af88e6cdcd68d45e2a9e63ed4"
+  },
+  {
+    "path": "bridge_reconcile_candidate.js",
+    "sha256": "e9454d251a2b4bf6bb38b087254422559c4fbb059fbba281c663e5dc42265606"
+  },
+  {
+    "path": "bridge-bounds-r3-20261002.json",
+    "sha256": "1849bb2ec4d4e87bd334edb7cd7bba87a2ba146c9ce89e312bf9450605bec84a"
+  },
+  {
+    "path": "bridge-process-restart-20261002.json",
+    "sha256": "778196c3edd91d88a69f25fc3756d722c0bf1da2d9da1ca71b5a1dfc68f400f1"
+  },
+  {
+    "path": "bridge-reconciliation-20261002.md",
+    "sha256": "29b55f694dd049e8d375b2c7619d33bc6ef1b32a4a624b3a0b693cb044401e1f"
+  },
+  {
+    "path": "bridge-retained-outcomes-20261002.json",
+    "sha256": "204f5a1ad5162971b1e14523c81def3cf735a77405fd02d721569cda7f46fad5"
+  },
+  {
+    "path": "build_bridge_bounds_candidate.py",
+    "sha256": "c8168ea76139c381c63ae84e5f073ac6f69f8b2d2dcea66a31f100d57f97093f"
+  },
+  {
+    "path": "build_manager_bounds_candidate.py",
+    "sha256": "28fe97242aa8972db8cfa01eff420589f294d4e45475df83c68a178d2cefda86"
+  },
+  {
+    "path": "fixture_bridge_websocket.mjs",
+    "sha256": "402a6cf54bb1b380db831b559119edda2d25efc55c88a9e22c88c6d3e5606512"
+  },
+  {
+    "path": "probe_retained_turn.mjs",
+    "sha256": "9b6e43a44c1da622db61278d0674c6f0e60a8b3d84140ad99174ff475121084b"
+  },
+  {
+    "path": "retained-turn-read-20261002.json",
+    "sha256": "3b3b6adf0216a4c4d1f167c725b3dd3b6ab4959a67d5295e354f41adcb34ff2b"
+  },
+  {
+    "path": "test_bridge_bounds_candidate.mjs",
+    "sha256": "5dcc9df0a6a1eafb3912b4f8deaf2b2dc743a8f84999190c0949ff55ba9c2a63"
+  },
+  {
+    "path": "test_bridge_process_restart.py",
+    "sha256": "84863128a53c89011c447d2d31cab7838d4bda2956ab60c60467c5abd9a2886f"
+  },
+  {
+    "path": "test_bridge_retained_outcomes.mjs",
+    "sha256": "8c43ec0d9950852c21c66a7290ba2d9df18fb3b24b07d52efd242f968103d8a0"
+  }
+]
