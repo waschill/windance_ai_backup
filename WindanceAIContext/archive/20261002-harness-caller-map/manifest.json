@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "harness-caller-map-20261002.md",
+    "sha256": "3113eed2e10948cddae28c40d5ea609924c847af17283caad5400219aad3d7be"
+  },
+  {
+    "path": "herald-caller-inventory-20261002.json",
+    "sha256": "fc56b212871416916bc41b3bb391293d2b476a69e3425955b0b2e2ad1c9380ce"
+  },
+  {
+    "path": "inventory_harness_callers.py",
+    "sha256": "19352e27ca5d7715218e59e06161032cc3252d271bc3ae4c4245d8f03e6d8ee3"
+  },
+  {
+    "path": "sal-caller-inventory-20261002.json",
+    "sha256": "9bae1aabfcbac11ed10b1bcfc280d5670a45abe1747bf319a3c56b3b9dd17241"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "host": "SAL",
+  "scope": "Top-level service source candidates, not proof of registration or complete dynamic call graph",
+  "records": [
+    {
+      "path": "/Users/zuzu/bin/windance_weekly_stack_review.py",
+      "sha256": "b0c76ca4b89ba55c8892caca5e5eee61c5db1da893e15c51378ef2d779fe305e",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.weekly-stack-review",
+          "loaded": [
+            {
+              "domain": "gui",
+              "state": "not running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [
+        "/health",
+        "/memory",
+        "/staff/tasks",
+        "/staff/tasks/"
+      ],
+      "authorization_header_mentioned": true
+    },
+    {
+      "path": "/Users/zuzu/bin/windance_morning_news_briefing.py",
+      "sha256": "c3096c0fb26bb006b3ef81413707e5973a943fffbeabed60d6db09dcc082bd6b",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.morning-news-briefing",
+          "loaded": [
+            {
+              "domain": "gui",
+              "state": "not running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/zuzu/bin/windance_morning_status_report.py",
+      "sha256": "2eaef7c70ffebe7f7e421d851afc9e29a48468bd188fb8c0c50a3dd110a9ee67",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/health"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/zuzu/bin/imessage_herald_bridge.py",
+      "sha256": "0b4753c2823be856d2124566e04e59108f346309d301c9b6cf00962d6418ed4a",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.imessage-herald-bridge",
+          "loaded": [
+            {
+              "domain": "gui",
+              "state": "running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [
+        "/message"
+      ],
+      "authorization_header_mentioned": false
+    }
+  ]
+}

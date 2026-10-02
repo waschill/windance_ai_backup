@@ -206,3 +206,7 @@ Five actual Harness middleware fixtures distinguish service authorization from p
 ## Scoped memory ingress candidate integrated with isolated storage
 
 Nine ingress tests and eight storage tests pass together using synthetic credentials/in-memory SQLite. Server-side credential grants bind explicit owner/channel/scope/operation; missing owner, forged identity and excess background-service privileges are rejected. Initial missing-owner fixture failed before policy invocation and was corrected before full rerun. Production caller provisioning, transport, sender/source verification, actual HTTP/worker integration and derived copies remain unfinished. Packet: archive/20261002-memory-ingress/memory-ingress-candidate-20261002.md. No live credential, production schema, service, model or send changes. Phase1 open.
+
+## October2 Harness caller compatibility inventory
+
+Bounded source/hash scan found24HERALD and4SAL Python caller candidates; exact LaunchAgent correlation confirms Messages bridge, manager and staff monitor registered/running. Training, weekly review, desktop context and reflection include memory writes; several legacy jobs are unregistered and must be reconciled with replacements before recovery. Scheduled idle distinguished from missing registrations. No automatic restarts or credential changes. Node-RED/SAM/HAL/dynamic caller coverage remains incomplete. Evidence and scoped rollout treatment: archive/20261002-harness-caller-map/harness-caller-map-20261002.md. Phase1 open; no model calls or production actions.

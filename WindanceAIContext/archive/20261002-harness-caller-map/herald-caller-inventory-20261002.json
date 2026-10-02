@@ -1,0 +1,289 @@
+{
+  "host": "HERALD",
+  "scope": "Top-level service source candidates, not proof of registration or complete dynamic call graph",
+  "records": [
+    {
+      "path": "/Users/herald/services/agent-harness/daily_reflection.py",
+      "sha256": "a809bffec4afddf30a1718c5edd322c0fcc1b86e8275ae0ab78f40c9cd040d5b",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.daily-reflection",
+          "loaded": []
+        }
+      ],
+      "literal_paths": [
+        "/reflection/daily"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/agent-harness/windance_action_gateway.py",
+      "sha256": "707d917b0a1f9f6d4a262715d114d8daf19787313cc2a944a06abcf3fa55f12b",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/health"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/agent-harness/daily_briefing.py",
+      "sha256": "bf21475ac4ef19e18407a4d8b81caa72dbb4df0d78e5c8d77292d0038b0e8b90",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/briefing"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/agent-harness/daily_training_schedule.py",
+      "sha256": "15274ff88c342dc658c7d551f306dd82d891531ef347671749a4a9b332310b8b",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/memory",
+        "/training/today"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/agent-harness/gmail_sender_rule_sweep_notify.py",
+      "sha256": "20c9295addda27835b6d6520556a2390b58146a6ed5d76dd8e60353b4aea566d",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.gmail-sender-rule-sweep",
+          "loaded": []
+        }
+      ],
+      "literal_paths": [],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/nightly-core-maintenance/nightly_core_maintenance.py",
+      "sha256": "055754da53fdc5cb7561e32dfb36f5d53044674c60a0887c1b39a5202ce81f76",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.nightly-core-maintenance",
+          "loaded": [
+            {
+              "domain": "gui",
+              "state": "not running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [
+        "/message"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/windance-gmail-mcp/server.py",
+      "sha256": "61364689b38b2eb036ef252d5325785378d9d30fcb5907ae7751d1f65092ef9e",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/message"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/urgent-monitor/urgent_monitor.py",
+      "sha256": "9ab46cc2509fbbb98f076de54ce1ceaf0aa43b7d1866d18ef7f936589a3b9ce2",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.urgent-monitor",
+          "loaded": []
+        }
+      ],
+      "literal_paths": [
+        "/health",
+        "/staff"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/herald-staff-mcp/herald_staff_mcp.py",
+      "sha256": "2208e16d141cd19c58f2585259aa715f6eca5c57caa1e05ff9d10097440ece5c",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/messages",
+        "/reports/control",
+        "/staff/tasks/"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/windance-agent/windance_email_check.py",
+      "sha256": "ec05d5dae6c4fb8c9da9dc640db07878f7e8ecd87a0411753692ef6a1051fa8a",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/message"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/desktop-context-sync/desktop_context_sync.py",
+      "sha256": "b4654e49d7a1592c4aa41d043bfe2e5f367ce03b9b4fd5b6f9af4df30a62d974",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.desktop-context-sync",
+          "loaded": []
+        }
+      ],
+      "literal_paths": [
+        "/memory"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/staff-records-mcp/staff_records_mcp.py",
+      "sha256": "16f4d29404ccf9ae8fd85f6ff2a164b1b9d9078f4d15bc63b7ec6ea809002605",
+      "direct_plist_matches": [],
+      "literal_paths": [],
+      "authorization_header_mentioned": true
+    },
+    {
+      "path": "/Users/herald/services/google-workspace-mcp/google_workspace_mcp.py",
+      "sha256": "23a5d5087735eb46c81b79b18df7e809e057d07f13edfa0d4e9656b2797d5f5a",
+      "direct_plist_matches": [],
+      "literal_paths": [],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/vega-manager/manager.py",
+      "sha256": "1d2c67417ca4080158db8e5c9840b5c602523856bfc7551ad0f2c8276a4c7a83",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.vega-manager",
+          "loaded": [
+            {
+              "domain": "user",
+              "state": "running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [
+        "/health",
+        "/messages",
+        "/messages/{mid}",
+        "/messages/{mid}/interrupt",
+        "/staff/tasks",
+        "/staff/tasks/"
+      ],
+      "authorization_header_mentioned": true
+    },
+    {
+      "path": "/Users/herald/services/weekly-stack-maintenance/weekly_stack_maintenance.py",
+      "sha256": "f913b577330b80f8dd014448494bd1cc8e58de5c1a9558ace8f671662cd73bd1",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.weekly-stack-maintenance",
+          "loaded": [
+            {
+              "domain": "gui",
+              "state": "not running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/profile-staff-runner/staff_follow_through_monitor.py",
+      "sha256": "300fe4e675e2152ffed44aa3b90d4cb9d19e7489a3be0065fa89bf0f9287f742",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.profile-staff-runner",
+          "loaded": [
+            {
+              "domain": "user",
+              "state": "running"
+            }
+          ]
+        }
+      ],
+      "literal_paths": [
+        "/staff/follow-through"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/profile-staff-runner/profile_staff_runner.py",
+      "sha256": "b9498eaa83d5bb72e706ea93e243f08fbad6495f7f4b3fdaac1a4d8ca95a8127",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/staff/follow-through",
+        "/staff/tasks/"
+      ],
+      "authorization_header_mentioned": true
+    },
+    {
+      "path": "/Users/herald/services/software-maintenance/windance_software_maintenance.py",
+      "sha256": "9472f32281d0f1a026546bc1f2162f0cbe5e69325608e2b0253714b3f56b35ad",
+      "direct_plist_matches": [
+        {
+          "label": "com.windance.software-maintenance",
+          "loaded": []
+        }
+      ],
+      "literal_paths": [],
+      "authorization_header_mentioned": true
+    },
+    {
+      "path": "/Users/herald/services/vega-orchestrator/vega_orchestrator.py",
+      "sha256": "a0268438f439b406886129bb7fda27db5b066d9c23f18dca7ee1a069a830b41b",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/health",
+        "/message"
+      ],
+      "authorization_header_mentioned": true
+    },
+    {
+      "path": "/Users/herald/services/windance-supervisor/submit_reviews.py",
+      "sha256": "d910a654879c291993b33315754bb6af277b773cbe28b58da775981cfc2598ac",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/staff/tasks"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/windance-supervisor/archive_warden.py",
+      "sha256": "a06cecca7d31febfd5185cf4cbeea1b28b50307e2611691e66875a35e0186025",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/memory"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/windance-supervisor/remote_ops.py",
+      "sha256": "892d1d467b3cc5c4cc9234b6c1c67ef43f36dbcb6d7c1fa914db0b8ac6a814dd",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/health"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/windance-supervisor/normalize_forge_receipt.py",
+      "sha256": "fb44ebbb7f3f7260a1fcd8349c3d4bc14d7c6ed98b4a3921c5210ccf6e58a3c7",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/staff/tasks/"
+      ],
+      "authorization_header_mentioned": false
+    },
+    {
+      "path": "/Users/herald/services/windance-supervisor/finish_reviews.py",
+      "sha256": "d93dd3568e35266e085ed0e3d0d0b09ad450a2c85af4232fe5ff97b540e5ece2",
+      "direct_plist_matches": [],
+      "literal_paths": [
+        "/staff/tasks",
+        "/staff/tasks/"
+      ],
+      "authorization_header_mentioned": false
+    }
+  ]
+}
