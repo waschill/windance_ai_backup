@@ -770,3 +770,7 @@ All11 selected absent-job scripts/interpreters exist; source effects grouped for
 ## October2 capture reminder runtime-dependent failure verified
 
 Unchanged reminder source fails safe --dry-run under configured systemPython with database-open error but passes under installed applicationPython; no send. Concrete interpreter-only correction identified, not installed. Shared-runtime upgrade waits05:00MDT in existing oversight chat; recipient/delivery identity and coordinated backup/activation gates remain. Evidence: archive/20261002-capture-reminder-runtime/capture-reminder-runtime-20261002.md.
+
+## October2 capture reminder recovery candidate prepared
+
+Sourcef354d141 adds stable Mountain-date delivery identity and honest submitted wording; actual enqueue composition holds changed content and uncertain retries without requeue. Interpreter-only plist candidate preserves schedule/other fields. No installation/send. Runtime-owner coordination, fresh recovery, recipient/date policy and natural independent receipt remain gates. Evidence: archive/20261002-capture-reminder-candidate/capture-reminder-candidate-20261002.md.

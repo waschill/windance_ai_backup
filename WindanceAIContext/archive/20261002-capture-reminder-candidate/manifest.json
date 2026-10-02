@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_capture_reminder_candidate.py",
+    "sha256": "7577d3b0912049669a67b6e87c34d461dbc7ebf0aa50971796201e454e78c0f3"
+  },
+  {
+    "path": "capture-reminder-candidate-20261002.md",
+    "sha256": "afd8adbdf3163477d82a0407afac5024d7338b0601005f883337364768ef8e59"
+  },
+  {
+    "path": "capture-reminder-plist-stage-20261002.json",
+    "sha256": "fb8950e257d424549e0f0e3721c1489a4275c0686eb72875147fad8a1a4cf6ae"
+  },
+  {
+    "path": "capture-reminder-recovery-tests-20261002.json",
+    "sha256": "c5543a18f870c7a192ad8fda2b32cfb72077e151d2427c8a064b218e38663429"
+  },
+  {
+    "path": "test_capture_reminder_recovery.py",
+    "sha256": "b1693a3897313b2892005e71e74697b0a6305a1abd8b95de5255e9126402e3cd"
+  }
+]
