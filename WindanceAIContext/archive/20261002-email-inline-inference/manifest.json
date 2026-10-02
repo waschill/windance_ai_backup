@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_inline_package.py",
+    "sha256": "15d714d0c320c0d4354bb1721ded840af130f0353ec9ef8d9077ed64379b6645"
+  },
+  {
+    "path": "email_inline_inference.py",
+    "sha256": "1addb24881c9b40ed77692d16ca8971ed735f94e13c2cb4c4d4425931a37e405"
+  },
+  {
+    "path": "email-inline-inference-20261002.md",
+    "sha256": "c7bd2f574185bc77ec6b92c83149196c8ae9f9ed942f9494672a780e6f30e681"
+  },
+  {
+    "path": "test_email_actual_profile_entry.py",
+    "sha256": "bf55d56e7c910f8e40b2a0bb6c429f75829fcf16325bc4499b747cf52757bf4f"
+  },
+  {
+    "path": "test_email_inline_inference.py",
+    "sha256": "3e1f08ca7c2d0cbf9be2f58619bd2b30736dd5c62a8aaf2758791751a07bc93a"
+  }
+]

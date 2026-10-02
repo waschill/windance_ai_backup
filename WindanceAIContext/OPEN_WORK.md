@@ -690,3 +690,7 @@ Live static read-only /team probe without Authorization returns200; source guard
 ## October2 service-compatible email layout and complete local provider path pass
 
 Manifestd1fe484d uses production-compatible filenames. Actual supervised report/parser/validator/SDK/cache/transport/journal tests cover normal, lost mark-read and lost Trash acknowledgments with no repeated writes on another report. ASGI auth/failure regressions pass. Staged only; exact recovery, actual account/provider and coordinated66-route auth callers remain open. Evidence: archive/20261002-email-service-layout/email-service-layout-20261002.md.
+
+## October2 actual classifier subprocess incompatibility identified and staged adapter tested
+
+Prior fixture classification hid missing/subprocess inference dependencies. New20-file package1262ea18 executes unchanged profile entry inside supervised email process, preserving exact Codex OAuth/Terra route and no-child rule. Synthetic adapter/actual-profile-entry tests and local Gmail regressions pass. Actual OAuth resolver behavior, coordinated auth, identity and exact-package recovery remain unverified; no deployment/model call. Evidence: archive/20261002-email-inline-inference/email-inline-inference-20261002.md.
