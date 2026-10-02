@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam_memory_contract.py",
+    "sha256": "8c1a397f441c1f79c4001e4f0f99b4ecf3bdbf4f5c1620afc44c22f5abe28e1b"
+  },
+  {
+    "path": "sam-memory-producer-contract-20261002.md",
+    "sha256": "ff3222605ce67bfbb749c92f0e7c63f03e3d578653ca474511cba7d60c938432"
+  },
+  {
+    "path": "test_sam_memory_contract.py",
+    "sha256": "a200ae433b77bf5d74e284c7b98cc921071d25ae8a24fcda7cd673022082f93f"
+  }
+]

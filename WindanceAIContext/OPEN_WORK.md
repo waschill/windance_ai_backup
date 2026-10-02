@@ -570,3 +570,7 @@ Actual worker returned a repair despite contradictory evidence/insufficient stat
 ## October2 corrected diagnostic full transport and current recovery ZIP verified
 
 New evidence-quality worker/inspector pass actual authenticated HTTP-to-AL supported-evidence path with owner isolation and no duplicate. Revision2 ten-file ZIP verified on HAL; restored HERALD API passes twelve no-dispatch checks. Old ZIP retained as history; neither is production deployment or full project acceptance. No business/model/SAM changes. Evidence/current restore point: archive/20261002-diagnostic-quality-package/diagnostic-quality-package-20261002.md.
+
+## October2 narrow SAM business-memory admission staged
+
+Fresh installed Harness source still permits broad trusted-host legacy memory writes. Staged dedicated producer contract accepts only established daily-schedule shape and business provenance, never infers a human owner or grants reads. Valid case and ten denial cases pass; no storage/service/SAM change. Credential, source/revision acknowledgment, reader policy and legacy caller integration remain required before rollout. Notes collection stays suspended. Evidence: archive/20261002-sam-memory-producer-contract/sam-memory-producer-contract-20261002.md.
