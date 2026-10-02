@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "receiver-handoff-rehearsal-20261002.md",
+    "sha256": "fa32f8985cc814df788c7caf5ebb45564fc1cb42cb9b5160b4f893efd44d1fe3"
+  },
+  {
+    "path": "test_launchd_receiver_handoff.py",
+    "sha256": "8a15855fb1665645f7839c7692d554ef4e41fbb82a84a02898c583a11e8bff49"
+  },
+  {
+    "path": "test_receiver_handoff.py",
+    "sha256": "e06938ef7b5b02215c19ec9daea07d130a032c2acb6487905273e0dd3b143f62"
+  }
+]
