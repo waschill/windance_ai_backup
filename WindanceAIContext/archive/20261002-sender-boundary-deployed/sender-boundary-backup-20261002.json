@@ -1,0 +1,13 @@
+{
+  "backup": "/Users/zuzu/backups/sender-boundary-deploy-20261002T0016Z",
+  "files": {
+    "bridge.candidate.py": "e90460b83533ecab7332dd0f7b78a122419c9325a6e24c777f98b5c5f92c632a",
+    "bridge.original.py": "0b4753c2823be856d2124566e04e59108f346309d301c9b6cf00962d6418ed4a",
+    "bridge_sender_boundary.py": "16df0f010896a8cc93c4837e3fba7d11cf0147c068615e5de5a6d8ab243072c3",
+    "bridge.plist": "a5bd24922bceacfe1021990015ff675047fa052e0499c0bca2c4515c0b1e9744",
+    "cursor.original": "f7cb5fc24c417650b697fb49a6a2ae28d6855baca34cf2a8440a5dc47c92c227"
+  },
+  "cold_source_plist_cursor_checks": "passed",
+  "queue_and_pending_empty": true,
+  "production_changed": false
+}

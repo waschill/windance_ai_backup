@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bridge_sender_boundary.py",
+    "sha256": "16df0f010896a8cc93c4837e3fba7d11cf0147c068615e5de5a6d8ab243072c3"
+  },
+  {
+    "path": "deploy_sender_boundary.py",
+    "sha256": "798360deb0bcc9af1cda64fa39634ebcb429e6d93296f92654add08b1a190b0c"
+  },
+  {
+    "path": "prepare_sender_boundary_backup.py",
+    "sha256": "83c4cbbb631d7b24999ae2a6cf78c82a2604acc51c71ae7dd50c511bc2932e09"
+  },
+  {
+    "path": "sender-boundary-backup-20261002.json",
+    "sha256": "9e717fb980ce07c2b35f8b2db5876abe8dc3b682ff26a79cec1f7fc9d1c1efc1"
+  },
+  {
+    "path": "sender-boundary-deployed-20261002.md",
+    "sha256": "d90ee371824e0d2587b8057f71b75bbb2f18c1c99f04f0e233536bc0ad97bd0b"
+  },
+  {
+    "path": "sender-boundary-deployment-20261002.json",
+    "sha256": "03d61303555b8dc28f4402a8e64f5899ac0de141de65a84cadad0f8573fab8ba"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "installed_source_sha256": "e90460b83533ecab7332dd0f7b78a122419c9325a6e24c777f98b5c5f92c632a",
+  "installed_helper_sha256": "16df0f010896a8cc93c4837e3fba7d11cf0147c068615e5de5a6d8ab243072c3",
+  "pid_changed": true,
+  "stable_new_pid_after_seconds": 3,
+  "cursor_and_plist_unchanged": true,
+  "outbox_counts": {
+    "queue": 0,
+    "inflight": 0,
+    "uncertain": 0
+  },
+  "warden_still_paused": true,
+  "scope": "Only Messages intake bridge restarted; no manual send or cursor rewind",
+  "limits": "Natural future intake and independent transport delivery remain unverified"
+}
