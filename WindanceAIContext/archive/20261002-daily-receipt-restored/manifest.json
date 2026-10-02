@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "daily-receipt-installed-state.json",
+    "sha256": "f4b47ece3db10fc0b1697354697b5f3c6b9793afaed7f8af064dd81db3597bc7"
+  },
+  {
+    "path": "daily-receipt-restored-20261002.md",
+    "sha256": "4610eb806643bec962360c47d97300ac6270e1b9993aa9bec38647d8f09c3194"
+  },
+  {
+    "path": "inspect_daily_caller_recovery.py",
+    "sha256": "ed3bb1c90676acfa93e1f79f99f530e31baa8facf6d5d30616f46777090d6521"
+  },
+  {
+    "path": "probe_daily_candidate.py",
+    "sha256": "32cebc227055603c0c2130f1e019624bbc288442e274394cca2cee310d8b3139"
+  },
+  {
+    "path": "recover_daily_receipt_callers.py",
+    "sha256": "79476a27983c287f5c2292f1df0957c7ad24b9a7f6e56ad7cfc3bc19a894cb4c"
+  },
+  {
+    "path": "verify_daily_recovery_backup.py",
+    "sha256": "8df4824142b660785579adc406a1f8333c3718580aeb8c99097ebcdacef22239"
+  }
+]

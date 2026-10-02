@@ -993,3 +993,7 @@ Guarded idle cutover passed: old process removed,19runtime hashes/plist verified
 ## October2 Harness receipt caller installed and live task metadata verified
 
 Current sourcec2fa4c908a2ff5cdcc92d58da0ac5cf38534d800a235cbdf3bfcaed5341e3ef7/five helpers installed after verified10-file backup and idle checks. Health200, eight protected-table hashes and plist unchanged; live task API explicitly marks legacy receipt unverified.12legacy rows untouched, new journal empty, no sends. Recovery: archive/20261002-harness-report-installed/harness-report-installed-20261002.md. Daily callers/manager/natural acceptance remain open.
+
+## October2 Capture and Sentinel receipt-aware calendars restored without immediate runs
+
+Exactly two user/501 jobs registered waiting at original19:00/06:50 Mountain schedules, RunAtLoad=false, zero runs/empty journals. Eleven-file off-host backup verified, dry runs blocked outbound/writes and succeeded. No catch-up/send; natural acceptance pending. Prior-day reconciliation cadence needs bounded continuation review. Recovery: archive/20261002-daily-receipt-restored/daily-receipt-restored-20261002.md.
