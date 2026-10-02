@@ -686,3 +686,7 @@ Live Gmail MCP source sends no Authorization; staged fail-closed server must not
 ## October2 shared Harness auth rollout scope verified
 
 Live static read-only /team probe without Authorization returns200; source guard bypasses absent token.67 guarded functions/66 routes identified. Setting shared token would affect far more than Gmail, so no configuration change was made. Coordinated caller inventory/cutover and real identity remain deployment gates; Node-RED access is still blocked without workaround. Evidence: archive/20261002-harness-auth-scope/harness-auth-scope-20261002.md.
+
+## October2 service-compatible email layout and complete local provider path pass
+
+Manifestd1fe484d uses production-compatible filenames. Actual supervised report/parser/validator/SDK/cache/transport/journal tests cover normal, lost mark-read and lost Trash acknowledgments with no repeated writes on another report. ASGI auth/failure regressions pass. Staged only; exact recovery, actual account/provider and coordinated66-route auth callers remain open. Evidence: archive/20261002-email-service-layout/email-service-layout-20261002.md.
