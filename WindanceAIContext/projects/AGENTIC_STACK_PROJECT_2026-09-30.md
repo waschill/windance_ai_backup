@@ -769,3 +769,7 @@ Current sender success remains osascript completion, not delivery. Live schema v
 ## October2 actual Messages storage reveals receipt observer coverage gap
 
 Latest100 outgoing iMessages all attributed-only, zero plain text: staged exact-text observer cannot yet cover these records. No bodies/recipients exported or pilot passes inferred. Existing sender helper accepts raw substring as sent, reproduced synthetically; not an exact decoder/delivery proof. Pinned decoder evaluation required before integration; no installation or service/send changes. Evidence: archive/20261002-messages-attributed-coverage/messages-attributed-coverage-20261002.md.
+
+## October2 attributed-message decoder synthetic evaluation passes
+
+Pinned LGPL pytypedstream wheel imports without installation; actual Foundation fixtures pass145 assertions on HAL and SAL, preserving exact Unicode and rejecting malformed/wrong-root/substring-only evidence. No real Messages content read or sender/service change. Resource-bounded live format coverage and complete receipt integration remain gates; no delivery/pilot claim. Evidence: archive/20261002-messages-attributed-decoder/messages-attributed-decoder-20261002.md.

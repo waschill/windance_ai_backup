@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "attributed_text_candidate.py",
+    "sha256": "7005e6f89d401e521035c771cfc109a8cdf55158c9511d0ae3e01f4861ff8735"
+  },
+  {
+    "path": "attributed-fixtures-20261002.json",
+    "sha256": "8f9f32212f55b28a8056c7eae2ed00a7232ae38986b52161e8260e9cb82e934f"
+  },
+  {
+    "path": "generate_attributed_fixtures.swift",
+    "sha256": "3c60e53477b20ca0b25417caddc88f8704dea20a31ecf00ee06da8cdfcf5a31d"
+  },
+  {
+    "path": "messages-attributed-decoder-20261002.md",
+    "sha256": "c46968a2eeca03b3b364f1ce1d2c39521f92eea6cfa8bd80e7e2bde282605582"
+  },
+  {
+    "path": "test_attributed_text_candidate.py",
+    "sha256": "1ba9bedf019a09a4f477b6eace8b78ae42c7b0244b22242e16b5704f8923aeab"
+  }
+]
