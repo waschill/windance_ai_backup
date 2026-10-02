@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "manager_receipt_delivery.py",
+    "sha256": "7f5be75cc8c7a12a24242044c5b305e3a1f699900e281a1f6621b3ed2ab62ff9"
+  },
+  {
+    "path": "manager-snapshot-staged-20261002.md",
+    "sha256": "1b2fe327adfa36b4098358196a04e5673b715753ce410411cd06b1ca2cf0004c"
+  },
+  {
+    "path": "test_manager_receipt_delivery.py",
+    "sha256": "50c1dee84ce97428d730f3e731a3d626bb3f37c4ab4ee75848af6bc09e60d559"
+  },
+  {
+    "path": "test_manager_snapshot_race.py",
+    "sha256": "f1e98601977a47976d4623850c68a551b7328f1fc7c90c9d77826701db3a4609"
+  }
+]

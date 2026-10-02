@@ -1014,3 +1014,7 @@ Exactly two user/501 jobs registered waiting at original19:00/06:50 Mountain sch
 ## October2 daily rollover correction installed before first restored calendar runs
 
 Capture/Sentinel can reconcile prior receipt then handle today in same invocation, maxone new submission/two transport passes with shared budget. Fourteen-file backup/two cold journals verified; tests and installed no-send dry runs pass. Plists/calendars/journals unchanged, scheduled runs0. Recovery: archive/20261002-daily-cycle-installed/daily-cycle-installed-20261002.md. Natural acceptance still pending.
+
+## October2 manager immutable receipt snapshot helper staged
+
+Isolated tests pass original-key retention, uncertain original-body query, verified no replay, recipient hold and concurrent snapshot confirmation guards. No live manager change or messages; integration/crash/recovery gates remain. Node-RED retry remains browser-policy denied. Evidence: archive/20261002-manager-snapshot-staged/manager-snapshot-staged-20261002.md.
