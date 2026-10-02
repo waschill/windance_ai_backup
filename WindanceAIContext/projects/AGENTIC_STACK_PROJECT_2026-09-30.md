@@ -805,3 +805,7 @@ Actual observer now runs through pinned-wheel subprocess with CPU/alarm/wall lim
 ## October2 Messages store checkpoint compatibility verified
 
 Readonly checkpoint detects synthetic replacement/changed or missing anchor while preserving ordinary appends. HAL/SAL fixtures pass; content-free SAL live reread verifies same anchor in0.0274seconds. Not integrated; durable attempt binding, same-view receipt observation and rollback/race limits remain open. Evidence: archive/20261002-messages-store-checkpoint/messages-store-checkpoint-20261002.md.
+
+## October2 staged receipt query binds persisted pre-send checkpoint
+
+Schema3 journal persists checkpoint with attempt; supervised observer verifies it before/after exact query in same SQLite read view. Seven SAL composition/restart cases pass including replacement/anchor-change holds; HAL regressions/crash tests pass. No live deployment. Full queue, request deadline, delayed receipt and consumer recovery gates remain open. Evidence: archive/20261002-checkpoint-bound-receipts/checkpoint-bound-receipts-20261002.md.
