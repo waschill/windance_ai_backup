@@ -529,3 +529,7 @@ Actual ASGI/SQLite tests pass credential-derived identity, cross-principal denia
 ## October2 actual ledger-to-isolated-worker completion and receipt-loss recovery pass
 
 Fixed adapter binds claimed job/evidence/worker versions to actual Docker terminal result. Normal and simulated lost local receipt commit cases pass with no repeat worker; explicit existing-evidence reconciliation completes held result. Cold database preserves both receipts without replay; ten ASGI boundary regressions pass. No listener/consumer/staff dispatch or production changes. Authenticated full transport, active cancellation and remaining crash windows still open. Evidence: archive/20261002-diagnostic-adapter/diagnostic-adapter-20261002.md.
+
+## October2 actual authenticated HTTP-to-AL diagnostic integration passes
+
+Temporary HERALD loopback API accepted scoped submission, fixed SSH adapter invoked one pinned isolated AL worker, and matching result was available only to submitting principal. Unauthenticated/cross-principal requests denied; identical resubmission retained job with no second worker. Listener shutdown verified; no persistent service/queue/staff dispatch or production changes. Real identity, active cancellation and remaining recovery/job gates open. Evidence: archive/20261002-diagnostic-http-worker/diagnostic-http-worker-20261002.md.

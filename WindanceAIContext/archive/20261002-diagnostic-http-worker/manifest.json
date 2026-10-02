@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "diagnostic_remote_adapter.py",
+    "sha256": "235d497758192012d4553198484c2df6607b617ce51ec4ef129b3bb2d6ecd5c9"
+  },
+  {
+    "path": "diagnostic_remote_worker.py",
+    "sha256": "da1d11fba125fbeb0d09f8c482ed955f7a48f45ef2af2460a04224ca467a15a5"
+  },
+  {
+    "path": "diagnostic-http-worker-20261002.md",
+    "sha256": "069b7546646ed07bdb2648f1e98e589ca5672075f95ab6a7a72690f22a4dea82"
+  },
+  {
+    "path": "diagnostic-http-worker-results.json",
+    "sha256": "7f0348ea89ebb9f1bb7d3ce179b75436d8c7b841e3477b9260978eaceb160889"
+  },
+  {
+    "path": "test_diagnostic_http_worker.py",
+    "sha256": "2bda63f7a68788ec6981feeebb7dbb948ba4da95775bce3fbebd4c1cda1cd43f"
+  }
+]
