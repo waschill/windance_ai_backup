@@ -1053,3 +1053,7 @@ Actual restored candidate rejects12 simulated untrusted requests and preserves d
 ## October2 live Harness forwarded-address behavior checked
 
 Read-only loopback /team returns200 normally and401 with synthetic untrusted X-Forwarded-For; running HTTP stack therefore interprets this trusted-hop header. Application-only ASGI evidence is not whole-proxy evidence. No external exposure claim, service change or effectful endpoint. Proxy/caller identity gates remain open. Evidence: archive/20261002-harness-forwarded-live/harness-forwarded-live-20261002.md.
+
+## October2 staged diagnostic input bounds and validation privacy pass
+
+Actual API now caps request streams at4096bytes/10seconds before parsing and returns content-free validation errors. Eight stream cases, private-sentinel rejection, valid fragmentation and12 existing API ownership/cancel/recovery checks pass on temporary storage, zero dispatch. No deployment; new exact package and full worker transport regression still needed. Evidence: archive/20261002-diagnostic-request-bounds/diagnostic-request-bounds-20261002.md.
