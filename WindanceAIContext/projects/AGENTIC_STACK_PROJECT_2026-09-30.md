@@ -269,3 +269,7 @@ Synthetic actual-function evidence shows current Harness logs rejected secret-li
 ## October2 content-free memory rejection installed and live-verified
 
 Harness now rejects recognized secret-like remember commands before incoming audit/forwarding and omits content from direct rejection logs. Fresh five-file backup, cold integrity/eight-table hashes and HAL copies verified; existing Harness restarted only while idle. Health200/protected tables/plist passed. Live synthetic HTTP canary produced fixed rejection metadata, no marker in new audit and no conversation row; no model/send/Odoo call. Current Harness9865597bda4368784beac015dbcec712a271889395e9fcebf788c60b636774d4. Recovery/limits: archive/20261002-memory-guard-deployed/memory-guard-deployed-20261002.md. Upstream storage/direct-API writers and full private learning remain unfinished; Phase1 open.
+
+## October2 source-bound memory candidate passes47component tests
+
+New staged server-side source seam checks owner/channel/reference and exact excerpt, binds source hashes atomically to fact/request, and withholds retrieval after source loss/drift.10new cases plus37existing pass. Content labeled source_quote, not external truth; upstream identity/remember authorization, sharing, inferred habits and conversational integration remain incomplete. No live schema/data/model change. Packet: archive/20261002-source-bound-facts/source-bound-facts-20261002.md. Phase1 open.
