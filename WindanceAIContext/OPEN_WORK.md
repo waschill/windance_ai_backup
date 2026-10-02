@@ -498,3 +498,7 @@ Staged admission checks unresolved autonomy/approved journals as well as shared 
 ## October2 reference-bound undo journal staged
 
 New internal reversal intent binds saved report/action identity, shares mutation hold and atomically confirms original reversal fields plus receipt. Five synthetic normal/lost/wrong/local-failure/reference cases pass with at most one effect. Actual restore/delete-draft primitive validation and authenticated handler/schema/recovery integration remain. Evidence: archive/20261002-email-undo-intent/email-undo-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 actual undo handler and primitive receipts composed
+
+Nine actual schema/handler/primitive synthetic reversal cases pass with no repeat effects, honest uncertainty and atomic local receipts. Installed SDK empty-response contract verified read-only; four full approval-chain regressions pass. Exact package now includes orphan/old-journal holds. Direct callers, second-step/crash cases, identity/operator resolution and exact recovery remain. Evidence: archive/20261002-email-undo-harness/email-undo-harness-20261002.md. No real Gmail/model or production changes; Phase1 open.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_undo_harness.py",
+    "sha256": "e34753e930c198a46edd2f631ade6c9dabba415f723f33ed0fa4fffe0d0262a4"
+  },
+  {
+    "path": "email-undo-harness-20261002.md",
+    "sha256": "be7da3e0981ae588f423b20c7aa4d90ba56ee87517d7d6c93709a71d5dee0e65"
+  },
+  {
+    "path": "test_email_undo_harness.py",
+    "sha256": "2b547188e5ab045503b488337435d9c4c15309290816a324e5bffd7c31a395a0"
+  }
+]
