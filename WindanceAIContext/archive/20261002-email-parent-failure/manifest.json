@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_process_deadline.py",
+    "sha256": "9ab73fc8f42c816eec92ab6e3cf775bbcc5c8cd56bd5718286511fcec8abcab4"
+  },
+  {
+    "path": "email-parent-failure-20261002.md",
+    "sha256": "f0598816ec66a7c113932dd7dcbd5945e9070d3286f33d7dde1d03cc43763b5e"
+  },
+  {
+    "path": "test_email_kernel_timer.py",
+    "sha256": "22ca58c202e72509b55685ecf5ec199ddb91e4bd5ad812dcf9ac9df07a2c7ff7"
+  },
+  {
+    "path": "test_email_parent_crash.py",
+    "sha256": "295fcc7461660fd5fc41c1ad41a645b27975764eacf3a3e0cc8bae1ddff130f7"
+  }
+]

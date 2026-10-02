@@ -649,3 +649,7 @@ Transport548bfcc1 caps raw and gzip-decoded bytes during decoding and checks coo
 ## October2 isolated email process deadline preserves uncertainty
 
 Trusted-worker prototype kills/waits exact child at deadline; actual durable-intent fixture remains unconfirmed and retry does not repeat its effect. Output/child-dispatch limits and normal receipt pass. Initial process-wide file cap was replaced with pipe-specific bounds to preserve database writes. Not wired into Harness; owner propagation, parent death, full workflow and endpoint coverage remain open. Evidence: archive/20261002-email-process-deadline/email-process-deadline-20261002.md.
+
+## October2 email worker exits after supervisor loss or suspension
+
+Standalone prototype now arms independent kernel timer and checks parent identity. Actual killed-parent fixture exits with durable intent unconfirmed; suspended-parent fixture also terminates by child timer. Prior deadline/output/no-replay tests pass. Not integrated into Harness; native sandbox, real identity and complete endpoint coverage unverified. Evidence: archive/20261002-email-parent-failure/email-parent-failure-20261002.md.
