@@ -1,0 +1,11 @@
+# Per-approved-item durable outcome component
+
+October 2 UTC / October 1 Mountain 2026. Staged internal component; not installed or connected to production executor.
+
+email_approved_item_intent binds an item to a currently executing Gmail batch, verifies selected-item membership and the exact selection digest when present, resolves original approval/item lineage under a write reservation, and durably inserts unconfirmed before invoking an intercepted executor. A caller-supplied validator must return a minimal bounded receipt before confirmation. Existing confirmed receipts reuse without another callback; uncertainty and changed action hashes hold. No reset API is provided.
+
+Synthetic partial-batch test passed: item0 confirms once and reuses its receipt; item1 accepts a simulated effect then loses its response and remains unconfirmed across retry; unselected item2 is denied. Changing the retained original payload prevents reuse/execution. Two simulated effects total, zero real mailbox calls. Original payload is not copied into item records; only root identity/index, action hash, status and validated receipt are retained.
+
+This is execution bookkeeping, not yet complete capability enforcement. It requires a trusted authenticated caller; an executing database row alone does not authenticate a network request. Production per-action validators, shared mailbox holds with autonomy/rules/undo, stable root anchors, partial-batch final status, UI/reconciliation, process interruption tests and full exact-revision schema/handler/startup recovery remain integration gates. A caller-supplied validator has only synthetic evidence here and is not a live Gmail receipt guarantee. Pending or uncertain whole batches cannot be silently reactivated to use this component.
+
+Reproduction: existing HAL Python runs test_email_approved_item_intent.py alongside archived approved-item, lineage and selection modules. Temporary synthetic SQLite only. No production service/schema/SAM/Odoo/Warden/phone changes; no external sends or model calls. Keep previous private candidates and backups unchanged; no live rollback needed. Do not restore stale pending state or drop uncertain item records. Phase1 open; Codex capacity consumed and attributable dollar cost unknown.

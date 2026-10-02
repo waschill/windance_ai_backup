@@ -462,3 +462,7 @@ Five actual handler cases pass: overlapping selection executes once, uncertain r
 ## October2 stable approval item lineage resolver tested
 
 Read-only staged resolver maps items across repeated splits to original approval/index with action hash, validating selection digest/partition/payload/expiry. Six synthetic cases pass; changed or ambiguous evidence holds. Identity only, no executor authority; per-item receipts/shared holds and stronger recovery anchors remain gates. Evidence: archive/20261002-email-approval-lineage/email-approval-lineage-20261002.md. No real mailbox/model or production changes; Phase1 open.
+
+## October2 durable approved-item outcome component tested
+
+Staged component binds current executing/selected batch to original item identity, records uncertainty before effects and confirms only validated bounded receipts. Synthetic partial batch retains confirmed first item and uncertain second, avoids repeats and denies unselected/changed payload. Not wired to production; real validators/shared mailbox admission/auth/recovery remain. Evidence: archive/20261002-email-approved-item-intent/email-approved-item-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
