@@ -405,3 +405,7 @@ Existing credential completed profile-only read in0.399s with no mail content or
 ## October2 independent HAL email recovery verified; quota checkpoint
 
 Eight private file hashes and four SQLite integrity checks pass independently on HAL; all28 original non-sequence tables preserved, all original tables match baseline startup, cold copy matches and new recovery tables are empty. No production or mailbox changes. Account-wide weekly Codex usage is63% used/37% remaining, two free resets unused and zero purchased credits; project dollar attribution remains unknown. Evidence and reproducible read-only verifier: archive/20261002-email-offhost-recovery/email-offhost-recovery-20261002.md. Gmail identity/transport/cross-path gates remain open; Phase1 incomplete.
+
+## October2 bounded email history lookup composed and tested
+
+Staged report now queries only current inbox operation identities (max50), retaining global unresolved counts via indexed aggregate and consistent read transaction. Ten-thousand-record fixture and actual composed report normal/lost-response recovery pass without duplicate synthetic drafts. No real Gmail/model or production changes. This is allocation/result bounded, not a transport/time or cross-path guarantee. New revision needs its own full startup/recovery gate. Evidence: archive/20261002-email-bounded-history/email-bounded-history-20261002.md. Phase1 remains open.

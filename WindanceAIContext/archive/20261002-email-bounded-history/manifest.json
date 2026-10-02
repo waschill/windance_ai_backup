@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_bounded_history.py",
+    "sha256": "a9c9eb3ed27152c917b603f406e93f2d0bea84894555e705b6eae0bbec2c6ccd"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "1921745a84f26299cc3e5a70645d8b83ea9ec317ecf298c022e8fff0f75244c3"
+  },
+  {
+    "path": "email-bounded-history-20261002.md",
+    "sha256": "f57369da1722b6e3b98c6604a26361880b9e152a4acdce5320971f6389697340"
+  },
+  {
+    "path": "test_email_bounded_history.py",
+    "sha256": "da3e1eb087edd78802c5244e4c325fa7d086453cf8ad82a88a818bc7a3e1be66"
+  },
+  {
+    "path": "test_email_recoverable_harness.py",
+    "sha256": "555407f0296047df933b4147308f3aa6abe4be358edb8dba1e520819349dc7b8"
+  }
+]
