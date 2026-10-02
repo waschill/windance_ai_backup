@@ -562,3 +562,7 @@ Exact worker stop receipt now persisted before response and validated on repeat.
 ## October2 exact diagnostic package restored and verified; service availability rechecked
 
 Ten-file source package matches freshly observed staged host hashes. HAL verifies isolated extraction/compilation; HERALD restored API passes twelve no-dispatch checks. Package excludes credentials/data/image bytes and is not deployment or full host recovery. AL has no diagnostic containers left; production WebUI healthy and HERALD Harness/bridge/manager health200. No production changes. Evidence/recovery: archive/20261002-diagnostic-package-recovery/diagnostic-package-recovery-20261002.md. Remaining project gates open.
+
+## October2 unsupported diagnostic repair recommendation reproduced and corrected
+
+Actual worker returned a repair despite contradictory evidence/insufficient status. Staged worker now validates evidence structure/types/hash shape and withholds cause/repair/rollback when unsupported. Five isolated worker cases and receipt-inspector checks pass; completion and diagnostic sufficiency distinguished. Previous ZIP remains historical, not current-revision certification. No production/model/business changes. Evidence: archive/20261002-diagnostic-evidence-quality/diagnostic-evidence-quality-20261002.md.
