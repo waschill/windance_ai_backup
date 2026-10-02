@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "scenario": "normal",
+      "result": "completed"
+    },
+    {
+      "scenario": "manual",
+      "result": "INTERRUPTED"
+    },
+    {
+      "scenario": "deadline-confirmed",
+      "result": "INTERRUPTED"
+    },
+    {
+      "scenario": "deadline-unconfirmed",
+      "result": "EXECUTION_UNCERTAIN"
+    },
+    {
+      "scenario": "interrupt-rpc-fails",
+      "result": "EXECUTION_UNCERTAIN"
+    },
+    {
+      "scenario": "connection-lost",
+      "result": "EXECUTION_UNCERTAIN"
+    },
+    {
+      "scenario": "before-start",
+      "result": "INTERRUPTED"
+    },
+    {
+      "scenario": "start-inflight",
+      "result": "INTERRUPTED"
+    },
+    {
+      "scenario": "wrong-turn",
+      "result": "EXECUTION_UNCERTAIN"
+    },
+    {
+      "scenario": "same-session-held",
+      "passed": true
+    },
+    {
+      "scenario": "other-session-available",
+      "passed": true
+    },
+    {
+      "scenario": "uncertain-capacity-held",
+      "passed": true
+    },
+    {
+      "scenario": "restart-preserves-uncertainty",
+      "passed": true
+    }
+  ],
+  "scenario_count": 13,
+  "production_changed": false,
+  "model_calls": 0
+}

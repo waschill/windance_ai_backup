@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bridge_codex_turn_candidate.js",
+    "sha256": "60ac135aa8a169fac6dbcd07e362a442a92a873c0d5f2e76f9f5826a984c3a27"
+  },
+  {
+    "path": "bridge-bounds-candidate-20261002.json",
+    "sha256": "89ea4c004ee49e1e2d446d4f8b3fae72e58b91460f2cf3f0aa41aa57c038c7a2"
+  },
+  {
+    "path": "bridge-bounds-candidate-20261002.md",
+    "sha256": "b57a6f8f61c75ec5711b2aa0c32b8931e5ffe14e4622100bed2ce93491325aa6"
+  },
+  {
+    "path": "build_bridge_bounds_candidate.py",
+    "sha256": "fa84f8e5633bbf622bbbba650214c0572fc4aaa1c5566de00c63f255a63cb3b4"
+  },
+  {
+    "path": "test_bridge_bounds_candidate.mjs",
+    "sha256": "9f50856eb648325aca23fe0e09ab15f1c031fba02ce43589a627feed8fac091a"
+  }
+]

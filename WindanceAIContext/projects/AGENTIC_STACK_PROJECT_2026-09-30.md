@@ -245,3 +245,7 @@ Production and lab application data captured privately on AL and copied to HAL. 
 ## October2 bridge deadline does not establish stopped execution
 
 Three isolated actual-function scenarios confirm normal completion and explicit interrupt behavior, but the ten-minute deadline closes the socket with zero interrupt requests and no remote terminal evidence. Turn setup requests full tool access; read-only prompt wording is not an enforced diagnostic boundary. No historical continued execution is claimed. Required deadline/uncertainty/restart/session-hold correction and original diagnostic acceptance are recorded in archive/20261002-bridge-execution-bounds/bridge-execution-bounds-20261002.md. No production changes/model calls/sends; Phase1 and bounded-jobs gates remain open.
+
+## October2 cancellation/uncertainty candidate passes13isolated scenarios
+
+Staged actual bridge candidate requests deadline interruption, distinguishes terminal evidence from RPC acknowledgment, preserves uncertainty, holds conflicting sessions/capacity and converts restart-running records to uncertain.13 synthetic actual-function/selector/startup cases pass with no network/model/production activity. Initial builder hash failure was CRLF normalization and corrected before staging. Manager state propagation, authoritative reconciliation, protocol races and durable restart remain deployment gates. Packet: archive/20261002-bridge-bounds-candidate/bridge-bounds-candidate-20261002.md. Not installed; no read-only job acceptance claimed; Phase1 open.
