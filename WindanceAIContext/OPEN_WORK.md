@@ -1086,3 +1086,7 @@ Transactional32global/8owner active-job ceilings and1running-or-cancel-pending s
 ## October2 durable diagnostic consumer and revision5 recovery pass
 
 One-cycle consumer reconciles uncertain work before queued work, requires matching stop receipt and never advances after uncertainty. Restart/cancellation tests and actual HTTP-to-AL consumer test pass. Exact19-file r5 ZIP restored five test suites with unchanged hashes. No daemon or persistent deployment; identity/UI/lifecycle/general diagnosis remain open. Evidence: archive/20261002-diagnostic-consumer/diagnostic-consumer-20261002.md.
+
+## October2 restored WebUI password login and owner separation pass
+
+Both snapshot copies pass actual synthetic password sign-in, wrong-password rejection and owner/cross-owner/anonymous chat checks; no direct token minting. Initial async-helper fixture defect corrected, application unchanged. Original hashes preserved/test containers removed. Live ownership/bootstrap, UI/citations/memory remain open. Evidence: archive/20261002-webui-password-login/webui-password-login-20261002.md.

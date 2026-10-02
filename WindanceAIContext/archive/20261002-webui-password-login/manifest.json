@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "verify_webui_restored_login.py",
+    "sha256": "b2c1b9099bf02395fffe888bd67e2a61b408bad80d9ed1f5a39efdc63748fb91"
+  },
+  {
+    "path": "webui_login_probe.py",
+    "sha256": "a8aa75ec0d1e8c42a3cfc7b03710b9c9a1772819ea1abb0faf74b1a27e3791f9"
+  },
+  {
+    "path": "webui-login-result-20261002.json",
+    "sha256": "8374619ab2b1da6cd8a7f1258524f512ae85a6aaabece5c3f9f30d614f3121f9"
+  },
+  {
+    "path": "webui-password-login-20261002.md",
+    "sha256": "abebb98d8342826d04a061b8c6ce5cbd82c9dd898084309a99691a3d8d6a70e0"
+  }
+]
