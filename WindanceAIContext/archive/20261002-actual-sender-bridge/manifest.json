@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "actual-sender-bridge-20261002.json",
+    "sha256": "305c65d2bbf2931b509312a9a616d0f61bb18c144a6ee8cba83bcd43a655f64c"
+  },
+  {
+    "path": "actual-sender-bridge-candidate-20261002.md",
+    "sha256": "03df47331ed31dfa7429859a58a804bb31a8ec71b88e61949306f99d176e8374"
+  },
+  {
+    "path": "bridge_sender_boundary.py",
+    "sha256": "16df0f010896a8cc93c4837e3fba7d11cf0147c068615e5de5a6d8ab243072c3"
+  },
+  {
+    "path": "build_sender_bridge_candidate.py",
+    "sha256": "846ae6ddd58123b7a514eedcb2dec26038fee31f5b10ba1a379a79f896f9d2c2"
+  },
+  {
+    "path": "test_actual_sender_bridge.py",
+    "sha256": "7b83842ebb89f5814c0a77a3a9ceddc68f93654163e4331d6c92701db3969372"
+  }
+]
