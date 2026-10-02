@@ -1,0 +1,11 @@
+# Reference-bound undo intent component
+
+October 2 UTC / October 1 Mountain 2026. Staged local component only; not deployed or wired to live undo.
+
+Inspection confirms existing undo primitives optimistically report Inbox restoration, and draft deletion reports success after SDK return. The new internal reversal journal binds saved action ID, report key, ordinal, message, original action and draft identity. It reserves shared mutation admission and commits unconfirmed before its callback. Matching reversal receipt, original action reversed_at/result, confirmed undo intent and reservation release commit atomically. A confirmed repeat reuses the receipt; uncertain repeats and changed references hold. Missing reservation checks now also recognize unresolved undo journal rows.
+
+Five synthetic cases pass: normal once-only reversal, lost response, wrong receipt, local action-row update failure, and wrong saved reference. All attempted effects occur at most once. Local update failure rolls back both confirmation and reversed_at and retains the shared hold. Wrong reference invokes no callback. No real Gmail operation or content was used.
+
+This verifies bookkeeping with a fake restoration callback, not actual Inbox/draft deletion compatibility or authenticated undo authority. The existing helpers must validate their provider responses, and the actual undo handler/schema must be composed with this module while preserving owner/reference rules. Draft deletion cannot be retried based simply on an absent draft: it may have been sent or removed elsewhere. There is no timed reset or generic reconciliation bypass.
+
+Run archived test_email_undo_intent.py beside undo/admission modules using existing HAL Python; only temporary synthetic SQLite. Existing full private package remains unchanged and has older admission code without this undo table. Full exact-package startup/off-host recovery, shared direct-writer coverage, account/requester binding, operator status and authoritative recovery remain gates. No live rollback required; preserve all uncertain records and newer accepted work. No production/SAM/Odoo/Warden/phone changes; zero application model/send calls, Codex quota consumed, dollar attribution unknown. Phase1 open.

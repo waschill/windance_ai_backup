@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email_mailbox_admission.py",
+    "sha256": "cf0ad5b6c498b7f7b5e81e214cf2ac1abf0ba4b64f3074e93b612e7a44c5ec2f"
+  },
+  {
+    "path": "email_undo_intent.py",
+    "sha256": "5a10cc6c552af519553fe54d4ec659f4aa2ed3394ae469f0b7c507d24b9fedf5"
+  },
+  {
+    "path": "email-undo-intent-20261002.md",
+    "sha256": "b935024c0e73ee0da2235839f768d9f98aa4eb5e683a721cc8989765a9af7646"
+  },
+  {
+    "path": "test_email_undo_intent.py",
+    "sha256": "3c470a9c7d414c61bb3922be244989e0bdb66b5f5701401330fcab1a662e8895"
+  }
+]

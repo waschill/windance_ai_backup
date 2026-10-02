@@ -494,3 +494,7 @@ Actual staged report detects existing approved-operation uncertainty before inbo
 ## October2 old unresolved journals retain mutation holds without reservation
 
 Staged admission checks unresolved autonomy/approved journals as well as shared slot, preventing partial/older schema state from silently allowing another mutation. Four missing/orphan/confirmed-history cases and eight admission/reconciliation regressions pass. No historical evidence rewritten; old snapshots predating all intents still need external reconciliation. Evidence: archive/20261002-email-missing-reservation/email-missing-reservation-20261002.md. Full package integration and remaining rollout gates open; no production changes.
+
+## October2 reference-bound undo journal staged
+
+New internal reversal intent binds saved report/action identity, shares mutation hold and atomically confirms original reversal fields plus receipt. Five synthetic normal/lost/wrong/local-failure/reference cases pass with at most one effect. Actual restore/delete-draft primitive validation and authenticated handler/schema/recovery integration remain. Evidence: archive/20261002-email-undo-intent/email-undo-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.
