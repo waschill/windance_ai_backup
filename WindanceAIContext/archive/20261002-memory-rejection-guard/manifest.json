@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory-rejection-guard-20261002.json",
+    "sha256": "d2a7c06e60aa1d6281ce26e04540b7053663a5b62ed7d74438bad6e684c08741"
+  },
+  {
+    "path": "memory-rejection-guard-20261002.md",
+    "sha256": "ec1a28659385d0891854f0ed93e16541f580aaea3f6b22f4b6a571881d1d3d04"
+  },
+  {
+    "path": "memory-rejection-http-20261002.json",
+    "sha256": "6d0bcf046c99dfec560a5bea4d048f50f42d5bf7f2797aa5eb71bf1954857462"
+  },
+  {
+    "path": "prepare_memory_rejection_guard.py",
+    "sha256": "9c64d2dedaa8f3f2cac83fe00c85a05dda27c75df8dbbee8b04c5581750c8b29"
+  },
+  {
+    "path": "test_memory_rejection_guard.py",
+    "sha256": "20f72b98aa42ad4c6e86a00285ae0a2759c2f932edd71474bbfac856750812e3"
+  },
+  {
+    "path": "test_memory_rejection_http.py",
+    "sha256": "7ce27c082631550e97331959eeb459b62f3fa638a76778d2ce9ca35465fb799a"
+  }
+]
