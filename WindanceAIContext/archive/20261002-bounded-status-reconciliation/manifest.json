@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_outbox_status.py",
+    "sha256": "560f5d83d7f1011caa066e52b0c88f6bfcc14eaae0e4726e721d0e9b7a0b8c56"
+  },
+  {
+    "path": "bounded-status-reconciliation-20261002.md",
+    "sha256": "9eadb42c3929c088c8d296f0a78cf815eeb5c028bfde2a85baa469f24bbc6e7c"
+  },
+  {
+    "path": "keyed_outbox_status.py",
+    "sha256": "5716a80b0c846e4a1b93d6dab7afcbc0a6d389658c6f30ead1fcebe3c4ce0f3a"
+  },
+  {
+    "path": "test_bounded_outbox_status.py",
+    "sha256": "fcdf38ae0c093d2205097c24688d83bcb5329da72675cd094ac2b3cfb53a9da9"
+  },
+  {
+    "path": "test_status_wait_transition.py",
+    "sha256": "e964495ef338637039669e17c3e60bbcfe72d296a1167cdf3a5442e00faa4c9a"
+  }
+]

@@ -878,3 +878,7 @@ Real receipt composition passed nine isolated crash/delivery cases. New owner bo
 ## October2 supervised CLI worker composition passes in isolation
 
 Actual worker argument parsing/pinned loading/queue lock/receipt path passed nine instrumented cases. Guardian cutoff at1.5seconds released lock; two restarts held pre/post-send uncertainty without replay. No real transport or deployment. Caller bounded-wait/status contracts, SMS coverage, updated cold package and coordinated cutover remain gates. Evidence: archive/20261002-supervised-worker-composition/supervised-worker-composition-20261002.md.
+
+## October2 bounded read-only caller reconciliation staged
+
+Ten state fixtures and pending-to-verified transition pass without sends or file mutations by query.55-second maximum wait returns explicit uncertainty/expiry and only same-request query guidance; no blind retry. Live caller/admission integration and complete budgets remain unverified; production unchanged. Evidence: archive/20261002-bounded-status-reconciliation/bounded-status-reconciliation-20261002.md.
