@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_bounded_entry.py",
+    "sha256": "17103005efb0a1a75ea77fcd4bb48d96228b020697d5d13b0cc7d98e88a913c1"
+  },
+  {
+    "path": "email-bounded-entry-20261002.md",
+    "sha256": "3bda589a8ed42934e0579db390f3eb3bec0b9637f28a49f7ddb0e61784eda10d"
+  },
+  {
+    "path": "test_email_bounded_http.py",
+    "sha256": "f573f8676b1bb397bfda5dc1579c53b409fc89f1205d1bd6c9174a55ab0b656f"
+  }
+]

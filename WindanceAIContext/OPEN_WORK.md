@@ -674,3 +674,7 @@ Private17-file worker package e41e91ef rejects12 invalid requests before loading
 ## October2 report errors sanitized and nonempty worker interruption verified
 
 Candidate1bc85632/manifest6d385677 removes raw report exception disclosure; actual-function and full-subprocess response/audit fixtures pass. Complete nonempty report tests preserve confirmed or uncertain intent across process termination and second report without repeated fixture effects. Staged only; actual identity/provider/endpoint integration and exact-package recovery remain open. Evidence: archive/20261002-email-report-privacy-worker/email-report-privacy-worker-20261002.md.
+
+## October2 staged report calls supervised worker and HTTP failures are explicit
+
+R2 main5e95c9d6/manifest2f1df84b routes summary callers through120-second fixed worker, preserves owner guard and fails HTTP report auth closed. Actual ASGI checks401/401/503/503/200 distinguish invalid report from success; authorized failure uses real subprocess with absent fixture credentials. Nonempty interruption/no-replay regressions pass. Not deployed; real identity, natural consumers, exact recovery/layout and other entry points remain open. Evidence: archive/20261002-email-bounded-entry/email-bounded-entry-20261002.md.
