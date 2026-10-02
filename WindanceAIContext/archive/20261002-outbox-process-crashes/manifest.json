@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "outbox-process-crashes-20261002.json",
+    "sha256": "59c4d9be9d9df0868cc1a23a8a08155497165d59f5c8aa0ea80852ddd38dfe9e"
+  },
+  {
+    "path": "outbox-process-crashes-20261002.md",
+    "sha256": "69b575b12a5a492d6c6b2bb017450bb282441bbc55e22e6270386de3d8c81551"
+  },
+  {
+    "path": "test_outbox_process_crashes.py",
+    "sha256": "0ed223be3ef46230af4e4b2ad5fbeb0f64dbf86842fb3d26a7e716ef27c9b421"
+  }
+]

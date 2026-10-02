@@ -781,3 +781,7 @@ Read-only SAL worker decoded99 of100 latest outgoing attributed archives; one re
 ## October2 exact attributed receipt composition staged
 
 Read-only observer plus actual pinned decoder passes25 synthetic HAL/SAL SQLite scenarios, including unreadable-candidate ambiguity, conflicting representations and incomplete flags. No sender/receipt consumer changed, no live delivery claimed. Durable request/chunk boundaries, exclusive receipt claims, supervised execution and coordinated rollout remain open. Evidence: archive/20261002-messages-receipt-composition/messages-receipt-composition-20261002.md.
+
+## October2 actual outbox abrupt-process recovery verified
+
+Pinned live daemon passes four fresh-interpreter crash/restart cases with synthetic intercepted sender: zero repeated effects, uncertain work quarantined and completed result retained. Production unchanged. Submission is not delivery; pre-send/chunk receipt identity and power-loss directory durability remain unproven. Evidence: archive/20261002-outbox-process-crashes/outbox-process-crashes-20261002.md.
