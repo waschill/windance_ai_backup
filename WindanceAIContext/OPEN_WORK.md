@@ -458,3 +458,7 @@ Staged internal component atomically claims/rejects original batch, records item
 ## October2 numbered selection integrated with actual staged schema/handler
 
 Five actual handler cases pass: overlapping selection executes once, uncertain result persists, PIN/reference failures perform no execution, rejection preserves remaining items and original expiry. Atomic selection table/helper composed; no production changes. PIN matcher/executor intercepted, so authentication/live effects remain unproven. Item-level/shared holds, display and exact-revision recovery remain gates. Evidence: archive/20261002-email-selection-harness/email-selection-harness-20261002.md. Phase1 open.
+
+## October2 stable approval item lineage resolver tested
+
+Read-only staged resolver maps items across repeated splits to original approval/index with action hash, validating selection digest/partition/payload/expiry. Six synthetic cases pass; changed or ambiguous evidence holds. Identity only, no executor authority; per-item receipts/shared holds and stronger recovery anchors remain gates. Evidence: archive/20261002-email-approval-lineage/email-approval-lineage-20261002.md. No real mailbox/model or production changes; Phase1 open.
