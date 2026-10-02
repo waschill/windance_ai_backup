@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "lost-caller-reconciliation-20261002.md",
+    "sha256": "adfdb617b5eec7e52f8e505cb626729fb05655c62748c5f1ad28268d09353817"
+  },
+  {
+    "path": "test_full_receipt_queue.py",
+    "sha256": "64d8c147e5d4f68542d7d3428998515f1b65b6208c08f0b750f5e64b6a3e7b1a"
+  },
+  {
+    "path": "test_lost_outbox_reply.py",
+    "sha256": "2dc43b0b3487de86a2d1ef8380a9268882f823819e3de9fb75b4c7da88591d65"
+  }
+]

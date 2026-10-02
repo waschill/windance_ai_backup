@@ -833,3 +833,7 @@ Read-only source confirms sender max(60,45*chunks+15) can exceed80-second wrappe
 ## October2 read-only keyed outcome lookup staged
 
 Ten state fixtures preserve all file bytes and distinguish legacy submission from journal-backed delivery; actual producer Unicode enqueue compatibility passes on SAL. No sends or installation. Lookup provides timeout reconciliation without enqueue but is not wired to callers; authenticated/bounded access, full lost-response composition and coordinated rollout remain gates. Evidence: archive/20261002-keyed-outbox-status/keyed-outbox-status-20261002.md.
+
+## October2 killed waiting caller reconciles same request without replay
+
+Actual producer main queued then killed while waiting; complete staged daemon/observer/journal flow yielded verified delayed delivery or held post-send crash. Actual repeated same-key enqueue and readonly lookup created no new queue item/send. No production change. Cold-release recovery, real caller/worker integration and deployment gates remain open. Evidence: archive/20261002-lost-caller-reconciliation/lost-caller-reconciliation-20261002.md.
