@@ -107,6 +107,8 @@ Finish private setup and live inbound verification, then outbound profile/dialin
 ## Weekly decision-record handoff — 2026-09-25
 The September 22 stack review reached completed Scout research but blocked Forge assessment (5f1b0dfa-4f93-4d14-b0af-bc66601ec912), with no persisted /decision-logs record. Latest SAL output confirms incomplete/no report sent. Diagnose result extraction/classification as a bounded proposed follow-up; no repair or rerun is authorized by the digest. Owner for follow-through: Vega; proposed repair owner: Forge. Revisit 2026-10-02. Evidence and acceptance criteria: operations/digests/2026-09-25.md.
 
+Follow-through 2026-10-02: closed for the September 27 tested acceptance run. Live /decision-logs now contains the qualified five-decision record and historical sign-offs, imported into operations/decisions/weekly-stack-review-20260927T202829Z.json. Historical task IDs were removed in the authorized September 29 cleanup and must not be recreated. Later scheduled delivery is not established by this check. Recommendations revisit October 18; current Idea Board discussion/hold revisits October 9. See operations/digests/2026-10-02.md.
+
 
 Herald phone 2026-09-27: verify a fresh owner call acknowledges requests, speaks a tool-backed answer and stays connected. Later verify a real staff assignment receipt when William requests it; no research replay during diagnosis. Outbound remains deferred. See projects/HERALD_PHONE_2026-09-25.md.
 
