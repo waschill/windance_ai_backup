@@ -1,0 +1,11 @@
+# Owned-memory process crash and cold restoration evidence
+
+Ran actual separate child interpreters against disposable synthetic SQLite files on HAL. The worker was forcibly terminated with os._exit immediately before commit and immediately after commit. Before-commit exit73 left zero fact/request rows; retry committed revision1 once. After-commit exit74 retained one fact/request row; retry returned revision1 as replayed without another write. Integrity checks passed. These crashes affected only test child processes, not production services.
+
+Then granted a synthetic business fact to Shawn and corrected it as William, invalidating the old grant. A fresh interpreter retrieved only the corrected value for the owner and no shared fact for Shawn. Re-running the schema installer preserved existing records. A SQLite online backup was closed and opened in another fresh interpreter as a cold restored database: canonical facts, revision and revoked access matched. Retrying the original request against that restored copy reported superseded and did not restore the old value; two fact events and grant/invalidate audit records remained.
+
+All three scenario groups passed. This adds process restart and cold copy evidence to prior in-process tests; no test sender, scheduler or task dispatcher was enabled. Source modules copied only through imports in the test workspace. Zero production writes, model/embedding calls, Odoo calls or messages.
+
+Scope limit: this is a consistent current synthetic snapshot, not full application disaster recovery or protection from an intentionally stale restore. Restoring an older backup can restore old values/grants, so real recovery must reconcile post-backup corrections/revocations and preserve request/delivery ledgers before enabling callers. There is no claimed deletion from historical backups or external sources. Real credentials, deployed schema version management, production integration, mirrored copies and conversational source validation remain unfinished. The candidate is not deployed; no production rollback needed.
+
+Evidence: test_memory_process_recovery.py and memory-process-recovery-20261002.json, with the exact candidate storage/gateway/policy files archived alongside. Phase1 remains open.

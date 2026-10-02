@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "memory-process-recovery-20261002.json",
+    "sha256": "5672ae7c826c1bb1af3e5ad03b6f6a9c91a6a94cec29b1ec312bf026c8f28606"
+  },
+  {
+    "path": "memory-process-recovery-20261002.md",
+    "sha256": "5a92b3a9fc84814a669bd7c6a9c1e92a982701e66824cac61ac959c50cf1a6ff"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "9b45b02958a5d28b019e5ce182d3af3c4d7827922b856360f47096c5f4a1401c"
+  },
+  {
+    "path": "source_fact_gateway.py",
+    "sha256": "f1f6a6ddce8777b694e6c9378b118b719e5a13144286e9ed4f681173dc0bdbe4"
+  },
+  {
+    "path": "test_memory_process_recovery.py",
+    "sha256": "8e592847a8299a2eb2e4350cf89001baa393f43c1b9d7ed56a41e0a82d0d62ce"
+  }
+]

@@ -187,3 +187,7 @@ Direct remember source currently identifies channel/user before the conversation
 ## October2 owned-memory router tested on disposable actual Harness
 
 Staged HTTP router independently enforces scoped credentials even for trusted loopback. Eight concurrent identical requests committed once; forged owner and cross-owner query rejected/withheld; correction/deletion/replay and actual secret classifier fixture passed. Actual Harness app ran only in disposable dirs with intercepted external operations and synthetic credentials. Production routes remain unchanged; real conversational/worker/credential/mirror integration and migration still incomplete. Evidence: archive/20261002-owned-memory-http/owned-memory-http-20261002.md. No production/model/send change; Phase1 open.
+
+## October2 staged memory survives actual child-process crashes and cold restore
+
+Before/after-commit forced child exits preserve atomicity and stable retry revision. Fresh interpreter and cold SQLite backup retain corrected facts, revoked grants and superseded-request behavior. All three synthetic scenario groups passed without production I/O. Current consistent snapshot only; older restore requires post-backup reconciliation. Production integration remains unfinished. Evidence: archive/20261002-memory-process-recovery/memory-process-recovery-20261002.md. Phase1 open; zero application model calls or sends.

@@ -1,0 +1,27 @@
+{
+  "scenarios": [
+    {
+      "scenario": "before-commit",
+      "actual_child_exit": 73,
+      "retry_revision": 1,
+      "passed": true
+    },
+    {
+      "scenario": "after-commit",
+      "actual_child_exit": 74,
+      "retry_revision": 1,
+      "passed": true
+    },
+    {
+      "scenario": "fresh-process-and-cold-restore",
+      "corrected_value_preserved": true,
+      "revoked_grant_preserved": true,
+      "old_request_cannot_resurrect": true,
+      "passed": true
+    }
+  ],
+  "production_writes": 0,
+  "model_calls": 0,
+  "real_sends": 0,
+  "limits": "Current consistent synthetic snapshot only; restoring an older backup still requires post-backup reconciliation."
+}
