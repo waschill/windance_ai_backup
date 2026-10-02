@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-02T17:45:27.633854+00:00",
+  "results": [
+    {
+      "path": "/health",
+      "synthetic_forwarded_header": false,
+      "status": 200
+    },
+    {
+      "path": "/team",
+      "synthetic_forwarded_header": false,
+      "status": 200
+    },
+    {
+      "path": "/team",
+      "synthetic_forwarded_header": true,
+      "status": 401
+    }
+  ],
+  "response_content_read": false,
+  "limits": "Trusted loopback only; does not test external reachability or other proxy hops."
+}

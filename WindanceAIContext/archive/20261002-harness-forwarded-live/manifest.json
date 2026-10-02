@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "harness-forwarded-live-20261002.md",
+    "sha256": "bc2147322e43fa72b004fc1ea1ade96a41f27964b471cc6b15b03f861cc22421"
+  },
+  {
+    "path": "harness-forwarded-live-result.json",
+    "sha256": "e132d20dc672c6390a3909f7cb7f07ccb6013ad886cd354b0b7516985dcf86c5"
+  },
+  {
+    "path": "inspect_harness_proxy.py",
+    "sha256": "85151b1d2ba338d348808292a32dfc1f71bfd8d5a07ad87789701f2eb9148d78"
+  },
+  {
+    "path": "probe_harness_forwarded_readonly.py",
+    "sha256": "0438db446b962d8e0f3b2ae64af9ee9c98658e38e6a259b764bc90137a8da2eb"
+  }
+]

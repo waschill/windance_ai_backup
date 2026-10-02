@@ -1062,3 +1062,7 @@ Conflict-free three-way AST composition preserves all installed receipt/privacy/
 ## October2 Harness trust-boundary qualification verified
 
 Actual restored candidate rejects12 simulated untrusted requests and preserves documented trusted-source behavior; no external effects. Corrected76-route inventory includes indirect message guard and excludes startup/middleware decorators. Local unauthenticated reads do not establish public exposure; proxy and human identity remain unverified. No deployment; Node-RED reload retry still permission-denied. Evidence: archive/20261002-email-trust-boundary/email-trust-boundary-20261002.md.
+
+## October2 live Harness forwarded-address behavior checked
+
+Read-only loopback /team returns200 normally and401 with synthetic untrusted X-Forwarded-For; running HTTP stack therefore interprets this trusted-hop header. Application-only ASGI evidence is not whole-proxy evidence. No external exposure claim, service change or effectful endpoint. Proxy/caller identity gates remain open. Evidence: archive/20261002-harness-forwarded-live/harness-forwarded-live-20261002.md.
