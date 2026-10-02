@@ -617,3 +617,7 @@ Fresh read-only online snapshot, current ten-file stage4600e59 and unchanged liv
 ## October2 staged email sweep holds partial reads and removes raw provider errors
 
 Before/after actual-function tests reproduce partial-batch continuation and diagnostic leakage, then verify read failures stop before actions, fixed HTTP503/502 and honest held domain-rule replies. Current private ten-file candidate b30bd912 remains uninstalled; previous full recovery certifies4600e59 only. Unknown action effects, identity and transport gates remain. No real mailbox/model/service/SAM action. Evidence: archive/20261002-email-sweep-hold/email-sweep-hold-20261002.md.
+
+## October2 latest email sweep candidate passes actual ASGI and off-host recovery
+
+Current b30bd912 full startup health200 and real ASGI sweep401/503/502 verify auth/held/error behavior with no mailbox actions. Fresh read-only snapshot, 28 original non-sequence tables, six empty new tables and cold copy verified; HAL checks15 files/four SQLite copies. No production/service/SAM changes. Identity, provider uncertainty and execution bounds remain deployment gates. Evidence: archive/20261002-email-sweep-full-recovery/email-sweep-full-recovery-20261002.md.
