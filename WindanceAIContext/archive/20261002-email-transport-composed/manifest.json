@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_transport_candidate.py",
+    "sha256": "1d87180caab7b52a114ad6e2cf26d0a4c5cc814503590f09639e7aef431dd16e"
+  },
+  {
+    "path": "email-transport-composed-20261002.md",
+    "sha256": "7fd8d0cb5ceabbd6a4eaee929f0febc849b5d0c1c54a7f607e14d3172ff5c01c"
+  },
+  {
+    "path": "gmail_single_attempt_transport.py",
+    "sha256": "5753b6c3b9ac59021b2de6480656d167502d550e61254633aff09e4197a05c12"
+  },
+  {
+    "path": "test_email_transport_intent.py",
+    "sha256": "d01f19f354a1eaf8cda08f01e9ecc50ec67a2c0cf53801077b3c1ddf6a6a46e6"
+  },
+  {
+    "path": "test_email_transport_private_recovery.py",
+    "sha256": "e7c4e589f3e205b9b31eb2d257d7217bda07cf02e4019aa67b472c64eb684d0b"
+  },
+  {
+    "path": "verify_email_offhost_recovery.py",
+    "sha256": "60ffae784560aecde89235160e87b4b84a579d212f338eadfe28ee04152078ff"
+  }
+]

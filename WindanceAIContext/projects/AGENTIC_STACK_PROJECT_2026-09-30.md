@@ -629,3 +629,7 @@ Actual googleapiclient execute(num_retries=0) plus installed httplib2 0.32.0 iss
 ## October2 standalone Gmail transport passes single-attempt failure tests
 
 Actual Google client/HTTPX loopback tests record one POST in seven success/failure scenarios. Three offline SDK cases verify static discovery, bounded refresh exchanges and no API401 replay. Staged only: full Harness composition, whole-job deadline, identity and exact-revision recovery remain open. No real mailbox/model/service/SAM action. Evidence: archive/20261002-gmail-single-attempt-transport/gmail-single-attempt-transport-20261002.md.
+
+## October2 staged Gmail transport integrated and exact recovery verified
+
+Candidate30ec0a37 preserves unrelated AST/Calendar and routes Gmail through single-attempt transport. Actual draft/journal/Google/loopback tests retain one POST across cold-database retry; lost response stays unconfirmed. Fresh snapshot/full isolated startup and HAL16-file/four-DB recovery checks pass. Not deployed; identity, whole-job bounds, refresh persistence and broader callers remain open. No real mailbox/model/service/SAM changes. Evidence: archive/20261002-email-transport-composed/email-transport-composed-20261002.md.
