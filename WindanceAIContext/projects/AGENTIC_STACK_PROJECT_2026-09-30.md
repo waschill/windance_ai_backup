@@ -701,3 +701,7 @@ Standalone transactional guard passes account-change/concurrency and12 historica
 ## October2 saved email history preflight distinguishes legacy archive labels
 
 Read-only verified snapshot review finds four pending Gmail approvals; 11 initially unclassified autonomy records are stored archived labels, not evidence of failures. Source unchanged, privacy/enum fixtures pass. No account adoption, replay or service change. Explicit account/history reconciliation, fresh migration testing and coordinated caller cutover remain open. Evidence: archive/20261002-email-history-preflight/email-history-preflight-20261002.md.
+
+## October2 account-checked email candidate selected recovery verified
+
+Exact21-source manifestdcfdd110 passes fresh isolated startup, preserved28 original tables, six empty journals and cold-copy checks. HAL verifies28 stable files/four SQLite copies. Restored release passes five local workflow cases including account rejection and no repeated uncertain writes. No deployment or real provider/model/SAM action. Identity/history migration, coordinated callers and natural delivery remain open. Evidence: archive/20261002-email-account-recovery/email-account-recovery-20261002.md.

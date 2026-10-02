@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-account-recovery-20261002.md",
+    "sha256": "5f315401812e35c45c6dff050fe9d409e7e59faa33e4f78a14e8ee07a5610142"
+  },
+  {
+    "path": "email-account-recovery-result-20261002.json",
+    "sha256": "d91088157d6761c8f1c4032768031d0cb43033198c5eb315921dc05425cc4702"
+  },
+  {
+    "path": "email-account-restored-workflow-20261002.json",
+    "sha256": "a120d8cf02a06c04fe5bde1cdb3cc65bdae01b0459d5b6fdc78c4baab96ffb6d"
+  },
+  {
+    "path": "recover_email_account_release.py",
+    "sha256": "65de838618b534b11e50ec2e8a1911ed16a35ae80b73fb2fdc6e7ca7638c14c0"
+  },
+  {
+    "path": "test_email_complete_loopback.py",
+    "sha256": "2d99e49788522ceb3ef01491612eb489614b9585a9c17c2101df493f4dccf4c3"
+  },
+  {
+    "path": "verify_email_account_recovery.py",
+    "sha256": "568e0fcdd39028d6e7a4afb54d45273c47d1939fd9ac6e9f643be450f42f69c7"
+  }
+]
