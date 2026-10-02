@@ -465,3 +465,7 @@ Actual schema/batch executor now preserves confirmed/uncertain per-item receipts
 ## October2 composed whole/selected approval chains pass
 
 Actual handlers, schema, batch executor, journals and Trash helper pass four normal/last-response-lost scenarios with simulated Gmail. Confirmed preceding items preserved, uncertainty honest, selected remainder exact, repeated approval adds no effects. Auth/freshness/source refs mocked; no live identity/delivery claim. Shared admission/single actions/operator recovery remain. Evidence: archive/20261002-email-full-approval-chain/email-full-approval-chain-20261002.md. No real Gmail/model or production changes; Phase1 open.
+
+## October2 single approved actions journaled in staged executor
+
+Single Gmail claimed approval now uses original approval/item0 intent and minimal validated receipt. Three actual handler/executor/schema synthetic Trash cases pass; normal confirmed, lost/bad receipts uncertain and retry adds no effect. Four whole/selected batch-chain regressions pass. Shared admission/no-ID callers/undo/identity and exact recovery remain gates. Evidence: archive/20261002-email-single-intent/email-single-intent-20261002.md. No real mailbox/model or production changes; Phase1 open.

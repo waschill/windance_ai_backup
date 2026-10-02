@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_single_intent.py",
+    "sha256": "1daee3dd3fdf9cc97506e5e106b04a6f21dfa57c02215c999edbaeeab8bc50e8"
+  },
+  {
+    "path": "email_approved_item_intent.py",
+    "sha256": "c16c975fe706f2358f76147f344bfc41d7a21f907ecde61a8d7cab63ef1a4c98"
+  },
+  {
+    "path": "email-single-intent-20261002.md",
+    "sha256": "420c8cf4a6896aeed72e4967d2b5da114646d3d2927fe2e82ac0be0332710265"
+  },
+  {
+    "path": "test_email_full_approval_chain.py",
+    "sha256": "d5e4f25a89784e487badcec7812f5da69818427c961c3c2f3f069fe698b29577"
+  },
+  {
+    "path": "test_email_single_intent.py",
+    "sha256": "893ed134ef0257cfb6522782679de620023174aeb6d4faaa2b4f5cd2e430f0ac"
+  }
+]
