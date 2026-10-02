@@ -522,3 +522,7 @@ Action-request route stored a reserved argument field rejected by the staged ite
 ## October2 content-free read-only recovery inspection verified
 
 New local diagnostic reports approval/journal/reservation state without mailbox content or mutations, distinguishes incomplete schema and unknown reads, and bounds returned references with cooperative SQLite deadline. Eight synthetic checks and three actual private recovery-copy inspections pass; database hashes unchanged. This is operator visibility, not reconciliation or live health. Evidence: archive/20261002-email-recovery-status/email-recovery-status-20261002.md. No production/model/mailbox changes; Phase1 open.
+
+## October2 isolated diagnostic timeout/cancel controls verified on AL
+
+Existing pinned local image ran fixed known-failure diagnosis with network none, read-only root/evidence, nonroot/capability/resource limits. Diagnosis, three-second timeout and explicit test cancellation all verified stopped workers and cleaned unique disposable containers; result/event evidence retained. No production service or model/send/Odoo/dispatch changes. General authenticated job contract, coordinator recovery and open-ended diagnosis remain unproven; original pilot3/Phase4 not passed. Evidence: archive/20261002-bounded-diagnosis/bounded-diagnosis-20261002.md.

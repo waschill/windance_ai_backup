@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bounded_diagnosis_job.py",
+    "sha256": "0d64ff3e97181b137d88631c30d0118881a060d555b0bd8b84946d2877b5486e"
+  },
+  {
+    "path": "bounded_diagnosis_worker.py",
+    "sha256": "f4165081090669dce0d67502319896100db030651fa63c1d10eb6aec09a616a6"
+  },
+  {
+    "path": "bounded-diagnosis-20261002.md",
+    "sha256": "b7dd84a09b4810bc938f35a2bb2ea2fd289f033b8fb657598b59c3ed1a0ac88a"
+  },
+  {
+    "path": "bounded-diagnosis-cancel.json",
+    "sha256": "533570525190e2eecc3b2c069dbf1d5a4316de0598934c03d56f275a62df17e1"
+  },
+  {
+    "path": "bounded-diagnosis-result.json",
+    "sha256": "b928c93998a901cc1b109e690210fcf7a56488d6d2bff3ae766c781d58072162"
+  },
+  {
+    "path": "bounded-diagnosis-status.json",
+    "sha256": "416315b8520aa5f9cb9d6685fc7502b2768d800fb3d67b2e424cf0c150806a0c"
+  },
+  {
+    "path": "bounded-diagnosis-timeout.json",
+    "sha256": "0bf16209462636544a796ec134bd2f342c587c901e303ec0a374a2e9e0a2948a"
+  },
+  {
+    "path": "failure.json",
+    "sha256": "1b8b6b3d5b4f7a7da751cfaf663d9fe894e4eeecb5cc51c31735704b395863a8"
+  }
+]

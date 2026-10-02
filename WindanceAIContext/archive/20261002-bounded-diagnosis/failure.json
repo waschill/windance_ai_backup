@@ -1,0 +1,9 @@
+{
+  "approval_action": "gmail.delete",
+  "payload_argument_names": ["action", "message_id"],
+  "journal_rejects_payload_action": true,
+  "before_synthetic_effects": 0,
+  "after_synthetic_effects": 1,
+  "before_sha256": "af8385aeba34d9a262424825769cc519132afe3f6b29976221d6984cfdf814af",
+  "after_sha256": "4600e59f380d1de53e42fff2535e9865eb4e2b97dc1739313a6291e4c37c54b7"
+}

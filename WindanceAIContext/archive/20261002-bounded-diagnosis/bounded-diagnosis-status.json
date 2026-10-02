@@ -1,0 +1,29 @@
+[
+  {
+    "state": "submitted",
+    "elapsed_seconds": 0.0,
+    "limits": {
+      "worker_seconds": 3,
+      "diagnostic_invocations": 1,
+      "model_calls": 0,
+      "network": "none",
+      "memory_mb": 128,
+      "cpus": 0.5
+    }
+  },
+  {
+    "state": "running",
+    "elapsed_seconds": 0.173,
+    "container_settings_verified": true
+  },
+  {
+    "state": "completed",
+    "elapsed_seconds": 0.474,
+    "worker_stopped_verified": true
+  },
+  {
+    "state": "cleaned",
+    "elapsed_seconds": 0.539,
+    "previous_state": "completed"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "state": "submitted",
+    "elapsed_seconds": 0.0,
+    "limits": {
+      "worker_seconds": 3,
+      "diagnostic_invocations": 1,
+      "model_calls": 0,
+      "network": "none",
+      "memory_mb": 128,
+      "cpus": 0.5
+    }
+  },
+  {
+    "state": "running",
+    "elapsed_seconds": 0.182,
+    "container_settings_verified": true
+  },
+  {
+    "state": "deadline_exceeded",
+    "elapsed_seconds": 3.186
+  },
+  {
+    "state": "timed_out",
+    "elapsed_seconds": 3.289,
+    "worker_stopped_verified": true
+  },
+  {
+    "state": "cleaned",
+    "elapsed_seconds": 3.321,
+    "previous_state": "timed_out"
+  }
+]
