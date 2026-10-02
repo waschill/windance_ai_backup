@@ -1,0 +1,32 @@
+{
+  "source_sha256": "62483284dea6eefe010ea9d34cc4bb4438a6042bb910462f8679ab676ef80c1c",
+  "results": [
+    {
+      "scenario": "normal-completion",
+      "local_result": "completed",
+      "interrupt_requests": 0,
+      "socket_closed": true,
+      "full_tool_access_requested": true,
+      "remote_stop_confirmed": "synthetic normal completion"
+    },
+    {
+      "scenario": "manual-interrupt",
+      "local_result": "INTERRUPTED",
+      "interrupt_requests": 1,
+      "socket_closed": true,
+      "full_tool_access_requested": true,
+      "remote_stop_confirmed": "synthetic completion event"
+    },
+    {
+      "scenario": "deadline",
+      "local_result": "failed",
+      "interrupt_requests": 0,
+      "socket_closed": true,
+      "full_tool_access_requested": true,
+      "remote_stop_confirmed": false
+    }
+  ],
+  "real_model_calls": 0,
+  "production_changes": false,
+  "conclusion": "Deadline closes local socket without requesting or confirming remote turn interruption. Full-access turn is not a bounded read-only diagnostic sandbox."
+}

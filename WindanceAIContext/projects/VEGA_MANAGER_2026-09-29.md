@@ -191,3 +191,7 @@ Staged HTTP router independently enforces scoped credentials even for trusted lo
 ## October2 staged memory survives actual child-process crashes and cold restore
 
 Before/after-commit forced child exits preserve atomicity and stable retry revision. Fresh interpreter and cold SQLite backup retain corrected facts, revoked grants and superseded-request behavior. All three synthetic scenario groups passed without production I/O. Current consistent snapshot only; older restore requires post-backup reconciliation. Production integration remains unfinished. Evidence: archive/20261002-memory-process-recovery/memory-process-recovery-20261002.md. Phase1 open; zero application model calls or sends.
+
+## October2 bridge deadline does not establish stopped execution
+
+Three isolated actual-function scenarios confirm normal completion and explicit interrupt behavior, but the ten-minute deadline closes the socket with zero interrupt requests and no remote terminal evidence. Turn setup requests full tool access; read-only prompt wording is not an enforced diagnostic boundary. No historical continued execution is claimed. Required deadline/uncertainty/restart/session-hold correction and original diagnostic acceptance are recorded in archive/20261002-bridge-execution-bounds/bridge-execution-bounds-20261002.md. No production changes/model calls/sends; Phase1 and bounded-jobs gates remain open.
