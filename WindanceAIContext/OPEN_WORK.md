@@ -862,3 +862,7 @@ Actual producer main queued then killed while waiting; complete staged daemon/ob
 ## October2 staged request guardian handles parent loss and normal-exit descendants
 
 Dedicated group leader kills same-group workers on parent EOF, worker exit or deadline; lifecycle/no-late-effect and full queue no-replay tests pass. Total timeout returns varied up to4.508seconds for1.5-second budget; cleanup overhead/escaped-session/guardian-death limits explicit. Production unchanged; r1 package remains historical. Evidence: archive/20261002-outbox-guardian-lifecycle/outbox-guardian-lifecycle-20261002.md.
+
+## October2 stronger supervisor cutoff gate fails; no rollout
+
+0.3-second guardian tests allowed a synthetic0.8-second effect in repeated samples despite near-deadline finish entry. External-group alternative also failed; root cause unverified, no test processes remain. Earlier lifecycle passes do not prove cutoff. No production change; preserve uncertainty and investigate action-boundary/actual termination before integration. Evidence: archive/20261002-guardian-cutoff-failure/guardian-cutoff-failure-20261002.md.

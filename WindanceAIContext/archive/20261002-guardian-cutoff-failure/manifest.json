@@ -1,0 +1,30 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "guardian-cutoff-failure-20261002.md",
+    "sha256": "96f19d8454f4504295fd53dad926b775a6d6cf1d46a3c020f8419937e31c2e53"
+  },
+  {
+    "path": "guardian-timing-correction-20261002.json",
+    "sha256": "d8f94b716f1314429859a7d09b6cffe354c3d7cd991b4e3d855491746300677c"
+  },
+  {
+    "path": "guardian-timing-probe-20261002.json",
+    "sha256": "14b04352b57663fdc8b3c9d58459a30288368e3036523173a479c36d9f2af157"
+  },
+  {
+    "path": "outbox_group_worker.py",
+    "sha256": "baff264e7af9a68ebaea3fecfbddbd9a43ba7afafba30648c827bf7002ac1b03"
+  },
+  {
+    "path": "outbox_request_guardian_external_candidate.py",
+    "sha256": "22f19af05f4a4721e4ab09dc193420432b3fbfa6d41e5385a2adfee585cba4d9"
+  },
+  {
+    "path": "probe_guardian_timing.py",
+    "sha256": "110d9595da31956974c79819acafb29cd150e3293cebad27e318fd34feda6ce1"
+  }
+]
