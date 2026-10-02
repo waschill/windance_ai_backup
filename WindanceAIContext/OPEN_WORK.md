@@ -502,3 +502,7 @@ New internal reversal intent binds saved report/action identity, shares mutation
 ## October2 actual undo handler and primitive receipts composed
 
 Nine actual schema/handler/primitive synthetic reversal cases pass with no repeat effects, honest uncertainty and atomic local receipts. Installed SDK empty-response contract verified read-only; four full approval-chain regressions pass. Exact package now includes orphan/old-journal holds. Direct callers, second-step/crash cases, identity/operator resolution and exact recovery remain. Evidence: archive/20261002-email-undo-harness/email-undo-harness-20261002.md. No real Gmail/model or production changes; Phase1 open.
+
+## October2 full current email package startup/private/off-host recovery passes
+
+Exact undo/approval/shared-hold package imported and passed full ASGI lifecycle/health on fresh isolated private copies with external effects denied. All28 original non-sequence tables preserved, baseline sequence matched, six added tables empty, cold copy identical. Fifteen stable files and four databases independently verified on HAL. No production/SAM interruption. Identity/live transport/direct-writer/operator gates remain. Evidence: archive/20261002-email-undo-package-recovery/email-undo-package-recovery-20261002.md. Phase1 open.

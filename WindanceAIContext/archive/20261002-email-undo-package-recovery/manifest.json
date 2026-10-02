@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-undo-package-recovery-20261002.md",
+    "sha256": "9d13f24f68e278c516b5f2a5b38b7c18df8886bdab96dffc15005a6d7ce5724a"
+  },
+  {
+    "path": "test_email_private_recovery.py",
+    "sha256": "c685c7995ecfafbc317fdb0abdb1ac22023f10e613dd08d754c27edd0944cd85"
+  },
+  {
+    "path": "verify_email_offhost_recovery.py",
+    "sha256": "53c8b42d8022da0be327e593ddcd97ddca9f7412be3f27daebb4ebbc98258f45"
+  }
+]
