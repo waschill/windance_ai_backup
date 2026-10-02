@@ -778,3 +778,7 @@ Sourcef354d141 adds stable Mountain-date delivery identity and honest submitted 
 ## October2 independent Messages receipt observer staged
 
 Current sender success remains osascript completion, not delivery. Live schema verified content-free. Read-only exact direct-message observer passes12 HAL/SAL synthetic cases, rejecting stale/group/wrong/ambiguous/incomplete evidence and preserving DB bytes. No sends or live integration. Trusted baseline/chunk persistence, bounded observation and coordinated receipt-consumer migration remain open. Evidence: archive/20261002-messages-delivery-evidence/messages-delivery-evidence-20261002.md.
+
+## October2 actual Messages storage reveals receipt observer coverage gap
+
+Latest100 outgoing iMessages all attributed-only, zero plain text: staged exact-text observer cannot yet cover these records. No bodies/recipients exported or pilot passes inferred. Existing sender helper accepts raw substring as sent, reproduced synthetically; not an exact decoder/delivery proof. Pinned decoder evaluation required before integration; no installation or service/send changes. Evidence: archive/20261002-messages-attributed-coverage/messages-attributed-coverage-20261002.md.
