@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "check_email_runtime_resolution.py",
+    "sha256": "d34cf7c03b473c9b72fc637fe4413a4ee9eeb23e011b966fdd343e6e63caf3f4"
+  },
+  {
+    "path": "email-runtime-resolution-20261002.md",
+    "sha256": "e9a69a7be4a4e8a2ca54c560ae3cf69642b22ca97f17d14f77c0cf6a96623a6e"
+  }
+]
