@@ -1,0 +1,42 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_email_recoverable_candidate.py",
+    "sha256": "9cc4d0486380da1b50a5a13f646841f4480c4aa4b340b6dd81b7d875d664a217"
+  },
+  {
+    "path": "email_action_intent.py",
+    "sha256": "13220eb4699603c3ef9c347a191cc01937f6a8112e50ad1cb6c6db2003d493a1"
+  },
+  {
+    "path": "email-recoverable-build-20261002.json",
+    "sha256": "cd7082804d8b49eb99ee8319ed3e31308812a82488112fea2a57f1ec2c269594"
+  },
+  {
+    "path": "email-recoverable-harness-20261002.json",
+    "sha256": "888e37d199775c0022573b408f5399736863cd627c7a3731da9a4752cc4f75b4"
+  },
+  {
+    "path": "email-recoverable-harness-20261002.md",
+    "sha256": "0285c0a8e8df74b91625ff9db377208f3ffdc1803375c9750afbb9d7728e53ab"
+  },
+  {
+    "path": "email-recoverable-private-recovery-20261002.json",
+    "sha256": "ffdc9c61810bf47dc535bd872412a54fdfb5ee0a2ca86cdbf07aa33bfa1f31ea"
+  },
+  {
+    "path": "gmail_draft_recovery.py",
+    "sha256": "4ae40da14bf033af295c68f5e30c8e940284963598d3ac22d42e3036ec848c51"
+  },
+  {
+    "path": "test_email_private_recovery.py",
+    "sha256": "7c2a5c5d04e33174808f8139387ab67fd0860378fa3887fdb8b3248b5a53a65a"
+  },
+  {
+    "path": "test_email_recoverable_harness.py",
+    "sha256": "c180bb5b85da2509747b95acb84cc4023b9c4763f5301a886023e3d13c9041c0"
+  }
+]

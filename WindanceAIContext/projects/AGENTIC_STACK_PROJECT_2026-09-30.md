@@ -393,3 +393,7 @@ Official Gmail draft search/raw retrieval supports a proposed operation-marker a
 ## October2 durable draft evidence and positive reconciliation tested
 
 Staged component atomically stores marker/fingerprint/source identity before draft callback. Exact read-only draft match confirms local intent only after rechecking unchanged evidence; missing/edited/local-drift cases remain held. Four connected cases plus child-exit/concurrency regression pass without duplicate synthetic creates. Initial Windows fixture-handle cleanup corrected before passing run. Full Harness rebuild, mailbox binding, live marker behavior and cross-path integration remain open. Packet: archive/20261002-email-draft-reconciliation/email-draft-reconciliation-20261002.md. No actual Gmail/model or production changes; Phase1 open.
+
+## October2 recoverable draft path integrated and private recovery verified
+
+Actual staged Harness report/schema/prepared-MIME helper passes normal and accepted-lost-response recovery with one synthetic create. Both evidence records precede submission. Exact full app ASGI startup/health and fresh private database baseline comparison pass;28 non-sequence tables preserved, only two empty recovery tables added. Eight private files copied/hash-verified on HAL. Live Gmail identity/marker behavior, transport bounds, cross-path admission and operator reconciliation remain gates; not installed. Packet: archive/20261002-email-recoverable-harness/email-recoverable-harness-20261002.md. No actual Gmail/model calls; Phase1 open.
