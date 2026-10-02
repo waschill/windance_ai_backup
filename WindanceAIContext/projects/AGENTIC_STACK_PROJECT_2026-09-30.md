@@ -745,3 +745,7 @@ Private candidated282c158 requires sweep auth, waits150seconds, rejects redirect
 ## October2 staged sweep caller and Harness real HTTP compatibility passes
 
 Pinned callerd282c158 and serverd9dd9a97 pass missing/wrong client auth, actual authenticated empty subprocess sweep and missing server auth over a temporary loopback listener. One worker, no provider/notice calls; listener stopped. Production unchanged. Nonempty actual mailbox, durable notice receipt, coordinated configuration and schedule recovery remain open. Evidence: archive/20261002-sweep-caller-harness-http/sweep-caller-harness-http-20261002.md.
+
+## October2 broader live launch-registration reconciliation
+
+HERALD26 selected definitions:14 registered,12 absent across user/gui501 including intentionally disabled phone;11 others need dependency/ownership reconciliation, not batch activation. Core recovered services remain running. SAL9/11 registered, with both Warden jobs intentionally unloaded. Invoice last exit1 lacks timestamp and is not proof of new post-repair failure. No service/send/dispatch changes. Evidence: archive/20261002-launch-registration-reconciliation/launch-registration-reconciliation-20261002.md.
