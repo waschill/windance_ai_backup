@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "diagnostic_bounded_process.py",
+    "sha256": "17fc3aa761329aa0b63cda1fe4e70d7f02464dfb50d42108d2cb0741644b14ea"
+  },
+  {
+    "path": "diagnostic_remote_adapter.py",
+    "sha256": "c387b50b05451266900d38c414bb680f719218b1837b2d5e957399ffc233d012"
+  },
+  {
+    "path": "diagnostic-recovery-package-r4-20261002.zip",
+    "sha256": "a7797198f78d02a021715f00b5ac9aa041366863e19d67357281938f51e1a15b"
+  },
+  {
+    "path": "diagnostic-transport-bounds-20261002.md",
+    "sha256": "0c5c98e50e89838b932afdf24a5a05feef3c3495c8ae7d04b1e66be445b86084"
+  },
+  {
+    "path": "diagnostic-transport-worker-results.json",
+    "sha256": "8da8416ec8772eb348ca23fed8a1605800efaf1d6be9e0d4c4771347f53e3a74"
+  },
+  {
+    "path": "package_diagnostic_transport_r4.py",
+    "sha256": "234835a0ae9e66b598e125b02597b2b5453f750401ed75fc2879fe676c06423c"
+  },
+  {
+    "path": "test_diagnostic_bounded_process.py",
+    "sha256": "fe2dec33ffd6a238d296485a4b9bee510962a30921ac1deacb3e1578079aa227"
+  },
+  {
+    "path": "test_restored_diagnostic_r4.py",
+    "sha256": "9b1551bd00a2895406d3b56804337460556157550df663fcddc1fb8e6cb68fbd"
+  }
+]

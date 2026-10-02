@@ -1074,3 +1074,7 @@ Actual API now caps request streams at4096bytes/10seconds before parsing and ret
 ## October2 diagnostic revision3 recovery and actual worker path pass
 
 Thirteen-file exact ZIP760766df verified on HAL and restored on HERALD. Ownership/cancel/recovery and request-bound tests pass; restored HTTP-to-AL fixed worker completes once, denies cross-owner results, prevents duplicate worker and closes temporary listener. Source hashes unchanged. No persistent deployment; identity/UI/consumer and original pilot gates remain. Evidence: archive/20261002-diagnostic-r3-recovery/diagnostic-r3-recovery-20261002.md.
+
+## October2 diagnostic transport capture bounded and recovery verified
+
+Staged SSH capture now enforces streaming stdout/stderr/time limits and keeps failed claims uncertain without replay. Seven real-process cases, actual-ledger uncertainty and full HTTP-to-AL regression pass. Exact15-file r4 ZIP restored API/stream/process tests and unchanged hashes pass; no persistent deployment. Evidence: archive/20261002-diagnostic-transport-bounds/diagnostic-transport-bounds-20261002.md.
