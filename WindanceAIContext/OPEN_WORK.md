@@ -410,3 +410,7 @@ Staged component atomically stores marker/fingerprint/source identity before dra
 ## October2 recoverable draft path integrated and private recovery verified
 
 Actual staged Harness report/schema/prepared-MIME helper passes normal and accepted-lost-response recovery with one synthetic create. Both evidence records precede submission. Exact full app ASGI startup/health and fresh private database baseline comparison pass;28 non-sequence tables preserved, only two empty recovery tables added. Eight private files copied/hash-verified on HAL. Live Gmail identity/marker behavior, transport bounds, cross-path admission and operator reconciliation remain gates; not installed. Packet: archive/20261002-email-recoverable-harness/email-recoverable-harness-20261002.md. No actual Gmail/model calls; Phase1 open.
+
+## October2 live Gmail profile verified; expected owner binding remains pending
+
+Existing credential completed profile-only read in0.399s with no mail content or writes; refresh was in-memory and credential file unchanged. Integration lacks independent expected-account setting, so human owner match is unverified. William asked for intended Gmail address. Staged boundary passes seven synthetic match/mismatch/config/error cases; not installed. Packet: archive/20261002-gmail-account-boundary/gmail-account-boundary-20261002.md. No account address/secrets exported, no model calls; Phase1 open.
