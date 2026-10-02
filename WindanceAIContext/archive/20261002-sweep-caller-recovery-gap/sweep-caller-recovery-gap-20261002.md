@@ -1,0 +1,13 @@
+# Scheduled Gmail sweep caller recovery gap — October 2
+
+Live read-only launch metadata found the saved com.windance.gmail-sender-rule-sweep definition with StartInterval600 and /Users/herald/services/agent-harness/gmail_sender_rule_sweep_notify.py. Neither user/501 nor gui/501 currently registers this label. This proves absence in the two checked domains, not absence of every possible manual/alternate invocation. No job was loaded or executed and no mailbox action or notice was sent.
+
+Pinned caller SHA25620c9295addda27835b6d6520556a2390b58146a6ed5d76dd8e60353b4aea566d. Actual source uses urllib JSON POST without Authorization or a Harness-token setting, a90-second sweep timeout and15-second notice timeout. The staged server worker deadline is120seconds, so the caller can time out while work remains in progress. Existing source has no explicit retry loop, no bounded response read and no durable notice receipt. It ignores the notice endpoint response and labels all returned notices as auto-delete notices.
+
+Extracted actual main ran only with synthetic endpoints and replaced transport under an outbound/process deny guard. Three cases reproduced exit0: empty sweep object; explicit failed notice response; and an unconfirmed-action notice placed under the auto-delete heading. The fixture did not call either live service. It demonstrates caller-contract defects, not historical message loss, duplicate delivery or completed mailbox actions.
+
+Recovery must include this caller in coordinated authentication and deadline changes before restoring its600-second schedule. Validate sweep-result structure/status and classify notice delivery from explicit authoritative receipts; keep transport uncertainty distinct from failure-before-send. Do not replay unknown notices or automatically retry effects. Preserve existing intended sender rules/recipient and privately back up source/plist/state before deployment. The staged bounded sweep alone does not repair this caller or restore its launch registration.
+
+Mailbox identity investigation found a documented William alert destination but no independently verified intended mailbox pin. An alert recipient is not sufficient proof of which account owns saved mailbox history. The existing owner question remains pending; no pin or binding was inferred or written.
+
+No Node-RED tool access or alternative access path was attempted. The caller's saved source was inspected as an independent dependency; neither notice endpoint nor flows were accessed. Browser restriction still holds, Warden remains owner-suspended and SAM protected time preserved. No live change or rollback needed. No new charge/application-model call; Codex cost separate and unknown. Phase1 remains open.

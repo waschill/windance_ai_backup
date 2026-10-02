@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "probe_sweep_notifier_contract.py",
+    "sha256": "1ad8bfdf6f56eb26612f9b604b7817ba0972932d50720fdf43a0618ee461eda0"
+  },
+  {
+    "path": "sweep-caller-recovery-gap-20261002.md",
+    "sha256": "ee41187f5d85c198765e59b88c3d0879e6fcc77c54f2492aa5504a7aa431e2bd"
+  },
+  {
+    "path": "sweep-notifier-contract-20261002.json",
+    "sha256": "2c264f42d9dc6dc57ebabea90d916a7b5b7b7d19c54a1fb305954ff367d5e094"
+  }
+]

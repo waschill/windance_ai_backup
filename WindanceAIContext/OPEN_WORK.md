@@ -746,3 +746,7 @@ Both isolated snapshots pass eight lifecycle checks: explicit reader gains sourc
 ## October2 revised report-and-sweep package recovery verified
 
 Current21-source manifestd9dd9a97 passes fresh isolated startup,28-table preservation, empty journals and cold copy. HAL verifies28 stable files/four SQLite copies. Restored release passes report/sweep provider fixtures and HTTP boundary checks. No deployment/model/provider/SAM action. Identity/history, coordinated callers, broader bounds and natural delivery remain open. Evidence: archive/20261002-email-sweep-release-recovery/email-sweep-release-recovery-20261002.md.
+
+## October2 scheduled Gmail sweep caller recovery gap verified
+
+Saved600-second job is unregistered in HERALD user/gui501. Live caller20c9295a sends no auth, waits90seconds against staged120-second worker and ignores notice receipt. Actual-main synthetic tests reproduce false success for empty result/failed notice and misleading uncertain-action heading. No job/send/mailbox/Node-RED action performed. Include caller and receipt/deadline repair before schedule recovery; owner mailbox pin remains unverified. Evidence: archive/20261002-sweep-caller-recovery-gap/sweep-caller-recovery-gap-20261002.md.
