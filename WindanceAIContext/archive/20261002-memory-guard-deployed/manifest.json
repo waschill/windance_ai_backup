@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "memory-guard-backup-20261002.json",
+    "sha256": "e3d1a065fef05c1a5add5f7721f97aaa2f5eba7d0198830194950a69c7a83eb7"
+  },
+  {
+    "path": "memory-guard-deployed-20261002.json",
+    "sha256": "4f146e070f33b6f9f68f8cae4ce800a6c3206380373bd597a95c204e490ac4de"
+  },
+  {
+    "path": "memory-guard-deployed-20261002.md",
+    "sha256": "2ac01db96f8750e9d68aeb3f65b68f29d6351d38adbe7567fd17851b909e96b7"
+  },
+  {
+    "path": "memory-guard-live-20261002.json",
+    "sha256": "8057b0623c9ca2dd0fb0fde9ffc7e16a83bab8bed2166d9e030a0766957043c4"
+  },
+  {
+    "path": "memory-guard-offhost-20261002.json",
+    "sha256": "64d7d423b5f2abe182ba4c7e47398490629d22a3593a9897f100968cd038da93"
+  },
+  {
+    "path": "rollout_memory_guard.py",
+    "sha256": "42fa42b045e19632a3304d6a7eb02dbc31deb23dd42c4b502364961104c41bb7"
+  },
+  {
+    "path": "verify_memory_guard_live.py",
+    "sha256": "6fecbda775879002b2380a57461427de3a8e26b462e935351a229a5701b104b0"
+  }
+]
