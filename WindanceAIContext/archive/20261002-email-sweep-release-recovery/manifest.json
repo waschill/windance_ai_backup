@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "email-sweep-release-backup-20261002.json",
+    "sha256": "95a7c55742a7c6c8cb269172343faf85277660011335d5066b7348c77ddf3207"
+  },
+  {
+    "path": "email-sweep-release-http-20261002.json",
+    "sha256": "e7ff75eb571a403a8ec9a3bd2795350d29618b718717a83309d3300aee48f524"
+  },
+  {
+    "path": "email-sweep-release-offhost-20261002.json",
+    "sha256": "4c901601601b0b9e91d3ad05d7510350a0050f88f4dc0f25ab813da78c92fc94"
+  },
+  {
+    "path": "email-sweep-release-recovery-20261002.md",
+    "sha256": "ee27235938775c861b13aa7309b617c5655741ba62d5667c4da1969f356c964a"
+  },
+  {
+    "path": "email-sweep-release-report-20261002.json",
+    "sha256": "a120d8cf02a06c04fe5bde1cdb3cc65bdae01b0459d5b6fdc78c4baab96ffb6d"
+  },
+  {
+    "path": "email-sweep-release-workflow-20261002.json",
+    "sha256": "853986b31ed336e47f6af1240a77c71ce22699671e7e10bbaabdecc439a1f564"
+  },
+  {
+    "path": "recover_email_sweep_release.py",
+    "sha256": "1cc9a7c267edfe8e2975925ff98b3a904a35f65dbd264c2da89f3b2fb29d5d63"
+  },
+  {
+    "path": "verify_email_sweep_release.py",
+    "sha256": "407819b212b8236f74f8bcc29548e2a0986aeae29a0cdf103c194bf66523d122"
+  }
+]

@@ -1,0 +1,1 @@
+{"http_codes": [401, 401, 503, 200, 502, 503], "actual_empty_worker_launches": 1, "malformed_receipts_rejected": 5, "owner_rejected_before_spawn": true, "timeout_is_uncertain_not_success": true, "real_provider_or_model_calls": 0, "limits": "Empty real worker; timeout and malformed receipts injected. Nonempty sweep integration remains unverified."}

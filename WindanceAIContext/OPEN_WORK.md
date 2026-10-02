@@ -742,3 +742,7 @@ Both isolated snapshots pass12 synthetic HTTP/model checks: owner reads across f
 ## October2 restored knowledge-to-file sharing and revocation verified
 
 Both isolated snapshots pass eight lifecycle checks: explicit reader gains source/file access without edit permission, unrelated user remains denied, removal revokes both reads on same session and owner content survives. Actual grant models/HTTP reads; grant-editing UI/API authorization and downstream copied context not certified. Backups unchanged, containers removed, production unchanged. Evidence: archive/20261002-webui-sharing-acl/webui-sharing-acl-20261002.md.
+
+## October2 revised report-and-sweep package recovery verified
+
+Current21-source manifestd9dd9a97 passes fresh isolated startup,28-table preservation, empty journals and cold copy. HAL verifies28 stable files/four SQLite copies. Restored release passes report/sweep provider fixtures and HTTP boundary checks. No deployment/model/provider/SAM action. Identity/history, coordinated callers, broader bounds and natural delivery remain open. Evidence: archive/20261002-email-sweep-release-recovery/email-sweep-release-recovery-20261002.md.
