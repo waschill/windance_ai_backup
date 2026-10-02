@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "shared-report-caller-audit-20261002.md",
+    "sha256": "5002b80f5d86fe8ef9510afdd947cd8792b2a4da80945630b13aa8a539f37433"
+  },
+  {
+    "path": "test_bridge_notice_failure.py",
+    "sha256": "a450847ac338f25ef9a12ecdc8004f430136098ac9f19e9f03da46eb285ae04a"
+  },
+  {
+    "path": "verify_report_source_drift.py",
+    "sha256": "2423b673293c3b88cd1a6cd5a918f7445fe3fe25217c32207a8bbebdfb7050ea"
+  }
+]

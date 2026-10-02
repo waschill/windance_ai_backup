@@ -966,3 +966,7 @@ Atomic PID/state/time/budget records and throttled idle refresh pass monitoring 
 ## October2 coordinated report caller code cold-restored and dependency gap identified
 
 19 private files restored/hash-verified on HERALD and HAL; restored manager/Sentinel/Capture/journal tests pass without sends or dispatch. Original live sources unchanged. Shared-wrapper references include bridge/Harness beyond packaged callers; key-required global replacement remains unproven pending exact path inspection. Evidence: archive/20261002-report-callers-recovery/report-callers-recovery-20261002.md.
+
+## October2 shared-wrapper audit reproduces notice-loss path and reconciles Harness revision
+
+Actual isolated notification bridge marks failed notice seen and skips next run without key; active scheduling remains unverified. Harness0a95 differs from saved9865597 only in classify_email_autonomy function AST; memory guards identical, service running/HTTP200. Do not roll back to stale headline. Harness body-dependent key remains an identity gap before shared-wrapper cutover. Evidence: archive/20261002-shared-report-caller-audit/shared-report-caller-audit-20261002.md.
