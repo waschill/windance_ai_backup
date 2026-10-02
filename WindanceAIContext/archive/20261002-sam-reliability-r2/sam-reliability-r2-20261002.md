@@ -1,0 +1,19 @@
+# Composed SAM history, clear and memory acknowledgment candidate
+
+October 2 UTC / October 1 Mountain 2026. Staged only.
+
+The private r2 full-source candidate combines durable history-create and service-clear journals with the memory acknowledgment guard. The builder pins installed source and the prior candidate, modifies only init_db and post_completed_service_history relative to that candidate, and AST-verifies all other top-level definitions unchanged. init_db explicitly creates both journals. Module copies are included in the private manifest so the application hash cannot be mistaken for the complete revision.
+
+Private package: `/home/williamschilling/backups/sam-reliability-r2-20261002`. Main candidate SHA8e994992c402091aaef103e75bf9596c0d595c6e86c877d7852bba4df1b2aac9; exact module hashes are in the archived receipt. Full application source remains private. The production file is unchanged at SHA824026967ab935b2563f0a77021668754fa5969f704e17e3619137a455643bc1, verified by the builder.
+
+The composed test uses actual candidate connect/init_db/commit_day/history/JSON helper functions, real schema with text item IDs, and synthetic remote callbacks. Six cases pass. Normal commit creates/clears/posts once. Late memory error retries memory without repeating either confirmed Odoo effect. Lost history acknowledgment blocks clearing and memory. Lost clear acknowledgment followed by a new need remains held and preserves the new need. False write result remains held. Confirmed clear followed by legacy local-receipt failure can repair its local receipt and commit without clearing a newer need. Both schema initializations are repeatable; integrity remains ok. Zero actual remote/Odoo/API/model/send/dispatch calls occurred.
+
+This is the combined commit path, not a new full startup or private-business-database recovery proof. Earlier r1 full startup/private snapshot results identify r1 and do not automatically certify r2. Re-run those checks on r2 before any deployment, along with clear-journal process-death/concurrency behavior, legacy receipt/cutover reconciliation and fresh maintenance ownership/backups. No production rollback is needed for staged files.
+
+## Unresolved Odoo boundary
+
+Current need flags represent state, not a unique generation of a service request. The existing guarded write has no atomic version precondition. Reading the flag or write_date and then clearing in a second call still permits an intervening change. A current false flag does not prove which request an uncertain earlier write cleared; a current true flag may represent a new request. Likewise, matching history text/date alone is not authoritative operation identity. The staged journals deliberately do not reset/release these holds from elapsed time or ambiguous state.
+
+A complete solution must establish authoritative operation identity and atomic conditional behavior at the Odoo transaction boundary, or use an owner-approved changed business workflow. Neither new Odoo fields/server actions nor broader write permissions are implied by the narrow existing service-completion authorization. No such changes were made. Until this design is resolved, do not claim general concurrency safety or rollout acceptance. An older restored database/writer must not erase or ignore outstanding intents.
+
+Reproduce using archived builder and test on SAM with the pinned source/prior candidate and both archived journal modules on the builder's /tmp path. The builder emits the exact private package; the test validates its manifest and imports modules from that package. Evidence is sanitized and contains no schedules, notes or credentials. Codex cost unmeasured. Phase1 and pilots remain open; detailed notes suspended, Warden suspended, phone/Level8 disabled, SyncThing unchanged and Node-RED hold unchanged.

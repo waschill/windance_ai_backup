@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "build_sam_reliability_r2.py",
+    "sha256": "0a41fc87379c06d19f30d8f7586dc4d1f638677438333ade215ce21db4ac30a2"
+  },
+  {
+    "path": "sam_clear_intent.py",
+    "sha256": "57324f96c8e5638a3679f729d10a0425cb07751e2b9802630daf87d73107430f"
+  },
+  {
+    "path": "sam_history_intent.py",
+    "sha256": "bdb0193cebecefc918c0b11ef763ce64d363bf64a3f744a8b2b3e304e9847b01"
+  },
+  {
+    "path": "sam-reliability-r2-20261002.md",
+    "sha256": "e3d41fcb38ae04d63622e821ceebbc22cf8291cdd40a5b247797b598aa9ff32d"
+  },
+  {
+    "path": "sam-reliability-r2-build-20261002.json",
+    "sha256": "e33f68e29eb4b6df5bc28d5e7319cfc90e9fda1e78a12309b5046dcb35f981cb"
+  },
+  {
+    "path": "sam-reliability-r2-tests-20261002.json",
+    "sha256": "eec4e16c3f842b521bab0d16c6ec4e4420ea9253a9eeb4af13e0310bd87dd98b"
+  },
+  {
+    "path": "test_sam_reliability_r2.py",
+    "sha256": "4730f35dfda7f98a62ba7cde50b855b9b08c222e45e3044ee7743ad8206bca76"
+  }
+]

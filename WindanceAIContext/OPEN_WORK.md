@@ -370,3 +370,7 @@ Full pinned module/main ran as unprivileged SAM user in separate loopback-only n
 ## October2 service-need retry risk reproduced and clear journal staged
 
 Actual SAM helper with synthetic remote effects can clear a newer need after response/local-receipt loss and records success without checking write acknowledgments. Staged durable clear intent preserves uncertainty, reuses confirmed outcomes and verifies exact model/horse/field plus true result. Six baseline/six candidate cases passed with no real Odoo calls. First-clear concurrency, authoritative reconciliation, full composition and deployment remain open. Packet: archive/20261002-sam-clear-intent/sam-clear-intent-20261002.md. No production changes; Phase1 open.
+
+## October2 composed SAM two-journal commit candidate passes
+
+Private full-source r2 composes history intent, exact-acknowledgment clear intent and memory guard. Six actual-schema/commit-path synthetic scenarios pass: no repeated confirmed writes, unknown outcomes block commit, and newer needs survive lost-response/local-receipt retries. No production or real Odoo calls. Earlier r1 startup/recovery does not certify r2. Atomic first-write versioning/operation identity, authoritative reconciliation, cutover and deployment remain unresolved; existing narrow Odoo permission does not authorize new server actions/fields. Packet: archive/20261002-sam-reliability-r2/sam-reliability-r2-20261002.md. Phase1 open.
