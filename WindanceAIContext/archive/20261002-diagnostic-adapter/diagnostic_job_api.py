@@ -1,0 +1,45 @@
+"""Staged authenticated job ledger. No scheduler or execution route is enabled."""
+import hashlib,hmac,json,re,sqlite3,uuid
+from contextlib import contextmanager
+from pathlib import Path
+from typing import Literal
+from fastapi import FastAPI,Header,HTTPException
+from pydantic import BaseModel,ConfigDict,Field
+
+class Submission(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    request_key:str=Field(min_length=1,max_length=128,pattern=r'^[A-Za-z0-9_.:-]+$')
+    kind:Literal['email_payload_diagnosis']
+    evidence_sha256:str=Field(pattern=r'^[0-9a-f]{64}$')
+
+from diagnostic_job_ledger import Ledger, JobError
+from fastapi.responses import JSONResponse
+
+def create_app(database,credential_principals):
+    # Server-owned mapping of SHA256(token) -> principal; request body never selects it.
+    principals=dict(credential_principals)
+    if not principals or any(not re.fullmatch('[0-9a-f]{64}',k) or not isinstance(v,str) or not v.strip() for k,v in principals.items()):
+        raise ValueError('Explicit nonempty credential/principal configuration required')
+    ledger=Ledger(database);app=FastAPI();app.state.ledger=ledger
+    @app.exception_handler(JobError)
+    async def ledger_error(request,exc):
+        return JSONResponse(status_code=exc.status_code,content={"detail":exc.detail})
+    def owner(header):
+        if not isinstance(header,str) or not header.startswith('Bearer ') or len(header)>512:raise HTTPException(401,'Authentication required')
+        candidate=hashlib.sha256(header[7:].encode()).hexdigest()
+        for digest,principal in principals.items():
+            if hmac.compare_digest(digest,candidate):return principal
+        raise HTTPException(401,'Authentication required')
+    @app.post('/jobs')
+    def submit(body:Submission,authorization:str|None=Header(default=None)):
+        return ledger.submit(owner(authorization),body)
+    @app.get('/jobs/{key}')
+    def status(key:str,authorization:str|None=Header(default=None)):
+        return ledger.read(owner(authorization),key)
+    @app.post('/jobs/{key}/cancel')
+    def cancel(key:str,authorization:str|None=Header(default=None)):
+        return ledger.cancel(owner(authorization),key)
+    @app.get('/jobs/{key}/result')
+    def result(key:str,authorization:str|None=Header(default=None)):
+        return ledger.result(owner(authorization),key)
+    return app

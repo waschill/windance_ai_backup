@@ -538,3 +538,7 @@ Revision3 snapshots bounded worker/evidence files per job and binds hashes to st
 ## October2 staged authenticated job ledger and cold retry boundary verified
 
 Actual ASGI/SQLite tests pass credential-derived identity, cross-principal denial, request-key/payload binding, one winning claim, honest cancellation and cold retry without requeue. Result unavailable remains409. No listener, worker consumer, staff assignment or model/send/Odoo action enabled. Execution adapter/transport/real identity/coordinator integration remain open; not a second manager or completed pilot. Evidence: archive/20261002-diagnostic-job-api/diagnostic-job-api-20261002.md.
+
+## October2 actual ledger-to-isolated-worker completion and receipt-loss recovery pass
+
+Fixed adapter binds claimed job/evidence/worker versions to actual Docker terminal result. Normal and simulated lost local receipt commit cases pass with no repeat worker; explicit existing-evidence reconciliation completes held result. Cold database preserves both receipts without replay; ten ASGI boundary regressions pass. No listener/consumer/staff dispatch or production changes. Authenticated full transport, active cancellation and remaining crash windows still open. Evidence: archive/20261002-diagnostic-adapter/diagnostic-adapter-20261002.md.

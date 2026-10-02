@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "case": "normal",
+      "job": "48170589d0c5410b845ff0de9a014f34",
+      "terminal_sha256": "ee663ae68e93c60cf48151a2f17397e0b5ccb08fed14befdb450174fe290fead",
+      "completed": true,
+      "retry_started": false
+    },
+    {
+      "case": "lost_receipt_commit",
+      "job": "070a50f8121748d49575979236f90dd1",
+      "terminal_sha256": "093fe87d68926fe775045030a5e8c5d6d90c783d1ae452fde483c3b2fa20602c",
+      "completed": true,
+      "retry_started": false
+    }
+  ],
+  "cold_receipts_equal": true,
+  "cold_retry_started": false
+}
