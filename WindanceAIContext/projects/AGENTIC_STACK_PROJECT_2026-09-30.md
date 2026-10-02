@@ -565,3 +565,7 @@ Fresh installed Harness source still permits broad trusted-host legacy memory wr
 ## October2 actual SAM renderer fits narrow producer contract; retry requirement verified
 
 Fresh pinned live source extracted into HAL synthetic fixture. Empty/mixed/Unicode summaries admitted; oversized rejected without local commit; lost acknowledgment leaves day uncommitted and repeats identical content on retry. Already-committed day does not repost. Receiver idempotency/revision/credential integration still required; no real API/Odoo/notes/SAM changes. Fixture SQLite cleanup corrected. Evidence: archive/20261002-sam-memory-render-integration/sam-memory-render-integration-20261002.md.
+
+## October2 atomic SAM business-source replay/revision receipts staged
+
+Dedicated producer admission composed with temporary SQLite source/receipt transaction. Eight simultaneous identical requests yield one commit; changed/stale requests denied, old replay marked superseded after correction, injected receipt failure rolls back source, cold replay equal and source drift denied. No live route/client/data changes. Persistent SAM event/receipt validation and business reader/source policy remain required before rollout. Evidence: archive/20261002-sam-business-memory-receipts/sam-business-memory-receipts-20261002.md.
