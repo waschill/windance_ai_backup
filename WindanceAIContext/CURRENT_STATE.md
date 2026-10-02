@@ -1,4 +1,7 @@
 # Current Operating State
+## October2 bridge deadline/uncertainty correction installed
+
+Coordinated idle HERALD bridge/manager update after live maintenance/Warden checks, fresh nine-file backup, cold SQLite/state verification and off-host hashes. Deadlines request interruption; uncertain execution survives restart and holds conflicting work until exact terminal evidence. Manager preserves/polls that status without replay. Health200/fresh heartbeat, installed hashes, unchanged four-table ledger/bridge state/plists and actual installed read-only canary reconciliation all passed. No model call/send/task/SAM change. Bridge nowad07a207e2dfdd84c226fedc1a8c65cf942bf69b0c6fe1b41a9deac35085508e; manager0ad87dcebb5844736ca218101ded61ce15c525c0042222f3f9e90d319f5445d5. Recovery/limits: archive/20261002-bridge-bounds-deployed/bridge-bounds-deployed-20261002.md. Natural cancellation and full diagnostic capability/spend gates remain unverified; Phase1 open, Warden suspended.
 
 ## October2 unpaid-invoice correction installed; no-send preview passes
 
@@ -779,6 +782,7 @@ HAL Codex follow-up: Herald's live desktop logs confirm HAL Connected with no er
 
 ## September30 project authority and release-watch handoff
 William authorized sustained agentic-stack execution with evidence gates. Phase1 remains open; original pilots restored. Priorities: email, network/software upkeep, read-only unpaid invoices. SAM protected22:00–05:00 America/Denver. See projects/AGENTIC_STACK_PROJECT_2026-09-30.md. Two-hour continuation and daily08:00 progress report are active in the owning chat. William confirmed HERALD OS update complete; live26.7.1/build25G241 corroborates version. Former15-minute upgrade polling is now daily10:00 release watch; see projects/SOFTWARE_RELEASE_WATCH_2026-09-30.md. Distinct Harness/runner/manager health investigation belongs to the stack project, preserving live Warden consensus. No service, route or business data changed to establish these records and automations.
+
 
 
 

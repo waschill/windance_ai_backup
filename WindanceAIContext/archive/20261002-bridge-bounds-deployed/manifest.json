@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "bridge-bounds-backup-20261002.json",
+    "sha256": "d05fe5304980465e0ba0b1540f903d0f21601d2124dc9499b27087ca0ae12e09"
+  },
+  {
+    "path": "bridge-bounds-deployed-20261002.json",
+    "sha256": "55651874551716499daff88a7a7731fa4e95f9d7436a55effa4f7725007ebfef"
+  },
+  {
+    "path": "bridge-bounds-deployed-20261002.md",
+    "sha256": "7813c5d4fccf21a6af90b0be5f9bd1079e2b9cb9dc37ce47a4425ca691129a61"
+  },
+  {
+    "path": "bridge-bounds-installed-reader-20261002.json",
+    "sha256": "ecfee96aa07c00ccce52993dc022fc0dd8e8da17562fbdc324aa09dd63ce0e44"
+  },
+  {
+    "path": "bridge-bounds-offhost-20261002.json",
+    "sha256": "28cf68e052f2645d6913dc884c99633288433c60ea7af82845871fb598bde6e2"
+  },
+  {
+    "path": "deploy_bridge_bounds.py",
+    "sha256": "4f60eb3aa14437b9dee0ea79c77bde513c023a9e42f412d01f0f5af68528252e"
+  },
+  {
+    "path": "verify_installed_bridge_reader.mjs",
+    "sha256": "cd2538f900834fce25d080abf696c5793c5af7d99e3235b43e174d1454168474"
+  }
+]
