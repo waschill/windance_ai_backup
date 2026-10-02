@@ -441,3 +441,7 @@ Actual claim/pending lookup survives child exits before effect, after synthetic 
 ## October2 atomic numbered-selection component tested
 
 Staged internal component atomically claims/rejects original batch, records item-index lineage and creates remaining approval without extending expiry. Five synthetic cases pass, including concurrency and child-insert rollback. No mailbox execution capability; full authenticated handler/schema/display/item/recovery integration pending. Evidence: archive/20261002-email-approval-selection/email-approval-selection-20261002.md. No production or real mailbox/model changes; Phase1 open.
+
+## October2 numbered selection integrated with actual staged schema/handler
+
+Five actual handler cases pass: overlapping selection executes once, uncertain result persists, PIN/reference failures perform no execution, rejection preserves remaining items and original expiry. Atomic selection table/helper composed; no production changes. PIN matcher/executor intercepted, so authentication/live effects remain unproven. Item-level/shared holds, display and exact-revision recovery remain gates. Evidence: archive/20261002-email-selection-harness/email-selection-harness-20261002.md. Phase1 open.
