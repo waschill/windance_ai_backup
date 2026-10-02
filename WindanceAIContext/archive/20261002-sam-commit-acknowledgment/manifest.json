@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-commit-acknowledgment-20261002.json",
+    "sha256": "5a7fc1782dd876c6e3eede60eafdbc21b2768976f724d1a2b0372928b8f9ddf7"
+  },
+  {
+    "path": "sam-commit-acknowledgment-20261002.md",
+    "sha256": "e2ca725174eeba411b9ff8043e551ee5b6714b2bc5b9c81734f6f7e6d7b594f7"
+  },
+  {
+    "path": "test_sam_commit_acknowledgment.py",
+    "sha256": "a5865c9e45977edc96ab6c9547fd6ae578cbb54ba4a3d2e87dc1cfb42a0d30ca"
+  }
+]

@@ -325,3 +325,7 @@ Current Harness GET/POST memory routes in disposable full app with synthetic sha
 ## October2 live SAM legacy-memory producer dependency confirmed
 
 Running main systemd service matches sam_schedule.py; commit_day source posts sam_daily_schedule/date_key to legacy memory. Nightly/refresh timers active/waiting, oneshots idle; wrapper provenance/recent outcomes remain unverified. No commit/API/DB operation or interruption. Preserve this dependency while preparing producer-specific write-only scope; do not blanket-disable legacy memory or assign business history a guessed person owner. Detailed notes remain suspended. Packet: archive/20261002-sam-memory-caller-scope/sam-memory-caller-scope-20261002.md. Other caller coverage remains incomplete; Phase1 open.
+
+## October2 SAM commit acknowledgment gap reproduced; guard staged
+
+Installed commit_day plus actual JSON helper in disposable empty-schedule fixture marks committed for application-error or malformed successful-HTTP JSON. Candidate requires explicit status ok before local marking; five baseline/five candidate cases pass with all API/Odoo effects intercepted. No historical false commit established. Earlier Odoo/rollover retry safety and fresh backup/maintenance/deployment remain gates; no live commit/source/service change. Packet: archive/20261002-sam-commit-acknowledgment/sam-commit-acknowledgment-20261002.md. Detailed notes remain suspended; Phase1 open.

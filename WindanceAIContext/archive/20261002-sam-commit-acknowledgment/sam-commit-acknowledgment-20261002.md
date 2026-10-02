@@ -1,0 +1,17 @@
+# SAM commit acknowledgment contract — reproduced and candidate tested
+
+October 2 UTC / October 1 Mountain 2026. Isolated only; no live commit or service interruption.
+
+Installed commit_day posts the daily-schedule memory payload, then marks the local day committed and logs success without checking the returned application status. Its installed json_http helper parses response JSON and does not validate application success. Actual HTTP errors raise through urllib, but a successful HTTP response containing an error object or wrong JSON shape reaches the local committed update.
+
+The test extracts both installed functions and runs them against a disposable synthetic empty schedule database. urllib transport, Odoo history/rollover and logging effects are intercepted. Installed behavior marks committed for `{"status":"error"}` and a malformed list response as well as success; transport failure leaves it uncommitted. Already-committed input makes no intercepted memory request. These are synthetic failure modes, not evidence that a historical SAM day was incorrectly committed.
+
+The staged function-only guard requires a dictionary whose status equals ok before the local UPDATE. Five candidate cases pass: success commits, provider error/malformed/transport failure leave uncommitted and do not log success, already-committed remains idempotent. The final test used the actual installed JSON HTTP helper, rather than assuming its behavior. Candidate function SHA630de67dfa93a8bb53920a7f6429aa2b09c4fcddc2b2c7a4c04e7ac59a5281f1; installed full source SHA824026967ab935b2563f0a77021668754fa5969f704e17e3619137a455643bc1. The test constructs the candidate only in memory; no production source is replaced.
+
+## Compatibility and recovery limits
+
+Existing legacy Harness POST /memory returns status ok, so this guard preserves the inspected normal response contract. A future scoped producer route must acknowledge durable acceptance explicitly; HTTP success alone is insufficient. The current guard does not bind a receipt to payload hash/revision and does not solve a crash after remote acceptance but before local marking. Rollover and authorized Odoo history operations occur before the memory post; retry safety of those helpers must be checked before claiming complete commit idempotency. Those effects were stubbed in the test and never invoked. Never replay an actual completed day merely to test acknowledgment.
+
+Before rollout, verify latest sources and live maintenance ownership, inspect actual upstream-helper idempotency and wrapper schedules, take fresh source/database backups and prove selective restoration. Deploy only within authorized SAM availability constraints and verify health without running a commit. Do not rewind the local committed/history ledger for rollback; source-only restoration and reconciliation preserve prior side effects. No production rollback is needed for this staged test.
+
+Evidence: archived exact test and sanitized ten-case receipt with hashes. Private copied test `/tmp/windance_test_sam_commit_ack_20261002.py` on SAM; run with its Python. It reads installed source, creates temporary fixtures and intercepts all API/business effects. No real schedule, notes, contacts, credentials or private content read. Detailed notes remain suspended. No API, Odoo, model, send or dispatch calls; no paid commitment. Codex cost unmeasured. Warden suspension, SyncThing, disabled Level8 and phone preserved; Node-RED hold unchanged. Phase1 open.
