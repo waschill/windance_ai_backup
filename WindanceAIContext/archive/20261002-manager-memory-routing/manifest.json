@@ -1,0 +1,58 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "authenticated_message_ingress.py",
+    "sha256": "a2a28e4fce64586a73ec3544732ac3d61f5ec32846979ad0dcb7723a1f46caca"
+  },
+  {
+    "path": "build_manager_authenticated_candidate.py",
+    "sha256": "bfdb7c29581ef08586f81a88edcea5bff7c00dd30142a0f6324a2866fe0131f3"
+  },
+  {
+    "path": "harness_memory_policy.py",
+    "sha256": "294f410854c457f610eca40a199d8bf155ea13fb024c0efffccdbd915624d25d"
+  },
+  {
+    "path": "manager_authenticated_routes.py",
+    "sha256": "b905068599b50487bfc8b6e927cca745469e141978286aa69dfa57a46ac12fa6"
+  },
+  {
+    "path": "manager-memory-routing-20261002.jsonl",
+    "sha256": "81efd4b74b099b36c386e777295207c0c588c45c4bae6cd06b04feac506a4932"
+  },
+  {
+    "path": "manager-memory-routing-20261002.md",
+    "sha256": "d21f160f1f6a2bdffcad2477be54b3dfcbca8b39e0b4769895062055cc9ae459"
+  },
+  {
+    "path": "memory_command_router.py",
+    "sha256": "10986803c6423c0e721ebe0a8b222f53d44263e0ccaf38e840eaa22d1562c887"
+  },
+  {
+    "path": "memory_ingress_policy.py",
+    "sha256": "07a111da9089f91de8ed3abae2601df7738b2a110e6edf0b003dfe6a6b3a0d71"
+  },
+  {
+    "path": "owned_fact_store.py",
+    "sha256": "9b45b02958a5d28b019e5ce182d3af3c4d7827922b856360f47096c5f4a1401c"
+  },
+  {
+    "path": "source_bound_facts.py",
+    "sha256": "8667a5fbeab1d8856409c696d89cfe161a6ac45be476d7b29805df4342977d22"
+  },
+  {
+    "path": "source_fact_gateway.py",
+    "sha256": "d0f7753dfcaa9aaf6384529b7637ad98cd3ee1ef5ca815a171cfe9d0215cc290"
+  },
+  {
+    "path": "source_memory_api.py",
+    "sha256": "7ee36b1d74d1d28017f6da77cf314fba56278b89f01b33ca06ac721b90ea7186"
+  },
+  {
+    "path": "test_full_manager_authenticated.py",
+    "sha256": "ea35dee510e4e06b3a474bdead6200c82bd7c25a8585d64fd240fafe4a0ab81d"
+  }
+]
