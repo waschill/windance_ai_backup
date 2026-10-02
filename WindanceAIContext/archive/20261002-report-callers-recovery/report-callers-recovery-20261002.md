@@ -1,0 +1,14 @@
+# Coordinated caller code recovery — 2026-10-02
+
+A private 19-file package was created from current staged report wrapper, transport, wire protocol, daily journal, Sentinel/Capture candidates, Capture interpreter-only plist, tests and six hash-pinned originals (including manager). Original live hashes matched before and after packaging. No installed caller changed.
+
+Archive SHA256: 6172b3992926198e4d3c0ec76c97667bb9a24bdfeaed84ee74921bedc31e168a
+HERALD: /Users/herald/backups/report-callers-20261002-r1/report-callers-private.zip
+HAL: C:\Users\wasch\Documents\WindanceBaselineRecovery\20261002-report-callers-r1\report-callers-private.zip
+Both restored into fresh sibling restored directories and verified all19 manifest entries. HERALD restored tests passed: actual manager send/advance plus staged wrapper/transport (4 statuses), Sentinel main (4 cases), Capture main (5 cases), daily journal and process-crash reconciliation. Manager and Capture used existing app Python; Sentinel/journal used system Python. All external transports were synthetic. Zero real messages, dispatches, service registrations or schedule changes. Post-test HERALD hashes verified all19 files and archive unchanged. HAL verification covers extraction/digests, not POSIX behavior.
+
+Restore code into a new isolated folder using verify_receipt_release.py and the archive digest; run the selected tests there. Never deploy test history as live history or overwrite current delivery records with old snapshots. This package contains private recipient-bearing source: retain locally in protected recovery directories and do not publish its contents. No mailbox, counselor, credentials or live report journal was copied.
+
+Read-only static reference inventory also identified agent-harness and vega-task-bridge references to the shared report wrapper beyond these caller candidates. The bridge file lacks the WINDANCE_DELIVERY_KEY literal, so global replacement with the key-required wrapper is not yet justified; marker presence/absence alone does not prove effective caller behavior. Inventory includes historical/staged files, excludes symlinked files and selected dependency/backup directories, and is not a complete runtime dependency map. rg was unavailable on HERALD; bounded-per-file Python reading was used. No source text or private values were output.
+
+Next: inspect exact active bridge/Harness caller paths and their identity/reconciliation contracts before deciding coordinated installation scope. Reconcile live maintenance ownership and schedules, take fresh state backups, prepare a service definition and rollback plan. The receiver r3 and this caller package establish code recovery, not production delivery acceptance. Phase1 remains open; Node-RED access remains blocked without workaround. Codex dollar cost unknown; these tests invoked no model services.

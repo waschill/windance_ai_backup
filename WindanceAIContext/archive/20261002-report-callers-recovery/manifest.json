@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "inventory_report_callers.py",
+    "sha256": "9c5c08153c3fa427475274eb1a44e90c9c589d7dec8930caf64a78ccb6782e68"
+  },
+  {
+    "path": "package_report_callers.py",
+    "sha256": "f1f710d8b3b96c4cf041395a53f1c90f09458b55a1a868fafaab958db08e1b79"
+  },
+  {
+    "path": "report-callers-recovery-20261002.md",
+    "sha256": "94b59ffa5c3b948f7e3294eb7767f4b443f782ee5fde0e77e885689c407ca5db"
+  }
+]

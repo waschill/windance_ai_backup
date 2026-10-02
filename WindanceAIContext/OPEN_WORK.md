@@ -962,3 +962,7 @@ Atomic PID/state/time/budget records and throttled idle refresh pass monitoring 
 ## October2 current receipt receiver r3 cold-restored on HAL and SAL
 
 41-file immutable archive verified on both hosts; restored SAL copy passes persistent flow, legacy contract, monitoring, orphan-worker and admission/crash tests. Post-test source/archive hashes unchanged. No real sends or production changes. Separate caller package and coordinated live cutover remain; this is code recovery, not a live-state rollback snapshot. Evidence: archive/20261002-receipt-release-r3-recovery/receipt-release-r3-recovery-20261002.md.
+
+## October2 coordinated report caller code cold-restored and dependency gap identified
+
+19 private files restored/hash-verified on HERALD and HAL; restored manager/Sentinel/Capture/journal tests pass without sends or dispatch. Original live sources unchanged. Shared-wrapper references include bridge/Harness beyond packaged callers; key-required global replacement remains unproven pending exact path inspection. Evidence: archive/20261002-report-callers-recovery/report-callers-recovery-20261002.md.
