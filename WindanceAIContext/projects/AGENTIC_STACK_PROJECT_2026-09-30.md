@@ -349,3 +349,7 @@ Private exact-current-source candidate changes only schema init, memory acknowle
 ## October2 fresh SAM database backup and schema/cold recovery verified
 
 Read-only online snapshot, pinned original/candidate schema functions and repeated initialization preserve all eleven existing tables/rows; candidate adds only empty intent table. Seven private files copied to HAL and independently hashed; four SQLite copies pass integrity and all-table comparisons. Service/two timers remain active with no restart, API, Odoo or model calls. No private rows/source published. Full startup, unknown-outcome reconciliation, need-clear concurrency and deployment gates remain; staged only, Phase1 open. Recovery instructions: archive/20261002-sam-existing-db-recovery/sam-existing-db-recovery-20261002.md.
+
+## October2 full SAM candidate startup passes isolated HTTP checks
+
+Full pinned module/main ran as unprivileged SAM user in separate loopback-only network namespace on a private restored snapshot, with startup producers/scheduler intercepted. Five actual GET routes returned200, original eleven tables unchanged, test server stopped. Initial sysfs-based namespace assertion failed before app import; corrected to namespace-aware socket interface query. No production/API/Odoo/model/send/dispatch changes. Reconciliation and need-clear concurrency remain deployment gates; Phase1 open. Packet: archive/20261002-sam-startup-isolated/sam-startup-isolated-20261002.md.

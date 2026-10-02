@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "sam-startup-isolated-20261002.json",
+    "sha256": "4cb87f621afdedb9e908a817459317f35dc6b1a72c431c466f86ccfe2283983b"
+  },
+  {
+    "path": "sam-startup-isolated-20261002.md",
+    "sha256": "1963c32b304af5707d629131859bc4e3c24c310581f0aa00ab484f5275656184"
+  },
+  {
+    "path": "test_sam_startup_isolated.py",
+    "sha256": "e07846c12c50cf29ccd8a3da8637520876713043e0cc1419e714ef0a7350f23a"
+  }
+]

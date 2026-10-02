@@ -1,0 +1,15 @@
+# Full SAM candidate startup in network isolation
+
+October 2 UTC / October 1 Mountain 2026. Candidate remains staged.
+
+The exact composed candidate and journal hashes were checked before importing the full module. A new Linux network namespace provided only loopback, verified with namespace identity and socket.if_nameindex. Root was used only to enable that namespace's loopback; the process dropped supplementary groups/GID/UID to the ordinary SAM account before reading the private snapshot or importing the application. No host interface or service changed.
+
+The full module imported with documented environment paths redirected to a private temporary copy of the verified snapshot. Actual main, schema initialization, HTTP handler, HTML construction and schedule/trainer readers ran. Startup fetch_schedule, fetch_weather_alerts, fetch_weather_widget and scheduler_loop were replaced with inert recording callbacks before main. This is intentional: no sending, scheduling, task dispatch, Odoo call or real commit was enabled. The HTTP server bound an ephemeral loopback port inside the namespace. Health, root page, admin page, schedule API and trainer API all returned HTTP200 with expected shapes; no private response body was retained or published. The actual HTTP server stopped and its thread joined; temporary data was removed on normal completion.
+
+All eleven original database tables/rows remained unchanged. Only the empty candidate intent table was added in the scratch copy. No application model calls or external traffic occurred. Full source remains private on SAM. This does not prove browser layout, normal scheduler execution, real external integration, uncertain-write reconciliation or deployment readiness.
+
+The first isolation assertion used /sys/class/net, whose existing sysfs mount reflected host interfaces despite the separate network namespace; it stopped before privilege drop or app import. The verifier was corrected to use socket.if_nameindex, which queries the active network namespace. The completed run verified loopback only. No production action occurred in the failed check.
+
+Reproduce: copy the archived test to /tmp on SAM with the pinned journal module present, then run `sudo -n unshare --net python3 /tmp/test_sam_startup_isolated.py`. It checks source/module hashes and uses the private snapshot at `/home/williamschilling/backups/sam-existing-db-recovery-20261002T024254Z/snapshot.private.db`. Never run the candidate's main directly on the business database as a test. The operating-system isolation plus inactive producer callbacks are part of the test contract.
+
+Recovery record remains archive/20261002-sam-existing-db-recovery/sam-existing-db-recovery-20261002.md. Before deployment, resolve authoritative unknown-history outcomes and need-clear concurrency, then obtain fresh coordinated backup/health evidence outside SAM's protected hours. Never roll back to a writer that ignores outstanding intents. Phase1 and original pilots remain open. Detailed notes remain suspended, Warden jobs remain unloaded, phone/Level8 disabled and SyncThing unchanged. Node-RED restriction untouched. Codex work cost is unknown.
