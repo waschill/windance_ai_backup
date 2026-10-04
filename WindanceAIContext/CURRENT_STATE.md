@@ -821,3 +821,7 @@ Coordinated idle Harness update after live ownership/Warden checks, fresh six-fi
 
 
 
+
+## October 3 SAM updates completed by Vega on HAL
+
+William renewed explicit update direction in the HAL chat. Vega verified fresh GitHub sanitized backup cbd1b0f9afbb478fab9677813578f9f3697effdc, then installed21 explicitly listed available SAM packages (no additions/removals). No updates remain. Schedule service, updated Chromium kiosk and affected VNC restarted and verified active/HTTP200; browser154.0.8037.92. No reboot; some background OS library mappings await a normal planned reboot. Existing VM-CORE-UPGRADE-20261003 paused dispatch cancelled as superseded by external Vega completion, with failed Forge history intact; no stage QA/delivery claim. Details/versions/recovery: projects/SAM_SOFTWARE_UPDATE_2026-10-03.md. Warden pause and other protected systems/schedules unchanged.
